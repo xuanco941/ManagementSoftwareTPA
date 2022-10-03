@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.GUI.ActivityManagement;
+
 namespace ManagementSoftware.GUI
 {
     public partial class ActivityHistory : Form

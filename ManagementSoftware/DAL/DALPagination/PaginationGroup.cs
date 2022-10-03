@@ -4,11 +4,11 @@ namespace ManagementSoftware.DAL.DALPagination
 {
     public class PaginationGroup
     {
-        private static int NumberRows { get; set; } = Common.NumberRows;
-        private int PageCurrent { get; set; }
-        private int TotalPages { get; set; }
-        private int TotalResults { get; set; }
-        private List<Group>? ListResults { get; set; }
+        public static int NumberRows { get; set; } = Common.NumberRows;
+        public int PageCurrent { get; set; }
+        public int TotalPages { get; set; }
+        public int TotalResults { get; set; }
+        public List<Group>? ListResults { get; set; }
 
         public void Set(int page, int? rows)
         {

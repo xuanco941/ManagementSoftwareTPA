@@ -21,5 +21,11 @@ namespace ManagementSoftware
         public static User? USERSESSION { get; set; } = null;
         public static int NumberRows = 40;
 
+        //Key ID
+        //User
+        public const string USERS = "NV";
+        public const string GROUPS = "GR";
+        public const string ACTIVITIES = "A";
+
     }
 }

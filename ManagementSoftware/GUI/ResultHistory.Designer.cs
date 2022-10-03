@@ -45,7 +45,6 @@ namespace ManagementSoftware.GUI
             this.buttonPage1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustomGoPage = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.textBoxGoPage = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -56,6 +55,8 @@ namespace ManagementSoftware.GUI
             this.btnInfoPage = new System.Windows.Forms.Button();
             this.buttonDeleteResult = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.comboBoxSelectMay = new System.Windows.Forms.ComboBox();
             this.buttonCustomLoc = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.label7 = new System.Windows.Forms.Label();
@@ -73,12 +74,12 @@ namespace ManagementSoftware.GUI
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePickerToiNgay = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerTuNgay = new System.Windows.Forms.DateTimePicker();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonExcel = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.textBoxGoPage = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).BeginInit();
             this.panel2.SuspendLayout();
@@ -89,6 +90,7 @@ namespace ManagementSoftware.GUI
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLuuLuong2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLuuLuong1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTheTich2)).BeginInit();
@@ -307,28 +309,6 @@ namespace ManagementSoftware.GUI
             this.buttonCustomGoPage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonCustomGoPage.UseVisualStyleBackColor = false;
             // 
-            // textBoxGoPage
-            // 
-            this.textBoxGoPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxGoPage.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxGoPage.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxGoPage.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxGoPage.BorderRadius = 5;
-            this.textBoxGoPage.BorderSize = 1;
-            this.textBoxGoPage.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxGoPage.Location = new System.Drawing.Point(615, 13);
-            this.textBoxGoPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxGoPage.Multiline = false;
-            this.textBoxGoPage.Name = "textBoxGoPage";
-            this.textBoxGoPage.Padding = new System.Windows.Forms.Padding(8, 9, 8, 6);
-            this.textBoxGoPage.PasswordChar = false;
-            this.textBoxGoPage.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxGoPage.PlaceholderText = "Trang số . . .";
-            this.textBoxGoPage.Size = new System.Drawing.Size(92, 36);
-            this.textBoxGoPage.TabIndex = 14;
-            this.textBoxGoPage.Texts = "Trang số . . .";
-            this.textBoxGoPage.UnderlinedStyle = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
@@ -459,6 +439,7 @@ namespace ManagementSoftware.GUI
             // panel8
             // 
             this.panel8.AutoScroll = true;
+            this.panel8.Controls.Add(this.panel9);
             this.panel8.Controls.Add(this.comboBoxSelectMay);
             this.panel8.Controls.Add(this.buttonCustomLoc);
             this.panel8.Controls.Add(this.label7);
@@ -476,7 +457,6 @@ namespace ManagementSoftware.GUI
             this.panel8.Controls.Add(this.label3);
             this.panel8.Controls.Add(this.dateTimePickerToiNgay);
             this.panel8.Controls.Add(this.label2);
-            this.panel8.Controls.Add(this.label1);
             this.panel8.Controls.Add(this.dateTimePickerTuNgay);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 0);
@@ -484,6 +464,27 @@ namespace ManagementSoftware.GUI
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(234, 618);
             this.panel8.TabIndex = 48;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label1);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(234, 43);
+            this.panel9.TabIndex = 66;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(234, 43);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Lọc Dữ Liệu";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBoxSelectMay
             // 
@@ -713,20 +714,6 @@ namespace ManagementSoftware.GUI
             this.label2.TabIndex = 50;
             this.label2.Text = "Từ ngày :";
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(64, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 30);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Lọc Dữ Liệu";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // dateTimePickerTuNgay
             // 
             this.dateTimePickerTuNgay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -816,7 +803,29 @@ namespace ManagementSoftware.GUI
             this.buttonExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExcel.UseVisualStyleBackColor = false;
             // 
-            // HistoryResult
+            // textBoxGoPage
+            // 
+            this.textBoxGoPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxGoPage.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxGoPage.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxGoPage.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxGoPage.BorderRadius = 5;
+            this.textBoxGoPage.BorderSize = 1;
+            this.textBoxGoPage.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxGoPage.Location = new System.Drawing.Point(615, 13);
+            this.textBoxGoPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxGoPage.Multiline = false;
+            this.textBoxGoPage.Name = "textBoxGoPage";
+            this.textBoxGoPage.Padding = new System.Windows.Forms.Padding(8, 9, 8, 6);
+            this.textBoxGoPage.PasswordChar = false;
+            this.textBoxGoPage.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxGoPage.PlaceholderText = "Trang số . . .";
+            this.textBoxGoPage.Size = new System.Drawing.Size(92, 36);
+            this.textBoxGoPage.TabIndex = 14;
+            this.textBoxGoPage.Texts = "Trang số . . .";
+            this.textBoxGoPage.UnderlinedStyle = false;
+            // 
+            // ResultHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -824,7 +833,7 @@ namespace ManagementSoftware.GUI
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "HistoryResult";
+            this.Name = "ResultHistory";
             this.Text = "FormResult";
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).EndInit();
@@ -838,6 +847,7 @@ namespace ManagementSoftware.GUI
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLuuLuong2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLuuLuong1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTheTich2)).EndInit();
@@ -858,7 +868,6 @@ namespace ManagementSoftware.GUI
         private Panel panel1;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel4;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxGoPage;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageNext;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage3;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage1;
@@ -887,7 +896,6 @@ namespace ManagementSoftware.GUI
         private Label label3;
         private DateTimePicker dateTimePickerToiNgay;
         private Label label2;
-        private Label label1;
         private DateTimePicker dateTimePickerTuNgay;
         private GroupBox groupBox1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPrint;
@@ -895,5 +903,8 @@ namespace ManagementSoftware.GUI
         private DataGridView dataGridViewResult;
         private Button btnInfoPage;
         private Button buttonDeleteResult;
+        private Panel panel9;
+        private Label label1;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxGoPage;
     }
 }

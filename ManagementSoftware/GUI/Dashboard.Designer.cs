@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1285, 528);
+            this.ClientSize = new System.Drawing.Size(1287, 556);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.ResumeLayout(false);

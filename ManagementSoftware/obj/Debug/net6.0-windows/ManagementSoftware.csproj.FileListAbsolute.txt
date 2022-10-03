@@ -192,12 +192,6 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftwar
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Pdf.Base.dll
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.PdfViewer.Windows.dll
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Shared.Base.dll
-D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Chart.Base.xml
-D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Chart.Windows.xml
-D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Compression.Base.xml
-D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Pdf.Base.xml
-D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.PdfViewer.Windows.xml
-D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Shared.Base.xml
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Help.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\help.pdf
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Inventory.resources
@@ -217,3 +211,14 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftwar
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.ResultHistory.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.ResultManagement.FormData.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.ResultManagement.FormInfoPage.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Core.WinForms.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Gauge.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Grid.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Grouping.Base.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.SfBarcode.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.SfInput.WinForms.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Shared.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.SpellChecker.Base.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Tools.Base.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Tools.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.FormTest.resources

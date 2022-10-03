@@ -36,7 +36,7 @@ namespace ManagementSoftware.BUS
 
         }
 
-        public static PaginationUser GetPage(int page, int? rows)
+        public static PaginationUser GetData(int page, int? rows)
         {
             PaginationUser paginationUser = new PaginationUser();
             paginationUser.Set(page, rows);

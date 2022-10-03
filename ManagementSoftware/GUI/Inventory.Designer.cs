@@ -55,9 +55,10 @@
             this.panel10.Controls.Add(this.buttonCustom3);
             this.panel10.Controls.Add(this.buttonCustom4);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 530);
+            this.panel10.Location = new System.Drawing.Point(0, 445);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(808, 49);
+            this.panel10.Size = new System.Drawing.Size(974, 56);
             this.panel10.TabIndex = 11;
             // 
             // buttonUpdate
@@ -70,13 +71,14 @@
             this.buttonUpdate.BorderSize = 0;
             this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonUpdate.ForeColor = System.Drawing.Color.Black;
             this.buttonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdate.Image")));
             this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonUpdate.Location = new System.Drawing.Point(633, 4);
+            this.buttonUpdate.Location = new System.Drawing.Point(770, 5);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(170, 40);
+            this.buttonUpdate.Size = new System.Drawing.Size(198, 46);
             this.buttonUpdate.TabIndex = 55;
             this.buttonUpdate.Text = "Làm đơn xuất kho";
             this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,12 +96,13 @@
             this.buttonCustom1.BorderSize = 0;
             this.buttonCustom1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCustom1.ForeColor = System.Drawing.Color.Black;
             this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom1.Location = new System.Drawing.Point(209, 8);
+            this.buttonCustom1.Location = new System.Drawing.Point(244, 9);
+            this.buttonCustom1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCustom1.Name = "buttonCustom1";
-            this.buttonCustom1.Size = new System.Drawing.Size(63, 30);
+            this.buttonCustom1.Size = new System.Drawing.Size(74, 35);
             this.buttonCustom1.TabIndex = 28;
             this.buttonCustom1.Text = ">>";
             this.buttonCustom1.TextColor = System.Drawing.Color.Black;
@@ -116,12 +119,13 @@
             this.buttonCustom2.BorderSize = 0;
             this.buttonCustom2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCustom2.ForeColor = System.Drawing.Color.Black;
             this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom2.Location = new System.Drawing.Point(140, 8);
+            this.buttonCustom2.Location = new System.Drawing.Point(163, 9);
+            this.buttonCustom2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCustom2.Name = "buttonCustom2";
-            this.buttonCustom2.Size = new System.Drawing.Size(63, 30);
+            this.buttonCustom2.Size = new System.Drawing.Size(74, 35);
             this.buttonCustom2.TabIndex = 27;
             this.buttonCustom2.Text = "3";
             this.buttonCustom2.TextColor = System.Drawing.Color.Black;
@@ -138,12 +142,13 @@
             this.buttonCustom3.BorderSize = 0;
             this.buttonCustom3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCustom3.ForeColor = System.Drawing.Color.Black;
             this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom3.Location = new System.Drawing.Point(3, 8);
+            this.buttonCustom3.Location = new System.Drawing.Point(4, 9);
+            this.buttonCustom3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCustom3.Name = "buttonCustom3";
-            this.buttonCustom3.Size = new System.Drawing.Size(63, 30);
+            this.buttonCustom3.Size = new System.Drawing.Size(74, 35);
             this.buttonCustom3.TabIndex = 26;
             this.buttonCustom3.Text = "1";
             this.buttonCustom3.TextColor = System.Drawing.Color.Black;
@@ -160,12 +165,13 @@
             this.buttonCustom4.BorderSize = 0;
             this.buttonCustom4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCustom4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustom4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCustom4.ForeColor = System.Drawing.Color.Black;
             this.buttonCustom4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom4.Location = new System.Drawing.Point(71, 8);
+            this.buttonCustom4.Location = new System.Drawing.Point(83, 9);
+            this.buttonCustom4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCustom4.Name = "buttonCustom4";
-            this.buttonCustom4.Size = new System.Drawing.Size(63, 30);
+            this.buttonCustom4.Size = new System.Drawing.Size(74, 35);
             this.buttonCustom4.TabIndex = 25;
             this.buttonCustom4.Text = "2";
             this.buttonCustom4.TextColor = System.Drawing.Color.Black;
@@ -179,8 +185,9 @@
             this.panel1.Controls.Add(this.buttonSearchUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(808, 45);
+            this.panel1.Size = new System.Drawing.Size(974, 52);
             this.panel1.TabIndex = 12;
             // 
             // textBoxSearchUser
@@ -190,15 +197,16 @@
             this.textBoxSearchUser.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxSearchUser.BorderRadius = 5;
             this.textBoxSearchUser.BorderSize = 1;
-            this.textBoxSearchUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearchUser.Location = new System.Drawing.Point(3, 9);
+            this.textBoxSearchUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSearchUser.Location = new System.Drawing.Point(4, 10);
+            this.textBoxSearchUser.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxSearchUser.Multiline = false;
             this.textBoxSearchUser.Name = "textBoxSearchUser";
-            this.textBoxSearchUser.Padding = new System.Windows.Forms.Padding(7, 8, 7, 5);
+            this.textBoxSearchUser.Padding = new System.Windows.Forms.Padding(8, 9, 8, 6);
             this.textBoxSearchUser.PasswordChar = false;
             this.textBoxSearchUser.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxSearchUser.PlaceholderText = "Nhập mã đơn hàng";
-            this.textBoxSearchUser.Size = new System.Drawing.Size(162, 35);
+            this.textBoxSearchUser.Size = new System.Drawing.Size(189, 37);
             this.textBoxSearchUser.TabIndex = 28;
             this.textBoxSearchUser.Texts = "Nhập mã đơn hàng";
             this.textBoxSearchUser.UnderlinedStyle = false;
@@ -212,13 +220,14 @@
             this.buttonSearchUser.BorderSize = 0;
             this.buttonSearchUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSearchUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearchUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearchUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonSearchUser.ForeColor = System.Drawing.Color.Black;
             this.buttonSearchUser.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearchUser.Image")));
             this.buttonSearchUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSearchUser.Location = new System.Drawing.Point(171, 9);
+            this.buttonSearchUser.Location = new System.Drawing.Point(200, 10);
+            this.buttonSearchUser.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonSearchUser.Name = "buttonSearchUser";
-            this.buttonSearchUser.Size = new System.Drawing.Size(96, 30);
+            this.buttonSearchUser.Size = new System.Drawing.Size(112, 35);
             this.buttonSearchUser.TabIndex = 27;
             this.buttonSearchUser.Text = "Tìm kiếm";
             this.buttonSearchUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -230,9 +239,10 @@
             // 
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 45);
+            this.panel2.Location = new System.Drawing.Point(0, 52);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(808, 485);
+            this.panel2.Size = new System.Drawing.Size(974, 393);
             this.panel2.TabIndex = 13;
             // 
             // dataGridView1
@@ -241,20 +251,22 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(808, 485);
+            this.dataGridView1.Size = new System.Drawing.Size(974, 393);
             this.dataGridView1.TabIndex = 1;
             // 
-            // FormInventoryManagement
+            // Inventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(808, 579);
+            this.ClientSize = new System.Drawing.Size(974, 501);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel10);
-            this.Name = "FormInventoryManagement";
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Name = "Inventory";
             this.Text = "FormInventoryManagement";
             this.panel10.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

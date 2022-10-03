@@ -39,16 +39,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(125, 165);
+            this.label2.Location = new System.Drawing.Point(146, 190);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 8;
@@ -57,9 +60,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(125, 118);
+            this.label1.Location = new System.Drawing.Point(146, 136);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 7;
@@ -72,15 +76,16 @@
             this.textBoxTaiKhoan.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxTaiKhoan.BorderRadius = 5;
             this.textBoxTaiKhoan.BorderSize = 1;
-            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTaiKhoan.Location = new System.Drawing.Point(203, 111);
+            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTaiKhoan.Location = new System.Drawing.Point(237, 128);
+            this.textBoxTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxTaiKhoan.Multiline = false;
             this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
-            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.textBoxTaiKhoan.PasswordChar = false;
             this.textBoxTaiKhoan.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxTaiKhoan.PlaceholderText = "";
-            this.textBoxTaiKhoan.Size = new System.Drawing.Size(207, 33);
+            this.textBoxTaiKhoan.Size = new System.Drawing.Size(241, 35);
             this.textBoxTaiKhoan.TabIndex = 14;
             this.textBoxTaiKhoan.Texts = "";
             this.textBoxTaiKhoan.UnderlinedStyle = false;
@@ -93,15 +98,16 @@
             this.textBoxMatKhau.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxMatKhau.BorderRadius = 5;
             this.textBoxMatKhau.BorderSize = 1;
-            this.textBoxMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMatKhau.Location = new System.Drawing.Point(203, 158);
+            this.textBoxMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxMatKhau.Location = new System.Drawing.Point(237, 182);
+            this.textBoxMatKhau.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxMatKhau.Multiline = false;
             this.textBoxMatKhau.Name = "textBoxMatKhau";
-            this.textBoxMatKhau.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxMatKhau.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.textBoxMatKhau.PasswordChar = true;
             this.textBoxMatKhau.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxMatKhau.PlaceholderText = "";
-            this.textBoxMatKhau.Size = new System.Drawing.Size(207, 33);
+            this.textBoxMatKhau.Size = new System.Drawing.Size(241, 35);
             this.textBoxMatKhau.TabIndex = 15;
             this.textBoxMatKhau.Texts = "";
             this.textBoxMatKhau.UnderlinedStyle = false;
@@ -115,13 +121,14 @@
             this.buttonExit.BorderRadius = 15;
             this.buttonExit.BorderSize = 0;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonExit.ForeColor = System.Drawing.Color.White;
             this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
             this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExit.Location = new System.Drawing.Point(321, 208);
+            this.buttonExit.Location = new System.Drawing.Point(374, 240);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(89, 36);
+            this.buttonExit.Size = new System.Drawing.Size(104, 42);
             this.buttonExit.TabIndex = 13;
             this.buttonExit.Text = "Thoát";
             this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -138,13 +145,14 @@
             this.buttonDangNhap.BorderRadius = 15;
             this.buttonDangNhap.BorderSize = 0;
             this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
             this.buttonDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("buttonDangNhap.Image")));
             this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.Location = new System.Drawing.Point(203, 208);
+            this.buttonDangNhap.Location = new System.Drawing.Point(237, 240);
+            this.buttonDangNhap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonDangNhap.Name = "buttonDangNhap";
-            this.buttonDangNhap.Size = new System.Drawing.Size(101, 36);
+            this.buttonDangNhap.Size = new System.Drawing.Size(118, 42);
             this.buttonDangNhap.TabIndex = 12;
             this.buttonDangNhap.Text = "Đăng nhập";
             this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -155,21 +163,24 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label3.Location = new System.Drawing.Point(157, 41);
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(262, 34);
+            this.label3.Size = new System.Drawing.Size(674, 104);
             this.label3.TabIndex = 10;
             this.label3.Text = "Máy Nạp Khí TPA";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(425, 300);
+            this.pictureBox1.Location = new System.Drawing.Point(496, 346);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 26);
+            this.pictureBox1.Size = new System.Drawing.Size(93, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
@@ -177,9 +188,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(498, 298);
+            this.pictureBox2.Location = new System.Drawing.Point(581, 344);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 26);
+            this.pictureBox2.Size = new System.Drawing.Size(93, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
@@ -187,39 +199,51 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(488, 298);
+            this.label4.Location = new System.Drawing.Point(569, 344);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 21);
             this.label4.TabIndex = 18;
             this.label4.Text = "|";
             // 
-            // FormLogin
+            // panel1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(674, 104);
+            this.panel1.TabIndex = 19;
+            // 
+            // Login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(578, 325);
+            this.ClientSize = new System.Drawing.Size(674, 375);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxMatKhau);
             this.Controls.Add(this.textBoxTaiKhoan);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonDangNhap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormLogin";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +260,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
+        private Panel panel1;
     }
 }

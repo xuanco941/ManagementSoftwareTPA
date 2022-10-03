@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -21,8 +21,16 @@
     <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
     <PackageReference Include="NinjaNye.SearchExtensions" Version="3.0.1" />
     <PackageReference Include="Syncfusion.Licensing" Version="20.2.0.36" />
+    <PackageReference Include="Syncfusion.Shared.Base" Version="20.2.0.36" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
-  </ItemGroup>
+    <PackageReference Include="Syncfusion.Tools.Windows" Version="20.2.0.36" />
+    <PackageReference Include="Syncfusion.Shared.Windows" Version="20.2.0.36" />
+    <PackageReference Include="Syncfusion.SfInput.WinForms" Version="20.2.0.36" />
+    <PackageReference Include="Syncfusion.SfBarcode.Windows" Version="20.2.0.36" />
+    <PackageReference Include="Syncfusion.PdfViewer.Windows" Version="20.2.0.36" />
+    <PackageReference Include="Syncfusion.Chart.Windows" Version="20.2.0.36" />
+    <PackageReference Include="Syncfusion.Gauge.Windows" Version="20.2.0.36" />
+</ItemGroup>
 
   <ItemGroup>
     <Reference Include="Syncfusion.Chart.Base">

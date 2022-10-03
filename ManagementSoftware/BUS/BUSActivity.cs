@@ -12,7 +12,7 @@ namespace ManagementSoftware.BUS
 {
     internal class BUSActivity
     {
-        public static PaginationActivity GetPage(int page, int? rows)
+        public static PaginationActivity GetData(int page, int? rows)
         {
             PaginationActivity paginationActivity = new PaginationActivity();
             paginationActivity.Set(page, rows);
