@@ -51,9 +51,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // checkBoxIsManagementUser
             // 
             this.checkBoxIsManagementUser.AutoSize = true;
-            this.checkBoxIsManagementUser.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsManagementUser.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxIsManagementUser.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsManagementUser.Location = new System.Drawing.Point(21, 26);
+            this.checkBoxIsManagementUser.Location = new System.Drawing.Point(24, 30);
+            this.checkBoxIsManagementUser.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxIsManagementUser.Name = "checkBoxIsManagementUser";
             this.checkBoxIsManagementUser.Size = new System.Drawing.Size(188, 29);
             this.checkBoxIsManagementUser.TabIndex = 12;
@@ -63,9 +64,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // checkBoxIsManagementGroup
             // 
             this.checkBoxIsManagementGroup.AutoSize = true;
-            this.checkBoxIsManagementGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsManagementGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxIsManagementGroup.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsManagementGroup.Location = new System.Drawing.Point(21, 56);
+            this.checkBoxIsManagementGroup.Location = new System.Drawing.Point(24, 65);
+            this.checkBoxIsManagementGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxIsManagementGroup.Name = "checkBoxIsManagementGroup";
             this.checkBoxIsManagementGroup.Size = new System.Drawing.Size(211, 29);
             this.checkBoxIsManagementGroup.TabIndex = 13;
@@ -84,11 +86,13 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.groupBox1.Controls.Add(this.checkBoxIsControlMachine);
             this.groupBox1.Controls.Add(this.checkBoxIsManagementUser);
             this.groupBox1.Controls.Add(this.checkBoxIsManagementGroup);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(133, 152);
+            this.groupBox1.Location = new System.Drawing.Point(155, 175);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(356, 348);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Size = new System.Drawing.Size(415, 402);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cho phép";
@@ -96,9 +100,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // checkBoxIsDeleteActivity
             // 
             this.checkBoxIsDeleteActivity.AutoSize = true;
-            this.checkBoxIsDeleteActivity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsDeleteActivity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxIsDeleteActivity.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsDeleteActivity.Location = new System.Drawing.Point(21, 296);
+            this.checkBoxIsDeleteActivity.Location = new System.Drawing.Point(24, 342);
+            this.checkBoxIsDeleteActivity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxIsDeleteActivity.Name = "checkBoxIsDeleteActivity";
             this.checkBoxIsDeleteActivity.Size = new System.Drawing.Size(214, 29);
             this.checkBoxIsDeleteActivity.TabIndex = 22;
@@ -109,9 +114,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // checkBoxIsDeleteResult
             // 
             this.checkBoxIsDeleteResult.AutoSize = true;
-            this.checkBoxIsDeleteResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsDeleteResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxIsDeleteResult.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsDeleteResult.Location = new System.Drawing.Point(21, 266);
+            this.checkBoxIsDeleteResult.Location = new System.Drawing.Point(24, 307);
+            this.checkBoxIsDeleteResult.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxIsDeleteResult.Name = "checkBoxIsDeleteResult";
             this.checkBoxIsDeleteResult.Size = new System.Drawing.Size(159, 29);
             this.checkBoxIsDeleteResult.TabIndex = 21;
@@ -122,9 +128,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // checkBoxIsViewActivity
             // 
             this.checkBoxIsViewActivity.AutoSize = true;
-            this.checkBoxIsViewActivity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsViewActivity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxIsViewActivity.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsViewActivity.Location = new System.Drawing.Point(21, 236);
+            this.checkBoxIsViewActivity.Location = new System.Drawing.Point(24, 272);
+            this.checkBoxIsViewActivity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxIsViewActivity.Name = "checkBoxIsViewActivity";
             this.checkBoxIsViewActivity.Size = new System.Drawing.Size(219, 29);
             this.checkBoxIsViewActivity.TabIndex = 20;
@@ -135,9 +142,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // checkBoxIsViewResult
             // 
             this.checkBoxIsViewResult.AutoSize = true;
-            this.checkBoxIsViewResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsViewResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxIsViewResult.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsViewResult.Location = new System.Drawing.Point(21, 206);
+            this.checkBoxIsViewResult.Location = new System.Drawing.Point(24, 238);
+            this.checkBoxIsViewResult.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxIsViewResult.Name = "checkBoxIsViewResult";
             this.checkBoxIsViewResult.Size = new System.Drawing.Size(164, 29);
             this.checkBoxIsViewResult.TabIndex = 19;
@@ -148,9 +156,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // checkBoxIsSettingTemplateMachine
             // 
             this.checkBoxIsSettingTemplateMachine.AutoSize = true;
-            this.checkBoxIsSettingTemplateMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsSettingTemplateMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxIsSettingTemplateMachine.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsSettingTemplateMachine.Location = new System.Drawing.Point(21, 176);
+            this.checkBoxIsSettingTemplateMachine.Location = new System.Drawing.Point(24, 203);
+            this.checkBoxIsSettingTemplateMachine.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxIsSettingTemplateMachine.Name = "checkBoxIsSettingTemplateMachine";
             this.checkBoxIsSettingTemplateMachine.Size = new System.Drawing.Size(147, 29);
             this.checkBoxIsSettingTemplateMachine.TabIndex = 17;
@@ -160,9 +169,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // checkBoxIsSettingShift
             // 
             this.checkBoxIsSettingShift.AutoSize = true;
-            this.checkBoxIsSettingShift.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsSettingShift.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxIsSettingShift.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsSettingShift.Location = new System.Drawing.Point(21, 146);
+            this.checkBoxIsSettingShift.Location = new System.Drawing.Point(24, 168);
+            this.checkBoxIsSettingShift.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxIsSettingShift.Name = "checkBoxIsSettingShift";
             this.checkBoxIsSettingShift.Size = new System.Drawing.Size(164, 29);
             this.checkBoxIsSettingShift.TabIndex = 16;
@@ -172,9 +182,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // checkBoxIsSettingMachine
             // 
             this.checkBoxIsSettingMachine.AutoSize = true;
-            this.checkBoxIsSettingMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsSettingMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxIsSettingMachine.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsSettingMachine.Location = new System.Drawing.Point(21, 116);
+            this.checkBoxIsSettingMachine.Location = new System.Drawing.Point(24, 134);
+            this.checkBoxIsSettingMachine.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxIsSettingMachine.Name = "checkBoxIsSettingMachine";
             this.checkBoxIsSettingMachine.Size = new System.Drawing.Size(209, 29);
             this.checkBoxIsSettingMachine.TabIndex = 15;
@@ -184,9 +195,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // checkBoxIsControlMachine
             // 
             this.checkBoxIsControlMachine.AutoSize = true;
-            this.checkBoxIsControlMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsControlMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxIsControlMachine.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsControlMachine.Location = new System.Drawing.Point(21, 86);
+            this.checkBoxIsControlMachine.Location = new System.Drawing.Point(24, 99);
+            this.checkBoxIsControlMachine.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxIsControlMachine.Name = "checkBoxIsControlMachine";
             this.checkBoxIsControlMachine.Size = new System.Drawing.Size(161, 29);
             this.checkBoxIsControlMachine.TabIndex = 14;
@@ -196,9 +208,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label8.Location = new System.Drawing.Point(181, 32);
+            this.label8.Location = new System.Drawing.Point(211, 37);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(259, 30);
             this.label8.TabIndex = 32;
@@ -211,15 +224,16 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.textBoxNameGroup.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxNameGroup.BorderRadius = 5;
             this.textBoxNameGroup.BorderSize = 1;
-            this.textBoxNameGroup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNameGroup.Location = new System.Drawing.Point(133, 95);
+            this.textBoxNameGroup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNameGroup.Location = new System.Drawing.Point(155, 110);
+            this.textBoxNameGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxNameGroup.Multiline = false;
             this.textBoxNameGroup.Name = "textBoxNameGroup";
-            this.textBoxNameGroup.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxNameGroup.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.textBoxNameGroup.PasswordChar = false;
             this.textBoxNameGroup.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxNameGroup.PlaceholderText = "Tên nhóm quyền";
-            this.textBoxNameGroup.Size = new System.Drawing.Size(356, 36);
+            this.textBoxNameGroup.Size = new System.Drawing.Size(415, 38);
             this.textBoxNameGroup.TabIndex = 52;
             this.textBoxNameGroup.Texts = "Tên nhóm quyền";
             this.textBoxNameGroup.UnderlinedStyle = false;
@@ -232,31 +246,34 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.buttonAddGroup.BorderRadius = 3;
             this.buttonAddGroup.BorderSize = 0;
             this.buttonAddGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonAddGroup.ForeColor = System.Drawing.Color.White;
             this.buttonAddGroup.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddGroup.Image")));
             this.buttonAddGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAddGroup.Location = new System.Drawing.Point(247, 521);
+            this.buttonAddGroup.Location = new System.Drawing.Point(288, 601);
+            this.buttonAddGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonAddGroup.Name = "buttonAddGroup";
-            this.buttonAddGroup.Size = new System.Drawing.Size(126, 36);
+            this.buttonAddGroup.Size = new System.Drawing.Size(147, 42);
             this.buttonAddGroup.TabIndex = 57;
             this.buttonAddGroup.Text = "Thêm";
             this.buttonAddGroup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAddGroup.TextColor = System.Drawing.Color.White;
             this.buttonAddGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonAddGroup.UseVisualStyleBackColor = false;
+            this.buttonAddGroup.Click += new System.EventHandler(this.buttonAddGroup_Click);
             // 
             // FormAddGroup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(627, 619);
+            this.ClientSize = new System.Drawing.Size(732, 714);
             this.Controls.Add(this.buttonAddGroup);
             this.Controls.Add(this.textBoxNameGroup);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormAddGroup";

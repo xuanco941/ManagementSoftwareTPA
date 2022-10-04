@@ -107,12 +107,11 @@ namespace ManagementSoftware.BUS
         public static AddUpdateDeleteResponse<User> UpdateUser(User user)
         {
             //validate data
-            user.Username = ValidateUser.FormatUsernamePassword(user.Username);
             user.Password = ValidateUser.FormatUsernamePassword(user.Password);
 
+            AddUpdateDeleteResponse<User> response = new AddUpdateDeleteResponse<User>();
 
             //response
-            AddUpdateDeleteResponse<User> response = new AddUpdateDeleteResponse<User>();
             // số dòng thay đổi lớn hơn 0 thì thành công
             try
             {
@@ -121,7 +120,7 @@ namespace ManagementSoftware.BUS
                 response.Message = response.Status == true ? $"Cập nhật thành công tài khoản {user.Username}." : $"Cập nhật tài khoản {user.Username} thất bại.";
                 response.Data = user;
                 //Cập nhật lại tài khoản session
-                if (Common.USERSESSION != null && Common.USERSESSION.UserID == user.UserID)
+                if (Common.USERSESSION != null && Common.USERSESSION.Username == user.Username)
                 {
                     Common.USERSESSION = user;
                 }
@@ -132,24 +131,23 @@ namespace ManagementSoftware.BUS
                 response.Message = "Lỗi hệ thống, không thể cập nhật tài khoản này.";
             }
 
-
             return response;
         }
 
-        public static AddUpdateDeleteResponse<int> DeleteUser(int userID)
+        public static AddUpdateDeleteResponse<string> DeleteUser(string username)
         {
             //response
-            AddUpdateDeleteResponse<int> response = new AddUpdateDeleteResponse<int>();
+            AddUpdateDeleteResponse<string> response = new AddUpdateDeleteResponse<string>();
             // số dòng thay đổi lớn hơn 0 thì thành công
             try
             {
                 //Cập nhật lại tài khoản session
-                if (Common.USERSESSION != null && Common.USERSESSION.UserID != userID)
+                if (Common.USERSESSION != null && username != Common.USERSESSION.Username && username != Common.UserAdmin.Username)
                 {
-                    response.RowsNumberChanged = DALUser.DeleteUser(userID);
+                    response.RowsNumberChanged = DALUser.DeleteUser(username);
                     response.Status = response.RowsNumberChanged > 0 ? true : false;
                     response.Message = response.Status == true ? $"Xóa tài khoản thành công." : $"Xóa tài khoản thất bại.";
-                    response.Data = userID;
+                    response.Data = username;
                 }
                 else
                 {

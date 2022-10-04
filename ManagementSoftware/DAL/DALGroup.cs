@@ -39,7 +39,7 @@ namespace ManagementSoftware.DAL
         public static int UpdateGroup(Group group)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            var groupUpdate = dbContext.Groups.FirstOrDefault(group => group.GroupID == group.GroupID);
+            var groupUpdate = dbContext.Groups.FirstOrDefault(g => g.GroupName == group.GroupName);
             if (groupUpdate != null)
             {
                 groupUpdate.GroupName = group.GroupName;
@@ -47,13 +47,12 @@ namespace ManagementSoftware.DAL
                 groupUpdate.IsManagementGroup = group.IsManagementGroup;
             }
             return dbContext.SaveChanges();
-
         }
 
-        public static int DeleteGroup(int groupID)
+        public static int DeleteGroup(string grName)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            var groupDelete = dbContext.Groups.FirstOrDefault(group => group.GroupID == groupID);
+            var groupDelete = dbContext.Groups.FirstOrDefault(g => g.GroupName == grName);
             if (groupDelete != null)
             {
                 dbContext.Groups.Remove(groupDelete);

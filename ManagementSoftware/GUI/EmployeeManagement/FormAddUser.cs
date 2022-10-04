@@ -33,22 +33,16 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             }
             else
             {
-                User user = new User();
+
+
                 try
                 {
+                    User user = new User();
                     Group? gr = BUSGroup.GetGroupFromGroupName(groupName);
                     if (gr != null)
                     {
                         user = new User(fullname, username, password, gr.GroupID);
                     }
-                }
-                catch
-                {
-                    MessageBox.Show("Nhóm quyền không tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                try
-                {
                     AddUpdateDeleteResponse<User> response = BUSUser.AddUser(user);
                     if (response != null && response.Status == true)
                     {
@@ -66,10 +60,10 @@ namespace ManagementSoftware.GUI.EmployeeManagement
                 }
 
             }
-        
 
 
 
+
+        }
     }
-}
 }

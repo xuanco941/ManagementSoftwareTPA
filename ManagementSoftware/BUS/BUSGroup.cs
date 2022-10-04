@@ -101,17 +101,17 @@ namespace ManagementSoftware.BUS
             return response;
         }
 
-        public static AddUpdateDeleteResponse<Group> DeleteGroup(int groupID)
+        public static AddUpdateDeleteResponse<string> DeleteGroup(string grName)
         {
             //response
-            AddUpdateDeleteResponse<Group> response = new AddUpdateDeleteResponse<Group>();
+            AddUpdateDeleteResponse<string> response = new AddUpdateDeleteResponse<string>();
             try
             {
                 // số dòng thay đổi lớn hơn 0 thì thành công
-                response.RowsNumberChanged = DALGroup.DeleteGroup(groupID);
+                response.RowsNumberChanged = DALGroup.DeleteGroup(grName);
                 response.Status = response.RowsNumberChanged > 0 ? true : false;
                 response.Message = response.Status == true ? $"Xóa thành công." : $"Xóa thất bại.";
-                response.Data = DALGroup.GetGroupFromID(groupID);
+                response.Data = grName;
             }
             catch
             {

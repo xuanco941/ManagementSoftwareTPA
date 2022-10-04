@@ -25,9 +25,9 @@ namespace ManagementSoftware
             if (new DataBaseContext().CreateDatabase() == true)
             {
                 //tao quuyen cho admin
-                DALGroup.AddGroup(new Group() { GroupName = "Quyen Admin", IsManagementGroup = true, IsManagementUser = true });
+                DALGroup.AddGroup(Common.GroupAdmin);
                 //tao tai khoan admin
-                DALUser.AddUser(new User() { FullName = "Admin", Username = "admin", Password = "123", GroupID = 1 });
+                DALUser.AddUser(Common.UserAdmin);
             }
 
             Application.Run(new Login());

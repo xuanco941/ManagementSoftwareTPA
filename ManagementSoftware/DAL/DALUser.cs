@@ -60,7 +60,7 @@ public class DALUser
     public static int UpdateUser(User user)
     {
         DataBaseContext dbContext = new DataBaseContext();
-        var userUpdate = dbContext.Users.FirstOrDefault(u => u.UserID == user.UserID);
+        var userUpdate = dbContext.Users.FirstOrDefault(u => u.Username == user.Username);
         if (userUpdate != null)
         {
             userUpdate.Username = user.Username;
@@ -72,10 +72,10 @@ public class DALUser
         return dbContext.SaveChanges();
     }
 
-    public static int DeleteUser(int userID)
+    public static int DeleteUser(string username)
     {
         DataBaseContext dbContext = new DataBaseContext();
-        var userDelete = dbContext.Users.FirstOrDefault(u => u.UserID == userID);
+        var userDelete = dbContext.Users.FirstOrDefault(u => u.Username == username);
         if (userDelete != null)
         {
             dbContext.Users.Remove(userDelete);
