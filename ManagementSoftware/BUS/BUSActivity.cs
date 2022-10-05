@@ -12,10 +12,10 @@ namespace ManagementSoftware.BUS
 {
     internal class BUSActivity
     {
-        public static PaginationActivity GetData(int page, int? rows)
+        public static PaginationActivity GetData(int page, DateTime? start, DateTime? end)
         {
             PaginationActivity paginationActivity = new PaginationActivity();
-            paginationActivity.Set(page, rows);
+            paginationActivity.Set(page, start, end);
             return paginationActivity;
         }
 
@@ -31,7 +31,7 @@ namespace ManagementSoftware.BUS
                 activityIDs.ForEach(a =>
                 {
                     Activity? activity = DALActivity.GetActivityFromID(a);
-                    if(activity != null)
+                    if (activity != null)
                     {
                         listActivities.Add(activity);
                     }

@@ -1,8 +1,7 @@
-﻿using ManagementSoftware.DAL;
-using ManagementSoftware.Models;
+﻿using ManagementSoftware.Models;
 using ManagementSoftware.ViewModels;
 
-namespace ManagementSoftware.DALPagination
+namespace ManagementSoftware.DAL.DALPagination
 {
     public class PaginationUser
     {
@@ -12,16 +11,11 @@ namespace ManagementSoftware.DALPagination
         public int TotalResults { get; set; }
         public List<UserHasGroupName>? ListResults { get; set; }
 
-        public void Set(int page, int? rows)
+        public void Set(int page)
         {
             DataBaseContext dbContext = new DataBaseContext();
 
-            if (rows != null)
-            {
-                NumberRows = rows ?? Common.NumberRows;
-            }
             int position = (page - 1) * NumberRows;
-            this.TotalResults = dbContext.Users.Count();
 
             List<User> users = dbContext.Users.OrderByDescending(t => t.UserID)
             .Skip(position)
@@ -45,8 +39,11 @@ namespace ManagementSoftware.DALPagination
                 });
             }
             this.ListResults = ListResults2;
+
+            this.TotalResults = dbContext.Users.Count();
+
             this.PageCurrent = page;
-            this.TotalPages = (int)Math.Ceiling((float)this.TotalResults / (float)NumberRows);
+            this.TotalPages = TotalResults % NumberRows == 0 ? TotalResults / NumberRows : (TotalResults / NumberRows) + 1;
 
         }
     }

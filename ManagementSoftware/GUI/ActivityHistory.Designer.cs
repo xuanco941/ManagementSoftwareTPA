@@ -30,11 +30,10 @@ namespace ManagementSoftware.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActivityHistory));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,11 +41,11 @@ namespace ManagementSoftware.GUI
             this.dataGridViewActivity = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonGoPage = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.inputNumPageGo = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
             this.buttonPageNext = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.textBoxGoPage = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonCallFormEmployeeActivities = new System.Windows.Forms.Button();
             this.btnChangeNumElmPage = new System.Windows.Forms.Button();
@@ -66,12 +65,12 @@ namespace ManagementSoftware.GUI
             this.labelBanGhiMoiTrang = new System.Windows.Forms.Label();
             this.labelTuNgay = new System.Windows.Forms.Label();
             this.labelTongSoTrang = new System.Windows.Forms.Label();
-            this.bannerTextProvider1 = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivity)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputNumPageGo)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -92,7 +91,7 @@ namespace ManagementSoftware.GUI
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1212, 570);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(964, 514);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
@@ -103,7 +102,7 @@ namespace ManagementSoftware.GUI
             this.panel1.Location = new System.Drawing.Point(4, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(954, 564);
+            this.panel1.Size = new System.Drawing.Size(706, 508);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -113,7 +112,7 @@ namespace ManagementSoftware.GUI
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(954, 506);
+            this.panel3.Size = new System.Drawing.Size(706, 450);
             this.panel3.TabIndex = 1;
             // 
             // dataGridViewActivity
@@ -122,82 +121,99 @@ namespace ManagementSoftware.GUI
             this.dataGridViewActivity.AllowUserToDeleteRows = false;
             this.dataGridViewActivity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewActivity.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewActivity.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewActivity.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewActivity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewActivity.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewActivity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewActivity.Name = "dataGridViewActivity";
             this.dataGridViewActivity.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewActivity.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewActivity.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewActivity.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewActivity.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewActivity.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewActivity.RowTemplate.Height = 25;
-            this.dataGridViewActivity.Size = new System.Drawing.Size(954, 506);
+            this.dataGridViewActivity.Size = new System.Drawing.Size(706, 450);
             this.dataGridViewActivity.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.buttonGoPage);
+            this.panel2.Controls.Add(this.inputNumPageGo);
             this.panel2.Controls.Add(this.buttonPageNext);
             this.panel2.Controls.Add(this.buttonPage3);
             this.panel2.Controls.Add(this.buttonPage1);
             this.panel2.Controls.Add(this.buttonPage2);
-            this.panel2.Controls.Add(this.textBoxGoPage);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 506);
+            this.panel2.Location = new System.Drawing.Point(0, 450);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(954, 58);
+            this.panel2.Size = new System.Drawing.Size(706, 58);
             this.panel2.TabIndex = 0;
             // 
             // buttonGoPage
             // 
-            this.buttonGoPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGoPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonGoPage.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonGoPage.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.buttonGoPage.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonGoPage.BorderRadius = 3;
-            this.buttonGoPage.BorderSize = 0;
+            this.buttonGoPage.BorderSize = 1;
             this.buttonGoPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonGoPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGoPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonGoPage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonGoPage.ForeColor = System.Drawing.Color.Black;
             this.buttonGoPage.Image = ((System.Drawing.Image)(resources.GetObject("buttonGoPage.Image")));
             this.buttonGoPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGoPage.Location = new System.Drawing.Point(858, 13);
+            this.buttonGoPage.Location = new System.Drawing.Point(632, 12);
             this.buttonGoPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonGoPage.Name = "buttonGoPage";
-            this.buttonGoPage.Size = new System.Drawing.Size(93, 35);
-            this.buttonGoPage.TabIndex = 29;
+            this.buttonGoPage.Size = new System.Drawing.Size(74, 35);
+            this.buttonGoPage.TabIndex = 33;
             this.buttonGoPage.Text = "Đi";
             this.buttonGoPage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonGoPage.TextColor = System.Drawing.Color.Black;
             this.buttonGoPage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonGoPage.UseVisualStyleBackColor = false;
+            this.buttonGoPage.Click += new System.EventHandler(this.buttonGoPage_Click);
+            // 
+            // inputNumPageGo
+            // 
+            this.inputNumPageGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputNumPageGo.BeforeTouchSize = new System.Drawing.Size(66, 35);
+            this.inputNumPageGo.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.inputNumPageGo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputNumPageGo.IntegerValue = ((long)(1));
+            this.inputNumPageGo.Location = new System.Drawing.Point(562, 12);
+            this.inputNumPageGo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.inputNumPageGo.Multiline = true;
+            this.inputNumPageGo.Name = "inputNumPageGo";
+            this.inputNumPageGo.Size = new System.Drawing.Size(66, 35);
+            this.inputNumPageGo.TabIndex = 32;
+            this.inputNumPageGo.Text = "1";
+            this.inputNumPageGo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // buttonPageNext
             // 
@@ -221,6 +237,7 @@ namespace ManagementSoftware.GUI
             this.buttonPageNext.TextColor = System.Drawing.Color.Black;
             this.buttonPageNext.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPageNext.UseVisualStyleBackColor = false;
+            this.buttonPageNext.Click += new System.EventHandler(this.buttonPageNext_Click);
             // 
             // buttonPage3
             // 
@@ -244,6 +261,7 @@ namespace ManagementSoftware.GUI
             this.buttonPage3.TextColor = System.Drawing.Color.Black;
             this.buttonPage3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPage3.UseVisualStyleBackColor = false;
+            this.buttonPage3.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
             // buttonPage1
             // 
@@ -267,6 +285,7 @@ namespace ManagementSoftware.GUI
             this.buttonPage1.TextColor = System.Drawing.Color.Black;
             this.buttonPage1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPage1.UseVisualStyleBackColor = false;
+            this.buttonPage1.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
             // buttonPage2
             // 
@@ -290,28 +309,7 @@ namespace ManagementSoftware.GUI
             this.buttonPage2.TextColor = System.Drawing.Color.Black;
             this.buttonPage2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPage2.UseVisualStyleBackColor = false;
-            // 
-            // textBoxGoPage
-            // 
-            this.textBoxGoPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxGoPage.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxGoPage.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxGoPage.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxGoPage.BorderRadius = 5;
-            this.textBoxGoPage.BorderSize = 1;
-            this.textBoxGoPage.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxGoPage.Location = new System.Drawing.Point(759, 13);
-            this.textBoxGoPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxGoPage.Multiline = false;
-            this.textBoxGoPage.Name = "textBoxGoPage";
-            this.textBoxGoPage.Padding = new System.Windows.Forms.Padding(8, 9, 8, 6);
-            this.textBoxGoPage.PasswordChar = false;
-            this.textBoxGoPage.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxGoPage.PlaceholderText = "Trang số . . .";
-            this.textBoxGoPage.Size = new System.Drawing.Size(92, 36);
-            this.textBoxGoPage.TabIndex = 23;
-            this.textBoxGoPage.Texts = "Trang số . . .";
-            this.textBoxGoPage.UnderlinedStyle = false;
+            this.buttonPage2.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
             // panel4
             // 
@@ -321,10 +319,10 @@ namespace ManagementSoftware.GUI
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(966, 3);
+            this.panel4.Location = new System.Drawing.Point(718, 3);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(242, 564);
+            this.panel4.Size = new System.Drawing.Size(242, 508);
             this.panel4.TabIndex = 1;
             // 
             // buttonCallFormEmployeeActivities
@@ -335,7 +333,7 @@ namespace ManagementSoftware.GUI
             this.buttonCallFormEmployeeActivities.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCallFormEmployeeActivities.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.buttonCallFormEmployeeActivities.Image = ((System.Drawing.Image)(resources.GetObject("buttonCallFormEmployeeActivities.Image")));
-            this.buttonCallFormEmployeeActivities.Location = new System.Drawing.Point(0, 278);
+            this.buttonCallFormEmployeeActivities.Location = new System.Drawing.Point(0, 222);
             this.buttonCallFormEmployeeActivities.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCallFormEmployeeActivities.Name = "buttonCallFormEmployeeActivities";
             this.buttonCallFormEmployeeActivities.Size = new System.Drawing.Size(242, 51);
@@ -353,7 +351,7 @@ namespace ManagementSoftware.GUI
             this.btnChangeNumElmPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnChangeNumElmPage.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnChangeNumElmPage.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeNumElmPage.Image")));
-            this.btnChangeNumElmPage.Location = new System.Drawing.Point(0, 329);
+            this.btnChangeNumElmPage.Location = new System.Drawing.Point(0, 273);
             this.btnChangeNumElmPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnChangeNumElmPage.Name = "btnChangeNumElmPage";
             this.btnChangeNumElmPage.Size = new System.Drawing.Size(242, 51);
@@ -362,6 +360,7 @@ namespace ManagementSoftware.GUI
             this.btnChangeNumElmPage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChangeNumElmPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChangeNumElmPage.UseVisualStyleBackColor = false;
+            this.btnChangeNumElmPage.Click += new System.EventHandler(this.btnChangeNumElmPage_Click);
             // 
             // buttonDeleteDataActivity
             // 
@@ -371,7 +370,7 @@ namespace ManagementSoftware.GUI
             this.buttonDeleteDataActivity.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonDeleteDataActivity.ForeColor = System.Drawing.Color.Crimson;
             this.buttonDeleteDataActivity.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteDataActivity.Image")));
-            this.buttonDeleteDataActivity.Location = new System.Drawing.Point(0, 380);
+            this.buttonDeleteDataActivity.Location = new System.Drawing.Point(0, 324);
             this.buttonDeleteDataActivity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonDeleteDataActivity.Name = "buttonDeleteDataActivity";
             this.buttonDeleteDataActivity.Size = new System.Drawing.Size(242, 51);
@@ -380,6 +379,7 @@ namespace ManagementSoftware.GUI
             this.buttonDeleteDataActivity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDeleteDataActivity.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDeleteDataActivity.UseVisualStyleBackColor = false;
+            this.buttonDeleteDataActivity.Click += new System.EventHandler(this.buttonDeleteDataActivity_Click);
             // 
             // panel5
             // 
@@ -394,7 +394,7 @@ namespace ManagementSoftware.GUI
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(242, 431);
+            this.panel5.Size = new System.Drawing.Size(242, 375);
             this.panel5.TabIndex = 15;
             // 
             // panel6
@@ -443,6 +443,7 @@ namespace ManagementSoftware.GUI
             this.buttonLoc.TextColor = System.Drawing.Color.Black;
             this.buttonLoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonLoc.UseVisualStyleBackColor = false;
+            this.buttonLoc.Click += new System.EventHandler(this.buttonLoc_Click);
             // 
             // dateTimePickerTuNgay
             // 
@@ -502,7 +503,7 @@ namespace ManagementSoftware.GUI
             // 
             this.panel7.Controls.Add(this.groupBox3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 431);
+            this.panel7.Location = new System.Drawing.Point(0, 375);
             this.panel7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(242, 133);
@@ -591,7 +592,7 @@ namespace ManagementSoftware.GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1212, 570);
+            this.ClientSize = new System.Drawing.Size(964, 514);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -603,6 +604,8 @@ namespace ManagementSoftware.GUI
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivity)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputNumPageGo)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -625,8 +628,6 @@ namespace ManagementSoftware.GUI
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage3;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage2;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxGoPage;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonGoPage;
         private Panel panel7;
         private GroupBox groupBox3;
         private Label labelToiNgay;
@@ -646,6 +647,7 @@ namespace ManagementSoftware.GUI
         private Button buttonDeleteDataActivity;
         private Panel panel6;
         private Label label1;
-        private Syncfusion.Windows.Forms.BannerTextProvider bannerTextProvider1;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonGoPage;
+        private Syncfusion.Windows.Forms.Tools.IntegerTextBox inputNumPageGo;
     }
 }

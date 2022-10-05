@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using ManagementSoftware.DAL;
 using ManagementSoftware.BUS.Validate;
 using ManagementSoftware.DAL.DALPagination;
-using ManagementSoftware.DALPagination;
 
 namespace ManagementSoftware.BUS
 {
@@ -36,10 +35,10 @@ namespace ManagementSoftware.BUS
 
         }
 
-        public static PaginationUser GetData(int page, int? rows)
+        public static PaginationUser GetData(int page)
         {
             PaginationUser paginationUser = new PaginationUser();
-            paginationUser.Set(page, rows);
+            paginationUser.Set(page);
             return paginationUser;
         }
 

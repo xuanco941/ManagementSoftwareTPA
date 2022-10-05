@@ -1,4 +1,4 @@
-using ManagementSoftware.Models;
+﻿using ManagementSoftware.Models;
 using ManagementSoftware.GUI;
 using ManagementSoftware.DAL;
 
@@ -28,6 +28,14 @@ namespace ManagementSoftware
                 DALGroup.AddGroup(Common.GroupAdmin);
                 //tao tai khoan admin
                 DALUser.AddUser(Common.UserAdmin);
+
+                DALActivity.AddActivity(new Activity("Hệ thống", "asd hasdadaishaoish iaha iahr i riah oahr ahraiwrhaw hrqirh qr", ""));
+                DALActivity.AddActivity(new Activity("Hệ thống", "asd hasdadaishaoish iaha iahr i riah oahr ahraiwrhaw hrqirh qr", ""));
+                DALActivity.AddActivity(new Activity("Hệ thống", "asd hasdadaishaoish iaha iahr i riah oahr ahraiwrhaw hrqirh qr", ""));
+                DALActivity.AddActivity(new Activity("Hệ thống", "asd hasdadaishaoish iaha iahr i riah oahr ahraiwrhaw hrqirh qr", ""));
+                DALActivity.AddActivity(new Activity("Hệ thống", "asd hasdadaishaoish iaha iahr i riah oahr ahraiwrhaw hrqirh qr", ""));
+                DALActivity.AddActivity(new Activity("Hệ thống", "asd hasdadaishaoish iaha iahr i riah oahr ahraiwrhaw hrqirh qr", ""));
+
             }
 
             Application.Run(new Login());

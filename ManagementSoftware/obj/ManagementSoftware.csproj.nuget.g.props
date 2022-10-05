@@ -22,8 +22,10 @@
     <PkgSyncfusion_Tools_Windows Condition=" '$(PkgSyncfusion_Tools_Windows)' == '' ">C:\Users\xuanc\.nuget\packages\syncfusion.tools.windows\20.2.0.36</PkgSyncfusion_Tools_Windows>
     <PkgSyncfusion_Core_WinForms Condition=" '$(PkgSyncfusion_Core_WinForms)' == '' ">C:\Users\xuanc\.nuget\packages\syncfusion.core.winforms\20.2.0.36</PkgSyncfusion_Core_WinForms>
     <PkgSyncfusion_SfInput_WinForms Condition=" '$(PkgSyncfusion_SfInput_WinForms)' == '' ">C:\Users\xuanc\.nuget\packages\syncfusion.sfinput.winforms\20.2.0.36</PkgSyncfusion_SfInput_WinForms>
+    <PkgSyncfusion_PivotTable_WinForms Condition=" '$(PkgSyncfusion_PivotTable_WinForms)' == '' ">C:\Users\xuanc\.nuget\packages\syncfusion.pivottable.winforms\20.2.0.36</PkgSyncfusion_PivotTable_WinForms>
     <PkgSyncfusion_PdfViewer_Windows Condition=" '$(PkgSyncfusion_PdfViewer_Windows)' == '' ">C:\Users\xuanc\.nuget\packages\syncfusion.pdfviewer.windows\20.2.0.36</PkgSyncfusion_PdfViewer_Windows>
-    <PkgSyncfusion_Gauge_Windows Condition=" '$(PkgSyncfusion_Gauge_Windows)' == '' ">C:\Users\xuanc\.nuget\packages\syncfusion.gauge.windows\20.2.0.36</PkgSyncfusion_Gauge_Windows>
+    <PkgSyncfusion_Grid_Grouping_Windows Condition=" '$(PkgSyncfusion_Grid_Grouping_Windows)' == '' ">C:\Users\xuanc\.nuget\packages\syncfusion.grid.grouping.windows\20.2.0.36</PkgSyncfusion_Grid_Grouping_Windows>
     <PkgSyncfusion_Chart_Windows Condition=" '$(PkgSyncfusion_Chart_Windows)' == '' ">C:\Users\xuanc\.nuget\packages\syncfusion.chart.windows\20.2.0.36</PkgSyncfusion_Chart_Windows>
+    <PkgSyncfusion_Gauge_Windows Condition=" '$(PkgSyncfusion_Gauge_Windows)' == '' ">C:\Users\xuanc\.nuget\packages\syncfusion.gauge.windows\20.2.0.36</PkgSyncfusion_Gauge_Windows>
   </PropertyGroup>
 </Project>

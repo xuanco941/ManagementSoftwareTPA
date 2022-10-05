@@ -10,24 +10,34 @@ namespace ManagementSoftware.DAL.DALPagination
         public int TotalResults { get; set; }
         public List<Activity>? ListResults { get; set; }
 
-        public void Set(int page, int? rows)
+        public void Set(int page,DateTime? start, DateTime? end)
         {
             DataBaseContext dbContext = new DataBaseContext();
 
-            if (rows != null)
-            {
-                NumberRows = rows ?? Common.NumberRows;
-            }
             int position = (page - 1) * NumberRows;
-            this.TotalResults = dbContext.Groups.Count();
 
-            this.ListResults = dbContext.Activities.OrderByDescending(t => t.ActivityID)
-            .Skip(position)
-            .Take(NumberRows)
-            .ToList();
+            if (start != null && end != null)
+            {
+                this.ListResults = dbContext.Activities.OrderByDescending(t => t.ActivityID)
+                .Where(a => start <= a.CreateAt && end >= a.CreateAt)
+                .Skip(position)
+                .Take(NumberRows)
+                .ToList();
+
+                this.TotalResults = dbContext.Activities.Where(a => start <= a.CreateAt && end >= a.CreateAt).Count();
+
+            }
+            else
+            {
+                this.ListResults = dbContext.Activities.OrderByDescending(t => t.ActivityID)
+                .Skip(position)
+                .Take(NumberRows)
+                .ToList();
+                this.TotalResults = dbContext.Activities.Count();
+            }
 
             this.PageCurrent = page;
-            this.TotalPages = (int)Math.Ceiling((float)this.TotalResults / (float)NumberRows);
+            this.TotalPages = TotalResults % NumberRows == 0 ? TotalResults / NumberRows : (TotalResults / NumberRows) + 1;
 
         }
     }

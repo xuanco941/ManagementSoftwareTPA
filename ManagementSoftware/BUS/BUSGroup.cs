@@ -13,10 +13,10 @@ namespace ManagementSoftware.BUS
 {
     public class BUSGroup
     {
-        public static PaginationGroup GetData(int page, int? rows)
+        public static PaginationGroup GetData(int page)
         {
             PaginationGroup paginationGroup = new PaginationGroup();
-            paginationGroup.Set(page, rows);
+            paginationGroup.Set(page);
             return paginationGroup;
         }
 

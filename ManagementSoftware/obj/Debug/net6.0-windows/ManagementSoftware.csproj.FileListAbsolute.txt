@@ -222,3 +222,12 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftwar
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Tools.Base.dll
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Tools.Windows.dll
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.FormTest.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.DocIO.Base.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Grid.Grouping.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Gridconverter.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.GridHelperClasses.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.Linq.Base.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.OfficeChart.Base.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.PivotAnalysis.Base.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.PivotAnalysis.Windows.dll
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Syncfusion.XlsIO.Base.dll

@@ -1,5 +1,5 @@
 ﻿using ManagementSoftware.BUS;
-using ManagementSoftware.DALPagination;
+using ManagementSoftware.DAL.DALPagination;
 using ManagementSoftware.GUI.EmployeeManagement;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
@@ -34,8 +34,8 @@ namespace ManagementSoftware.GUI
             dataGridViewGroup.RowTemplate.Height = 50;
 
 
-            LoadDataUser(pageUser, null);
-            LoadDataGroup(pageGroup, null);
+            LoadDataUser(pageUser);
+            LoadDataGroup(pageGroup);
         }
 
         //method gọi Alert ở Main từ form khác thông qua form hiện tại, delegate
@@ -43,11 +43,11 @@ namespace ManagementSoftware.GUI
         {
             callAlert?.Invoke(msg, enmType);
             //load lai 2 datagridview
-            LoadDataUser(pageUser,null);
-            LoadDataGroup(pageGroup,null);
+            LoadDataUser(pageUser);
+            LoadDataGroup(pageGroup);
         }
 
-        public void LoadDataUser(int page, int? rows)
+        public void LoadDataUser(int page)
         {
             // get all user from model
             DataTable dtUser = new DataTable();
@@ -56,7 +56,7 @@ namespace ManagementSoftware.GUI
             dtUser.Columns.Add("Tài khoản");
             dtUser.Columns.Add("Mật khẩu");
             dtUser.Columns.Add("Quyền");
-            PaginationUser paginationUser = BUSUser.GetData(page, rows);
+            PaginationUser paginationUser = BUSUser.GetData(page);
 
             paginationUser.ListResults?.ForEach(delegate (UserHasGroupName user)
             {
@@ -65,14 +65,14 @@ namespace ManagementSoftware.GUI
             dataGridViewUser.DataSource = dtUser;
 
         }
-        public void LoadDataGroup(int page, int? rows)
+        public void LoadDataGroup(int page)
         {
             DataTable dtGroup = new DataTable();
             dtGroup.Columns.Add("Mã nhóm quyền");
             dtGroup.Columns.Add("Tên nhóm quyền");
             dtGroup.Columns.Add("Quản trị nhân viên");
             dtGroup.Columns.Add("Quản trị nhóm quyền");
-            BUSGroup.GetData(page, rows).ListResults?.ForEach(delegate (Group group)
+            BUSGroup.GetData(page).ListResults?.ForEach(delegate (Group group)
             {
                 string IsManagementUser = group.IsManagementUser == true ? "Có" : "Không";
                 string IsManagementGroup = group.IsManagementGroup == true ? "Có" : "Không";

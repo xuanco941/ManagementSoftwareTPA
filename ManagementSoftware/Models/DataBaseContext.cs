@@ -47,7 +47,6 @@ namespace ManagementSoftware.Models
             //activity
             modelBuilder.Entity<Activity>(entity =>
             {
-                entity.HasIndex(e => e.ActivityName).IsUnique();
                 entity.Property(e => e.CreateAt).HasDefaultValueSql("getdate()");
             });
 
@@ -55,7 +54,7 @@ namespace ManagementSoftware.Models
 
         public bool CreateDatabase()
         {
-            //dbContext.Database.EnsureDeleted();
+            //this.Database.EnsureDeleted();
             return this.Database.EnsureCreated();
         }
 
