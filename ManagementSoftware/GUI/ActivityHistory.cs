@@ -78,7 +78,7 @@ namespace ManagementSoftware.GUI
                 {
                     string? fullnameButton = activity.Username;
                     User? user = BUSUser.GetUserFromUsername(activity.Username);
-                    if (user != null)
+                    if (String.IsNullOrEmpty(activity.Username) == false && user != null)
                     {
                         fullnameButton = user.FullName;
                     }
@@ -319,8 +319,13 @@ namespace ManagementSoftware.GUI
                 buttonPage2.Text = 2.ToString();
                 buttonPage3.Text = 3.ToString();
                 GetActivities();
-                callAlert.Invoke("Xóa thành công!", FormAlert.enmType.Success);
+                callAlert?.Invoke("Xóa thành công!", FormAlert.enmType.Success);
             }
+        }
+
+        private void buttonCallFormEmployeeActivities_Click(object sender, EventArgs e)
+        {
+            new FormEmployeeActivities().Show();
         }
     }
 }

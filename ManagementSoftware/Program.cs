@@ -35,6 +35,7 @@ namespace ManagementSoftware
                 DALActivity.AddActivity(new Activity("Hệ thống", "asd hasdadaishaoish iaha iahr i riah oahr ahraiwrhaw hrqirh qr", ""));
                 DALActivity.AddActivity(new Activity("Hệ thống", "asd hasdadaishaoish iaha iahr i riah oahr ahraiwrhaw hrqirh qr", ""));
                 DALActivity.AddActivity(new Activity("Hệ thống", "asd hasdadaishaoish iaha iahr i riah oahr ahraiwrhaw hrqirh qr", ""));
+                DALActivity.AddActivity(new Activity("Hệ thống", "Khởi tạo tài khoản admin", Common.UserAdmin.Username));
 
             }
 

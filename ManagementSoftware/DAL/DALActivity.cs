@@ -37,5 +37,13 @@ namespace ManagementSoftware.DAL
             return dbContext.Activities.Where(a => a.ActivityID == activityID).FirstOrDefault();
         }
 
+        public static List<string>? GetListActivityHasDistinctUsername()
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            List<string>? list = new List<string>();
+            list = dbContext.Activities.Select(a => a.Username).Distinct().ToList();
+            return list;
+        }
+
     }
 }

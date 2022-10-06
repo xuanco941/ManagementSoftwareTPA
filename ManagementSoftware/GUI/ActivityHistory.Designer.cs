@@ -342,6 +342,7 @@ namespace ManagementSoftware.GUI
             this.buttonCallFormEmployeeActivities.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCallFormEmployeeActivities.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCallFormEmployeeActivities.UseVisualStyleBackColor = false;
+            this.buttonCallFormEmployeeActivities.Click += new System.EventHandler(this.buttonCallFormEmployeeActivities_Click);
             // 
             // btnChangeNumElmPage
             // 

@@ -19,6 +19,17 @@ namespace ManagementSoftware.BUS
             return paginationActivity;
         }
 
+        public static PaginationActivityAUser GetDataAUser(int page, DateTime? start, DateTime? end, string username)
+        {
+            PaginationActivityAUser paginationActivity = new PaginationActivityAUser();
+            paginationActivity.Set(page, start, end, username);
+            return paginationActivity;
+        }
+
+        public static List<string>? GetListActivityHasDistinctUsername()
+        {
+            return DALActivity.GetListActivityHasDistinctUsername();
+        }
 
         public static AddUpdateDeleteResponse<List<Activity>> DeleteActivities(List<int> activityIDs)
         {
