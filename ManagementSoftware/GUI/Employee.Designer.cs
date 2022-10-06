@@ -30,16 +30,20 @@ namespace ManagementSoftware.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageUser = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridViewUser = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonPageUserNext = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPageUser3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPageUser1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPageUser2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonChangeUser = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonAddUser = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonThemNhanVien = new System.Windows.Forms.Button();
@@ -48,20 +52,16 @@ namespace ManagementSoftware.GUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewGroup = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.buttonPageGroupNext = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPageGroup3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPageGroup1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonPageGroup2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonChangeGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonAddGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom5 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom6 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom7 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom8 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.tabControl1.SuspendLayout();
             this.tabPageUser.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -114,14 +114,14 @@ namespace ManagementSoftware.GUI
             this.dataGridViewUser.AllowUserToAddRows = false;
             this.dataGridViewUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUser.BackgroundColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUser.Location = new System.Drawing.Point(0, 0);
@@ -129,18 +129,18 @@ namespace ManagementSoftware.GUI
             this.dataGridViewUser.Name = "dataGridViewUser";
             this.dataGridViewUser.ReadOnly = true;
             this.dataGridViewUser.RowHeadersVisible = false;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewUser.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUser.Size = new System.Drawing.Size(1147, 496);
             this.dataGridViewUser.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.buttonCustom1);
-            this.panel3.Controls.Add(this.buttonCustom2);
-            this.panel3.Controls.Add(this.buttonCustom3);
-            this.panel3.Controls.Add(this.buttonCustom4);
+            this.panel3.Controls.Add(this.buttonPageUserNext);
+            this.panel3.Controls.Add(this.buttonPageUser3);
+            this.panel3.Controls.Add(this.buttonPageUser1);
+            this.panel3.Controls.Add(this.buttonPageUser2);
             this.panel3.Controls.Add(this.buttonChangeUser);
             this.panel3.Controls.Add(this.buttonAddUser);
             this.panel3.Controls.Add(this.buttonThemNhanVien);
@@ -152,6 +152,102 @@ namespace ManagementSoftware.GUI
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1147, 59);
             this.panel3.TabIndex = 9;
+            // 
+            // buttonPageUserNext
+            // 
+            this.buttonPageUserNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPageUserNext.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageUserNext.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageUserNext.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPageUserNext.BorderRadius = 3;
+            this.buttonPageUserNext.BorderSize = 0;
+            this.buttonPageUserNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPageUserNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPageUserNext.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPageUserNext.ForeColor = System.Drawing.Color.Black;
+            this.buttonPageUserNext.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPageUserNext.Location = new System.Drawing.Point(244, 14);
+            this.buttonPageUserNext.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonPageUserNext.Name = "buttonPageUserNext";
+            this.buttonPageUserNext.Size = new System.Drawing.Size(74, 35);
+            this.buttonPageUserNext.TabIndex = 32;
+            this.buttonPageUserNext.Text = ">>";
+            this.buttonPageUserNext.TextColor = System.Drawing.Color.Black;
+            this.buttonPageUserNext.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPageUserNext.UseVisualStyleBackColor = false;
+            this.buttonPageUserNext.Click += new System.EventHandler(this.buttonPageUserNext_Click);
+            // 
+            // buttonPageUser3
+            // 
+            this.buttonPageUser3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPageUser3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageUser3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageUser3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPageUser3.BorderRadius = 3;
+            this.buttonPageUser3.BorderSize = 0;
+            this.buttonPageUser3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPageUser3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPageUser3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPageUser3.ForeColor = System.Drawing.Color.Black;
+            this.buttonPageUser3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPageUser3.Location = new System.Drawing.Point(163, 14);
+            this.buttonPageUser3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonPageUser3.Name = "buttonPageUser3";
+            this.buttonPageUser3.Size = new System.Drawing.Size(74, 35);
+            this.buttonPageUser3.TabIndex = 31;
+            this.buttonPageUser3.Text = "3";
+            this.buttonPageUser3.TextColor = System.Drawing.Color.Black;
+            this.buttonPageUser3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPageUser3.UseVisualStyleBackColor = false;
+            this.buttonPageUser3.Click += new System.EventHandler(this.buttonPageUser1_Click);
+            // 
+            // buttonPageUser1
+            // 
+            this.buttonPageUser1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPageUser1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageUser1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageUser1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPageUser1.BorderRadius = 3;
+            this.buttonPageUser1.BorderSize = 0;
+            this.buttonPageUser1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPageUser1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPageUser1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPageUser1.ForeColor = System.Drawing.Color.Black;
+            this.buttonPageUser1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPageUser1.Location = new System.Drawing.Point(4, 14);
+            this.buttonPageUser1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonPageUser1.Name = "buttonPageUser1";
+            this.buttonPageUser1.Size = new System.Drawing.Size(74, 35);
+            this.buttonPageUser1.TabIndex = 30;
+            this.buttonPageUser1.Text = "1";
+            this.buttonPageUser1.TextColor = System.Drawing.Color.Black;
+            this.buttonPageUser1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPageUser1.UseVisualStyleBackColor = false;
+            this.buttonPageUser1.Click += new System.EventHandler(this.buttonPageUser1_Click);
+            // 
+            // buttonPageUser2
+            // 
+            this.buttonPageUser2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPageUser2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageUser2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageUser2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPageUser2.BorderRadius = 3;
+            this.buttonPageUser2.BorderSize = 0;
+            this.buttonPageUser2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPageUser2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPageUser2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPageUser2.ForeColor = System.Drawing.Color.Black;
+            this.buttonPageUser2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPageUser2.Location = new System.Drawing.Point(83, 14);
+            this.buttonPageUser2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonPageUser2.Name = "buttonPageUser2";
+            this.buttonPageUser2.Size = new System.Drawing.Size(74, 35);
+            this.buttonPageUser2.TabIndex = 29;
+            this.buttonPageUser2.Text = "2";
+            this.buttonPageUser2.TextColor = System.Drawing.Color.Black;
+            this.buttonPageUser2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPageUser2.UseVisualStyleBackColor = false;
+            this.buttonPageUser2.Click += new System.EventHandler(this.buttonPageUser1_Click);
             // 
             // buttonChangeUser
             // 
@@ -263,14 +359,14 @@ namespace ManagementSoftware.GUI
             this.dataGridViewGroup.AllowUserToAddRows = false;
             this.dataGridViewGroup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewGroup.BackgroundColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGroup.Location = new System.Drawing.Point(0, 0);
@@ -278,18 +374,18 @@ namespace ManagementSoftware.GUI
             this.dataGridViewGroup.Name = "dataGridViewGroup";
             this.dataGridViewGroup.ReadOnly = true;
             this.dataGridViewGroup.RowHeadersVisible = false;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewGroup.Size = new System.Drawing.Size(1147, 496);
             this.dataGridViewGroup.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.buttonCustom5);
-            this.panel4.Controls.Add(this.buttonCustom6);
-            this.panel4.Controls.Add(this.buttonCustom7);
-            this.panel4.Controls.Add(this.buttonCustom8);
+            this.panel4.Controls.Add(this.buttonPageGroupNext);
+            this.panel4.Controls.Add(this.buttonPageGroup3);
+            this.panel4.Controls.Add(this.buttonPageGroup1);
+            this.panel4.Controls.Add(this.buttonPageGroup2);
             this.panel4.Controls.Add(this.buttonChangeGroup);
             this.panel4.Controls.Add(this.buttonAddGroup);
             this.panel4.Controls.Add(this.button1);
@@ -303,6 +399,102 @@ namespace ManagementSoftware.GUI
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1147, 59);
             this.panel4.TabIndex = 11;
+            // 
+            // buttonPageGroupNext
+            // 
+            this.buttonPageGroupNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPageGroupNext.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageGroupNext.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageGroupNext.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPageGroupNext.BorderRadius = 3;
+            this.buttonPageGroupNext.BorderSize = 0;
+            this.buttonPageGroupNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPageGroupNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPageGroupNext.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPageGroupNext.ForeColor = System.Drawing.Color.Black;
+            this.buttonPageGroupNext.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPageGroupNext.Location = new System.Drawing.Point(244, 13);
+            this.buttonPageGroupNext.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonPageGroupNext.Name = "buttonPageGroupNext";
+            this.buttonPageGroupNext.Size = new System.Drawing.Size(74, 35);
+            this.buttonPageGroupNext.TabIndex = 32;
+            this.buttonPageGroupNext.Text = ">>";
+            this.buttonPageGroupNext.TextColor = System.Drawing.Color.Black;
+            this.buttonPageGroupNext.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPageGroupNext.UseVisualStyleBackColor = false;
+            this.buttonPageGroupNext.Click += new System.EventHandler(this.buttonPageGroupNext_Click);
+            // 
+            // buttonPageGroup3
+            // 
+            this.buttonPageGroup3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPageGroup3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageGroup3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageGroup3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPageGroup3.BorderRadius = 3;
+            this.buttonPageGroup3.BorderSize = 0;
+            this.buttonPageGroup3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPageGroup3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPageGroup3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPageGroup3.ForeColor = System.Drawing.Color.Black;
+            this.buttonPageGroup3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPageGroup3.Location = new System.Drawing.Point(163, 13);
+            this.buttonPageGroup3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonPageGroup3.Name = "buttonPageGroup3";
+            this.buttonPageGroup3.Size = new System.Drawing.Size(74, 35);
+            this.buttonPageGroup3.TabIndex = 31;
+            this.buttonPageGroup3.Text = "3";
+            this.buttonPageGroup3.TextColor = System.Drawing.Color.Black;
+            this.buttonPageGroup3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPageGroup3.UseVisualStyleBackColor = false;
+            this.buttonPageGroup3.Click += new System.EventHandler(this.buttonPageGroup1_Click);
+            // 
+            // buttonPageGroup1
+            // 
+            this.buttonPageGroup1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPageGroup1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageGroup1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageGroup1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPageGroup1.BorderRadius = 3;
+            this.buttonPageGroup1.BorderSize = 0;
+            this.buttonPageGroup1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPageGroup1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPageGroup1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPageGroup1.ForeColor = System.Drawing.Color.Black;
+            this.buttonPageGroup1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPageGroup1.Location = new System.Drawing.Point(4, 13);
+            this.buttonPageGroup1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonPageGroup1.Name = "buttonPageGroup1";
+            this.buttonPageGroup1.Size = new System.Drawing.Size(74, 35);
+            this.buttonPageGroup1.TabIndex = 30;
+            this.buttonPageGroup1.Text = "1";
+            this.buttonPageGroup1.TextColor = System.Drawing.Color.Black;
+            this.buttonPageGroup1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPageGroup1.UseVisualStyleBackColor = false;
+            this.buttonPageGroup1.Click += new System.EventHandler(this.buttonPageGroup1_Click);
+            // 
+            // buttonPageGroup2
+            // 
+            this.buttonPageGroup2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPageGroup2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageGroup2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPageGroup2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPageGroup2.BorderRadius = 3;
+            this.buttonPageGroup2.BorderSize = 0;
+            this.buttonPageGroup2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPageGroup2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPageGroup2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPageGroup2.ForeColor = System.Drawing.Color.Black;
+            this.buttonPageGroup2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPageGroup2.Location = new System.Drawing.Point(83, 13);
+            this.buttonPageGroup2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonPageGroup2.Name = "buttonPageGroup2";
+            this.buttonPageGroup2.Size = new System.Drawing.Size(74, 35);
+            this.buttonPageGroup2.TabIndex = 29;
+            this.buttonPageGroup2.Text = "2";
+            this.buttonPageGroup2.TextColor = System.Drawing.Color.Black;
+            this.buttonPageGroup2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPageGroup2.UseVisualStyleBackColor = false;
+            this.buttonPageGroup2.Click += new System.EventHandler(this.buttonPageGroup1_Click);
             // 
             // buttonChangeGroup
             // 
@@ -416,190 +608,6 @@ namespace ManagementSoftware.GUI
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // buttonCustom1
-            // 
-            this.buttonCustom1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom1.BorderRadius = 3;
-            this.buttonCustom1.BorderSize = 0;
-            this.buttonCustom1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom1.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom1.Location = new System.Drawing.Point(244, 14);
-            this.buttonCustom1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom1.Name = "buttonCustom1";
-            this.buttonCustom1.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom1.TabIndex = 32;
-            this.buttonCustom1.Text = ">>";
-            this.buttonCustom1.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom1.UseVisualStyleBackColor = false;
-            // 
-            // buttonCustom2
-            // 
-            this.buttonCustom2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom2.BorderRadius = 3;
-            this.buttonCustom2.BorderSize = 0;
-            this.buttonCustom2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom2.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom2.Location = new System.Drawing.Point(163, 14);
-            this.buttonCustom2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom2.Name = "buttonCustom2";
-            this.buttonCustom2.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom2.TabIndex = 31;
-            this.buttonCustom2.Text = "3";
-            this.buttonCustom2.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom2.UseVisualStyleBackColor = false;
-            // 
-            // buttonCustom3
-            // 
-            this.buttonCustom3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom3.BorderRadius = 3;
-            this.buttonCustom3.BorderSize = 0;
-            this.buttonCustom3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom3.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom3.Location = new System.Drawing.Point(4, 14);
-            this.buttonCustom3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom3.Name = "buttonCustom3";
-            this.buttonCustom3.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom3.TabIndex = 30;
-            this.buttonCustom3.Text = "1";
-            this.buttonCustom3.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom3.UseVisualStyleBackColor = false;
-            // 
-            // buttonCustom4
-            // 
-            this.buttonCustom4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom4.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom4.BorderRadius = 3;
-            this.buttonCustom4.BorderSize = 0;
-            this.buttonCustom4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom4.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom4.Location = new System.Drawing.Point(83, 14);
-            this.buttonCustom4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom4.Name = "buttonCustom4";
-            this.buttonCustom4.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom4.TabIndex = 29;
-            this.buttonCustom4.Text = "2";
-            this.buttonCustom4.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom4.UseVisualStyleBackColor = false;
-            // 
-            // buttonCustom5
-            // 
-            this.buttonCustom5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom5.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom5.BorderRadius = 3;
-            this.buttonCustom5.BorderSize = 0;
-            this.buttonCustom5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom5.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom5.Location = new System.Drawing.Point(244, 13);
-            this.buttonCustom5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom5.Name = "buttonCustom5";
-            this.buttonCustom5.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom5.TabIndex = 32;
-            this.buttonCustom5.Text = ">>";
-            this.buttonCustom5.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom5.UseVisualStyleBackColor = false;
-            // 
-            // buttonCustom6
-            // 
-            this.buttonCustom6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom6.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom6.BorderRadius = 3;
-            this.buttonCustom6.BorderSize = 0;
-            this.buttonCustom6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom6.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom6.Location = new System.Drawing.Point(163, 13);
-            this.buttonCustom6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom6.Name = "buttonCustom6";
-            this.buttonCustom6.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom6.TabIndex = 31;
-            this.buttonCustom6.Text = "3";
-            this.buttonCustom6.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom6.UseVisualStyleBackColor = false;
-            // 
-            // buttonCustom7
-            // 
-            this.buttonCustom7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom7.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom7.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom7.BorderRadius = 3;
-            this.buttonCustom7.BorderSize = 0;
-            this.buttonCustom7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom7.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom7.Location = new System.Drawing.Point(4, 13);
-            this.buttonCustom7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom7.Name = "buttonCustom7";
-            this.buttonCustom7.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom7.TabIndex = 30;
-            this.buttonCustom7.Text = "1";
-            this.buttonCustom7.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom7.UseVisualStyleBackColor = false;
-            // 
-            // buttonCustom8
-            // 
-            this.buttonCustom8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom8.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom8.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom8.BorderRadius = 3;
-            this.buttonCustom8.BorderSize = 0;
-            this.buttonCustom8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom8.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom8.Location = new System.Drawing.Point(83, 13);
-            this.buttonCustom8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom8.Name = "buttonCustom8";
-            this.buttonCustom8.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom8.TabIndex = 29;
-            this.buttonCustom8.Text = "2";
-            this.buttonCustom8.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom8.UseVisualStyleBackColor = false;
-            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -645,13 +653,13 @@ namespace ManagementSoftware.GUI
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonChangeUser;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonChangeGroup;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddGroup;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom2;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom3;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom4;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom5;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom6;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom7;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom8;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageUserNext;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageUser3;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageUser1;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageUser2;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageGroupNext;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageGroup3;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageGroup1;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageGroup2;
     }
 }

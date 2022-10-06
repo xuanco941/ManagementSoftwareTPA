@@ -167,25 +167,6 @@ namespace ManagementSoftware.GUI
             GetActivities();
         }
 
-        private void buttonGoPage_Click(object sender, EventArgs e)
-        {
-            this.page = (int)inputNumPageGo.IntegerValue;
-            GetActivities();
-            //set lại button trang
-            if (this.page == this.TotalPages)
-            {
-                buttonPage1.Text = (page - 2).ToString();
-                buttonPage2.Text = (page - 1).ToString();
-                buttonPage3.Text = page.ToString();
-            }
-            else
-            {
-                buttonPage1.Text = (page - 1).ToString();
-                buttonPage2.Text = page.ToString();
-                buttonPage3.Text = (page + 1).ToString();
-            }
-        }
-
         private void buttonPage1_Click(object sender, EventArgs e)
         {
             // select button trang
@@ -326,6 +307,38 @@ namespace ManagementSoftware.GUI
         private void buttonCallFormEmployeeActivities_Click(object sender, EventArgs e)
         {
             new FormEmployeeActivities().Show();
+        }
+
+        private void buttonCustomGoPage_Click(object sender, EventArgs e)
+        {
+            if (this.page > this.TotalPages)
+            {
+                this.page = this.TotalPages;
+            }
+            else
+            {
+                this.page = (int) inputNumPageGo.IntegerValue;
+                if (this.page <= 2)
+                {
+                    buttonPage1.Text = 1.ToString();
+                    buttonPage2.Text = 2.ToString();
+                    buttonPage3.Text = 3.ToString();
+                }
+                else
+                {
+                    buttonPage1.Text = (page - 1).ToString();
+                    buttonPage2.Text = page.ToString();
+                    buttonPage3.Text = (page + 1).ToString();
+                    //nếu tràng hiện tại là trang cuối cùng thì đặt các nút là các những trang cuối
+                    if (this.page == this.TotalPages)
+                    {
+                        buttonPage1.Text = (page - 2).ToString();
+                        buttonPage2.Text = (page - 1).ToString();
+                        buttonPage3.Text = page.ToString();
+                    }
+                }
+            }
+            GetActivities();
         }
     }
 }

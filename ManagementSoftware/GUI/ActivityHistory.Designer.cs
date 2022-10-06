@@ -40,7 +40,7 @@ namespace ManagementSoftware.GUI
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewActivity = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonGoPage = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonCustomGoPage = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.inputNumPageGo = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
             this.buttonPageNext = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
@@ -160,7 +160,7 @@ namespace ManagementSoftware.GUI
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.buttonGoPage);
+            this.panel2.Controls.Add(this.buttonCustomGoPage);
             this.panel2.Controls.Add(this.inputNumPageGo);
             this.panel2.Controls.Add(this.buttonPageNext);
             this.panel2.Controls.Add(this.buttonPage3);
@@ -173,40 +173,40 @@ namespace ManagementSoftware.GUI
             this.panel2.Size = new System.Drawing.Size(706, 58);
             this.panel2.TabIndex = 0;
             // 
-            // buttonGoPage
+            // buttonCustomGoPage
             // 
-            this.buttonGoPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGoPage.BackColor = System.Drawing.Color.DodgerBlue;
-            this.buttonGoPage.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            this.buttonGoPage.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonGoPage.BorderRadius = 3;
-            this.buttonGoPage.BorderSize = 1;
-            this.buttonGoPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonGoPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGoPage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonGoPage.ForeColor = System.Drawing.Color.Black;
-            this.buttonGoPage.Image = ((System.Drawing.Image)(resources.GetObject("buttonGoPage.Image")));
-            this.buttonGoPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGoPage.Location = new System.Drawing.Point(632, 12);
-            this.buttonGoPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonGoPage.Name = "buttonGoPage";
-            this.buttonGoPage.Size = new System.Drawing.Size(74, 35);
-            this.buttonGoPage.TabIndex = 33;
-            this.buttonGoPage.Text = "Đi";
-            this.buttonGoPage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonGoPage.TextColor = System.Drawing.Color.Black;
-            this.buttonGoPage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonGoPage.UseVisualStyleBackColor = false;
-            this.buttonGoPage.Click += new System.EventHandler(this.buttonGoPage_Click);
+            this.buttonCustomGoPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCustomGoPage.BackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonCustomGoPage.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.buttonCustomGoPage.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustomGoPage.BorderRadius = 3;
+            this.buttonCustomGoPage.BorderSize = 0;
+            this.buttonCustomGoPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustomGoPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustomGoPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCustomGoPage.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustomGoPage.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustomGoPage.Image")));
+            this.buttonCustomGoPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustomGoPage.Location = new System.Drawing.Point(613, 12);
+            this.buttonCustomGoPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonCustomGoPage.Name = "buttonCustomGoPage";
+            this.buttonCustomGoPage.Size = new System.Drawing.Size(93, 35);
+            this.buttonCustomGoPage.TabIndex = 33;
+            this.buttonCustomGoPage.Text = "Đi";
+            this.buttonCustomGoPage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustomGoPage.TextColor = System.Drawing.Color.Black;
+            this.buttonCustomGoPage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCustomGoPage.UseVisualStyleBackColor = false;
+            this.buttonCustomGoPage.Click += new System.EventHandler(this.buttonCustomGoPage_Click);
             // 
             // inputNumPageGo
             // 
             this.inputNumPageGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputNumPageGo.BeforeTouchSize = new System.Drawing.Size(66, 35);
+            this.inputNumPageGo.BeforeTouchSize = new System.Drawing.Size(207, 38);
             this.inputNumPageGo.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.inputNumPageGo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inputNumPageGo.IntegerValue = ((long)(1));
-            this.inputNumPageGo.Location = new System.Drawing.Point(562, 12);
+            this.inputNumPageGo.Location = new System.Drawing.Point(543, 14);
             this.inputNumPageGo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.inputNumPageGo.Multiline = true;
             this.inputNumPageGo.Name = "inputNumPageGo";
@@ -434,10 +434,10 @@ namespace ManagementSoftware.GUI
             this.buttonLoc.ForeColor = System.Drawing.Color.Black;
             this.buttonLoc.Image = ((System.Drawing.Image)(resources.GetObject("buttonLoc.Image")));
             this.buttonLoc.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonLoc.Location = new System.Drawing.Point(74, 164);
+            this.buttonLoc.Location = new System.Drawing.Point(65, 148);
             this.buttonLoc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonLoc.Name = "buttonLoc";
-            this.buttonLoc.Size = new System.Drawing.Size(96, 38);
+            this.buttonLoc.Size = new System.Drawing.Size(97, 38);
             this.buttonLoc.TabIndex = 19;
             this.buttonLoc.Text = "Lọc";
             this.buttonLoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -648,7 +648,7 @@ namespace ManagementSoftware.GUI
         private Button buttonDeleteDataActivity;
         private Panel panel6;
         private Label label1;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonGoPage;
         private Syncfusion.Windows.Forms.Tools.IntegerTextBox inputNumPageGo;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustomGoPage;
     }
 }

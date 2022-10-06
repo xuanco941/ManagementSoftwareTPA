@@ -61,6 +61,7 @@ namespace ManagementSoftware.GUI
 
             dataGridViewResult.RowTemplate.Height = 45;
         }
+
     }
 
     //METHOD
