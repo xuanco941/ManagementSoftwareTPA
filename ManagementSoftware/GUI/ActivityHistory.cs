@@ -102,7 +102,7 @@ namespace ManagementSoftware.GUI
                 PaginationActivity paginationActivity = BUSActivity.GetData(this.page, timeStart?.AddDays(-1), timeEnd);
                 List<Activity>? activities = paginationActivity.ListResults;
                 //số trang max
-                inputNumPageGo.MaxValue = paginationActivity.TotalPages;
+                inputNumPageGo.MaxValue = paginationActivity.TotalPages != 0 ? paginationActivity.TotalPages : 1;
 
                 // pagesize bằng tổng số activity chia cho số phần tử mỗi trang
                 this.TotalPages = paginationActivity.TotalPages;
@@ -148,7 +148,7 @@ namespace ManagementSoftware.GUI
             catch
             {
                 // Lỗi
-                MessageBox.Show("Không thể tải lên dữ liệu", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi truy xuất liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

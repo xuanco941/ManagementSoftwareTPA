@@ -8,6 +8,7 @@ namespace ManagementSoftware.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Activity> Activities { get; set; }
+        public DbSet<Shift> Shifts { get; set; }
 
         // Tạo ILoggerFactory 
         public static readonly ILoggerFactory loggerFactory = LoggerFactory.Create(builder => {

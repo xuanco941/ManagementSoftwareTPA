@@ -6,9 +6,9 @@ namespace ManagementSoftware.DAL.DALPagination
     public class PaginationUser
     {
         public static int NumberRows { get; set; } = Common.NumberRows;
-        public int PageCurrent { get; set; }
-        public int TotalPages { get; set; }
-        public int TotalResults { get; set; }
+        public int PageCurrent { get; set; } = 1;
+        public int TotalPages { get; set; } = 1;
+        public int TotalResults { get; set; } = 0;
         public List<UserHasGroupName>? ListResults { get; set; }
 
         public void Set(int page)
