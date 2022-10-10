@@ -13,6 +13,7 @@ namespace ManagementSoftware.Models
     {
         [Key]
         public int ResultID { get; set; }
+
         public double ApSuatMin { get; set; }
         public double ApSuatMax { get; set; }
         public double ApSuatAvg { get; set; }
@@ -22,11 +23,17 @@ namespace ManagementSoftware.Models
         public double LuuLuongMin { get; set; }
         public double LuuLuongMax { get; set; }
         public double LuuLuongAvg { get; set; }
+
+
+        public string Barcode { get; set; }
         public DateTime TimeStart { get; set; }
         public DateTime TimeEnd { get; set; }
         public string NameMachine { get; set; }
-        public string Worker { get; set; }
+        //người vận hành
+        public string ResultCreator { get; set; }
         public bool Status { get; set; }
+        public int DirectivePOID { get; set; }
+        public DirectivePO DirectivePO { get; set; }
         public Result()
         {
         }

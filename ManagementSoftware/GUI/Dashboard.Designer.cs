@@ -55,7 +55,7 @@
             // 
             this.sparkLine1.EndPoint = 10D;
             this.sparkLine1.HighPoint = 90D;
-            this.sparkLine1.Location = new System.Drawing.Point(786, 122);
+            this.sparkLine1.Location = new System.Drawing.Point(730, 47);
             this.sparkLine1.LowPoint = 10D;
             this.sparkLine1.Name = "sparkLine1";
             this.sparkLine1.NegativeItem = new double[] {
@@ -86,7 +86,7 @@
             // 
             this.chartControl1.Legend.Location = new System.Drawing.Point(291, 75);
             this.chartControl1.Localize = null;
-            this.chartControl1.Location = new System.Drawing.Point(57, 30);
+            this.chartControl1.Location = new System.Drawing.Point(49, 12);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.chartControl1.PrimaryXAxis.Margin = true;

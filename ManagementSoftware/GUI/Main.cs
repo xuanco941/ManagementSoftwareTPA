@@ -67,8 +67,8 @@ namespace ManagementSoftware.GUI
 
         private void buttonQuanLyDonHang_Click(object sender, EventArgs e)
         {
-            PurchaseOrder form = new PurchaseOrder();
-            form.callAlert = new PurchaseOrder.CallAlert(Alert);
+            FormPurchaseOrder form = new FormPurchaseOrder();
+            form.callAlert = new FormPurchaseOrder.CallAlert(Alert);
             ChangeFormContent(form, sender);
         }
 
@@ -81,8 +81,8 @@ namespace ManagementSoftware.GUI
 
         private void buttonQuanLyKho_Click(object sender, EventArgs e)
         {
-            Inventory form = new Inventory();
-            form.callAlert = new Inventory.CallAlert(Alert);
+            WareHouse form = new WareHouse();
+            form.callAlert = new WareHouse.CallAlert(Alert);
             ChangeFormContent(form, sender);
         }
 

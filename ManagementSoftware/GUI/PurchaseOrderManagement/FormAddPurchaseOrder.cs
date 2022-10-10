@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Syncfusion.Pdf.Parsing;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,17 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ManagementSoftware.GUI.Section;
 
-namespace ManagementSoftware.GUI
+namespace ManagementSoftware.GUI.PurchaseOrderManagement
 {
-    public partial class Inventory : Form
+    public partial class FormAddPurchaseOrder : Form
     {
-        // Aleart
-        public delegate void CallAlert(string msg, FormAlert.enmType type);
-        public CallAlert callAlert;
-
-        public Inventory()
+        public FormAddPurchaseOrder()
         {
             InitializeComponent();
             LoadForm();
@@ -38,12 +34,10 @@ namespace ManagementSoftware.GUI
             dt.Columns.Add("DVT");
             dt.Columns.Add("Số lượng");
             dt.Columns.Add("Đơn giá");
-            dt.Columns.Add("Người thực thi");
 
             dt.Columns.Add("Thành tiền");
 
             dataGridView1.DataSource = dt;
         }
-
     }
 }

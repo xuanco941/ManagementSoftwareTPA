@@ -1,6 +1,6 @@
 ﻿namespace ManagementSoftware.GUI
 {
-    partial class Inventory
+    partial class WareHouse
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WareHouse));
             this.panel10 = new System.Windows.Forms.Panel();
             this.buttonUpdate = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();

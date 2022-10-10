@@ -9,6 +9,10 @@ namespace ManagementSoftware.Models
         public DbSet<Group> Groups { get; set; }
         public DbSet<Activity> Activities { get; set; }
         public DbSet<Shift> Shifts { get; set; }
+        public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
+        public DbSet<DirectivePO> DirectivePOs { get; set; }
+        public DbSet<Result> Results { get; set; }
+        public DbSet<DataResult> DataResults { get; set; }
 
         // Tạo ILoggerFactory 
         public static readonly ILoggerFactory loggerFactory = LoggerFactory.Create(builder => {
@@ -49,6 +53,16 @@ namespace ManagementSoftware.Models
             modelBuilder.Entity<Activity>(entity =>
             {
                 entity.Property(e => e.CreateAt).HasDefaultValueSql("getdate()");
+            });
+
+            //PO
+            modelBuilder.Entity<PurchaseOrder>(entity =>
+            {
+                entity.Property(e => e.Status).HasDefaultValueSql("false");
+                entity.Property(e => e.CreateAt).HasDefaultValueSql("getdate()");
+                entity.Property(e => e.SoPRPQ).HasDefaultValueSql("0");
+                entity.Property(e => e.SoPRPQ).HasDefaultValueSql("0");
+
             });
 
         }
