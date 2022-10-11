@@ -46,6 +46,12 @@
     <Compile Update="GUI\ResultHistory.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Section\FormItemPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Section\FormItemProductOfPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Settings.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -13,6 +13,7 @@ namespace ManagementSoftware.Models
         public DbSet<DirectivePO> DirectivePOs { get; set; }
         public DbSet<Result> Results { get; set; }
         public DbSet<DataResult> DataResults { get; set; }
+        public DbSet<ResultWarning> ResultWarnings { get; set; }
 
         // Tạo ILoggerFactory 
         public static readonly ILoggerFactory loggerFactory = LoggerFactory.Create(builder => {
@@ -52,24 +53,44 @@ namespace ManagementSoftware.Models
             //activity
             modelBuilder.Entity<Activity>(entity =>
             {
-                entity.Property(e => e.CreateAt).HasDefaultValueSql("getdate()");
+                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
             });
 
             //PO
             modelBuilder.Entity<PurchaseOrder>(entity =>
             {
-                entity.Property(e => e.Status).HasDefaultValueSql("false");
-                entity.Property(e => e.CreateAt).HasDefaultValueSql("getdate()");
-                entity.Property(e => e.SoPRPQ).HasDefaultValueSql("0");
-                entity.Property(e => e.SoPRPQ).HasDefaultValueSql("0");
-
+                entity.Property(e => e.Status).HasDefaultValueSql("(0)");
+                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
+                entity.Property(e => e.SoPRPQ).HasDefaultValueSql("(0)");
+            });
+            //DirectivePO
+            modelBuilder.Entity<DirectivePO>(entity =>
+            {
+                entity.Property(e => e.Status).HasDefaultValueSql("(0)");
+                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
+            });
+            //Result
+            modelBuilder.Entity<Result>(entity =>
+            {
+                entity.Property(e => e.Status).HasDefaultValueSql("(0)");
+                entity.Property(e => e.TimeStart).HasDefaultValueSql("(getdate())");
+            });
+            //DataResult
+            modelBuilder.Entity<DataResult>(entity =>
+            {
+                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
+            });
+            //ResultWarning
+            modelBuilder.Entity<ResultWarning>(entity =>
+            {
+                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
             });
 
         }
 
         public bool CreateDatabase()
         {
-            //this.Database.EnsureDeleted();
+            this.Database.EnsureDeleted();
             return this.Database.EnsureCreated();
         }
 

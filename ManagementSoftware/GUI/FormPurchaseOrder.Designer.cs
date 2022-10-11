@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPurchaseOrder));
             this.addPO = new Syncfusion.WinForms.Controls.SfButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonPageNext = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
@@ -36,24 +37,25 @@
             this.buttonPage1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.textBoxSearchUser = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.panel2Button = new System.Windows.Forms.Panel();
+            this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonBack = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.panelItemPO = new System.Windows.Forms.Panel();
-            this.panelGrid = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelMain.SuspendLayout();
-            this.panelItemPO.SuspendLayout();
-            this.panelGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel2Button.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,7 +190,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.buttonDangNhap);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -196,155 +199,200 @@
             this.panel1.Size = new System.Drawing.Size(1293, 48);
             this.panel1.TabIndex = 2;
             // 
-            // buttonDangNhap
+            // panel4
             // 
-            this.buttonDangNhap.AutoEllipsis = true;
-            this.buttonDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonDangNhap.BorderRadius = 5;
-            this.buttonDangNhap.BorderSize = 0;
-            this.buttonDangNhap.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
-            this.buttonDangNhap.Image = global::ManagementSoftware.Properties.Resources.backpage;
-            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDangNhap.Location = new System.Drawing.Point(0, 0);
-            this.buttonDangNhap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonDangNhap.Name = "buttonDangNhap";
-            this.buttonDangNhap.Size = new System.Drawing.Size(144, 46);
-            this.buttonDangNhap.TabIndex = 13;
-            this.buttonDangNhap.Text = "Quay lại";
-            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.TextColor = System.Drawing.Color.White;
-            this.buttonDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonDangNhap.UseVisualStyleBackColor = false;
+            this.panel4.Controls.Add(this.tableLayoutPanel1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(129, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1162, 46);
+            this.panel4.TabIndex = 1;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2Button, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1162, 46);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.textBoxSearchUser);
+            this.panel5.Controls.Add(this.buttonCustom3);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(700, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(459, 40);
+            this.panel5.TabIndex = 1;
+            // 
+            // textBoxSearchUser
+            // 
+            this.textBoxSearchUser.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxSearchUser.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxSearchUser.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxSearchUser.BorderRadius = 5;
+            this.textBoxSearchUser.BorderSize = 1;
+            this.textBoxSearchUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxSearchUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSearchUser.Location = new System.Drawing.Point(0, 0);
+            this.textBoxSearchUser.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxSearchUser.Multiline = false;
+            this.textBoxSearchUser.Name = "textBoxSearchUser";
+            this.textBoxSearchUser.Padding = new System.Windows.Forms.Padding(8, 9, 8, 6);
+            this.textBoxSearchUser.PasswordChar = false;
+            this.textBoxSearchUser.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxSearchUser.PlaceholderText = "Nhập mã đơn hàng";
+            this.textBoxSearchUser.Size = new System.Drawing.Size(343, 37);
+            this.textBoxSearchUser.TabIndex = 29;
+            this.textBoxSearchUser.Texts = "Nhập mã đơn hàng";
+            this.textBoxSearchUser.UnderlinedStyle = false;
+            // 
+            // buttonCustom3
+            // 
+            this.buttonCustom3.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCustom3.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCustom3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom3.BorderRadius = 3;
+            this.buttonCustom3.BorderSize = 0;
+            this.buttonCustom3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCustom3.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustom3.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom3.Image")));
+            this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom3.Location = new System.Drawing.Point(343, 0);
+            this.buttonCustom3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonCustom3.Name = "buttonCustom3";
+            this.buttonCustom3.Size = new System.Drawing.Size(116, 40);
+            this.buttonCustom3.TabIndex = 24;
+            this.buttonCustom3.Text = "Lọc";
+            this.buttonCustom3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom3.TextColor = System.Drawing.Color.Black;
+            this.buttonCustom3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCustom3.UseVisualStyleBackColor = false;
+            // 
+            // panel2Button
+            // 
+            this.panel2Button.Controls.Add(this.buttonCustom2);
+            this.panel2Button.Controls.Add(this.buttonCustom1);
+            this.panel2Button.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2Button.Location = new System.Drawing.Point(3, 3);
+            this.panel2Button.Name = "panel2Button";
+            this.panel2Button.Size = new System.Drawing.Size(691, 40);
+            this.panel2Button.TabIndex = 2;
+            // 
+            // buttonCustom2
+            // 
+            this.buttonCustom2.BackColor = System.Drawing.Color.Goldenrod;
+            this.buttonCustom2.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom2.BorderRadius = 3;
+            this.buttonCustom2.BorderSize = 0;
+            this.buttonCustom2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCustom2.ForeColor = System.Drawing.Color.White;
+            this.buttonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom2.Image")));
+            this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom2.Location = new System.Drawing.Point(1, 0);
+            this.buttonCustom2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonCustom2.Name = "buttonCustom2";
+            this.gridLayout1.SetParticipateInLayout(this.buttonCustom2, true);
+            this.buttonCustom2.Size = new System.Drawing.Size(345, 40);
+            this.buttonCustom2.TabIndex = 26;
+            this.buttonCustom2.Text = "Chưa hoàn thành";
+            this.buttonCustom2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom2.TextColor = System.Drawing.Color.White;
+            this.buttonCustom2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCustom2.UseVisualStyleBackColor = false;
+            // 
+            // buttonCustom1
+            // 
+            this.buttonCustom1.BackColor = System.Drawing.Color.Green;
+            this.buttonCustom1.BackgroundColor = System.Drawing.Color.Green;
+            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustom1.BorderRadius = 3;
+            this.buttonCustom1.BorderSize = 0;
+            this.buttonCustom1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCustom1.ForeColor = System.Drawing.Color.White;
+            this.buttonCustom1.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom1.Image")));
+            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustom1.Location = new System.Drawing.Point(346, 0);
+            this.buttonCustom1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonCustom1.Name = "buttonCustom1";
+            this.gridLayout1.SetParticipateInLayout(this.buttonCustom1, true);
+            this.buttonCustom1.Size = new System.Drawing.Size(345, 40);
+            this.buttonCustom1.TabIndex = 25;
+            this.buttonCustom1.Text = "Đã hoàn thành";
+            this.buttonCustom1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustom1.TextColor = System.Drawing.Color.White;
+            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCustom1.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.buttonBack);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(129, 46);
+            this.panel3.TabIndex = 0;
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.AutoEllipsis = true;
+            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonBack.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonBack.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonBack.BorderRadius = 5;
+            this.buttonBack.BorderSize = 0;
+            this.buttonBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonBack.ForeColor = System.Drawing.Color.White;
+            this.buttonBack.Image = global::ManagementSoftware.Properties.Resources.backpage;
+            this.buttonBack.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonBack.Location = new System.Drawing.Point(0, 0);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(129, 46);
+            this.buttonBack.TabIndex = 14;
+            this.buttonBack.Text = "Quay lại";
+            this.buttonBack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBack.TextColor = System.Drawing.Color.White;
+            this.buttonBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBack.UseVisualStyleBackColor = false;
             // 
             // panelMain
             // 
             this.panelMain.AutoScroll = true;
             this.panelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMain.Controls.Add(this.panelItemPO);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 48);
             this.panelMain.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelMain.Name = "panelMain";
+            this.panelMain.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.panelMain.Size = new System.Drawing.Size(1293, 537);
             this.panelMain.TabIndex = 3;
             // 
-            // panelItemPO
-            // 
-            this.panelItemPO.AutoScroll = true;
-            this.panelItemPO.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panelItemPO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelItemPO.Controls.Add(this.panelGrid);
-            this.panelItemPO.Controls.Add(this.pictureBox2);
-            this.panelItemPO.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelItemPO.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelItemPO.Location = new System.Drawing.Point(0, 0);
-            this.panelItemPO.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panelItemPO.Name = "panelItemPO";
-            this.panelItemPO.Size = new System.Drawing.Size(1291, 110);
-            this.panelItemPO.TabIndex = 5;
-            this.panelItemPO.Click += new System.EventHandler(this.panel5_Click);
-            // 
-            // panelGrid
-            // 
-            this.panelGrid.Controls.Add(this.label1);
-            this.panelGrid.Controls.Add(this.label12);
-            this.panelGrid.Controls.Add(this.label11);
-            this.panelGrid.Controls.Add(this.label10);
-            this.panelGrid.Controls.Add(this.label9);
-            this.panelGrid.Controls.Add(this.label8);
-            this.panelGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelGrid.Location = new System.Drawing.Point(217, 0);
-            this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(1072, 108);
-            this.panelGrid.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(711, 55);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(357, 54);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Ngày tạo đơn : 09/09/2022";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(1, 0);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(357, 54);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Tên khách hàng: Công ty TPA";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(358, 0);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(357, 54);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Số lượng sản phẩm : 5";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(715, 1);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(357, 54);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Ngày giao hàng : 1/1/2022";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(1, 54);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(357, 54);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Tổng tiền hàng (Chưa VAT): 100.00.000đ";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(358, 54);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(357, 54);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Ngày tạo đơn : 09/09/2022";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::ManagementSoftware.Properties.Resources.ETEK_LOGO_01;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(217, 108);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // gridLayout1
             // 
-            this.gridLayout1.Columns = 3;
-            this.gridLayout1.Rows = 2;
+            this.gridLayout1.Columns = 2;
+            this.gridLayout1.ContainerControl = this.panel2Button;
+            this.gridLayout1.Rows = 1;
             // 
             // FormPurchaseOrder
             // 
@@ -361,10 +409,11 @@
             this.Text = "PurchaseOrder";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panelMain.ResumeLayout(false);
-            this.panelItemPO.ResumeLayout(false);
-            this.panelGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel2Button.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).EndInit();
             this.ResumeLayout(false);
 
@@ -380,16 +429,16 @@
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelMain;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDangNhap;
-        private System.Windows.Forms.Panel panelItemPO;
         private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout1;
-        private Panel panelGrid;
-        private Label label1;
-        private Label label12;
-        private Label label11;
-        private Label label10;
-        private Label label9;
-        private Label label8;
-        private PictureBox pictureBox2;
+        private Panel panel4;
+        private Panel panel3;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonBack;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panel5;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom3;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxSearchUser;
+        private Panel panel2Button;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom2;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
     }
 }

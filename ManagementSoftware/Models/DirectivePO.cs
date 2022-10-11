@@ -17,7 +17,7 @@ namespace ManagementSoftware.Models
 
         public double ApSuat { get; set; }
         public double TheTich { get; set; }
-        public string? LoaiKhi { get; set; }
+        public string LoaiKhi { get; set; }
         public string? ChatLuongKhi { get; set; }
 
         public string? Description { get; set; }
@@ -29,6 +29,7 @@ namespace ManagementSoftware.Models
         //người vận hành
         public string? Username { get; set; }
         public bool Status { get; set; }
+        //kho
         public bool IsImported { get; set; }
         public bool IsExported { get; set; }
         public int PurchaseOrderID { get; set; }

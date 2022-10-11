@@ -79,10 +79,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="GUI\Section\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

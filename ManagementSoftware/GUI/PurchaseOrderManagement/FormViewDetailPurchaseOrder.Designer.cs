@@ -526,7 +526,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1208, 292);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1208, 360);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
             // panel3
@@ -537,7 +537,7 @@
             this.panel3.Location = new System.Drawing.Point(366, 3);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(838, 286);
+            this.panel3.Size = new System.Drawing.Size(838, 354);
             this.panel3.TabIndex = 1;
             // 
             // panel16
@@ -547,7 +547,7 @@
             this.panel16.Location = new System.Drawing.Point(0, 57);
             this.panel16.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(838, 229);
+            this.panel16.Size = new System.Drawing.Size(838, 297);
             this.panel16.TabIndex = 3;
             // 
             // panel17
@@ -557,7 +557,7 @@
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(838, 229);
+            this.panel17.Size = new System.Drawing.Size(838, 297);
             this.panel17.TabIndex = 0;
             // 
             // dataGridView1
@@ -567,7 +567,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(838, 229);
+            this.dataGridView1.Size = new System.Drawing.Size(838, 297);
             this.dataGridView1.TabIndex = 3;
             // 
             // panel5
@@ -611,7 +611,7 @@
             this.panel4.Location = new System.Drawing.Point(4, 3);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(354, 286);
+            this.panel4.Size = new System.Drawing.Size(354, 354);
             this.panel4.TabIndex = 0;
             // 
             // panel15
@@ -869,7 +869,7 @@
             // 
             this.panel2.Controls.Add(this.tableLayoutPanel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 340);
+            this.panel2.Location = new System.Drawing.Point(0, 408);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1208, 158);
@@ -880,7 +880,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1208, 498);
+            this.ClientSize = new System.Drawing.Size(1208, 566);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);

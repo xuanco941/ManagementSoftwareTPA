@@ -1,4 +1,5 @@
-﻿using Syncfusion.Pdf.Parsing;
+﻿using ManagementSoftware.GUI.Section;
+using Syncfusion.Pdf.Parsing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,20 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
         public FormAddPurchaseOrder()
         {
             InitializeComponent();
-            LoadForm();
+            LoadProducts();
+        }
+
+        void LoadProducts()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                FormItemProductOfPO form = new FormItemProductOfPO();
+                form.TopLevel = false;
+                panelProducts.Controls.Add(form);
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Top;
+                form.Show();
+            }
         }
 
         private void LoadForm()
@@ -36,8 +50,6 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             dt.Columns.Add("Đơn giá");
 
             dt.Columns.Add("Thành tiền");
-
-            dataGridView1.DataSource = dt;
         }
     }
 }

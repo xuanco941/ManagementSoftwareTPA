@@ -81,7 +81,7 @@
             this.textBoxTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxTaiKhoan.Multiline = false;
             this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
-            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(8);
             this.textBoxTaiKhoan.PasswordChar = false;
             this.textBoxTaiKhoan.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxTaiKhoan.PlaceholderText = "";
@@ -103,7 +103,7 @@
             this.textBoxMatKhau.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxMatKhau.Multiline = false;
             this.textBoxMatKhau.Name = "textBoxMatKhau";
-            this.textBoxMatKhau.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.textBoxMatKhau.Padding = new System.Windows.Forms.Padding(8);
             this.textBoxMatKhau.PasswordChar = true;
             this.textBoxMatKhau.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxMatKhau.PlaceholderText = "";
@@ -120,6 +120,7 @@
             this.buttonExit.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonExit.BorderRadius = 15;
             this.buttonExit.BorderSize = 0;
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonExit.ForeColor = System.Drawing.Color.White;
@@ -144,6 +145,7 @@
             this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonDangNhap.BorderRadius = 15;
             this.buttonDangNhap.BorderSize = 0;
+            this.buttonDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonDangNhap.ForeColor = System.Drawing.Color.White;

@@ -586,10 +586,10 @@
             // 
             this.panel4.Controls.Add(this.tableLayoutPanel3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 116);
+            this.panel4.Location = new System.Drawing.Point(0, 96);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(580, 67);
+            this.panel4.Size = new System.Drawing.Size(580, 87);
             this.panel4.TabIndex = 11;
             // 
             // tableLayoutPanel3
@@ -609,17 +609,17 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(580, 67);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(580, 87);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.buttonThoiGianLayMau);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(294, 36);
+            this.panel9.Location = new System.Drawing.Point(294, 46);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(282, 28);
+            this.panel9.Size = new System.Drawing.Size(282, 38);
             this.panel9.TabIndex = 3;
             // 
             // buttonThoiGianLayMau
@@ -633,7 +633,7 @@
             this.buttonThoiGianLayMau.Location = new System.Drawing.Point(0, 0);
             this.buttonThoiGianLayMau.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonThoiGianLayMau.Name = "buttonThoiGianLayMau";
-            this.buttonThoiGianLayMau.Size = new System.Drawing.Size(282, 28);
+            this.buttonThoiGianLayMau.Size = new System.Drawing.Size(282, 38);
             this.buttonThoiGianLayMau.TabIndex = 11;
             this.buttonThoiGianLayMau.Text = "Thời gian lấy mẫu : trống";
             this.buttonThoiGianLayMau.UseVisualStyleBackColor = false;
@@ -642,10 +642,10 @@
             // 
             this.panel8.Controls.Add(this.buttonThoiGianNap);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(4, 36);
+            this.panel8.Location = new System.Drawing.Point(4, 46);
             this.panel8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(282, 28);
+            this.panel8.Size = new System.Drawing.Size(282, 38);
             this.panel8.TabIndex = 2;
             // 
             // buttonThoiGianNap
@@ -659,7 +659,7 @@
             this.buttonThoiGianNap.Location = new System.Drawing.Point(0, 0);
             this.buttonThoiGianNap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonThoiGianNap.Name = "buttonThoiGianNap";
-            this.buttonThoiGianNap.Size = new System.Drawing.Size(282, 28);
+            this.buttonThoiGianNap.Size = new System.Drawing.Size(282, 38);
             this.buttonThoiGianNap.TabIndex = 11;
             this.buttonThoiGianNap.Text = "Thời gian nạp : trống";
             this.buttonThoiGianNap.UseVisualStyleBackColor = false;
@@ -671,7 +671,7 @@
             this.panel7.Location = new System.Drawing.Point(294, 3);
             this.panel7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(282, 27);
+            this.panel7.Size = new System.Drawing.Size(282, 37);
             this.panel7.TabIndex = 1;
             // 
             // buttonTheTichNap
@@ -685,7 +685,7 @@
             this.buttonTheTichNap.Location = new System.Drawing.Point(0, 0);
             this.buttonTheTichNap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonTheTichNap.Name = "buttonTheTichNap";
-            this.buttonTheTichNap.Size = new System.Drawing.Size(282, 27);
+            this.buttonTheTichNap.Size = new System.Drawing.Size(282, 37);
             this.buttonTheTichNap.TabIndex = 11;
             this.buttonTheTichNap.Text = "Thể tích nạp : trống";
             this.buttonTheTichNap.UseVisualStyleBackColor = false;
@@ -697,7 +697,7 @@
             this.panel6.Location = new System.Drawing.Point(4, 3);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(282, 27);
+            this.panel6.Size = new System.Drawing.Size(282, 37);
             this.panel6.TabIndex = 0;
             // 
             // buttonApSuatNap
@@ -711,7 +711,7 @@
             this.buttonApSuatNap.Location = new System.Drawing.Point(0, 0);
             this.buttonApSuatNap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonApSuatNap.Name = "buttonApSuatNap";
-            this.buttonApSuatNap.Size = new System.Drawing.Size(282, 27);
+            this.buttonApSuatNap.Size = new System.Drawing.Size(282, 37);
             this.buttonApSuatNap.TabIndex = 11;
             this.buttonApSuatNap.Text = "Áp suất nạp : trống";
             this.buttonApSuatNap.UseVisualStyleBackColor = false;
@@ -727,7 +727,7 @@
             this.buttonNameSetting.Location = new System.Drawing.Point(0, 54);
             this.buttonNameSetting.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonNameSetting.Name = "buttonNameSetting";
-            this.buttonNameSetting.Size = new System.Drawing.Size(580, 62);
+            this.buttonNameSetting.Size = new System.Drawing.Size(580, 42);
             this.buttonNameSetting.TabIndex = 10;
             this.buttonNameSetting.Text = "Loại bình : Mặc định";
             this.buttonNameSetting.UseVisualStyleBackColor = false;

@@ -23,13 +23,13 @@ namespace ManagementSoftware.Models
         public string? Reference { get; set; }
         public string? Buyer { get; set; }
 
-        public uint? ConstOfTransportation { get; set; }
-        public uint? ConstOfTransfer { get; set; }
-        public uint? ConstOfEngineering { get; set; }
-        public uint? ConstOther { get; set; }
+        public long? ConstOfTransportation { get; set; }
+        public long? ConstOfTransfer { get; set; }
+        public long? ConstOfEngineering { get; set; }
+        public long? ConstOther { get; set; }
         public int? Over { get; set; }
-        public uint? TotalAmount { get; set; }
-        public uint? VAT { get; set; }
+        public long? TotalAmount { get; set; }
+        public long? VAT { get; set; }
         public long? TotalPayment { get; set; } 
 
         public string? PlaceOfDelivery { get; set; }
