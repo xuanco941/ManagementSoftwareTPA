@@ -249,7 +249,7 @@
             // 
             // integerTextBox2
             // 
-            this.integerTextBox2.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox2.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox2.IntegerValue = ((long)(1));
@@ -276,7 +276,7 @@
             // 
             // integerTextBox3
             // 
-            this.integerTextBox3.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox3.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox3.IntegerValue = ((long)(1));
@@ -303,7 +303,7 @@
             // 
             // integerTextBox4
             // 
-            this.integerTextBox4.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox4.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox4.IntegerValue = ((long)(1));
@@ -330,7 +330,7 @@
             // 
             // integerTextBox6
             // 
-            this.integerTextBox6.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox6.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox6.IntegerValue = ((long)(1));
@@ -378,7 +378,7 @@
             // 
             // integerTextBox9
             // 
-            this.integerTextBox9.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox9.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox9.IntegerValue = ((long)(1));
@@ -479,7 +479,7 @@
             // 
             // integerTextBox8
             // 
-            this.integerTextBox8.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox8.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox8.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -726,7 +726,7 @@
             // 
             // integerTextBox13
             // 
-            this.integerTextBox13.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox13.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox13.IntegerValue = ((long)(1));
@@ -919,7 +919,7 @@
             // 
             // integerTextBox10
             // 
-            this.integerTextBox10.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox10.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox10.IntegerValue = ((long)(1));
@@ -989,7 +989,7 @@
             // 
             // integerTextBox7
             // 
-            this.integerTextBox7.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox7.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox7.IntegerValue = ((long)(1));
@@ -1182,7 +1182,7 @@
             // 
             // integerTextBox5
             // 
-            this.integerTextBox5.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox5.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox5.IntegerValue = ((long)(1));
@@ -1365,7 +1365,7 @@
             // 
             // integerTextBox1
             // 
-            this.integerTextBox1.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox1.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox1.IntegerValue = ((long)(1));
@@ -1578,7 +1578,7 @@
             // 
             // integerTextBox11
             // 
-            this.integerTextBox11.BeforeTouchSize = new System.Drawing.Size(361, 29);
+            this.integerTextBox11.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.integerTextBox11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.integerTextBox11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.integerTextBox11.IntegerValue = ((long)(1));

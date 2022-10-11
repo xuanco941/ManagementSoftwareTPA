@@ -121,24 +121,25 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.lblMsg);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panel4.Location = new System.Drawing.Point(0, 14);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(258, 44);
+            this.panel4.Size = new System.Drawing.Size(258, 64);
             this.panel4.TabIndex = 2;
             // 
             // lblMsg
             // 
-            this.lblMsg.AutoSize = true;
             this.lblMsg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMsg.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblMsg.ForeColor = System.Drawing.Color.White;
             this.lblMsg.Location = new System.Drawing.Point(0, 0);
             this.lblMsg.MaximumSize = new System.Drawing.Size(250, 0);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(98, 20);
-            this.lblMsg.TabIndex = 0;
+            this.lblMsg.Size = new System.Drawing.Size(250, 64);
+            this.lblMsg.TabIndex = 1;
             this.lblMsg.Text = "Message Text";
+            this.lblMsg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormAlert
             // 
@@ -158,7 +159,6 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -172,6 +172,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lblMsg;
+        private Label lblMsg;
     }
 }
