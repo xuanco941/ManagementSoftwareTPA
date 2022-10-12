@@ -25,7 +25,7 @@ namespace ManagementSoftware.DAL
         }
 
         // Them ca làm
-        public static int AddShift(Shift shift)
+        public static int Add(Shift shift)
         {
             DataBaseContext dbContext = new DataBaseContext();
             dbContext.Shifts.Add(shift);
@@ -33,7 +33,7 @@ namespace ManagementSoftware.DAL
         }
 
         // Sua ca làm
-        public static int UpdateShift(Shift shift)
+        public static int Update(Shift shift)
         {
             DataBaseContext dbContext = new DataBaseContext();
             var shiftUpdate = dbContext.Shifts.FirstOrDefault(s => s.ShiftID == shift.ShiftID);
@@ -46,7 +46,7 @@ namespace ManagementSoftware.DAL
             return dbContext.SaveChanges();
         }
 
-        public static int DeleteShift(int id)
+        public static int Delete(int id)
         {
             DataBaseContext dbContext = new DataBaseContext();
             var shiftDelete = dbContext.Shifts.FirstOrDefault(s => s.ShiftID == id);
