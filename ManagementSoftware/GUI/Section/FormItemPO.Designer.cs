@@ -45,11 +45,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelProcess = new System.Windows.Forms.Panel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panelBtn = new System.Windows.Forms.Panel();
             this.buttonViewDetail = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
+            this.progressBarAdv1 = new Syncfusion.Windows.Forms.Tools.ProgressBarAdv();
             this.panelItemPO.SuspendLayout();
             this.panelGrid.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -62,6 +62,7 @@
             this.panelBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarAdv1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelItemPO
@@ -112,7 +113,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(259, 40);
             this.label7.TabIndex = 14;
-            this.label7.Text = "Số lượng sản phẩm : 5";
+            this.label7.Text = "Số PO :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel7
@@ -133,7 +134,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(259, 40);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Số lượng sản phẩm : 5";
+            this.label3.Text = "Ngày giao: 30/5/2022";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel6
@@ -154,7 +155,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(259, 40);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Số lượng sản phẩm : 5";
+            this.label2.Text = "Trạng thái: Đang sản xuất";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
@@ -175,7 +176,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(259, 40);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Số lượng sản phẩm : 5";
+            this.label5.Text = "Mã khách hàng : ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
@@ -196,7 +197,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(259, 40);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Số lượng sản phẩm : 5";
+            this.label4.Text = "Tên Khách hàng :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
@@ -217,27 +218,18 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(259, 40);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Số lượng sản phẩm : 5";
+            this.label1.Text = "Địa điểm : Hà Nội";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelProcess
             // 
             this.panelProcess.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelProcess.Controls.Add(this.progressBar1);
+            this.panelProcess.Controls.Add(this.progressBarAdv1);
             this.panelProcess.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelProcess.Location = new System.Drawing.Point(184, 82);
             this.panelProcess.Name = "panelProcess";
             this.panelProcess.Size = new System.Drawing.Size(779, 31);
             this.panelProcess.TabIndex = 6;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar1.Location = new System.Drawing.Point(0, 0);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(777, 29);
-            this.progressBar1.TabIndex = 3;
-            this.progressBar1.Value = 70;
             // 
             // panelBtn
             // 
@@ -269,7 +261,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Image = global::ManagementSoftware.Properties.Resources.ETEK_LOGO_01;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
@@ -285,6 +276,27 @@
             this.gridLayout1.Columns = 3;
             this.gridLayout1.ContainerControl = this.panelGrid;
             this.gridLayout1.Rows = 2;
+            // 
+            // progressBarAdv1
+            // 
+            this.progressBarAdv1.BackColor = System.Drawing.Color.Goldenrod;
+            this.progressBarAdv1.BackMultipleColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Empty};
+            this.progressBarAdv1.BackSegments = false;
+            this.progressBarAdv1.CustomText = null;
+            this.progressBarAdv1.CustomWaitingRender = false;
+            this.progressBarAdv1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.progressBarAdv1.ForeColor = System.Drawing.Color.Green;
+            this.progressBarAdv1.ForegroundImage = null;
+            this.progressBarAdv1.Location = new System.Drawing.Point(0, 0);
+            this.progressBarAdv1.MultipleColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Empty};
+            this.progressBarAdv1.Name = "progressBarAdv1";
+            this.progressBarAdv1.SegmentWidth = 12;
+            this.progressBarAdv1.Size = new System.Drawing.Size(777, 29);
+            this.progressBarAdv1.TabIndex = 0;
+            this.progressBarAdv1.Text = "progressBarAdv1";
+            this.progressBarAdv1.WaitingGradientWidth = 400;
             // 
             // FormItemPO
             // 
@@ -308,6 +320,7 @@
             this.panelBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarAdv1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,6 +346,6 @@
         private Label label2;
         private Label label5;
         private Label label4;
-        private ProgressBar progressBar1;
+        private Syncfusion.Windows.Forms.Tools.ProgressBarAdv progressBarAdv1;
     }
 }

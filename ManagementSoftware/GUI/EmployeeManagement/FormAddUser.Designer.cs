@@ -48,7 +48,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // label8
             // 
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.YellowGreen;
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -70,7 +70,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.textBoxFullName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxFullName.Multiline = false;
             this.textBoxFullName.Name = "textBoxFullName";
-            this.textBoxFullName.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.textBoxFullName.Padding = new System.Windows.Forms.Padding(8);
             this.textBoxFullName.PasswordChar = false;
             this.textBoxFullName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxFullName.PlaceholderText = "";
@@ -91,7 +91,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxUsername.Multiline = false;
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.textBoxUsername.Padding = new System.Windows.Forms.Padding(8);
             this.textBoxUsername.PasswordChar = false;
             this.textBoxUsername.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxUsername.PlaceholderText = "";
@@ -112,7 +112,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxPassword.Multiline = false;
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.textBoxPassword.Padding = new System.Windows.Forms.Padding(8);
             this.textBoxPassword.PasswordChar = false;
             this.textBoxPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxPassword.PlaceholderText = "";

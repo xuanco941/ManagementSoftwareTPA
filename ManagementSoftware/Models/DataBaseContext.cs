@@ -10,7 +10,10 @@ namespace ManagementSoftware.Models
         public DbSet<Activity> Activities { get; set; }
         public DbSet<Shift> Shifts { get; set; }
         public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
-        public DbSet<DirectivePO> DirectivePOs { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Directive> Directives { get; set; }
+        public DbSet<ImportedWarehouse> ImportedWarehouses { get; set; }
+        public DbSet<ExportedWareHouse> ExportedWareHouses { get; set; }
         public DbSet<Result> Results { get; set; }
         public DbSet<DataResult> DataResults { get; set; }
         public DbSet<ResultWarning> ResultWarnings { get; set; }
@@ -63,10 +66,25 @@ namespace ManagementSoftware.Models
                 entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
                 entity.Property(e => e.SoPRPQ).HasDefaultValueSql("(0)");
             });
-            //DirectivePO
-            modelBuilder.Entity<DirectivePO>(entity =>
+            //Product
+            modelBuilder.Entity<Product>(entity =>
             {
                 entity.Property(e => e.Status).HasDefaultValueSql("(0)");
+            });
+            //Directive
+            modelBuilder.Entity<Directive>(entity =>
+            {
+                entity.Property(e => e.Status).HasDefaultValueSql("(0)");
+                entity.Property(e => e.SoLuongDaSanXuat).HasDefaultValueSql("(0)");
+            });
+            //ImportedWareHouse
+            modelBuilder.Entity<ImportedWarehouse>(entity =>
+            {
+                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
+            });
+            //ExportedWareHouse
+            modelBuilder.Entity<ExportedWareHouse>(entity =>
+            {
                 entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
             });
             //Result

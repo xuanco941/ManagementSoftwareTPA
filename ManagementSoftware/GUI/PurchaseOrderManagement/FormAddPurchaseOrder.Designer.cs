@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddPurchaseOrder));
             this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
             this.panelProducts = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
             this.buttonAddProduct = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -143,7 +143,6 @@
             this.buttonAddPO = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
-            this.panelProducts.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel25.SuspendLayout();
@@ -218,6 +217,7 @@
             // 
             // panel16
             // 
+            this.panel16.Controls.Add(this.panelProducts);
             this.panel16.Controls.Add(this.panel17);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(0, 57);
@@ -226,26 +226,23 @@
             this.panel16.Size = new System.Drawing.Size(752, 353);
             this.panel16.TabIndex = 3;
             // 
-            // panel17
-            // 
-            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.panelProducts);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(0, 0);
-            this.panel17.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(752, 353);
-            this.panel17.TabIndex = 0;
-            // 
             // panelProducts
             // 
             this.panelProducts.AutoScroll = true;
-            this.panelProducts.Controls.Add(this.buttonAddProduct);
             this.panelProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelProducts.Location = new System.Drawing.Point(0, 0);
             this.panelProducts.Name = "panelProducts";
-            this.panelProducts.Size = new System.Drawing.Size(750, 351);
+            this.panelProducts.Size = new System.Drawing.Size(752, 310);
             this.panelProducts.TabIndex = 1;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.buttonAddProduct);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel17.Location = new System.Drawing.Point(0, 310);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(752, 43);
+            this.panel17.TabIndex = 0;
             // 
             // buttonAddProduct
             // 
@@ -255,7 +252,7 @@
             this.buttonAddProduct.BorderRadius = 3;
             this.buttonAddProduct.BorderSize = 0;
             this.buttonAddProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAddProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAddProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddProduct.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonAddProduct.ForeColor = System.Drawing.SystemColors.Control;
@@ -264,13 +261,14 @@
             this.buttonAddProduct.Location = new System.Drawing.Point(0, 0);
             this.buttonAddProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonAddProduct.Name = "buttonAddProduct";
-            this.buttonAddProduct.Size = new System.Drawing.Size(750, 44);
-            this.buttonAddProduct.TabIndex = 18;
+            this.buttonAddProduct.Size = new System.Drawing.Size(752, 43);
+            this.buttonAddProduct.TabIndex = 21;
             this.buttonAddProduct.Text = "Thêm sản phẩm";
             this.buttonAddProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAddProduct.TextColor = System.Drawing.SystemColors.Control;
             this.buttonAddProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAddProduct.UseVisualStyleBackColor = false;
+            this.buttonAddProduct.Click += new System.EventHandler(this.buttonAddProduct_Click);
             // 
             // panel5
             // 
@@ -435,7 +433,7 @@
             // 
             // txtReference
             // 
-            this.txtReference.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtReference.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtReference.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtReference.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtReference.IntegerValue = ((long)(1));
@@ -548,7 +546,7 @@
             // 
             // txtContactPerson
             // 
-            this.txtContactPerson.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtContactPerson.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtContactPerson.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtContactPerson.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtContactPerson.IntegerValue = ((long)(1));
@@ -731,7 +729,7 @@
             // 
             // txtPRPQ
             // 
-            this.txtPRPQ.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtPRPQ.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtPRPQ.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPRPQ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPRPQ.IntegerValue = ((long)(1));
@@ -862,7 +860,7 @@
             // 
             // txtTongTienThanhToan
             // 
-            this.txtTongTienThanhToan.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtTongTienThanhToan.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtTongTienThanhToan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTongTienThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTongTienThanhToan.IntegerValue = ((long)(1));
@@ -910,7 +908,7 @@
             // 
             // txtVAT
             // 
-            this.txtVAT.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtVAT.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtVAT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtVAT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtVAT.IntegerValue = ((long)(1));
@@ -958,7 +956,7 @@
             // 
             // txtTongTienHang
             // 
-            this.txtTongTienHang.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtTongTienHang.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtTongTienHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTongTienHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTongTienHang.IntegerValue = ((long)(1));
@@ -1006,7 +1004,7 @@
             // 
             // txtVuot
             // 
-            this.txtVuot.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtVuot.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtVuot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtVuot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtVuot.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -1056,7 +1054,7 @@
             // 
             // txtChiPhiKhac
             // 
-            this.txtChiPhiKhac.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtChiPhiKhac.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtChiPhiKhac.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiKhac.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiKhac.IntegerValue = ((long)(1));
@@ -1104,7 +1102,7 @@
             // 
             // txtChiPhiKyThuat
             // 
-            this.txtChiPhiKyThuat.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtChiPhiKyThuat.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtChiPhiKyThuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiKyThuat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiKyThuat.IntegerValue = ((long)(1));
@@ -1152,7 +1150,7 @@
             // 
             // txtChiPhiChuyenGiao
             // 
-            this.txtChiPhiChuyenGiao.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtChiPhiChuyenGiao.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtChiPhiChuyenGiao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiChuyenGiao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiChuyenGiao.IntegerValue = ((long)(1));
@@ -1200,7 +1198,7 @@
             // 
             // txtChiPhiVanChuyen
             // 
-            this.txtChiPhiVanChuyen.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtChiPhiVanChuyen.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtChiPhiVanChuyen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiVanChuyen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiVanChuyen.IntegerValue = ((long)(1));
@@ -1480,7 +1478,7 @@
             // 
             // txtThanhToan
             // 
-            this.txtThanhToan.BeforeTouchSize = new System.Drawing.Size(302, 29);
+            this.txtThanhToan.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtThanhToan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtThanhToan.IntegerValue = ((long)(1));
@@ -1634,7 +1632,6 @@
             this.Text = "Form1";
             this.panel16.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
-            this.panelProducts.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel25.ResumeLayout(false);
@@ -1730,7 +1727,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
@@ -1839,7 +1835,8 @@
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.TextBox txtBankInfo;
         private System.Windows.Forms.TextBox txtDiaDiemGiaoHang;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddProduct;
         private Panel panelProducts;
+        private Panel panel17;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddProduct;
     }
 }

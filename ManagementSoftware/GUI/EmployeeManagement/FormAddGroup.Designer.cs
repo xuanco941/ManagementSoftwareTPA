@@ -45,7 +45,9 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxNameGroup = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.buttonAddGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBoxIsManagementUser
@@ -207,15 +209,16 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label8.Location = new System.Drawing.Point(211, 37);
+            this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(259, 30);
+            this.label8.Size = new System.Drawing.Size(732, 104);
             this.label8.TabIndex = 32;
             this.label8.Text = "Thêm Nhóm Quyền";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxNameGroup
             // 
@@ -229,7 +232,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.textBoxNameGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxNameGroup.Multiline = false;
             this.textBoxNameGroup.Name = "textBoxNameGroup";
-            this.textBoxNameGroup.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.textBoxNameGroup.Padding = new System.Windows.Forms.Padding(8);
             this.textBoxNameGroup.PasswordChar = false;
             this.textBoxNameGroup.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxNameGroup.PlaceholderText = "Tên nhóm quyền";
@@ -262,15 +265,24 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.buttonAddGroup.UseVisualStyleBackColor = false;
             this.buttonAddGroup.Click += new System.EventHandler(this.buttonAddGroup_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(732, 104);
+            this.panel1.TabIndex = 58;
+            // 
             // FormAddGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(732, 714);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonAddGroup);
             this.Controls.Add(this.textBoxNameGroup);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -281,8 +293,8 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.Text = "Thêm nhóm quyền";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -301,5 +313,6 @@ namespace ManagementSoftware.GUI.EmployeeManagement
         private CheckBox checkBoxIsViewActivity;
         private CheckBox checkBoxIsViewResult;
         private CheckBox checkBoxIsDeleteActivity;
+        private Panel panel1;
     }
 }

@@ -28,10 +28,10 @@ namespace ManagementSoftware.DAL
         public static int Delete(int PurchaseOrderID)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            var shiftDelete = dbContext.PurchaseOrders.FirstOrDefault(s => s.PurchaseOrderID == PurchaseOrderID);
-            if (shiftDelete != null)
+            var poDelete = dbContext.PurchaseOrders.FirstOrDefault(s => s.PurchaseOrderID == PurchaseOrderID);
+            if (poDelete != null)
             {
-                dbContext.PurchaseOrders.Remove(shiftDelete);
+                dbContext.PurchaseOrders.Remove(poDelete);
             }
             return dbContext.SaveChanges();
         }

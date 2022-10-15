@@ -329,6 +329,7 @@ namespace ManagementSoftware.GUI
             // 
             this.panelContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelContent.Location = new System.Drawing.Point(0, 76);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1227, 834);

@@ -22,14 +22,24 @@ namespace ManagementSoftware.GUI
         public delegate void ChangeForm(Form form);
         public ChangeForm changeForm;
 
+        private void GetItemPO()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                FormItemWorkingList form = new FormItemWorkingList();
+                form.TopLevel = false;
+                panelMain.Controls.Add(form);
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Top;
+                form.Show();
+            }
+        }
+
         public WorkingList()
         {
             InitializeComponent();
+            GetItemPO();
         }
 
-        private void buttonDashboard_Click(object sender, EventArgs e)
-        {
-            //changeForm?.Invoke(new FormDashboard());
-        }
     }
 }

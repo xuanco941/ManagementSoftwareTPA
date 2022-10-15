@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.GUI.Section;
+using ManagementSoftware.Models;
 using Syncfusion.Pdf.Parsing;
 using System;
 using System.Collections.Generic;
@@ -14,42 +15,50 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 {
     public partial class FormAddPurchaseOrder : Form
     {
+        Dictionary<int, Product> productDictionary = new Dictionary<int, Product>();
+        PurchaseOrder purchaseOrder = new PurchaseOrder();
+
+        int key = 1;
         public FormAddPurchaseOrder()
         {
             InitializeComponent();
-            LoadProducts();
+        }
+
+        void RemoveProductOnList(int position)
+        {
+            productDictionary.Remove(position);
         }
 
         void LoadProducts()
         {
-            for (int i = 0; i < 10; i++)
+            panelProducts.Controls.Clear();
+            if (productDictionary.Count > 0)
             {
-                FormItemProductOfPO form = new FormItemProductOfPO();
-                form.TopLevel = false;
-                panelProducts.Controls.Add(form);
-                form.FormBorderStyle = FormBorderStyle.None;
-                form.Dock = DockStyle.Top;
-                form.Show();
+                foreach (var pr in productDictionary)
+                {
+                    FormItemProductOfPO form = new FormItemProductOfPO(pr.Value, pr.Key);
+                    form.deleteProductDelegate = new FormItemProductOfPO.DeleteProductDelegate(RemoveProductOnList);
+                    form.TopLevel = false;
+                    panelProducts.Controls.Add(form);
+                    form.FormBorderStyle = FormBorderStyle.None;
+                    form.Dock = DockStyle.Top;
+                    form.Show();
+                }
             }
         }
 
-        private void LoadForm()
+        private void AddProductToList(Product product)
         {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Stt");
-            dt.Columns.Add("Tên hàng");
-            dt.Columns.Add("Mã hàng");
-            dt.Columns.Add("Thể tích bình");
+            productDictionary.Add(this.key,product);
+            this.key++;
+            LoadProducts();
+        }
 
-            dt.Columns.Add("Áp suất nạp");
-            dt.Columns.Add("Loại khí");
-            dt.Columns.Add("Chất lượng khí");
-
-            dt.Columns.Add("DVT");
-            dt.Columns.Add("Số lượng");
-            dt.Columns.Add("Đơn giá");
-
-            dt.Columns.Add("Thành tiền");
+        private void buttonAddProduct_Click(object sender, EventArgs e)
+        {
+            FormAddProductOnPO form = new FormAddProductOnPO();
+            form.addProductDelegate = new FormAddProductOnPO.AddProductDelegate(AddProductToList);
+            form.ShowDialog();
         }
     }
 }

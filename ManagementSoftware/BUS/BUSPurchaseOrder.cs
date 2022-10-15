@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagementSoftware.BUS
 {
-    internal class BUSPurchaseOrder
+    public class BUSPurchaseOrder
     {
     }
 }

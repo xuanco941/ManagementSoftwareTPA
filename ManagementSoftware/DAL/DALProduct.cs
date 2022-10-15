@@ -1,0 +1,45 @@
+﻿using ManagementSoftware.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ManagementSoftware.DAL
+{
+    public class DALProduct
+    {
+        public static int AddRange(List<Product> listProduct)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            dbContext.Products.AddRange(listProduct);
+            return dbContext.SaveChanges();
+        }
+        public static int Add(Product product)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            dbContext.Products.Add(product);
+            return dbContext.SaveChanges();
+        }
+        public static int Update(Product product)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            var productUpdate = dbContext.Products.FirstOrDefault(g => g.ProductID == product.ProductID);
+            if (productUpdate != null)
+            {
+                productUpdate = product;
+            }
+            return dbContext.SaveChanges();
+        }
+        public static int Delete(int productID)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            var productDelete = dbContext.Products.FirstOrDefault(s => s.ProductID == productID);
+            if (productDelete != null)
+            {
+                dbContext.Products.Remove(productDelete);
+            }
+            return dbContext.SaveChanges();
+        }
+    }
+}

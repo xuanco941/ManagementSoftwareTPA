@@ -13,33 +13,31 @@ namespace ManagementSoftware.Models
     {
         [Key]
         public int PurchaseOrderID { get; set; }
-        public int? SoPRPQ { get; set; }
+        public int SoPRPQ { get; set; }
         //tên công ty đặt hàng
-        public string? OrdererName { get; set; }
-        public string? CodeOrderer { get; set; }
-        public string? Address { get; set; }
-        public string? ContactPerson { get; set; }
-        public DateTime? DeliveryDate { get; set; }
-        public string? Reference { get; set; }
-        public string? Buyer { get; set; }
+        public string TenKhachHang { get; set; }
+        public string MaKhachHang { get; set; }
+        public string DiaChi { get; set; }
+        public string NguoiLienHe { get; set; }
+        public DateTime NgayGiaoHang { get; set; }
+        public string ThamChieu { get; set; }
+        public string NhanVienMuaHang { get; set; }
 
-        public long? ConstOfTransportation { get; set; }
-        public long? ConstOfTransfer { get; set; }
-        public long? ConstOfEngineering { get; set; }
-        public long? ConstOther { get; set; }
-        public int? Over { get; set; }
-        public long? TotalAmount { get; set; }
-        public long? VAT { get; set; }
-        public long? TotalPayment { get; set; } 
+        public long ChiPhiVanChuyen { get; set; }
+        public long ChiPhiChuyenGiao { get; set; }
+        public long ChiPhiKyThuat { get; set; }
+        public long ChiPhiKhac { get; set; }
+        public int Vuot { get; set; }
+        public long TongTienHang { get; set; }
+        public long VAT { get; set; }
+        public long TongTienThanhToan { get; set; } 
 
-        public string? PlaceOfDelivery { get; set; }
-        public string? PaymentTerm { get; set; }
-        public string? BankInformation { get; set; }
-        public string? Note { get; set; }
+        public string DiaDiemGiaoHang { get; set; }
+        public string ThanhToan { get; set; }
+        public string ThongTinNganHang { get; set; }
+        public string GhiChu { get; set; }
 
-        public DateTime? Date { get; set; }
-
-        public string? OrderCreator { get; set; }
+        public string OrderCreator { get; set; }
         public bool Status { get; set; }
         public DateTime CreateAt { get; set; }
 

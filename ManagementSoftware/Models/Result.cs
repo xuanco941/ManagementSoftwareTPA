@@ -25,15 +25,14 @@ namespace ManagementSoftware.Models
         public double LuuLuongAvg { get; set; }
 
 
-        public string Barcode { get; set; }
         public DateTime TimeStart { get; set; }
         public DateTime TimeEnd { get; set; }
         public string NameMachine { get; set; }
         //người vận hành
-        public string ResultCreator { get; set; }
+        public string UsernameWorker { get; set; }
         public bool Status { get; set; }
         public int DirectivePOID { get; set; }
-        public DirectivePO DirectivePO { get; set; }
+        public Product DirectivePO { get; set; }
         public Result()
         {
         }
