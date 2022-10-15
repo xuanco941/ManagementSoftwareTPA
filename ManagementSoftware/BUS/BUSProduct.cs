@@ -27,7 +27,7 @@ namespace ManagementSoftware.BUS
             catch
             {
                 response.Status = false;
-                response.Message = "Lỗi hệ thống, không thể thêm tài khoản này.";
+                response.Message = "Lỗi hệ thống, không thể thêm.";
             }
             return response;
         }

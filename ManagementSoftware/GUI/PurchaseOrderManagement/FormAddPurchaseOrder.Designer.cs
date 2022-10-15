@@ -54,7 +54,7 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.txtContactPerson = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
+            this.txtContactPerson = new System.Windows.Forms.TextBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -155,7 +155,6 @@
             this.panel19.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContactPerson)).BeginInit();
             this.panel18.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -433,7 +432,7 @@
             // 
             // txtReference
             // 
-            this.txtReference.BeforeTouchSize = new System.Drawing.Size(235, 33);
+            this.txtReference.BeforeTouchSize = new System.Drawing.Size(302, 29);
             this.txtReference.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtReference.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtReference.IntegerValue = ((long)(1));
@@ -546,16 +545,13 @@
             // 
             // txtContactPerson
             // 
-            this.txtContactPerson.BeforeTouchSize = new System.Drawing.Size(235, 33);
             this.txtContactPerson.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtContactPerson.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtContactPerson.IntegerValue = ((long)(1));
             this.txtContactPerson.Location = new System.Drawing.Point(26, 5);
             this.txtContactPerson.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtContactPerson.Name = "txtContactPerson";
             this.txtContactPerson.Size = new System.Drawing.Size(301, 29);
-            this.txtContactPerson.TabIndex = 0;
-            this.txtContactPerson.Text = "1";
+            this.txtContactPerson.TabIndex = 2;
             // 
             // panel18
             // 
@@ -729,7 +725,7 @@
             // 
             // txtPRPQ
             // 
-            this.txtPRPQ.BeforeTouchSize = new System.Drawing.Size(235, 33);
+            this.txtPRPQ.BeforeTouchSize = new System.Drawing.Size(302, 29);
             this.txtPRPQ.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPRPQ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPRPQ.IntegerValue = ((long)(1));
@@ -860,7 +856,7 @@
             // 
             // txtTongTienThanhToan
             // 
-            this.txtTongTienThanhToan.BeforeTouchSize = new System.Drawing.Size(235, 33);
+            this.txtTongTienThanhToan.BeforeTouchSize = new System.Drawing.Size(302, 29);
             this.txtTongTienThanhToan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTongTienThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTongTienThanhToan.IntegerValue = ((long)(1));
@@ -908,7 +904,7 @@
             // 
             // txtVAT
             // 
-            this.txtVAT.BeforeTouchSize = new System.Drawing.Size(235, 33);
+            this.txtVAT.BeforeTouchSize = new System.Drawing.Size(302, 29);
             this.txtVAT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtVAT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtVAT.IntegerValue = ((long)(1));
@@ -956,7 +952,7 @@
             // 
             // txtTongTienHang
             // 
-            this.txtTongTienHang.BeforeTouchSize = new System.Drawing.Size(235, 33);
+            this.txtTongTienHang.BeforeTouchSize = new System.Drawing.Size(302, 29);
             this.txtTongTienHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTongTienHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTongTienHang.IntegerValue = ((long)(1));
@@ -1004,7 +1000,7 @@
             // 
             // txtVuot
             // 
-            this.txtVuot.BeforeTouchSize = new System.Drawing.Size(235, 33);
+            this.txtVuot.BeforeTouchSize = new System.Drawing.Size(302, 29);
             this.txtVuot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtVuot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtVuot.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -1054,7 +1050,7 @@
             // 
             // txtChiPhiKhac
             // 
-            this.txtChiPhiKhac.BeforeTouchSize = new System.Drawing.Size(235, 33);
+            this.txtChiPhiKhac.BeforeTouchSize = new System.Drawing.Size(302, 29);
             this.txtChiPhiKhac.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiKhac.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiKhac.IntegerValue = ((long)(1));
@@ -1102,7 +1098,7 @@
             // 
             // txtChiPhiKyThuat
             // 
-            this.txtChiPhiKyThuat.BeforeTouchSize = new System.Drawing.Size(235, 33);
+            this.txtChiPhiKyThuat.BeforeTouchSize = new System.Drawing.Size(302, 29);
             this.txtChiPhiKyThuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiKyThuat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiKyThuat.IntegerValue = ((long)(1));
@@ -1150,7 +1146,7 @@
             // 
             // txtChiPhiChuyenGiao
             // 
-            this.txtChiPhiChuyenGiao.BeforeTouchSize = new System.Drawing.Size(235, 33);
+            this.txtChiPhiChuyenGiao.BeforeTouchSize = new System.Drawing.Size(302, 29);
             this.txtChiPhiChuyenGiao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiChuyenGiao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiChuyenGiao.IntegerValue = ((long)(1));
@@ -1198,7 +1194,7 @@
             // 
             // txtChiPhiVanChuyen
             // 
-            this.txtChiPhiVanChuyen.BeforeTouchSize = new System.Drawing.Size(235, 33);
+            this.txtChiPhiVanChuyen.BeforeTouchSize = new System.Drawing.Size(302, 29);
             this.txtChiPhiVanChuyen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiVanChuyen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiVanChuyen.IntegerValue = ((long)(1));
@@ -1478,7 +1474,7 @@
             // 
             // txtThanhToan
             // 
-            this.txtThanhToan.BeforeTouchSize = new System.Drawing.Size(235, 33);
+            this.txtThanhToan.BeforeTouchSize = new System.Drawing.Size(302, 29);
             this.txtThanhToan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtThanhToan.IntegerValue = ((long)(1));
@@ -1616,6 +1612,7 @@
             this.buttonAddPO.TextColor = System.Drawing.Color.White;
             this.buttonAddPO.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonAddPO.UseVisualStyleBackColor = false;
+            this.buttonAddPO.Click += new System.EventHandler(this.buttonAddPO_Click);
             // 
             // FormAddPurchaseOrder
             // 
@@ -1647,7 +1644,6 @@
             this.panel20.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContactPerson)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
@@ -1750,7 +1746,6 @@
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel15;
-        private Syncfusion.Windows.Forms.Tools.IntegerTextBox txtContactPerson;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
@@ -1838,5 +1833,6 @@
         private Panel panelProducts;
         private Panel panel17;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddProduct;
+        private TextBox txtContactPerson;
     }
 }

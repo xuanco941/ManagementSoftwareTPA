@@ -60,5 +60,34 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             form.addProductDelegate = new FormAddProductOnPO.AddProductDelegate(AddProductToList);
             form.ShowDialog();
         }
+
+        private void buttonAddPO_Click(object sender, EventArgs e)
+        {
+            purchaseOrder.SoPRPQ = txtPRPQ.Text.Trim();
+            purchaseOrder.TenKhachHang = txtOrdererName.Text.Trim();
+            purchaseOrder.MaKhachHang = txtCodeOrderer.Text.Trim();
+            purchaseOrder.DiaChi = txtAddress.Text.Trim();
+            purchaseOrder.NguoiLienHe = txtContactPerson.Text.Trim();
+            purchaseOrder.NgayGiaoHang = txtDeliveryDate.Value;
+            purchaseOrder.ThamChieu = txtReference.Text.Trim();
+            purchaseOrder.NhanVienMuaHang = txtBuyer.Text.Trim();
+
+            purchaseOrder.ChiPhiVanChuyen = txtChiPhiVanChuyen.IntegerValue;
+            purchaseOrder.ChiPhiChuyenGiao = txtChiPhiChuyenGiao.IntegerValue;
+            purchaseOrder.ChiPhiKyThuat = txtChiPhiKyThuat.IntegerValue;
+            purchaseOrder.ChiPhiKhac = txtChiPhiKhac.IntegerValue;
+            purchaseOrder.Vuot = (int)txtVuot.IntegerValue;
+            purchaseOrder.TongTienHang = (int)txtTongTienHang.IntegerValue;
+            purchaseOrder.VAT = txtVAT.IntegerValue;
+            purchaseOrder.TongTienThanhToan = txtTongTienThanhToan.IntegerValue;
+
+            purchaseOrder.DiaDiemGiaoHang = txtDiaDiemGiaoHang.Text.Trim();
+            purchaseOrder.ThanhToan = txtThanhToan.Text.Trim();
+            purchaseOrder.ThongTinNganHang = txtBankInfo.Text.Trim();
+            purchaseOrder.GhiChu = txtNote.Text.Trim();
+            purchaseOrder.OrderCreator = Common.USERSESSION?.Username ?? Common.UserAdmin.Username;
+            purchaseOrder.Status = false;
+
+        }
     }
 }
