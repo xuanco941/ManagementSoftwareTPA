@@ -21,7 +21,8 @@ namespace ManagementSoftware.Models
         public string NguoiLienHe { get; set; } = "";
         public DateTime? NgayGiaoHang { get; set; }
         public string ThamChieu { get; set; } = "";
-        public string NhanVienMuaHang { get; set; } = "";
+        public int SoSanPhamCanSX { get; set; }
+        public int SoSanPhamDaSX { get; set; }
 
         public long ChiPhiVanChuyen { get; set; } = 0;
         public long ChiPhiChuyenGiao { get; set; } = 0;
@@ -32,7 +33,6 @@ namespace ManagementSoftware.Models
         public long VAT { get; set; } = 0;
         public long TongTienThanhToan { get; set; } = 0;
 
-        public string DiaDiemGiaoHang { get; set; } = "";
         public string ThanhToan { get; set; } = "";
         public string ThongTinNganHang { get; set; } = "";
         public string GhiChu { get; set; } = "";

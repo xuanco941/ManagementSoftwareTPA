@@ -93,7 +93,7 @@
             // labelProductName
             // 
             this.labelProductName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelProductName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelProductName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelProductName.Location = new System.Drawing.Point(0, 0);
             this.labelProductName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProductName.Name = "labelProductName";
@@ -114,7 +114,7 @@
             // labelSoLuongSx
             // 
             this.labelSoLuongSx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelSoLuongSx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelSoLuongSx.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelSoLuongSx.Location = new System.Drawing.Point(0, 0);
             this.labelSoLuongSx.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSoLuongSx.Name = "labelSoLuongSx";
@@ -135,7 +135,7 @@
             // labelApSuatNap
             // 
             this.labelApSuatNap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelApSuatNap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelApSuatNap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelApSuatNap.Location = new System.Drawing.Point(0, 0);
             this.labelApSuatNap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelApSuatNap.Name = "labelApSuatNap";
@@ -156,7 +156,7 @@
             // labelTheTichBinh
             // 
             this.labelTheTichBinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTheTichBinh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTheTichBinh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelTheTichBinh.Location = new System.Drawing.Point(0, 0);
             this.labelTheTichBinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTheTichBinh.Name = "labelTheTichBinh";
@@ -177,7 +177,7 @@
             // labelLoaiKhi
             // 
             this.labelLoaiKhi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelLoaiKhi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelLoaiKhi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelLoaiKhi.Location = new System.Drawing.Point(0, 0);
             this.labelLoaiKhi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLoaiKhi.Name = "labelLoaiKhi";
@@ -198,13 +198,13 @@
             // labelChatLuongKhi
             // 
             this.labelChatLuongKhi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelChatLuongKhi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelChatLuongKhi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelChatLuongKhi.Location = new System.Drawing.Point(0, 0);
             this.labelChatLuongKhi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelChatLuongKhi.Name = "labelChatLuongKhi";
             this.labelChatLuongKhi.Size = new System.Drawing.Size(228, 57);
             this.labelChatLuongKhi.TabIndex = 16;
-            this.labelChatLuongKhi.Text = "Chất lượng khí : 99%";
+            this.labelChatLuongKhi.Text = "Chất lượng khí : ";
             this.labelChatLuongKhi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelBtn

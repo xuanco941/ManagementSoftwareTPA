@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.DAL;
+using ManagementSoftware.DAL.DALPagination;
 using ManagementSoftware.Models;
 using ManagementSoftware.ViewModels;
 using System;
@@ -11,8 +12,16 @@ namespace ManagementSoftware.BUS
 {
     public class BUSPurchaseOrder
     {
+        public static PaginationPurchaseOrder GetData(int page,bool? status, string? poID)
+        {
+            PaginationPurchaseOrder pagination = new PaginationPurchaseOrder();
+            pagination.Set(page, status, poID);
+            return pagination;
+        }
+
         public static AddUpdateDeleteResponse<PurchaseOrder> Add(PurchaseOrder po)
         {
+
             AddUpdateDeleteResponse<PurchaseOrder> response = new AddUpdateDeleteResponse<PurchaseOrder>();
             try
             {

@@ -1,5 +1,7 @@
-﻿using ManagementSoftware.GUI.Section;
+﻿using ManagementSoftware.BUS;
+using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
+using ManagementSoftware.ViewModels;
 using Syncfusion.Pdf.Parsing;
 using System;
 using System.Collections.Generic;
@@ -15,6 +17,10 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 {
     public partial class FormAddPurchaseOrder : Form
     {
+        // Define delegate
+        public delegate void ChangeData(string msg, FormAlert.enmType enmType);
+        public ChangeData changeData;
+
         Dictionary<int, Product> productDictionary = new Dictionary<int, Product>();
         PurchaseOrder purchaseOrder = new PurchaseOrder();
 
@@ -70,7 +76,6 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             purchaseOrder.NguoiLienHe = txtContactPerson.Text.Trim();
             purchaseOrder.NgayGiaoHang = txtDeliveryDate.Value;
             purchaseOrder.ThamChieu = txtReference.Text.Trim();
-            purchaseOrder.NhanVienMuaHang = txtBuyer.Text.Trim();
 
             purchaseOrder.ChiPhiVanChuyen = txtChiPhiVanChuyen.IntegerValue;
             purchaseOrder.ChiPhiChuyenGiao = txtChiPhiChuyenGiao.IntegerValue;
@@ -81,13 +86,39 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             purchaseOrder.VAT = txtVAT.IntegerValue;
             purchaseOrder.TongTienThanhToan = txtTongTienThanhToan.IntegerValue;
 
-            purchaseOrder.DiaDiemGiaoHang = txtDiaDiemGiaoHang.Text.Trim();
             purchaseOrder.ThanhToan = txtThanhToan.Text.Trim();
             purchaseOrder.ThongTinNganHang = txtBankInfo.Text.Trim();
             purchaseOrder.GhiChu = txtNote.Text.Trim();
             purchaseOrder.OrderCreator = Common.USERSESSION?.Username ?? Common.UserAdmin.Username;
             purchaseOrder.Status = false;
 
+            purchaseOrder.SoSanPhamCanSX = productDictionary.Count;
+            purchaseOrder.SoSanPhamDaSX = 0;
+            AddUpdateDeleteResponse<PurchaseOrder> response = BUSPurchaseOrder.Add(purchaseOrder);
+            if(response != null && response.Status == false)
+            {
+                MessageBox.Show("Thêm không thành công.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //lay danh sach san pham gan poid vao
+                List<Product> list = new List<Product>();
+                foreach (var item in productDictionary)
+                {
+                    item.Value.PurchaseOrderID = response.Data.PurchaseOrderID;
+                    list.Add(item.Value);
+                }
+                AddUpdateDeleteResponse<List<Product>> responseProduct = BUSProduct.AddRange(list);
+                if(responseProduct != null && responseProduct.Status == true)
+                {
+                    changeData.Invoke("Thêm đơn hàng thành công!", FormAlert.enmType.Success);
+                }
+                else
+                {
+                    changeData.Invoke("Lỗi, thêm đơn hàng thất bại!", FormAlert.enmType.Error);
+                }
+                this.Close();
+            }
         }
     }
 }

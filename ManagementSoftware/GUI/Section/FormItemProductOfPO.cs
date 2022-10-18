@@ -22,8 +22,6 @@ namespace ManagementSoftware.GUI.Section
             InitializeComponent();
             this.position = position;
 
-            buttonClose.Text = this.position.ToString();
-
             labelProductName.Text = "Tên sản phẩm : " + product.ProductName;
             labelApSuatNap.Text = "Áp suất nạp : " + product.ApSuatNap;
             labelLoaiKhi.Text = "Loại khí : " + product.LoaiKhi;
