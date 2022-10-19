@@ -80,7 +80,8 @@ namespace ManagementSoftware.GUI
                 panelMain.Controls.Clear();
                 for (int i = 0; i < list.Count; i++)
                 {
-                    FormItemPO form = new FormItemPO(list[0]);
+                    FormItemPO form = new FormItemPO(list[i]);
+                    form.changeData = new FormItemPO.ChangeData(AlertActive2);
                     form.TopLevel = false;
                     panelMain.Controls.Add(form);
                     form.FormBorderStyle = FormBorderStyle.None;
@@ -95,6 +96,12 @@ namespace ManagementSoftware.GUI
         public FormPurchaseOrder()
         {
             InitializeComponent();
+            LoadForm(null);
+        }
+
+        public void AlertActive2(string msg, FormAlert.enmType type)
+        {
+            callAlert?.Invoke(msg, type);
             LoadForm(null);
         }
 
@@ -243,7 +250,7 @@ namespace ManagementSoftware.GUI
 
         private void buttonCustom3_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrEmpty(textBoxSearchPO.Texts) == true && textBoxSearchPO.Texts == textBoxSearchPO.PlaceholderText)
+            if(String.IsNullOrEmpty(textBoxSearchPO.Texts) == true || textBoxSearchPO.Texts == textBoxSearchPO.PlaceholderText)
             {
                 LoadForm(null);
             }

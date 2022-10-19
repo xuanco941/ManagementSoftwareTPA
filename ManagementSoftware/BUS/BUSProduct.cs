@@ -12,6 +12,11 @@ namespace ManagementSoftware.BUS
 {
     public class BUSProduct
     {
+        public static List<Product> GetProductOfPO(int poID)
+        {
+            return DALProduct.GetProductOfPO(poID);
+        }
+
         public static AddUpdateDeleteResponse<List<Product>> AddRange(List<Product> listProduct)
         {
             //response

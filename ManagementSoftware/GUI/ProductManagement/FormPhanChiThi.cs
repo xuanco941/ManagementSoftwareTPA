@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ManagementSoftware.GUI.PurchaseOrderManagement
+namespace ManagementSoftware.GUI.ProductManagement
 {
-    public partial class FormUpdatePurchaseOrder : Form
+    public partial class FormPhanChiThi : Form
     {
-        public FormUpdatePurchaseOrder()
+        public FormPhanChiThi()
         {
             InitializeComponent();
         }

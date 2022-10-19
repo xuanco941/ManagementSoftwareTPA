@@ -34,13 +34,13 @@
     <Compile Update="GUI\FormPurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\ProductManagement\FormPhanChiThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\PurchaseOrderManagement\FormAddProductOnPO.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\PurchaseOrderManagement\FormAddPurchaseOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\PurchaseOrderManagement\FormUpdatePurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\PurchaseOrderManagement\FormViewDetailPurchaseOrder.cs">
@@ -53,6 +53,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\ResultHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Section\FormItemFormViewDetailPO.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Section\FormItemPO.cs">

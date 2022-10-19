@@ -38,25 +38,43 @@ namespace ManagementSoftware.BUS
             }
             return response;
         }
-        //public static int Update(PurchaseOrder po)
-        //{
-        //    DataBaseContext dbContext = new DataBaseContext();
-        //    var purchaseOrderUpdate = dbContext.PurchaseOrders.FirstOrDefault(g => g.PurchaseOrderID == po.PurchaseOrderID);
-        //    if (purchaseOrderUpdate != null)
-        //    {
-        //        purchaseOrderUpdate = po;
-        //    }
-        //    return dbContext.SaveChanges();
-        //}
-        //public static int Delete(int PurchaseOrderID)
-        //{
-        //    DataBaseContext dbContext = new DataBaseContext();
-        //    var poDelete = dbContext.PurchaseOrders.FirstOrDefault(s => s.PurchaseOrderID == PurchaseOrderID);
-        //    if (poDelete != null)
-        //    {
-        //        dbContext.PurchaseOrders.Remove(poDelete);
-        //    }
-        //    return dbContext.SaveChanges();
-        //}
+        public static AddUpdateDeleteResponse<PurchaseOrder> Update(PurchaseOrder po)
+        {
+            AddUpdateDeleteResponse<PurchaseOrder> response = new AddUpdateDeleteResponse<PurchaseOrder>();
+
+            try
+            {
+                // số dòng thay đổi lớn hơn 0 thì thành công
+                response.RowsNumberChanged = DALPurchaseOrder.Update(po);
+                response.Status = response.RowsNumberChanged > 0 ? true : false;
+                response.Message = response.Status == true ? $"Cập nhật thành công." : $"Cập nhật thất bại.";
+                response.Data = po;
+            }
+            catch
+            {
+                response.Status = false;
+                response.Message = "Lỗi hệ thống, không thể cập nhật.";
+            }
+            return response;
+        }
+
+        public static AddUpdateDeleteResponse<int> Delete(int PurchaseOrderID)
+        {
+            AddUpdateDeleteResponse<int> response = new AddUpdateDeleteResponse<int>();
+            try
+            {
+                // số dòng thay đổi lớn hơn 0 thì thành công
+                response.RowsNumberChanged = DALPurchaseOrder.Delete(PurchaseOrderID);
+                response.Status = response.RowsNumberChanged > 0 ? true : false;
+                response.Message = response.Status == true ? $"Xóa thành công." : $"Xóa thất bại.";
+                response.Data = PurchaseOrderID;
+            }
+            catch
+            {
+                response.Status = false;
+                response.Message = "Lỗi hệ thống, không thể xóa.";
+            }
+            return response;
+        }
     }
 }

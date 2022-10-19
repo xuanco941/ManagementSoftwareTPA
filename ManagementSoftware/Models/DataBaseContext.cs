@@ -108,7 +108,7 @@ namespace ManagementSoftware.Models
 
         public bool CreateDatabase()
         {
-            this.Database.EnsureDeleted();
+            //this.Database.EnsureDeleted();
             return this.Database.EnsureCreated();
         }
 

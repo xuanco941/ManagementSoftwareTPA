@@ -14,6 +14,10 @@ namespace ManagementSoftware.GUI.Section
 {
     public partial class FormItemPO : Form
     {
+        // Define delegate
+        public delegate void ChangeData(string msg, FormAlert.enmType enmType);
+        public ChangeData changeData;
+
         PurchaseOrder purchase;
         public FormItemPO(PurchaseOrder po)
         {
@@ -21,7 +25,7 @@ namespace ManagementSoftware.GUI.Section
             this.purchase = po;
 
             labelMaPO.Text = "Số PO : " + Common.PURCHASEORDER + purchase.PurchaseOrderID;
-            labelDiaDiem.Text = "Địa điểm : " + purchase.DiaDiemGiaoHang;
+            labelDiaDiem.Text = "Địa điểm : " + purchase.DiaChi;
             labelNgayGiao.Text = "Ngày giao : " + purchase.NgayGiaoHang?.ToString("dd/MM/yyyy");
             labelMaKhachHang.Text = "Mã khách hàng : " + purchase.MaKhachHang;
             labelTenKhachHang.Text = "Tên khách hàng : " + purchase.TenKhachHang;
@@ -35,9 +39,16 @@ namespace ManagementSoftware.GUI.Section
             }
         }
 
+        void ActiveAlert(string msg, FormAlert.enmType enmType)
+        {
+            this.changeData?.Invoke(msg, enmType);
+        }
+
         private void buttonViewDetail_Click(object sender, EventArgs e)
         {
-            new FormViewDetailPurchaseOrder().Show();
+            FormViewDetailPurchaseOrder form = new FormViewDetailPurchaseOrder(purchase);
+            form.changeData = new FormViewDetailPurchaseOrder.ChangeData(ActiveAlert);
+            form.Show();
         }
     }
 }

@@ -9,6 +9,11 @@ namespace ManagementSoftware.DAL
 {
     public class DALProduct
     {
+        public static List<Product> GetProductOfPO(int poID)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            return dbContext.Products.Where(p => p.PurchaseOrderID == poID).ToList();
+        }
         public static int AddRange(List<Product> listProduct)
         {
             DataBaseContext dbContext = new DataBaseContext();

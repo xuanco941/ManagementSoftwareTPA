@@ -1,4 +1,7 @@
-﻿using ManagementSoftware.Models;
+﻿using ManagementSoftware.BUS;
+using ManagementSoftware.GUI.Section;
+using ManagementSoftware.Models;
+using Syncfusion.XPS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,18 +11,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ManagementSoftware.GUI.PurchaseOrderManagement
 {
     public partial class FormViewDetailPurchaseOrder : Form
     {
-        PurchaseOrder purchaseOrder;
+        public delegate void ChangeData(string msg, FormAlert.enmType enmType);
+        public ChangeData changeData;
+
+
+
+        PurchaseOrder purchaseOrder = new PurchaseOrder();
         public FormViewDetailPurchaseOrder(PurchaseOrder po)
         {
             InitializeComponent();
             this.purchaseOrder = po;
+            LoadForm();
+        }
 
-            labelMaPO.Text = "Đơn Hàng : " + Common.PURCHASEORDER +purchaseOrder.PurchaseOrderID;
+        void LoadForm()
+        {
+
+            labelMaPO.Text = "Đơn Hàng : " + Common.PURCHASEORDER + purchaseOrder.PurchaseOrderID;
             labelSoPRPQ.Text = "Số PR,PQ : " + purchaseOrder.SoPRPQ;
             labelTenKhachHang.Text = "Tên khách hàng : " + purchaseOrder.TenKhachHang;
             labelMaKhachHang.Text = "Mã khách hàng : " + purchaseOrder.MaKhachHang;
@@ -37,6 +51,40 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             labelVuot.Text = "Vượt : " + purchaseOrder.Vuot + "%";
             labelTongTienHang.Text = "Tổng tiền hàng (chưa VAT) : " + purchaseOrder.TongTienHang;
             labelVAT.Text = "VAT : " + purchaseOrder.VAT;
+            labelThanhToan.Text = "Thanh toán : " + purchaseOrder.ThanhToan;
+            labelThongTinBank.Text = "Ngân hàng : " + purchaseOrder.ThongTinNganHang;
+            labelNote.Text = "Ghi chú : " + purchaseOrder.GhiChu;
+
+            labelTongTien.Text = purchaseOrder.TongTienThanhToan + "đ";
+
+            panelProducts.Controls.Clear();
+            List<Product> list = BUSProduct.GetProductOfPO(purchaseOrder.PurchaseOrderID);
+            for (int i = 0; i < list.Count; i++)
+            {
+                FormItemFormViewDetailPO form = new FormItemFormViewDetailPO(list[i]);
+                form.TopLevel = false;
+                panelProducts.Controls.Add(form);
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Top;
+                form.Show();
+            }
+        }
+
+        private void buttonXoaPO_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa đơn hàng {Common.PURCHASEORDER+purchaseOrder.PurchaseOrderID}?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if(BUSPurchaseOrder.Delete(purchaseOrder.PurchaseOrderID).Status == true)
+                {
+                    changeData?.Invoke("Xóa thành công.", FormAlert.enmType.Success);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể xóa đơn hàng này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
         }
     }
