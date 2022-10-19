@@ -43,6 +43,9 @@
     <Compile Update="GUI\PurchaseOrderManagement\FormAddPurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\PurchaseOrderManagement\FormDirectiveDecomposition.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\PurchaseOrderManagement\FormViewDetailPurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +62,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Section\FormItemPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Section\FormItemProductOfListDirective.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Section\FormItemProductOfPO.cs">

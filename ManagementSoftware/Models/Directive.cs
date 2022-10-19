@@ -16,9 +16,9 @@ namespace ManagementSoftware.Models
         public int SoLuongDaSanXuat { get; set; }
         public int SoLuongCanSanXuat { get; set; }
         //người vận hành
-        public string UsernameWorker { get; set; }
+        public string Worker { get; set; } = "";
         public bool Status { get; set; }
-        public DateTime CreateAt { get; set; }
+        public DateTime BeginAt { get; set; }
         public DateTime EndAt { get; set; }
 
         public int ProductID { get; set; }

@@ -12,6 +12,10 @@ namespace ManagementSoftware.BUS
 {
     public class BUSProduct
     {
+        public static int GetSoLuongSanXuatDaPhanChiThiOnProduct(int productID)
+        {
+            return DALProduct.GetSoLuongSanXuatDaPhanChiThiOnProduct(productID);
+        }
         public static List<Product> GetProductOfPO(int poID)
         {
             return DALProduct.GetProductOfPO(poID);

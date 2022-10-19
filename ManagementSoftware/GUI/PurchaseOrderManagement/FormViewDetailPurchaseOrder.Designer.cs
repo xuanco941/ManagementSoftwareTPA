@@ -32,9 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormViewDetailPurchaseOrder));
             this.panel20 = new System.Windows.Forms.Panel();
             this.panelGridButton = new System.Windows.Forms.Panel();
-            this.buttonXoaPO = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonChiThiSX = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2btn = new System.Windows.Forms.Panel();
             this.buttonXuatPDF = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.buttonXoaPO = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.buttonChiThiSX = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
@@ -98,11 +101,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
             this.gridLayout2 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel2btn = new System.Windows.Forms.Panel();
             this.panel20.SuspendLayout();
             this.panelGridButton.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel2btn.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel24.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -139,9 +142,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout2)).BeginInit();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel2btn.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel20
@@ -165,6 +165,59 @@
             this.panelGridButton.Name = "panelGridButton";
             this.panelGridButton.Size = new System.Drawing.Size(416, 99);
             this.panelGridButton.TabIndex = 1;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.panel2btn, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panel17, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(414, 97);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // panel2btn
+            // 
+            this.panel2btn.Controls.Add(this.buttonXuatPDF);
+            this.panel2btn.Controls.Add(this.buttonXoaPO);
+            this.panel2btn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2btn.Location = new System.Drawing.Point(3, 51);
+            this.panel2btn.Name = "panel2btn";
+            this.panel2btn.Size = new System.Drawing.Size(408, 43);
+            this.panel2btn.TabIndex = 1;
+            // 
+            // buttonXuatPDF
+            // 
+            this.buttonXuatPDF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonXuatPDF.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonXuatPDF.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonXuatPDF.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonXuatPDF.BorderRadius = 6;
+            this.buttonXuatPDF.BorderSize = 0;
+            this.buttonXuatPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonXuatPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonXuatPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonXuatPDF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonXuatPDF.Image = global::ManagementSoftware.Properties.Resources.iconfinder_Save_278762;
+            this.buttonXuatPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonXuatPDF.Location = new System.Drawing.Point(0, 0);
+            this.buttonXuatPDF.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonXuatPDF.Name = "buttonXuatPDF";
+            this.gridLayout2.SetParticipateInLayout(this.buttonXuatPDF, true);
+            this.buttonXuatPDF.Size = new System.Drawing.Size(204, 43);
+            this.buttonXuatPDF.TabIndex = 55;
+            this.buttonXuatPDF.Text = "Xuất PDF";
+            this.buttonXuatPDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonXuatPDF.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonXuatPDF.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonXuatPDF.UseVisualStyleBackColor = false;
             // 
             // buttonXoaPO
             // 
@@ -194,6 +247,15 @@
             this.buttonXoaPO.UseVisualStyleBackColor = false;
             this.buttonXoaPO.Click += new System.EventHandler(this.buttonXoaPO_Click);
             // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.buttonChiThiSX);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Location = new System.Drawing.Point(3, 3);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(408, 42);
+            this.panel17.TabIndex = 0;
+            // 
             // buttonChiThiSX
             // 
             this.buttonChiThiSX.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -213,38 +275,12 @@
             this.buttonChiThiSX.Name = "buttonChiThiSX";
             this.buttonChiThiSX.Size = new System.Drawing.Size(408, 42);
             this.buttonChiThiSX.TabIndex = 56;
-            this.buttonChiThiSX.Text = "Chỉ thị sản xuất";
+            this.buttonChiThiSX.Text = "Phân chỉ thị sản xuất";
             this.buttonChiThiSX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonChiThiSX.TextColor = System.Drawing.Color.White;
             this.buttonChiThiSX.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonChiThiSX.UseVisualStyleBackColor = false;
-            // 
-            // buttonXuatPDF
-            // 
-            this.buttonXuatPDF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonXuatPDF.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonXuatPDF.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.buttonXuatPDF.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonXuatPDF.BorderRadius = 6;
-            this.buttonXuatPDF.BorderSize = 0;
-            this.buttonXuatPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonXuatPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonXuatPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonXuatPDF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonXuatPDF.Image = global::ManagementSoftware.Properties.Resources.iconfinder_Save_278762;
-            this.buttonXuatPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonXuatPDF.Location = new System.Drawing.Point(0, 0);
-            this.buttonXuatPDF.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonXuatPDF.Name = "buttonXuatPDF";
-            this.gridLayout2.SetParticipateInLayout(this.buttonXuatPDF, true);
-            this.buttonXuatPDF.Size = new System.Drawing.Size(204, 43);
-            this.buttonXuatPDF.TabIndex = 55;
-            this.buttonXuatPDF.Text = "Xuất PDF";
-            this.buttonXuatPDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonXuatPDF.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonXuatPDF.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonXuatPDF.UseVisualStyleBackColor = false;
+            this.buttonChiThiSX.Click += new System.EventHandler(this.buttonChiThiSX_Click);
             // 
             // panel23
             // 
@@ -982,41 +1018,6 @@
             this.gridLayout2.ContainerControl = this.panel2btn;
             this.gridLayout2.Rows = 1;
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.panel2btn, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.panel17, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(414, 97);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.buttonChiThiSX);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(3, 3);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(408, 42);
-            this.panel17.TabIndex = 0;
-            // 
-            // panel2btn
-            // 
-            this.panel2btn.Controls.Add(this.buttonXuatPDF);
-            this.panel2btn.Controls.Add(this.buttonXoaPO);
-            this.panel2btn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2btn.Location = new System.Drawing.Point(3, 51);
-            this.panel2btn.Name = "panel2btn";
-            this.panel2btn.Size = new System.Drawing.Size(408, 43);
-            this.panel2btn.TabIndex = 1;
-            // 
             // FormViewDetailPurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1032,6 +1033,9 @@
             this.Text = "FormViewDetail";
             this.panel20.ResumeLayout(false);
             this.panelGridButton.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel2btn.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
@@ -1068,9 +1072,6 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout2)).EndInit();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel2btn.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

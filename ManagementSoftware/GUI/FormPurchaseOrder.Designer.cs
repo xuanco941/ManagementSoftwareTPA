@@ -46,8 +46,6 @@
             this.buttonNotDone = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonDone = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonAll = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonBack = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panelMain = new System.Windows.Forms.Panel();
             this.gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
             this.panel2.SuspendLayout();
@@ -56,7 +54,6 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2Button.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,7 +193,6 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -208,9 +204,9 @@
             // 
             this.panel4.Controls.Add(this.tableLayoutPanel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(129, 0);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(970, 46);
+            this.panel4.Size = new System.Drawing.Size(1099, 46);
             this.panel4.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -226,7 +222,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(970, 46);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1099, 46);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel5
@@ -234,9 +230,9 @@
             this.panel5.Controls.Add(this.textBoxSearchPO);
             this.panel5.Controls.Add(this.buttonCustom3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(585, 3);
+            this.panel5.Location = new System.Drawing.Point(662, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(382, 40);
+            this.panel5.Size = new System.Drawing.Size(434, 40);
             this.panel5.TabIndex = 1;
             // 
             // textBoxSearchPO
@@ -256,7 +252,7 @@
             this.textBoxSearchPO.PasswordChar = false;
             this.textBoxSearchPO.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxSearchPO.PlaceholderText = "Nhập mã đơn hàng";
-            this.textBoxSearchPO.Size = new System.Drawing.Size(266, 39);
+            this.textBoxSearchPO.Size = new System.Drawing.Size(318, 39);
             this.textBoxSearchPO.TabIndex = 29;
             this.textBoxSearchPO.Texts = "Nhập mã đơn hàng";
             this.textBoxSearchPO.UnderlinedStyle = false;
@@ -275,7 +271,7 @@
             this.buttonCustom3.ForeColor = System.Drawing.Color.Black;
             this.buttonCustom3.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustom3.Image")));
             this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustom3.Location = new System.Drawing.Point(266, 0);
+            this.buttonCustom3.Location = new System.Drawing.Point(318, 0);
             this.buttonCustom3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCustom3.Name = "buttonCustom3";
             this.buttonCustom3.Size = new System.Drawing.Size(116, 40);
@@ -295,7 +291,7 @@
             this.panel2Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2Button.Location = new System.Drawing.Point(3, 3);
             this.panel2Button.Name = "panel2Button";
-            this.panel2Button.Size = new System.Drawing.Size(576, 40);
+            this.panel2Button.Size = new System.Drawing.Size(653, 40);
             this.panel2Button.TabIndex = 2;
             // 
             // buttonNotDone
@@ -311,11 +307,11 @@
             this.buttonNotDone.ForeColor = System.Drawing.Color.White;
             this.buttonNotDone.Image = ((System.Drawing.Image)(resources.GetObject("buttonNotDone.Image")));
             this.buttonNotDone.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonNotDone.Location = new System.Drawing.Point(0, 0);
+            this.buttonNotDone.Location = new System.Drawing.Point(1, 0);
             this.buttonNotDone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonNotDone.Name = "buttonNotDone";
             this.gridLayout1.SetParticipateInLayout(this.buttonNotDone, true);
-            this.buttonNotDone.Size = new System.Drawing.Size(192, 40);
+            this.buttonNotDone.Size = new System.Drawing.Size(217, 40);
             this.buttonNotDone.TabIndex = 28;
             this.buttonNotDone.Text = "Chưa hoàn thành";
             this.buttonNotDone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -337,11 +333,11 @@
             this.buttonDone.ForeColor = System.Drawing.Color.White;
             this.buttonDone.Image = ((System.Drawing.Image)(resources.GetObject("buttonDone.Image")));
             this.buttonDone.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDone.Location = new System.Drawing.Point(192, 0);
+            this.buttonDone.Location = new System.Drawing.Point(218, 0);
             this.buttonDone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonDone.Name = "buttonDone";
             this.gridLayout1.SetParticipateInLayout(this.buttonDone, true);
-            this.buttonDone.Size = new System.Drawing.Size(192, 40);
+            this.buttonDone.Size = new System.Drawing.Size(217, 40);
             this.buttonDone.TabIndex = 30;
             this.buttonDone.Text = "Đã hoàn thành";
             this.buttonDone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -363,11 +359,11 @@
             this.buttonAll.ForeColor = System.Drawing.Color.White;
             this.buttonAll.Image = ((System.Drawing.Image)(resources.GetObject("buttonAll.Image")));
             this.buttonAll.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAll.Location = new System.Drawing.Point(384, 0);
+            this.buttonAll.Location = new System.Drawing.Point(435, 0);
             this.buttonAll.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonAll.Name = "buttonAll";
             this.gridLayout1.SetParticipateInLayout(this.buttonAll, true);
-            this.buttonAll.Size = new System.Drawing.Size(192, 40);
+            this.buttonAll.Size = new System.Drawing.Size(217, 40);
             this.buttonAll.TabIndex = 29;
             this.buttonAll.Text = "Tất cả";
             this.buttonAll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -375,41 +371,6 @@
             this.buttonAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAll.UseVisualStyleBackColor = false;
             this.buttonAll.Click += new System.EventHandler(this.buttonAll_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.buttonBack);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(129, 46);
-            this.panel3.TabIndex = 0;
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.AutoEllipsis = true;
-            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonBack.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonBack.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonBack.BorderRadius = 5;
-            this.buttonBack.BorderSize = 0;
-            this.buttonBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonBack.ForeColor = System.Drawing.Color.White;
-            this.buttonBack.Image = global::ManagementSoftware.Properties.Resources.backpage;
-            this.buttonBack.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonBack.Location = new System.Drawing.Point(0, 0);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(129, 46);
-            this.buttonBack.TabIndex = 14;
-            this.buttonBack.Text = "Quay lại";
-            this.buttonBack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBack.TextColor = System.Drawing.Color.White;
-            this.buttonBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonBack.UseVisualStyleBackColor = false;
             // 
             // panelMain
             // 
@@ -448,7 +409,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel2Button.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).EndInit();
             this.ResumeLayout(false);
 
@@ -466,8 +426,6 @@
         private System.Windows.Forms.Panel panelMain;
         private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout1;
         private Panel panel4;
-        private Panel panel3;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonBack;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel5;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxSearchPO;

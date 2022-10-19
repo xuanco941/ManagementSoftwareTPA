@@ -35,7 +35,6 @@
             this.buttonPage1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -46,10 +45,10 @@
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label29.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label29.Location = new System.Drawing.Point(144, 0);
+            this.label29.Location = new System.Drawing.Point(0, 0);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(1112, 46);
+            this.label29.Size = new System.Drawing.Size(1256, 46);
             this.label29.TabIndex = 14;
             this.label29.Text = "Danh mục sản xuất của bạn";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,39 +160,12 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label29);
-            this.panel1.Controls.Add(this.buttonDangNhap);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1258, 48);
             this.panel1.TabIndex = 9;
-            // 
-            // buttonDangNhap
-            // 
-            this.buttonDangNhap.AutoEllipsis = true;
-            this.buttonDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonDangNhap.BorderRadius = 5;
-            this.buttonDangNhap.BorderSize = 0;
-            this.buttonDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDangNhap.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
-            this.buttonDangNhap.Image = global::ManagementSoftware.Properties.Resources.backpage;
-            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDangNhap.Location = new System.Drawing.Point(0, 0);
-            this.buttonDangNhap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonDangNhap.Name = "buttonDangNhap";
-            this.buttonDangNhap.Size = new System.Drawing.Size(144, 46);
-            this.buttonDangNhap.TabIndex = 13;
-            this.buttonDangNhap.Text = "Quay lại";
-            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.TextColor = System.Drawing.Color.White;
-            this.buttonDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonDangNhap.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -229,7 +201,6 @@
 
         #endregion
         private System.Windows.Forms.Label label29;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDangNhap;
         private System.Windows.Forms.Panel panelMain;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageNext;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage3;
