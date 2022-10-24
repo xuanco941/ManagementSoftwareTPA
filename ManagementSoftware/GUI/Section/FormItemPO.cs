@@ -18,6 +18,9 @@ namespace ManagementSoftware.GUI.Section
         public delegate void ChangeData(string msg, FormAlert.enmType enmType);
         public ChangeData changeData;
 
+        public delegate void ChangeFormMain(Form form, string header);
+        public ChangeFormMain changeFormMain;
+
         PurchaseOrder purchase;
         public FormItemPO(PurchaseOrder po)
         {
@@ -31,9 +34,16 @@ namespace ManagementSoftware.GUI.Section
             labelTenKhachHang.Text = "Tên khách hàng : " + purchase.TenKhachHang;
             labelTrangThai.Text =purchase.Status == false ? "Trạng thái : Đang sản xuất" : "Trạng thái : Đã hoàn thành";
 
-            progressBarTienTrinh.Value = Convert.ToInt32( Math.Round((double)purchase.SoSanPhamDaSX / (double)purchase.SoSanPhamCanSX,2,MidpointRounding.AwayFromZero) * 100);
+            try
+            {
+                progressBarTienTrinh.Value = Convert.ToInt32(Math.Round((double)purchase.SoSanPhamDaSX / (double)purchase.SoSanPhamCanSX, 2, MidpointRounding.AwayFromZero) * 100);
+            }
+            catch
+            {
+                progressBarTienTrinh.Value = 0;
+            }
 
-            if(purchase.Status == true)
+            if (purchase.Status == true)
             {
                 progressBarTienTrinh.BackColor = Color.Green;
             }
@@ -44,11 +54,18 @@ namespace ManagementSoftware.GUI.Section
             this.changeData?.Invoke(msg, enmType);
         }
 
+        void ChangeForm(Form form, string header)
+        {
+            changeFormMain?.Invoke(form, header);
+        }
+
         private void buttonViewDetail_Click(object sender, EventArgs e)
         {
             FormViewDetailPurchaseOrder form = new FormViewDetailPurchaseOrder(purchase);
             form.changeData = new FormViewDetailPurchaseOrder.ChangeData(ActiveAlert);
-            form.Show();
+            form.changeFormMain = new FormViewDetailPurchaseOrder.ChangeFormMain(ChangeForm);
+
+            changeFormMain?.Invoke(form, "Đơn hàng " + Common.PURCHASEORDER+ this.purchase.PurchaseOrderID);
         }
     }
 }

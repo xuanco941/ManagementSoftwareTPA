@@ -18,7 +18,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
         public FormDirectiveDecomposition(PurchaseOrder purchase)
         {
             InitializeComponent();
-            labelHeader.Text = "Phân chia chỉ thị sản xuất cho sản phẩm đơn hàng " + Common.PURCHASEORDER + purchase.PurchaseOrderID;
+            labelHeader.Text = "Phân chia chỉ thị sản xuất cho mỗi sản phẩm đơn hàng " + Common.PURCHASEORDER + purchase.PurchaseOrderID;
 
             panelMain.Controls.Clear();
             List<Product> list = BUSProduct.GetProductOfPO(purchase.PurchaseOrderID);

@@ -24,6 +24,9 @@ namespace ManagementSoftware.GUI
         public delegate void CallAlert(string msg, FormAlert.enmType type);
         public CallAlert callAlert;
 
+        public delegate void ChangeFormMain(Form form, string header);
+        public ChangeFormMain changeFormMain;
+
         // trang hiện tại
         private int page = 1;
         // tổng số trang
@@ -36,7 +39,7 @@ namespace ManagementSoftware.GUI
         private void LoadForm(string? poID)
         {
 
-            PaginationPurchaseOrder pagination = BUSPurchaseOrder.GetData(this.page, this.status,poID);
+            PaginationPurchaseOrder pagination = BUSPurchaseOrder.GetData(this.page, this.status, poID);
             List<PurchaseOrder>? list = pagination.ListResults;
             this.TotalPages = pagination.TotalPages;
             if (list != null)
@@ -82,6 +85,7 @@ namespace ManagementSoftware.GUI
                 {
                     FormItemPO form = new FormItemPO(list[i]);
                     form.changeData = new FormItemPO.ChangeData(AlertActive2);
+                    form.changeFormMain = new FormItemPO.ChangeFormMain(ChangeForm);
                     form.TopLevel = false;
                     panelMain.Controls.Add(form);
                     form.FormBorderStyle = FormBorderStyle.None;
@@ -91,6 +95,10 @@ namespace ManagementSoftware.GUI
             }
         }
 
+        void ChangeForm(Form form, string header)
+        {
+            changeFormMain?.Invoke(form,header);
+        }
 
 
         public FormPurchaseOrder()
@@ -133,7 +141,7 @@ namespace ManagementSoftware.GUI
             this.TotalPages = 1;
             buttonPage1.Text = 1.ToString();
             buttonPage2.Text = 2.ToString();
-            buttonPage3.Text = 3.ToString(); 
+            buttonPage3.Text = 3.ToString();
             LoadForm(null);
         }
 
@@ -250,7 +258,7 @@ namespace ManagementSoftware.GUI
 
         private void buttonCustom3_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrEmpty(textBoxSearchPO.Texts) == true || textBoxSearchPO.Texts == textBoxSearchPO.PlaceholderText)
+            if (String.IsNullOrEmpty(textBoxSearchPO.Texts) == true || textBoxSearchPO.Texts == textBoxSearchPO.PlaceholderText)
             {
                 LoadForm(null);
             }

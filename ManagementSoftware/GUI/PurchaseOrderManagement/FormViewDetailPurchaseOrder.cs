@@ -19,9 +19,11 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
         public delegate void ChangeData(string msg, FormAlert.enmType enmType);
         public ChangeData changeData;
 
+        public delegate void ChangeFormMain(Form form, string header);
+        public ChangeFormMain changeFormMain;
 
 
-        PurchaseOrder purchaseOrder = new PurchaseOrder();
+        PurchaseOrder purchaseOrder;
         public FormViewDetailPurchaseOrder(PurchaseOrder po)
         {
             InitializeComponent();
@@ -77,7 +79,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
                 if(BUSPurchaseOrder.Delete(purchaseOrder.PurchaseOrderID).Status == true)
                 {
                     changeData?.Invoke("Xóa thành công.", FormAlert.enmType.Success);
-                    this.Close();
+                    changeFormMain?.Invoke(new FormPurchaseOrder(), "Quản lý đơn hàng");
                 }
                 else
                 {
@@ -89,7 +91,12 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
         private void buttonChiThiSX_Click(object sender, EventArgs e)
         {
-            new FormDirectiveDecomposition(purchaseOrder).Show();
+            new FormDirectiveDecomposition(purchaseOrder).ShowDialog();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            changeFormMain?.Invoke(new FormPurchaseOrder(), "Quản lý đơn hàng");
         }
     }
 }

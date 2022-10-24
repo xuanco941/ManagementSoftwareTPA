@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.BUS;
+using ManagementSoftware.GUI.PurchaseOrderManagement;
 using ManagementSoftware.Models;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,19 @@ namespace ManagementSoftware.GUI.Section
             labelTheTichBinh.Text = "Thể tích bình : " + product.TheTichBinh;
 
             labelNum.Text = Common.PRODUCT + product.ProductID;
+            LoadStatusChiThi();
+        }
+
+        void LoadStatusChiThi()
+        {
             labelStatus.Text = BUSProduct.GetSoLuongSanXuatDaPhanChiThiOnProduct(product.ProductID) + "/" + product.SoLuongSanXuat;
+        }
+
+        private void buttonPhanTi_Click(object sender, EventArgs e)
+        {
+            FormDirectiveDecompositionDetail form = new FormDirectiveDecompositionDetail(this.product);
+            form.changeData = new FormDirectiveDecompositionDetail.ChangeData(LoadStatusChiThi);
+            form.ShowDialog();
         }
     }
 }

@@ -56,6 +56,22 @@ namespace ManagementSoftware.GUI
             form.Show();
             this.Font = Common.FontForm;
         }
+        private void ChangeFormContentWithHeaderName(Form form, string header)
+        {
+            //focus button
+            labelHeader.Text = header;
+
+            //remove controls in panel
+            panelContent.Controls.Clear();
+
+            //set new content
+            form.TopLevel = false;
+            panelContent.Controls.Add(form);
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            this.Font = Common.FontForm;
+        }
 
 
         private void buttonDashboard_Click(object sender, EventArgs e)
@@ -69,6 +85,7 @@ namespace ManagementSoftware.GUI
         {
             FormPurchaseOrder form = new FormPurchaseOrder();
             form.callAlert = new FormPurchaseOrder.CallAlert(Alert);
+            form.changeFormMain = new FormPurchaseOrder.ChangeFormMain(ChangeFormContentWithHeaderName);
             ChangeFormContent(form, sender);
         }
 

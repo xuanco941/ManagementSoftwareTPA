@@ -69,6 +69,11 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
         private void buttonAddPO_Click(object sender, EventArgs e)
         {
+            if(productDictionary.Count < 1)
+            {
+                MessageBox.Show("Chưa có sản phẩm nào trong đơn hàng này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             purchaseOrder.SoPRPQ = txtPRPQ.Text.Trim();
             purchaseOrder.TenKhachHang = txtOrdererName.Text.Trim();
             purchaseOrder.MaKhachHang = txtCodeOrderer.Text.Trim();

@@ -47,13 +47,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelChatLuongKhi = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelNum = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.labelStatus = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
-            this.labelNum = new System.Windows.Forms.Label();
             this.panelItemPO.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -128,6 +128,7 @@
             this.buttonPhanTi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonPhanTi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonPhanTi.UseVisualStyleBackColor = false;
+            this.buttonPhanTi.Click += new System.EventHandler(this.buttonPhanTi_Click);
             // 
             // panelGrid
             // 
@@ -280,6 +281,17 @@
             this.panel2.Size = new System.Drawing.Size(64, 113);
             this.panel2.TabIndex = 10;
             // 
+            // labelNum
+            // 
+            this.labelNum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelNum.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelNum.Location = new System.Drawing.Point(0, 0);
+            this.labelNum.Name = "labelNum";
+            this.labelNum.Size = new System.Drawing.Size(62, 111);
+            this.labelNum.TabIndex = 9;
+            this.labelNum.Text = "label1";
+            this.labelNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.panel11);
@@ -338,17 +350,6 @@
             this.gridLayout1.Columns = 3;
             this.gridLayout1.ContainerControl = this.panelGrid;
             this.gridLayout1.Rows = 2;
-            // 
-            // labelNum
-            // 
-            this.labelNum.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelNum.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelNum.Location = new System.Drawing.Point(0, 0);
-            this.labelNum.Name = "labelNum";
-            this.labelNum.Size = new System.Drawing.Size(62, 111);
-            this.labelNum.TabIndex = 9;
-            this.labelNum.Text = "label1";
-            this.labelNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormItemProductOfListDirective
             // 
