@@ -76,8 +76,9 @@ namespace ManagementSoftware.GUI
 
         private void buttonDashboard_Click(object sender, EventArgs e)
         {
-            Dashboard form = new Dashboard();
-            form.callAlert = new Dashboard.CallAlert(Alert);
+            //Dashboard form = new Dashboard();
+            //form.callAlert = new Dashboard.CallAlert(Alert);
+            formdardb form = new formdardb();
             ChangeFormContent(form, sender);
         }
 
