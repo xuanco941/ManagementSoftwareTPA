@@ -65,6 +65,11 @@
             this.button49 = new System.Windows.Forms.Button();
             this.button50 = new System.Windows.Forms.Button();
             this.button51 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
+            this.button52 = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.button56 = new System.Windows.Forms.Button();
+            this.buttonWorkingList = new System.Windows.Forms.Button();
             this.radialGauge1 = new Syncfusion.Windows.Forms.Gauge.RadialGauge();
             this.panel9 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
@@ -130,11 +135,6 @@
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.button53 = new System.Windows.Forms.Button();
             this.button54 = new System.Windows.Forms.Button();
-            this.button52 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.buttonWorkingList = new System.Windows.Forms.Button();
-            this.button56 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
@@ -149,6 +149,8 @@
             this.panel7.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
+            this.tableLayoutPanel21.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.panel9.SuspendLayout();
             this.tableLayoutPanel25.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -175,8 +177,6 @@
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tableLayoutPanel23.SuspendLayout();
-            this.tableLayoutPanel21.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -736,6 +736,87 @@
             this.button51.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button51.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button51.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel21
+            // 
+            this.tableLayoutPanel21.ColumnCount = 1;
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel21.Controls.Add(this.button52, 0, 0);
+            this.tableLayoutPanel21.Controls.Add(this.panel14, 0, 1);
+            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(679, 2);
+            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
+            this.tableLayoutPanel21.RowCount = 2;
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.97297F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.02702F));
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(366, 260);
+            this.tableLayoutPanel21.TabIndex = 2;
+            // 
+            // button52
+            // 
+            this.button52.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button52.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button52.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button52.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button52.Image = ((System.Drawing.Image)(resources.GetObject("button52.Image")));
+            this.button52.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button52.Location = new System.Drawing.Point(3, 2);
+            this.button52.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button52.Name = "button52";
+            this.button52.Size = new System.Drawing.Size(360, 55);
+            this.button52.TabIndex = 5;
+            this.button52.Text = "BẢNG ĐIỀU KHIỂN";
+            this.button52.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button52.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button52.UseVisualStyleBackColor = false;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.button56);
+            this.panel14.Controls.Add(this.buttonWorkingList);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(3, 62);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(360, 195);
+            this.panel14.TabIndex = 6;
+            // 
+            // button56
+            // 
+            this.button56.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button56.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button56.Enabled = false;
+            this.button56.FlatAppearance.BorderSize = 0;
+            this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button56.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button56.ForeColor = System.Drawing.Color.Black;
+            this.button56.Image = ((System.Drawing.Image)(resources.GetObject("button56.Image")));
+            this.button56.Location = new System.Drawing.Point(0, 87);
+            this.button56.Name = "button56";
+            this.button56.Size = new System.Drawing.Size(360, 87);
+            this.button56.TabIndex = 19;
+            this.button56.Text = "Stop";
+            this.button56.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button56.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button56.UseVisualStyleBackColor = true;
+            // 
+            // buttonWorkingList
+            // 
+            this.buttonWorkingList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonWorkingList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonWorkingList.FlatAppearance.BorderSize = 0;
+            this.buttonWorkingList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonWorkingList.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonWorkingList.ForeColor = System.Drawing.Color.Black;
+            this.buttonWorkingList.Image = ((System.Drawing.Image)(resources.GetObject("buttonWorkingList.Image")));
+            this.buttonWorkingList.Location = new System.Drawing.Point(0, 0);
+            this.buttonWorkingList.Name = "buttonWorkingList";
+            this.buttonWorkingList.Size = new System.Drawing.Size(360, 87);
+            this.buttonWorkingList.TabIndex = 18;
+            this.buttonWorkingList.Text = "Start";
+            this.buttonWorkingList.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonWorkingList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonWorkingList.UseVisualStyleBackColor = true;
             // 
             // radialGauge1
             // 
@@ -1565,87 +1646,6 @@
             this.button54.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button54.UseVisualStyleBackColor = true;
             // 
-            // button52
-            // 
-            this.button52.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button52.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button52.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button52.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button52.Image = ((System.Drawing.Image)(resources.GetObject("button52.Image")));
-            this.button52.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button52.Location = new System.Drawing.Point(3, 2);
-            this.button52.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(360, 55);
-            this.button52.TabIndex = 5;
-            this.button52.Text = "BẢNG ĐIỀU KHIỂN";
-            this.button52.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button52.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button52.UseVisualStyleBackColor = false;
-            // 
-            // tableLayoutPanel21
-            // 
-            this.tableLayoutPanel21.ColumnCount = 1;
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel21.Controls.Add(this.button52, 0, 0);
-            this.tableLayoutPanel21.Controls.Add(this.panel14, 0, 1);
-            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(679, 2);
-            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
-            this.tableLayoutPanel21.RowCount = 2;
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.97297F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.02702F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(366, 260);
-            this.tableLayoutPanel21.TabIndex = 2;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.button56);
-            this.panel14.Controls.Add(this.buttonWorkingList);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(3, 62);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(360, 195);
-            this.panel14.TabIndex = 6;
-            // 
-            // buttonWorkingList
-            // 
-            this.buttonWorkingList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonWorkingList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonWorkingList.FlatAppearance.BorderSize = 0;
-            this.buttonWorkingList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonWorkingList.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonWorkingList.ForeColor = System.Drawing.Color.Black;
-            this.buttonWorkingList.Image = ((System.Drawing.Image)(resources.GetObject("buttonWorkingList.Image")));
-            this.buttonWorkingList.Location = new System.Drawing.Point(0, 0);
-            this.buttonWorkingList.Name = "buttonWorkingList";
-            this.buttonWorkingList.Size = new System.Drawing.Size(360, 87);
-            this.buttonWorkingList.TabIndex = 18;
-            this.buttonWorkingList.Text = "Start";
-            this.buttonWorkingList.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonWorkingList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonWorkingList.UseVisualStyleBackColor = true;
-            // 
-            // button56
-            // 
-            this.button56.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button56.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button56.Enabled = false;
-            this.button56.FlatAppearance.BorderSize = 0;
-            this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button56.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button56.ForeColor = System.Drawing.Color.Black;
-            this.button56.Image = ((System.Drawing.Image)(resources.GetObject("button56.Image")));
-            this.button56.Location = new System.Drawing.Point(0, 87);
-            this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(360, 87);
-            this.button56.TabIndex = 19;
-            this.button56.Text = "Stop";
-            this.button56.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button56.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button56.UseVisualStyleBackColor = true;
-            // 
             // formdardb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1670,6 +1670,8 @@
             this.panel7.ResumeLayout(false);
             this.tableLayoutPanel19.ResumeLayout(false);
             this.tableLayoutPanel20.ResumeLayout(false);
+            this.tableLayoutPanel21.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.tableLayoutPanel25.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
@@ -1698,8 +1700,6 @@
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tableLayoutPanel23.ResumeLayout(false);
-            this.tableLayoutPanel21.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -44,8 +44,6 @@ namespace ManagementSoftware.GUI
             this.buttonPage3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustomGoPage = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.textBoxGoPage = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -106,7 +104,7 @@ namespace ManagementSoftware.GUI
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(1451, -27);
+            this.textBox1.Location = new System.Drawing.Point(1455, -27);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(82, 23);
@@ -116,7 +114,7 @@ namespace ManagementSoftware.GUI
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(1538, -27);
+            this.button6.Location = new System.Drawing.Point(1542, -27);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(66, 27);
@@ -131,7 +129,7 @@ namespace ManagementSoftware.GUI
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1054, 685);
+            this.panel3.Size = new System.Drawing.Size(1058, 484);
             this.panel3.TabIndex = 1;
             // 
             // dataGridViewResult
@@ -174,7 +172,7 @@ namespace ManagementSoftware.GUI
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewResult.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewResult.Size = new System.Drawing.Size(1054, 685);
+            this.dataGridViewResult.Size = new System.Drawing.Size(1058, 484);
             this.dataGridViewResult.TabIndex = 0;
             // 
             // panel2
@@ -183,15 +181,13 @@ namespace ManagementSoftware.GUI
             this.panel2.Controls.Add(this.buttonPage3);
             this.panel2.Controls.Add(this.buttonPage1);
             this.panel2.Controls.Add(this.buttonPage2);
-            this.panel2.Controls.Add(this.buttonCustomGoPage);
-            this.panel2.Controls.Add(this.textBoxGoPage);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 685);
+            this.panel2.Location = new System.Drawing.Point(0, 484);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1054, 58);
+            this.panel2.Size = new System.Drawing.Size(1058, 58);
             this.panel2.TabIndex = 0;
             // 
             // buttonPageNext
@@ -286,53 +282,6 @@ namespace ManagementSoftware.GUI
             this.buttonPage2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPage2.UseVisualStyleBackColor = false;
             // 
-            // buttonCustomGoPage
-            // 
-            this.buttonCustomGoPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCustomGoPage.BackColor = System.Drawing.Color.DodgerBlue;
-            this.buttonCustomGoPage.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            this.buttonCustomGoPage.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustomGoPage.BorderRadius = 3;
-            this.buttonCustomGoPage.BorderSize = 0;
-            this.buttonCustomGoPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustomGoPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustomGoPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustomGoPage.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustomGoPage.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustomGoPage.Image")));
-            this.buttonCustomGoPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustomGoPage.Location = new System.Drawing.Point(957, 13);
-            this.buttonCustomGoPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustomGoPage.Name = "buttonCustomGoPage";
-            this.buttonCustomGoPage.Size = new System.Drawing.Size(93, 35);
-            this.buttonCustomGoPage.TabIndex = 18;
-            this.buttonCustomGoPage.Text = "Đi";
-            this.buttonCustomGoPage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustomGoPage.TextColor = System.Drawing.Color.Black;
-            this.buttonCustomGoPage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustomGoPage.UseVisualStyleBackColor = false;
-            // 
-            // textBoxGoPage
-            // 
-            this.textBoxGoPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxGoPage.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxGoPage.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxGoPage.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxGoPage.BorderRadius = 5;
-            this.textBoxGoPage.BorderSize = 1;
-            this.textBoxGoPage.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxGoPage.Location = new System.Drawing.Point(858, 13);
-            this.textBoxGoPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxGoPage.Multiline = false;
-            this.textBoxGoPage.Name = "textBoxGoPage";
-            this.textBoxGoPage.Padding = new System.Windows.Forms.Padding(8, 9, 8, 6);
-            this.textBoxGoPage.PasswordChar = false;
-            this.textBoxGoPage.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxGoPage.PlaceholderText = "Trang số . . .";
-            this.textBoxGoPage.Size = new System.Drawing.Size(92, 36);
-            this.textBoxGoPage.TabIndex = 14;
-            this.textBoxGoPage.Texts = "Trang số . . .";
-            this.textBoxGoPage.UnderlinedStyle = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
@@ -341,7 +290,7 @@ namespace ManagementSoftware.GUI
             this.panel1.Location = new System.Drawing.Point(4, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1054, 743);
+            this.panel1.Size = new System.Drawing.Size(1058, 542);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -357,17 +306,17 @@ namespace ManagementSoftware.GUI
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1312, 749);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1316, 548);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.tableLayoutPanel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(1066, 3);
+            this.panel4.Location = new System.Drawing.Point(1070, 3);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(242, 743);
+            this.panel4.Size = new System.Drawing.Size(242, 542);
             this.panel4.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -383,7 +332,7 @@ namespace ManagementSoftware.GUI
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 138F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(242, 743);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(242, 542);
             this.tableLayoutPanel2.TabIndex = 26;
             // 
             // panel5
@@ -393,7 +342,7 @@ namespace ManagementSoftware.GUI
             this.panel5.Location = new System.Drawing.Point(4, 3);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(234, 599);
+            this.panel5.Size = new System.Drawing.Size(234, 398);
             this.panel5.TabIndex = 0;
             // 
             // panel7
@@ -403,7 +352,7 @@ namespace ManagementSoftware.GUI
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(234, 599);
+            this.panel7.Size = new System.Drawing.Size(234, 398);
             this.panel7.TabIndex = 26;
             // 
             // panel8
@@ -414,7 +363,7 @@ namespace ManagementSoftware.GUI
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(234, 599);
+            this.panel8.Size = new System.Drawing.Size(234, 398);
             this.panel8.TabIndex = 48;
             // 
             // panel10
@@ -441,7 +390,7 @@ namespace ManagementSoftware.GUI
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(234, 438);
+            this.panel10.Size = new System.Drawing.Size(234, 237);
             this.panel10.TabIndex = 1;
             // 
             // label6
@@ -479,7 +428,7 @@ namespace ManagementSoftware.GUI
             // 
             // TheTichInput2
             // 
-            this.TheTichInput2.BeforeTouchSize = new System.Drawing.Size(207, 38);
+            this.TheTichInput2.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.TheTichInput2.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.TheTichInput2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TheTichInput2.IntegerValue = ((long)(1));
@@ -495,7 +444,7 @@ namespace ManagementSoftware.GUI
             // 
             // TheTichInput1
             // 
-            this.TheTichInput1.BeforeTouchSize = new System.Drawing.Size(207, 38);
+            this.TheTichInput1.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.TheTichInput1.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.TheTichInput1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TheTichInput1.IntegerValue = ((long)(1));
@@ -511,7 +460,7 @@ namespace ManagementSoftware.GUI
             // 
             // ApSuatInput2
             // 
-            this.ApSuatInput2.BeforeTouchSize = new System.Drawing.Size(207, 38);
+            this.ApSuatInput2.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.ApSuatInput2.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.ApSuatInput2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ApSuatInput2.IntegerValue = ((long)(1));
@@ -527,7 +476,7 @@ namespace ManagementSoftware.GUI
             // 
             // ApSuatInput1
             // 
-            this.ApSuatInput1.BeforeTouchSize = new System.Drawing.Size(207, 38);
+            this.ApSuatInput1.BeforeTouchSize = new System.Drawing.Size(72, 25);
             this.ApSuatInput1.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.ApSuatInput1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ApSuatInput1.IntegerValue = ((long)(1));
@@ -547,7 +496,7 @@ namespace ManagementSoftware.GUI
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(234, 43);
+            this.panel11.Size = new System.Drawing.Size(217, 43);
             this.panel11.TabIndex = 85;
             // 
             // label1
@@ -557,7 +506,7 @@ namespace ManagementSoftware.GUI
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 43);
+            this.label1.Size = new System.Drawing.Size(217, 43);
             this.label1.TabIndex = 50;
             this.label1.Text = "Lọc Dữ Liệu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -697,7 +646,7 @@ namespace ManagementSoftware.GUI
             this.panel9.Controls.Add(this.btnInfoPage);
             this.panel9.Controls.Add(this.buttonDeleteResult);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 438);
+            this.panel9.Location = new System.Drawing.Point(0, 237);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(234, 161);
             this.panel9.TabIndex = 0;
@@ -774,7 +723,7 @@ namespace ManagementSoftware.GUI
             // 
             this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(4, 608);
+            this.panel6.Location = new System.Drawing.Point(4, 407);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(234, 132);
@@ -851,7 +800,7 @@ namespace ManagementSoftware.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 749);
+            this.ClientSize = new System.Drawing.Size(1316, 548);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -894,7 +843,6 @@ namespace ManagementSoftware.GUI
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage3;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage2;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustomGoPage;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel5;
         private Panel panel7;
@@ -904,7 +852,6 @@ namespace ManagementSoftware.GUI
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPrint;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonExcel;
         private DataGridView dataGridViewResult;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxGoPage;
         private Panel panel10;
         private Panel panel11;
         private Label label1;

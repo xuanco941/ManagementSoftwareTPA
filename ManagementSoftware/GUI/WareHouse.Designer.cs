@@ -36,12 +36,9 @@
             this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxSearchUser = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.buttonSearchUser = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel10.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -181,59 +178,12 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBoxSearchUser);
-            this.panel1.Controls.Add(this.buttonSearchUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(974, 52);
             this.panel1.TabIndex = 12;
-            // 
-            // textBoxSearchUser
-            // 
-            this.textBoxSearchUser.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxSearchUser.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxSearchUser.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxSearchUser.BorderRadius = 5;
-            this.textBoxSearchUser.BorderSize = 1;
-            this.textBoxSearchUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSearchUser.Location = new System.Drawing.Point(4, 10);
-            this.textBoxSearchUser.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxSearchUser.Multiline = false;
-            this.textBoxSearchUser.Name = "textBoxSearchUser";
-            this.textBoxSearchUser.Padding = new System.Windows.Forms.Padding(8, 9, 8, 6);
-            this.textBoxSearchUser.PasswordChar = false;
-            this.textBoxSearchUser.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxSearchUser.PlaceholderText = "Nhập mã đơn hàng";
-            this.textBoxSearchUser.Size = new System.Drawing.Size(189, 37);
-            this.textBoxSearchUser.TabIndex = 28;
-            this.textBoxSearchUser.Texts = "Nhập mã đơn hàng";
-            this.textBoxSearchUser.UnderlinedStyle = false;
-            // 
-            // buttonSearchUser
-            // 
-            this.buttonSearchUser.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.buttonSearchUser.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.buttonSearchUser.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonSearchUser.BorderRadius = 3;
-            this.buttonSearchUser.BorderSize = 0;
-            this.buttonSearchUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSearchUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearchUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSearchUser.ForeColor = System.Drawing.Color.Black;
-            this.buttonSearchUser.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearchUser.Image")));
-            this.buttonSearchUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSearchUser.Location = new System.Drawing.Point(200, 10);
-            this.buttonSearchUser.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonSearchUser.Name = "buttonSearchUser";
-            this.buttonSearchUser.Size = new System.Drawing.Size(112, 35);
-            this.buttonSearchUser.TabIndex = 27;
-            this.buttonSearchUser.Text = "Tìm kiếm";
-            this.buttonSearchUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSearchUser.TextColor = System.Drawing.Color.Black;
-            this.buttonSearchUser.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonSearchUser.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -256,7 +206,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(974, 393);
             this.dataGridView1.TabIndex = 1;
             // 
-            // Inventory
+            // WareHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,10 +216,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel10);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "Inventory";
+            this.Name = "WareHouse";
             this.Text = "FormInventoryManagement";
             this.panel10.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -284,8 +233,6 @@
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom4;
         private System.Windows.Forms.Panel panel1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonUpdate;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxSearchUser;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonSearchUser;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
     }

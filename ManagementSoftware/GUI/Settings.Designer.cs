@@ -474,7 +474,7 @@
             this.comboBoxSelectTemplateSetting.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxSelectTemplateSetting.FormattingEnabled = true;
             this.comboBoxSelectTemplateSetting.IntegralHeight = false;
-            this.comboBoxSelectTemplateSetting.Location = new System.Drawing.Point(145, 6);
+            this.comboBoxSelectTemplateSetting.Location = new System.Drawing.Point(130, 3);
             this.comboBoxSelectTemplateSetting.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxSelectTemplateSetting.MaxDropDownItems = 9;
             this.comboBoxSelectTemplateSetting.Name = "comboBoxSelectTemplateSetting";
@@ -486,7 +486,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(69, 17);
+            this.label1.Location = new System.Drawing.Point(36, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 18);
