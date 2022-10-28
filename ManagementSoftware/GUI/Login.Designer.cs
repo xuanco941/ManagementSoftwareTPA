@@ -50,7 +50,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(146, 190);
+            this.label2.Location = new System.Drawing.Point(141, 188);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 20);
@@ -62,7 +62,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(146, 136);
+            this.label1.Location = new System.Drawing.Point(141, 134);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
@@ -77,11 +77,11 @@
             this.textBoxTaiKhoan.BorderRadius = 5;
             this.textBoxTaiKhoan.BorderSize = 1;
             this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTaiKhoan.Location = new System.Drawing.Point(237, 128);
+            this.textBoxTaiKhoan.Location = new System.Drawing.Point(232, 127);
             this.textBoxTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxTaiKhoan.Multiline = false;
             this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
-            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(8);
+            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.textBoxTaiKhoan.PasswordChar = false;
             this.textBoxTaiKhoan.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxTaiKhoan.PlaceholderText = "";
@@ -99,11 +99,11 @@
             this.textBoxMatKhau.BorderRadius = 5;
             this.textBoxMatKhau.BorderSize = 1;
             this.textBoxMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxMatKhau.Location = new System.Drawing.Point(237, 182);
+            this.textBoxMatKhau.Location = new System.Drawing.Point(232, 181);
             this.textBoxMatKhau.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxMatKhau.Multiline = false;
             this.textBoxMatKhau.Name = "textBoxMatKhau";
-            this.textBoxMatKhau.Padding = new System.Windows.Forms.Padding(8);
+            this.textBoxMatKhau.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.textBoxMatKhau.PasswordChar = true;
             this.textBoxMatKhau.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxMatKhau.PlaceholderText = "";
@@ -126,7 +126,7 @@
             this.buttonExit.ForeColor = System.Drawing.Color.White;
             this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
             this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExit.Location = new System.Drawing.Point(374, 240);
+            this.buttonExit.Location = new System.Drawing.Point(368, 239);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(104, 42);
@@ -151,7 +151,7 @@
             this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
             this.buttonDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("buttonDangNhap.Image")));
             this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.Location = new System.Drawing.Point(237, 240);
+            this.buttonDangNhap.Location = new System.Drawing.Point(232, 239);
             this.buttonDangNhap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonDangNhap.Name = "buttonDangNhap";
             this.buttonDangNhap.Size = new System.Drawing.Size(118, 42);
@@ -171,39 +171,42 @@
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(674, 104);
+            this.label3.Size = new System.Drawing.Size(642, 104);
             this.label3.TabIndex = 10;
             this.label3.Text = "Máy Nạp Khí TPA";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(496, 346);
+            this.pictureBox1.Location = new System.Drawing.Point(472, 334);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(87, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(581, 344);
+            this.pictureBox2.Location = new System.Drawing.Point(555, 334);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(93, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(87, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(569, 344);
+            this.label4.Location = new System.Drawing.Point(543, 334);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 21);
@@ -216,7 +219,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(674, 104);
+            this.panel1.Size = new System.Drawing.Size(642, 104);
             this.panel1.TabIndex = 19;
             // 
             // Login
@@ -224,7 +227,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(674, 375);
+            this.ClientSize = new System.Drawing.Size(642, 361);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);

@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.BUS;
+using ManagementSoftware.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,12 @@ namespace ManagementSoftware.GUI
 
         private void LoginActive()
         {
+
+            //init db
+            new DataBaseContext().CreateDatabase();
+
+
+
             string Username = textBoxTaiKhoan.Texts.Trim();
             string Password = textBoxMatKhau.Texts.Trim();
             if (String.IsNullOrEmpty(Username) == true && String.IsNullOrEmpty(Password) == true)

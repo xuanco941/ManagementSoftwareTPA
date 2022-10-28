@@ -97,7 +97,8 @@ namespace ManagementSoftware.GUI
 
         void ChangeForm(Form form, string header)
         {
-            changeFormMain?.Invoke(form,header);
+            this.Close();   
+            this.changeFormMain?.Invoke(form,header);
         }
 
 

@@ -78,6 +78,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             {
                 if(BUSPurchaseOrder.Delete(purchaseOrder.PurchaseOrderID).Status == true)
                 {
+                    this.Close();
                     changeData?.Invoke("Xóa thành công.", FormAlert.enmType.Success);
                     changeFormMain?.Invoke(new FormPurchaseOrder(), "Quản lý đơn hàng");
                 }
@@ -96,6 +97,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
+            this.Close();
             changeFormMain?.Invoke(new FormPurchaseOrder(), "Quản lý đơn hàng");
         }
     }

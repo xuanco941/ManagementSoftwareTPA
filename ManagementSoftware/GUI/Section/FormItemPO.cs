@@ -21,7 +21,7 @@ namespace ManagementSoftware.GUI.Section
         public delegate void ChangeFormMain(Form form, string header);
         public ChangeFormMain changeFormMain;
 
-        PurchaseOrder purchase;
+        PurchaseOrder purchase = new PurchaseOrder();
         public FormItemPO(PurchaseOrder po)
         {
             InitializeComponent();
@@ -51,12 +51,12 @@ namespace ManagementSoftware.GUI.Section
 
         void ActiveAlert(string msg, FormAlert.enmType enmType)
         {
-            this.changeData?.Invoke(msg, enmType);
+            this.changeData.Invoke(msg, enmType);
         }
 
         void ChangeForm(Form form, string header)
         {
-            changeFormMain?.Invoke(form, header);
+            changeFormMain.Invoke(form, header);
         }
 
         private void buttonViewDetail_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace ManagementSoftware.GUI.Section
             form.changeData = new FormViewDetailPurchaseOrder.ChangeData(ActiveAlert);
             form.changeFormMain = new FormViewDetailPurchaseOrder.ChangeFormMain(ChangeForm);
 
-            changeFormMain?.Invoke(form, "Đơn hàng " + Common.PURCHASEORDER+ this.purchase.PurchaseOrderID);
+            this.changeFormMain.Invoke(form, "Đơn hàng " + Common.PURCHASEORDER+ this.purchase.PurchaseOrderID);
         }
     }
 }
