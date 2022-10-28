@@ -13,20 +13,32 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 {
     public partial class FormDirectiveDecompositionDetail : Form
     {
-        public delegate void ChangeData();
+        public delegate void ChangeData(Form form);
         public ChangeData changeData;
 
         Product product;
-        public FormDirectiveDecompositionDetail(Product p)
+        PurchaseOrder purchaseOrder;
+        public FormDirectiveDecompositionDetail(Product p,PurchaseOrder po)
         {
             InitializeComponent();
             this.product = p;
+            this.purchaseOrder = po;
             LoadForm();
         }
 
         void LoadForm()
         {
             labelHeader.Text = "Chỉ thị sản xuất của sản phẩm " + Common.PURCHASEORDER + product.ProductID;
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            changeData.Invoke(new FormDirectiveDecomposition(purchaseOrder));
+        }
+
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            changeData.Invoke(new FormDirectiveDecomposition(purchaseOrder));
         }
     }
 }

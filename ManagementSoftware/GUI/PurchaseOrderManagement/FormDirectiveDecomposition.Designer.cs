@@ -37,6 +37,7 @@
             // panelMain
             // 
             this.panelMain.AutoScroll = true;
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.panelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 48);
@@ -47,6 +48,7 @@
             // 
             // labelHeader
             // 
+            this.labelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.labelHeader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelHeader.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelHeader.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -55,7 +57,7 @@
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(1296, 46);
             this.labelHeader.TabIndex = 14;
-            this.labelHeader.Text = "Phân chia chỉ thị sản xuất cho sản phẩm";
+            this.labelHeader.Text = "Danh sách sản phẩm đơn hàng";
             this.labelHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1

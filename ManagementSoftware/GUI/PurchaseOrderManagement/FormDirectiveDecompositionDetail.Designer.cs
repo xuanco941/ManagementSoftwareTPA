@@ -30,10 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDirectiveDecompositionDetail));
             this.panel7 = new System.Windows.Forms.Panel();
+            this.buttonConfirm = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panelChiThiSX = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.buttonAddProduct = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -57,16 +61,14 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.labelHeader = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.buttonAddProduct = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.panelChiThiSX = new System.Windows.Forms.Panel();
-            this.buttonConfirm = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelInfoProduct.SuspendLayout();
@@ -80,7 +82,6 @@
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel7
@@ -91,6 +92,31 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1390, 77);
             this.panel7.TabIndex = 15;
+            // 
+            // buttonConfirm
+            // 
+            this.buttonConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonConfirm.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonConfirm.BackgroundColor = System.Drawing.SystemColors.Highlight;
+            this.buttonConfirm.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonConfirm.BorderRadius = 6;
+            this.buttonConfirm.BorderSize = 0;
+            this.buttonConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonConfirm.ForeColor = System.Drawing.Color.White;
+            this.buttonConfirm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonConfirm.Location = new System.Drawing.Point(571, 11);
+            this.buttonConfirm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonConfirm.Name = "buttonConfirm";
+            this.buttonConfirm.Size = new System.Drawing.Size(248, 54);
+            this.buttonConfirm.TabIndex = 25;
+            this.buttonConfirm.Text = "Xác nhận";
+            this.buttonConfirm.TextColor = System.Drawing.Color.White;
+            this.buttonConfirm.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonConfirm.UseVisualStyleBackColor = false;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
             // 
             // panel1
             // 
@@ -139,6 +165,50 @@
             this.panel4.Size = new System.Drawing.Size(895, 517);
             this.panel4.TabIndex = 1;
             // 
+            // panelChiThiSX
+            // 
+            this.panelChiThiSX.AutoScroll = true;
+            this.panelChiThiSX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panelChiThiSX.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChiThiSX.Location = new System.Drawing.Point(0, 60);
+            this.panelChiThiSX.Name = "panelChiThiSX";
+            this.panelChiThiSX.Size = new System.Drawing.Size(895, 399);
+            this.panelChiThiSX.TabIndex = 3;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.buttonAddProduct);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel17.Location = new System.Drawing.Point(0, 459);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(895, 58);
+            this.panel17.TabIndex = 2;
+            // 
+            // buttonAddProduct
+            // 
+            this.buttonAddProduct.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonAddProduct.BackgroundColor = System.Drawing.Color.ForestGreen;
+            this.buttonAddProduct.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonAddProduct.BorderRadius = 3;
+            this.buttonAddProduct.BorderSize = 0;
+            this.buttonAddProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAddProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddProduct.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonAddProduct.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonAddProduct.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddProduct.Image")));
+            this.buttonAddProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAddProduct.Location = new System.Drawing.Point(0, 0);
+            this.buttonAddProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonAddProduct.Name = "buttonAddProduct";
+            this.buttonAddProduct.Size = new System.Drawing.Size(895, 58);
+            this.buttonAddProduct.TabIndex = 22;
+            this.buttonAddProduct.Text = "Thêm chỉ thị ";
+            this.buttonAddProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddProduct.TextColor = System.Drawing.SystemColors.Control;
+            this.buttonAddProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAddProduct.UseVisualStyleBackColor = false;
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label15);
@@ -175,6 +245,7 @@
             // panelInfoProduct
             // 
             this.panelInfoProduct.AutoScroll = true;
+            this.panelInfoProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(64)))), ((int)(((byte)(23)))));
             this.panelInfoProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelInfoProduct.Controls.Add(this.panel15);
             this.panelInfoProduct.Controls.Add(this.panel14);
@@ -400,6 +471,7 @@
             // panel16
             // 
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel16.Controls.Add(this.buttonBack);
             this.panel16.Controls.Add(this.labelHeader);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel16.Location = new System.Drawing.Point(0, 0);
@@ -407,6 +479,26 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(1390, 53);
             this.panel16.TabIndex = 15;
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonBack.ForeColor = System.Drawing.Color.White;
+            this.buttonBack.Image = global::ManagementSoftware.Properties.Resources.backpage;
+            this.buttonBack.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonBack.Location = new System.Drawing.Point(0, 0);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(139, 51);
+            this.buttonBack.TabIndex = 17;
+            this.buttonBack.Text = "Quay lại";
+            this.buttonBack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // labelHeader
             // 
@@ -420,73 +512,6 @@
             this.labelHeader.TabIndex = 14;
             this.labelHeader.Text = "Chỉ thị sản xuất sản phẩm";
             this.labelHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.buttonAddProduct);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel17.Location = new System.Drawing.Point(0, 459);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(895, 58);
-            this.panel17.TabIndex = 2;
-            // 
-            // buttonAddProduct
-            // 
-            this.buttonAddProduct.BackColor = System.Drawing.Color.ForestGreen;
-            this.buttonAddProduct.BackgroundColor = System.Drawing.Color.ForestGreen;
-            this.buttonAddProduct.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonAddProduct.BorderRadius = 3;
-            this.buttonAddProduct.BorderSize = 0;
-            this.buttonAddProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAddProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddProduct.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonAddProduct.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonAddProduct.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddProduct.Image")));
-            this.buttonAddProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAddProduct.Location = new System.Drawing.Point(0, 0);
-            this.buttonAddProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonAddProduct.Name = "buttonAddProduct";
-            this.buttonAddProduct.Size = new System.Drawing.Size(895, 58);
-            this.buttonAddProduct.TabIndex = 22;
-            this.buttonAddProduct.Text = "Thêm chỉ thị ";
-            this.buttonAddProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAddProduct.TextColor = System.Drawing.SystemColors.Control;
-            this.buttonAddProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAddProduct.UseVisualStyleBackColor = false;
-            // 
-            // panelChiThiSX
-            // 
-            this.panelChiThiSX.AutoScroll = true;
-            this.panelChiThiSX.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChiThiSX.Location = new System.Drawing.Point(0, 60);
-            this.panelChiThiSX.Name = "panelChiThiSX";
-            this.panelChiThiSX.Size = new System.Drawing.Size(895, 399);
-            this.panelChiThiSX.TabIndex = 3;
-            // 
-            // buttonConfirm
-            // 
-            this.buttonConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonConfirm.BackColor = System.Drawing.SystemColors.Highlight;
-            this.buttonConfirm.BackgroundColor = System.Drawing.SystemColors.Highlight;
-            this.buttonConfirm.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonConfirm.BorderRadius = 6;
-            this.buttonConfirm.BorderSize = 0;
-            this.buttonConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonConfirm.ForeColor = System.Drawing.Color.White;
-            this.buttonConfirm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonConfirm.Location = new System.Drawing.Point(571, 11);
-            this.buttonConfirm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonConfirm.Name = "buttonConfirm";
-            this.buttonConfirm.Size = new System.Drawing.Size(248, 54);
-            this.buttonConfirm.TabIndex = 25;
-            this.buttonConfirm.Text = "Xác nhận";
-            this.buttonConfirm.TextColor = System.Drawing.Color.White;
-            this.buttonConfirm.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonConfirm.UseVisualStyleBackColor = false;
             // 
             // FormDirectiveDecompositionDetail
             // 
@@ -504,6 +529,7 @@
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panelInfoProduct.ResumeLayout(false);
@@ -517,7 +543,6 @@
             this.panel8.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -557,5 +582,6 @@
         private Panel panel17;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddProduct;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonConfirm;
+        private Button buttonBack;
     }
 }

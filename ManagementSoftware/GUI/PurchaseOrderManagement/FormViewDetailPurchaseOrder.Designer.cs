@@ -98,7 +98,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonBack = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
             this.gridLayout2 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
@@ -989,7 +988,6 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.buttonBack);
             this.panel1.Controls.Add(this.labelMaPO);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -997,26 +995,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1417, 48);
             this.panel1.TabIndex = 18;
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonBack.FlatAppearance.BorderSize = 0;
-            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonBack.ForeColor = System.Drawing.Color.White;
-            this.buttonBack.Image = global::ManagementSoftware.Properties.Resources.backpage;
-            this.buttonBack.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonBack.Location = new System.Drawing.Point(0, 0);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(145, 46);
-            this.buttonBack.TabIndex = 17;
-            this.buttonBack.Text = "Quay lại";
-            this.buttonBack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // panel2
             // 
@@ -1171,6 +1149,5 @@
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panel2btn;
         private Panel panel17;
-        private Button buttonBack;
     }
 }

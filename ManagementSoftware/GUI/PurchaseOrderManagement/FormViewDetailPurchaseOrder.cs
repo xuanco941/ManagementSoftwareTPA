@@ -19,9 +19,6 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
         public delegate void ChangeData(string msg, FormAlert.enmType enmType);
         public ChangeData changeData;
 
-        public delegate void ChangeFormMain(Form form, string header);
-        public ChangeFormMain changeFormMain;
-
 
         PurchaseOrder purchaseOrder;
         public FormViewDetailPurchaseOrder(PurchaseOrder po)
@@ -80,7 +77,6 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
                 {
                     this.Close();
                     changeData?.Invoke("Xóa thành công.", FormAlert.enmType.Success);
-                    changeFormMain?.Invoke(new FormPurchaseOrder(), "Quản lý đơn hàng");
                 }
                 else
                 {
@@ -95,10 +91,5 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             new FormDirectiveDecomposition(purchaseOrder).ShowDialog();
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            changeFormMain?.Invoke(new FormPurchaseOrder(), "Quản lý đơn hàng");
-        }
     }
 }

@@ -18,8 +18,6 @@ namespace ManagementSoftware.GUI.Section
         public delegate void ChangeData(string msg, FormAlert.enmType enmType);
         public ChangeData changeData;
 
-        public delegate void ChangeFormMain(Form form, string header);
-        public ChangeFormMain changeFormMain;
 
         PurchaseOrder purchase = new PurchaseOrder();
         public FormItemPO(PurchaseOrder po)
@@ -54,18 +52,13 @@ namespace ManagementSoftware.GUI.Section
             this.changeData.Invoke(msg, enmType);
         }
 
-        void ChangeForm(Form form, string header)
-        {
-            changeFormMain.Invoke(form, header);
-        }
 
         private void buttonViewDetail_Click(object sender, EventArgs e)
         {
             FormViewDetailPurchaseOrder form = new FormViewDetailPurchaseOrder(purchase);
             form.changeData = new FormViewDetailPurchaseOrder.ChangeData(ActiveAlert);
-            form.changeFormMain = new FormViewDetailPurchaseOrder.ChangeFormMain(ChangeForm);
+            form.Show();
 
-            this.changeFormMain.Invoke(form, "Đơn hàng " + Common.PURCHASEORDER+ this.purchase.PurchaseOrderID);
         }
     }
 }

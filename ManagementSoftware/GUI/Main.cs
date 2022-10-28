@@ -86,7 +86,6 @@ namespace ManagementSoftware.GUI
         {
             FormPurchaseOrder form = new FormPurchaseOrder();
             form.callAlert = new FormPurchaseOrder.CallAlert(Alert);
-            form.changeFormMain = new FormPurchaseOrder.ChangeFormMain(ChangeFormContentWithHeaderName);
             ChangeFormContent(form, sender);
         }
 

@@ -24,9 +24,6 @@ namespace ManagementSoftware.GUI
         public delegate void CallAlert(string msg, FormAlert.enmType type);
         public CallAlert callAlert;
 
-        public delegate void ChangeFormMain(Form form, string header);
-        public ChangeFormMain changeFormMain;
-
         // trang hiện tại
         private int page = 1;
         // tổng số trang
@@ -85,7 +82,6 @@ namespace ManagementSoftware.GUI
                 {
                     FormItemPO form = new FormItemPO(list[i]);
                     form.changeData = new FormItemPO.ChangeData(AlertActive2);
-                    form.changeFormMain = new FormItemPO.ChangeFormMain(ChangeForm);
                     form.TopLevel = false;
                     panelMain.Controls.Add(form);
                     form.FormBorderStyle = FormBorderStyle.None;
@@ -93,12 +89,6 @@ namespace ManagementSoftware.GUI
                     form.Show();
                 }
             }
-        }
-
-        void ChangeForm(Form form, string header)
-        {
-            this.Close();   
-            this.changeFormMain?.Invoke(form,header);
         }
 
 

@@ -15,11 +15,16 @@ namespace ManagementSoftware.GUI.Section
 {
     public partial class FormItemProductOfListDirective : Form
     {
+        public delegate void ChangeData(Form form);
+        public ChangeData changeData;
+
         Product product;
-        public FormItemProductOfListDirective(Product p)
+        PurchaseOrder purchaseOrder;
+        public FormItemProductOfListDirective(Product p, PurchaseOrder po)
         {
             InitializeComponent();
             this.product = p;
+            this.purchaseOrder = po;
 
             labelProductName.Text = "Tên sản phẩm : " + product.ProductName;
             labelApSuatNap.Text = "Áp suất nạp : " + product.ApSuatNap;
@@ -36,12 +41,15 @@ namespace ManagementSoftware.GUI.Section
         {
             labelStatus.Text = BUSProduct.GetSoLuongSanXuatDaPhanChiThiOnProduct(product.ProductID) + "/" + product.SoLuongSanXuat;
         }
-
+        void LoadForm(Form form)
+        {
+            changeData.Invoke(form);
+        }
         private void buttonPhanTi_Click(object sender, EventArgs e)
         {
-            FormDirectiveDecompositionDetail form = new FormDirectiveDecompositionDetail(this.product);
-            form.changeData = new FormDirectiveDecompositionDetail.ChangeData(LoadStatusChiThi);
-            form.ShowDialog();
+            FormDirectiveDecompositionDetail form = new FormDirectiveDecompositionDetail(this.product,this.purchaseOrder);
+            form.changeData = new FormDirectiveDecompositionDetail.ChangeData(LoadForm);
+            this.changeData.Invoke(form);
         }
     }
 }
