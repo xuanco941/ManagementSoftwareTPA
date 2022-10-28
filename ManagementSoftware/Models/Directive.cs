@@ -13,7 +13,7 @@ namespace ManagementSoftware.Models
     {
         [Key]
         public int DirectiveID { get; set; }
-        public int SoLuongDaSanXuat { get; set; }
+        public int SoLuongDaSanXuat { get; set; } = 0;
         public int SoLuongCanSanXuat { get; set; }
         //người vận hành
         public string Worker { get; set; } = "";
@@ -23,5 +23,7 @@ namespace ManagementSoftware.Models
 
         public int ProductID { get; set; }
         public Product Product { get; set; }
+        public int UserID { get; set; }
+        public User User { get; set; }
     }
 }

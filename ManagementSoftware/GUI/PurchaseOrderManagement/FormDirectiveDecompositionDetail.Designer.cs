@@ -88,9 +88,9 @@
             // 
             this.panel7.Controls.Add(this.buttonConfirm);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 580);
+            this.panel7.Location = new System.Drawing.Point(0, 565);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1390, 77);
+            this.panel7.Size = new System.Drawing.Size(1390, 92);
             this.panel7.TabIndex = 15;
             // 
             // buttonConfirm
@@ -107,7 +107,7 @@
             this.buttonConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonConfirm.ForeColor = System.Drawing.Color.White;
             this.buttonConfirm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonConfirm.Location = new System.Drawing.Point(571, 11);
+            this.buttonConfirm.Location = new System.Drawing.Point(559, 17);
             this.buttonConfirm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(248, 54);
@@ -125,7 +125,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1390, 580);
+            this.panel1.Size = new System.Drawing.Size(1390, 565);
             this.panel1.TabIndex = 16;
             // 
             // panel2
@@ -135,14 +135,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 53);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1390, 527);
+            this.panel2.Size = new System.Drawing.Size(1390, 512);
             this.panel2.TabIndex = 16;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -150,8 +150,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1386, 523);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1386, 508);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel4
@@ -160,9 +159,9 @@
             this.panel4.Controls.Add(this.panel17);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(488, 3);
+            this.panel4.Location = new System.Drawing.Point(418, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(895, 517);
+            this.panel4.Size = new System.Drawing.Size(965, 502);
             this.panel4.TabIndex = 1;
             // 
             // panelChiThiSX
@@ -172,16 +171,16 @@
             this.panelChiThiSX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChiThiSX.Location = new System.Drawing.Point(0, 60);
             this.panelChiThiSX.Name = "panelChiThiSX";
-            this.panelChiThiSX.Size = new System.Drawing.Size(895, 399);
+            this.panelChiThiSX.Size = new System.Drawing.Size(965, 384);
             this.panelChiThiSX.TabIndex = 3;
             // 
             // panel17
             // 
             this.panel17.Controls.Add(this.buttonAddProduct);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel17.Location = new System.Drawing.Point(0, 459);
+            this.panel17.Location = new System.Drawing.Point(0, 444);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(895, 58);
+            this.panel17.Size = new System.Drawing.Size(965, 58);
             this.panel17.TabIndex = 2;
             // 
             // buttonAddProduct
@@ -201,7 +200,7 @@
             this.buttonAddProduct.Location = new System.Drawing.Point(0, 0);
             this.buttonAddProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonAddProduct.Name = "buttonAddProduct";
-            this.buttonAddProduct.Size = new System.Drawing.Size(895, 58);
+            this.buttonAddProduct.Size = new System.Drawing.Size(965, 58);
             this.buttonAddProduct.TabIndex = 22;
             this.buttonAddProduct.Text = "Thêm chỉ thị ";
             this.buttonAddProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,7 +214,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(895, 60);
+            this.panel6.Size = new System.Drawing.Size(965, 60);
             this.panel6.TabIndex = 1;
             // 
             // label15
@@ -227,7 +226,7 @@
             this.label15.Location = new System.Drawing.Point(0, 0);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(895, 60);
+            this.label15.Size = new System.Drawing.Size(965, 60);
             this.label15.TabIndex = 17;
             this.label15.Text = "Chỉ thị sản xuất";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -239,7 +238,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(479, 517);
+            this.panel3.Size = new System.Drawing.Size(409, 502);
             this.panel3.TabIndex = 0;
             // 
             // panelInfoProduct
@@ -258,7 +257,7 @@
             this.panelInfoProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInfoProduct.Location = new System.Drawing.Point(0, 60);
             this.panelInfoProduct.Name = "panelInfoProduct";
-            this.panelInfoProduct.Size = new System.Drawing.Size(479, 457);
+            this.panelInfoProduct.Size = new System.Drawing.Size(409, 442);
             this.panelInfoProduct.TabIndex = 1;
             // 
             // panel15
@@ -267,7 +266,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 385);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(477, 55);
+            this.panel15.Size = new System.Drawing.Size(407, 55);
             this.panel15.TabIndex = 7;
             // 
             // label9
@@ -279,7 +278,7 @@
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label9.Size = new System.Drawing.Size(477, 55);
+            this.label9.Size = new System.Drawing.Size(407, 55);
             this.label9.TabIndex = 5;
             this.label9.Text = "Chỉ thị sản xuất đã phân :";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -290,7 +289,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(0, 330);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(477, 55);
+            this.panel14.Size = new System.Drawing.Size(407, 55);
             this.panel14.TabIndex = 6;
             // 
             // label8
@@ -302,7 +301,7 @@
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label8.Size = new System.Drawing.Size(477, 55);
+            this.label8.Size = new System.Drawing.Size(407, 55);
             this.label8.TabIndex = 5;
             this.label8.Text = "Số lượng sản xuất :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -313,7 +312,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 275);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(477, 55);
+            this.panel13.Size = new System.Drawing.Size(407, 55);
             this.panel13.TabIndex = 5;
             // 
             // label7
@@ -325,7 +324,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label7.Size = new System.Drawing.Size(477, 55);
+            this.label7.Size = new System.Drawing.Size(407, 55);
             this.label7.TabIndex = 5;
             this.label7.Text = "Chất lượng khí :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -336,7 +335,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 220);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(477, 55);
+            this.panel12.Size = new System.Drawing.Size(407, 55);
             this.panel12.TabIndex = 4;
             // 
             // label6
@@ -348,7 +347,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label6.Size = new System.Drawing.Size(477, 55);
+            this.label6.Size = new System.Drawing.Size(407, 55);
             this.label6.TabIndex = 5;
             this.label6.Text = "Thể tích bình :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -359,7 +358,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 165);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(477, 55);
+            this.panel11.Size = new System.Drawing.Size(407, 55);
             this.panel11.TabIndex = 3;
             // 
             // label4
@@ -371,7 +370,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(477, 55);
+            this.label4.Size = new System.Drawing.Size(407, 55);
             this.label4.TabIndex = 5;
             this.label4.Text = "Áp suất nạp :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -382,7 +381,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 110);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(477, 55);
+            this.panel10.Size = new System.Drawing.Size(407, 55);
             this.panel10.TabIndex = 2;
             // 
             // label3
@@ -394,7 +393,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(477, 55);
+            this.label3.Size = new System.Drawing.Size(407, 55);
             this.label3.TabIndex = 5;
             this.label3.Text = "Loại khí :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -405,7 +404,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 55);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(477, 55);
+            this.panel9.Size = new System.Drawing.Size(407, 55);
             this.panel9.TabIndex = 1;
             // 
             // label1
@@ -417,7 +416,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(477, 55);
+            this.label1.Size = new System.Drawing.Size(407, 55);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tên sản phẩm :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -428,7 +427,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(477, 55);
+            this.panel8.Size = new System.Drawing.Size(407, 55);
             this.panel8.TabIndex = 0;
             // 
             // label5
@@ -440,7 +439,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label5.Size = new System.Drawing.Size(477, 55);
+            this.label5.Size = new System.Drawing.Size(407, 55);
             this.label5.TabIndex = 5;
             this.label5.Text = "Mã sản phẩm :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -451,7 +450,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(479, 60);
+            this.panel5.Size = new System.Drawing.Size(409, 60);
             this.panel5.TabIndex = 0;
             // 
             // label2
@@ -463,7 +462,7 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(479, 60);
+            this.label2.Size = new System.Drawing.Size(409, 60);
             this.label2.TabIndex = 16;
             this.label2.Text = "Thông tin sản phẩm";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

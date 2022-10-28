@@ -35,6 +35,7 @@ namespace ManagementSoftware
         public const string ACTIVITIES = "A";
         public const string PURCHASEORDER = "PO";
         public const string PRODUCT = "SP";
+        public const string DIRECTIVE = "CT";
 
     }
 }
