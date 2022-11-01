@@ -52,6 +52,7 @@ namespace ManagementSoftware.GUI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelAleart = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonNhapKho = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelItemMenu.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -83,6 +84,7 @@ namespace ManagementSoftware.GUI
             this.panelItemMenu.Controls.Add(this.buttonEmployee);
             this.panelItemMenu.Controls.Add(this.buttonResult);
             this.panelItemMenu.Controls.Add(this.buttonQuanLyKho);
+            this.panelItemMenu.Controls.Add(this.buttonNhapKho);
             this.panelItemMenu.Controls.Add(this.buttonWorkingList);
             this.panelItemMenu.Controls.Add(this.buttonQuanLyDonHang);
             this.panelItemMenu.Controls.Add(this.buttonDashboard);
@@ -101,9 +103,9 @@ namespace ManagementSoftware.GUI
             this.buttonDangXuat.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonDangXuat.ForeColor = System.Drawing.Color.White;
             this.buttonDangXuat.Image = global::ManagementSoftware.Properties.Resources.red_x_10333;
-            this.buttonDangXuat.Location = new System.Drawing.Point(0, 711);
+            this.buttonDangXuat.Location = new System.Drawing.Point(0, 790);
             this.buttonDangXuat.Name = "buttonDangXuat";
-            this.buttonDangXuat.Size = new System.Drawing.Size(209, 79);
+            this.buttonDangXuat.Size = new System.Drawing.Size(192, 79);
             this.buttonDangXuat.TabIndex = 12;
             this.buttonDangXuat.Text = "Đăng xuất";
             this.buttonDangXuat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -120,9 +122,9 @@ namespace ManagementSoftware.GUI
             this.buttonHelp.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonHelp.ForeColor = System.Drawing.Color.White;
             this.buttonHelp.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp.Image")));
-            this.buttonHelp.Location = new System.Drawing.Point(0, 632);
+            this.buttonHelp.Location = new System.Drawing.Point(0, 711);
             this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(209, 79);
+            this.buttonHelp.Size = new System.Drawing.Size(192, 79);
             this.buttonHelp.TabIndex = 13;
             this.buttonHelp.Text = "Trợ giúp";
             this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -139,9 +141,9 @@ namespace ManagementSoftware.GUI
             this.buttonSetting.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSetting.ForeColor = System.Drawing.Color.White;
             this.buttonSetting.Image = global::ManagementSoftware.Properties.Resources.setting_24;
-            this.buttonSetting.Location = new System.Drawing.Point(0, 553);
+            this.buttonSetting.Location = new System.Drawing.Point(0, 632);
             this.buttonSetting.Name = "buttonSetting";
-            this.buttonSetting.Size = new System.Drawing.Size(209, 79);
+            this.buttonSetting.Size = new System.Drawing.Size(192, 79);
             this.buttonSetting.TabIndex = 11;
             this.buttonSetting.Text = "Cài đặt";
             this.buttonSetting.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -158,9 +160,9 @@ namespace ManagementSoftware.GUI
             this.buttonActivity.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonActivity.ForeColor = System.Drawing.Color.White;
             this.buttonActivity.Image = global::ManagementSoftware.Properties.Resources.button3_Image;
-            this.buttonActivity.Location = new System.Drawing.Point(0, 474);
+            this.buttonActivity.Location = new System.Drawing.Point(0, 553);
             this.buttonActivity.Name = "buttonActivity";
-            this.buttonActivity.Size = new System.Drawing.Size(209, 79);
+            this.buttonActivity.Size = new System.Drawing.Size(192, 79);
             this.buttonActivity.TabIndex = 10;
             this.buttonActivity.Text = "Hoạt động";
             this.buttonActivity.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -177,9 +179,9 @@ namespace ManagementSoftware.GUI
             this.buttonEmployee.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonEmployee.ForeColor = System.Drawing.Color.White;
             this.buttonEmployee.Image = global::ManagementSoftware.Properties.Resources.button2_Image;
-            this.buttonEmployee.Location = new System.Drawing.Point(0, 395);
+            this.buttonEmployee.Location = new System.Drawing.Point(0, 474);
             this.buttonEmployee.Name = "buttonEmployee";
-            this.buttonEmployee.Size = new System.Drawing.Size(209, 79);
+            this.buttonEmployee.Size = new System.Drawing.Size(192, 79);
             this.buttonEmployee.TabIndex = 9;
             this.buttonEmployee.Text = "Quản lý nhân sự";
             this.buttonEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -196,9 +198,9 @@ namespace ManagementSoftware.GUI
             this.buttonResult.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonResult.ForeColor = System.Drawing.Color.White;
             this.buttonResult.Image = global::ManagementSoftware.Properties.Resources.book24;
-            this.buttonResult.Location = new System.Drawing.Point(0, 316);
+            this.buttonResult.Location = new System.Drawing.Point(0, 395);
             this.buttonResult.Name = "buttonResult";
-            this.buttonResult.Size = new System.Drawing.Size(209, 79);
+            this.buttonResult.Size = new System.Drawing.Size(192, 79);
             this.buttonResult.TabIndex = 8;
             this.buttonResult.Text = "Lịch sử nạp khí";
             this.buttonResult.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -215,9 +217,9 @@ namespace ManagementSoftware.GUI
             this.buttonQuanLyKho.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonQuanLyKho.ForeColor = System.Drawing.Color.White;
             this.buttonQuanLyKho.Image = ((System.Drawing.Image)(resources.GetObject("buttonQuanLyKho.Image")));
-            this.buttonQuanLyKho.Location = new System.Drawing.Point(0, 237);
+            this.buttonQuanLyKho.Location = new System.Drawing.Point(0, 316);
             this.buttonQuanLyKho.Name = "buttonQuanLyKho";
-            this.buttonQuanLyKho.Size = new System.Drawing.Size(209, 79);
+            this.buttonQuanLyKho.Size = new System.Drawing.Size(192, 79);
             this.buttonQuanLyKho.TabIndex = 15;
             this.buttonQuanLyKho.Text = "Quản lý kho";
             this.buttonQuanLyKho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -236,7 +238,7 @@ namespace ManagementSoftware.GUI
             this.buttonWorkingList.Image = ((System.Drawing.Image)(resources.GetObject("buttonWorkingList.Image")));
             this.buttonWorkingList.Location = new System.Drawing.Point(0, 158);
             this.buttonWorkingList.Name = "buttonWorkingList";
-            this.buttonWorkingList.Size = new System.Drawing.Size(209, 79);
+            this.buttonWorkingList.Size = new System.Drawing.Size(192, 79);
             this.buttonWorkingList.TabIndex = 16;
             this.buttonWorkingList.Text = "Công việc";
             this.buttonWorkingList.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -255,7 +257,7 @@ namespace ManagementSoftware.GUI
             this.buttonQuanLyDonHang.Image = ((System.Drawing.Image)(resources.GetObject("buttonQuanLyDonHang.Image")));
             this.buttonQuanLyDonHang.Location = new System.Drawing.Point(0, 79);
             this.buttonQuanLyDonHang.Name = "buttonQuanLyDonHang";
-            this.buttonQuanLyDonHang.Size = new System.Drawing.Size(209, 79);
+            this.buttonQuanLyDonHang.Size = new System.Drawing.Size(192, 79);
             this.buttonQuanLyDonHang.TabIndex = 14;
             this.buttonQuanLyDonHang.Text = "Quản lý đơn hàng";
             this.buttonQuanLyDonHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -275,7 +277,7 @@ namespace ManagementSoftware.GUI
             this.buttonDashboard.Image = ((System.Drawing.Image)(resources.GetObject("buttonDashboard.Image")));
             this.buttonDashboard.Location = new System.Drawing.Point(0, 0);
             this.buttonDashboard.Name = "buttonDashboard";
-            this.buttonDashboard.Size = new System.Drawing.Size(209, 79);
+            this.buttonDashboard.Size = new System.Drawing.Size(192, 79);
             this.buttonDashboard.TabIndex = 7;
             this.buttonDashboard.Text = "Bảng điều khiển";
             this.buttonDashboard.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -379,6 +381,25 @@ namespace ManagementSoftware.GUI
             this.panel2.Size = new System.Drawing.Size(187, 70);
             this.panel2.TabIndex = 0;
             // 
+            // buttonNhapKho
+            // 
+            this.buttonNhapKho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNhapKho.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonNhapKho.FlatAppearance.BorderSize = 0;
+            this.buttonNhapKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNhapKho.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonNhapKho.ForeColor = System.Drawing.Color.White;
+            this.buttonNhapKho.Image = ((System.Drawing.Image)(resources.GetObject("buttonNhapKho.Image")));
+            this.buttonNhapKho.Location = new System.Drawing.Point(0, 237);
+            this.buttonNhapKho.Name = "buttonNhapKho";
+            this.buttonNhapKho.Size = new System.Drawing.Size(192, 79);
+            this.buttonNhapKho.TabIndex = 17;
+            this.buttonNhapKho.Text = "Nhập kho";
+            this.buttonNhapKho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonNhapKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonNhapKho.UseVisualStyleBackColor = true;
+            this.buttonNhapKho.Click += new System.EventHandler(this.buttonNhapKho_Click);
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -428,6 +449,7 @@ namespace ManagementSoftware.GUI
         private Button buttonQuanLyKho;
         private Button buttonQuanLyDonHang;
         private Button buttonWorkingList;
+        private Button buttonNhapKho;
     }
 }
 

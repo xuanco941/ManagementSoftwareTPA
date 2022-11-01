@@ -141,5 +141,12 @@ namespace ManagementSoftware.GUI
             Common.USERSESSION = null;
             Application.Restart();
         }
+
+        private void buttonNhapKho_Click(object sender, EventArgs e)
+        {
+            ImportWareHouse form = new ImportWareHouse();
+            form.callAlert = new ImportWareHouse.CallAlert(Alert);
+            ChangeFormContent(form, sender);
+        }
     }
 }

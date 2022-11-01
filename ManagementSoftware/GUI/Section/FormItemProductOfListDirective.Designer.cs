@@ -80,7 +80,7 @@
             this.panelItemPO.Location = new System.Drawing.Point(6, 3);
             this.panelItemPO.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelItemPO.Name = "panelItemPO";
-            this.panelItemPO.Size = new System.Drawing.Size(864, 121);
+            this.panelItemPO.Size = new System.Drawing.Size(872, 143);
             this.panelItemPO.TabIndex = 9;
             // 
             // tableLayoutPanel1
@@ -99,16 +99,16 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 119);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(870, 141);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.buttonPhanTi);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(745, 3);
+            this.panel9.Location = new System.Drawing.Point(753, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(114, 113);
+            this.panel9.Size = new System.Drawing.Size(114, 135);
             this.panel9.TabIndex = 13;
             // 
             // buttonPhanTi
@@ -123,7 +123,7 @@
             this.buttonPhanTi.Image = global::ManagementSoftware.Properties.Resources._44061082;
             this.buttonPhanTi.Location = new System.Drawing.Point(0, 0);
             this.buttonPhanTi.Name = "buttonPhanTi";
-            this.buttonPhanTi.Size = new System.Drawing.Size(114, 113);
+            this.buttonPhanTi.Size = new System.Drawing.Size(114, 135);
             this.buttonPhanTi.TabIndex = 19;
             this.buttonPhanTi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonPhanTi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -142,16 +142,16 @@
             this.panelGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGrid.Location = new System.Drawing.Point(73, 3);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(552, 113);
+            this.panelGrid.Size = new System.Drawing.Size(560, 135);
             this.panelGrid.TabIndex = 11;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.labelProductName);
-            this.panel7.Location = new System.Drawing.Point(1, 1);
+            this.panel7.Location = new System.Drawing.Point(0, 1);
             this.panel7.Name = "panel7";
             this.gridLayout1.SetParticipateInLayout(this.panel7, true);
-            this.panel7.Size = new System.Drawing.Size(183, 55);
+            this.panel7.Size = new System.Drawing.Size(186, 66);
             this.panel7.TabIndex = 4;
             // 
             // labelProductName
@@ -161,7 +161,7 @@
             this.labelProductName.Location = new System.Drawing.Point(0, 0);
             this.labelProductName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(183, 55);
+            this.labelProductName.Size = new System.Drawing.Size(186, 66);
             this.labelProductName.TabIndex = 14;
             this.labelProductName.Text = "Tên sản phẩm :";
             this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,10 +169,10 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.labelSoLuongSx);
-            this.panel6.Location = new System.Drawing.Point(184, 1);
+            this.panel6.Location = new System.Drawing.Point(186, 1);
             this.panel6.Name = "panel6";
             this.gridLayout1.SetParticipateInLayout(this.panel6, true);
-            this.panel6.Size = new System.Drawing.Size(183, 55);
+            this.panel6.Size = new System.Drawing.Size(186, 66);
             this.panel6.TabIndex = 3;
             // 
             // labelSoLuongSx
@@ -182,7 +182,7 @@
             this.labelSoLuongSx.Location = new System.Drawing.Point(0, 0);
             this.labelSoLuongSx.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSoLuongSx.Name = "labelSoLuongSx";
-            this.labelSoLuongSx.Size = new System.Drawing.Size(183, 55);
+            this.labelSoLuongSx.Size = new System.Drawing.Size(186, 66);
             this.labelSoLuongSx.TabIndex = 15;
             this.labelSoLuongSx.Text = "Số lượng SX :";
             this.labelSoLuongSx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,10 +190,10 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.labelApSuatNap);
-            this.panel5.Location = new System.Drawing.Point(367, 1);
+            this.panel5.Location = new System.Drawing.Point(372, 1);
             this.panel5.Name = "panel5";
             this.gridLayout1.SetParticipateInLayout(this.panel5, true);
-            this.panel5.Size = new System.Drawing.Size(183, 55);
+            this.panel5.Size = new System.Drawing.Size(186, 66);
             this.panel5.TabIndex = 2;
             // 
             // labelApSuatNap
@@ -203,7 +203,7 @@
             this.labelApSuatNap.Location = new System.Drawing.Point(0, 0);
             this.labelApSuatNap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelApSuatNap.Name = "labelApSuatNap";
-            this.labelApSuatNap.Size = new System.Drawing.Size(183, 55);
+            this.labelApSuatNap.Size = new System.Drawing.Size(186, 66);
             this.labelApSuatNap.TabIndex = 16;
             this.labelApSuatNap.Text = "Áp suất nạp : ";
             this.labelApSuatNap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -211,10 +211,10 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.labelTheTichBinh);
-            this.panel4.Location = new System.Drawing.Point(1, 56);
+            this.panel4.Location = new System.Drawing.Point(0, 67);
             this.panel4.Name = "panel4";
             this.gridLayout1.SetParticipateInLayout(this.panel4, true);
-            this.panel4.Size = new System.Drawing.Size(183, 55);
+            this.panel4.Size = new System.Drawing.Size(186, 66);
             this.panel4.TabIndex = 1;
             // 
             // labelTheTichBinh
@@ -224,7 +224,7 @@
             this.labelTheTichBinh.Location = new System.Drawing.Point(0, 0);
             this.labelTheTichBinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTheTichBinh.Name = "labelTheTichBinh";
-            this.labelTheTichBinh.Size = new System.Drawing.Size(183, 55);
+            this.labelTheTichBinh.Size = new System.Drawing.Size(186, 66);
             this.labelTheTichBinh.TabIndex = 14;
             this.labelTheTichBinh.Text = "Thể tích bình : ";
             this.labelTheTichBinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,10 +232,10 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.labelLoaiKhi);
-            this.panel3.Location = new System.Drawing.Point(184, 56);
+            this.panel3.Location = new System.Drawing.Point(186, 67);
             this.panel3.Name = "panel3";
             this.gridLayout1.SetParticipateInLayout(this.panel3, true);
-            this.panel3.Size = new System.Drawing.Size(183, 55);
+            this.panel3.Size = new System.Drawing.Size(186, 66);
             this.panel3.TabIndex = 0;
             // 
             // labelLoaiKhi
@@ -245,7 +245,7 @@
             this.labelLoaiKhi.Location = new System.Drawing.Point(0, 0);
             this.labelLoaiKhi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLoaiKhi.Name = "labelLoaiKhi";
-            this.labelLoaiKhi.Size = new System.Drawing.Size(183, 55);
+            this.labelLoaiKhi.Size = new System.Drawing.Size(186, 66);
             this.labelLoaiKhi.TabIndex = 16;
             this.labelLoaiKhi.Text = "Loại khí : ";
             this.labelLoaiKhi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -253,10 +253,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.labelChatLuongKhi);
-            this.panel1.Location = new System.Drawing.Point(367, 56);
+            this.panel1.Location = new System.Drawing.Point(372, 67);
             this.panel1.Name = "panel1";
             this.gridLayout1.SetParticipateInLayout(this.panel1, true);
-            this.panel1.Size = new System.Drawing.Size(183, 55);
+            this.panel1.Size = new System.Drawing.Size(186, 66);
             this.panel1.TabIndex = 6;
             // 
             // labelChatLuongKhi
@@ -266,7 +266,7 @@
             this.labelChatLuongKhi.Location = new System.Drawing.Point(0, 0);
             this.labelChatLuongKhi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelChatLuongKhi.Name = "labelChatLuongKhi";
-            this.labelChatLuongKhi.Size = new System.Drawing.Size(183, 55);
+            this.labelChatLuongKhi.Size = new System.Drawing.Size(186, 66);
             this.labelChatLuongKhi.TabIndex = 16;
             this.labelChatLuongKhi.Text = "Chất lượng khí : ";
             this.labelChatLuongKhi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -278,7 +278,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(64, 113);
+            this.panel2.Size = new System.Drawing.Size(64, 135);
             this.panel2.TabIndex = 10;
             // 
             // labelNum
@@ -287,7 +287,7 @@
             this.labelNum.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelNum.Location = new System.Drawing.Point(0, 0);
             this.labelNum.Name = "labelNum";
-            this.labelNum.Size = new System.Drawing.Size(62, 111);
+            this.labelNum.Size = new System.Drawing.Size(62, 133);
             this.labelNum.TabIndex = 9;
             this.labelNum.Text = "label1";
             this.labelNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -297,9 +297,9 @@
             this.panel8.Controls.Add(this.panel11);
             this.panel8.Controls.Add(this.panel10);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(631, 3);
+            this.panel8.Location = new System.Drawing.Point(639, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(108, 113);
+            this.panel8.Size = new System.Drawing.Size(108, 135);
             this.panel8.TabIndex = 12;
             // 
             // panel11
@@ -308,7 +308,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 44);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(108, 69);
+            this.panel11.Size = new System.Drawing.Size(108, 91);
             this.panel11.TabIndex = 1;
             // 
             // labelStatus
@@ -318,7 +318,7 @@
             this.labelStatus.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelStatus.Location = new System.Drawing.Point(0, 0);
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(108, 69);
+            this.labelStatus.Size = new System.Drawing.Size(108, 91);
             this.labelStatus.TabIndex = 10;
             this.labelStatus.Text = "label1";
             this.labelStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -356,7 +356,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(876, 127);
+            this.ClientSize = new System.Drawing.Size(884, 149);
             this.Controls.Add(this.panelItemPO);
             this.Name = "FormItemProductOfListDirective";
             this.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);

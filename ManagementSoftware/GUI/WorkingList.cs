@@ -27,7 +27,6 @@ namespace ManagementSoftware.GUI
         {
             InitializeComponent();
             LoadForm();
-            label1.Text = Common.USERSESSION.UserID.ToString();
         }
 
         private void LoadForm()
