@@ -42,22 +42,20 @@
             this.label15 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelInfoProduct = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelSoLuongSanXuat = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelChatLuongKhi = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelTheTichBinh = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelApSuatNap = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelLoaiKhi = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTenSanPham = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelMaSanPham = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -72,7 +70,6 @@
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelInfoProduct.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -207,6 +204,7 @@
             this.buttonAddProduct.TextColor = System.Drawing.SystemColors.Control;
             this.buttonAddProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAddProduct.UseVisualStyleBackColor = false;
+            this.buttonAddProduct.Click += new System.EventHandler(this.buttonAddProduct_Click);
             // 
             // panel6
             // 
@@ -246,7 +244,6 @@
             this.panelInfoProduct.AutoScroll = true;
             this.panelInfoProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(64)))), ((int)(((byte)(23)))));
             this.panelInfoProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelInfoProduct.Controls.Add(this.panel15);
             this.panelInfoProduct.Controls.Add(this.panel14);
             this.panelInfoProduct.Controls.Add(this.panel13);
             this.panelInfoProduct.Controls.Add(this.panel12);
@@ -260,189 +257,166 @@
             this.panelInfoProduct.Size = new System.Drawing.Size(409, 442);
             this.panelInfoProduct.TabIndex = 1;
             // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.label9);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(0, 385);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(407, 55);
-            this.panel15.TabIndex = 7;
-            // 
-            // label9
-            // 
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(0, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label9.Size = new System.Drawing.Size(407, 55);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Chỉ thị sản xuất đã phân :";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.label8);
+            this.panel14.Controls.Add(this.labelSoLuongSanXuat);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(0, 330);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(407, 55);
             this.panel14.TabIndex = 6;
             // 
-            // label8
+            // labelSoLuongSanXuat
             // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label8.Size = new System.Drawing.Size(407, 55);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Số lượng sản xuất :";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelSoLuongSanXuat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelSoLuongSanXuat.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelSoLuongSanXuat.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelSoLuongSanXuat.Location = new System.Drawing.Point(0, 0);
+            this.labelSoLuongSanXuat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSoLuongSanXuat.Name = "labelSoLuongSanXuat";
+            this.labelSoLuongSanXuat.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.labelSoLuongSanXuat.Size = new System.Drawing.Size(407, 55);
+            this.labelSoLuongSanXuat.TabIndex = 5;
+            this.labelSoLuongSanXuat.Text = "Số lượng sản xuất :";
+            this.labelSoLuongSanXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.label7);
+            this.panel13.Controls.Add(this.labelChatLuongKhi);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 275);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(407, 55);
             this.panel13.TabIndex = 5;
             // 
-            // label7
+            // labelChatLuongKhi
             // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label7.Size = new System.Drawing.Size(407, 55);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Chất lượng khí :";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelChatLuongKhi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelChatLuongKhi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelChatLuongKhi.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelChatLuongKhi.Location = new System.Drawing.Point(0, 0);
+            this.labelChatLuongKhi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelChatLuongKhi.Name = "labelChatLuongKhi";
+            this.labelChatLuongKhi.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.labelChatLuongKhi.Size = new System.Drawing.Size(407, 55);
+            this.labelChatLuongKhi.TabIndex = 5;
+            this.labelChatLuongKhi.Text = "Chất lượng khí :";
+            this.labelChatLuongKhi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.label6);
+            this.panel12.Controls.Add(this.labelTheTichBinh);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 220);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(407, 55);
             this.panel12.TabIndex = 4;
             // 
-            // label6
+            // labelTheTichBinh
             // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label6.Size = new System.Drawing.Size(407, 55);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Thể tích bình :";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTheTichBinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTheTichBinh.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTheTichBinh.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelTheTichBinh.Location = new System.Drawing.Point(0, 0);
+            this.labelTheTichBinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTheTichBinh.Name = "labelTheTichBinh";
+            this.labelTheTichBinh.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.labelTheTichBinh.Size = new System.Drawing.Size(407, 55);
+            this.labelTheTichBinh.TabIndex = 5;
+            this.labelTheTichBinh.Text = "Thể tích bình :";
+            this.labelTheTichBinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.label4);
+            this.panel11.Controls.Add(this.labelApSuatNap);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 165);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(407, 55);
             this.panel11.TabIndex = 3;
             // 
-            // label4
+            // labelApSuatNap
             // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(407, 55);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Áp suất nạp :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelApSuatNap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelApSuatNap.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelApSuatNap.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelApSuatNap.Location = new System.Drawing.Point(0, 0);
+            this.labelApSuatNap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelApSuatNap.Name = "labelApSuatNap";
+            this.labelApSuatNap.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.labelApSuatNap.Size = new System.Drawing.Size(407, 55);
+            this.labelApSuatNap.TabIndex = 5;
+            this.labelApSuatNap.Text = "Áp suất nạp :";
+            this.labelApSuatNap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.label3);
+            this.panel10.Controls.Add(this.labelLoaiKhi);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 110);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(407, 55);
             this.panel10.TabIndex = 2;
             // 
-            // label3
+            // labelLoaiKhi
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(407, 55);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Loại khí :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelLoaiKhi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelLoaiKhi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelLoaiKhi.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelLoaiKhi.Location = new System.Drawing.Point(0, 0);
+            this.labelLoaiKhi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLoaiKhi.Name = "labelLoaiKhi";
+            this.labelLoaiKhi.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.labelLoaiKhi.Size = new System.Drawing.Size(407, 55);
+            this.labelLoaiKhi.TabIndex = 5;
+            this.labelLoaiKhi.Text = "Loại khí :";
+            this.labelLoaiKhi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.label1);
+            this.panel9.Controls.Add(this.labelTenSanPham);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 55);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(407, 55);
             this.panel9.TabIndex = 1;
             // 
-            // label1
+            // labelTenSanPham
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(407, 55);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Tên sản phẩm :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTenSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTenSanPham.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTenSanPham.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelTenSanPham.Location = new System.Drawing.Point(0, 0);
+            this.labelTenSanPham.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTenSanPham.Name = "labelTenSanPham";
+            this.labelTenSanPham.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.labelTenSanPham.Size = new System.Drawing.Size(407, 55);
+            this.labelTenSanPham.TabIndex = 5;
+            this.labelTenSanPham.Text = "Tên sản phẩm :";
+            this.labelTenSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.label5);
+            this.panel8.Controls.Add(this.labelMaSanPham);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(407, 55);
             this.panel8.TabIndex = 0;
             // 
-            // label5
+            // labelMaSanPham
             // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.label5.Size = new System.Drawing.Size(407, 55);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Mã sản phẩm :";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelMaSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelMaSanPham.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelMaSanPham.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelMaSanPham.Location = new System.Drawing.Point(0, 0);
+            this.labelMaSanPham.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMaSanPham.Name = "labelMaSanPham";
+            this.labelMaSanPham.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.labelMaSanPham.Size = new System.Drawing.Size(407, 55);
+            this.labelMaSanPham.TabIndex = 5;
+            this.labelMaSanPham.Text = "Mã sản phẩm :";
+            this.labelMaSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel5
             // 
@@ -532,7 +506,6 @@
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panelInfoProduct.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
@@ -557,22 +530,20 @@
         private Label label15;
         private Panel panel3;
         private Panel panelInfoProduct;
-        private Panel panel15;
-        private Label label9;
         private Panel panel14;
-        private Label label8;
+        private Label labelSoLuongSanXuat;
         private Panel panel13;
-        private Label label7;
+        private Label labelChatLuongKhi;
         private Panel panel12;
-        private Label label6;
+        private Label labelTheTichBinh;
         private Panel panel11;
-        private Label label4;
+        private Label labelApSuatNap;
         private Panel panel10;
-        private Label label3;
+        private Label labelLoaiKhi;
         private Panel panel9;
-        private Label label1;
+        private Label labelTenSanPham;
         private Panel panel8;
-        private Label label5;
+        private Label labelMaSanPham;
         private Panel panel5;
         private Label label2;
         private Panel panel16;

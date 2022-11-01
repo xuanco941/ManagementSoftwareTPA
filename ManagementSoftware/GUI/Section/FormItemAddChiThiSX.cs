@@ -17,11 +17,12 @@ namespace ManagementSoftware.GUI.Section
         public DeleteChiThiSXDelegate deleteChiThiSXDelegate;
 
         int position = -1;
-
+        Directive d;
         public FormItemAddChiThiSX(Directive directive, int p)
         {
             InitializeComponent();
             this.position = p;
+            this.d = directive;
 
             labelMaChiThi.Text = "Mã chỉ thị : " + (directive.DirectiveID != 0 ? Common.DIRECTIVE + directive.DirectiveID : Common.DIRECTIVE);
             labelSoLuongDaSX.Text = "Số lượng đã sản xuất : " + directive.SoLuongDaSanXuat;
@@ -33,8 +34,23 @@ namespace ManagementSoftware.GUI.Section
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            deleteChiThiSXDelegate.Invoke(this.position);
-            this.Close();
+            if (d.SoLuongDaSanXuat != 0)
+            {
+                MessageBox.Show($"Không thể xóa! Chỉ thị này đang được thực hiện với tiến trình {d.SoLuongDaSanXuat}/{d.SoLuongCanSanXuat}.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (d.DirectiveID != 0)
+                {
+                    bool result = BUS.BUSDirective.Delete(d.DirectiveID).Status;
+                    if (result == false)
+                    {
+                        MessageBox.Show("Gặp lỗi khi loại bỏ chỉ thị này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                deleteChiThiSXDelegate.Invoke(this.position);
+                this.Close();
+            }
         }
     }
 }

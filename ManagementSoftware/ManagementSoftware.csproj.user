@@ -37,6 +37,9 @@
     <Compile Update="GUI\ProductManagement\FormPhanChiThi.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\PurchaseOrderManagement\FormAddDirective.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\PurchaseOrderManagement\FormAddProductOnPO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +62,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\ResultHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Section\FormItemAddChiThiSX.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Section\FormItemFormViewDetailPO.cs">

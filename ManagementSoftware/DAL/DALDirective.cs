@@ -9,10 +9,21 @@ namespace ManagementSoftware.DAL
 {
     public class DALDirective
     {
+        public static List<Directive> GetAllDirectiveOfProduct(int pID)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            return dbContext.Directives.Where(p => p.ProductID == pID).ToList();
+        }
         public static int Add(Directive directive)
         {
             DataBaseContext dbContext = new DataBaseContext();
             dbContext.Directives.Add(directive);
+            return dbContext.SaveChanges();
+        }
+        public static int AddRange(List<Directive> listProduct)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            dbContext.Directives.AddRange(listProduct);
             return dbContext.SaveChanges();
         }
         public static int Update(Directive directive)
