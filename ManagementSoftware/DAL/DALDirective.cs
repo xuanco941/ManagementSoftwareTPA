@@ -14,6 +14,11 @@ namespace ManagementSoftware.DAL
             DataBaseContext dbContext = new DataBaseContext();
             return dbContext.Directives.Where(p => p.ProductID == pID).ToList();
         }
+        public static List<Directive> GetAllDirectiveOfUser(int uid)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            return dbContext.Directives.Where(p => p.UserID == uid).ToList();
+        }
         public static int Add(Directive directive)
         {
             DataBaseContext dbContext = new DataBaseContext();

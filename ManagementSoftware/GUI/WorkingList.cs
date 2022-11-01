@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManagementSoftware.BUS;
 using ManagementSoftware.GUI.Section;
-
+using ManagementSoftware.Models;
 
 namespace ManagementSoftware.GUI
 {
@@ -22,23 +23,25 @@ namespace ManagementSoftware.GUI
         public delegate void ChangeForm(Form form);
         public ChangeForm changeForm;
 
-        private void GetItemPO()
+        public WorkingList()
         {
-            for (int i = 0; i < 9; i++)
+            InitializeComponent();
+            LoadForm();
+            label1.Text = Common.USERSESSION.UserID.ToString();
+        }
+
+        private void LoadForm()
+        {
+            List<Directive> list = BUSDirective.GetAllDirectiveOfUser(Common.USERSESSION.UserID);
+            foreach (Directive i in list)
             {
-                FormItemWorkingList form = new FormItemWorkingList();
+                FormItemWorkingList form = new FormItemWorkingList(i);
                 form.TopLevel = false;
                 panelMain.Controls.Add(form);
                 form.FormBorderStyle = FormBorderStyle.None;
                 form.Dock = DockStyle.Top;
                 form.Show();
             }
-        }
-
-        public WorkingList()
-        {
-            InitializeComponent();
-            GetItemPO();
         }
 
     }

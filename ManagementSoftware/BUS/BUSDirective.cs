@@ -15,6 +15,10 @@ namespace ManagementSoftware.BUS
         {
             return DALDirective.GetAllDirectiveOfProduct(idP);
         }
+        public static List<Directive> GetAllDirectiveOfUser(int uid)
+        {
+            return DALDirective.GetAllDirectiveOfUser(uid);
+        }
         public static AddUpdateDeleteResponse<Directive> Add(Directive d)
         {
 

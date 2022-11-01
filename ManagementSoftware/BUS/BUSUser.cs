@@ -121,6 +121,7 @@ namespace ManagementSoftware.BUS
                 //Cập nhật lại tài khoản session
                 if (Common.USERSESSION != null && Common.USERSESSION.Username == user.Username)
                 {
+                    user.UserID = Common.USERSESSION.UserID;
                     Common.USERSESSION = user;
                 }
             }
