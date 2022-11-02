@@ -67,6 +67,9 @@
     <Compile Update="GUI\ResultHistory.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Section\FormChiThiNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Section\FormItemAddChiThiSX.cs">
       <SubType>Form</SubType>
     </Compile>

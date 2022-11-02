@@ -17,6 +17,10 @@ namespace ManagementSoftware.GUI
         public delegate void CallAlert(string msg, FormAlert.enmType type);
         public CallAlert callAlert;
 
+        int page = 1;
+        string strSearch;
+
+
         public ImportWareHouse()
         {
             InitializeComponent();

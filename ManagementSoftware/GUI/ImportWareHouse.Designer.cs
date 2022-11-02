@@ -40,13 +40,11 @@
             this.buttonPage1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panelSearch = new System.Windows.Forms.Panel();
+            this.textBoxTaiKhoan = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonCustomLoc = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonCustomLoc = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxTaiKhoan = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.textBoxt1 = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelForm.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -226,8 +224,6 @@
             // panelSearch
             // 
             this.panelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSearch.Controls.Add(this.textBoxt1);
-            this.panelSearch.Controls.Add(this.label3);
             this.panelSearch.Controls.Add(this.textBoxTaiKhoan);
             this.panelSearch.Controls.Add(this.label2);
             this.panelSearch.Controls.Add(this.buttonCustomLoc);
@@ -237,6 +233,61 @@
             this.panelSearch.Name = "panelSearch";
             this.panelSearch.Size = new System.Drawing.Size(274, 533);
             this.panelSearch.TabIndex = 1;
+            // 
+            // textBoxTaiKhoan
+            // 
+            this.textBoxTaiKhoan.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxTaiKhoan.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxTaiKhoan.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxTaiKhoan.BorderRadius = 5;
+            this.textBoxTaiKhoan.BorderSize = 1;
+            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTaiKhoan.Location = new System.Drawing.Point(14, 80);
+            this.textBoxTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxTaiKhoan.Multiline = false;
+            this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
+            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(8);
+            this.textBoxTaiKhoan.PasswordChar = false;
+            this.textBoxTaiKhoan.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxTaiKhoan.PlaceholderText = "";
+            this.textBoxTaiKhoan.Size = new System.Drawing.Size(241, 35);
+            this.textBoxTaiKhoan.TabIndex = 70;
+            this.textBoxTaiKhoan.Texts = "";
+            this.textBoxTaiKhoan.UnderlinedStyle = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(14, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 15);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "Mã chỉ thị :";
+            // 
+            // buttonCustomLoc
+            // 
+            this.buttonCustomLoc.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCustomLoc.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCustomLoc.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonCustomLoc.BorderRadius = 3;
+            this.buttonCustomLoc.BorderSize = 0;
+            this.buttonCustomLoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustomLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustomLoc.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCustomLoc.ForeColor = System.Drawing.Color.Black;
+            this.buttonCustomLoc.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustomLoc.Image")));
+            this.buttonCustomLoc.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCustomLoc.Location = new System.Drawing.Point(70, 140);
+            this.buttonCustomLoc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonCustomLoc.Name = "buttonCustomLoc";
+            this.buttonCustomLoc.Size = new System.Drawing.Size(120, 37);
+            this.buttonCustomLoc.TabIndex = 68;
+            this.buttonCustomLoc.Text = "Lọc";
+            this.buttonCustomLoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustomLoc.TextColor = System.Drawing.Color.Black;
+            this.buttonCustomLoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCustomLoc.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
@@ -260,92 +311,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Tìm kiếm";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonCustomLoc
-            // 
-            this.buttonCustomLoc.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.buttonCustomLoc.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.buttonCustomLoc.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustomLoc.BorderRadius = 3;
-            this.buttonCustomLoc.BorderSize = 0;
-            this.buttonCustomLoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustomLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustomLoc.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustomLoc.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustomLoc.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustomLoc.Image")));
-            this.buttonCustomLoc.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustomLoc.Location = new System.Drawing.Point(77, 247);
-            this.buttonCustomLoc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustomLoc.Name = "buttonCustomLoc";
-            this.buttonCustomLoc.Size = new System.Drawing.Size(120, 37);
-            this.buttonCustomLoc.TabIndex = 68;
-            this.buttonCustomLoc.Text = "Lọc";
-            this.buttonCustomLoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustomLoc.TextColor = System.Drawing.Color.Black;
-            this.buttonCustomLoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCustomLoc.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(14, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 15);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "Mã chỉ thị :";
-            // 
-            // textBoxTaiKhoan
-            // 
-            this.textBoxTaiKhoan.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxTaiKhoan.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxTaiKhoan.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxTaiKhoan.BorderRadius = 5;
-            this.textBoxTaiKhoan.BorderSize = 1;
-            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTaiKhoan.Location = new System.Drawing.Point(14, 80);
-            this.textBoxTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxTaiKhoan.Multiline = false;
-            this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
-            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(8);
-            this.textBoxTaiKhoan.PasswordChar = false;
-            this.textBoxTaiKhoan.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxTaiKhoan.PlaceholderText = "";
-            this.textBoxTaiKhoan.Size = new System.Drawing.Size(241, 35);
-            this.textBoxTaiKhoan.TabIndex = 70;
-            this.textBoxTaiKhoan.Texts = "";
-            this.textBoxTaiKhoan.UnderlinedStyle = false;
-            // 
-            // textBoxt1
-            // 
-            this.textBoxt1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxt1.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxt1.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxt1.BorderRadius = 5;
-            this.textBoxt1.BorderSize = 1;
-            this.textBoxt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxt1.Location = new System.Drawing.Point(14, 144);
-            this.textBoxt1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxt1.Multiline = false;
-            this.textBoxt1.Name = "textBoxt1";
-            this.textBoxt1.Padding = new System.Windows.Forms.Padding(8);
-            this.textBoxt1.PasswordChar = false;
-            this.textBoxt1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxt1.PlaceholderText = "";
-            this.textBoxt1.Size = new System.Drawing.Size(241, 35);
-            this.textBoxt1.TabIndex = 72;
-            this.textBoxt1.Texts = "";
-            this.textBoxt1.UnderlinedStyle = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(14, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 15);
-            this.label3.TabIndex = 71;
-            this.label3.Text = "Mã chỉ thị :";
             // 
             // ImportWareHouse
             // 
@@ -385,7 +350,5 @@
         private Label label2;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustomLoc;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxTaiKhoan;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxt1;
-        private Label label3;
     }
 }

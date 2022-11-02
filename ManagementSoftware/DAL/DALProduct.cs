@@ -14,6 +14,11 @@ namespace ManagementSoftware.DAL
             DataBaseContext dbContext = new DataBaseContext();
             return dbContext.Products.Where(p => p.PurchaseOrderID == poID).ToList();
         }
+        public static Product? GetProductFromID(int id)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            return dbContext.Products.Where(p => p.ProductID == id).FirstOrDefault();
+        }
         public static int GetSoLuongSanXuatDaPhanChiThiOnProduct(int productID)
         {
             DataBaseContext dbContext = new DataBaseContext();
