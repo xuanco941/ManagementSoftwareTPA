@@ -44,14 +44,14 @@
             this.labelNgayBatDau = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelNgayKetThuc = new System.Windows.Forms.Label();
-            this.buttonNhapKho = new System.Windows.Forms.Button();
-            this.panelBtn = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panelItemPO = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelMaSanPham = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.labelDonHang = new System.Windows.Forms.Label();
+            this.buttonNhapKho = new System.Windows.Forms.Button();
+            this.panelBtn = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelItemPO = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).BeginInit();
             this.panelGrid.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -60,11 +60,11 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panelBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelItemPO.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridLayout1
@@ -216,61 +216,6 @@
             this.labelNgayKetThuc.Text = "Ngày kết thúc : ";
             this.labelNgayKetThuc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonNhapKho
-            // 
-            this.buttonNhapKho.BackColor = System.Drawing.Color.Orange;
-            this.buttonNhapKho.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonNhapKho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonNhapKho.FlatAppearance.BorderSize = 0;
-            this.buttonNhapKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNhapKho.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonNhapKho.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonNhapKho.Image = ((System.Drawing.Image)(resources.GetObject("buttonNhapKho.Image")));
-            this.buttonNhapKho.Location = new System.Drawing.Point(0, 0);
-            this.buttonNhapKho.Name = "buttonNhapKho";
-            this.buttonNhapKho.Size = new System.Drawing.Size(121, 117);
-            this.buttonNhapKho.TabIndex = 18;
-            this.buttonNhapKho.Text = "Nhập kho";
-            this.buttonNhapKho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonNhapKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonNhapKho.UseVisualStyleBackColor = false;
-            // 
-            // panelBtn
-            // 
-            this.panelBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelBtn.Controls.Add(this.buttonNhapKho);
-            this.panelBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelBtn.Location = new System.Drawing.Point(673, 0);
-            this.panelBtn.Name = "panelBtn";
-            this.panelBtn.Size = new System.Drawing.Size(123, 119);
-            this.panelBtn.TabIndex = 5;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::ManagementSoftware.Properties.Resources.ETEK_LOGO_01;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(184, 119);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panelItemPO
-            // 
-            this.panelItemPO.BackColor = System.Drawing.Color.Orange;
-            this.panelItemPO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelItemPO.Controls.Add(this.panelGrid);
-            this.panelItemPO.Controls.Add(this.panelBtn);
-            this.panelItemPO.Controls.Add(this.pictureBox2);
-            this.panelItemPO.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelItemPO.Location = new System.Drawing.Point(6, 3);
-            this.panelItemPO.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panelItemPO.Name = "panelItemPO";
-            this.panelItemPO.Size = new System.Drawing.Size(798, 121);
-            this.panelItemPO.TabIndex = 9;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.labelMaSanPham);
@@ -313,10 +258,67 @@
             this.labelDonHang.Text = "Thuộc mã đơn hàng : ";
             this.labelDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonNhapKho
+            // 
+            this.buttonNhapKho.BackColor = System.Drawing.Color.Orange;
+            this.buttonNhapKho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNhapKho.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonNhapKho.FlatAppearance.BorderSize = 0;
+            this.buttonNhapKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNhapKho.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonNhapKho.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonNhapKho.Image = ((System.Drawing.Image)(resources.GetObject("buttonNhapKho.Image")));
+            this.buttonNhapKho.Location = new System.Drawing.Point(0, 0);
+            this.buttonNhapKho.Name = "buttonNhapKho";
+            this.buttonNhapKho.Size = new System.Drawing.Size(121, 117);
+            this.buttonNhapKho.TabIndex = 18;
+            this.buttonNhapKho.Text = "Nhập kho";
+            this.buttonNhapKho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonNhapKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonNhapKho.UseVisualStyleBackColor = false;
+            this.buttonNhapKho.Click += new System.EventHandler(this.buttonNhapKho_Click);
+            // 
+            // panelBtn
+            // 
+            this.panelBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelBtn.Controls.Add(this.buttonNhapKho);
+            this.panelBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelBtn.Location = new System.Drawing.Point(673, 0);
+            this.panelBtn.Name = "panelBtn";
+            this.panelBtn.Size = new System.Drawing.Size(123, 119);
+            this.panelBtn.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = global::ManagementSoftware.Properties.Resources.ETEK_LOGO_01;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(184, 119);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panelItemPO
+            // 
+            this.panelItemPO.BackColor = System.Drawing.Color.Orange;
+            this.panelItemPO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelItemPO.Controls.Add(this.panelGrid);
+            this.panelItemPO.Controls.Add(this.panelBtn);
+            this.panelItemPO.Controls.Add(this.pictureBox2);
+            this.panelItemPO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelItemPO.Location = new System.Drawing.Point(6, 3);
+            this.panelItemPO.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelItemPO.Name = "panelItemPO";
+            this.panelItemPO.Size = new System.Drawing.Size(798, 121);
+            this.panelItemPO.TabIndex = 9;
+            // 
             // FormChiThiNhapKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(810, 127);
             this.Controls.Add(this.panelItemPO);
             this.Name = "FormChiThiNhapKho";
@@ -330,11 +332,11 @@
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.panelBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelItemPO.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

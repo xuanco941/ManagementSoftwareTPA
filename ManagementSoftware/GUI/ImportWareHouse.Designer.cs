@@ -40,8 +40,7 @@
             this.buttonPage1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonPage2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panelSearch = new System.Windows.Forms.Panel();
-            this.textBoxTaiKhoan = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxSearch = new LW_PhanMemBaoGia.MyControls.TextBoxT();
             this.buttonCustomLoc = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -106,7 +105,7 @@
             // 
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label29.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label29.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label29.Location = new System.Drawing.Point(0, 0);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
@@ -151,6 +150,7 @@
             this.buttonPageNext.TextColor = System.Drawing.Color.Black;
             this.buttonPageNext.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPageNext.UseVisualStyleBackColor = false;
+            this.buttonPageNext.Click += new System.EventHandler(this.buttonPageNext_Click);
             // 
             // buttonPage3
             // 
@@ -174,6 +174,7 @@
             this.buttonPage3.TextColor = System.Drawing.Color.Black;
             this.buttonPage3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPage3.UseVisualStyleBackColor = false;
+            this.buttonPage3.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
             // buttonPage1
             // 
@@ -197,6 +198,7 @@
             this.buttonPage1.TextColor = System.Drawing.Color.Black;
             this.buttonPage1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPage1.UseVisualStyleBackColor = false;
+            this.buttonPage1.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
             // buttonPage2
             // 
@@ -220,12 +222,13 @@
             this.buttonPage2.TextColor = System.Drawing.Color.Black;
             this.buttonPage2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPage2.UseVisualStyleBackColor = false;
+            this.buttonPage2.Click += new System.EventHandler(this.buttonPage1_Click);
             // 
             // panelSearch
             // 
+            this.panelSearch.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSearch.Controls.Add(this.textBoxTaiKhoan);
-            this.panelSearch.Controls.Add(this.label2);
+            this.panelSearch.Controls.Add(this.textBoxSearch);
             this.panelSearch.Controls.Add(this.buttonCustomLoc);
             this.panelSearch.Controls.Add(this.panel5);
             this.panelSearch.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -234,36 +237,27 @@
             this.panelSearch.Size = new System.Drawing.Size(274, 533);
             this.panelSearch.TabIndex = 1;
             // 
-            // textBoxTaiKhoan
+            // textBoxSearch
             // 
-            this.textBoxTaiKhoan.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxTaiKhoan.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxTaiKhoan.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxTaiKhoan.BorderRadius = 5;
-            this.textBoxTaiKhoan.BorderSize = 1;
-            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTaiKhoan.Location = new System.Drawing.Point(14, 80);
-            this.textBoxTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxTaiKhoan.Multiline = false;
-            this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
-            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(8);
-            this.textBoxTaiKhoan.PasswordChar = false;
-            this.textBoxTaiKhoan.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxTaiKhoan.PlaceholderText = "";
-            this.textBoxTaiKhoan.Size = new System.Drawing.Size(241, 35);
-            this.textBoxTaiKhoan.TabIndex = 70;
-            this.textBoxTaiKhoan.Texts = "";
-            this.textBoxTaiKhoan.UnderlinedStyle = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(14, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 15);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "Mã chỉ thị :";
+            this.textBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxSearch.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.textBoxSearch.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBoxSearch.BorderRadius = 5;
+            this.textBoxSearch.BorderSize = 1;
+            this.textBoxSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSearch.Location = new System.Drawing.Point(0, 48);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxSearch.Multiline = false;
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Padding = new System.Windows.Forms.Padding(8);
+            this.textBoxSearch.PasswordChar = false;
+            this.textBoxSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxSearch.PlaceholderText = "Nhập mã chỉ thị";
+            this.textBoxSearch.Size = new System.Drawing.Size(272, 35);
+            this.textBoxSearch.TabIndex = 70;
+            this.textBoxSearch.Texts = "Nhập mã chỉ thị";
+            this.textBoxSearch.UnderlinedStyle = false;
             // 
             // buttonCustomLoc
             // 
@@ -278,7 +272,7 @@
             this.buttonCustomLoc.ForeColor = System.Drawing.Color.Black;
             this.buttonCustomLoc.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustomLoc.Image")));
             this.buttonCustomLoc.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCustomLoc.Location = new System.Drawing.Point(70, 140);
+            this.buttonCustomLoc.Location = new System.Drawing.Point(80, 98);
             this.buttonCustomLoc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCustomLoc.Name = "buttonCustomLoc";
             this.buttonCustomLoc.Size = new System.Drawing.Size(120, 37);
@@ -288,6 +282,7 @@
             this.buttonCustomLoc.TextColor = System.Drawing.Color.Black;
             this.buttonCustomLoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCustomLoc.UseVisualStyleBackColor = false;
+            this.buttonCustomLoc.Click += new System.EventHandler(this.buttonCustomLoc_Click);
             // 
             // panel5
             // 
@@ -303,7 +298,7 @@
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -326,7 +321,6 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panelSearch.ResumeLayout(false);
-            this.panelSearch.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -347,8 +341,7 @@
         private Panel panel5;
         private Label label1;
         private Panel panelMain;
-        private Label label2;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustomLoc;
-        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxTaiKhoan;
+        private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxSearch;
     }
 }

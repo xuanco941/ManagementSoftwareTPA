@@ -34,6 +34,7 @@
             this.linearGauge1 = new Syncfusion.Windows.Forms.Gauge.LinearGauge();
             this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.integerTextBox1 = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.integerTextBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,10 +43,10 @@
             this.sfBarcode1.DarkBarColor = System.Drawing.Color.Black;
             this.sfBarcode1.DisplayText = true;
             this.sfBarcode1.LightBarColor = System.Drawing.Color.White;
-            this.sfBarcode1.Location = new System.Drawing.Point(69, 180);
+            this.sfBarcode1.Location = new System.Drawing.Point(639, 49);
             this.sfBarcode1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.sfBarcode1.Name = "sfBarcode1";
-            this.sfBarcode1.Size = new System.Drawing.Size(122, 173);
+            this.sfBarcode1.Size = new System.Drawing.Size(447, 102);
             this.sfBarcode1.Symbology = Syncfusion.Windows.Forms.Barcode.BarcodeSymbolType.QRBarcode;
             this.sfBarcode1.SymbologySettings = null;
             this.sfBarcode1.TabIndex = 0;
@@ -66,7 +67,7 @@
             this.radialGauge1.InnerFrameGradientStartColor = System.Drawing.SystemColors.ActiveBorder;
             this.radialGauge1.Location = new System.Drawing.Point(224, 92);
             this.radialGauge1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.radialGauge1.MinimumSize = new System.Drawing.Size(146, 144);
+            this.radialGauge1.MinimumSize = new System.Drawing.Size(125, 125);
             this.radialGauge1.Name = "radialGauge1";
             this.radialGauge1.ShowTicks = true;
             this.radialGauge1.Size = new System.Drawing.Size(261, 261);
@@ -91,7 +92,7 @@
             this.linearGauge1.Location = new System.Drawing.Point(117, 350);
             this.linearGauge1.MajorTicksHeight = 15;
             this.linearGauge1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.linearGauge1.MinimumSize = new System.Drawing.Size(117, 58);
+            this.linearGauge1.MinimumSize = new System.Drawing.Size(100, 50);
             this.linearGauge1.MinorTickCount = 5;
             this.linearGauge1.MinorTickHeight = 10;
             this.linearGauge1.Name = "linearGauge1";
@@ -141,11 +142,19 @@
             this.integerTextBox1.TabIndex = 6;
             this.integerTextBox1.Text = "1";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(433, 91);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 7;
+            // 
             // FormTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1146, 517);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.integerTextBox1);
             this.Controls.Add(this.chartControl1);
             this.Controls.Add(this.linearGauge1);
@@ -169,5 +178,6 @@
         private Syncfusion.Windows.Forms.Gauge.LinearGauge linearGauge1;
         private Syncfusion.Windows.Forms.Chart.ChartControl chartControl1;
         private Syncfusion.Windows.Forms.Tools.IntegerTextBox integerTextBox1;
+        private TextBox textBox1;
     }
 }

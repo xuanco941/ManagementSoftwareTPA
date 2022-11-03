@@ -248,3 +248,4 @@ D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftwar
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Section.FormItemAddChiThiSX.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.ImportWareHouse.resources
 D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Section.FormChiThiNhapKho.resources
+D:\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.ImportWareHouseManagement.FormNhapKho.resources

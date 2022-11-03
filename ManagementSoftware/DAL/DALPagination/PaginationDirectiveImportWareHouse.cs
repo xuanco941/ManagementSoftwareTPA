@@ -21,25 +21,25 @@ namespace ManagementSoftware.DAL.DALPagination
 
             int position = (page - 1) * NumberRows;
 
+
             if (String.IsNullOrEmpty(str))
             {
                 this.ListResults = dbContext.Directives
-                .Where(d => d.SoLuongDaSanXuat != 0)
-                .Skip(position)
+                .Skip(position) 
                 .Take(NumberRows)
                 .ToList();
 
-                this.TotalResults = dbContext.Directives.Where(d => d.SoLuongDaSanXuat != 0).Count();
+                this.TotalResults = dbContext.Directives.Count();
 
             }
             else
             {
                 this.ListResults = dbContext.Directives
-                .Where(d => d.SoLuongDaSanXuat != 0 && (Common.DIRECTIVE + d.DirectiveID).Contains(str))
+                .Where(d => (Common.DIRECTIVE + d.DirectiveID).Contains(str))
                 .Skip(position)
                 .Take(NumberRows)
                 .ToList();
-                this.TotalResults = dbContext.Directives.Where(d => d.SoLuongDaSanXuat != 0 && (Common.DIRECTIVE + d.DirectiveID).Contains(str)).Count();
+                this.TotalResults = dbContext.Directives.Where(d => (Common.DIRECTIVE + d.DirectiveID).Contains(str)).Count();
             }
 
             this.PageCurrent = page;

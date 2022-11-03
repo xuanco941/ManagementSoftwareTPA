@@ -37,6 +37,9 @@
     <Compile Update="GUI\ImportWareHouse.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\ImportWareHouseManagement\FormNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\ProductManagement\FormPhanChiThi.cs">
       <SubType>Form</SubType>
     </Compile>
