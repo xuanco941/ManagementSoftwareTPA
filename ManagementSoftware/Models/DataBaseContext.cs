@@ -1,6 +1,5 @@
 ﻿using ManagementSoftware.DAL;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 namespace ManagementSoftware.Models
 {
@@ -19,21 +18,11 @@ namespace ManagementSoftware.Models
         public DbSet<DataResult> DataResults { get; set; }
         public DbSet<ResultWarning> ResultWarnings { get; set; }
 
-        // Tạo ILoggerFactory 
-        public static readonly ILoggerFactory loggerFactory = LoggerFactory.Create(builder => {
-            builder
-                   .AddFilter(DbLoggerCategory.Database.Command.Name, LogLevel.Information)
-                   .AddFilter(DbLoggerCategory.Query.Name, LogLevel.Information)
-                   .AddDebug();
-        }
-        );
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder
-                .UseLoggerFactory(loggerFactory)  // - Thiết lập sử Logger
-                .UseSqlServer(Common.ConnectionString);
+            optionsBuilder.UseSqlServer(Common.ConnectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
