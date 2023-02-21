@@ -618,7 +618,6 @@
             this.chartControl2.Title.Name = "Default";
             this.chartControl2.Titles.Add(this.chartControl2.Title);
             this.chartControl2.VisualTheme = "";
-            this.chartControl2.Click += new System.EventHandler(this.chartControl2_Click);
             // 
             // panel7
             // 
@@ -1646,16 +1645,15 @@
             this.button54.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button54.UseVisualStyleBackColor = true;
             // 
-            // formdardb
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 616);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "formdardb";
+            this.Name = "Dashboard";
             this.Text = "0";
-            this.Load += new System.EventHandler(this.Form2_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);

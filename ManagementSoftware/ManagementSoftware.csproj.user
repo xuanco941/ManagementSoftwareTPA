@@ -13,28 +13,43 @@
     <Compile Update="GUI\ActivityManagement\FormEmployeeActivities.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Employee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\EmployeeManagement\FormAddGroup.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\EmployeeManagement\FormAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\EmployeeManagement\FormChangeGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\formchanges.cs">
+    <Compile Update="GUI\EmployeeManagement\FormChangeUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\Dashboard.cs">
+    <Compile Update="GUI\FormChanges.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\FormPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Help.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\ImportWareHouse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\ImportWareHouseManagement\FormNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\ProductManagement\FormPhanChiThi.cs">
@@ -58,13 +73,16 @@
     <Compile Update="GUI\PurchaseOrderManagement\FormViewDetailPurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\ResultHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\ResultManagement\FormData.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\ResultManagement\FormInfoPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\ResultHistory.cs">
+    <Compile Update="GUI\Section\FormAleart.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Section\FormChiThiNhapKho.cs">
@@ -98,21 +116,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\WorkingList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Help.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Section\FormAleart.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

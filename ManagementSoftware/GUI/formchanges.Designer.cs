@@ -1,6 +1,6 @@
 ﻿namespace ManagementSoftware.GUI
 {
-    partial class formchanges
+    partial class FormChanges
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,7 +30,7 @@
         {
             Syncfusion.Windows.Forms.Tools.SplitButtonRenderer splitButtonRenderer1 = new Syncfusion.Windows.Forms.Tools.SplitButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SplitButtonRenderer splitButtonRenderer2 = new Syncfusion.Windows.Forms.Tools.SplitButtonRenderer();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formchanges));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChanges));
             this.splitButton1 = new Syncfusion.Windows.Forms.Tools.SplitButton();
             this.splitButton2 = new Syncfusion.Windows.Forms.Tools.SplitButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -146,7 +146,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(569, 439);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
             // 
             // tableLayoutPanel2
             // 
@@ -214,7 +213,6 @@
             this.numericUpDown1.Size = new System.Drawing.Size(219, 43);
             this.numericUpDown1.TabIndex = 0;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // panel4
             // 
@@ -513,7 +511,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button4
             // 
@@ -539,7 +536,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formchanges";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
