@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.BUS;
+using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
 using System;
 using System.Collections.Generic;
@@ -18,17 +19,13 @@ namespace ManagementSoftware.GUI
         public Login()
         {
             InitializeComponent();
-            this.ActiveControl = textBoxTaiKhoan;
+            this.ActiveControl = textBoxMatKhau;
+            //buttonChangeStringConnect.Enabled = false;
         }
+
 
         private void LoginActive()
         {
-
-            //init db
-            new DataBaseContext().CreateDatabase();
-
-
-
             string Username = textBoxTaiKhoan.Texts.Trim();
             string Password = textBoxMatKhau.Texts.Trim();
             if (String.IsNullOrEmpty(Username) == true && String.IsNullOrEmpty(Password) == true)
@@ -74,6 +71,16 @@ namespace ManagementSoftware.GUI
             {
                 LoginActive();
             }
+        }
+
+        private void buttonBepTu_Click(object sender, EventArgs e)
+        {
+            new FormStringConnectDatabase().ShowDialog();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            textBoxTaiKhoan.Texts = "admin";
         }
     }
 }

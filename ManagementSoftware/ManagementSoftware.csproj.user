@@ -13,9 +13,6 @@
     <Compile Update="GUI\ActivityManagement\FormEmployeeActivities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="GUI\Employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -28,7 +25,7 @@
     <Compile Update="GUI\formchanges.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\formdardb.cs">
+    <Compile Update="GUI\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\FormPurchaseOrder.cs">
@@ -89,6 +86,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Section\FormItemWorkingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Section\FormStringConnectDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Settings.cs">

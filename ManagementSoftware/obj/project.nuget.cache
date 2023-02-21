@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mo59PvTIyv+OU+5N5va5/qJyz+2E5ZPb2RrJTqH8X+ecqa1EuvkwLMYvFqGEyEkd+lpxWvDBuvATSe5xlB9JPg==",
+  "dgSpecHash": "1/gciqJkb5Gkshnt/gB6E7FUj3k3HzQcMp5C5KtGrUwuv9InM/0XiTvAlntnvVRswnqzfr2ByWCwXD9RR02A9A==",
   "success": true,
   "projectFilePath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\TPA\\ManagementSoftwareTPA\\ManagementSoftware\\ManagementSoftware.csproj",
   "expectedPackageFiles": [
@@ -34,7 +34,6 @@
     "C:\\Users\\xuanc\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.21.0\\microsoft.identitymodel.tokens.6.21.0.nupkg.sha512",
     "C:\\Users\\xuanc\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\xuanc\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
-    "C:\\Users\\xuanc\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1001\\microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512",
     "C:\\Users\\xuanc\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\xuanc\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\xuanc\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",

@@ -78,7 +78,7 @@ namespace ManagementSoftware.GUI
         {
             //Dashboard form = new Dashboard();
             //form.callAlert = new Dashboard.CallAlert(Alert);
-            formdardb form = new formdardb();
+            Dashboard form = new Dashboard();
             ChangeFormContent(form, sender);
         }
 

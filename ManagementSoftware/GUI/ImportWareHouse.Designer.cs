@@ -246,6 +246,7 @@
             this.textBoxSearch.BorderSize = 1;
             this.textBoxSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSearch.ForeColor = System.Drawing.Color.White;
             this.textBoxSearch.Location = new System.Drawing.Point(0, 48);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxSearch.Multiline = false;

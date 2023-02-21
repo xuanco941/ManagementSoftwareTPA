@@ -1,5 +1,4 @@
-﻿using ManagementSoftware.GUI.Section;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,13 +12,24 @@ namespace ManagementSoftware.GUI
 {
     public partial class Dashboard : Form
     {
-        // Aleart
-        public delegate void CallAlert(string msg, FormAlert.enmType type);
-        public CallAlert callAlert;
-
         public Dashboard()
         {
             InitializeComponent();
+        }
+
+        private void radialGauge1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
