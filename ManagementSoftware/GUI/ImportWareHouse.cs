@@ -1,7 +1,9 @@
 ﻿using ManagementSoftware.BUS;
+using ManagementSoftware.DAL;
 using ManagementSoftware.DAL.DALPagination;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
+using Syncfusion.XPS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,165 +23,116 @@ namespace ManagementSoftware.GUI
         public delegate void CallAlert(string msg, FormAlert.enmType type);
         public CallAlert callAlert;
 
-        int page = 1;
-        int TotalPages = 1;
-        string strSearch;
+        // ngày để query 
+        private DateTime? timeStart = null;
+        private DateTime? timeEnd = null;
+        // trang hiện tại
+        private int page = 1;
+
+        string strSearch = "";
+
+        // tổng số trang
+        private int TotalPages = 0;
+        //Data
+        List<Directive> ListResults = new List<Directive>();
+
 
 
         public ImportWareHouse()
         {
             InitializeComponent();
-            LoadForm();
         }
-        private void LoadForm()
-        {
 
-            PaginationDirectiveImportWareHouse pagination = BUSDirective.GetDataImportWareHouse(this.page, this.strSearch);
-            List<Directive>? list = pagination.ListResults;
+
+        private void LoadFormThongKe()
+        {
+            panel2.Enabled = false;
+
+            foreach (FormChiThiNhapKho form in panelMain.Controls)
+            {
+                form.Close();
+                form.Dispose();
+            }
+
+            PaginationDirectiveImportWareHouse pagination = new PaginationDirectiveImportWareHouse();
+            pagination.Set(page, strSearch);
+            this.ListResults = pagination.ListResults;
             this.TotalPages = pagination.TotalPages;
-            if (list != null)
-            {
-                if (this.TotalPages == 0)
-                {
-                    buttonPage1.Enabled = false;
-                    buttonPage2.Enabled = false;
-                    buttonPage3.Enabled = false;
-                    buttonPageNext.Enabled = false;
-                }
-                else if (this.TotalPages == 1)
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = false;
-                    buttonPage3.Enabled = false;
-                    buttonPageNext.Enabled = false;
-                }
-                else if (this.TotalPages == 2)
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = true;
-                    buttonPage3.Enabled = false;
-                    buttonPageNext.Enabled = false;
-                }
-                else if (this.TotalPages == 3)
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = true;
-                    buttonPage3.Enabled = true;
-                    buttonPageNext.Enabled = false;
-                }
-                else
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = true;
-                    buttonPage3.Enabled = true;
-                    buttonPageNext.Enabled = true;
-                }
+            lbTotalPages.Text = this.TotalPages.ToString();
 
-                panelMain.Controls.Clear();
-                for (int i = 0; i < list.Count; i++)
-                {
-                    FormChiThiNhapKho form = new FormChiThiNhapKho(list[i]);
-                    form.TopLevel = false;
-                    panelMain.Controls.Add(form);
-                    form.FormBorderStyle = FormBorderStyle.None;
-                    form.Dock = DockStyle.Top;
-                    form.Show();
-                }
+            buttonPreviousPage.Enabled = this.page > 1;
+            buttonNextPage.Enabled = this.page < this.TotalPages;
+            buttonPage.Text = this.page.ToString();
+
+            pageNumberGoto.MinValue = 1;
+            pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
+
+
+
+            for (int i = 0; i < ListResults.Count; i++)
+            {
+                FormChiThiNhapKho form = new FormChiThiNhapKho(ListResults[i]);
+                form.TopLevel = false;
+                panelMain.Controls.Add(form);
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Top;
+                form.Show();
+            }
+
+
+            panel2.Enabled = true;
+        }
+
+        private void buttonPreviousPage_Click(object sender, EventArgs e)
+        {
+            if (this.page > 1)
+            {
+                this.page = this.page - 1;
+                LoadFormThongKe();
             }
         }
 
-        private void buttonPage1_Click(object sender, EventArgs e)
+        private void buttonNextPage_Click(object sender, EventArgs e)
         {
-            // select button trang
-            Button button = sender as Button;
-
-            if (this.page > this.TotalPages)
+            if (this.page < this.TotalPages)
             {
-                this.page = this.TotalPages;
+                this.page = this.page + 1;
+                LoadFormThongKe();
             }
-            else
-            {
-                this.page = int.Parse(button.Text);
-                if (this.page <= 2)
-                {
-                    buttonPage1.Text = 1.ToString();
-                    buttonPage2.Text = 2.ToString();
-                    buttonPage3.Text = 3.ToString();
-                }
-                else
-                {
-                    buttonPage1.Text = (page - 1).ToString();
-                    buttonPage2.Text = page.ToString();
-                    buttonPage3.Text = (page + 1).ToString();
-                    //nếu tràng hiện tại là trang cuối cùng thì đặt các nút là các những trang cuối
-                    if (this.page == this.TotalPages)
-                    {
-                        buttonPage1.Text = (page - 2).ToString();
-                        buttonPage2.Text = (page - 1).ToString();
-                        buttonPage3.Text = page.ToString();
-                    }
-                }
-            }
-            LoadForm();
         }
 
-        private void buttonPageNext_Click(object sender, EventArgs e)
+        private void buttonSearch_Click(object sender, EventArgs e)
         {
-            if (this.page == this.TotalPages)
-            {
-                callAlert?.Invoke("Bạn đang ở trang cuối cùng.", FormAlert.enmType.Info);
-            }
-            else
-            {
-                // bấm next sẽ là trang số ở button3 + 1
-                int numPageButton3 = int.Parse(buttonPage3.Text);
-                if (numPageButton3 < this.TotalPages)
-                {
-                    if (this.page == 1)
-                    {
-                        this.page = 3;
-                        buttonPage1.Text = 2.ToString();
-                        buttonPage2.Text = 3.ToString();
-                        buttonPage3.Text = 4.ToString();
-                    }
-                    else
-                    {
-                        this.page = numPageButton3 + 1;
-                        //set lại button 1,2,3 
-                        if (this.page == this.TotalPages)
-                        {
-                            buttonPage1.Text = (this.page - 2).ToString();
-                            buttonPage2.Text = (this.page - 1).ToString();
-                            buttonPage3.Text = (this.page).ToString();
-                        }
-                        if (this.page + 1 <= this.TotalPages)
-                        {
-                            buttonPage1.Text = (this.page - 1).ToString();
-                            buttonPage2.Text = (this.page).ToString();
-                            buttonPage3.Text = (this.page + 1).ToString();
-                        }
-                        if (this.page + 2 <= this.TotalPages)
-                        {
-                            buttonPage1.Text = (this.page).ToString();
-                            buttonPage2.Text = (this.page + 1).ToString();
-                            buttonPage3.Text = (this.page + 2).ToString();
-                        }
-                    }
+            timeStart = TimeStart.Value;
+            timeEnd = TimeEnd.Value;
+            LoadFormThongKe();
+        }
 
-
-                }
-                else
-                {
-                    this.page = this.TotalPages;
-                }
-                LoadForm();
-            }
+        private void buttonGoto_Click(object sender, EventArgs e)
+        {
+            this.page = int.Parse(pageNumberGoto.Text);
+            LoadFormThongKe();
         }
 
         private void buttonCustomLoc_Click(object sender, EventArgs e)
         {
             this.strSearch = textBoxSearch.Texts;
-            LoadForm();
+            if(strSearch != placeHolderText)
+            {
+                LoadFormThongKe();
+            }
+        }
+
+        string placeHolderText = "";
+        private void ImportWareHouse_Load(object sender, EventArgs e)
+        {
+            placeHolderText = textBoxSearch.PlaceholderText;
+            LoadFormThongKe();
         }
     }
+
+
+
+
+    
 }

@@ -13,11 +13,12 @@ namespace ManagementSoftware.DAL.DALPagination
         public int PageCurrent { get; set; } = 1;
         public int TotalPages { get; set; } = 1;
         public int TotalResults { get; set; } = 0;
-        public List<Directive>? ListResults { get; set; }
+        public List<Directive> ListResults { get; set; } = new List<Directive>();
 
         public void Set(int page, string str)
         {
             DataBaseContext dbContext = new DataBaseContext();
+
 
             int position = (page - 1) * NumberRows;
 
@@ -25,7 +26,7 @@ namespace ManagementSoftware.DAL.DALPagination
             if (String.IsNullOrEmpty(str))
             {
                 this.ListResults = dbContext.Directives
-                .Skip(position) 
+                .Skip(position)
                 .Take(NumberRows)
                 .ToList();
 

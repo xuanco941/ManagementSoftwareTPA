@@ -1029,8 +1029,9 @@
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormViewDetailPurchaseOrder";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormViewDetail";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel20.ResumeLayout(false);
             this.panelGridButton.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);

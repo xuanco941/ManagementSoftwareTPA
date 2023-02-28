@@ -57,7 +57,7 @@ namespace ManagementSoftware.GUI.Section
         {
             FormViewDetailPurchaseOrder form = new FormViewDetailPurchaseOrder(purchase);
             form.changeData = new FormViewDetailPurchaseOrder.ChangeData(ActiveAlert);
-            form.Show();
+            form.ShowDialog();
 
         }
     }

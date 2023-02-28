@@ -67,7 +67,11 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
         void LoadDirectives()
         {
-            panelChiThiSX.Controls.Clear();
+            foreach (FormItemAddChiThiSX item in panelChiThiSX.Controls)
+            {
+                item.Close();
+            }
+
             if (productDictionary.Count > 0)
             {
                 foreach (var pr in productDictionary)
@@ -123,7 +127,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             changeData.Invoke(new FormDirectiveDecomposition(purchaseOrder));
         }
 
-        private void buttonAddProduct_Click(object sender, EventArgs e)
+        private void buttonAddProduct_Click_1(object sender, EventArgs e)
         {
             FormAddDirective form = new FormAddDirective();
             form.addDirectiveDelegate = new FormAddDirective.AddDirectiveDelegate(AddDirectiveToList);

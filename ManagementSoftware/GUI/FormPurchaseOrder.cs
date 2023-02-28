@@ -29,79 +29,25 @@ namespace ManagementSoftware.GUI
         // tổng số trang
         private int TotalPages = 1;
 
+        string? poID = null;
+
+        // ngày để query 
+        private DateTime? timeStart = null;
+        private DateTime? timeEnd = null;
+
         //condition
         private bool? status = null;
 
-
-        private void LoadForm(string? poID)
-        {
-
-            PaginationPurchaseOrder pagination = BUSPurchaseOrder.GetData(this.page, this.status, poID);
-            List<PurchaseOrder>? list = pagination.ListResults;
-            this.TotalPages = pagination.TotalPages;
-            if (list != null)
-            {
-                if (this.TotalPages == 0)
-                {
-                    buttonPage1.Enabled = false;
-                    buttonPage2.Enabled = false;
-                    buttonPage3.Enabled = false;
-                    buttonPageNext.Enabled = false;
-                }
-                else if (this.TotalPages == 1)
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = false;
-                    buttonPage3.Enabled = false;
-                    buttonPageNext.Enabled = false;
-                }
-                else if (this.TotalPages == 2)
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = true;
-                    buttonPage3.Enabled = false;
-                    buttonPageNext.Enabled = false;
-                }
-                else if (this.TotalPages == 3)
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = true;
-                    buttonPage3.Enabled = true;
-                    buttonPageNext.Enabled = false;
-                }
-                else
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = true;
-                    buttonPage3.Enabled = true;
-                    buttonPageNext.Enabled = true;
-                }
-
-                panelMain.Controls.Clear();
-                for (int i = 0; i < list.Count; i++)
-                {
-                    FormItemPO form = new FormItemPO(list[i]);
-                    form.changeData = new FormItemPO.ChangeData(AlertActive2);
-                    form.TopLevel = false;
-                    panelMain.Controls.Add(form);
-                    form.FormBorderStyle = FormBorderStyle.None;
-                    form.Dock = DockStyle.Top;
-                    form.Show();
-                }
-            }
-        }
-
+        List<PurchaseOrder> ListResults = new List<PurchaseOrder>();
 
         public FormPurchaseOrder()
         {
             InitializeComponent();
-            LoadForm(null);
         }
 
         public void AlertActive2(string msg, FormAlert.enmType type)
         {
             callAlert?.Invoke(msg, type);
-            LoadForm(null);
         }
 
         public void AlertActive(string msg, FormAlert.enmType type)
@@ -111,152 +57,150 @@ namespace ManagementSoftware.GUI
             this.page = 1;
             this.status = null;
             this.TotalPages = 1;
-            buttonPage1.Text = 1.ToString();
-            buttonPage2.Text = 2.ToString();
-            buttonPage3.Text = 3.ToString();
-            LoadForm(null);
+        }
+
+        private void LoadFormThongKe()
+        {
+            panelBoxSearch.Enabled = false;
+
+            foreach (FormItemPO form in panelMain.Controls)
+            {
+                form.Close();
+                form.Dispose();
+            }
+
+
+            if(btnLocClick == false)
+            {
+                poID = null;
+            }
+
+
+            PaginationPurchaseOrder pagination = new PaginationPurchaseOrder();
+            pagination.Set(page, status, poID,timeStart,timeEnd);
+            this.ListResults = pagination.ListResults;
+            this.TotalPages = pagination.TotalPages;
+            lbTotalPages.Text = this.TotalPages.ToString();
+
+            buttonPreviousPage.Enabled = this.page > 1;
+            buttonNextPage.Enabled = this.page < this.TotalPages;
+            buttonPage.Text = this.page.ToString();
+
+            pageNumberGoto.MinValue = 1;
+            pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
+
+
+
+            for (int i = 0; i < ListResults.Count; i++)
+            {
+                FormItemPO form = new FormItemPO(ListResults[i]);
+                form.TopLevel = false;
+                panelMain.Controls.Add(form);
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Top;
+                form.Show();
+            }
+
+
+            panelBoxSearch.Enabled = true;
         }
 
 
-        private void addPO_Click(object sender, EventArgs e)
+        private void buttonPreviousPage_Click(object sender, EventArgs e)
         {
-            FormAddPurchaseOrder form = new FormAddPurchaseOrder();
-            form.changeData = new FormAddPurchaseOrder.ChangeData(AlertActive);
-            form.ShowDialog();
+            if (this.page > 1)
+            {
+                this.page = this.page - 1;
+                LoadFormThongKe();
+            }
+        }
+
+        private void buttonNextPage_Click(object sender, EventArgs e)
+        {
+            if (this.page < this.TotalPages)
+            {
+                this.page = this.page + 1;
+                LoadFormThongKe();
+            }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            timeStart = TimeStart.Value;
+            timeEnd = TimeEnd.Value;
+            LoadFormThongKe();
+        }
+
+        private void buttonGoto_Click(object sender, EventArgs e)
+        {
+            this.page = int.Parse(pageNumberGoto.Text);
+            LoadFormThongKe();
+        }
+
+        void CheckBtnStt()
+        {
+            if(this.status == false)
+            {
+                buttonAll.ForeColor = Color.DimGray;
+                buttonDone.ForeColor = Color.DimGray;
+                buttonNotDone.ForeColor = Color.White;
+            }
+            else if (this.status == true)
+            {
+                buttonAll.ForeColor = Color.DimGray;
+                buttonDone.ForeColor = Color.White;
+                buttonNotDone.ForeColor = Color.DimGray;
+            }
+            else
+            {
+                buttonAll.ForeColor = Color.White;
+                buttonDone.ForeColor = Color.DimGray;
+                buttonNotDone.ForeColor = Color.DimGray;
+            }
         }
 
         private void buttonNotDone_Click(object sender, EventArgs e)
         {
-            this.page = 1;
+
             this.status = false;
-            this.TotalPages = 1;
-            buttonPage1.Text = 1.ToString();
-            buttonPage2.Text = 2.ToString();
-            buttonPage3.Text = 3.ToString();
-            LoadForm(null);
+            CheckBtnStt();
+            LoadFormThongKe();
         }
 
         private void buttonDone_Click(object sender, EventArgs e)
         {
-            this.page = 1;
             this.status = true;
-            this.TotalPages = 1;
-            buttonPage1.Text = 1.ToString();
-            buttonPage2.Text = 2.ToString();
-            buttonPage3.Text = 3.ToString();
-            LoadForm(null);
+            CheckBtnStt();
+            LoadFormThongKe();
         }
 
         private void buttonAll_Click(object sender, EventArgs e)
         {
-            this.page = 1;
             this.status = null;
-            this.TotalPages = 1;
-            buttonPage1.Text = 1.ToString();
-            buttonPage2.Text = 2.ToString();
-            buttonPage3.Text = 3.ToString();
-            LoadForm(null);
+            CheckBtnStt();
+            LoadFormThongKe();
         }
 
-        private void buttonPage1_Click(object sender, EventArgs e)
+
+        bool btnLocClick = false;
+        private void buttonLoc_Click(object sender, EventArgs e)
         {
-            // select button trang
-            Button button = sender as Button;
-
-            if (this.page > this.TotalPages)
+            if (String.IsNullOrEmpty(textBoxtSearch.Texts) == false || textBoxtSearch.Texts != textBoxtSearch.PlaceholderText)
             {
-                this.page = this.TotalPages;
-            }
-            else
-            {
-                this.page = int.Parse(button.Text);
-                if (this.page <= 2)
-                {
-                    buttonPage1.Text = 1.ToString();
-                    buttonPage2.Text = 2.ToString();
-                    buttonPage3.Text = 3.ToString();
-                }
-                else
-                {
-                    buttonPage1.Text = (page - 1).ToString();
-                    buttonPage2.Text = page.ToString();
-                    buttonPage3.Text = (page + 1).ToString();
-                    //nếu tràng hiện tại là trang cuối cùng thì đặt các nút là các những trang cuối
-                    if (this.page == this.TotalPages)
-                    {
-                        buttonPage1.Text = (page - 2).ToString();
-                        buttonPage2.Text = (page - 1).ToString();
-                        buttonPage3.Text = page.ToString();
-                    }
-                }
-            }
-            LoadForm(null);
-
-        }
-
-        private void buttonPageNext_Click(object sender, EventArgs e)
-        {
-            if (this.page == this.TotalPages)
-            {
-                callAlert?.Invoke("Bạn đang ở trang cuối cùng.", FormAlert.enmType.Info);
-            }
-            else
-            {
-                // bấm next sẽ là trang số ở button3 + 1
-                int numPageButton3 = int.Parse(buttonPage3.Text);
-                if (numPageButton3 < this.TotalPages)
-                {
-                    if (this.page == 1)
-                    {
-                        this.page = 3;
-                        buttonPage1.Text = 2.ToString();
-                        buttonPage2.Text = 3.ToString();
-                        buttonPage3.Text = 4.ToString();
-                    }
-                    else
-                    {
-                        this.page = numPageButton3 + 1;
-                        //set lại button 1,2,3 
-                        if (this.page == this.TotalPages)
-                        {
-                            buttonPage1.Text = (this.page - 2).ToString();
-                            buttonPage2.Text = (this.page - 1).ToString();
-                            buttonPage3.Text = (this.page).ToString();
-                        }
-                        if (this.page + 1 <= this.TotalPages)
-                        {
-                            buttonPage1.Text = (this.page - 1).ToString();
-                            buttonPage2.Text = (this.page).ToString();
-                            buttonPage3.Text = (this.page + 1).ToString();
-                        }
-                        if (this.page + 2 <= this.TotalPages)
-                        {
-                            buttonPage1.Text = (this.page).ToString();
-                            buttonPage2.Text = (this.page + 1).ToString();
-                            buttonPage3.Text = (this.page + 2).ToString();
-                        }
-                    }
+                poID = textBoxtSearch.Texts;
 
 
-                }
-                else
-                {
-                    this.page = this.TotalPages;
-                }
-                LoadForm(null);
+                btnLocClick = true;
+                LoadFormThongKe();
+                btnLocClick = false;
             }
         }
 
-        private void buttonCustom3_Click(object sender, EventArgs e)
+        private void FormPurchaseOrder_Load(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(textBoxSearchPO.Texts) == true || textBoxSearchPO.Texts == textBoxSearchPO.PlaceholderText)
-            {
-                LoadForm(null);
-            }
-            else
-            {
-                LoadForm(textBoxSearchPO.Texts);
-            }
+            CheckBtnStt();
+            LoadFormThongKe();
         }
     }
+
 }

@@ -372,7 +372,7 @@
             // 
             // txtReference
             // 
-            this.txtReference.BeforeTouchSize = new System.Drawing.Size(116, 23);
+            this.txtReference.BeforeTouchSize = new System.Drawing.Size(316, 29);
             this.txtReference.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtReference.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtReference.IntegerValue = ((long)(1));
@@ -665,7 +665,7 @@
             // 
             // txtPRPQ
             // 
-            this.txtPRPQ.BeforeTouchSize = new System.Drawing.Size(116, 23);
+            this.txtPRPQ.BeforeTouchSize = new System.Drawing.Size(316, 29);
             this.txtPRPQ.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPRPQ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPRPQ.IntegerValue = ((long)(1));
@@ -796,7 +796,7 @@
             // 
             // txtTongTienThanhToan
             // 
-            this.txtTongTienThanhToan.BeforeTouchSize = new System.Drawing.Size(116, 23);
+            this.txtTongTienThanhToan.BeforeTouchSize = new System.Drawing.Size(316, 29);
             this.txtTongTienThanhToan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTongTienThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTongTienThanhToan.IntegerValue = ((long)(1));
@@ -844,7 +844,7 @@
             // 
             // txtVAT
             // 
-            this.txtVAT.BeforeTouchSize = new System.Drawing.Size(116, 23);
+            this.txtVAT.BeforeTouchSize = new System.Drawing.Size(316, 29);
             this.txtVAT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtVAT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtVAT.IntegerValue = ((long)(1));
@@ -892,7 +892,7 @@
             // 
             // txtTongTienHang
             // 
-            this.txtTongTienHang.BeforeTouchSize = new System.Drawing.Size(116, 23);
+            this.txtTongTienHang.BeforeTouchSize = new System.Drawing.Size(316, 29);
             this.txtTongTienHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTongTienHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTongTienHang.IntegerValue = ((long)(1));
@@ -940,7 +940,7 @@
             // 
             // txtVuot
             // 
-            this.txtVuot.BeforeTouchSize = new System.Drawing.Size(116, 23);
+            this.txtVuot.BeforeTouchSize = new System.Drawing.Size(316, 29);
             this.txtVuot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtVuot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtVuot.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -990,7 +990,7 @@
             // 
             // txtChiPhiKhac
             // 
-            this.txtChiPhiKhac.BeforeTouchSize = new System.Drawing.Size(116, 23);
+            this.txtChiPhiKhac.BeforeTouchSize = new System.Drawing.Size(316, 29);
             this.txtChiPhiKhac.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiKhac.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiKhac.IntegerValue = ((long)(1));
@@ -1038,7 +1038,7 @@
             // 
             // txtChiPhiKyThuat
             // 
-            this.txtChiPhiKyThuat.BeforeTouchSize = new System.Drawing.Size(116, 23);
+            this.txtChiPhiKyThuat.BeforeTouchSize = new System.Drawing.Size(316, 29);
             this.txtChiPhiKyThuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiKyThuat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiKyThuat.IntegerValue = ((long)(1));
@@ -1086,7 +1086,7 @@
             // 
             // txtChiPhiChuyenGiao
             // 
-            this.txtChiPhiChuyenGiao.BeforeTouchSize = new System.Drawing.Size(116, 23);
+            this.txtChiPhiChuyenGiao.BeforeTouchSize = new System.Drawing.Size(316, 29);
             this.txtChiPhiChuyenGiao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiChuyenGiao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiChuyenGiao.IntegerValue = ((long)(1));
@@ -1134,7 +1134,7 @@
             // 
             // txtChiPhiVanChuyen
             // 
-            this.txtChiPhiVanChuyen.BeforeTouchSize = new System.Drawing.Size(116, 23);
+            this.txtChiPhiVanChuyen.BeforeTouchSize = new System.Drawing.Size(316, 29);
             this.txtChiPhiVanChuyen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtChiPhiVanChuyen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChiPhiVanChuyen.IntegerValue = ((long)(1));
@@ -1412,7 +1412,7 @@
             // 
             // txtThanhToan
             // 
-            this.txtThanhToan.BeforeTouchSize = new System.Drawing.Size(116, 23);
+            this.txtThanhToan.BeforeTouchSize = new System.Drawing.Size(316, 29);
             this.txtThanhToan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtThanhToan.IntegerValue = ((long)(1));

@@ -40,6 +40,7 @@ namespace ManagementSoftware.GUI
             this.buttonEmployee = new System.Windows.Forms.Button();
             this.buttonResult = new System.Windows.Forms.Button();
             this.buttonQuanLyKho = new System.Windows.Forms.Button();
+            this.buttonNhapKho = new System.Windows.Forms.Button();
             this.buttonWorkingList = new System.Windows.Forms.Button();
             this.buttonQuanLyDonHang = new System.Windows.Forms.Button();
             this.buttonDashboard = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@ namespace ManagementSoftware.GUI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelAleart = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonNhapKho = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelItemMenu.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -227,6 +227,25 @@ namespace ManagementSoftware.GUI
             this.buttonQuanLyKho.UseVisualStyleBackColor = true;
             this.buttonQuanLyKho.Click += new System.EventHandler(this.buttonQuanLyKho_Click);
             // 
+            // buttonNhapKho
+            // 
+            this.buttonNhapKho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNhapKho.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonNhapKho.FlatAppearance.BorderSize = 0;
+            this.buttonNhapKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNhapKho.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonNhapKho.ForeColor = System.Drawing.Color.White;
+            this.buttonNhapKho.Image = ((System.Drawing.Image)(resources.GetObject("buttonNhapKho.Image")));
+            this.buttonNhapKho.Location = new System.Drawing.Point(0, 237);
+            this.buttonNhapKho.Name = "buttonNhapKho";
+            this.buttonNhapKho.Size = new System.Drawing.Size(192, 79);
+            this.buttonNhapKho.TabIndex = 17;
+            this.buttonNhapKho.Text = "Nhập kho";
+            this.buttonNhapKho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonNhapKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonNhapKho.UseVisualStyleBackColor = true;
+            this.buttonNhapKho.Click += new System.EventHandler(this.buttonNhapKho_Click);
+            // 
             // buttonWorkingList
             // 
             this.buttonWorkingList.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -308,14 +327,15 @@ namespace ManagementSoftware.GUI
             // 
             // labelHeader
             // 
-            this.labelHeader.AutoSize = true;
-            this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelHeader.ForeColor = System.Drawing.Color.LightGray;
-            this.labelHeader.Location = new System.Drawing.Point(13, 24);
+            this.labelHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelHeader.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelHeader.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.labelHeader.Location = new System.Drawing.Point(0, 0);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(148, 25);
+            this.labelHeader.Size = new System.Drawing.Size(187, 70);
             this.labelHeader.TabIndex = 2;
             this.labelHeader.Text = "Bảng điều khiển";
+            this.labelHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelContainer
             // 
@@ -381,25 +401,6 @@ namespace ManagementSoftware.GUI
             this.panel2.Size = new System.Drawing.Size(187, 70);
             this.panel2.TabIndex = 0;
             // 
-            // buttonNhapKho
-            // 
-            this.buttonNhapKho.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonNhapKho.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNhapKho.FlatAppearance.BorderSize = 0;
-            this.buttonNhapKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNhapKho.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonNhapKho.ForeColor = System.Drawing.Color.White;
-            this.buttonNhapKho.Image = ((System.Drawing.Image)(resources.GetObject("buttonNhapKho.Image")));
-            this.buttonNhapKho.Location = new System.Drawing.Point(0, 237);
-            this.buttonNhapKho.Name = "buttonNhapKho";
-            this.buttonNhapKho.Size = new System.Drawing.Size(192, 79);
-            this.buttonNhapKho.TabIndex = 17;
-            this.buttonNhapKho.Text = "Nhập kho";
-            this.buttonNhapKho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonNhapKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonNhapKho.UseVisualStyleBackColor = true;
-            this.buttonNhapKho.Click += new System.EventHandler(this.buttonNhapKho_Click);
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -421,7 +422,6 @@ namespace ManagementSoftware.GUI
             this.panelHeader.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

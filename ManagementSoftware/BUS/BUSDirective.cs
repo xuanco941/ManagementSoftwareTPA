@@ -12,12 +12,7 @@ namespace ManagementSoftware.BUS
 {
     public class BUSDirective
     {
-        public static PaginationDirectiveImportWareHouse GetDataImportWareHouse(int page,string str)
-        {
-            PaginationDirectiveImportWareHouse pagination = new PaginationDirectiveImportWareHouse();
-            pagination.Set(page,str);
-            return pagination;
-        }
+
         public static List<Directive> GetAllDirectiveOfProduct(int idP)
         {
             return DALDirective.GetAllDirectiveOfProduct(idP);

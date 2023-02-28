@@ -12,12 +12,6 @@ namespace ManagementSoftware.BUS
 {
     public class BUSPurchaseOrder
     {
-        public static PaginationPurchaseOrder GetData(int page,bool? status, string? poID)
-        {
-            PaginationPurchaseOrder pagination = new PaginationPurchaseOrder();
-            pagination.Set(page, status, poID);
-            return pagination;
-        }
 
         public static AddUpdateDeleteResponse<PurchaseOrder> Add(PurchaseOrder po)
         {

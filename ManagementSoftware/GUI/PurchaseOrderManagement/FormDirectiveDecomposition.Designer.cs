@@ -43,7 +43,7 @@
             this.panelMain.Location = new System.Drawing.Point(0, 48);
             this.panelMain.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(988, 351);
+            this.panelMain.Size = new System.Drawing.Size(993, 632);
             this.panelMain.TabIndex = 13;
             // 
             // labelHeader
@@ -55,7 +55,7 @@
             this.labelHeader.Location = new System.Drawing.Point(0, 0);
             this.labelHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(986, 46);
+            this.labelHeader.Size = new System.Drawing.Size(991, 46);
             this.labelHeader.TabIndex = 14;
             this.labelHeader.Text = "Danh sách sản phẩm đơn hàng";
             this.labelHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,7 +68,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(988, 48);
+            this.panel1.Size = new System.Drawing.Size(993, 48);
             this.panel1.TabIndex = 12;
             // 
             // FormDirectiveDecomposition
@@ -76,7 +76,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(988, 399);
+            this.ClientSize = new System.Drawing.Size(993, 680);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel1);
             this.Name = "FormDirectiveDecomposition";

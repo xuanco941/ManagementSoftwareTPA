@@ -13,9 +13,9 @@ namespace ManagementSoftware.DAL.DALPagination
         public int PageCurrent { get; set; } = 1;
         public int TotalPages { get; set; } = 1;
         public int TotalResults { get; set; } = 0;
-        public List<PurchaseOrder>? ListResults { get; set; }
+        public List<PurchaseOrder> ListResults { get; set; } = new List<PurchaseOrder>();
 
-        public void Set(int page, bool? status, string? poID)
+        public void Set(int page, bool? status, string? poID, DateTime? start, DateTime? end)
         {
             DataBaseContext dbContext = new DataBaseContext();
 
