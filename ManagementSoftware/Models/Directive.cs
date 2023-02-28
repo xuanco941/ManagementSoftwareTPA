@@ -13,13 +13,14 @@ namespace ManagementSoftware.Models
     {
         [Key]
         public int DirectiveID { get; set; }
-        public int SoLuongDaSanXuat { get; set; } = 0;
+        public int SoLuongDaSanXuat { get; set; }
         public int SoLuongCanSanXuat { get; set; }
         //người vận hành
         public string Worker { get; set; }
         public bool Status { get; set; }
         public DateTime BeginAt { get; set; }
         public DateTime EndAt { get; set; }
+        public DateTime CreateAt { get; set; }
 
         public int ProductID { get; set; }
         public Product Product { get; set; }

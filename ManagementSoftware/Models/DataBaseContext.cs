@@ -66,6 +66,7 @@ namespace ManagementSoftware.Models
             {
                 entity.Property(e => e.Status).HasDefaultValueSql("(0)");
                 entity.Property(e => e.SoLuongDaSanXuat).HasDefaultValueSql("(0)");
+                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
             });
             //ImportedWareHouse
             modelBuilder.Entity<ImportedWarehouse>(entity =>

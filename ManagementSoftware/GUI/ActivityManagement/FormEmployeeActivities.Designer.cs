@@ -49,6 +49,7 @@ namespace ManagementSoftware.GUI.ActivityManagement
             // panelUser
             // 
             this.panelUser.AutoScroll = true;
+            this.panelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelUser.Location = new System.Drawing.Point(798, 0);
             this.panelUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

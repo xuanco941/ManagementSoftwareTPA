@@ -50,6 +50,7 @@ namespace ManagementSoftware.GUI.Section
         void ActiveAlert(string msg, FormAlert.enmType enmType)
         {
             this.changeData.Invoke(msg, enmType);
+            this.Close();
         }
 
 

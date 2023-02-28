@@ -15,7 +15,6 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static ManagementSoftware.GUI.Section.FormAlert;
 
 namespace ManagementSoftware.GUI
 {
@@ -29,7 +28,7 @@ namespace ManagementSoftware.GUI
         // tổng số trang
         private int TotalPages = 1;
 
-        string? poID = null;
+        string poID = "";
 
         // ngày để query 
         private DateTime? timeStart = null;
@@ -45,34 +44,40 @@ namespace ManagementSoftware.GUI
             InitializeComponent();
         }
 
+
+
+        public void AlertActive(string msg, FormAlert.enmType type)
+        {
+            callAlert?.Invoke(msg, type);
+            LoadFormThongKe();
+        }
+
         public void AlertActive2(string msg, FormAlert.enmType type)
         {
             callAlert?.Invoke(msg, type);
         }
 
-        public void AlertActive(string msg, FormAlert.enmType type)
-        {
-            callAlert?.Invoke(msg, type);
-            //load lai data
-            this.page = 1;
-            this.status = null;
-            this.TotalPages = 1;
-        }
-
-        private void LoadFormThongKe()
+        private async void LoadFormThongKe()
         {
             panelBoxSearch.Enabled = false;
 
-            foreach (FormItemPO form in panelMain.Controls)
+            // Lưu các FormItemPO cũ vào danh sách
+            List<FormItemPO> oldForms = new List<FormItemPO>();
+            foreach (FormItemPO oldForm in panelMain.Controls)
             {
-                form.Close();
-                form.Dispose();
+                oldForms.Add(oldForm);
             }
 
-
-            if(btnLocClick == false)
+            // Đóng/loại bỏ các FormItemPO cũ khỏi panelMain.Controls
+            foreach (FormItemPO oldForm in oldForms)
             {
-                poID = null;
+                oldForm.Close();
+                oldForm.Dispose();
+            }
+
+            if (btnLocClick == false)
+            {
+                poID = "";
             }
 
 
@@ -94,6 +99,7 @@ namespace ManagementSoftware.GUI
             for (int i = 0; i < ListResults.Count; i++)
             {
                 FormItemPO form = new FormItemPO(ListResults[i]);
+                form.changeData = new FormItemPO.ChangeData(AlertActive2);
                 form.TopLevel = false;
                 panelMain.Controls.Add(form);
                 form.FormBorderStyle = FormBorderStyle.None;
@@ -189,7 +195,6 @@ namespace ManagementSoftware.GUI
             {
                 poID = textBoxtSearch.Texts;
 
-
                 btnLocClick = true;
                 LoadFormThongKe();
                 btnLocClick = false;
@@ -200,6 +205,13 @@ namespace ManagementSoftware.GUI
         {
             CheckBtnStt();
             LoadFormThongKe();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            FormAddPurchaseOrder form = new FormAddPurchaseOrder();
+            form.changeData = new FormAddPurchaseOrder.ChangeData(AlertActive);
+            form.ShowDialog();
         }
     }
 

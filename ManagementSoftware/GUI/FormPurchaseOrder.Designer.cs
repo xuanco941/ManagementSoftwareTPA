@@ -281,9 +281,11 @@
             this.buttonAdd.TextColor = System.Drawing.Color.Black;
             this.buttonAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // panelMain
             // 
+            this.panelMain.AutoScroll = true;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 47);
             this.panelMain.Name = "panelMain";

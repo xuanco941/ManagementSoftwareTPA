@@ -25,7 +25,6 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
         {
             InitializeComponent();
             this.purchaseOrder = po;
-            LoadForm();
         }
 
         void LoadForm()
@@ -55,7 +54,11 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
             labelTongTien.Text = purchaseOrder.TongTienThanhToan + "đ";
 
-            panelProducts.Controls.Clear();
+            foreach (FormItemFormViewDetailPO item in panelProducts.Controls)
+            {
+                item.Close();
+            }
+
             List<Product> list = BUSProduct.GetProductOfPO(purchaseOrder.PurchaseOrderID);
             for (int i = 0; i < list.Count; i++)
             {
@@ -91,5 +94,9 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             new FormDirectiveDecomposition(purchaseOrder).ShowDialog();
         }
 
+        private void FormViewDetailPurchaseOrder_Load(object sender, EventArgs e)
+        {
+            LoadForm();
+        }
     }
 }
