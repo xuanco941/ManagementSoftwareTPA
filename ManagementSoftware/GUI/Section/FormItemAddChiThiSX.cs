@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.BUS;
+using ManagementSoftware.DAL;
 using ManagementSoftware.Models;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace ManagementSoftware.GUI.Section
             this.position = p;
             this.d = directive;
 
-            labelMaChiThi.Text = "Mã chỉ thị : " + (directive.DirectiveID != 0 ? Common.DIRECTIVE + directive.DirectiveID : Common.DIRECTIVE);
+            labelMaChiThi.Text = "Mã chỉ thị : " + Common.DIRECTIVE + directive.DirectiveID;
             labelSoLuongDaSX.Text = "Số lượng đã sản xuất : " + directive.SoLuongDaSanXuat;
             labelNgayBatDau.Text = "Ngày bắt đầu : " + directive.BeginAt.ToString("dd/MM/yyyy");
             labelNgayKetThuc.Text = "Ngày kết thúc : " + directive.EndAt.ToString("dd/MM/yyyy");
@@ -43,10 +44,11 @@ namespace ManagementSoftware.GUI.Section
             {
                 if (d.DirectiveID != 0)
                 {
-                    bool result = BUS.BUSDirective.Delete(d.DirectiveID).Status;
-                    if (result == false)
+                    int result = DALDirective.Delete(d.DirectiveID);
+                    if (result < 1)
                     {
                         MessageBox.Show("Gặp lỗi khi loại bỏ chỉ thị này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                     }
                 }
                 deleteChiThiSXDelegate.Invoke(this.position);

@@ -61,19 +61,7 @@ namespace ManagementSoftware.GUI
         {
             panelBoxSearch.Enabled = false;
 
-            // Lưu các FormItemPO cũ vào danh sách
-            List<FormItemPO> oldForms = new List<FormItemPO>();
-            foreach (FormItemPO oldForm in panelMain.Controls)
-            {
-                oldForms.Add(oldForm);
-            }
-
-            // Đóng/loại bỏ các FormItemPO cũ khỏi panelMain.Controls
-            foreach (FormItemPO oldForm in oldForms)
-            {
-                oldForm.Close();
-                oldForm.Dispose();
-            }
+            new MethodCommonGUI().CloseFormInPanel(panelMain);
 
             if (btnLocClick == false)
             {
@@ -95,10 +83,9 @@ namespace ManagementSoftware.GUI
             pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
 
 
-
-            for (int i = 0; i < ListResults.Count; i++)
+            foreach (var item in ListResults)
             {
-                FormItemPO form = new FormItemPO(ListResults[i]);
+                FormItemPO form = new FormItemPO(item);
                 form.changeData = new FormItemPO.ChangeData(AlertActive2);
                 form.TopLevel = false;
                 panelMain.Controls.Add(form);

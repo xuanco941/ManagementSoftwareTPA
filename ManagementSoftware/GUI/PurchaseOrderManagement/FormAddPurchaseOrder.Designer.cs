@@ -943,7 +943,6 @@
             txtVuot.BeforeTouchSize = new Size(316, 29);
             txtVuot.Dock = DockStyle.Fill;
             txtVuot.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtVuot.ForeColor = SystemColors.WindowText;
             txtVuot.IntegerValue = 0L;
             txtVuot.Location = new Point(26, 5);
             txtVuot.Margin = new Padding(4, 3, 4, 3);
@@ -952,6 +951,7 @@
             txtVuot.Name = "txtVuot";
             txtVuot.Size = new Size(316, 29);
             txtVuot.TabIndex = 1;
+            txtVuot.Text = "0";
             // 
             // panel39
             // 

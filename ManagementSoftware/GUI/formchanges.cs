@@ -7,6 +7,6 @@ namespace ManagementSoftware.GUI
             InitializeComponent();
         }
 
-        
+
     }
 }
