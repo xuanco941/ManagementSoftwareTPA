@@ -29,7 +29,7 @@ namespace ManagementSoftware.GUI.Section
             labelNgayBatDau.Text = "Ngày bắt đầu : " + directive.BeginAt.ToString("dd/MM/yyyy");
             labelNgayKetThuc.Text = "Ngày kết thúc : " + directive.EndAt.ToString("dd/MM/yyyy");
             labelSoLuongDaSanXuat.Text = "Số lượng đã sản xuất : " + directive.SoLuongDaSanXuat;
-            
+
         }
 
         private void buttonDashboard_Click(object sender, EventArgs e)

@@ -22,7 +22,7 @@ namespace ManagementSoftware.GUI.Section
             InitializeComponent();
             this.directive = d;
             Product? p = new DAL.DALProduct().GetProductFromID(d.ProductID);
-            if(p != null)
+            if (p != null)
             {
                 this.product = p;
             }
@@ -47,7 +47,7 @@ namespace ManagementSoftware.GUI.Section
 
         private void buttonNhapKho_Click(object sender, EventArgs e)
         {
-            new FormNhapKho(this.directive,this.product).ShowDialog();
+            new FormNhapKho(this.directive, this.product).ShowDialog();
         }
     }
 }

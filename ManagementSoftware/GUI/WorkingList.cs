@@ -43,6 +43,7 @@ namespace ManagementSoftware.GUI
         {
             InitializeComponent();
             dALProduct = new DALProduct();
+            labelHeader.Text = labelHeader.Text + $" ({Common.USERSESSION.Username})" ;
         }
 
         private void LoadDGV()
@@ -55,7 +56,6 @@ namespace ManagementSoftware.GUI
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Thể tích bình", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Chất lượng khí", SortMode = DataGridViewColumnSortMode.NotSortable });
 
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Người thực hiện", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng cần sản xuất", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng đã sản xuất", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Ngày bắt đầu", SortMode = DataGridViewColumnSortMode.NotSortable });
@@ -127,11 +127,10 @@ namespace ManagementSoftware.GUI
                     row.Cells[4].Value = p.ChatLuongKhi;
                 }
 
-                row.Cells[5].Value = item.Worker;
-                row.Cells[6].Value = item.SoLuongCanSanXuat;
-                row.Cells[7].Value = item.SoLuongDaSanXuat;
-                row.Cells[8].Value = item.BeginAt.ToString($"HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-                row.Cells[9].Value = item.EndAt.ToString($"HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture); ;
+                row.Cells[5].Value = item.SoLuongCanSanXuat;
+                row.Cells[6].Value = item.SoLuongDaSanXuat;
+                row.Cells[7].Value = item.BeginAt.ToString($"HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                row.Cells[8].Value = item.EndAt.ToString($"HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture); ;
 
                 if (count % 2 == 0)
                 {

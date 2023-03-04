@@ -73,10 +73,10 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
         private void buttonXoaPO_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa đơn hàng {Common.PURCHASEORDER+purchaseOrder.PurchaseOrderID}?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa đơn hàng {Common.PURCHASEORDER + purchaseOrder.PurchaseOrderID}?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                if(BUSPurchaseOrder.Delete(purchaseOrder.PurchaseOrderID).Status == true)
+                if (BUSPurchaseOrder.Delete(purchaseOrder.PurchaseOrderID).Status == true)
                 {
                     this.Close();
                     changeData?.Invoke("Xóa thành công.", FormAlert.enmType.Success);

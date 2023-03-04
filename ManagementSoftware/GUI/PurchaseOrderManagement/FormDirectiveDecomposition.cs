@@ -27,7 +27,18 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
         {
             labelHeader.Text = "Danh sách sản phẩm của đơn hàng " + Common.PURCHASEORDER + purchaseOrder.PurchaseOrderID;
 
-            panelMain.Controls.Clear();
+            List<Form> oldForms = new List<Form>();
+            foreach (Form oldForm in panelMain.Controls)
+            {
+                oldForms.Add(oldForm);
+            }
+            foreach (Form oldForm in oldForms)
+            {
+                oldForm.Close();
+                oldForm.Dispose();
+            }
+
+
             List<Product> list = BUSProduct.GetProductOfPO(purchaseOrder.PurchaseOrderID);
             for (int i = 0; i < list.Count; i++)
             {

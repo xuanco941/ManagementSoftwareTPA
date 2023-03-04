@@ -117,7 +117,7 @@ namespace ManagementSoftware.GUI
         private void buttonCustomLoc_Click(object sender, EventArgs e)
         {
             this.strSearch = textBoxSearch.Texts;
-            if(strSearch != placeHolderText)
+            if (strSearch != placeHolderText)
             {
                 LoadFormThongKe();
             }
@@ -134,5 +134,5 @@ namespace ManagementSoftware.GUI
 
 
 
-    
+
 }

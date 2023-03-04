@@ -28,63 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.labelHeader = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            panelMain = new Panel();
+            labelHeader = new Label();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panelMain
             // 
-            this.panelMain.AutoScroll = true;
-            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 48);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(993, 632);
-            this.panelMain.TabIndex = 13;
+            panelMain.AutoScroll = true;
+            panelMain.BackColor = Color.FromArgb(32, 32, 32);
+            panelMain.BorderStyle = BorderStyle.FixedSingle;
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(0, 48);
+            panelMain.Margin = new Padding(4, 3, 4, 3);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(1103, 737);
+            panelMain.TabIndex = 13;
             // 
             // labelHeader
             // 
-            this.labelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.labelHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelHeader.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelHeader.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelHeader.Location = new System.Drawing.Point(0, 0);
-            this.labelHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(991, 46);
-            this.labelHeader.TabIndex = 14;
-            this.labelHeader.Text = "Danh sách sản phẩm đơn hàng";
-            this.labelHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelHeader.BackColor = Color.FromArgb(32, 32, 32);
+            labelHeader.Dock = DockStyle.Fill;
+            labelHeader.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelHeader.ForeColor = SystemColors.ActiveCaption;
+            labelHeader.Location = new Point(0, 0);
+            labelHeader.Margin = new Padding(4, 0, 4, 0);
+            labelHeader.Name = "labelHeader";
+            labelHeader.Size = new Size(1101, 46);
+            labelHeader.TabIndex = 14;
+            labelHeader.Text = "Danh sách sản phẩm đơn hàng";
+            labelHeader.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.labelHeader);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(993, 48);
-            this.panel1.TabIndex = 12;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(labelHeader);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1103, 48);
+            panel1.TabIndex = 12;
             // 
             // FormDirectiveDecomposition
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(993, 680);
-            this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panel1);
-            this.Name = "FormDirectiveDecomposition";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormDirectiveDecomposition";
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(41, 44, 51);
+            ClientSize = new Size(1103, 785);
+            Controls.Add(panelMain);
+            Controls.Add(panel1);
+            MinimumSize = new Size(1119, 824);
+            Name = "FormDirectiveDecomposition";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FormDirectiveDecomposition";
+            WindowState = FormWindowState.Maximized;
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion

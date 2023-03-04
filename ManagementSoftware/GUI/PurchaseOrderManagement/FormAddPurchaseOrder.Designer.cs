@@ -240,7 +240,7 @@
             buttonAddProduct.Cursor = Cursors.Hand;
             buttonAddProduct.Dock = DockStyle.Fill;
             buttonAddProduct.FlatStyle = FlatStyle.Flat;
-            buttonAddProduct.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAddProduct.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonAddProduct.ForeColor = SystemColors.Control;
             buttonAddProduct.Image = (Image)resources.GetObject("buttonAddProduct.Image");
             buttonAddProduct.ImageAlign = ContentAlignment.MiddleRight;
@@ -270,7 +270,7 @@
             // 
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Plum;
             label2.Location = new Point(0, 0);
             label2.Margin = new Padding(4, 0, 4, 0);
@@ -714,7 +714,7 @@
             // 
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.LightSkyBlue;
             label1.Location = new Point(0, 0);
             label1.Margin = new Padding(4, 0, 4, 0);
@@ -1184,7 +1184,7 @@
             // 
             label15.BorderStyle = BorderStyle.FixedSingle;
             label15.Dock = DockStyle.Fill;
-            label15.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label15.ForeColor = Color.Goldenrod;
             label15.Location = new Point(0, 0);
             label15.Margin = new Padding(4, 0, 4, 0);
@@ -1209,7 +1209,7 @@
             // label12
             // 
             label12.Dock = DockStyle.Fill;
-            label12.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             label12.ForeColor = SystemColors.ActiveCaption;
             label12.Location = new Point(0, 0);
             label12.Margin = new Padding(4, 0, 4, 0);
@@ -1461,7 +1461,7 @@
             // 
             label23.BorderStyle = BorderStyle.FixedSingle;
             label23.Dock = DockStyle.Fill;
-            label23.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label23.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label23.ForeColor = Color.YellowGreen;
             label23.Location = new Point(0, 0);
             label23.Margin = new Padding(4, 0, 4, 0);

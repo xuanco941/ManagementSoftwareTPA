@@ -26,7 +26,7 @@ namespace ManagementSoftware.GUI.Section
             labelApSuatNap.Text = "Áp suất nạp : " + product.ApSuatNap;
             labelLoaiKhi.Text = "Loại khí : " + product.LoaiKhi;
             labelChatLuongKhi.Text = "Chất lượng khí : " + product.ChatLuongKhi + "%";
-            labelSoLuongSx.Text = "Số lượng sản xuất : " + product.SoLuongSanXuat;
+            labelSoLuongSx.Text = "Số lượng sx : " + product.SoLuongSanXuat;
             labelTheTichBinh.Text = "Thể tích bình : " + product.TheTichBinh;
         }
 

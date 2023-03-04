@@ -47,7 +47,7 @@ namespace ManagementSoftware.GUI.Section
         }
         private void buttonPhanTi_Click(object sender, EventArgs e)
         {
-            FormDirectiveDecompositionDetail form = new FormDirectiveDecompositionDetail(this.product,this.purchaseOrder);
+            FormDirectiveDecompositionDetail form = new FormDirectiveDecompositionDetail(this.product, this.purchaseOrder);
             form.changeData = new FormDirectiveDecompositionDetail.ChangeData(LoadForm);
             this.changeData.Invoke(form);
         }
