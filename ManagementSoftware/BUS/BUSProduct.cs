@@ -20,10 +20,6 @@ namespace ManagementSoftware.BUS
         {
             return DALProduct.GetProductOfPO(poID);
         }
-        public static Product? GetProductFromID(int id)
-        {
-            return DALProduct.GetProductFromID(id);
-        }
         public static AddUpdateDeleteResponse<List<Product>> AddRange(List<Product> listProduct)
         {
             //response

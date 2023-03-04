@@ -25,7 +25,7 @@ namespace ManagementSoftware
         //App
         public static User USERSESSION { get; set; }
         public static int NumberRows = 40;
-        public static int NumberRowsFormPurchaseOrder = 20;
+        public static int NumberRowsFormPurchaseOrder = 15;
 
         //Key ID
         //User

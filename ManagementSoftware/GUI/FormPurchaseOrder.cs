@@ -82,7 +82,7 @@ namespace ManagementSoftware.GUI
 
 
             PaginationPurchaseOrder pagination = new PaginationPurchaseOrder();
-            pagination.Set(page, status, poID,timeStart,timeEnd);
+            pagination.Set(page, status, poID, timeStart, timeEnd);
             this.ListResults = pagination.ListResults;
             this.TotalPages = pagination.TotalPages;
             lbTotalPages.Text = this.TotalPages.ToString();
@@ -145,7 +145,7 @@ namespace ManagementSoftware.GUI
 
         void CheckBtnStt()
         {
-            if(this.status == false)
+            if (this.status == false)
             {
                 buttonAll.ForeColor = Color.DimGray;
                 buttonDone.ForeColor = Color.DimGray;

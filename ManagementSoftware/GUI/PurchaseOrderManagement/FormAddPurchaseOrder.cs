@@ -60,7 +60,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
         private void AddProductToList(Product product)
         {
-            productDictionary.Add(this.key,product);
+            productDictionary.Add(this.key, product);
             this.key++;
             LoadProducts();
         }
@@ -74,7 +74,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
         private void buttonAddPO_Click(object sender, EventArgs e)
         {
-            if(productDictionary.Count < 1)
+            if (productDictionary.Count < 1)
             {
                 MessageBox.Show("Chưa có sản phẩm nào trong đơn hàng này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -105,7 +105,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             purchaseOrder.SoSanPhamCanSX = productDictionary.Count;
             purchaseOrder.SoSanPhamDaSX = 0;
             AddUpdateDeleteResponse<PurchaseOrder> response = BUSPurchaseOrder.Add(purchaseOrder);
-            if(response != null && response.Status == false)
+            if (response != null && response.Status == false)
             {
                 MessageBox.Show("Thêm không thành công.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -119,7 +119,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
                     list.Add(item.Value);
                 }
                 AddUpdateDeleteResponse<List<Product>> responseProduct = BUSProduct.AddRange(list);
-                if(responseProduct != null && responseProduct.Status == true)
+                if (responseProduct != null && responseProduct.Status == true)
                 {
                     changeData.Invoke("Thêm đơn hàng thành công!", FormAlert.enmType.Success);
                 }

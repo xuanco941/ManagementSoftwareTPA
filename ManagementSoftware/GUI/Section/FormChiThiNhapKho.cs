@@ -21,7 +21,7 @@ namespace ManagementSoftware.GUI.Section
         {
             InitializeComponent();
             this.directive = d;
-            Product? p = BUSProduct.GetProductFromID(d.ProductID);
+            Product? p = new DAL.DALProduct().GetProductFromID(d.ProductID);
             if(p != null)
             {
                 this.product = p;

@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSoftware.BUS;
+using ManagementSoftware.DAL;
+using ManagementSoftware.DAL.DALPagination;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
 
@@ -33,17 +36,25 @@ namespace ManagementSoftware.GUI
         private DateTime? timeStart = null;
         private DateTime? timeEnd = null;
 
+        List<Directive> ListResults = new List<Directive>();
 
+        DALProduct dALProduct;
         public WorkingList()
         {
             InitializeComponent();
-            LoadFormThongKe();
+            dALProduct = new DALProduct();
         }
 
         private void LoadDGV()
         {
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "STT", SortMode = DataGridViewColumnSortMode.NotSortable });
+
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Tên sản phẩm", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Áp suất nạp", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Thể tích bình", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Chất lượng khí", SortMode = DataGridViewColumnSortMode.NotSortable });
+
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Người thực hiện", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng cần sản xuất", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng đã sản xuất", SortMode = DataGridViewColumnSortMode.NotSortable });
@@ -51,7 +62,7 @@ namespace ManagementSoftware.GUI
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Ngày kết thúc", SortMode = DataGridViewColumnSortMode.NotSortable });
 
 
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
+            //dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -60,7 +71,7 @@ namespace ManagementSoftware.GUI
 
             dataGridView1.RowTemplate.Height = 40;
             dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.DefaultCellStyle.ForeColor = Color.White;
+            //dataGridView1.DefaultCellStyle.ForeColor = Color.White;
             dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Regular);
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
@@ -77,41 +88,62 @@ namespace ManagementSoftware.GUI
             LoadFormThongKe();
         }
 
-        private void LoadFormThongKe()
+        void LoadFormThongKe()
         {
-            //List<Directive> list = BUSDirective.GetAllDirectiveOfUser(Common.USERSESSION.UserID);
-            //foreach (Directive i in list)
-            //{
-            //    FormItemWorkingList form = new FormItemWorkingList(i);
-            //    form.TopLevel = false;
-            //    panelMain.Controls.Add(form);
-            //    form.FormBorderStyle = FormBorderStyle.None;
-            //    form.Dock = DockStyle.Top;
-            //    form.Show();
-            //}
+            panelBoxSearch.Enabled = false;
+            dataGridView1.Rows.Clear();
 
 
-            //foreach (var i in l)
-            //{
-            //    int rowId = dataGridView1.Rows.Add();
-            //    DataGridViewRow row = dataGridView1.Rows[rowId];
+            PaginationWorkingList pagination = new PaginationWorkingList();
+            pagination.Set(page, timeStart, timeEnd);
+            this.ListResults = pagination.ListResults;
 
-            //    row.Cells[0].Value = date;
-            //    row.Cells[1].Value = i.CongTacName + " - " + i.JigCongTac;
-            //    row.Cells[2].Value = i.TrangThai == true ? "ON" : "OFF";
-            //    row.Cells[3].Value = i.LanTestThu;
-            //    row.Cells[4].Value = i.Error;
 
-            //    if (i.Error != Common.NOT_ERROR_STR)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.Crimson;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.PaleGreen;
-            //    }
-            //}
+            this.TotalPages = pagination.TotalPages;
+            lbTotalPages.Text = this.TotalPages.ToString();
+
+            buttonPreviousPage.Enabled = this.page > 1;
+            buttonNextPage.Enabled = this.page < this.TotalPages;
+            buttonPage.Text = this.page.ToString();
+
+            pageNumberGoto.MinValue = 1;
+            pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
+
+            int count = 1;
+
+            foreach (var item in this.ListResults)
+            {
+                int rowId = dataGridView1.Rows.Add();
+                DataGridViewRow row = dataGridView1.Rows[rowId];
+                row.Cells[0].Value = count;
+
+                Product? p = dALProduct.GetProductFromID(item.ProductID);
+
+                if (p != null)
+                {
+                    row.Cells[1].Value = p.ProductName;
+                    row.Cells[2].Value = p.ApSuatNap;
+                    row.Cells[3].Value = p.TheTichBinh;
+                    row.Cells[4].Value = p.ChatLuongKhi;
+                }
+
+                row.Cells[5].Value = item.Worker;
+                row.Cells[6].Value = item.SoLuongCanSanXuat;
+                row.Cells[7].Value = item.SoLuongDaSanXuat;
+                row.Cells[8].Value = item.BeginAt.ToString($"HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                row.Cells[9].Value = item.EndAt.ToString($"HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture); ;
+
+                if (count % 2 == 0)
+                {
+                    row.DefaultCellStyle.BackColor = Color.PaleGreen;
+                }
+                count++;
+
+            }
+
+            panelBoxSearch.Enabled = true;
         }
+
 
         private void buttonPreviousPage_Click(object sender, EventArgs e)
         {
