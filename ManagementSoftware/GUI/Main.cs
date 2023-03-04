@@ -46,18 +46,7 @@ namespace ManagementSoftware.GUI
             }
 
 
-            List<Form> oldForms = new List<Form>();
-            foreach (Form oldForm in panelContent.Controls)
-            {
-                oldForms.Add(oldForm);
-            }
-
-            // Đóng/loại bỏ các FormItemPO cũ khỏi panelMain.Controls
-            foreach (Form oldForm in oldForms)
-            {
-                oldForm.Close();
-                oldForm.Dispose();
-            }
+            new MethodCommonGUI().CloseFormInPanel(panelContent);
 
             ////remove controls in panel
 

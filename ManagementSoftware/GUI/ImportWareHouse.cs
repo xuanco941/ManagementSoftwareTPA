@@ -48,11 +48,7 @@ namespace ManagementSoftware.GUI
         {
             panel2.Enabled = false;
 
-            foreach (FormChiThiNhapKho form in panelMain.Controls)
-            {
-                form.Close();
-                form.Dispose();
-            }
+            new MethodCommonGUI().CloseFormInPanel(panelMain);
 
             PaginationDirectiveImportWareHouse pagination = new PaginationDirectiveImportWareHouse();
             pagination.Set(page, strSearch);

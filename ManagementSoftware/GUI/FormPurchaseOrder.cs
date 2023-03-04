@@ -147,21 +147,21 @@ namespace ManagementSoftware.GUI
         {
             if (this.status == false)
             {
-                buttonAll.ForeColor = Color.DimGray;
-                buttonDone.ForeColor = Color.DimGray;
+                buttonAll.ForeColor = Color.Black;
+                buttonDone.ForeColor = Color.Black;
                 buttonNotDone.ForeColor = Color.White;
             }
             else if (this.status == true)
             {
-                buttonAll.ForeColor = Color.DimGray;
+                buttonAll.ForeColor = Color.Black;
                 buttonDone.ForeColor = Color.White;
-                buttonNotDone.ForeColor = Color.DimGray;
+                buttonNotDone.ForeColor = Color.Black;
             }
             else
             {
                 buttonAll.ForeColor = Color.White;
-                buttonDone.ForeColor = Color.DimGray;
-                buttonNotDone.ForeColor = Color.DimGray;
+                buttonDone.ForeColor = Color.Black;
+                buttonNotDone.ForeColor = Color.Black;
             }
         }
 

@@ -183,7 +183,7 @@
             buttonNotDone.Cursor = Cursors.Hand;
             buttonNotDone.FlatStyle = FlatStyle.Flat;
             buttonNotDone.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonNotDone.ForeColor = Color.DimGray;
+            buttonNotDone.ForeColor = Color.Black;
             buttonNotDone.Image = (Image)resources.GetObject("buttonNotDone.Image");
             buttonNotDone.ImageAlign = ContentAlignment.MiddleRight;
             buttonNotDone.Location = new Point(0, 0);
@@ -194,7 +194,7 @@
             buttonNotDone.TabIndex = 29;
             buttonNotDone.Text = "Chưa hoàn thành";
             buttonNotDone.TextAlign = ContentAlignment.MiddleLeft;
-            buttonNotDone.TextColor = Color.DimGray;
+            buttonNotDone.TextColor = Color.Black;
             buttonNotDone.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonNotDone.UseVisualStyleBackColor = false;
             buttonNotDone.Click += buttonNotDone_Click;
@@ -209,7 +209,7 @@
             buttonDone.Cursor = Cursors.Hand;
             buttonDone.FlatStyle = FlatStyle.Flat;
             buttonDone.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonDone.ForeColor = Color.DimGray;
+            buttonDone.ForeColor = Color.Black;
             buttonDone.Image = (Image)resources.GetObject("buttonDone.Image");
             buttonDone.ImageAlign = ContentAlignment.MiddleRight;
             buttonDone.Location = new Point(253, 0);
@@ -220,7 +220,7 @@
             buttonDone.TabIndex = 31;
             buttonDone.Text = "Đã hoàn thành";
             buttonDone.TextAlign = ContentAlignment.MiddleLeft;
-            buttonDone.TextColor = Color.DimGray;
+            buttonDone.TextColor = Color.Black;
             buttonDone.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonDone.UseVisualStyleBackColor = false;
             buttonDone.Click += buttonDone_Click;
@@ -235,7 +235,7 @@
             buttonAll.Cursor = Cursors.Hand;
             buttonAll.FlatStyle = FlatStyle.Flat;
             buttonAll.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonAll.ForeColor = Color.DimGray;
+            buttonAll.ForeColor = Color.Black;
             buttonAll.Image = (Image)resources.GetObject("buttonAll.Image");
             buttonAll.ImageAlign = ContentAlignment.MiddleRight;
             buttonAll.Location = new Point(506, 0);
@@ -246,7 +246,7 @@
             buttonAll.TabIndex = 32;
             buttonAll.Text = "Tất cả";
             buttonAll.TextAlign = ContentAlignment.MiddleLeft;
-            buttonAll.TextColor = Color.DimGray;
+            buttonAll.TextColor = Color.Black;
             buttonAll.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonAll.UseVisualStyleBackColor = false;
             buttonAll.Click += buttonAll_Click;
@@ -409,10 +409,10 @@
             buttonGoto.ForeColor = Color.Black;
             buttonGoto.Image = (Image)resources.GetObject("buttonGoto.Image");
             buttonGoto.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonGoto.Location = new Point(0, 25);
+            buttonGoto.Location = new Point(0, 27);
             buttonGoto.Margin = new Padding(4, 3, 4, 3);
             buttonGoto.Name = "buttonGoto";
-            buttonGoto.Size = new Size(170, 25);
+            buttonGoto.Size = new Size(170, 23);
             buttonGoto.TabIndex = 34;
             buttonGoto.Text = "Tới trang";
             buttonGoto.TextAlign = ContentAlignment.MiddleRight;
@@ -426,12 +426,12 @@
             pageNumberGoto.BeforeTouchSize = new Size(66, 35);
             pageNumberGoto.BorderStyle = BorderStyle.FixedSingle;
             pageNumberGoto.Dock = DockStyle.Top;
-            pageNumberGoto.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            pageNumberGoto.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             pageNumberGoto.IntegerValue = 1L;
             pageNumberGoto.Location = new Point(0, 0);
             pageNumberGoto.Margin = new Padding(4, 3, 4, 3);
             pageNumberGoto.Name = "pageNumberGoto";
-            pageNumberGoto.Size = new Size(170, 25);
+            pageNumberGoto.Size = new Size(170, 27);
             pageNumberGoto.TabIndex = 7;
             pageNumberGoto.Text = "1";
             pageNumberGoto.TextAlign = HorizontalAlignment.Center;
@@ -478,6 +478,7 @@
             // TimeEnd
             // 
             TimeEnd.Dock = DockStyle.Fill;
+            TimeEnd.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             TimeEnd.Location = new Point(0, 0);
             TimeEnd.Name = "TimeEnd";
             TimeEnd.Size = new Size(247, 22);
@@ -496,6 +497,7 @@
             // TimeStart
             // 
             TimeStart.Dock = DockStyle.Fill;
+            TimeStart.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             TimeStart.Location = new Point(0, 0);
             TimeStart.Name = "TimeStart";
             TimeStart.Size = new Size(247, 22);

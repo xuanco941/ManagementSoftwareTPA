@@ -28,170 +28,170 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.sfBarcode1 = new Syncfusion.Windows.Forms.Barcode.SfBarcode();
-            this.radialGauge1 = new Syncfusion.Windows.Forms.Gauge.RadialGauge();
-            this.digitalGauge2 = new Syncfusion.Windows.Forms.Gauge.DigitalGauge();
-            this.linearGauge1 = new Syncfusion.Windows.Forms.Gauge.LinearGauge();
-            this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.integerTextBox1 = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panelPrintBarcode = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.integerTextBox1)).BeginInit();
-            this.panelPrintBarcode.SuspendLayout();
-            this.SuspendLayout();
+            sfBarcode1 = new Syncfusion.Windows.Forms.Barcode.SfBarcode();
+            radialGauge1 = new Syncfusion.Windows.Forms.Gauge.RadialGauge();
+            digitalGauge2 = new Syncfusion.Windows.Forms.Gauge.DigitalGauge();
+            linearGauge1 = new Syncfusion.Windows.Forms.Gauge.LinearGauge();
+            chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            integerTextBox1 = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
+            textBox1 = new TextBox();
+            panelPrintBarcode = new Panel();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)integerTextBox1).BeginInit();
+            panelPrintBarcode.SuspendLayout();
+            SuspendLayout();
             // 
             // sfBarcode1
             // 
-            this.sfBarcode1.DarkBarColor = System.Drawing.Color.Black;
-            this.sfBarcode1.DisplayText = true;
-            this.sfBarcode1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sfBarcode1.LightBarColor = System.Drawing.Color.White;
-            this.sfBarcode1.Location = new System.Drawing.Point(0, 0);
-            this.sfBarcode1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.sfBarcode1.Name = "sfBarcode1";
-            this.sfBarcode1.Size = new System.Drawing.Size(242, 100);
-            this.sfBarcode1.Symbology = Syncfusion.Windows.Forms.Barcode.BarcodeSymbolType.QRBarcode;
-            this.sfBarcode1.SymbologySettings = null;
-            this.sfBarcode1.TabIndex = 0;
-            this.sfBarcode1.TextAlignment = Syncfusion.Windows.Forms.Barcode.BarcodeTextAlignment.Center;
-            this.sfBarcode1.TextColor = System.Drawing.Color.Black;
-            this.sfBarcode1.TextGapHeight = 0F;
+            sfBarcode1.DarkBarColor = Color.Black;
+            sfBarcode1.DisplayText = true;
+            sfBarcode1.Dock = DockStyle.Fill;
+            sfBarcode1.LightBarColor = Color.White;
+            sfBarcode1.Location = new Point(0, 0);
+            sfBarcode1.Margin = new Padding(5, 3, 5, 3);
+            sfBarcode1.Name = "sfBarcode1";
+            sfBarcode1.Size = new Size(242, 100);
+            sfBarcode1.Symbology = Syncfusion.Windows.Forms.Barcode.BarcodeSymbolType.QRBarcode;
+            sfBarcode1.SymbologySettings = null;
+            sfBarcode1.TabIndex = 0;
+            sfBarcode1.TextAlignment = Syncfusion.Windows.Forms.Barcode.BarcodeTextAlignment.Center;
+            sfBarcode1.TextColor = Color.Black;
+            sfBarcode1.TextGapHeight = 0F;
             // 
             // radialGauge1
             // 
-            this.radialGauge1.ArcThickness = 2F;
-            this.radialGauge1.BackgroundGradientStartColor = System.Drawing.SystemColors.ButtonFace;
-            this.radialGauge1.EnableCustomNeedles = false;
-            this.radialGauge1.FillColor = System.Drawing.Color.DarkGray;
-            this.radialGauge1.FrameThickness = 12;
-            this.radialGauge1.GaugeLabel = "Gauge";
-            this.radialGauge1.GaugeLableFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radialGauge1.GaugeValueFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radialGauge1.InnerFrameGradientStartColor = System.Drawing.SystemColors.ActiveBorder;
-            this.radialGauge1.Location = new System.Drawing.Point(224, 92);
-            this.radialGauge1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.radialGauge1.MinimumSize = new System.Drawing.Size(125, 125);
-            this.radialGauge1.Name = "radialGauge1";
-            this.radialGauge1.ShowTicks = true;
-            this.radialGauge1.Size = new System.Drawing.Size(261, 261);
-            this.radialGauge1.TabIndex = 1;
+            radialGauge1.ArcThickness = 2F;
+            radialGauge1.BackgroundGradientStartColor = SystemColors.ButtonFace;
+            radialGauge1.EnableCustomNeedles = false;
+            radialGauge1.FillColor = Color.DarkGray;
+            radialGauge1.FrameThickness = 12;
+            radialGauge1.GaugeLabel = "Gauge";
+            radialGauge1.GaugeLableFont = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radialGauge1.GaugeValueFont = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radialGauge1.InnerFrameGradientStartColor = SystemColors.ActiveBorder;
+            radialGauge1.Location = new Point(224, 92);
+            radialGauge1.Margin = new Padding(4, 3, 4, 3);
+            radialGauge1.MinimumSize = new Size(125, 125);
+            radialGauge1.Name = "radialGauge1";
+            radialGauge1.ShowTicks = true;
+            radialGauge1.Size = new Size(261, 261);
+            radialGauge1.TabIndex = 1;
             // 
             // digitalGauge2
             // 
-            this.digitalGauge2.DisplayRecordIndex = 0;
-            this.digitalGauge2.Location = new System.Drawing.Point(57, 27);
-            this.digitalGauge2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.digitalGauge2.MaximumSize = new System.Drawing.Size(583, 208);
-            this.digitalGauge2.MinimumSize = new System.Drawing.Size(105, 104);
-            this.digitalGauge2.Name = "digitalGauge2";
-            this.digitalGauge2.Size = new System.Drawing.Size(210, 104);
-            this.digitalGauge2.TabIndex = 3;
+            digitalGauge2.DisplayRecordIndex = 0;
+            digitalGauge2.Location = new Point(57, 27);
+            digitalGauge2.Margin = new Padding(4, 3, 4, 3);
+            digitalGauge2.MaximumSize = new Size(583, 208);
+            digitalGauge2.MinimumSize = new Size(105, 104);
+            digitalGauge2.Name = "digitalGauge2";
+            digitalGauge2.Size = new Size(210, 104);
+            digitalGauge2.TabIndex = 3;
             // 
             // linearGauge1
             // 
-            this.linearGauge1.ForeColor = System.Drawing.Color.Gray;
-            this.linearGauge1.GaugelabelFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linearGauge1.LinearFrameType = Syncfusion.Windows.Forms.Gauge.LinearFrameType.Horizontal;
-            this.linearGauge1.Location = new System.Drawing.Point(117, 350);
-            this.linearGauge1.MajorTicksHeight = 15;
-            this.linearGauge1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.linearGauge1.MinimumSize = new System.Drawing.Size(100, 50);
-            this.linearGauge1.MinorTickCount = 5;
-            this.linearGauge1.MinorTickHeight = 10;
-            this.linearGauge1.Name = "linearGauge1";
-            this.linearGauge1.PointerPlacement = Syncfusion.Windows.Forms.Gauge.Placement.Center;
-            this.linearGauge1.ScaleColor = System.Drawing.Color.Gray;
-            this.linearGauge1.Size = new System.Drawing.Size(350, 155);
-            this.linearGauge1.TabIndex = 4;
-            this.linearGauge1.Text = "linearGauge1";
-            this.linearGauge1.ValueIndicatorColor = System.Drawing.Color.Gray;
+            linearGauge1.ForeColor = Color.Gray;
+            linearGauge1.GaugelabelFont = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            linearGauge1.LinearFrameType = Syncfusion.Windows.Forms.Gauge.LinearFrameType.Horizontal;
+            linearGauge1.Location = new Point(117, 350);
+            linearGauge1.MajorTicksHeight = 15;
+            linearGauge1.Margin = new Padding(4, 3, 4, 3);
+            linearGauge1.MinimumSize = new Size(100, 50);
+            linearGauge1.MinorTickCount = 5;
+            linearGauge1.MinorTickHeight = 10;
+            linearGauge1.Name = "linearGauge1";
+            linearGauge1.PointerPlacement = Syncfusion.Windows.Forms.Gauge.Placement.Center;
+            linearGauge1.ScaleColor = Color.Gray;
+            linearGauge1.Size = new Size(350, 155);
+            linearGauge1.TabIndex = 4;
+            linearGauge1.Text = "linearGauge1";
+            linearGauge1.ValueIndicatorColor = Color.Gray;
             // 
             // chartControl1
             // 
-            this.chartControl1.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
-            this.chartControl1.ChartArea.CursorReDraw = false;
-            this.chartControl1.IsWindowLess = false;
+            chartControl1.ChartArea.CursorLocation = new Point(0, 0);
+            chartControl1.ChartArea.CursorReDraw = false;
+            chartControl1.IsWindowLess = false;
             // 
             // 
             // 
-            this.chartControl1.Legend.Location = new System.Drawing.Point(369, 75);
-            this.chartControl1.Legend.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.chartControl1.Localize = null;
-            this.chartControl1.Location = new System.Drawing.Point(588, 180);
-            this.chartControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.chartControl1.Name = "chartControl1";
-            this.chartControl1.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.chartControl1.PrimaryXAxis.Margin = true;
-            this.chartControl1.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.chartControl1.PrimaryYAxis.Margin = true;
-            this.chartControl1.Size = new System.Drawing.Size(478, 279);
-            this.chartControl1.TabIndex = 5;
-            this.chartControl1.Text = "chartControl1";
+            chartControl1.Legend.Location = new Point(369, 75);
+            chartControl1.Legend.Margin = new Padding(4, 3, 4, 3);
+            chartControl1.Localize = null;
+            chartControl1.Location = new Point(588, 180);
+            chartControl1.Margin = new Padding(4, 3, 4, 3);
+            chartControl1.Name = "chartControl1";
+            chartControl1.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            chartControl1.PrimaryXAxis.Margin = true;
+            chartControl1.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            chartControl1.PrimaryYAxis.Margin = true;
+            chartControl1.Size = new Size(478, 279);
+            chartControl1.TabIndex = 5;
+            chartControl1.Text = "chartControl1";
             // 
             // 
             // 
-            this.chartControl1.Title.Name = "Default";
-            this.chartControl1.Titles.Add(this.chartControl1.Title);
-            this.chartControl1.VisualTheme = "";
+            chartControl1.Title.Name = "Default";
+            chartControl1.Titles.Add(chartControl1.Title);
+            chartControl1.VisualTheme = "";
             // 
             // integerTextBox1
             // 
-            this.integerTextBox1.BeforeTouchSize = new System.Drawing.Size(116, 23);
-            this.integerTextBox1.IntegerValue = ((long)(1));
-            this.integerTextBox1.Location = new System.Drawing.Point(467, 27);
-            this.integerTextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.integerTextBox1.Name = "integerTextBox1";
-            this.integerTextBox1.Size = new System.Drawing.Size(116, 23);
-            this.integerTextBox1.TabIndex = 6;
-            this.integerTextBox1.Text = "1";
+            integerTextBox1.BeforeTouchSize = new Size(66, 35);
+            integerTextBox1.IntegerValue = 1L;
+            integerTextBox1.Location = new Point(467, 27);
+            integerTextBox1.Margin = new Padding(4, 3, 4, 3);
+            integerTextBox1.Name = "integerTextBox1";
+            integerTextBox1.Size = new Size(116, 23);
+            integerTextBox1.TabIndex = 6;
+            integerTextBox1.Text = "1";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(433, 91);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 7;
+            textBox1.Location = new Point(433, 91);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 7;
             // 
             // panelPrintBarcode
             // 
-            this.panelPrintBarcode.Controls.Add(this.sfBarcode1);
-            this.panelPrintBarcode.Location = new System.Drawing.Point(727, 54);
-            this.panelPrintBarcode.Name = "panelPrintBarcode";
-            this.panelPrintBarcode.Size = new System.Drawing.Size(242, 100);
-            this.panelPrintBarcode.TabIndex = 8;
+            panelPrintBarcode.Controls.Add(sfBarcode1);
+            panelPrintBarcode.Location = new Point(727, 54);
+            panelPrintBarcode.Name = "panelPrintBarcode";
+            panelPrintBarcode.Size = new Size(242, 100);
+            panelPrintBarcode.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1012, 117);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Location = new Point(1012, 117);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 9;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // FormTest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 517);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panelPrintBarcode);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.integerTextBox1);
-            this.Controls.Add(this.chartControl1);
-            this.Controls.Add(this.linearGauge1);
-            this.Controls.Add(this.digitalGauge2);
-            this.Controls.Add(this.radialGauge1);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "FormTest";
-            this.Text = "FormTest";
-            ((System.ComponentModel.ISupportInitialize)(this.integerTextBox1)).EndInit();
-            this.panelPrintBarcode.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1146, 517);
+            Controls.Add(button1);
+            Controls.Add(panelPrintBarcode);
+            Controls.Add(textBox1);
+            Controls.Add(integerTextBox1);
+            Controls.Add(chartControl1);
+            Controls.Add(linearGauge1);
+            Controls.Add(digitalGauge2);
+            Controls.Add(radialGauge1);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "FormTest";
+            Text = "FormTest";
+            ((System.ComponentModel.ISupportInitialize)integerTextBox1).EndInit();
+            panelPrintBarcode.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

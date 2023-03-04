@@ -243,10 +243,10 @@
             buttonGoto.ForeColor = Color.Black;
             buttonGoto.Image = (Image)resources.GetObject("buttonGoto.Image");
             buttonGoto.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonGoto.Location = new Point(0, 25);
+            buttonGoto.Location = new Point(0, 27);
             buttonGoto.Margin = new Padding(4, 3, 4, 3);
             buttonGoto.Name = "buttonGoto";
-            buttonGoto.Size = new Size(120, 25);
+            buttonGoto.Size = new Size(120, 23);
             buttonGoto.TabIndex = 34;
             buttonGoto.Text = "Tới trang";
             buttonGoto.TextAlign = ContentAlignment.MiddleRight;
@@ -257,15 +257,15 @@
             // 
             // pageNumberGoto
             // 
-            pageNumberGoto.BeforeTouchSize = new Size(66, 35);
+            pageNumberGoto.BeforeTouchSize = new Size(120, 27);
             pageNumberGoto.BorderStyle = BorderStyle.FixedSingle;
             pageNumberGoto.Dock = DockStyle.Top;
-            pageNumberGoto.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            pageNumberGoto.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             pageNumberGoto.IntegerValue = 1L;
             pageNumberGoto.Location = new Point(0, 0);
             pageNumberGoto.Margin = new Padding(4, 3, 4, 3);
             pageNumberGoto.Name = "pageNumberGoto";
-            pageNumberGoto.Size = new Size(120, 25);
+            pageNumberGoto.Size = new Size(120, 27);
             pageNumberGoto.TabIndex = 7;
             pageNumberGoto.Text = "1";
             pageNumberGoto.TextAlign = HorizontalAlignment.Center;
@@ -312,6 +312,7 @@
             // TimeEnd
             // 
             TimeEnd.Dock = DockStyle.Fill;
+            TimeEnd.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             TimeEnd.Location = new Point(0, 0);
             TimeEnd.Name = "TimeEnd";
             TimeEnd.Size = new Size(159, 22);
@@ -330,6 +331,7 @@
             // TimeStart
             // 
             TimeStart.Dock = DockStyle.Fill;
+            TimeStart.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             TimeStart.Location = new Point(0, 0);
             TimeStart.Name = "TimeStart";
             TimeStart.Size = new Size(158, 22);
@@ -517,7 +519,7 @@
             // inputNumPageGo
             // 
             inputNumPageGo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inputNumPageGo.BeforeTouchSize = new Size(66, 35);
+            inputNumPageGo.BeforeTouchSize = new Size(120, 27);
             inputNumPageGo.BorderColor = SystemColors.ActiveCaption;
             inputNumPageGo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             inputNumPageGo.IntegerValue = 1L;
