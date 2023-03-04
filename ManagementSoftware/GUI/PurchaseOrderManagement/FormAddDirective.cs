@@ -24,7 +24,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             InitializeComponent();
             IDProduct = idProduct;
             comboBoxTenNguoiLam.DataSource = BUSUser.GetListUsername();
-            
+
         }
 
         private void buttonThem_Click(object sender, EventArgs e)

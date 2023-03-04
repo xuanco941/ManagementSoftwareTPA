@@ -43,7 +43,7 @@ namespace ManagementSoftware.GUI
         {
             InitializeComponent();
             dALProduct = new DALProduct();
-            labelHeader.Text = labelHeader.Text + $" ({Common.USERSESSION.Username})" ;
+            labelHeader.Text = labelHeader.Text + $" ({Common.USERSESSION?.Username})" ;
         }
 
         private void LoadDGV()
@@ -66,13 +66,13 @@ namespace ManagementSoftware.GUI
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Bold);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 14, FontStyle.Bold);
 
 
             dataGridView1.RowTemplate.Height = 40;
             dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dataGridView1.DefaultCellStyle.ForeColor = Color.White;
-            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 14, FontStyle.Regular);
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ReadOnly = true;

@@ -172,5 +172,16 @@ namespace ManagementSoftware.GUI
             form.callAlert = new ImportWareHouse.CallAlert(Alert);
             ChangeFormContent(form, sender);
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            Hello form = new Hello();
+            form.TopLevel = false;
+            panelContent.Controls.Add(form);
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            this.Font = Common.FontForm;
+        }
     }
 }

@@ -20,7 +20,27 @@ namespace ManagementSoftware.GUI
         public WareHouse()
         {
             InitializeComponent();
+            //dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+
+
+            dataGridView1.RowTemplate.Height = 40;
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dataGridView1.DefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 14, FontStyle.Regular);
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
+
+            dataGridView1.ReadOnly = true;
+
+
             LoadForm();
+
         }
 
         private void LoadForm()
@@ -43,6 +63,9 @@ namespace ManagementSoftware.GUI
             dt.Columns.Add("Thành tiền");
 
             dataGridView1.DataSource = dt;
+
+
+
         }
 
     }

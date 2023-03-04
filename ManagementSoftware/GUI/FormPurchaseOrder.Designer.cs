@@ -423,7 +423,7 @@
             // 
             // pageNumberGoto
             // 
-            pageNumberGoto.BeforeTouchSize = new Size(316, 29);
+            pageNumberGoto.BeforeTouchSize = new Size(66, 35);
             pageNumberGoto.BorderStyle = BorderStyle.FixedSingle;
             pageNumberGoto.Dock = DockStyle.Top;
             pageNumberGoto.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
@@ -685,7 +685,7 @@
             // inputNumPageGo
             // 
             inputNumPageGo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inputNumPageGo.BeforeTouchSize = new Size(316, 29);
+            inputNumPageGo.BeforeTouchSize = new Size(66, 35);
             inputNumPageGo.BorderColor = SystemColors.ActiveCaption;
             inputNumPageGo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             inputNumPageGo.IntegerValue = 1L;

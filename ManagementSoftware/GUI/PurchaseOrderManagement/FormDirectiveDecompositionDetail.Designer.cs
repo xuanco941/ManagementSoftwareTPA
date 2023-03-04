@@ -496,7 +496,6 @@
             ClientSize = new Size(1103, 785);
             Controls.Add(panel1);
             Controls.Add(panel7);
-            MinimumSize = new Size(1119, 824);
             Name = "FormDirectiveDecompositionDetail";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormDirectiveDecompositionDetail";

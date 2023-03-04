@@ -29,200 +29,216 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WareHouse));
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.buttonUpdate = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel10.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            panel10 = new Panel();
+            buttonUpdate = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            buttonCustom2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            buttonCustom3 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            buttonCustom4 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            dataGridView1 = new DataGridView();
+            label29 = new Label();
+            panel10.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // panel10
             // 
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.buttonUpdate);
-            this.panel10.Controls.Add(this.buttonCustom1);
-            this.panel10.Controls.Add(this.buttonCustom2);
-            this.panel10.Controls.Add(this.buttonCustom3);
-            this.panel10.Controls.Add(this.buttonCustom4);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 445);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(974, 56);
-            this.panel10.TabIndex = 11;
+            panel10.BorderStyle = BorderStyle.FixedSingle;
+            panel10.Controls.Add(buttonUpdate);
+            panel10.Controls.Add(buttonCustom1);
+            panel10.Controls.Add(buttonCustom2);
+            panel10.Controls.Add(buttonCustom3);
+            panel10.Controls.Add(buttonCustom4);
+            panel10.Dock = DockStyle.Bottom;
+            panel10.Location = new Point(0, 445);
+            panel10.Margin = new Padding(4, 3, 4, 3);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(974, 56);
+            panel10.TabIndex = 11;
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUpdate.BackColor = System.Drawing.Color.Goldenrod;
-            this.buttonUpdate.BackgroundColor = System.Drawing.Color.Goldenrod;
-            this.buttonUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonUpdate.BorderRadius = 3;
-            this.buttonUpdate.BorderSize = 0;
-            this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonUpdate.ForeColor = System.Drawing.Color.Black;
-            this.buttonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdate.Image")));
-            this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonUpdate.Location = new System.Drawing.Point(770, 5);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(198, 46);
-            this.buttonUpdate.TabIndex = 55;
-            this.buttonUpdate.Text = "Làm đơn xuất kho";
-            this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdate.TextColor = System.Drawing.Color.Black;
-            this.buttonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonUpdate.UseVisualStyleBackColor = false;
+            buttonUpdate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonUpdate.BackColor = Color.Goldenrod;
+            buttonUpdate.BackgroundColor = Color.Goldenrod;
+            buttonUpdate.BorderColor = Color.PaleVioletRed;
+            buttonUpdate.BorderRadius = 3;
+            buttonUpdate.BorderSize = 0;
+            buttonUpdate.Cursor = Cursors.Hand;
+            buttonUpdate.FlatStyle = FlatStyle.Flat;
+            buttonUpdate.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonUpdate.ForeColor = Color.Black;
+            buttonUpdate.Image = (Image)resources.GetObject("buttonUpdate.Image");
+            buttonUpdate.ImageAlign = ContentAlignment.MiddleRight;
+            buttonUpdate.Location = new Point(770, 5);
+            buttonUpdate.Margin = new Padding(4, 3, 4, 3);
+            buttonUpdate.Name = "buttonUpdate";
+            buttonUpdate.Size = new Size(198, 46);
+            buttonUpdate.TabIndex = 55;
+            buttonUpdate.Text = "Làm đơn xuất kho";
+            buttonUpdate.TextAlign = ContentAlignment.MiddleLeft;
+            buttonUpdate.TextColor = Color.Black;
+            buttonUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonUpdate.UseVisualStyleBackColor = false;
             // 
             // buttonCustom1
             // 
-            this.buttonCustom1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom1.BorderRadius = 3;
-            this.buttonCustom1.BorderSize = 0;
-            this.buttonCustom1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom1.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom1.Location = new System.Drawing.Point(244, 9);
-            this.buttonCustom1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom1.Name = "buttonCustom1";
-            this.buttonCustom1.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom1.TabIndex = 28;
-            this.buttonCustom1.Text = ">>";
-            this.buttonCustom1.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom1.UseVisualStyleBackColor = false;
+            buttonCustom1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonCustom1.BackColor = SystemColors.ActiveCaption;
+            buttonCustom1.BackgroundColor = SystemColors.ActiveCaption;
+            buttonCustom1.BorderColor = Color.PaleVioletRed;
+            buttonCustom1.BorderRadius = 3;
+            buttonCustom1.BorderSize = 0;
+            buttonCustom1.Cursor = Cursors.Hand;
+            buttonCustom1.FlatStyle = FlatStyle.Flat;
+            buttonCustom1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonCustom1.ForeColor = Color.Black;
+            buttonCustom1.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonCustom1.Location = new Point(244, 9);
+            buttonCustom1.Margin = new Padding(4, 3, 4, 3);
+            buttonCustom1.Name = "buttonCustom1";
+            buttonCustom1.Size = new Size(74, 35);
+            buttonCustom1.TabIndex = 28;
+            buttonCustom1.Text = ">>";
+            buttonCustom1.TextColor = Color.Black;
+            buttonCustom1.TextImageRelation = TextImageRelation.TextBeforeImage;
+            buttonCustom1.UseVisualStyleBackColor = false;
             // 
             // buttonCustom2
             // 
-            this.buttonCustom2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom2.BorderRadius = 3;
-            this.buttonCustom2.BorderSize = 0;
-            this.buttonCustom2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom2.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom2.Location = new System.Drawing.Point(163, 9);
-            this.buttonCustom2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom2.Name = "buttonCustom2";
-            this.buttonCustom2.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom2.TabIndex = 27;
-            this.buttonCustom2.Text = "3";
-            this.buttonCustom2.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom2.UseVisualStyleBackColor = false;
+            buttonCustom2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonCustom2.BackColor = SystemColors.ActiveCaption;
+            buttonCustom2.BackgroundColor = SystemColors.ActiveCaption;
+            buttonCustom2.BorderColor = Color.PaleVioletRed;
+            buttonCustom2.BorderRadius = 3;
+            buttonCustom2.BorderSize = 0;
+            buttonCustom2.Cursor = Cursors.Hand;
+            buttonCustom2.FlatStyle = FlatStyle.Flat;
+            buttonCustom2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonCustom2.ForeColor = Color.Black;
+            buttonCustom2.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonCustom2.Location = new Point(163, 9);
+            buttonCustom2.Margin = new Padding(4, 3, 4, 3);
+            buttonCustom2.Name = "buttonCustom2";
+            buttonCustom2.Size = new Size(74, 35);
+            buttonCustom2.TabIndex = 27;
+            buttonCustom2.Text = "3";
+            buttonCustom2.TextColor = Color.Black;
+            buttonCustom2.TextImageRelation = TextImageRelation.TextBeforeImage;
+            buttonCustom2.UseVisualStyleBackColor = false;
             // 
             // buttonCustom3
             // 
-            this.buttonCustom3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom3.BorderRadius = 3;
-            this.buttonCustom3.BorderSize = 0;
-            this.buttonCustom3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom3.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom3.Location = new System.Drawing.Point(4, 9);
-            this.buttonCustom3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom3.Name = "buttonCustom3";
-            this.buttonCustom3.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom3.TabIndex = 26;
-            this.buttonCustom3.Text = "1";
-            this.buttonCustom3.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom3.UseVisualStyleBackColor = false;
+            buttonCustom3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonCustom3.BackColor = SystemColors.ActiveCaption;
+            buttonCustom3.BackgroundColor = SystemColors.ActiveCaption;
+            buttonCustom3.BorderColor = Color.PaleVioletRed;
+            buttonCustom3.BorderRadius = 3;
+            buttonCustom3.BorderSize = 0;
+            buttonCustom3.Cursor = Cursors.Hand;
+            buttonCustom3.FlatStyle = FlatStyle.Flat;
+            buttonCustom3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonCustom3.ForeColor = Color.Black;
+            buttonCustom3.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonCustom3.Location = new Point(4, 9);
+            buttonCustom3.Margin = new Padding(4, 3, 4, 3);
+            buttonCustom3.Name = "buttonCustom3";
+            buttonCustom3.Size = new Size(74, 35);
+            buttonCustom3.TabIndex = 26;
+            buttonCustom3.Text = "1";
+            buttonCustom3.TextColor = Color.Black;
+            buttonCustom3.TextImageRelation = TextImageRelation.TextBeforeImage;
+            buttonCustom3.UseVisualStyleBackColor = false;
             // 
             // buttonCustom4
             // 
-            this.buttonCustom4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCustom4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom4.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonCustom4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonCustom4.BorderRadius = 3;
-            this.buttonCustom4.BorderSize = 0;
-            this.buttonCustom4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCustom4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustom4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCustom4.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustom4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom4.Location = new System.Drawing.Point(83, 9);
-            this.buttonCustom4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCustom4.Name = "buttonCustom4";
-            this.buttonCustom4.Size = new System.Drawing.Size(74, 35);
-            this.buttonCustom4.TabIndex = 25;
-            this.buttonCustom4.Text = "2";
-            this.buttonCustom4.TextColor = System.Drawing.Color.Black;
-            this.buttonCustom4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonCustom4.UseVisualStyleBackColor = false;
+            buttonCustom4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonCustom4.BackColor = SystemColors.ActiveCaption;
+            buttonCustom4.BackgroundColor = SystemColors.ActiveCaption;
+            buttonCustom4.BorderColor = Color.PaleVioletRed;
+            buttonCustom4.BorderRadius = 3;
+            buttonCustom4.BorderSize = 0;
+            buttonCustom4.Cursor = Cursors.Hand;
+            buttonCustom4.FlatStyle = FlatStyle.Flat;
+            buttonCustom4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonCustom4.ForeColor = Color.Black;
+            buttonCustom4.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonCustom4.Location = new Point(83, 9);
+            buttonCustom4.Margin = new Padding(4, 3, 4, 3);
+            buttonCustom4.Name = "buttonCustom4";
+            buttonCustom4.Size = new Size(74, 35);
+            buttonCustom4.TabIndex = 25;
+            buttonCustom4.Text = "2";
+            buttonCustom4.TextColor = Color.Black;
+            buttonCustom4.TextImageRelation = TextImageRelation.TextBeforeImage;
+            buttonCustom4.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(974, 52);
-            this.panel1.TabIndex = 12;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label29);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(974, 52);
+            panel1.TabIndex = 12;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 52);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(974, 393);
-            this.panel2.TabIndex = 13;
+            panel2.Controls.Add(dataGridView1);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 52);
+            panel2.Margin = new Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(974, 393);
+            panel2.TabIndex = 13;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(974, 393);
-            this.dataGridView1.TabIndex = 1;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Margin = new Padding(4, 3, 4, 3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(974, 393);
+            dataGridView1.TabIndex = 1;
+            // 
+            // label29
+            // 
+            label29.Dock = DockStyle.Fill;
+            label29.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label29.ForeColor = SystemColors.ControlLight;
+            label29.Location = new Point(0, 0);
+            label29.Margin = new Padding(4, 0, 4, 0);
+            label29.Name = "label29";
+            label29.Size = new Size(972, 50);
+            label29.TabIndex = 15;
+            label29.Text = "Danh mục sản phẩm đã nhập kho";
+            label29.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // WareHouse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(974, 501);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel10);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "WareHouse";
-            this.Text = "FormInventoryManagement";
-            this.panel10.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(41, 44, 51);
+            ClientSize = new Size(974, 501);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(panel10);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "WareHouse";
+            Text = "FormInventoryManagement";
+            panel10.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -235,5 +251,6 @@
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonUpdate;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Label label29;
     }
 }

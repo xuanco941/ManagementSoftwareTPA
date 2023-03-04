@@ -31,8 +31,8 @@ namespace ManagementSoftware.GUI
         string poID = "";
 
         // ngày để query 
-        private DateTime? timeStart = null;
-        private DateTime? timeEnd = null;
+        private DateTime? timeStart = DateTime.Now.AddYears(-2).Date;
+        private DateTime? timeEnd = DateTime.Now.Date;
 
         //condition
         private bool? status = null;
@@ -42,6 +42,11 @@ namespace ManagementSoftware.GUI
         public FormPurchaseOrder()
         {
             InitializeComponent();
+            TimeStart.AllowNull = false;
+            TimeEnd.AllowNull = false;
+
+            TimeStart.Value = timeStart;
+            TimeEnd.Value = timeEnd;
         }
 
 
@@ -63,14 +68,9 @@ namespace ManagementSoftware.GUI
 
             new MethodCommonGUI().CloseFormInPanel(panelMain);
 
-            if (btnLocClick == false)
-            {
-                poID = "";
-            }
-
 
             PaginationPurchaseOrder pagination = new PaginationPurchaseOrder();
-            pagination.Set(page, status, poID, timeStart, timeEnd);
+            pagination.Set(page, status, timeStart, timeEnd);
             this.ListResults = pagination.ListResults;
             this.TotalPages = pagination.TotalPages;
             lbTotalPages.Text = this.TotalPages.ToString();
@@ -175,16 +175,56 @@ namespace ManagementSoftware.GUI
         }
 
 
-        bool btnLocClick = false;
         private void buttonLoc_Click(object sender, EventArgs e)
         {
+
+
+
             if (String.IsNullOrEmpty(textBoxtSearch.Texts) == false || textBoxtSearch.Texts != textBoxtSearch.PlaceholderText)
             {
-                poID = textBoxtSearch.Texts;
+                poID = textBoxtSearch.Texts.Trim();
+                status = null;
+                timeStart = DateTime.Now.AddYears(-2).Date;
+                timeEnd = DateTime.Now.Date;
+                TimeStart.Value = timeStart;
+                TimeEnd.Value = timeEnd;
+                page = 1;
+                TotalPages = 1;
 
-                btnLocClick = true;
-                LoadFormThongKe();
-                btnLocClick = false;
+
+
+                panelBoxSearch.Enabled = false;
+
+                new MethodCommonGUI().CloseFormInPanel(panelMain);
+
+
+                PaginationPurchaseOrder pagination = new PaginationPurchaseOrder();
+                pagination.Set2(page, status, poID);
+                this.ListResults = pagination.ListResults;
+                this.TotalPages = pagination.TotalPages;
+                lbTotalPages.Text = this.TotalPages.ToString();
+
+                buttonPreviousPage.Enabled = this.page > 1;
+                buttonNextPage.Enabled = this.page < this.TotalPages;
+                buttonPage.Text = this.page.ToString();
+
+                pageNumberGoto.MinValue = 1;
+                pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
+
+
+                foreach (var item in ListResults)
+                {
+                    FormItemPO form = new FormItemPO(item);
+                    form.changeData = new FormItemPO.ChangeData(AlertActive2);
+                    form.TopLevel = false;
+                    panelMain.Controls.Add(form);
+                    form.FormBorderStyle = FormBorderStyle.None;
+                    form.Dock = DockStyle.Top;
+                    form.Show();
+                }
+
+
+                panelBoxSearch.Enabled = true;
             }
         }
 

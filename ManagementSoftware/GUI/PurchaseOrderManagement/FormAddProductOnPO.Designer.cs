@@ -28,266 +28,267 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddProductOnPO));
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonThem = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSlsx = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
-            this.txtProductName = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtLoaiKhi = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtTheTichBinh = new Syncfusion.Windows.Forms.Tools.DoubleTextBox();
-            this.txtApSuatNap = new Syncfusion.Windows.Forms.Tools.DoubleTextBox();
-            this.txtChatLuongKhi = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSlsx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProductName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLoaiKhi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTheTichBinh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtApSuatNap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtChatLuongKhi)).BeginInit();
-            this.SuspendLayout();
+            label8 = new Label();
+            panel1 = new Panel();
+            buttonThem = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            label4 = new Label();
+            label1 = new Label();
+            txtSlsx = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
+            txtProductName = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            label2 = new Label();
+            label3 = new Label();
+            txtLoaiKhi = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            label5 = new Label();
+            label6 = new Label();
+            txtTheTichBinh = new Syncfusion.Windows.Forms.Tools.DoubleTextBox();
+            txtApSuatNap = new Syncfusion.Windows.Forms.Tools.DoubleTextBox();
+            txtChatLuongKhi = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)txtSlsx).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtProductName).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtLoaiKhi).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtTheTichBinh).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtApSuatNap).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtChatLuongKhi).BeginInit();
+            SuspendLayout();
             // 
             // label8
             // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(831, 96);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Thêm Sản Phẩm";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label8.Dock = DockStyle.Fill;
+            label8.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.YellowGreen;
+            label8.Location = new Point(0, 0);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(831, 96);
+            label8.TabIndex = 31;
+            label8.Text = "Thêm Sản Phẩm";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(831, 96);
-            this.panel1.TabIndex = 88;
+            panel1.Controls.Add(label8);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(831, 96);
+            panel1.TabIndex = 88;
             // 
             // buttonThem
             // 
-            this.buttonThem.BackColor = System.Drawing.Color.Green;
-            this.buttonThem.BackgroundColor = System.Drawing.Color.Green;
-            this.buttonThem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonThem.BorderRadius = 3;
-            this.buttonThem.BorderSize = 0;
-            this.buttonThem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonThem.ForeColor = System.Drawing.Color.White;
-            this.buttonThem.Image = ((System.Drawing.Image)(resources.GetObject("buttonThem.Image")));
-            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThem.Location = new System.Drawing.Point(344, 377);
-            this.buttonThem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(147, 42);
-            this.buttonThem.TabIndex = 86;
-            this.buttonThem.Text = "Thêm";
-            this.buttonThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThem.TextColor = System.Drawing.Color.White;
-            this.buttonThem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonThem.UseVisualStyleBackColor = false;
-            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
+            buttonThem.BackColor = Color.Green;
+            buttonThem.BackgroundColor = Color.Green;
+            buttonThem.BorderColor = Color.PaleVioletRed;
+            buttonThem.BorderRadius = 3;
+            buttonThem.BorderSize = 0;
+            buttonThem.Cursor = Cursors.Hand;
+            buttonThem.FlatStyle = FlatStyle.Flat;
+            buttonThem.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonThem.ForeColor = Color.White;
+            buttonThem.Image = (Image)resources.GetObject("buttonThem.Image");
+            buttonThem.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonThem.Location = new Point(344, 377);
+            buttonThem.Margin = new Padding(4, 3, 4, 3);
+            buttonThem.Name = "buttonThem";
+            buttonThem.Size = new Size(147, 42);
+            buttonThem.TabIndex = 86;
+            buttonThem.Text = "Thêm";
+            buttonThem.TextAlign = ContentAlignment.MiddleRight;
+            buttonThem.TextColor = Color.White;
+            buttonThem.TextImageRelation = TextImageRelation.TextBeforeImage;
+            buttonThem.UseVisualStyleBackColor = false;
+            buttonThem.Click += buttonThem_Click;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(437, 119);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 21);
-            this.label4.TabIndex = 81;
-            this.label4.Text = "Số lượng sản xuất";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.Control;
+            label4.Location = new Point(437, 119);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(134, 21);
+            label4.TabIndex = 81;
+            label4.Text = "Số lượng sản xuất";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(155, 119);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 21);
-            this.label1.TabIndex = 79;
-            this.label1.Text = "Tên sản phẩm";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(155, 119);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(105, 21);
+            label1.TabIndex = 79;
+            label1.Text = "Tên sản phẩm";
             // 
             // txtSlsx
             // 
-            this.txtSlsx.BeforeTouchSize = new System.Drawing.Size(235, 33);
-            this.txtSlsx.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.txtSlsx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSlsx.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSlsx.IntegerValue = ((long)(0));
-            this.txtSlsx.Location = new System.Drawing.Point(437, 143);
-            this.txtSlsx.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtSlsx.MinValue = ((long)(0));
-            this.txtSlsx.Name = "txtSlsx";
-            this.txtSlsx.Size = new System.Drawing.Size(235, 33);
-            this.txtSlsx.TabIndex = 89;
-            this.txtSlsx.Text = "0";
+            txtSlsx.BeforeTouchSize = new Size(235, 33);
+            txtSlsx.BorderColor = Color.CornflowerBlue;
+            txtSlsx.BorderStyle = BorderStyle.FixedSingle;
+            txtSlsx.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSlsx.IntegerValue = 0L;
+            txtSlsx.Location = new Point(437, 143);
+            txtSlsx.Margin = new Padding(4, 3, 4, 3);
+            txtSlsx.MinValue = 0L;
+            txtSlsx.Name = "txtSlsx";
+            txtSlsx.Size = new Size(235, 33);
+            txtSlsx.TabIndex = 89;
+            txtSlsx.Text = "0";
             // 
             // txtProductName
             // 
-            this.txtProductName.BeforeTouchSize = new System.Drawing.Size(235, 33);
-            this.txtProductName.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.txtProductName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProductName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtProductName.Location = new System.Drawing.Point(155, 143);
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(235, 33);
-            this.txtProductName.TabIndex = 90;
+            txtProductName.BeforeTouchSize = new Size(235, 33);
+            txtProductName.BorderColor = Color.CornflowerBlue;
+            txtProductName.BorderStyle = BorderStyle.FixedSingle;
+            txtProductName.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtProductName.Location = new Point(155, 143);
+            txtProductName.Name = "txtProductName";
+            txtProductName.Size = new Size(235, 33);
+            txtProductName.TabIndex = 90;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(155, 197);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 21);
-            this.label2.TabIndex = 91;
-            this.label2.Text = "Chất lượng";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(155, 197);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(87, 21);
+            label2.TabIndex = 91;
+            label2.Text = "Chất lượng";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(437, 197);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 21);
-            this.label3.TabIndex = 93;
-            this.label3.Text = "Áp suất nạp";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.Control;
+            label3.Location = new Point(437, 197);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(92, 21);
+            label3.TabIndex = 93;
+            label3.Text = "Áp suất nạp";
             // 
             // txtLoaiKhi
             // 
-            this.txtLoaiKhi.BeforeTouchSize = new System.Drawing.Size(235, 33);
-            this.txtLoaiKhi.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.txtLoaiKhi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLoaiKhi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtLoaiKhi.Location = new System.Drawing.Point(155, 299);
-            this.txtLoaiKhi.Name = "txtLoaiKhi";
-            this.txtLoaiKhi.Size = new System.Drawing.Size(235, 33);
-            this.txtLoaiKhi.TabIndex = 96;
+            txtLoaiKhi.BeforeTouchSize = new Size(235, 33);
+            txtLoaiKhi.BorderColor = Color.CornflowerBlue;
+            txtLoaiKhi.BorderStyle = BorderStyle.FixedSingle;
+            txtLoaiKhi.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtLoaiKhi.Location = new Point(155, 299);
+            txtLoaiKhi.Name = "txtLoaiKhi";
+            txtLoaiKhi.Size = new Size(235, 33);
+            txtLoaiKhi.TabIndex = 96;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(155, 275);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 21);
-            this.label5.TabIndex = 95;
-            this.label5.Text = "Loại khí";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.Control;
+            label5.Location = new Point(155, 275);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(64, 21);
+            label5.TabIndex = 95;
+            label5.Text = "Loại khí";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(437, 275);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 21);
-            this.label6.TabIndex = 98;
-            this.label6.Text = "Thể tích bình";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.Control;
+            label6.Location = new Point(437, 275);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(99, 21);
+            label6.TabIndex = 98;
+            label6.Text = "Thể tích bình";
             // 
             // txtTheTichBinh
             // 
-            this.txtTheTichBinh.BeforeTouchSize = new System.Drawing.Size(235, 33);
-            this.txtTheTichBinh.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.txtTheTichBinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTheTichBinh.DoubleValue = 0D;
-            this.txtTheTichBinh.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTheTichBinh.Location = new System.Drawing.Point(437, 299);
-            this.txtTheTichBinh.MinValue = 0D;
-            this.txtTheTichBinh.Name = "txtTheTichBinh";
-            this.txtTheTichBinh.NumberDecimalDigits = 3;
-            this.txtTheTichBinh.Size = new System.Drawing.Size(235, 33);
-            this.txtTheTichBinh.TabIndex = 100;
-            this.txtTheTichBinh.Text = "0,000";
+            txtTheTichBinh.BeforeTouchSize = new Size(235, 33);
+            txtTheTichBinh.BorderColor = Color.CornflowerBlue;
+            txtTheTichBinh.BorderStyle = BorderStyle.FixedSingle;
+            txtTheTichBinh.DoubleValue = 0D;
+            txtTheTichBinh.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTheTichBinh.Location = new Point(437, 299);
+            txtTheTichBinh.MinValue = 0D;
+            txtTheTichBinh.Name = "txtTheTichBinh";
+            txtTheTichBinh.NumberDecimalDigits = 3;
+            txtTheTichBinh.Size = new Size(235, 33);
+            txtTheTichBinh.TabIndex = 100;
+            txtTheTichBinh.Text = "0.000";
             // 
             // txtApSuatNap
             // 
-            this.txtApSuatNap.BeforeTouchSize = new System.Drawing.Size(235, 33);
-            this.txtApSuatNap.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.txtApSuatNap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtApSuatNap.DoubleValue = 0D;
-            this.txtApSuatNap.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtApSuatNap.Location = new System.Drawing.Point(437, 221);
-            this.txtApSuatNap.MinValue = 0D;
-            this.txtApSuatNap.Name = "txtApSuatNap";
-            this.txtApSuatNap.NumberDecimalDigits = 3;
-            this.txtApSuatNap.Size = new System.Drawing.Size(235, 33);
-            this.txtApSuatNap.TabIndex = 101;
-            this.txtApSuatNap.Text = "0,000";
+            txtApSuatNap.BeforeTouchSize = new Size(235, 33);
+            txtApSuatNap.BorderColor = Color.CornflowerBlue;
+            txtApSuatNap.BorderStyle = BorderStyle.FixedSingle;
+            txtApSuatNap.DoubleValue = 0D;
+            txtApSuatNap.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtApSuatNap.Location = new Point(437, 221);
+            txtApSuatNap.MinValue = 0D;
+            txtApSuatNap.Name = "txtApSuatNap";
+            txtApSuatNap.NumberDecimalDigits = 3;
+            txtApSuatNap.Size = new Size(235, 33);
+            txtApSuatNap.TabIndex = 101;
+            txtApSuatNap.Text = "0.000";
             // 
             // txtChatLuongKhi
             // 
-            this.txtChatLuongKhi.BeforeTouchSize = new System.Drawing.Size(235, 33);
-            this.txtChatLuongKhi.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.txtChatLuongKhi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtChatLuongKhi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtChatLuongKhi.IntegerValue = ((long)(0));
-            this.txtChatLuongKhi.Location = new System.Drawing.Point(155, 221);
-            this.txtChatLuongKhi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtChatLuongKhi.MinValue = ((long)(0));
-            this.txtChatLuongKhi.Name = "txtChatLuongKhi";
-            this.txtChatLuongKhi.Size = new System.Drawing.Size(235, 33);
-            this.txtChatLuongKhi.TabIndex = 102;
-            this.txtChatLuongKhi.Text = "0";
+            txtChatLuongKhi.BeforeTouchSize = new Size(235, 33);
+            txtChatLuongKhi.BorderColor = Color.CornflowerBlue;
+            txtChatLuongKhi.BorderStyle = BorderStyle.FixedSingle;
+            txtChatLuongKhi.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtChatLuongKhi.IntegerValue = 0L;
+            txtChatLuongKhi.Location = new Point(155, 221);
+            txtChatLuongKhi.Margin = new Padding(4, 3, 4, 3);
+            txtChatLuongKhi.MinValue = 0L;
+            txtChatLuongKhi.Name = "txtChatLuongKhi";
+            txtChatLuongKhi.Size = new Size(235, 33);
+            txtChatLuongKhi.TabIndex = 102;
+            txtChatLuongKhi.Text = "0";
             // 
             // FormAddProductOnPO
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(831, 467);
-            this.Controls.Add(this.txtChatLuongKhi);
-            this.Controls.Add(this.txtApSuatNap);
-            this.Controls.Add(this.txtTheTichBinh);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtLoaiKhi);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtProductName);
-            this.Controls.Add(this.txtSlsx);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.buttonThem);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Name = "FormAddProductOnPO";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAddProductOnPO";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtSlsx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProductName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLoaiKhi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTheTichBinh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtApSuatNap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtChatLuongKhi)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(41, 44, 51);
+            ClientSize = new Size(831, 467);
+            Controls.Add(txtChatLuongKhi);
+            Controls.Add(txtApSuatNap);
+            Controls.Add(txtTheTichBinh);
+            Controls.Add(label6);
+            Controls.Add(txtLoaiKhi);
+            Controls.Add(label5);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(txtProductName);
+            Controls.Add(txtSlsx);
+            Controls.Add(panel1);
+            Controls.Add(buttonThem);
+            Controls.Add(label4);
+            Controls.Add(label1);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "FormAddProductOnPO";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FormAddProductOnPO";
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)txtSlsx).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtProductName).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtLoaiKhi).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtTheTichBinh).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtApSuatNap).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtChatLuongKhi).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

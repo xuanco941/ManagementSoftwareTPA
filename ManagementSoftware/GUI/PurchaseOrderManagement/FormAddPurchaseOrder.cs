@@ -37,11 +37,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
         void LoadProducts()
         {
-            foreach (FormItemProductOfPO item in panelProducts.Controls)
-            {
-                item.Close();
-                item.Dispose();
-            }
+            new MethodCommonGUI().CloseFormInPanel(panelProducts);
 
             if (productDictionary.Count > 0)
             {

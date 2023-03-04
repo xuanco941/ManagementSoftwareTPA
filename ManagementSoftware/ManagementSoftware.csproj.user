@@ -37,6 +37,9 @@
     <Compile Update="GUI\FormPurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Hello.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Help.cs">
       <SubType>Form</SubType>
     </Compile>

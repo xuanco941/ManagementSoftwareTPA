@@ -23,7 +23,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrEmpty(txtProductName.Text) || String.IsNullOrEmpty(txtLoaiKhi.Text) || String.IsNullOrEmpty(txtTheTichBinh.Text) || 
+            if (String.IsNullOrEmpty(txtProductName.Text) || String.IsNullOrEmpty(txtLoaiKhi.Text) || String.IsNullOrEmpty(txtTheTichBinh.Text) ||
                 String.IsNullOrEmpty(txtChatLuongKhi.Text) || String.IsNullOrEmpty(txtApSuatNap.Text) || String.IsNullOrEmpty(txtSlsx.Text))
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin của sản phẩm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);

@@ -393,6 +393,7 @@
             // 
             // panel19
             // 
+            panel19.AutoScroll = true;
             panel19.BorderStyle = BorderStyle.FixedSingle;
             panel19.Controls.Add(panelbottomLeft);
             panel19.Controls.Add(panel24);
