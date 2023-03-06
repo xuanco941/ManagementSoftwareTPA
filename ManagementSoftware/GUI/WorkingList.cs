@@ -52,20 +52,20 @@ namespace ManagementSoftware.GUI
         private void LoadDGV()
         {
 
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ID", SortMode = DataGridViewColumnSortMode.NotSortable, AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ID", SortMode = DataGridViewColumnSortMode.NotSortable });
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Tên sản phẩm", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Áp suất nạp", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Thể tích bình", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Chất lượng khí", SortMode = DataGridViewColumnSortMode.NotSortable });
 
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng cần sản xuất", SortMode = DataGridViewColumnSortMode.NotSortable, AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng đã sản xuất", SortMode = DataGridViewColumnSortMode.NotSortable, AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Ngày bắt đầu", SortMode = DataGridViewColumnSortMode.NotSortable, AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Ngày kết thúc", SortMode = DataGridViewColumnSortMode.NotSortable, AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng cần sản xuất", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng đã sản xuất", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Ngày bắt đầu", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Ngày kết thúc", SortMode = DataGridViewColumnSortMode.NotSortable });
 
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Trạng thái", SortMode = DataGridViewColumnSortMode.NotSortable, AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells });
-            dataGridView1.Columns.Add(new DataGridViewButtonColumn() { HeaderText = "Tùy chọn", SortMode = DataGridViewColumnSortMode.NotSortable, UseColumnTextForButtonValue = true, Text = "Cập nhật", Name = "Update", AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Trạng thái", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewButtonColumn() { HeaderText = "", SortMode = DataGridViewColumnSortMode.NotSortable, UseColumnTextForButtonValue = true, Text = "Cập nhật", Name = "Update", AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells, DefaultCellStyle = new DataGridViewCellStyle() { Font = new Font("Segoe UI", 14, FontStyle.Bold) } });
 
 
 
@@ -106,8 +106,7 @@ namespace ManagementSoftware.GUI
             {
                 try
                 {
-                    string id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString().Replace(Common.DIRECTIVE, "");
-                    new UpdateWorkingList(int.Parse(id)).ShowDialog();
+                    new UpdateWorkingList(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()).ShowDialog();
                 }
                 catch
                 {

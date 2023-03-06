@@ -51,5 +51,12 @@ namespace ManagementSoftware.DAL
             }
             return dbContext.SaveChanges();
         }
+
+        public Directive? GetDirectiveFromID(int id)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            return dbContext.Directives.Where(p => p.DirectiveID == id).FirstOrDefault();
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using ManagementSoftware.Models;
+﻿using ManagementSoftware.DAL;
+using ManagementSoftware.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,23 @@ namespace ManagementSoftware.GUI.WorkingListManagement
 {
     public partial class UpdateWorkingList : Form
     {
-        public UpdateWorkingList(int idDirective)
+        int id = 0;
+        public UpdateWorkingList(string idDirective)
         {
             InitializeComponent();
+            id = int.Parse(idDirective.Replace(Common.DIRECTIVE, ""));
+            labelCT.Text = idDirective;
+        }
+
+        private void UpdateWorkingList_Load(object sender, EventArgs e)
+        {
+            if(id != 0)
+            {
+                Directive? directive = new DALDirective().GetDirectiveFromID(id);
+                if (directive != null)
+                {
+                }
+            }
         }
     }
 }
