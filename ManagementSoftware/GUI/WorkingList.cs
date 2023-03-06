@@ -106,7 +106,9 @@ namespace ManagementSoftware.GUI
             {
                 try
                 {
-                    new UpdateWorkingList(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()).ShowDialog();
+                    UpdateWorkingList u =new UpdateWorkingList(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    u.changeData = new UpdateWorkingList.ChangeData(ToogleAlert);
+                    u.ShowDialog();
                 }
                 catch
                 {
@@ -115,6 +117,13 @@ namespace ManagementSoftware.GUI
 
             }
 
+        }
+
+        void ToogleAlert(string msg, FormAlert.enmType type)
+        {
+            
+            callAlert?.Invoke(msg, type);
+            LoadFormThongKe();
         }
 
 
@@ -171,7 +180,6 @@ namespace ManagementSoftware.GUI
             pageNumberGoto.MinValue = 1;
             pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
 
-            bool count = false;
 
             foreach (var item in this.ListResults)
             {
@@ -179,30 +187,32 @@ namespace ManagementSoftware.GUI
                 DataGridViewRow row = dataGridView1.Rows[rowId];
                 row.Cells[0].Value = Common.DIRECTIVE + item.DirectiveID;
 
-                Product? p = dALProduct.GetProductFromID(item.ProductID);
+                //Product? p = dALProduct.GetProductFromID(item.ProductID);
 
-                if (p != null)
+                if (item.Product != null)
                 {
-                    row.Cells[1].Value = p.ProductName;
-                    row.Cells[2].Value = p.ApSuatNap;
-                    row.Cells[3].Value = p.TheTichBinh;
-                    row.Cells[4].Value = p.ChatLuongKhi;
+                    row.Cells[1].Value = item.Product.ProductName;
+                    row.Cells[2].Value = item.Product.ApSuatNap;
+                    row.Cells[3].Value = item.Product.TheTichBinh;
+                    row.Cells[4].Value = item.Product.ChatLuongKhi;
                 }
 
                 row.Cells[5].Value = item.SoLuongCanSanXuat;
                 row.Cells[6].Value = item.SoLuongDaSanXuat;
-                row.Cells[7].Value = item.BeginAt.ToString($"HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-                row.Cells[8].Value = item.EndAt.ToString($"HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture); ;
+                //row.Cells[7].Value = item.BeginAt.ToString($"HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                //row.Cells[8].Value = item.EndAt.ToString($"HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture); ;
+
+                row.Cells[7].Value = item.BeginAt.ToString($"dd/MM/yyyy", CultureInfo.InvariantCulture);
+                row.Cells[8].Value = item.EndAt.ToString($"dd/MM/yyyy", CultureInfo.InvariantCulture); ;
                 row.Cells[9].Value = item.Status == true ? "Đã hoàn thành" : "Chưa hoàn thành";
 
 
 
 
-                if (count == true)
+                if (item.Status == true)
                 {
-                    row.DefaultCellStyle.BackColor = Color.PaleGreen;
+                    row.DefaultCellStyle.BackColor = Color.LightGreen;
                 }
-                count = !count;
 
             }
 

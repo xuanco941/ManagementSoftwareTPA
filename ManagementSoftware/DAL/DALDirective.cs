@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace ManagementSoftware.DAL
 {
@@ -33,13 +34,11 @@ namespace ManagementSoftware.DAL
         }
         public static int Update(Directive directive)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            var update = dbContext.Directives.FirstOrDefault(g => g.DirectiveID == directive.DirectiveID);
-            if (update != null)
+            using (var dbContext = new DataBaseContext())
             {
-                update = directive;
+                dbContext.Directives.Update(directive);
+                return dbContext.SaveChanges();
             }
-            return dbContext.SaveChanges();
         }
         public static int Delete(int directiveID)
         {
@@ -55,7 +54,7 @@ namespace ManagementSoftware.DAL
         public Directive? GetDirectiveFromID(int id)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            return dbContext.Directives.Where(p => p.DirectiveID == id).FirstOrDefault();
+            return dbContext.Directives.Include(d => d.Product).Where(p => p.DirectiveID == id).FirstOrDefault();
         }
 
     }

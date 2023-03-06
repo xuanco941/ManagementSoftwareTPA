@@ -30,6 +30,7 @@ namespace ManagementSoftware.GUI
             panelAleart.Controls.Add(frm);
         }
 
+
         private void ChangeFormContent(Form form, object sender)
         {
             //focus button

@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace ManagementSoftware.DAL.DALPagination
                     {
                         end = end.Value.AddDays(1);
                     }
-                    ListResults = dbContext.Directives.OrderByDescending(t => t.DirectiveID)
+                    ListResults = dbContext.Directives.Include(d => d.Product).OrderByDescending(t => t.DirectiveID)
                     .Where(a => a.Status == status && start <= a.CreateAt && end >= a.CreateAt)
                     .Skip(position)
                     .Take(NumberRows)
@@ -40,7 +41,7 @@ namespace ManagementSoftware.DAL.DALPagination
                 }
                 else
                 {
-                    ListResults = dbContext.Directives.OrderByDescending(t => t.DirectiveID)
+                    ListResults = dbContext.Directives.Include(d => d.Product).OrderByDescending(t => t.DirectiveID)
                     .Where(a => a.Status == status)
                     .Skip(position)
                     .Take(NumberRows)
@@ -56,7 +57,7 @@ namespace ManagementSoftware.DAL.DALPagination
                     {
                         end = end.Value.AddDays(1);
                     }
-                    ListResults = dbContext.Directives.OrderByDescending(t => t.DirectiveID)
+                    ListResults = dbContext.Directives.Include(d => d.Product).OrderByDescending(t => t.DirectiveID)
                     .Where(a => start <= a.CreateAt && end >= a.CreateAt)
                     .Skip(position)
                     .Take(NumberRows)
@@ -67,7 +68,7 @@ namespace ManagementSoftware.DAL.DALPagination
                 }
                 else
                 {
-                    ListResults = dbContext.Directives.OrderByDescending(t => t.DirectiveID)
+                    ListResults = dbContext.Directives.Include(d => d.Product).OrderByDescending(t => t.DirectiveID)
                     .Skip(position)
                     .Take(NumberRows)
                     .ToList();
