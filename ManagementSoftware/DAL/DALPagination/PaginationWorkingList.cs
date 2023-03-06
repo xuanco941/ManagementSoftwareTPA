@@ -14,35 +14,70 @@ namespace ManagementSoftware.DAL.DALPagination
         public int TotalPages { get; set; } = 1;
         public int TotalResults { get; set; } = 0;
         public List<Directive> ListResults { get; set; } = new List<Directive>();
-        public void Set(int page, DateTime? start, DateTime? end)
+        public void Set(int page, DateTime? start, DateTime? end, bool? status)
         {
             DataBaseContext dbContext = new DataBaseContext();
 
             int position = (page - 1) * NumberRows;
 
-            if (start != null && end != null)
+
+            if (status != null)
             {
-                if (end.HasValue)
+                if (start != null && end != null)
                 {
-                    end = end.Value.AddDays(1);
+                    if (end.HasValue)
+                    {
+                        end = end.Value.AddDays(1);
+                    }
+                    ListResults = dbContext.Directives.OrderByDescending(t => t.DirectiveID)
+                    .Where(a => a.Status == status && start <= a.CreateAt && end >= a.CreateAt)
+                    .Skip(position)
+                    .Take(NumberRows)
+                    .ToList();
+
+                    this.TotalResults = dbContext.Directives.Where(a => a.Status == status && start <= a.CreateAt && end >= a.CreateAt).Count();
+
                 }
-                ListResults = dbContext.Directives.OrderByDescending(t => t.DirectiveID)
-                .Where(a => start <= a.CreateAt && end >= a.CreateAt)
-                .Skip(position)
-                .Take(NumberRows)
-                .ToList();
-
-                this.TotalResults = dbContext.Directives.Where(a => start <= a.CreateAt && end >= a.CreateAt).Count();
-
+                else
+                {
+                    ListResults = dbContext.Directives.OrderByDescending(t => t.DirectiveID)
+                    .Where(a => a.Status == status)
+                    .Skip(position)
+                    .Take(NumberRows)
+                    .ToList();
+                    this.TotalResults = dbContext.Directives.Where(a => a.Status == status).Count();
+                }
             }
             else
             {
-                ListResults = dbContext.Directives.OrderByDescending(t => t.DirectiveID)
-                .Skip(position)
-                .Take(NumberRows)
-                .ToList();
-                this.TotalResults = dbContext.Directives.Count();
+                if (start != null && end != null)
+                {
+                    if (end.HasValue)
+                    {
+                        end = end.Value.AddDays(1);
+                    }
+                    ListResults = dbContext.Directives.OrderByDescending(t => t.DirectiveID)
+                    .Where(a => start <= a.CreateAt && end >= a.CreateAt)
+                    .Skip(position)
+                    .Take(NumberRows)
+                    .ToList();
+
+                    this.TotalResults = dbContext.Directives.Where(a => start <= a.CreateAt && end >= a.CreateAt).Count();
+
+                }
+                else
+                {
+                    ListResults = dbContext.Directives.OrderByDescending(t => t.DirectiveID)
+                    .Skip(position)
+                    .Take(NumberRows)
+                    .ToList();
+                    this.TotalResults = dbContext.Directives.Count();
+                }
             }
+
+            
+
+
 
 
             this.PageCurrent = page;

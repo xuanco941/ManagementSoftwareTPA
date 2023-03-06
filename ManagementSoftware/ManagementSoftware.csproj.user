@@ -121,5 +121,8 @@
     <Compile Update="GUI\WorkingList.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\WorkingListManagement\UpdateWorkingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -101,30 +101,38 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             purchaseOrder.SoSanPhamCanSX = productDictionary.Count;
             purchaseOrder.SoSanPhamDaSX = 0;
             AddUpdateDeleteResponse<PurchaseOrder> response = BUSPurchaseOrder.Add(purchaseOrder);
-            if (response != null && response.Status == false)
+            if(response != null)
             {
-                MessageBox.Show("Thêm không thành công.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                //lay danh sach san pham gan poid vao
-                List<Product> list = new List<Product>();
-                foreach (var item in productDictionary)
+                if (response.Status == false)
                 {
-                    item.Value.PurchaseOrderID = response.Data.PurchaseOrderID;
-                    list.Add(item.Value);
-                }
-                AddUpdateDeleteResponse<List<Product>> responseProduct = BUSProduct.AddRange(list);
-                if (responseProduct != null && responseProduct.Status == true)
-                {
-                    changeData.Invoke("Thêm đơn hàng thành công!", FormAlert.enmType.Success);
+                    MessageBox.Show("Thêm không thành công.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    changeData.Invoke("Lỗi, thêm đơn hàng thất bại!", FormAlert.enmType.Error);
+                    //lay danh sach san pham gan poid vao
+                    List<Product> list = new List<Product>();
+                    foreach (var item in productDictionary)
+                    {
+                        item.Value.PurchaseOrderID = response.Data.PurchaseOrderID;
+                        list.Add(item.Value);
+                    }
+                    AddUpdateDeleteResponse<List<Product>> responseProduct = BUSProduct.AddRange(list);
+                    if (responseProduct != null && responseProduct.Status == true)
+                    {
+                        changeData.Invoke("Thêm đơn hàng thành công!", FormAlert.enmType.Success);
+                    }
+                    else
+                    {
+                        changeData.Invoke("Lỗi, thêm đơn hàng thất bại!", FormAlert.enmType.Error);
+                    }
+                    this.Close();
                 }
-                this.Close();
             }
+            else
+            {
+                MessageBox.Show("Thêm không thành công.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
     }

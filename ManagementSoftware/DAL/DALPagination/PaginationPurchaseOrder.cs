@@ -30,7 +30,7 @@ namespace ManagementSoftware.DAL.DALPagination
                 .ToList();
                 this.TotalResults = dbContext.PurchaseOrders.Where(p => p.Status == status && (start <= p.CreateAt && end >= p.CreateAt)).Count();
             }
-            else if(status==null)
+            else
             {
                 this.ListResults = dbContext.PurchaseOrders.OrderByDescending(t => t.PurchaseOrderID)
                 .Where(p => start <= p.CreateAt && end >= p.CreateAt)
