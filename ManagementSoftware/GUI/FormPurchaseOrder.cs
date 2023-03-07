@@ -62,7 +62,7 @@ namespace ManagementSoftware.GUI
             callAlert?.Invoke(msg, type);
         }
 
-        private async void LoadFormThongKe()
+        private void LoadFormThongKe()
         {
             panelBoxSearch.Enabled = false;
 

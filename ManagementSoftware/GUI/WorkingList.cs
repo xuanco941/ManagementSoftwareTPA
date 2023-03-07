@@ -67,8 +67,19 @@ namespace ManagementSoftware.GUI
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Ngày kết thúc", SortMode = DataGridViewColumnSortMode.NotSortable });
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Trạng thái", SortMode = DataGridViewColumnSortMode.NotSortable });
-            dataGridView1.Columns.Add(new DataGridViewButtonColumn() { HeaderText = "", SortMode = DataGridViewColumnSortMode.NotSortable, UseColumnTextForButtonValue = true, Text = "Cập nhật", Name = "Update", AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells, DefaultCellStyle = new DataGridViewCellStyle() { Font = new Font("Segoe UI", 14, FontStyle.Bold) } });
-
+            dataGridView1.Columns.Add(new DataGridViewButtonColumn()
+            {
+                HeaderText = "",
+                SortMode = DataGridViewColumnSortMode.NotSortable,
+                UseColumnTextForButtonValue = true,
+                Text = "Cập nhật",
+                Name = "Update",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
+                DefaultCellStyle = new DataGridViewCellStyle()
+                {
+                    Font = new Font("Segoe UI", 14, FontStyle.Bold),
+                }
+            });
 
 
 

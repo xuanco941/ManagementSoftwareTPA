@@ -72,6 +72,8 @@ namespace ManagementSoftware.Models
             modelBuilder.Entity<ImportedWarehouse>(entity =>
             {
                 entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
+                entity.Property(e => e.DateAdded).HasDefaultValueSql("(getdate())");
+
             });
             //ExportedWareHouse
             modelBuilder.Entity<ExportedWareHouse>(entity =>

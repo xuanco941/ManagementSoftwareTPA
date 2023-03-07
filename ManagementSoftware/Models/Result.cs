@@ -31,8 +31,8 @@ namespace ManagementSoftware.Models
         //người vận hành
         public string UsernameWorker { get; set; }
         public bool Status { get; set; }
-        public int DirectivePOID { get; set; }
-        public Product DirectivePO { get; set; }
+        public int ProductID { get; set; }
+        public Product Product { get; set; }
         public Result()
         {
         }

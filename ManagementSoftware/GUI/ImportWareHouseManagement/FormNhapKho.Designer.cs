@@ -59,18 +59,18 @@
             panel17 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel20 = new Panel();
-            buttonExit = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            buttonDelete = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             panel19 = new Panel();
-            buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            txtPRPQ = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
-            label5 = new Label();
-            NgayKetThuc = new Syncfusion.WinForms.Input.SfDateTimeEdit();
+            buttonConfirm = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            txtSoLuongNhap = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
+            labelSLNhap = new Label();
+            NgayNhap = new Syncfusion.WinForms.Input.SfDateTimeEdit();
             label4 = new Label();
-            textBox1 = new TextBox();
+            txtNguoiNhap = new TextBox();
             label3 = new Label();
             comboBoxDonNhapKho = new ComboBox();
             label6 = new Label();
-            panel18 = new Panel();
+            paneBarcode = new Panel();
             panel15 = new Panel();
             dataGridView1 = new DataGridView();
             panel6 = new Panel();
@@ -96,7 +96,7 @@
             tableLayoutPanel3.SuspendLayout();
             panel20.SuspendLayout();
             panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)txtPRPQ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtSoLuongNhap).BeginInit();
             panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel6.SuspendLayout();
@@ -130,12 +130,12 @@
             // 
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Orange;
             label2.Location = new Point(0, 0);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(385, 60);
+            label2.Size = new Size(404, 60);
             label2.TabIndex = 16;
             label2.Text = "Thông tin chỉ thị";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -146,7 +146,7 @@
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(385, 60);
+            panel5.Size = new Size(404, 60);
             panel5.TabIndex = 0;
             // 
             // labelMaChiThi
@@ -158,7 +158,7 @@
             labelMaChiThi.Margin = new Padding(4, 0, 4, 0);
             labelMaChiThi.Name = "labelMaChiThi";
             labelMaChiThi.Padding = new Padding(23, 0, 0, 0);
-            labelMaChiThi.Size = new Size(383, 70);
+            labelMaChiThi.Size = new Size(402, 70);
             labelMaChiThi.TabIndex = 5;
             labelMaChiThi.Text = "Mã chỉ thị :";
             labelMaChiThi.TextAlign = ContentAlignment.MiddleLeft;
@@ -172,7 +172,7 @@
             labelSoLuongCanSX.Margin = new Padding(4, 0, 4, 0);
             labelSoLuongCanSX.Name = "labelSoLuongCanSX";
             labelSoLuongCanSX.Padding = new Padding(23, 0, 0, 0);
-            labelSoLuongCanSX.Size = new Size(383, 70);
+            labelSoLuongCanSX.Size = new Size(402, 70);
             labelSoLuongCanSX.TabIndex = 5;
             labelSoLuongCanSX.Text = "Số lượng cần sản xuất :";
             labelSoLuongCanSX.TextAlign = ContentAlignment.MiddleLeft;
@@ -186,7 +186,7 @@
             labelSoLuongDaSX.Margin = new Padding(4, 0, 4, 0);
             labelSoLuongDaSX.Name = "labelSoLuongDaSX";
             labelSoLuongDaSX.Padding = new Padding(23, 0, 0, 0);
-            labelSoLuongDaSX.Size = new Size(383, 70);
+            labelSoLuongDaSX.Size = new Size(402, 70);
             labelSoLuongDaSX.TabIndex = 5;
             labelSoLuongDaSX.Text = "Số lượng đã sản xuất :";
             labelSoLuongDaSX.TextAlign = ContentAlignment.MiddleLeft;
@@ -200,7 +200,7 @@
             labelNguoiVanHanh.Margin = new Padding(4, 0, 4, 0);
             labelNguoiVanHanh.Name = "labelNguoiVanHanh";
             labelNguoiVanHanh.Padding = new Padding(23, 0, 0, 0);
-            labelNguoiVanHanh.Size = new Size(383, 70);
+            labelNguoiVanHanh.Size = new Size(402, 70);
             labelNguoiVanHanh.TabIndex = 5;
             labelNguoiVanHanh.Text = "Người vận hành :";
             labelNguoiVanHanh.TextAlign = ContentAlignment.MiddleLeft;
@@ -214,7 +214,7 @@
             labelBatDauNgay.Margin = new Padding(4, 0, 4, 0);
             labelBatDauNgay.Name = "labelBatDauNgay";
             labelBatDauNgay.Padding = new Padding(23, 0, 0, 0);
-            labelBatDauNgay.Size = new Size(383, 70);
+            labelBatDauNgay.Size = new Size(402, 70);
             labelBatDauNgay.TabIndex = 5;
             labelBatDauNgay.Text = "Bắt đầu ngày :";
             labelBatDauNgay.TextAlign = ContentAlignment.MiddleLeft;
@@ -228,7 +228,7 @@
             labelKetThucNgay.Margin = new Padding(4, 0, 4, 0);
             labelKetThucNgay.Name = "labelKetThucNgay";
             labelKetThucNgay.Padding = new Padding(23, 0, 0, 0);
-            labelKetThucNgay.Size = new Size(383, 70);
+            labelKetThucNgay.Size = new Size(402, 70);
             labelKetThucNgay.TabIndex = 5;
             labelKetThucNgay.Text = "Kết thúc ngày :";
             labelKetThucNgay.TextAlign = ContentAlignment.MiddleLeft;
@@ -242,7 +242,7 @@
             labelMaSanPham.Margin = new Padding(4, 0, 4, 0);
             labelMaSanPham.Name = "labelMaSanPham";
             labelMaSanPham.Padding = new Padding(23, 0, 0, 0);
-            labelMaSanPham.Size = new Size(383, 70);
+            labelMaSanPham.Size = new Size(402, 70);
             labelMaSanPham.TabIndex = 5;
             labelMaSanPham.Text = "Thuộc mã sản phẩm : ";
             labelMaSanPham.TextAlign = ContentAlignment.MiddleLeft;
@@ -253,7 +253,7 @@
             panel14.Dock = DockStyle.Top;
             panel14.Location = new Point(0, 420);
             panel14.Name = "panel14";
-            panel14.Size = new Size(383, 70);
+            panel14.Size = new Size(402, 70);
             panel14.TabIndex = 6;
             // 
             // panel13
@@ -262,7 +262,7 @@
             panel13.Dock = DockStyle.Top;
             panel13.Location = new Point(0, 350);
             panel13.Name = "panel13";
-            panel13.Size = new Size(383, 70);
+            panel13.Size = new Size(402, 70);
             panel13.TabIndex = 5;
             // 
             // panel1
@@ -288,8 +288,8 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 31F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 69F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 410F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(panel3, 0, 0);
             tableLayoutPanel1.Controls.Add(panel4, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -307,7 +307,7 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(3, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(385, 660);
+            panel3.Size = new Size(404, 660);
             panel3.TabIndex = 0;
             // 
             // panelInfoProduct
@@ -326,7 +326,7 @@
             panelInfoProduct.Dock = DockStyle.Fill;
             panelInfoProduct.Location = new Point(0, 60);
             panelInfoProduct.Name = "panelInfoProduct";
-            panelInfoProduct.Size = new Size(385, 600);
+            panelInfoProduct.Size = new Size(404, 600);
             panelInfoProduct.TabIndex = 1;
             // 
             // panel7
@@ -335,7 +335,7 @@
             panel7.Dock = DockStyle.Top;
             panel7.Location = new Point(0, 490);
             panel7.Name = "panel7";
-            panel7.Size = new Size(383, 70);
+            panel7.Size = new Size(402, 70);
             panel7.TabIndex = 7;
             // 
             // labelSoLuongDaNhapKho
@@ -347,7 +347,7 @@
             labelSoLuongDaNhapKho.Margin = new Padding(4, 0, 4, 0);
             labelSoLuongDaNhapKho.Name = "labelSoLuongDaNhapKho";
             labelSoLuongDaNhapKho.Padding = new Padding(23, 0, 0, 0);
-            labelSoLuongDaNhapKho.Size = new Size(383, 70);
+            labelSoLuongDaNhapKho.Size = new Size(402, 70);
             labelSoLuongDaNhapKho.TabIndex = 5;
             labelSoLuongDaNhapKho.Text = "Số lượng đã nhập kho : ";
             labelSoLuongDaNhapKho.TextAlign = ContentAlignment.MiddleLeft;
@@ -358,7 +358,7 @@
             panel12.Dock = DockStyle.Top;
             panel12.Location = new Point(0, 280);
             panel12.Name = "panel12";
-            panel12.Size = new Size(383, 70);
+            panel12.Size = new Size(402, 70);
             panel12.TabIndex = 4;
             // 
             // panel11
@@ -367,7 +367,7 @@
             panel11.Dock = DockStyle.Top;
             panel11.Location = new Point(0, 210);
             panel11.Name = "panel11";
-            panel11.Size = new Size(383, 70);
+            panel11.Size = new Size(402, 70);
             panel11.TabIndex = 3;
             // 
             // panel10
@@ -376,7 +376,7 @@
             panel10.Dock = DockStyle.Top;
             panel10.Location = new Point(0, 140);
             panel10.Name = "panel10";
-            panel10.Size = new Size(383, 70);
+            panel10.Size = new Size(402, 70);
             panel10.TabIndex = 2;
             // 
             // panel9
@@ -385,7 +385,7 @@
             panel9.Dock = DockStyle.Top;
             panel9.Location = new Point(0, 70);
             panel9.Name = "panel9";
-            panel9.Size = new Size(383, 70);
+            panel9.Size = new Size(402, 70);
             panel9.TabIndex = 1;
             // 
             // panel8
@@ -394,7 +394,7 @@
             panel8.Dock = DockStyle.Top;
             panel8.Location = new Point(0, 0);
             panel8.Name = "panel8";
-            panel8.Size = new Size(383, 70);
+            panel8.Size = new Size(402, 70);
             panel8.TabIndex = 0;
             // 
             // panel4
@@ -402,9 +402,9 @@
             panel4.Controls.Add(tableLayoutPanel2);
             panel4.Controls.Add(panel6);
             panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(394, 3);
+            panel4.Location = new Point(413, 3);
             panel4.Name = "panel4";
-            panel4.Size = new Size(865, 660);
+            panel4.Size = new Size(846, 660);
             panel4.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -419,23 +419,24 @@
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(865, 600);
+            tableLayoutPanel2.Size = new Size(846, 600);
             tableLayoutPanel2.TabIndex = 122;
             // 
             // panel17
             // 
+            panel17.AutoScroll = true;
             panel17.Controls.Add(tableLayoutPanel3);
-            panel17.Controls.Add(txtPRPQ);
-            panel17.Controls.Add(label5);
-            panel17.Controls.Add(NgayKetThuc);
+            panel17.Controls.Add(txtSoLuongNhap);
+            panel17.Controls.Add(labelSLNhap);
+            panel17.Controls.Add(NgayNhap);
             panel17.Controls.Add(label4);
-            panel17.Controls.Add(textBox1);
+            panel17.Controls.Add(txtNguoiNhap);
             panel17.Controls.Add(label3);
             panel17.Controls.Add(comboBoxDonNhapKho);
             panel17.Controls.Add(label6);
-            panel17.Controls.Add(panel18);
+            panel17.Controls.Add(paneBarcode);
             panel17.Dock = DockStyle.Fill;
-            panel17.Location = new Point(568, 3);
+            panel17.Location = new Point(549, 3);
             panel17.Name = "panel17";
             panel17.Padding = new Padding(6, 2, 6, 5);
             panel17.Size = new Size(294, 594);
@@ -459,7 +460,7 @@
             // 
             // panel20
             // 
-            panel20.Controls.Add(buttonExit);
+            panel20.Controls.Add(buttonDelete);
             panel20.Dock = DockStyle.Fill;
             panel20.Location = new Point(144, 3);
             panel20.Name = "panel20";
@@ -467,34 +468,35 @@
             panel20.Size = new Size(135, 68);
             panel20.TabIndex = 1;
             // 
-            // buttonExit
+            // buttonDelete
             // 
-            buttonExit.BackColor = Color.Firebrick;
-            buttonExit.BackgroundColor = Color.Firebrick;
-            buttonExit.BorderColor = Color.PaleVioletRed;
-            buttonExit.BorderRadius = 5;
-            buttonExit.BorderSize = 0;
-            buttonExit.Cursor = Cursors.Hand;
-            buttonExit.Dock = DockStyle.Fill;
-            buttonExit.FlatStyle = FlatStyle.Flat;
-            buttonExit.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonExit.ForeColor = Color.White;
-            buttonExit.Image = (Image)resources.GetObject("buttonExit.Image");
-            buttonExit.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonExit.Location = new Point(8, 15);
-            buttonExit.Margin = new Padding(4, 3, 4, 3);
-            buttonExit.Name = "buttonExit";
-            buttonExit.Size = new Size(119, 48);
-            buttonExit.TabIndex = 126;
-            buttonExit.Text = "Xóa";
-            buttonExit.TextAlign = ContentAlignment.MiddleRight;
-            buttonExit.TextColor = Color.White;
-            buttonExit.TextImageRelation = TextImageRelation.TextBeforeImage;
-            buttonExit.UseVisualStyleBackColor = false;
+            buttonDelete.BackColor = Color.Firebrick;
+            buttonDelete.BackgroundColor = Color.Firebrick;
+            buttonDelete.BorderColor = Color.PaleVioletRed;
+            buttonDelete.BorderRadius = 5;
+            buttonDelete.BorderSize = 0;
+            buttonDelete.Cursor = Cursors.Hand;
+            buttonDelete.Dock = DockStyle.Fill;
+            buttonDelete.FlatStyle = FlatStyle.Flat;
+            buttonDelete.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonDelete.ForeColor = Color.White;
+            buttonDelete.Image = (Image)resources.GetObject("buttonDelete.Image");
+            buttonDelete.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonDelete.Location = new Point(8, 15);
+            buttonDelete.Margin = new Padding(4, 3, 4, 3);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(119, 48);
+            buttonDelete.TabIndex = 126;
+            buttonDelete.Text = "Xóa";
+            buttonDelete.TextAlign = ContentAlignment.MiddleRight;
+            buttonDelete.TextColor = Color.White;
+            buttonDelete.TextImageRelation = TextImageRelation.TextBeforeImage;
+            buttonDelete.UseVisualStyleBackColor = false;
+            buttonDelete.Click += buttonDelete_Click;
             // 
             // panel19
             // 
-            panel19.Controls.Add(buttonDangNhap);
+            panel19.Controls.Add(buttonConfirm);
             panel19.Dock = DockStyle.Fill;
             panel19.Location = new Point(3, 3);
             panel19.Name = "panel19";
@@ -502,70 +504,71 @@
             panel19.Size = new Size(135, 68);
             panel19.TabIndex = 0;
             // 
-            // buttonDangNhap
+            // buttonConfirm
             // 
-            buttonDangNhap.BackColor = Color.SteelBlue;
-            buttonDangNhap.BackgroundColor = Color.SteelBlue;
-            buttonDangNhap.BorderColor = Color.PaleVioletRed;
-            buttonDangNhap.BorderRadius = 5;
-            buttonDangNhap.BorderSize = 0;
-            buttonDangNhap.Cursor = Cursors.Hand;
-            buttonDangNhap.Dock = DockStyle.Fill;
-            buttonDangNhap.FlatStyle = FlatStyle.Flat;
-            buttonDangNhap.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonDangNhap.ForeColor = Color.White;
-            buttonDangNhap.Image = (Image)resources.GetObject("buttonDangNhap.Image");
-            buttonDangNhap.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonDangNhap.Location = new Point(8, 15);
-            buttonDangNhap.Margin = new Padding(4, 3, 4, 3);
-            buttonDangNhap.Name = "buttonDangNhap";
-            buttonDangNhap.Size = new Size(119, 48);
-            buttonDangNhap.TabIndex = 125;
-            buttonDangNhap.Text = "Xác nhận";
-            buttonDangNhap.TextAlign = ContentAlignment.MiddleRight;
-            buttonDangNhap.TextColor = Color.White;
-            buttonDangNhap.TextImageRelation = TextImageRelation.TextBeforeImage;
-            buttonDangNhap.UseVisualStyleBackColor = false;
+            buttonConfirm.BackColor = Color.SteelBlue;
+            buttonConfirm.BackgroundColor = Color.SteelBlue;
+            buttonConfirm.BorderColor = Color.PaleVioletRed;
+            buttonConfirm.BorderRadius = 5;
+            buttonConfirm.BorderSize = 0;
+            buttonConfirm.Cursor = Cursors.Hand;
+            buttonConfirm.Dock = DockStyle.Fill;
+            buttonConfirm.FlatStyle = FlatStyle.Flat;
+            buttonConfirm.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonConfirm.ForeColor = Color.White;
+            buttonConfirm.Image = (Image)resources.GetObject("buttonConfirm.Image");
+            buttonConfirm.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonConfirm.Location = new Point(8, 15);
+            buttonConfirm.Margin = new Padding(4, 3, 4, 3);
+            buttonConfirm.Name = "buttonConfirm";
+            buttonConfirm.Size = new Size(119, 48);
+            buttonConfirm.TabIndex = 125;
+            buttonConfirm.Text = "Xác nhận";
+            buttonConfirm.TextAlign = ContentAlignment.MiddleRight;
+            buttonConfirm.TextColor = Color.White;
+            buttonConfirm.TextImageRelation = TextImageRelation.TextBeforeImage;
+            buttonConfirm.UseVisualStyleBackColor = false;
+            buttonConfirm.Click += buttonConfirm_Click;
             // 
-            // txtPRPQ
+            // txtSoLuongNhap
             // 
-            txtPRPQ.BeforeTouchSize = new Size(282, 35);
-            txtPRPQ.Dock = DockStyle.Top;
-            txtPRPQ.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPRPQ.IntegerValue = 0L;
-            txtPRPQ.Location = new Point(6, 392);
-            txtPRPQ.Margin = new Padding(4, 3, 4, 3);
-            txtPRPQ.Name = "txtPRPQ";
-            txtPRPQ.Size = new Size(282, 35);
-            txtPRPQ.TabIndex = 120;
-            txtPRPQ.Text = "0";
+            txtSoLuongNhap.BeforeTouchSize = new Size(282, 35);
+            txtSoLuongNhap.Dock = DockStyle.Top;
+            txtSoLuongNhap.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSoLuongNhap.IntegerValue = 0L;
+            txtSoLuongNhap.Location = new Point(6, 392);
+            txtSoLuongNhap.Margin = new Padding(4, 3, 4, 3);
+            txtSoLuongNhap.Name = "txtSoLuongNhap";
+            txtSoLuongNhap.Size = new Size(282, 35);
+            txtSoLuongNhap.TabIndex = 120;
+            txtSoLuongNhap.Text = "0";
             // 
-            // label5
+            // labelSLNhap
             // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Top;
-            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(6, 367);
-            label5.Name = "label5";
-            label5.Size = new Size(149, 25);
-            label5.TabIndex = 121;
-            label5.Text = "Số lượng nhập : ";
+            labelSLNhap.AutoSize = true;
+            labelSLNhap.Dock = DockStyle.Top;
+            labelSLNhap.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelSLNhap.ForeColor = Color.White;
+            labelSLNhap.Location = new Point(6, 367);
+            labelSLNhap.Name = "labelSLNhap";
+            labelSLNhap.Size = new Size(149, 25);
+            labelSLNhap.TabIndex = 121;
+            labelSLNhap.Text = "Số lượng nhập : ";
             // 
-            // NgayKetThuc
+            // NgayNhap
             // 
-            NgayKetThuc.Cursor = Cursors.IBeam;
-            NgayKetThuc.DateTimePattern = Syncfusion.WinForms.Input.Enums.DateTimePattern.Custom;
-            NgayKetThuc.Dock = DockStyle.Top;
-            NgayKetThuc.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            NgayKetThuc.Format = "dd/MM/yyyy";
-            NgayKetThuc.Location = new Point(6, 331);
-            NgayKetThuc.Margin = new Padding(4, 3, 4, 3);
-            NgayKetThuc.MinDateTime = new DateTime(2022, 1, 1, 23, 59, 0, 0);
-            NgayKetThuc.Name = "NgayKetThuc";
-            NgayKetThuc.Size = new Size(282, 36);
-            NgayKetThuc.TabIndex = 119;
-            NgayKetThuc.Value = new DateTime(2022, 10, 1, 23, 59, 0, 0);
+            NgayNhap.Cursor = Cursors.IBeam;
+            NgayNhap.DateTimePattern = Syncfusion.WinForms.Input.Enums.DateTimePattern.Custom;
+            NgayNhap.Dock = DockStyle.Top;
+            NgayNhap.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            NgayNhap.Format = "dd/MM/yyyy";
+            NgayNhap.Location = new Point(6, 331);
+            NgayNhap.Margin = new Padding(4, 3, 4, 3);
+            NgayNhap.MinDateTime = new DateTime(2022, 1, 1, 23, 59, 0, 0);
+            NgayNhap.Name = "NgayNhap";
+            NgayNhap.Size = new Size(282, 36);
+            NgayNhap.TabIndex = 119;
+            NgayNhap.Value = new DateTime(2022, 10, 1, 23, 59, 0, 0);
             // 
             // label4
             // 
@@ -579,14 +582,14 @@
             label4.TabIndex = 3;
             label4.Text = "Ngày nhập : ";
             // 
-            // textBox1
+            // txtNguoiNhap
             // 
-            textBox1.Dock = DockStyle.Top;
-            textBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(6, 273);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(282, 33);
-            textBox1.TabIndex = 2;
+            txtNguoiNhap.Dock = DockStyle.Top;
+            txtNguoiNhap.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNguoiNhap.Location = new Point(6, 273);
+            txtNguoiNhap.Name = "txtNguoiNhap";
+            txtNguoiNhap.Size = new Size(282, 33);
+            txtNguoiNhap.TabIndex = 2;
             // 
             // label3
             // 
@@ -610,6 +613,7 @@
             comboBoxDonNhapKho.Name = "comboBoxDonNhapKho";
             comboBoxDonNhapKho.Size = new Size(282, 33);
             comboBoxDonNhapKho.TabIndex = 124;
+            comboBoxDonNhapKho.SelectedIndexChanged += comboBoxDonNhapKho_SelectedIndexChanged;
             // 
             // label6
             // 
@@ -623,14 +627,14 @@
             label6.TabIndex = 123;
             label6.Text = "Đơn nhập kho : ";
             // 
-            // panel18
+            // paneBarcode
             // 
-            panel18.BorderStyle = BorderStyle.FixedSingle;
-            panel18.Dock = DockStyle.Top;
-            panel18.Location = new Point(6, 2);
-            panel18.Name = "panel18";
-            panel18.Size = new Size(282, 188);
-            panel18.TabIndex = 122;
+            paneBarcode.BorderStyle = BorderStyle.FixedSingle;
+            paneBarcode.Dock = DockStyle.Top;
+            paneBarcode.Location = new Point(6, 2);
+            paneBarcode.Name = "paneBarcode";
+            paneBarcode.Size = new Size(282, 188);
+            paneBarcode.TabIndex = 122;
             // 
             // panel15
             // 
@@ -639,7 +643,7 @@
             panel15.Dock = DockStyle.Fill;
             panel15.Location = new Point(3, 3);
             panel15.Name = "panel15";
-            panel15.Size = new Size(559, 594);
+            panel15.Size = new Size(540, 594);
             panel15.TabIndex = 0;
             // 
             // dataGridView1
@@ -649,7 +653,7 @@
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(557, 592);
+            dataGridView1.Size = new Size(538, 592);
             dataGridView1.TabIndex = 0;
             // 
             // panel6
@@ -658,19 +662,19 @@
             panel6.Dock = DockStyle.Top;
             panel6.Location = new Point(0, 0);
             panel6.Name = "panel6";
-            panel6.Size = new Size(865, 60);
+            panel6.Size = new Size(846, 60);
             panel6.TabIndex = 0;
             // 
             // label1
             // 
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.PaleGreen;
             label1.Location = new Point(0, 0);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(865, 60);
+            label1.Size = new Size(846, 60);
             label1.TabIndex = 17;
             label1.Text = "Nhập kho";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -708,7 +712,7 @@
             tableLayoutPanel3.ResumeLayout(false);
             panel20.ResumeLayout(false);
             panel19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)txtPRPQ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtSoLuongNhap).EndInit();
             panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel6.ResumeLayout(false);
@@ -746,22 +750,22 @@
         private Panel panel7;
         private Label labelSoLuongDaNhapKho;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox txtNguoiNhap;
         private Label label3;
-        private Syncfusion.WinForms.Input.SfDateTimeEdit NgayKetThuc;
+        private Syncfusion.WinForms.Input.SfDateTimeEdit NgayNhap;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel17;
         private ComboBox comboBoxDonNhapKho;
         private Label label6;
-        private Syncfusion.Windows.Forms.Tools.IntegerTextBox txtPRPQ;
-        private Label label5;
-        private Panel panel18;
+        private Syncfusion.Windows.Forms.Tools.IntegerTextBox txtSoLuongNhap;
+        private Label labelSLNhap;
+        private Panel paneBarcode;
         private Panel panel15;
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panel20;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonExit;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDelete;
         private Panel panel19;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDangNhap;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonConfirm;
         private DataGridView dataGridView1;
     }
 }
