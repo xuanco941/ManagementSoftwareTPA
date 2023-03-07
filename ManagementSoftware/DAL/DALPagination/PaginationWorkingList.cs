@@ -26,10 +26,8 @@ namespace ManagementSoftware.DAL.DALPagination
             {
                 if (start != null && end != null)
                 {
-                    if (end.HasValue)
-                    {
-                        end = end.Value.AddDays(1);
-                    }
+                    end = end.Value.AddDays(1);
+
                     ListResults = dbContext.Directives.Include(d => d.Product).OrderByDescending(t => t.DirectiveID)
                     .Where(a => a.Status == status && start <= a.CreateAt && end >= a.CreateAt)
                     .Skip(position)
@@ -53,10 +51,7 @@ namespace ManagementSoftware.DAL.DALPagination
             {
                 if (start != null && end != null)
                 {
-                    if (end.HasValue)
-                    {
-                        end = end.Value.AddDays(1);
-                    }
+                    end = end.Value.AddDays(1);
                     ListResults = dbContext.Directives.Include(d => d.Product).OrderByDescending(t => t.DirectiveID)
                     .Where(a => start <= a.CreateAt && end >= a.CreateAt)
                     .Skip(position)

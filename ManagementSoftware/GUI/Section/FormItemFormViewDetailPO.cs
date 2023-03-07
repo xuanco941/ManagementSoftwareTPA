@@ -28,13 +28,15 @@ namespace ManagementSoftware.GUI.Section
             labelChatLuongKhi.Text = "Chất lượng khí : " + product.ChatLuongKhi + "%";
             labelSoLuongSx.Text = "Số lượng sản xuất : " + product.SoLuongSanXuat;
             labelTheTichBinh.Text = "Thể tích bình : " + product.TheTichBinh;
-
+            labelQuyCach.Text = "Quy cách : " + product.QuyCach + "L";
+            labelSLNhapKho.Text = "Số lượng nhập kho : " + product.SoLuongDaNhapKho;
+            labelSLXuatKho.Text = "Số lượng xuất kho : " + product.SoLuongDaXuatKho;
             labelNum.Text = Common.PRODUCT + product.ProductID;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa sản phẩm {Common.PRODUCT+p.ProductID}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa sản phẩm {Common.PRODUCT + p.ProductID}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 DALProduct.Delete(p.ProductID);

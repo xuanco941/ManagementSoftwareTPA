@@ -68,7 +68,6 @@ namespace ManagementSoftware.GUI
 
             new MethodCommonGUI().CloseFormInPanel(panelMain);
 
-
             PaginationPurchaseOrder pagination = new PaginationPurchaseOrder();
             pagination.Set(page, status, timeStart, timeEnd);
             this.ListResults = pagination.ListResults;

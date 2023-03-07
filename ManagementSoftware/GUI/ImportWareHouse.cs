@@ -24,8 +24,8 @@ namespace ManagementSoftware.GUI
         public CallAlert callAlert;
 
         // ngày để query 
-        private DateTime? timeStart = null;
-        private DateTime? timeEnd = null;
+        private DateTime? timeStart = DateTime.Now.AddYears(-2).Date;
+        private DateTime? timeEnd = DateTime.Now.Date;
         // trang hiện tại
         private int page = 1;
 
@@ -51,7 +51,7 @@ namespace ManagementSoftware.GUI
             new MethodCommonGUI().CloseFormInPanel(panelMain);
 
             PaginationDirectiveImportWareHouse pagination = new PaginationDirectiveImportWareHouse();
-            pagination.Set(page, strSearch);
+            pagination.Set(page, timeStart,timeEnd);
             this.ListResults = pagination.ListResults;
             this.TotalPages = pagination.TotalPages;
             lbTotalPages.Text = this.TotalPages.ToString();
@@ -78,6 +78,42 @@ namespace ManagementSoftware.GUI
 
             panel2.Enabled = true;
         }
+        private void LoadFormThongKe2(string str)
+        {
+            panel2.Enabled = false;
+
+            new MethodCommonGUI().CloseFormInPanel(panelMain);
+
+            PaginationDirectiveImportWareHouse pagination = new PaginationDirectiveImportWareHouse();
+            pagination.Set2(page, str);
+            this.ListResults = pagination.ListResults;
+            this.TotalPages = pagination.TotalPages;
+            lbTotalPages.Text = this.TotalPages.ToString();
+
+            buttonPreviousPage.Enabled = this.page > 1;
+            buttonNextPage.Enabled = this.page < this.TotalPages;
+            buttonPage.Text = this.page.ToString();
+
+            pageNumberGoto.MinValue = 1;
+            pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
+
+
+
+            for (int i = 0; i < ListResults.Count; i++)
+            {
+                FormChiThiNhapKho form = new FormChiThiNhapKho(ListResults[i]);
+                form.TopLevel = false;
+                panelMain.Controls.Add(form);
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Top;
+                form.Show();
+            }
+
+
+            panel2.Enabled = true;
+        }
+
+
 
         private void buttonPreviousPage_Click(object sender, EventArgs e)
         {
@@ -115,7 +151,7 @@ namespace ManagementSoftware.GUI
             this.strSearch = textBoxSearch.Texts;
             if (strSearch != placeHolderText)
             {
-                LoadFormThongKe();
+                LoadFormThongKe2(strSearch);
             }
         }
 

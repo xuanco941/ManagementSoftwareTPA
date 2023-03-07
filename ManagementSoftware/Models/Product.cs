@@ -26,6 +26,7 @@ namespace ManagementSoftware.Models
         public double TheTichBinh { get; set; }
         public string LoaiKhi { get; set; }
         public int ChatLuongKhi { get; set; }
+        public double QuyCach { get; set; }
 
 
         //public string? Description { get; set; }

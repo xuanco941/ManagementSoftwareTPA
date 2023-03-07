@@ -21,6 +21,8 @@ namespace ManagementSoftware.DAL.DALPagination
 
             int position = (page - 1) * NumberRows;
 
+            end = end.Value.AddDays(1);
+
             if (status != null)
             {
                 this.ListResults = dbContext.PurchaseOrders.OrderByDescending(t => t.PurchaseOrderID)

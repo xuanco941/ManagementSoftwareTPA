@@ -43,6 +43,9 @@
             labelLoaiKhi = new Label();
             panel1 = new Panel();
             labelChatLuongKhi = new Label();
+            labelQuyCach = new Label();
+            labelSLNhapKho = new Label();
+            labelSLXuatKho = new Label();
             panelItemPO = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel2 = new Panel();
@@ -65,7 +68,7 @@
             // 
             // gridLayout1
             // 
-            gridLayout1.Columns = 3;
+            gridLayout1.Columns = 5;
             gridLayout1.ContainerControl = panelGrid;
             gridLayout1.Rows = 2;
             // 
@@ -78,6 +81,9 @@
             panelGrid.Controls.Add(panel4);
             panelGrid.Controls.Add(panel3);
             panelGrid.Controls.Add(panel1);
+            panelGrid.Controls.Add(labelQuyCach);
+            panelGrid.Controls.Add(labelSLNhapKho);
+            panelGrid.Controls.Add(labelSLXuatKho);
             panelGrid.Dock = DockStyle.Fill;
             panelGrid.Location = new Point(103, 3);
             panelGrid.Name = "panelGrid";
@@ -90,125 +96,161 @@
             panel7.Location = new Point(1, 1);
             panel7.Name = "panel7";
             gridLayout1.SetParticipateInLayout(panel7, true);
-            panel7.Size = new Size(248, 63);
+            panel7.Size = new Size(149, 63);
             panel7.TabIndex = 4;
             // 
             // labelProductName
             // 
             labelProductName.Dock = DockStyle.Fill;
-            labelProductName.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelProductName.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelProductName.Location = new Point(0, 0);
             labelProductName.Margin = new Padding(4, 0, 4, 0);
             labelProductName.Name = "labelProductName";
-            labelProductName.Size = new Size(248, 63);
+            labelProductName.Size = new Size(149, 63);
             labelProductName.TabIndex = 14;
             labelProductName.Text = "Tên sản phẩm :";
-            labelProductName.TextAlign = ContentAlignment.MiddleCenter;
+            labelProductName.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panel6
             // 
             panel6.Controls.Add(labelSoLuongSx);
-            panel6.Location = new Point(249, 1);
+            panel6.Location = new Point(150, 1);
             panel6.Name = "panel6";
             gridLayout1.SetParticipateInLayout(panel6, true);
-            panel6.Size = new Size(248, 63);
+            panel6.Size = new Size(149, 63);
             panel6.TabIndex = 3;
             // 
             // labelSoLuongSx
             // 
             labelSoLuongSx.Dock = DockStyle.Fill;
-            labelSoLuongSx.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSoLuongSx.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelSoLuongSx.Location = new Point(0, 0);
             labelSoLuongSx.Margin = new Padding(4, 0, 4, 0);
             labelSoLuongSx.Name = "labelSoLuongSx";
-            labelSoLuongSx.Size = new Size(248, 63);
+            labelSoLuongSx.Size = new Size(149, 63);
             labelSoLuongSx.TabIndex = 15;
             labelSoLuongSx.Text = "Số lượng SX :";
-            labelSoLuongSx.TextAlign = ContentAlignment.MiddleCenter;
+            labelSoLuongSx.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panel5
             // 
             panel5.Controls.Add(labelApSuatNap);
-            panel5.Location = new Point(497, 1);
+            panel5.Location = new Point(299, 1);
             panel5.Name = "panel5";
             gridLayout1.SetParticipateInLayout(panel5, true);
-            panel5.Size = new Size(248, 63);
+            panel5.Size = new Size(149, 63);
             panel5.TabIndex = 2;
             // 
             // labelApSuatNap
             // 
             labelApSuatNap.Dock = DockStyle.Fill;
-            labelApSuatNap.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelApSuatNap.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelApSuatNap.Location = new Point(0, 0);
             labelApSuatNap.Margin = new Padding(4, 0, 4, 0);
             labelApSuatNap.Name = "labelApSuatNap";
-            labelApSuatNap.Size = new Size(248, 63);
+            labelApSuatNap.Size = new Size(149, 63);
             labelApSuatNap.TabIndex = 16;
             labelApSuatNap.Text = "Áp suất nạp : ";
-            labelApSuatNap.TextAlign = ContentAlignment.MiddleCenter;
+            labelApSuatNap.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panel4
             // 
             panel4.Controls.Add(labelTheTichBinh);
-            panel4.Location = new Point(1, 64);
+            panel4.Location = new Point(448, 1);
             panel4.Name = "panel4";
             gridLayout1.SetParticipateInLayout(panel4, true);
-            panel4.Size = new Size(248, 63);
+            panel4.Size = new Size(149, 63);
             panel4.TabIndex = 1;
             // 
             // labelTheTichBinh
             // 
             labelTheTichBinh.Dock = DockStyle.Fill;
-            labelTheTichBinh.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTheTichBinh.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelTheTichBinh.Location = new Point(0, 0);
             labelTheTichBinh.Margin = new Padding(4, 0, 4, 0);
             labelTheTichBinh.Name = "labelTheTichBinh";
-            labelTheTichBinh.Size = new Size(248, 63);
+            labelTheTichBinh.Size = new Size(149, 63);
             labelTheTichBinh.TabIndex = 14;
             labelTheTichBinh.Text = "Thể tích bình : ";
-            labelTheTichBinh.TextAlign = ContentAlignment.MiddleCenter;
+            labelTheTichBinh.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panel3
             // 
             panel3.Controls.Add(labelLoaiKhi);
-            panel3.Location = new Point(249, 64);
+            panel3.Location = new Point(597, 1);
             panel3.Name = "panel3";
             gridLayout1.SetParticipateInLayout(panel3, true);
-            panel3.Size = new Size(248, 63);
+            panel3.Size = new Size(149, 63);
             panel3.TabIndex = 0;
             // 
             // labelLoaiKhi
             // 
             labelLoaiKhi.Dock = DockStyle.Fill;
-            labelLoaiKhi.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelLoaiKhi.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelLoaiKhi.Location = new Point(0, 0);
             labelLoaiKhi.Margin = new Padding(4, 0, 4, 0);
             labelLoaiKhi.Name = "labelLoaiKhi";
-            labelLoaiKhi.Size = new Size(248, 63);
+            labelLoaiKhi.Size = new Size(149, 63);
             labelLoaiKhi.TabIndex = 16;
             labelLoaiKhi.Text = "Loại khí : ";
-            labelLoaiKhi.TextAlign = ContentAlignment.MiddleCenter;
+            labelLoaiKhi.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
             panel1.Controls.Add(labelChatLuongKhi);
-            panel1.Location = new Point(497, 64);
+            panel1.Location = new Point(1, 64);
             panel1.Name = "panel1";
             gridLayout1.SetParticipateInLayout(panel1, true);
-            panel1.Size = new Size(248, 63);
+            panel1.Size = new Size(149, 63);
             panel1.TabIndex = 6;
             // 
             // labelChatLuongKhi
             // 
             labelChatLuongKhi.Dock = DockStyle.Fill;
-            labelChatLuongKhi.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelChatLuongKhi.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelChatLuongKhi.Location = new Point(0, 0);
             labelChatLuongKhi.Margin = new Padding(4, 0, 4, 0);
             labelChatLuongKhi.Name = "labelChatLuongKhi";
-            labelChatLuongKhi.Size = new Size(248, 63);
+            labelChatLuongKhi.Size = new Size(149, 63);
             labelChatLuongKhi.TabIndex = 16;
             labelChatLuongKhi.Text = "Chất lượng khí : ";
-            labelChatLuongKhi.TextAlign = ContentAlignment.MiddleCenter;
+            labelChatLuongKhi.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // labelQuyCach
+            // 
+            labelQuyCach.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelQuyCach.Location = new Point(150, 64);
+            labelQuyCach.Margin = new Padding(4, 0, 4, 0);
+            labelQuyCach.Name = "labelQuyCach";
+            gridLayout1.SetParticipateInLayout(labelQuyCach, true);
+            labelQuyCach.Size = new Size(149, 63);
+            labelQuyCach.TabIndex = 17;
+            labelQuyCach.Text = "Quy cách : ";
+            labelQuyCach.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // labelSLNhapKho
+            // 
+            labelSLNhapKho.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSLNhapKho.Location = new Point(299, 64);
+            labelSLNhapKho.Margin = new Padding(4, 0, 4, 0);
+            labelSLNhapKho.Name = "labelSLNhapKho";
+            gridLayout1.SetParticipateInLayout(labelSLNhapKho, true);
+            labelSLNhapKho.Size = new Size(149, 63);
+            labelSLNhapKho.TabIndex = 18;
+            labelSLNhapKho.Text = "Số lượng nhập kho :";
+            labelSLNhapKho.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // labelSLXuatKho
+            // 
+            labelSLXuatKho.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSLXuatKho.Location = new Point(448, 64);
+            labelSLXuatKho.Margin = new Padding(4, 0, 4, 0);
+            labelSLXuatKho.Name = "labelSLXuatKho";
+            gridLayout1.SetParticipateInLayout(labelSLXuatKho, true);
+            labelSLXuatKho.Size = new Size(149, 63);
+            labelSLXuatKho.TabIndex = 19;
+            labelSLXuatKho.Text = "Số lượng xuất kho :";
+            labelSLXuatKho.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panelItemPO
             // 
@@ -335,5 +377,8 @@
         private Label labelNum;
         private Panel panel8;
         private Button buttonClose;
+        private Label labelQuyCach;
+        private Label labelSLNhapKho;
+        private Label labelSLXuatKho;
     }
 }

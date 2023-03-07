@@ -208,7 +208,7 @@
             panel16.Location = new Point(0, 57);
             panel16.Margin = new Padding(4, 3, 4, 3);
             panel16.Name = "panel16";
-            panel16.Size = new Size(781, 430);
+            panel16.Size = new Size(938, 430);
             panel16.TabIndex = 3;
             // 
             // panelProducts
@@ -218,7 +218,7 @@
             panelProducts.Dock = DockStyle.Fill;
             panelProducts.Location = new Point(0, 0);
             panelProducts.Name = "panelProducts";
-            panelProducts.Size = new Size(781, 387);
+            panelProducts.Size = new Size(938, 387);
             panelProducts.TabIndex = 1;
             // 
             // panel17
@@ -227,7 +227,7 @@
             panel17.Dock = DockStyle.Bottom;
             panel17.Location = new Point(0, 387);
             panel17.Name = "panel17";
-            panel17.Size = new Size(781, 43);
+            panel17.Size = new Size(938, 43);
             panel17.TabIndex = 0;
             // 
             // buttonAddProduct
@@ -247,7 +247,7 @@
             buttonAddProduct.Location = new Point(0, 0);
             buttonAddProduct.Margin = new Padding(4, 3, 4, 3);
             buttonAddProduct.Name = "buttonAddProduct";
-            buttonAddProduct.Size = new Size(781, 43);
+            buttonAddProduct.Size = new Size(938, 43);
             buttonAddProduct.TabIndex = 21;
             buttonAddProduct.Text = "Thêm sản phẩm";
             buttonAddProduct.TextAlign = ContentAlignment.MiddleLeft;
@@ -263,7 +263,7 @@
             panel5.Location = new Point(0, 0);
             panel5.Margin = new Padding(4, 3, 4, 3);
             panel5.Name = "panel5";
-            panel5.Size = new Size(781, 57);
+            panel5.Size = new Size(938, 57);
             panel5.TabIndex = 1;
             // 
             // label2
@@ -275,7 +275,7 @@
             label2.Location = new Point(0, 0);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(781, 57);
+            label2.Size = new Size(938, 57);
             label2.TabIndex = 15;
             label2.Text = "Thông tin sản phẩm";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -306,7 +306,7 @@
             panel4.Margin = new Padding(4, 3, 4, 3);
             panel4.Name = "panel4";
             panel4.Padding = new Padding(0, 0, 0, 40);
-            panel4.Size = new Size(386, 487);
+            panel4.Size = new Size(307, 487);
             panel4.TabIndex = 0;
             // 
             // panel25
@@ -317,7 +317,7 @@
             panel25.Margin = new Padding(4, 3, 4, 3);
             panel25.Name = "panel25";
             panel25.Padding = new Padding(26, 5, 26, 0);
-            panel25.Size = new Size(367, 45);
+            panel25.Size = new Size(288, 45);
             panel25.TabIndex = 19;
             // 
             // txtNgayDatHang
@@ -331,7 +331,7 @@
             txtNgayDatHang.Margin = new Padding(4, 3, 4, 3);
             txtNgayDatHang.MinDateTime = new DateTime(2022, 1, 1, 23, 59, 0, 0);
             txtNgayDatHang.Name = "txtNgayDatHang";
-            txtNgayDatHang.Size = new Size(315, 36);
+            txtNgayDatHang.Size = new Size(236, 36);
             txtNgayDatHang.TabIndex = 0;
             txtNgayDatHang.Value = new DateTime(2022, 10, 1, 23, 59, 0, 0);
             // 
@@ -342,7 +342,7 @@
             panel26.Location = new Point(0, 617);
             panel26.Margin = new Padding(4, 3, 4, 3);
             panel26.Name = "panel26";
-            panel26.Size = new Size(367, 35);
+            panel26.Size = new Size(288, 35);
             panel26.TabIndex = 18;
             // 
             // label11
@@ -354,7 +354,7 @@
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
             label11.Padding = new Padding(23, 0, 0, 0);
-            label11.Size = new Size(367, 35);
+            label11.Size = new Size(288, 35);
             label11.TabIndex = 10;
             label11.Text = "Ngày đặt hàng :";
             label11.TextAlign = ContentAlignment.MiddleLeft;
@@ -367,19 +367,19 @@
             panel21.Margin = new Padding(4, 3, 4, 3);
             panel21.Name = "panel21";
             panel21.Padding = new Padding(26, 5, 26, 0);
-            panel21.Size = new Size(367, 45);
+            panel21.Size = new Size(288, 45);
             panel21.TabIndex = 15;
             // 
             // txtReference
             // 
-            txtReference.BeforeTouchSize = new Size(235, 33);
+            txtReference.BeforeTouchSize = new Size(66, 35);
             txtReference.Dock = DockStyle.Fill;
             txtReference.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtReference.IntegerValue = 0L;
             txtReference.Location = new Point(26, 5);
             txtReference.Margin = new Padding(4, 3, 4, 3);
             txtReference.Name = "txtReference";
-            txtReference.Size = new Size(315, 29);
+            txtReference.Size = new Size(236, 29);
             txtReference.TabIndex = 0;
             txtReference.Text = "0";
             // 
@@ -391,7 +391,7 @@
             panel22.Location = new Point(0, 537);
             panel22.Margin = new Padding(4, 3, 4, 3);
             panel22.Name = "panel22";
-            panel22.Size = new Size(367, 35);
+            panel22.Size = new Size(288, 35);
             panel22.TabIndex = 14;
             // 
             // label13
@@ -403,7 +403,7 @@
             label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
             label13.Padding = new Padding(23, 0, 0, 0);
-            label13.Size = new Size(367, 35);
+            label13.Size = new Size(288, 35);
             label13.TabIndex = 14;
             label13.Text = "Reference/ Tham chiếu :";
             label13.TextAlign = ContentAlignment.MiddleLeft;
@@ -417,7 +417,7 @@
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
             label9.Padding = new Padding(23, 0, 0, 0);
-            label9.Size = new Size(367, 35);
+            label9.Size = new Size(288, 35);
             label9.TabIndex = 13;
             label9.Text = "No/ Số PR,PQ :";
             label9.TextAlign = ContentAlignment.BottomLeft;
@@ -430,7 +430,7 @@
             panel19.Margin = new Padding(4, 3, 4, 3);
             panel19.Name = "panel19";
             panel19.Padding = new Padding(26, 5, 26, 0);
-            panel19.Size = new Size(367, 45);
+            panel19.Size = new Size(288, 45);
             panel19.TabIndex = 13;
             // 
             // txtDeliveryDate
@@ -444,7 +444,7 @@
             txtDeliveryDate.Margin = new Padding(4, 3, 4, 3);
             txtDeliveryDate.MinDateTime = new DateTime(2022, 1, 1, 23, 59, 0, 0);
             txtDeliveryDate.Name = "txtDeliveryDate";
-            txtDeliveryDate.Size = new Size(315, 36);
+            txtDeliveryDate.Size = new Size(236, 36);
             txtDeliveryDate.TabIndex = 1;
             txtDeliveryDate.Value = new DateTime(2022, 10, 1, 23, 59, 0, 0);
             // 
@@ -455,7 +455,7 @@
             panel20.Location = new Point(0, 457);
             panel20.Margin = new Padding(4, 3, 4, 3);
             panel20.Name = "panel20";
-            panel20.Size = new Size(367, 35);
+            panel20.Size = new Size(288, 35);
             panel20.TabIndex = 12;
             // 
             // label8
@@ -467,7 +467,7 @@
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Padding = new Padding(23, 0, 0, 0);
-            label8.Size = new Size(367, 35);
+            label8.Size = new Size(288, 35);
             label8.TabIndex = 7;
             label8.Text = "Delivery date/ Ngày giao hàng :";
             label8.TextAlign = ContentAlignment.MiddleLeft;
@@ -480,7 +480,7 @@
             panel15.Margin = new Padding(4, 3, 4, 3);
             panel15.Name = "panel15";
             panel15.Padding = new Padding(26, 5, 26, 0);
-            panel15.Size = new Size(367, 45);
+            panel15.Size = new Size(288, 45);
             panel15.TabIndex = 11;
             // 
             // txtContactPerson
@@ -490,7 +490,7 @@
             txtContactPerson.Location = new Point(26, 5);
             txtContactPerson.Margin = new Padding(4, 3, 4, 3);
             txtContactPerson.Name = "txtContactPerson";
-            txtContactPerson.Size = new Size(315, 29);
+            txtContactPerson.Size = new Size(236, 29);
             txtContactPerson.TabIndex = 2;
             // 
             // panel18
@@ -500,7 +500,7 @@
             panel18.Location = new Point(0, 377);
             panel18.Margin = new Padding(4, 3, 4, 3);
             panel18.Name = "panel18";
-            panel18.Size = new Size(367, 35);
+            panel18.Size = new Size(288, 35);
             panel18.TabIndex = 10;
             // 
             // label7
@@ -512,7 +512,7 @@
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Padding = new Padding(23, 0, 0, 0);
-            label7.Size = new Size(367, 35);
+            label7.Size = new Size(288, 35);
             label7.TabIndex = 6;
             label7.Text = "Contact Person/ Người liên hệ :";
             label7.TextAlign = ContentAlignment.MiddleLeft;
@@ -525,7 +525,7 @@
             panel13.Margin = new Padding(4, 3, 4, 3);
             panel13.Name = "panel13";
             panel13.Padding = new Padding(26, 5, 26, 0);
-            panel13.Size = new Size(367, 45);
+            panel13.Size = new Size(288, 45);
             panel13.TabIndex = 9;
             // 
             // txtAddress
@@ -535,7 +535,7 @@
             txtAddress.Location = new Point(26, 5);
             txtAddress.Margin = new Padding(4, 3, 4, 3);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(315, 29);
+            txtAddress.Size = new Size(236, 29);
             txtAddress.TabIndex = 1;
             // 
             // panel14
@@ -545,7 +545,7 @@
             panel14.Location = new Point(0, 297);
             panel14.Margin = new Padding(4, 3, 4, 3);
             panel14.Name = "panel14";
-            panel14.Size = new Size(367, 35);
+            panel14.Size = new Size(288, 35);
             panel14.TabIndex = 8;
             // 
             // label6
@@ -557,7 +557,7 @@
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Padding = new Padding(23, 0, 0, 0);
-            label6.Size = new Size(367, 35);
+            label6.Size = new Size(288, 35);
             label6.TabIndex = 3;
             label6.Text = "Address/ Địa chỉ :";
             label6.TextAlign = ContentAlignment.MiddleLeft;
@@ -570,7 +570,7 @@
             panel11.Margin = new Padding(4, 3, 4, 3);
             panel11.Name = "panel11";
             panel11.Padding = new Padding(26, 5, 26, 0);
-            panel11.Size = new Size(367, 45);
+            panel11.Size = new Size(288, 45);
             panel11.TabIndex = 7;
             // 
             // txtCodeOrderer
@@ -580,7 +580,7 @@
             txtCodeOrderer.Location = new Point(26, 5);
             txtCodeOrderer.Margin = new Padding(4, 3, 4, 3);
             txtCodeOrderer.Name = "txtCodeOrderer";
-            txtCodeOrderer.Size = new Size(315, 29);
+            txtCodeOrderer.Size = new Size(236, 29);
             txtCodeOrderer.TabIndex = 3;
             // 
             // panel12
@@ -590,7 +590,7 @@
             panel12.Location = new Point(0, 217);
             panel12.Margin = new Padding(4, 3, 4, 3);
             panel12.Name = "panel12";
-            panel12.Size = new Size(367, 35);
+            panel12.Size = new Size(288, 35);
             panel12.TabIndex = 6;
             // 
             // label5
@@ -602,7 +602,7 @@
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Padding = new Padding(23, 0, 0, 0);
-            label5.Size = new Size(367, 35);
+            label5.Size = new Size(288, 35);
             label5.TabIndex = 4;
             label5.Text = "Code Orderer/ Mã nhà khách hàng:";
             label5.TextAlign = ContentAlignment.MiddleLeft;
@@ -615,7 +615,7 @@
             panel9.Margin = new Padding(4, 3, 4, 3);
             panel9.Name = "panel9";
             panel9.Padding = new Padding(26, 5, 26, 0);
-            panel9.Size = new Size(367, 45);
+            panel9.Size = new Size(288, 45);
             panel9.TabIndex = 5;
             // 
             // txtOrdererName
@@ -625,7 +625,7 @@
             txtOrdererName.Location = new Point(26, 5);
             txtOrdererName.Margin = new Padding(4, 3, 4, 3);
             txtOrdererName.Name = "txtOrdererName";
-            txtOrdererName.Size = new Size(315, 29);
+            txtOrdererName.Size = new Size(236, 29);
             txtOrdererName.TabIndex = 2;
             // 
             // panel10
@@ -635,7 +635,7 @@
             panel10.Location = new Point(0, 137);
             panel10.Margin = new Padding(4, 3, 4, 3);
             panel10.Name = "panel10";
-            panel10.Size = new Size(367, 35);
+            panel10.Size = new Size(288, 35);
             panel10.TabIndex = 4;
             // 
             // label4
@@ -647,7 +647,7 @@
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Padding = new Padding(23, 0, 0, 0);
-            label4.Size = new Size(367, 35);
+            label4.Size = new Size(288, 35);
             label4.TabIndex = 5;
             label4.Text = "Orderer's Name/ Tên khách hàng : ";
             label4.TextAlign = ContentAlignment.MiddleLeft;
@@ -660,19 +660,19 @@
             panel8.Margin = new Padding(4, 3, 4, 3);
             panel8.Name = "panel8";
             panel8.Padding = new Padding(26, 5, 26, 0);
-            panel8.Size = new Size(367, 45);
+            panel8.Size = new Size(288, 45);
             panel8.TabIndex = 3;
             // 
             // txtPRPQ
             // 
-            txtPRPQ.BeforeTouchSize = new Size(235, 33);
+            txtPRPQ.BeforeTouchSize = new Size(66, 35);
             txtPRPQ.Dock = DockStyle.Fill;
             txtPRPQ.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtPRPQ.IntegerValue = 0L;
             txtPRPQ.Location = new Point(26, 5);
             txtPRPQ.Margin = new Padding(4, 3, 4, 3);
             txtPRPQ.Name = "txtPRPQ";
-            txtPRPQ.Size = new Size(315, 29);
+            txtPRPQ.Size = new Size(236, 29);
             txtPRPQ.TabIndex = 0;
             txtPRPQ.Text = "0";
             // 
@@ -683,7 +683,7 @@
             panel7.Location = new Point(0, 57);
             panel7.Margin = new Padding(4, 3, 4, 3);
             panel7.Name = "panel7";
-            panel7.Size = new Size(367, 35);
+            panel7.Size = new Size(288, 35);
             panel7.TabIndex = 1;
             // 
             // label3
@@ -695,7 +695,7 @@
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Padding = new Padding(23, 0, 0, 0);
-            label3.Size = new Size(367, 35);
+            label3.Size = new Size(288, 35);
             label3.TabIndex = 13;
             label3.Text = "No/ Số PR,PQ :";
             label3.TextAlign = ContentAlignment.BottomLeft;
@@ -707,7 +707,7 @@
             panel6.Location = new Point(0, 0);
             panel6.Margin = new Padding(4, 3, 4, 3);
             panel6.Name = "panel6";
-            panel6.Size = new Size(367, 57);
+            panel6.Size = new Size(288, 57);
             panel6.TabIndex = 0;
             // 
             // label1
@@ -719,7 +719,7 @@
             label1.Location = new Point(0, 0);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(367, 57);
+            label1.Size = new Size(288, 57);
             label1.TabIndex = 15;
             label1.Text = "Thông tin khách hàng";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -729,18 +729,18 @@
             panel3.Controls.Add(panel16);
             panel3.Controls.Add(panel5);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(398, 3);
+            panel3.Location = new Point(319, 3);
             panel3.Margin = new Padding(4, 3, 4, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(781, 487);
+            panel3.Size = new Size(938, 487);
             panel3.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.Controls.Add(panel3, 1, 0);
             tableLayoutPanel1.Controls.Add(panel4, 0, 0);
             tableLayoutPanel1.Controls.Add(panel30, 2, 0);
@@ -750,7 +750,6 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 800F));
             tableLayoutPanel1.Size = new Size(1578, 493);
             tableLayoutPanel1.TabIndex = 17;
             // 
@@ -776,11 +775,11 @@
             panel30.Controls.Add(panel29);
             panel30.Controls.Add(panel31);
             panel30.Dock = DockStyle.Fill;
-            panel30.Location = new Point(1187, 3);
+            panel30.Location = new Point(1265, 3);
             panel30.Margin = new Padding(4, 3, 4, 3);
             panel30.Name = "panel30";
             panel30.Padding = new Padding(0, 0, 0, 40);
-            panel30.Size = new Size(387, 487);
+            panel30.Size = new Size(309, 487);
             panel30.TabIndex = 2;
             // 
             // panel44
@@ -791,21 +790,21 @@
             panel44.Margin = new Padding(4, 3, 4, 3);
             panel44.Name = "panel44";
             panel44.Padding = new Padding(26, 5, 26, 0);
-            panel44.Size = new Size(368, 45);
+            panel44.Size = new Size(290, 45);
             panel44.TabIndex = 37;
             // 
             // txtTongTienThanhToan
             // 
-            txtTongTienThanhToan.BeforeTouchSize = new Size(235, 33);
+            txtTongTienThanhToan.BeforeTouchSize = new Size(66, 35);
             txtTongTienThanhToan.Dock = DockStyle.Fill;
             txtTongTienThanhToan.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTongTienThanhToan.IntegerValue = 1L;
+            txtTongTienThanhToan.IntegerValue = 0L;
             txtTongTienThanhToan.Location = new Point(26, 5);
             txtTongTienThanhToan.Margin = new Padding(4, 3, 4, 3);
             txtTongTienThanhToan.Name = "txtTongTienThanhToan";
-            txtTongTienThanhToan.Size = new Size(316, 29);
+            txtTongTienThanhToan.Size = new Size(238, 29);
             txtTongTienThanhToan.TabIndex = 1;
-            txtTongTienThanhToan.Text = "1";
+            txtTongTienThanhToan.Text = "0";
             // 
             // panel45
             // 
@@ -814,7 +813,7 @@
             panel45.Location = new Point(0, 616);
             panel45.Margin = new Padding(4, 3, 4, 3);
             panel45.Name = "panel45";
-            panel45.Size = new Size(368, 35);
+            panel45.Size = new Size(290, 35);
             panel45.TabIndex = 36;
             // 
             // label22
@@ -826,7 +825,7 @@
             label22.Margin = new Padding(4, 0, 4, 0);
             label22.Name = "label22";
             label22.Padding = new Padding(23, 0, 0, 0);
-            label22.Size = new Size(368, 35);
+            label22.Size = new Size(290, 35);
             label22.TabIndex = 10;
             label22.Text = "Tổng tiền thanh toán :";
             label22.TextAlign = ContentAlignment.MiddleLeft;
@@ -839,21 +838,21 @@
             panel42.Margin = new Padding(4, 3, 4, 3);
             panel42.Name = "panel42";
             panel42.Padding = new Padding(26, 5, 26, 0);
-            panel42.Size = new Size(368, 45);
+            panel42.Size = new Size(290, 45);
             panel42.TabIndex = 35;
             // 
             // txtVAT
             // 
-            txtVAT.BeforeTouchSize = new Size(235, 33);
+            txtVAT.BeforeTouchSize = new Size(66, 35);
             txtVAT.Dock = DockStyle.Fill;
             txtVAT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtVAT.IntegerValue = 1L;
+            txtVAT.IntegerValue = 0L;
             txtVAT.Location = new Point(26, 5);
             txtVAT.Margin = new Padding(4, 3, 4, 3);
             txtVAT.Name = "txtVAT";
-            txtVAT.Size = new Size(316, 29);
+            txtVAT.Size = new Size(238, 29);
             txtVAT.TabIndex = 1;
-            txtVAT.Text = "1";
+            txtVAT.Text = "0";
             // 
             // panel43
             // 
@@ -862,7 +861,7 @@
             panel43.Location = new Point(0, 536);
             panel43.Margin = new Padding(4, 3, 4, 3);
             panel43.Name = "panel43";
-            panel43.Size = new Size(368, 35);
+            panel43.Size = new Size(290, 35);
             panel43.TabIndex = 34;
             // 
             // label21
@@ -874,7 +873,7 @@
             label21.Margin = new Padding(4, 0, 4, 0);
             label21.Name = "label21";
             label21.Padding = new Padding(23, 0, 0, 0);
-            label21.Size = new Size(368, 35);
+            label21.Size = new Size(290, 35);
             label21.TabIndex = 10;
             label21.Text = "VAT :";
             label21.TextAlign = ContentAlignment.MiddleLeft;
@@ -887,21 +886,21 @@
             panel40.Margin = new Padding(4, 3, 4, 3);
             panel40.Name = "panel40";
             panel40.Padding = new Padding(26, 5, 26, 0);
-            panel40.Size = new Size(368, 45);
+            panel40.Size = new Size(290, 45);
             panel40.TabIndex = 33;
             // 
             // txtTongTienHang
             // 
-            txtTongTienHang.BeforeTouchSize = new Size(235, 33);
+            txtTongTienHang.BeforeTouchSize = new Size(66, 35);
             txtTongTienHang.Dock = DockStyle.Fill;
             txtTongTienHang.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTongTienHang.IntegerValue = 1L;
+            txtTongTienHang.IntegerValue = 0L;
             txtTongTienHang.Location = new Point(26, 5);
             txtTongTienHang.Margin = new Padding(4, 3, 4, 3);
             txtTongTienHang.Name = "txtTongTienHang";
-            txtTongTienHang.Size = new Size(316, 29);
+            txtTongTienHang.Size = new Size(238, 29);
             txtTongTienHang.TabIndex = 1;
-            txtTongTienHang.Text = "1";
+            txtTongTienHang.Text = "0";
             // 
             // panel41
             // 
@@ -910,7 +909,7 @@
             panel41.Location = new Point(0, 456);
             panel41.Margin = new Padding(4, 3, 4, 3);
             panel41.Name = "panel41";
-            panel41.Size = new Size(368, 35);
+            panel41.Size = new Size(290, 35);
             panel41.TabIndex = 32;
             // 
             // label20
@@ -922,7 +921,7 @@
             label20.Margin = new Padding(4, 0, 4, 0);
             label20.Name = "label20";
             label20.Padding = new Padding(23, 0, 0, 0);
-            label20.Size = new Size(368, 35);
+            label20.Size = new Size(290, 35);
             label20.TabIndex = 10;
             label20.Text = "Tổng tiền hàng (chưa VAT) :";
             label20.TextAlign = ContentAlignment.MiddleLeft;
@@ -935,12 +934,12 @@
             panel38.Margin = new Padding(4, 3, 4, 3);
             panel38.Name = "panel38";
             panel38.Padding = new Padding(26, 5, 26, 0);
-            panel38.Size = new Size(368, 45);
+            panel38.Size = new Size(290, 45);
             panel38.TabIndex = 31;
             // 
             // txtVuot
             // 
-            txtVuot.BeforeTouchSize = new Size(235, 33);
+            txtVuot.BeforeTouchSize = new Size(66, 35);
             txtVuot.Dock = DockStyle.Fill;
             txtVuot.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtVuot.IntegerValue = 0L;
@@ -949,7 +948,7 @@
             txtVuot.MaxValue = 100L;
             txtVuot.MinValue = 0L;
             txtVuot.Name = "txtVuot";
-            txtVuot.Size = new Size(316, 29);
+            txtVuot.Size = new Size(238, 29);
             txtVuot.TabIndex = 1;
             txtVuot.Text = "0";
             // 
@@ -960,7 +959,7 @@
             panel39.Location = new Point(0, 376);
             panel39.Margin = new Padding(4, 3, 4, 3);
             panel39.Name = "panel39";
-            panel39.Size = new Size(368, 35);
+            panel39.Size = new Size(290, 35);
             panel39.TabIndex = 30;
             // 
             // label19
@@ -972,7 +971,7 @@
             label19.Margin = new Padding(4, 0, 4, 0);
             label19.Name = "label19";
             label19.Padding = new Padding(23, 0, 0, 0);
-            label19.Size = new Size(368, 35);
+            label19.Size = new Size(290, 35);
             label19.TabIndex = 10;
             label19.Text = "Vượt(%) :";
             label19.TextAlign = ContentAlignment.MiddleLeft;
@@ -985,19 +984,19 @@
             panel36.Margin = new Padding(4, 3, 4, 3);
             panel36.Name = "panel36";
             panel36.Padding = new Padding(26, 5, 26, 0);
-            panel36.Size = new Size(368, 45);
+            panel36.Size = new Size(290, 45);
             panel36.TabIndex = 29;
             // 
             // txtChiPhiKhac
             // 
-            txtChiPhiKhac.BeforeTouchSize = new Size(235, 33);
+            txtChiPhiKhac.BeforeTouchSize = new Size(66, 35);
             txtChiPhiKhac.Dock = DockStyle.Fill;
             txtChiPhiKhac.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtChiPhiKhac.IntegerValue = 0L;
             txtChiPhiKhac.Location = new Point(26, 5);
             txtChiPhiKhac.Margin = new Padding(4, 3, 4, 3);
             txtChiPhiKhac.Name = "txtChiPhiKhac";
-            txtChiPhiKhac.Size = new Size(316, 29);
+            txtChiPhiKhac.Size = new Size(238, 29);
             txtChiPhiKhac.TabIndex = 1;
             txtChiPhiKhac.Text = "0";
             // 
@@ -1008,7 +1007,7 @@
             panel37.Location = new Point(0, 296);
             panel37.Margin = new Padding(4, 3, 4, 3);
             panel37.Name = "panel37";
-            panel37.Size = new Size(368, 35);
+            panel37.Size = new Size(290, 35);
             panel37.TabIndex = 28;
             // 
             // label18
@@ -1020,7 +1019,7 @@
             label18.Margin = new Padding(4, 0, 4, 0);
             label18.Name = "label18";
             label18.Padding = new Padding(23, 0, 0, 0);
-            label18.Size = new Size(368, 35);
+            label18.Size = new Size(290, 35);
             label18.TabIndex = 10;
             label18.Text = "Chi phí khác :";
             label18.TextAlign = ContentAlignment.MiddleLeft;
@@ -1033,19 +1032,19 @@
             panel34.Margin = new Padding(4, 3, 4, 3);
             panel34.Name = "panel34";
             panel34.Padding = new Padding(26, 5, 26, 0);
-            panel34.Size = new Size(368, 45);
+            panel34.Size = new Size(290, 45);
             panel34.TabIndex = 27;
             // 
             // txtChiPhiKyThuat
             // 
-            txtChiPhiKyThuat.BeforeTouchSize = new Size(235, 33);
+            txtChiPhiKyThuat.BeforeTouchSize = new Size(66, 35);
             txtChiPhiKyThuat.Dock = DockStyle.Fill;
             txtChiPhiKyThuat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtChiPhiKyThuat.IntegerValue = 0L;
             txtChiPhiKyThuat.Location = new Point(26, 5);
             txtChiPhiKyThuat.Margin = new Padding(4, 3, 4, 3);
             txtChiPhiKyThuat.Name = "txtChiPhiKyThuat";
-            txtChiPhiKyThuat.Size = new Size(316, 29);
+            txtChiPhiKyThuat.Size = new Size(238, 29);
             txtChiPhiKyThuat.TabIndex = 1;
             txtChiPhiKyThuat.Text = "0";
             // 
@@ -1056,7 +1055,7 @@
             panel35.Location = new Point(0, 216);
             panel35.Margin = new Padding(4, 3, 4, 3);
             panel35.Name = "panel35";
-            panel35.Size = new Size(368, 35);
+            panel35.Size = new Size(290, 35);
             panel35.TabIndex = 26;
             // 
             // label17
@@ -1068,7 +1067,7 @@
             label17.Margin = new Padding(4, 0, 4, 0);
             label17.Name = "label17";
             label17.Padding = new Padding(23, 0, 0, 0);
-            label17.Size = new Size(368, 35);
+            label17.Size = new Size(290, 35);
             label17.TabIndex = 10;
             label17.Text = "Chi phí kỹ thuật :";
             label17.TextAlign = ContentAlignment.MiddleLeft;
@@ -1081,19 +1080,19 @@
             panel32.Margin = new Padding(4, 3, 4, 3);
             panel32.Name = "panel32";
             panel32.Padding = new Padding(26, 5, 26, 0);
-            panel32.Size = new Size(368, 45);
+            panel32.Size = new Size(290, 45);
             panel32.TabIndex = 25;
             // 
             // txtChiPhiChuyenGiao
             // 
-            txtChiPhiChuyenGiao.BeforeTouchSize = new Size(235, 33);
+            txtChiPhiChuyenGiao.BeforeTouchSize = new Size(66, 35);
             txtChiPhiChuyenGiao.Dock = DockStyle.Fill;
             txtChiPhiChuyenGiao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtChiPhiChuyenGiao.IntegerValue = 0L;
             txtChiPhiChuyenGiao.Location = new Point(26, 5);
             txtChiPhiChuyenGiao.Margin = new Padding(4, 3, 4, 3);
             txtChiPhiChuyenGiao.Name = "txtChiPhiChuyenGiao";
-            txtChiPhiChuyenGiao.Size = new Size(316, 29);
+            txtChiPhiChuyenGiao.Size = new Size(238, 29);
             txtChiPhiChuyenGiao.TabIndex = 1;
             txtChiPhiChuyenGiao.Text = "0";
             // 
@@ -1104,7 +1103,7 @@
             panel33.Location = new Point(0, 136);
             panel33.Margin = new Padding(4, 3, 4, 3);
             panel33.Name = "panel33";
-            panel33.Size = new Size(368, 35);
+            panel33.Size = new Size(290, 35);
             panel33.TabIndex = 24;
             // 
             // label16
@@ -1116,7 +1115,7 @@
             label16.Margin = new Padding(4, 0, 4, 0);
             label16.Name = "label16";
             label16.Padding = new Padding(23, 0, 0, 0);
-            label16.Size = new Size(368, 35);
+            label16.Size = new Size(290, 35);
             label16.TabIndex = 10;
             label16.Text = "Chi phí chuyển giao :";
             label16.TextAlign = ContentAlignment.MiddleLeft;
@@ -1129,19 +1128,19 @@
             panel28.Margin = new Padding(4, 3, 4, 3);
             panel28.Name = "panel28";
             panel28.Padding = new Padding(26, 5, 26, 0);
-            panel28.Size = new Size(368, 45);
+            panel28.Size = new Size(290, 45);
             panel28.TabIndex = 23;
             // 
             // txtChiPhiVanChuyen
             // 
-            txtChiPhiVanChuyen.BeforeTouchSize = new Size(235, 33);
+            txtChiPhiVanChuyen.BeforeTouchSize = new Size(66, 35);
             txtChiPhiVanChuyen.Dock = DockStyle.Fill;
             txtChiPhiVanChuyen.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtChiPhiVanChuyen.IntegerValue = 0L;
             txtChiPhiVanChuyen.Location = new Point(26, 5);
             txtChiPhiVanChuyen.Margin = new Padding(4, 3, 4, 3);
             txtChiPhiVanChuyen.Name = "txtChiPhiVanChuyen";
-            txtChiPhiVanChuyen.Size = new Size(316, 29);
+            txtChiPhiVanChuyen.Size = new Size(238, 29);
             txtChiPhiVanChuyen.TabIndex = 1;
             txtChiPhiVanChuyen.Text = "0";
             // 
@@ -1152,7 +1151,7 @@
             panel29.Location = new Point(0, 56);
             panel29.Margin = new Padding(4, 3, 4, 3);
             panel29.Name = "panel29";
-            panel29.Size = new Size(368, 35);
+            panel29.Size = new Size(290, 35);
             panel29.TabIndex = 22;
             // 
             // label14
@@ -1164,7 +1163,7 @@
             label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
             label14.Padding = new Padding(23, 0, 0, 0);
-            label14.Size = new Size(368, 35);
+            label14.Size = new Size(290, 35);
             label14.TabIndex = 10;
             label14.Text = "Chi phí vận chuyển :";
             label14.TextAlign = ContentAlignment.MiddleLeft;
@@ -1177,7 +1176,7 @@
             panel31.Location = new Point(0, 0);
             panel31.Margin = new Padding(4, 3, 4, 3);
             panel31.Name = "panel31";
-            panel31.Size = new Size(368, 56);
+            panel31.Size = new Size(290, 56);
             panel31.TabIndex = 0;
             // 
             // label15
@@ -1189,7 +1188,7 @@
             label15.Location = new Point(0, 0);
             label15.Margin = new Padding(4, 0, 4, 0);
             label15.Name = "label15";
-            label15.Size = new Size(366, 54);
+            label15.Size = new Size(288, 54);
             label15.TabIndex = 16;
             label15.Text = "Thông tin thanh toán";
             label15.TextAlign = ContentAlignment.MiddleCenter;
@@ -1412,7 +1411,7 @@
             // 
             // txtThanhToan
             // 
-            txtThanhToan.BeforeTouchSize = new Size(235, 33);
+            txtThanhToan.BeforeTouchSize = new Size(66, 35);
             txtThanhToan.Dock = DockStyle.Fill;
             txtThanhToan.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtThanhToan.IntegerValue = 0L;

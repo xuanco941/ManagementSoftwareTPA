@@ -45,6 +45,8 @@
             txtTheTichBinh = new Syncfusion.Windows.Forms.Tools.DoubleTextBox();
             txtApSuatNap = new Syncfusion.Windows.Forms.Tools.DoubleTextBox();
             txtChatLuongKhi = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
+            QuyCachDouble = new Syncfusion.Windows.Forms.Tools.DoubleTextBox();
+            label7 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)txtSlsx).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtProductName).BeginInit();
@@ -52,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)txtTheTichBinh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtApSuatNap).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtChatLuongKhi).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)QuyCachDouble).BeginInit();
             SuspendLayout();
             // 
             // label8
@@ -62,7 +65,7 @@
             label8.Location = new Point(0, 0);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(831, 96);
+            label8.Size = new Size(850, 96);
             label8.TabIndex = 31;
             label8.Text = "Thêm Sản Phẩm";
             label8.TextAlign = ContentAlignment.MiddleCenter;
@@ -73,7 +76,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(831, 96);
+            panel1.Size = new Size(850, 96);
             panel1.TabIndex = 88;
             // 
             // buttonThem
@@ -89,7 +92,7 @@
             buttonThem.ForeColor = Color.White;
             buttonThem.Image = (Image)resources.GetObject("buttonThem.Image");
             buttonThem.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonThem.Location = new Point(344, 377);
+            buttonThem.Location = new Point(344, 450);
             buttonThem.Margin = new Padding(4, 3, 4, 3);
             buttonThem.Name = "buttonThem";
             buttonThem.Size = new Size(147, 42);
@@ -255,12 +258,41 @@
             txtChatLuongKhi.TabIndex = 102;
             txtChatLuongKhi.Text = "0";
             // 
+            // QuyCachDouble
+            // 
+            QuyCachDouble.BeforeTouchSize = new Size(235, 33);
+            QuyCachDouble.BorderColor = Color.CornflowerBlue;
+            QuyCachDouble.BorderStyle = BorderStyle.FixedSingle;
+            QuyCachDouble.DoubleValue = 0D;
+            QuyCachDouble.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            QuyCachDouble.Location = new Point(155, 380);
+            QuyCachDouble.MinValue = 0D;
+            QuyCachDouble.Name = "QuyCachDouble";
+            QuyCachDouble.NumberDecimalDigits = 3;
+            QuyCachDouble.Size = new Size(235, 33);
+            QuyCachDouble.TabIndex = 104;
+            QuyCachDouble.Text = "0.000";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.Control;
+            label7.Location = new Point(155, 356);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(96, 21);
+            label7.TabIndex = 103;
+            label7.Text = "Quy cách (L)";
+            // 
             // FormAddProductOnPO
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(41, 44, 51);
-            ClientSize = new Size(831, 467);
+            ClientSize = new Size(850, 546);
+            Controls.Add(QuyCachDouble);
+            Controls.Add(label7);
             Controls.Add(txtChatLuongKhi);
             Controls.Add(txtApSuatNap);
             Controls.Add(txtTheTichBinh);
@@ -287,6 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)txtTheTichBinh).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtApSuatNap).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtChatLuongKhi).EndInit();
+            ((System.ComponentModel.ISupportInitialize)QuyCachDouble).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -308,5 +341,7 @@
         private Syncfusion.Windows.Forms.Tools.DoubleTextBox txtTheTichBinh;
         private Syncfusion.Windows.Forms.Tools.DoubleTextBox txtApSuatNap;
         private Syncfusion.Windows.Forms.Tools.IntegerTextBox txtChatLuongKhi;
+        private Syncfusion.Windows.Forms.Tools.DoubleTextBox QuyCachDouble;
+        private Label label7;
     }
 }

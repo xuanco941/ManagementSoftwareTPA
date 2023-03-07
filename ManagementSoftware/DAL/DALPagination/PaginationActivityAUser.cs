@@ -16,7 +16,7 @@ namespace ManagementSoftware.DAL.DALPagination
 
             int position = (page - 1) * NumberRows;
 
-            if (start == null && end == null)
+            if (start == null || end == null)
             {
                 this.ListResults = dbContext.Activities.OrderByDescending(t => t.ActivityID)
                 .Where(a => a.Username == username)
@@ -27,6 +27,7 @@ namespace ManagementSoftware.DAL.DALPagination
             }
             else
             {
+                end = end.Value.AddDays(1);
                 this.ListResults = dbContext.Activities.OrderByDescending(t => t.ActivityID)
                 .Where(a => (start <= a.CreateAt && end >= a.CreateAt) && (a.Username == username))
                 .Skip(position)

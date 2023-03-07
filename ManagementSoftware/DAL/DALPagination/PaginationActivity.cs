@@ -18,6 +18,7 @@ namespace ManagementSoftware.DAL.DALPagination
 
             if (start != null && end != null)
             {
+                end = end.Value.AddDays(1);
                 this.ListResults = dbContext.Activities.OrderByDescending(t => t.ActivityID)
                 .Where(a => start <= a.CreateAt && end >= a.CreateAt)
                 .Skip(position)

@@ -29,6 +29,7 @@ namespace ManagementSoftware.GUI.Section
             labelChatLuongKhi.Text = "Chất lượng khí : " + product.ChatLuongKhi + "%";
             labelSoLuongSx.Text = "Số lượng sx : " + product.SoLuongSanXuat;
             labelTheTichBinh.Text = "Thể tích bình : " + product.TheTichBinh;
+            labelQuyCach.Text = "Quy cách : " + product.QuyCach + "L";
         }
 
         private void buttonViewDetail_Click(object sender, EventArgs e)

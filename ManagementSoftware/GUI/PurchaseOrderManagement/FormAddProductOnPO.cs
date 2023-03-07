@@ -37,6 +37,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
                 product.ChatLuongKhi = (int)txtChatLuongKhi.IntegerValue;
                 product.ApSuatNap = txtApSuatNap.DoubleValue;
                 product.SoLuongSanXuat = (int)txtSlsx.IntegerValue;
+                product.QuyCach = (double)QuyCachDouble.DoubleValue;
                 addProductDelegate?.Invoke(product);
                 this.Close();
             }
