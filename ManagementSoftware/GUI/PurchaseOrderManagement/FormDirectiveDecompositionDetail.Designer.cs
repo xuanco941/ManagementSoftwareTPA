@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDirectiveDecompositionDetail));
-            panel7 = new Panel();
-            buttonConfirm = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             panel1 = new Panel();
             panel2 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -61,7 +59,6 @@
             panel16 = new Panel();
             buttonBack = new Button();
             labelHeader = new Label();
-            panel7.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -81,39 +78,6 @@
             panel16.SuspendLayout();
             SuspendLayout();
             // 
-            // panel7
-            // 
-            panel7.Controls.Add(buttonConfirm);
-            panel7.Dock = DockStyle.Bottom;
-            panel7.Location = new Point(0, 730);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(1103, 55);
-            panel7.TabIndex = 15;
-            // 
-            // buttonConfirm
-            // 
-            buttonConfirm.BackColor = SystemColors.Highlight;
-            buttonConfirm.BackgroundColor = SystemColors.Highlight;
-            buttonConfirm.BorderColor = Color.PaleVioletRed;
-            buttonConfirm.BorderRadius = 6;
-            buttonConfirm.BorderSize = 0;
-            buttonConfirm.Cursor = Cursors.Hand;
-            buttonConfirm.Dock = DockStyle.Fill;
-            buttonConfirm.FlatStyle = FlatStyle.Flat;
-            buttonConfirm.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonConfirm.ForeColor = Color.White;
-            buttonConfirm.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonConfirm.Location = new Point(0, 0);
-            buttonConfirm.Margin = new Padding(4, 3, 4, 3);
-            buttonConfirm.Name = "buttonConfirm";
-            buttonConfirm.Size = new Size(1103, 55);
-            buttonConfirm.TabIndex = 25;
-            buttonConfirm.Text = "Xác nhận";
-            buttonConfirm.TextColor = Color.White;
-            buttonConfirm.TextImageRelation = TextImageRelation.TextBeforeImage;
-            buttonConfirm.UseVisualStyleBackColor = false;
-            buttonConfirm.Click += buttonConfirm_Click;
-            // 
             // panel1
             // 
             panel1.Controls.Add(panel2);
@@ -121,7 +85,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1103, 730);
+            panel1.Size = new Size(1103, 785);
             panel1.TabIndex = 16;
             // 
             // panel2
@@ -131,7 +95,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 53);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1103, 677);
+            panel2.Size = new Size(1103, 732);
             panel2.TabIndex = 17;
             // 
             // tableLayoutPanel1
@@ -146,7 +110,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1099, 673);
+            tableLayoutPanel1.Size = new Size(1099, 728);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel4
@@ -157,7 +121,7 @@
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(332, 3);
             panel4.Name = "panel4";
-            panel4.Size = new Size(764, 667);
+            panel4.Size = new Size(764, 722);
             panel4.TabIndex = 1;
             // 
             // panelChiThiSX
@@ -167,16 +131,16 @@
             panelChiThiSX.Dock = DockStyle.Fill;
             panelChiThiSX.Location = new Point(0, 60);
             panelChiThiSX.Name = "panelChiThiSX";
-            panelChiThiSX.Size = new Size(764, 564);
+            panelChiThiSX.Size = new Size(764, 603);
             panelChiThiSX.TabIndex = 3;
             // 
             // panel17
             // 
             panel17.Controls.Add(buttonAddProduct);
             panel17.Dock = DockStyle.Bottom;
-            panel17.Location = new Point(0, 624);
+            panel17.Location = new Point(0, 663);
             panel17.Name = "panel17";
-            panel17.Size = new Size(764, 43);
+            panel17.Size = new Size(764, 59);
             panel17.TabIndex = 2;
             // 
             // buttonAddProduct
@@ -189,14 +153,14 @@
             buttonAddProduct.Cursor = Cursors.Hand;
             buttonAddProduct.Dock = DockStyle.Fill;
             buttonAddProduct.FlatStyle = FlatStyle.Flat;
-            buttonAddProduct.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAddProduct.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonAddProduct.ForeColor = SystemColors.Control;
             buttonAddProduct.Image = (Image)resources.GetObject("buttonAddProduct.Image");
             buttonAddProduct.ImageAlign = ContentAlignment.MiddleRight;
             buttonAddProduct.Location = new Point(0, 0);
             buttonAddProduct.Margin = new Padding(4, 3, 4, 3);
             buttonAddProduct.Name = "buttonAddProduct";
-            buttonAddProduct.Size = new Size(764, 43);
+            buttonAddProduct.Size = new Size(764, 59);
             buttonAddProduct.TabIndex = 22;
             buttonAddProduct.Text = "Thêm chỉ thị ";
             buttonAddProduct.TextAlign = ContentAlignment.MiddleLeft;
@@ -235,7 +199,7 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(3, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(323, 667);
+            panel3.Size = new Size(323, 722);
             panel3.TabIndex = 0;
             // 
             // panelInfoProduct
@@ -253,7 +217,7 @@
             panelInfoProduct.Dock = DockStyle.Fill;
             panelInfoProduct.Location = new Point(0, 60);
             panelInfoProduct.Name = "panelInfoProduct";
-            panelInfoProduct.Size = new Size(323, 607);
+            panelInfoProduct.Size = new Size(323, 662);
             panelInfoProduct.TabIndex = 1;
             // 
             // panel14
@@ -495,12 +459,11 @@
             BackColor = Color.FromArgb(60, 60, 60);
             ClientSize = new Size(1103, 785);
             Controls.Add(panel1);
-            Controls.Add(panel7);
             Name = "FormDirectiveDecompositionDetail";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormDirectiveDecompositionDetail";
             WindowState = FormWindowState.Maximized;
-            panel7.ResumeLayout(false);
+            FormClosing += FormDirectiveDecompositionDetail_FormClosing;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
@@ -522,12 +485,9 @@
         }
 
         #endregion
-
-        private Panel panel7;
         private Panel panel1;
         private Panel panel16;
         private Label labelHeader;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonConfirm;
         private Button buttonBack;
         private Panel panel2;
         private TableLayoutPanel tableLayoutPanel1;

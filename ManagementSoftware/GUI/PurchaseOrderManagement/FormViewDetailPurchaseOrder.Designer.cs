@@ -75,6 +75,7 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
             panel16 = new Panel();
+            buttonAddProduct = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             panelProducts = new Panel();
             panel5 = new Panel();
             label2 = new Label();
@@ -706,12 +707,39 @@
             // panel16
             // 
             panel16.Controls.Add(panelProducts);
+            panel16.Controls.Add(buttonAddProduct);
             panel16.Dock = DockStyle.Fill;
             panel16.Location = new Point(0, 57);
             panel16.Margin = new Padding(4, 3, 4, 3);
             panel16.Name = "panel16";
             panel16.Size = new Size(984, 410);
             panel16.TabIndex = 3;
+            // 
+            // buttonAddProduct
+            // 
+            buttonAddProduct.BackColor = Color.ForestGreen;
+            buttonAddProduct.BackgroundColor = Color.ForestGreen;
+            buttonAddProduct.BorderColor = Color.PaleVioletRed;
+            buttonAddProduct.BorderRadius = 3;
+            buttonAddProduct.BorderSize = 0;
+            buttonAddProduct.Cursor = Cursors.Hand;
+            buttonAddProduct.Dock = DockStyle.Bottom;
+            buttonAddProduct.FlatStyle = FlatStyle.Flat;
+            buttonAddProduct.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAddProduct.ForeColor = SystemColors.Control;
+            buttonAddProduct.Image = (Image)resources.GetObject("buttonAddProduct.Image");
+            buttonAddProduct.ImageAlign = ContentAlignment.MiddleRight;
+            buttonAddProduct.Location = new Point(0, 367);
+            buttonAddProduct.Margin = new Padding(4, 3, 4, 3);
+            buttonAddProduct.Name = "buttonAddProduct";
+            buttonAddProduct.Size = new Size(984, 43);
+            buttonAddProduct.TabIndex = 22;
+            buttonAddProduct.Text = "Thêm sản phẩm";
+            buttonAddProduct.TextAlign = ContentAlignment.MiddleLeft;
+            buttonAddProduct.TextColor = SystemColors.Control;
+            buttonAddProduct.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonAddProduct.UseVisualStyleBackColor = false;
+            buttonAddProduct.Click += buttonAddProduct_Click;
             // 
             // panelProducts
             // 
@@ -721,7 +749,7 @@
             panelProducts.Location = new Point(0, 0);
             panelProducts.Margin = new Padding(4, 3, 4, 3);
             panelProducts.Name = "panelProducts";
-            panelProducts.Size = new Size(984, 410);
+            panelProducts.Size = new Size(984, 367);
             panelProducts.TabIndex = 0;
             // 
             // panel5
@@ -1149,5 +1177,6 @@
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panel2btn;
         private Panel panel17;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddProduct;
     }
 }

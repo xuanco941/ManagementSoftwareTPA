@@ -99,28 +99,6 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            //List<Directive> listDirectiveNotAdded = new List<Directive>();
-            //foreach (var directive in productDictionary)
-            //{
-            //    directive.Value.ProductID = this.product.ProductID;
-            //    if (directive.Value.DirectiveID == 0)
-            //    {
-            //        listDirectiveNotAdded.Add(directive.Value);
-            //    }
-            //}
-
-            //if (listDirectiveNotAdded.Count > 0)
-            //{
-            //    AddUpdateDeleteResponse<List<Directive>> response = BUSDirective.AddRange(listDirectiveNotAdded);
-            //    if (response == null || response.Status == false)
-            //    {
-            //        MessageBox.Show("Có vấn đề xảy ra khi thêm chỉ thị.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //    this.Close();
-            //}
-
-
-
             changeData.Invoke(new FormDirectiveDecomposition(purchaseOrder));
         }
 
@@ -129,6 +107,11 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             FormAddDirective form = new FormAddDirective(this.product.ProductID);
             form.addDirectiveDelegate = new FormAddDirective.AddDirectiveDelegate(AddDirectiveToList);
             form.ShowDialog();
+        }
+
+        private void FormDirectiveDecompositionDetail_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            changeData.Invoke(new FormDirectiveDecomposition(purchaseOrder));
         }
     }
 }

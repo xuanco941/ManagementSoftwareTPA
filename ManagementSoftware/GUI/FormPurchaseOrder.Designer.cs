@@ -182,7 +182,7 @@
             buttonNotDone.BorderSize = 0;
             buttonNotDone.Cursor = Cursors.Hand;
             buttonNotDone.FlatStyle = FlatStyle.Flat;
-            buttonNotDone.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonNotDone.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonNotDone.ForeColor = Color.Black;
             buttonNotDone.Image = (Image)resources.GetObject("buttonNotDone.Image");
             buttonNotDone.ImageAlign = ContentAlignment.MiddleRight;
@@ -208,7 +208,7 @@
             buttonDone.BorderSize = 0;
             buttonDone.Cursor = Cursors.Hand;
             buttonDone.FlatStyle = FlatStyle.Flat;
-            buttonDone.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonDone.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonDone.ForeColor = Color.Black;
             buttonDone.Image = (Image)resources.GetObject("buttonDone.Image");
             buttonDone.ImageAlign = ContentAlignment.MiddleRight;
@@ -234,7 +234,7 @@
             buttonAll.BorderSize = 0;
             buttonAll.Cursor = Cursors.Hand;
             buttonAll.FlatStyle = FlatStyle.Flat;
-            buttonAll.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAll.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonAll.ForeColor = Color.Black;
             buttonAll.Image = (Image)resources.GetObject("buttonAll.Image");
             buttonAll.ImageAlign = ContentAlignment.MiddleRight;

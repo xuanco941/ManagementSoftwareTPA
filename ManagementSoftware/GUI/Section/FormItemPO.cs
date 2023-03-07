@@ -30,7 +30,7 @@ namespace ManagementSoftware.GUI.Section
             labelNgayGiao.Text = "Ngày giao : " + purchase.NgayGiaoHang?.ToString("dd/MM/yyyy");
             labelMaKhachHang.Text = "Mã khách hàng : " + purchase.MaKhachHang;
             labelTenKhachHang.Text = "Tên khách hàng : " + purchase.TenKhachHang;
-            labelTrangThai.Text =purchase.Status == false ? "Trạng thái : Đang sản xuất" : "Trạng thái : Đã hoàn thành";
+            labelTrangThai.Text = purchase.Status == false ? "Trạng thái : Đang sản xuất" : "Trạng thái : Đã hoàn thành";
 
             try
             {

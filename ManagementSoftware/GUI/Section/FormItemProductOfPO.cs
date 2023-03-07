@@ -17,11 +17,12 @@ namespace ManagementSoftware.GUI.Section
         public DeleteProductDelegate deleteProductDelegate;
 
         int position = -1;
+        Product p;
         public FormItemProductOfPO(Product product, int position)
         {
             InitializeComponent();
             this.position = position;
-
+            p = product;
             labelProductName.Text = "Tên sản phẩm : " + product.ProductName;
             labelApSuatNap.Text = "Áp suất nạp : " + product.ApSuatNap;
             labelLoaiKhi.Text = "Loại khí : " + product.LoaiKhi;
@@ -32,8 +33,13 @@ namespace ManagementSoftware.GUI.Section
 
         private void buttonViewDetail_Click(object sender, EventArgs e)
         {
-            deleteProductDelegate.Invoke(this.position);
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa sản phẩm {Common.PRODUCT + p.ProductID}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                deleteProductDelegate.Invoke(this.position);
+                this.Close();
+            }
+
         }
     }
 }

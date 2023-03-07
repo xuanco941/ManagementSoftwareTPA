@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.BUS;
+using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
 using Syncfusion.XPS;
@@ -27,6 +28,8 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             this.purchaseOrder = po;
         }
 
+
+        List<Product> listProduct = new List<Product>();
         void LoadForm()
         {
 
@@ -54,21 +57,34 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
             labelTongTien.Text = purchaseOrder.TongTienThanhToan + "đ";
 
-            foreach (FormItemFormViewDetailPO item in panelProducts.Controls)
-            {
-                item.Close();
-            }
+            new MethodCommonGUI().CloseFormInPanel(panelProducts);
 
-            List<Product> list = BUSProduct.GetProductOfPO(purchaseOrder.PurchaseOrderID);
-            for (int i = 0; i < list.Count; i++)
+            for (int i = 0; i < listProduct.Count; i++)
             {
-                FormItemFormViewDetailPO form = new FormItemFormViewDetailPO(list[i]);
+                FormItemFormViewDetailPO form = new FormItemFormViewDetailPO(listProduct[i]);
+                form.deleteProductDelegate = new FormItemFormViewDetailPO.DeleteProductDelegate(Delete);
                 form.TopLevel = false;
                 panelProducts.Controls.Add(form);
                 form.FormBorderStyle = FormBorderStyle.None;
                 form.Dock = DockStyle.Top;
                 form.Show();
             }
+        }
+
+
+        void Delete(Product f)
+        {
+            if (listProduct != null && listProduct.Count > 0)
+            {
+                Product? userToDelete = listProduct.FirstOrDefault(u => u.ProductID == f.ProductID);
+                if (userToDelete != null)
+                {
+                    listProduct.Remove(userToDelete);
+                    LoadForm();
+                }
+            }
+
+
         }
 
         private void buttonXoaPO_Click(object sender, EventArgs e)
@@ -96,7 +112,27 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
 
         private void FormViewDetailPurchaseOrder_Load(object sender, EventArgs e)
         {
+            listProduct = BUSProduct.GetProductOfPO(purchaseOrder.PurchaseOrderID);
             LoadForm();
+        }
+
+
+        void AddProductToList(Product pr)
+        {
+            pr.PurchaseOrderID = purchaseOrder.PurchaseOrderID;
+            if (DALProduct.Add(pr) > 0)
+            {
+                listProduct.Add(pr);
+                LoadForm();
+            }
+
+        }
+
+        private void buttonAddProduct_Click(object sender, EventArgs e)
+        {
+            FormAddProductOnPO form = new FormAddProductOnPO();
+            form.addProductDelegate = new FormAddProductOnPO.AddProductDelegate(AddProductToList);
+            form.ShowDialog();
         }
     }
 }

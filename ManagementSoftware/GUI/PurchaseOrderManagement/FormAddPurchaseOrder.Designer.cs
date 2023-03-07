@@ -372,16 +372,16 @@
             // 
             // txtReference
             // 
-            txtReference.BeforeTouchSize = new Size(316, 29);
+            txtReference.BeforeTouchSize = new Size(235, 33);
             txtReference.Dock = DockStyle.Fill;
             txtReference.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtReference.IntegerValue = 1L;
+            txtReference.IntegerValue = 0L;
             txtReference.Location = new Point(26, 5);
             txtReference.Margin = new Padding(4, 3, 4, 3);
             txtReference.Name = "txtReference";
             txtReference.Size = new Size(315, 29);
             txtReference.TabIndex = 0;
-            txtReference.Text = "1";
+            txtReference.Text = "0";
             // 
             // panel22
             // 
@@ -665,16 +665,16 @@
             // 
             // txtPRPQ
             // 
-            txtPRPQ.BeforeTouchSize = new Size(316, 29);
+            txtPRPQ.BeforeTouchSize = new Size(235, 33);
             txtPRPQ.Dock = DockStyle.Fill;
             txtPRPQ.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPRPQ.IntegerValue = 1L;
+            txtPRPQ.IntegerValue = 0L;
             txtPRPQ.Location = new Point(26, 5);
             txtPRPQ.Margin = new Padding(4, 3, 4, 3);
             txtPRPQ.Name = "txtPRPQ";
             txtPRPQ.Size = new Size(315, 29);
             txtPRPQ.TabIndex = 0;
-            txtPRPQ.Text = "1";
+            txtPRPQ.Text = "0";
             // 
             // panel7
             // 
@@ -796,7 +796,7 @@
             // 
             // txtTongTienThanhToan
             // 
-            txtTongTienThanhToan.BeforeTouchSize = new Size(316, 29);
+            txtTongTienThanhToan.BeforeTouchSize = new Size(235, 33);
             txtTongTienThanhToan.Dock = DockStyle.Fill;
             txtTongTienThanhToan.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtTongTienThanhToan.IntegerValue = 1L;
@@ -844,7 +844,7 @@
             // 
             // txtVAT
             // 
-            txtVAT.BeforeTouchSize = new Size(316, 29);
+            txtVAT.BeforeTouchSize = new Size(235, 33);
             txtVAT.Dock = DockStyle.Fill;
             txtVAT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtVAT.IntegerValue = 1L;
@@ -892,7 +892,7 @@
             // 
             // txtTongTienHang
             // 
-            txtTongTienHang.BeforeTouchSize = new Size(316, 29);
+            txtTongTienHang.BeforeTouchSize = new Size(235, 33);
             txtTongTienHang.Dock = DockStyle.Fill;
             txtTongTienHang.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtTongTienHang.IntegerValue = 1L;
@@ -940,7 +940,7 @@
             // 
             // txtVuot
             // 
-            txtVuot.BeforeTouchSize = new Size(316, 29);
+            txtVuot.BeforeTouchSize = new Size(235, 33);
             txtVuot.Dock = DockStyle.Fill;
             txtVuot.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtVuot.IntegerValue = 0L;
@@ -990,16 +990,16 @@
             // 
             // txtChiPhiKhac
             // 
-            txtChiPhiKhac.BeforeTouchSize = new Size(316, 29);
+            txtChiPhiKhac.BeforeTouchSize = new Size(235, 33);
             txtChiPhiKhac.Dock = DockStyle.Fill;
             txtChiPhiKhac.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtChiPhiKhac.IntegerValue = 1L;
+            txtChiPhiKhac.IntegerValue = 0L;
             txtChiPhiKhac.Location = new Point(26, 5);
             txtChiPhiKhac.Margin = new Padding(4, 3, 4, 3);
             txtChiPhiKhac.Name = "txtChiPhiKhac";
             txtChiPhiKhac.Size = new Size(316, 29);
             txtChiPhiKhac.TabIndex = 1;
-            txtChiPhiKhac.Text = "1";
+            txtChiPhiKhac.Text = "0";
             // 
             // panel37
             // 
@@ -1038,16 +1038,16 @@
             // 
             // txtChiPhiKyThuat
             // 
-            txtChiPhiKyThuat.BeforeTouchSize = new Size(316, 29);
+            txtChiPhiKyThuat.BeforeTouchSize = new Size(235, 33);
             txtChiPhiKyThuat.Dock = DockStyle.Fill;
             txtChiPhiKyThuat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtChiPhiKyThuat.IntegerValue = 1L;
+            txtChiPhiKyThuat.IntegerValue = 0L;
             txtChiPhiKyThuat.Location = new Point(26, 5);
             txtChiPhiKyThuat.Margin = new Padding(4, 3, 4, 3);
             txtChiPhiKyThuat.Name = "txtChiPhiKyThuat";
             txtChiPhiKyThuat.Size = new Size(316, 29);
             txtChiPhiKyThuat.TabIndex = 1;
-            txtChiPhiKyThuat.Text = "1";
+            txtChiPhiKyThuat.Text = "0";
             // 
             // panel35
             // 
@@ -1086,16 +1086,16 @@
             // 
             // txtChiPhiChuyenGiao
             // 
-            txtChiPhiChuyenGiao.BeforeTouchSize = new Size(316, 29);
+            txtChiPhiChuyenGiao.BeforeTouchSize = new Size(235, 33);
             txtChiPhiChuyenGiao.Dock = DockStyle.Fill;
             txtChiPhiChuyenGiao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtChiPhiChuyenGiao.IntegerValue = 1L;
+            txtChiPhiChuyenGiao.IntegerValue = 0L;
             txtChiPhiChuyenGiao.Location = new Point(26, 5);
             txtChiPhiChuyenGiao.Margin = new Padding(4, 3, 4, 3);
             txtChiPhiChuyenGiao.Name = "txtChiPhiChuyenGiao";
             txtChiPhiChuyenGiao.Size = new Size(316, 29);
             txtChiPhiChuyenGiao.TabIndex = 1;
-            txtChiPhiChuyenGiao.Text = "1";
+            txtChiPhiChuyenGiao.Text = "0";
             // 
             // panel33
             // 
@@ -1134,16 +1134,16 @@
             // 
             // txtChiPhiVanChuyen
             // 
-            txtChiPhiVanChuyen.BeforeTouchSize = new Size(316, 29);
+            txtChiPhiVanChuyen.BeforeTouchSize = new Size(235, 33);
             txtChiPhiVanChuyen.Dock = DockStyle.Fill;
             txtChiPhiVanChuyen.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtChiPhiVanChuyen.IntegerValue = 1L;
+            txtChiPhiVanChuyen.IntegerValue = 0L;
             txtChiPhiVanChuyen.Location = new Point(26, 5);
             txtChiPhiVanChuyen.Margin = new Padding(4, 3, 4, 3);
             txtChiPhiVanChuyen.Name = "txtChiPhiVanChuyen";
             txtChiPhiVanChuyen.Size = new Size(316, 29);
             txtChiPhiVanChuyen.TabIndex = 1;
-            txtChiPhiVanChuyen.Text = "1";
+            txtChiPhiVanChuyen.Text = "0";
             // 
             // panel29
             // 
@@ -1412,16 +1412,16 @@
             // 
             // txtThanhToan
             // 
-            txtThanhToan.BeforeTouchSize = new Size(316, 29);
+            txtThanhToan.BeforeTouchSize = new Size(235, 33);
             txtThanhToan.Dock = DockStyle.Fill;
             txtThanhToan.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtThanhToan.IntegerValue = 1L;
+            txtThanhToan.IntegerValue = 0L;
             txtThanhToan.Location = new Point(26, 5);
             txtThanhToan.Margin = new Padding(4, 3, 4, 3);
             txtThanhToan.Name = "txtThanhToan";
             txtThanhToan.Size = new Size(464, 29);
             txtThanhToan.TabIndex = 1;
-            txtThanhToan.Text = "1";
+            txtThanhToan.Text = "0";
             // 
             // panel55
             // 

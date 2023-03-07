@@ -101,7 +101,7 @@ namespace ManagementSoftware.GUI.PurchaseOrderManagement
             purchaseOrder.SoSanPhamCanSX = productDictionary.Count;
             purchaseOrder.SoSanPhamDaSX = 0;
             AddUpdateDeleteResponse<PurchaseOrder> response = BUSPurchaseOrder.Add(purchaseOrder);
-            if(response != null)
+            if (response != null)
             {
                 if (response.Status == false)
                 {

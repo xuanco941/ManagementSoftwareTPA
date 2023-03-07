@@ -36,24 +36,29 @@ namespace ManagementSoftware.GUI.Section
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            if (d.SoLuongDaSanXuat != 0)
+            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa chỉ thị {Common.DIRECTIVE + d.DirectiveID}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show($"Không thể xóa! Chỉ thị này đang được thực hiện với tiến trình {d.SoLuongDaSanXuat}/{d.SoLuongCanSanXuat}.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if (d.DirectiveID != 0)
+                if (d.SoLuongDaSanXuat != 0)
                 {
-                    int result = DALDirective.Delete(d.DirectiveID);
-                    if (result < 1)
-                    {
-                        MessageBox.Show("Gặp lỗi khi loại bỏ chỉ thị này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
+                    MessageBox.Show($"Không thể xóa! Chỉ thị này đang được thực hiện với tiến trình {d.SoLuongDaSanXuat}/{d.SoLuongCanSanXuat}.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                deleteChiThiSXDelegate.Invoke(this.position);
-                this.Close();
+                else
+                {
+                    if (d.DirectiveID != 0)
+                    {
+                        int result = DALDirective.Delete(d.DirectiveID);
+                        if (result < 1)
+                        {
+                            MessageBox.Show("Gặp lỗi khi loại bỏ chỉ thị này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+                    deleteChiThiSXDelegate.Invoke(this.position);
+                    this.Close();
+                }
             }
+               
         }
     }
 }
