@@ -16,20 +16,10 @@ namespace ManagementSoftware.GUI.Section
     public partial class FormChiThiNhapKho : Form
     {
         Directive directive;
-        Product product;
         public FormChiThiNhapKho(Directive d)
         {
             InitializeComponent();
             this.directive = d;
-            Product? p = new DAL.DALProduct().GetProductFromID(d.ProductID);
-            if (p != null)
-            {
-                this.product = p;
-            }
-            else
-            {
-                this.Close();
-            }
             LoadForm();
         }
 
@@ -41,13 +31,13 @@ namespace ManagementSoftware.GUI.Section
             labelNgayKetThuc.Text = "Ngày kết thúc : " + directive.EndAt.ToString("dd/MM/yyyy");
             labelNguoiLam.Text = "Người thực hiện : " + BUSUser.GetUserFromUsername(directive.Worker)?.FullName + $"({directive.Worker})";
             labelSoLuongSX.Text = "Số lượng sản xuất : " + directive.SoLuongCanSanXuat;
-            labelMaSanPham.Text = "Thuộc mã sản phẩm : " + Common.PRODUCT + directive.ProductID;
-            labelDonHang.Text = "Thuộc mã đơn hàng : " + Common.PURCHASEORDER + this.product.PurchaseOrderID;
+            labelMaSanPham.Text = "Thuộc mã sản phẩm : " + Common.PRODUCT + directive.Product.ProductID;
+            labelDonHang.Text = "Thuộc mã đơn hàng : " + Common.PURCHASEORDER + directive.Product.PurchaseOrderID;
         }
 
         private void buttonNhapKho_Click(object sender, EventArgs e)
         {
-            new FormNhapKho(this.directive, this.product).ShowDialog();
+            new FormNhapKho(this.directive).ShowDialog();
         }
     }
 }

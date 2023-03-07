@@ -29,217 +29,216 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxTaiKhoan = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.textBoxMatKhau = new LW_PhanMemBaoGia.MyControls.TextBoxT();
-            this.buttonExit = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonChangeStringConnect = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            label2 = new Label();
+            label1 = new Label();
+            textBoxTaiKhoan = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            textBoxMatKhau = new LW_PhanMemBaoGia.MyControls.TextBoxT();
+            buttonExit = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            label3 = new Label();
+            pictureBox2 = new PictureBox();
+            panel1 = new Panel();
+            buttonChangeStringConnect = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(141, 188);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Mật khẩu:";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.Transparent;
+            label2.Location = new Point(141, 188);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(73, 20);
+            label2.TabIndex = 8;
+            label2.Text = "Mật khẩu:";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(141, 134);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Tài khoản:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Transparent;
+            label1.Location = new Point(141, 134);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(74, 20);
+            label1.TabIndex = 7;
+            label1.Text = "Tài khoản:";
             // 
             // textBoxTaiKhoan
             // 
-            this.textBoxTaiKhoan.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxTaiKhoan.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxTaiKhoan.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxTaiKhoan.BorderRadius = 5;
-            this.textBoxTaiKhoan.BorderSize = 1;
-            this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTaiKhoan.Location = new System.Drawing.Point(232, 127);
-            this.textBoxTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxTaiKhoan.Multiline = false;
-            this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
-            this.textBoxTaiKhoan.Padding = new System.Windows.Forms.Padding(8);
-            this.textBoxTaiKhoan.PasswordChar = false;
-            this.textBoxTaiKhoan.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxTaiKhoan.PlaceholderText = "";
-            this.textBoxTaiKhoan.Size = new System.Drawing.Size(241, 35);
-            this.textBoxTaiKhoan.TabIndex = 14;
-            this.textBoxTaiKhoan.Texts = "";
-            this.textBoxTaiKhoan.UnderlinedStyle = false;
-            this.textBoxTaiKhoan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTaiKhoan_KeyDown);
+            textBoxTaiKhoan.BackColor = SystemColors.Window;
+            textBoxTaiKhoan.BorderColor = Color.CornflowerBlue;
+            textBoxTaiKhoan.BorderFocusColor = SystemColors.ActiveCaption;
+            textBoxTaiKhoan.BorderRadius = 5;
+            textBoxTaiKhoan.BorderSize = 1;
+            textBoxTaiKhoan.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxTaiKhoan.Location = new Point(232, 127);
+            textBoxTaiKhoan.Margin = new Padding(4, 3, 4, 3);
+            textBoxTaiKhoan.Multiline = false;
+            textBoxTaiKhoan.Name = "textBoxTaiKhoan";
+            textBoxTaiKhoan.Padding = new Padding(8);
+            textBoxTaiKhoan.PasswordChar = false;
+            textBoxTaiKhoan.PlaceholderColor = Color.DarkGray;
+            textBoxTaiKhoan.PlaceholderText = "";
+            textBoxTaiKhoan.Size = new Size(241, 35);
+            textBoxTaiKhoan.TabIndex = 14;
+            textBoxTaiKhoan.Texts = "";
+            textBoxTaiKhoan.UnderlinedStyle = false;
+            textBoxTaiKhoan.KeyDown += textBoxTaiKhoan_KeyDown;
             // 
             // textBoxMatKhau
             // 
-            this.textBoxMatKhau.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxMatKhau.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.textBoxMatKhau.BorderFocusColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxMatKhau.BorderRadius = 5;
-            this.textBoxMatKhau.BorderSize = 1;
-            this.textBoxMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxMatKhau.Location = new System.Drawing.Point(232, 181);
-            this.textBoxMatKhau.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxMatKhau.Multiline = false;
-            this.textBoxMatKhau.Name = "textBoxMatKhau";
-            this.textBoxMatKhau.Padding = new System.Windows.Forms.Padding(8);
-            this.textBoxMatKhau.PasswordChar = true;
-            this.textBoxMatKhau.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxMatKhau.PlaceholderText = "";
-            this.textBoxMatKhau.Size = new System.Drawing.Size(241, 35);
-            this.textBoxMatKhau.TabIndex = 15;
-            this.textBoxMatKhau.Texts = "";
-            this.textBoxMatKhau.UnderlinedStyle = false;
-            this.textBoxMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTaiKhoan_KeyDown);
+            textBoxMatKhau.BackColor = SystemColors.Window;
+            textBoxMatKhau.BorderColor = Color.CornflowerBlue;
+            textBoxMatKhau.BorderFocusColor = SystemColors.ActiveCaption;
+            textBoxMatKhau.BorderRadius = 5;
+            textBoxMatKhau.BorderSize = 1;
+            textBoxMatKhau.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxMatKhau.Location = new Point(232, 181);
+            textBoxMatKhau.Margin = new Padding(4, 3, 4, 3);
+            textBoxMatKhau.Multiline = false;
+            textBoxMatKhau.Name = "textBoxMatKhau";
+            textBoxMatKhau.Padding = new Padding(8);
+            textBoxMatKhau.PasswordChar = true;
+            textBoxMatKhau.PlaceholderColor = Color.DarkGray;
+            textBoxMatKhau.PlaceholderText = "";
+            textBoxMatKhau.Size = new Size(241, 35);
+            textBoxMatKhau.TabIndex = 15;
+            textBoxMatKhau.Texts = "";
+            textBoxMatKhau.UnderlinedStyle = false;
+            textBoxMatKhau.KeyDown += textBoxTaiKhoan_KeyDown;
             // 
             // buttonExit
             // 
-            this.buttonExit.BackColor = System.Drawing.Color.Firebrick;
-            this.buttonExit.BackgroundColor = System.Drawing.Color.Firebrick;
-            this.buttonExit.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonExit.BorderRadius = 15;
-            this.buttonExit.BorderSize = 0;
-            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
-            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExit.Location = new System.Drawing.Point(368, 239);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(104, 42);
-            this.buttonExit.TabIndex = 13;
-            this.buttonExit.Text = "Thoát";
-            this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExit.TextColor = System.Drawing.Color.White;
-            this.buttonExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            buttonExit.BackColor = Color.Firebrick;
+            buttonExit.BackgroundColor = Color.Firebrick;
+            buttonExit.BorderColor = Color.PaleVioletRed;
+            buttonExit.BorderRadius = 15;
+            buttonExit.BorderSize = 0;
+            buttonExit.Cursor = Cursors.Hand;
+            buttonExit.FlatStyle = FlatStyle.Flat;
+            buttonExit.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonExit.ForeColor = Color.White;
+            buttonExit.Image = (Image)resources.GetObject("buttonExit.Image");
+            buttonExit.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonExit.Location = new Point(368, 239);
+            buttonExit.Margin = new Padding(4, 3, 4, 3);
+            buttonExit.Name = "buttonExit";
+            buttonExit.Size = new Size(104, 42);
+            buttonExit.TabIndex = 13;
+            buttonExit.Text = "Thoát";
+            buttonExit.TextAlign = ContentAlignment.MiddleRight;
+            buttonExit.TextColor = Color.White;
+            buttonExit.TextImageRelation = TextImageRelation.TextBeforeImage;
+            buttonExit.UseVisualStyleBackColor = false;
+            buttonExit.Click += buttonExit_Click;
             // 
             // buttonDangNhap
             // 
-            this.buttonDangNhap.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonDangNhap.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.buttonDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonDangNhap.BorderRadius = 15;
-            this.buttonDangNhap.BorderSize = 0;
-            this.buttonDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDangNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonDangNhap.ForeColor = System.Drawing.Color.White;
-            this.buttonDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("buttonDangNhap.Image")));
-            this.buttonDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDangNhap.Location = new System.Drawing.Point(232, 239);
-            this.buttonDangNhap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonDangNhap.Name = "buttonDangNhap";
-            this.buttonDangNhap.Size = new System.Drawing.Size(118, 42);
-            this.buttonDangNhap.TabIndex = 12;
-            this.buttonDangNhap.Text = "Đăng nhập";
-            this.buttonDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDangNhap.TextColor = System.Drawing.Color.White;
-            this.buttonDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonDangNhap.UseVisualStyleBackColor = false;
-            this.buttonDangNhap.Click += new System.EventHandler(this.buttonDangNhap_Click);
+            buttonDangNhap.BackColor = Color.SteelBlue;
+            buttonDangNhap.BackgroundColor = Color.SteelBlue;
+            buttonDangNhap.BorderColor = Color.PaleVioletRed;
+            buttonDangNhap.BorderRadius = 15;
+            buttonDangNhap.BorderSize = 0;
+            buttonDangNhap.Cursor = Cursors.Hand;
+            buttonDangNhap.FlatStyle = FlatStyle.Flat;
+            buttonDangNhap.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonDangNhap.ForeColor = Color.White;
+            buttonDangNhap.Image = (Image)resources.GetObject("buttonDangNhap.Image");
+            buttonDangNhap.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonDangNhap.Location = new Point(232, 239);
+            buttonDangNhap.Margin = new Padding(4, 3, 4, 3);
+            buttonDangNhap.Name = "buttonDangNhap";
+            buttonDangNhap.Size = new Size(118, 42);
+            buttonDangNhap.TabIndex = 12;
+            buttonDangNhap.Text = "Đăng nhập";
+            buttonDangNhap.TextAlign = ContentAlignment.MiddleRight;
+            buttonDangNhap.TextColor = Color.White;
+            buttonDangNhap.TextImageRelation = TextImageRelation.TextBeforeImage;
+            buttonDangNhap.UseVisualStyleBackColor = false;
+            buttonDangNhap.Click += buttonDangNhap_Click;
             // 
             // label3
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(642, 104);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "MÁY NẠP KHÍ TPA";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label3.Dock = DockStyle.Fill;
+            label3.Font = new Font("MS Reference Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.CornflowerBlue;
+            label3.Location = new Point(0, 0);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(642, 104);
+            label3.TabIndex = 10;
+            label3.Text = "MÁY NẠP KHÍ TPA";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(555, 336);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(87, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(555, 336);
+            pictureBox2.Margin = new Padding(4, 3, 4, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(87, 24);
+            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox2.TabIndex = 17;
+            pictureBox2.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(642, 104);
-            this.panel1.TabIndex = 19;
+            panel1.Controls.Add(label3);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(642, 104);
+            panel1.TabIndex = 19;
             // 
             // buttonChangeStringConnect
             // 
-            this.buttonChangeStringConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.buttonChangeStringConnect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonChangeStringConnect.FlatAppearance.BorderSize = 0;
-            this.buttonChangeStringConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChangeStringConnect.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonChangeStringConnect.ForeColor = System.Drawing.Color.White;
-            this.buttonChangeStringConnect.Location = new System.Drawing.Point(0, 327);
-            this.buttonChangeStringConnect.Name = "buttonChangeStringConnect";
-            this.buttonChangeStringConnect.Size = new System.Drawing.Size(92, 33);
-            this.buttonChangeStringConnect.TabIndex = 21;
-            this.buttonChangeStringConnect.Text = "Thay chuỗi kết nối Database";
-            this.buttonChangeStringConnect.UseVisualStyleBackColor = false;
-            this.buttonChangeStringConnect.Click += new System.EventHandler(this.buttonBepTu_Click);
+            buttonChangeStringConnect.BackColor = Color.FromArgb(32, 32, 32);
+            buttonChangeStringConnect.Cursor = Cursors.Hand;
+            buttonChangeStringConnect.FlatAppearance.BorderSize = 0;
+            buttonChangeStringConnect.FlatStyle = FlatStyle.Flat;
+            buttonChangeStringConnect.Font = new Font("Segoe UI", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonChangeStringConnect.ForeColor = Color.White;
+            buttonChangeStringConnect.Location = new Point(0, 327);
+            buttonChangeStringConnect.Name = "buttonChangeStringConnect";
+            buttonChangeStringConnect.Size = new Size(92, 33);
+            buttonChangeStringConnect.TabIndex = 21;
+            buttonChangeStringConnect.Text = "Thay chuỗi kết nối Database";
+            buttonChangeStringConnect.UseVisualStyleBackColor = false;
+            buttonChangeStringConnect.Click += buttonBepTu_Click;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(642, 361);
-            this.Controls.Add(this.buttonChangeStringConnect);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBoxMatKhau);
-            this.Controls.Add(this.textBoxTaiKhoan);
-            this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonDangNhap);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đăng nhập";
-            this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(41, 44, 51);
+            ClientSize = new Size(642, 361);
+            Controls.Add(buttonChangeStringConnect);
+            Controls.Add(panel1);
+            Controls.Add(pictureBox2);
+            Controls.Add(textBoxMatKhau);
+            Controls.Add(textBoxTaiKhoan);
+            Controls.Add(buttonExit);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(buttonDangNhap);
+            FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Đăng nhập";
+            Load += Login_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

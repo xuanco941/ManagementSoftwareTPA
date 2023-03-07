@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,8 @@ namespace ManagementSoftware.DAL.DALPagination
             .Where(p => start <= p.CreateAt && end >= p.CreateAt && p.Status == true)
             .Skip(position)
             .Take(NumberRows)
+            .Include(d => d.Product)
+            .ThenInclude(p => p.PurchaseOrder)
             .ToList();
             this.TotalResults = dbContext.Directives.Where(p => start <= p.CreateAt && end >= p.CreateAt && p.Status == true).Count();
 
@@ -47,6 +50,8 @@ namespace ManagementSoftware.DAL.DALPagination
             .Where(p => (Common.DIRECTIVE + p.DirectiveID).Contains(poID) == true && p.Status == true)
             .Skip(position)
             .Take(NumberRows)
+            .Include(d => d.Product)
+            .ThenInclude(p => p.PurchaseOrder)
             .ToList();
             this.TotalResults = dbContext.Directives.Where(p => (Common.DIRECTIVE + p.DirectiveID).Contains(poID) == true && p.Status == true).Count();
 

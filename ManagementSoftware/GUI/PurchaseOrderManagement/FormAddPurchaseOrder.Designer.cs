@@ -372,7 +372,7 @@
             // 
             // txtReference
             // 
-            txtReference.BeforeTouchSize = new Size(66, 35);
+            txtReference.BeforeTouchSize = new Size(238, 29);
             txtReference.Dock = DockStyle.Fill;
             txtReference.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtReference.IntegerValue = 0L;
@@ -665,7 +665,7 @@
             // 
             // txtPRPQ
             // 
-            txtPRPQ.BeforeTouchSize = new Size(66, 35);
+            txtPRPQ.BeforeTouchSize = new Size(238, 29);
             txtPRPQ.Dock = DockStyle.Fill;
             txtPRPQ.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtPRPQ.IntegerValue = 0L;
@@ -795,7 +795,7 @@
             // 
             // txtTongTienThanhToan
             // 
-            txtTongTienThanhToan.BeforeTouchSize = new Size(66, 35);
+            txtTongTienThanhToan.BeforeTouchSize = new Size(238, 29);
             txtTongTienThanhToan.Dock = DockStyle.Fill;
             txtTongTienThanhToan.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtTongTienThanhToan.IntegerValue = 0L;
@@ -843,7 +843,7 @@
             // 
             // txtVAT
             // 
-            txtVAT.BeforeTouchSize = new Size(66, 35);
+            txtVAT.BeforeTouchSize = new Size(238, 29);
             txtVAT.Dock = DockStyle.Fill;
             txtVAT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtVAT.IntegerValue = 0L;
@@ -891,7 +891,7 @@
             // 
             // txtTongTienHang
             // 
-            txtTongTienHang.BeforeTouchSize = new Size(66, 35);
+            txtTongTienHang.BeforeTouchSize = new Size(238, 29);
             txtTongTienHang.Dock = DockStyle.Fill;
             txtTongTienHang.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtTongTienHang.IntegerValue = 0L;
@@ -939,7 +939,7 @@
             // 
             // txtVuot
             // 
-            txtVuot.BeforeTouchSize = new Size(66, 35);
+            txtVuot.BeforeTouchSize = new Size(238, 29);
             txtVuot.Dock = DockStyle.Fill;
             txtVuot.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtVuot.IntegerValue = 0L;
@@ -989,7 +989,7 @@
             // 
             // txtChiPhiKhac
             // 
-            txtChiPhiKhac.BeforeTouchSize = new Size(66, 35);
+            txtChiPhiKhac.BeforeTouchSize = new Size(238, 29);
             txtChiPhiKhac.Dock = DockStyle.Fill;
             txtChiPhiKhac.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtChiPhiKhac.IntegerValue = 0L;
@@ -1037,7 +1037,7 @@
             // 
             // txtChiPhiKyThuat
             // 
-            txtChiPhiKyThuat.BeforeTouchSize = new Size(66, 35);
+            txtChiPhiKyThuat.BeforeTouchSize = new Size(238, 29);
             txtChiPhiKyThuat.Dock = DockStyle.Fill;
             txtChiPhiKyThuat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtChiPhiKyThuat.IntegerValue = 0L;
@@ -1085,7 +1085,7 @@
             // 
             // txtChiPhiChuyenGiao
             // 
-            txtChiPhiChuyenGiao.BeforeTouchSize = new Size(66, 35);
+            txtChiPhiChuyenGiao.BeforeTouchSize = new Size(238, 29);
             txtChiPhiChuyenGiao.Dock = DockStyle.Fill;
             txtChiPhiChuyenGiao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtChiPhiChuyenGiao.IntegerValue = 0L;
@@ -1133,7 +1133,7 @@
             // 
             // txtChiPhiVanChuyen
             // 
-            txtChiPhiVanChuyen.BeforeTouchSize = new Size(66, 35);
+            txtChiPhiVanChuyen.BeforeTouchSize = new Size(238, 29);
             txtChiPhiVanChuyen.Dock = DockStyle.Fill;
             txtChiPhiVanChuyen.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtChiPhiVanChuyen.IntegerValue = 0L;
@@ -1411,7 +1411,7 @@
             // 
             // txtThanhToan
             // 
-            txtThanhToan.BeforeTouchSize = new Size(66, 35);
+            txtThanhToan.BeforeTouchSize = new Size(238, 29);
             txtThanhToan.Dock = DockStyle.Fill;
             txtThanhToan.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtThanhToan.IntegerValue = 0L;

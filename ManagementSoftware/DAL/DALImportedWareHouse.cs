@@ -14,5 +14,11 @@ namespace ManagementSoftware.DAL
             DataBaseContext dbContext = new DataBaseContext();
             return dbContext.ImportedWarehouses.Where(p => p.DirectiveID == directiveID).Sum(p => p.Amount);
         }
+
+        public List<ImportedWarehouse>? GetAllImportedWareHousesFromIDDirective(int directiveID)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            return dbContext.ImportedWarehouses.Where(p => p.DirectiveID == directiveID).ToList();
+        }
     }
 }
