@@ -106,11 +106,9 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                 if (soluongMax <= 0)
                 {
                     soluongMax = 0;
-                    buttonConfirm.Enabled = false;
                 }
                 if (soluongMax > 0)
                 {
-                    buttonConfirm.Enabled = true;
                 }
                 labelSLNhap.Text = $"Số lượng nhập (tối đa thêm {soluongMax}) :";
                 txtSoLuongNhap.MaxValue = soluongMax;
@@ -128,6 +126,12 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
 
                 }
 
+            }
+            else
+            {
+                labelSLNhap.Text = $"Số lượng nhập (tối đa thêm {directive.SoLuongDaSanXuat}) :";
+                txtSoLuongNhap.MaxValue = directive.SoLuongDaSanXuat;
+                txtSoLuongNhap.IntegerValue = txtSoLuongNhap.MaxValue;
             }
             comboBoxDonNhapKho.DataSource = new List<string>() { "Tạo đơn mới" };
             comboBoxDonNhapKho.DataSource = strings;
@@ -154,7 +158,15 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                 buttonDelete.Enabled = false;
                 sfBarcode1.Text = "";
                 txtNguoiNhap.Text = Common.USERSESSION.FullName;
-                txtSoLuongNhap.IntegerValue = directive.SoLuongDaSanXuat - l.Sum(a => a.Amount);
+                if(l!=null && l.Count > 0)
+                {
+                    txtSoLuongNhap.IntegerValue = directive.SoLuongDaSanXuat - l.Sum(a => a.Amount);
+                    txtSoLuongNhap.MaxValue = directive.SoLuongDaSanXuat - l.Sum(a => a.Amount);
+                }
+                else
+                {
+                    txtSoLuongNhap.MaxValue = directive.SoLuongDaSanXuat;
+                }
                 NgayNhap.Value = DateTime.Now;
                 buttonDelete.Enabled = false;
             }
@@ -168,6 +180,7 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                     {
                         sfBarcode1.Text = obj.BarCode;
                         txtNguoiNhap.Text = obj.Importer;
+
                         int x = directive.SoLuongDaSanXuat - l.Sum(a => a.Amount);
                         txtSoLuongNhap.MaxValue = obj.Amount + x;
 
@@ -196,7 +209,7 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                 if (dialogResult == DialogResult.Yes)
                 {
                     int id = int.Parse(comboBoxDonNhapKho.Text.Replace(Common.IMPORTED_WAREHOUSE, ""));
-                    new DALImportedWareHouse().Delete(id);
+                    new DALImportedWareHouse().Delete(id,directive);
                     LoadFormThongKe();
                 }
             }
@@ -237,7 +250,7 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                 importedWarehouse.ImportedWarehouseID = id;
                 importedWarehouse.BarCode = sfBarcode1.Text;
 
-                new DALImportedWareHouse().Update(importedWarehouse);
+                new DALImportedWareHouse().Update(importedWarehouse, directive);
             }
             LoadFormThongKe();
             buttonConfirm.Enabled = true;

@@ -36,13 +36,35 @@ namespace ManagementSoftware.DAL
             importedWarehouse.BarCode = Common.PURCHASEORDER + directive.Product.PurchaseOrder.PurchaseOrderID + "-" + Common.PRODUCT + directive.Product.ProductID + "-"
                 + Common.DIRECTIVE + directive.DirectiveID + "-" + Common.IMPORTED_WAREHOUSE + importedWarehouse.ImportedWarehouseID + "-" + importedWarehouse.Amount;
             dbContext.Update(importedWarehouse);
+
+            //
+            var productUpdate = dbContext.Products.FirstOrDefault(g => g.ProductID == directive.ProductID);
+
+            if (productUpdate != null)
+            {
+                var importedWarehouses = dbContext.ImportedWarehouses
+                    .Join(dbContext.Directives, iw => iw.DirectiveID, d => d.DirectiveID, (iw, d) => new { ImportedWarehouse = iw, Directive = d })
+                    .Join(dbContext.Products, x => x.Directive.ProductID, p => p.ProductID, (x, p) => new { x.ImportedWarehouse, Product = p })
+                    .Where(x => x.Product.ProductID == productUpdate.ProductID)
+                    .Select(x => x.ImportedWarehouse)
+                    .ToList();
+
+                if (importedWarehouses != null && importedWarehouses.Count > 0)
+                {
+                    int sumIm = importedWarehouses.Sum(a => a.Amount);
+                    
+                    productUpdate.SoLuongDaNhapKho = sumIm;
+                }
+
+            }
+
             dbContext.SaveChanges();
 
 
         }
 
 
-        public void Update(ImportedWarehouse i)
+        public void Update(ImportedWarehouse i, Directive directive)
         {
             using (var dbContext = new DataBaseContext())
             {
@@ -58,11 +80,36 @@ namespace ManagementSoftware.DAL
 
                     importedWarehouse.BarCode = barcodeNew + i.Amount;
                     dbContext.ImportedWarehouses.Update(importedWarehouse);
+
+
+
+                    //
+                    var productUpdate = dbContext.Products.FirstOrDefault(g => g.ProductID == directive.ProductID);
+
+                    if (productUpdate != null)
+                    {
+                        var importedWarehouses = dbContext.ImportedWarehouses
+                            .Join(dbContext.Directives, iw => iw.DirectiveID, d => d.DirectiveID, (iw, d) => new { ImportedWarehouse = iw, Directive = d })
+                            .Join(dbContext.Products, x => x.Directive.ProductID, p => p.ProductID, (x, p) => new { x.ImportedWarehouse, Product = p })
+                            .Where(x => x.Product.ProductID == productUpdate.ProductID)
+                            .Select(x => x.ImportedWarehouse)
+                            .ToList();
+
+                        if (importedWarehouses != null && importedWarehouses.Count > 0)
+                        {
+                            int sumIm = importedWarehouses.Sum(a => a.Amount);
+
+                            productUpdate.SoLuongDaNhapKho = sumIm;
+                        }
+
+                    }
+
+
                     dbContext.SaveChanges();
                 }
             }
         }
-        public void Delete(int id)
+        public void Delete(int id, Directive directive)
         {
             using (var dbContext = new DataBaseContext())
             {
@@ -70,6 +117,30 @@ namespace ManagementSoftware.DAL
                 if (im != null)
                 {
                     dbContext.ImportedWarehouses.RemoveRange(im);
+                    dbContext.SaveChanges();
+
+                    //
+                    var productUpdate = dbContext.Products.FirstOrDefault(g => g.ProductID == directive.ProductID);
+
+                    if (productUpdate != null)
+                    {
+                        var importedWarehouses = dbContext.ImportedWarehouses
+                            .Join(dbContext.Directives, iw => iw.DirectiveID, d => d.DirectiveID, (iw, d) => new { ImportedWarehouse = iw, Directive = d })
+                            .Join(dbContext.Products, x => x.Directive.ProductID, p => p.ProductID, (x, p) => new { x.ImportedWarehouse, Product = p })
+                            .Where(x => x.Product.ProductID == productUpdate.ProductID)
+                            .Select(x => x.ImportedWarehouse)
+                            .ToList();
+
+                        if (importedWarehouses != null && importedWarehouses.Count > 0)
+                        {
+                            int sumIm = importedWarehouses.Sum(a => a.Amount);
+
+                            productUpdate.SoLuongDaNhapKho = sumIm;
+                        }
+
+                    }
+
+
                     dbContext.SaveChanges();
                 }
             }

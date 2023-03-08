@@ -222,7 +222,7 @@ namespace ManagementSoftware.GUI
         private void buttonCustomLoc_Click(object sender, EventArgs e)
         {
             check = true;
-            if(String.IsNullOrEmpty(textBoxSearchPO.Texts) == false && textBoxSearchPO.Texts != textBoxSearchPO.PlaceholderText)
+            if (String.IsNullOrEmpty(textBoxSearchPO.Texts) == false && textBoxSearchPO.Texts != textBoxSearchPO.PlaceholderText)
             {
                 strIDPO = textBoxSearchPO.Texts;
             }
@@ -247,7 +247,7 @@ namespace ManagementSoftware.GUI
         bool check = false;
         void checkbtnAndReload()
         {
-            if(check == false)
+            if (check == false)
             {
                 LoadFormThongKe();
             }
@@ -257,17 +257,16 @@ namespace ManagementSoftware.GUI
             }
         }
 
-
-        private void buttonPreviousPage_Click(object sender, EventArgs e)
+        private void buttonPreviousPage_Click_1(object sender, EventArgs e)
         {
             if (this.page > 1)
             {
                 this.page = this.page - 1;
-                checkbtnAndReload();        
+                checkbtnAndReload();
             }
         }
 
-        private void buttonNextPage_Click(object sender, EventArgs e)
+        private void buttonNextPage_Click_1(object sender, EventArgs e)
         {
             if (this.page < this.TotalPages)
             {
@@ -276,12 +275,10 @@ namespace ManagementSoftware.GUI
             }
         }
 
-        private void buttonGoto_Click(object sender, EventArgs e)
+        private void buttonCustom2_Click(object sender, EventArgs e)
         {
             this.page = int.Parse(pageNumberGoto.Text);
             checkbtnAndReload();
         }
-
-
     }
 }
