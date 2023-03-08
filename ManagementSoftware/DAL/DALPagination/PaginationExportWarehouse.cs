@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ManagementSoftware.DAL.DALPagination
 {
-    internal class PaginationExportWarehouse
+    public class PaginationExportWarehouse
     {
+
     }
 }

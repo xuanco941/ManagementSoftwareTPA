@@ -36,8 +36,16 @@ namespace ManagementSoftware.DAL
         {
             using (var dbContext = new DataBaseContext())
             {
-                dbContext.Directives.Update(directive);
-                return dbContext.SaveChanges();
+                var directiveToUpdate = dbContext.Directives.FirstOrDefault(d => d.DirectiveID == directive.DirectiveID);
+                if (directiveToUpdate != null)
+                {
+                    dbContext.Entry(directiveToUpdate).CurrentValues.SetValues(directive);
+                    return dbContext.SaveChanges();
+                }
+                else
+                {
+                    return 0;
+                }
             }
         }
         public static int Delete(int directiveID)

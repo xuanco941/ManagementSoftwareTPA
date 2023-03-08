@@ -43,7 +43,7 @@ namespace ManagementSoftware.DAL
             dbContext.Products.Add(product);
             return dbContext.SaveChanges();
         }
-        public static int Update(Product product)
+        public int Update(Product product)
         {
             DataBaseContext dbContext = new DataBaseContext();
             var productUpdate = dbContext.Products.FirstOrDefault(g => g.ProductID == product.ProductID);
@@ -51,27 +51,61 @@ namespace ManagementSoftware.DAL
             if (productUpdate != null)
             {
                 productUpdate = product;
-                List<Directive>? directives = dbContext.Directives.Where(a => a.ProductID==productUpdate.ProductID).ToList();
-                List<ExportedWareHouse>? exportedWareHouses = dbContext.ExportedWareHouses.Where(a => a.ProductID == productUpdate.ProductID).ToList();
-
-                if (directives != null && directives.Count>0)
-                {
-                    int sumIm = 0;
-                    foreach (var item in directives)
-                    {
-                        sumIm = sumIm + dbContext.ImportedWarehouses.Where(a => a.DirectiveID == item.DirectiveID).Sum(o => o.Amount);
-                    }
-                    productUpdate.SoLuongDaNhapKho = sumIm;                    
-                }
-                if(exportedWareHouses!=null && exportedWareHouses.Count > 0)
-                {
-                    productUpdate.SoLuongDaXuatKho = exportedWareHouses.Sum(a => a.Amount);
-                }
 
                 dbContext.Products.Update(productUpdate);
             }
             return dbContext.SaveChanges();
         }
+
+        //public async Task UpdateSLNhapKho(Product product)
+        //{
+        //    using (var dbContext = new DataBaseContext())
+        //    {
+        //        var productUpdate = dbContext.Products.FirstOrDefault(g => g.ProductID == product.ProductID);
+
+        //        if (productUpdate != null)
+        //        {
+        //            productUpdate = product;
+        //            List<Directive>? directives = dbContext.Directives.Where(a => a.ProductID == productUpdate.ProductID).ToList();
+
+        //            if (directives != null && directives.Count > 0)
+        //            {
+        //                int sumIm = 0;
+        //                foreach (var item in directives)
+        //                {
+        //                    sumIm = sumIm + dbContext.ImportedWarehouses.Where(a => a.DirectiveID == item.DirectiveID).Sum(o => o.Amount);
+        //                }
+        //                productUpdate.SoLuongDaNhapKho = sumIm;
+        //            }
+
+        //            dbContext.Products.Update(productUpdate);
+        //        }
+        //       await dbContext.SaveChangesAsync();
+        //    }
+
+
+        //}
+
+        //public int UpdateSLXuatKho(Product product)
+        //{
+        //    DataBaseContext dbContext = new DataBaseContext();
+        //    var productUpdate = dbContext.Products.FirstOrDefault(g => g.ProductID == product.ProductID);
+
+        //    if (productUpdate != null)
+        //    {
+        //        productUpdate = product;
+        //        List<ExportedWareHouse>? exportedWareHouses = dbContext.ExportedWareHouses.Where(a => a.ProductID == productUpdate.ProductID).ToList();
+
+        //        if (exportedWareHouses != null && exportedWareHouses.Count > 0)
+        //        {
+        //            productUpdate.SoLuongDaXuatKho = exportedWareHouses.Sum(a => a.Amount);
+        //        }
+
+        //        dbContext.Products.Update(productUpdate);
+        //    }
+        //    return dbContext.SaveChanges();
+        //}
+
         public static int Delete(int productID)
         {
             DataBaseContext dbContext = new DataBaseContext();

@@ -17,13 +17,15 @@ namespace ManagementSoftware.DAL
         }
         public static int Update(PurchaseOrder po)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            var purchaseOrderUpdate = dbContext.PurchaseOrders.FirstOrDefault(g => g.PurchaseOrderID == po.PurchaseOrderID);
-            if (purchaseOrderUpdate != null)
+            using (var dbContext = new DataBaseContext())
             {
-                purchaseOrderUpdate = po;
+                var purchaseOrderUpdate = dbContext.PurchaseOrders.FirstOrDefault(g => g.PurchaseOrderID == po.PurchaseOrderID);
+                if (purchaseOrderUpdate != null)
+                {
+                    dbContext.Entry(purchaseOrderUpdate).CurrentValues.SetValues(po);
+                }
+                return dbContext.SaveChanges();
             }
-            return dbContext.SaveChanges();
         }
         public static int Delete(int PurchaseOrderID)
         {

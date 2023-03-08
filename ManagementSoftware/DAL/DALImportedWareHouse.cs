@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.Models;
+using Microsoft.EntityFrameworkCore;
 using Syncfusion.Windows.Forms.PivotAnalysis;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,10 @@ namespace ManagementSoftware.DAL
             DataBaseContext dbContext = new DataBaseContext();
             return dbContext.ImportedWarehouses.Where(p => p.DirectiveID == directiveID).ToList();
         }
-        public ImportedWarehouse Add(ImportedWarehouse importedWarehouse,Directive directive)
+
+
+
+        public void Add(ImportedWarehouse importedWarehouse, Directive directive)
         {
             DataBaseContext dbContext = new DataBaseContext();
             // Tạo mã code mới dựa trên id của đối tượng
@@ -33,11 +37,12 @@ namespace ManagementSoftware.DAL
                 + Common.DIRECTIVE + directive.DirectiveID + "-" + Common.IMPORTED_WAREHOUSE + importedWarehouse.ImportedWarehouseID + "-" + importedWarehouse.Amount;
             dbContext.Update(importedWarehouse);
             dbContext.SaveChanges();
-            return importedWarehouse;
+
+
         }
 
 
-        public static int Update(ImportedWarehouse i)
+        public void Update(ImportedWarehouse i)
         {
             using (var dbContext = new DataBaseContext())
             {
@@ -53,24 +58,23 @@ namespace ManagementSoftware.DAL
 
                     importedWarehouse.BarCode = barcodeNew + i.Amount;
                     dbContext.ImportedWarehouses.Update(importedWarehouse);
-                    return dbContext.SaveChanges();
+                    dbContext.SaveChanges();
                 }
-                return 0;
             }
         }
-        public static int Delete(int directiveID)
+        public void Delete(int id)
         {
             using (var dbContext = new DataBaseContext())
             {
-                var directives = dbContext.ImportedWarehouses.Where(s => s.ImportedWarehouseID == directiveID);
-                if (directives.Any())
+                var im = dbContext.ImportedWarehouses.Where(s => s.ImportedWarehouseID == id).FirstOrDefault();
+                if (im != null)
                 {
-                    dbContext.ImportedWarehouses.RemoveRange(directives);
-                    return dbContext.SaveChanges();
+                    dbContext.ImportedWarehouses.RemoveRange(im);
+                    dbContext.SaveChanges();
                 }
-                return 0;
             }
         }
+
 
     }
 }

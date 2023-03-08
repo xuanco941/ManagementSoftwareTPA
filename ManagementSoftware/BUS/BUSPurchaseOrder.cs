@@ -32,25 +32,25 @@ namespace ManagementSoftware.BUS
             }
             return response;
         }
-        public static AddUpdateDeleteResponse<PurchaseOrder> Update(PurchaseOrder po)
-        {
-            AddUpdateDeleteResponse<PurchaseOrder> response = new AddUpdateDeleteResponse<PurchaseOrder>();
+        //public static AddUpdateDeleteResponse<PurchaseOrder> Update(PurchaseOrder po)
+        //{
+        //    AddUpdateDeleteResponse<PurchaseOrder> response = new AddUpdateDeleteResponse<PurchaseOrder>();
 
-            try
-            {
-                // số dòng thay đổi lớn hơn 0 thì thành công
-                response.RowsNumberChanged = DALPurchaseOrder.Update(po);
-                response.Status = response.RowsNumberChanged > 0 ? true : false;
-                response.Message = response.Status == true ? $"Cập nhật thành công." : $"Cập nhật thất bại.";
-                response.Data = po;
-            }
-            catch
-            {
-                response.Status = false;
-                response.Message = "Lỗi hệ thống, không thể cập nhật.";
-            }
-            return response;
-        }
+        //    try
+        //    {
+        //        // số dòng thay đổi lớn hơn 0 thì thành công
+        //        response.RowsNumberChanged = DALPurchaseOrder.Update(po);
+        //        response.Status = response.RowsNumberChanged > 0 ? true : false;
+        //        response.Message = response.Status == true ? $"Cập nhật thành công." : $"Cập nhật thất bại.";
+        //        response.Data = po;
+        //    }
+        //    catch
+        //    {
+        //        response.Status = false;
+        //        response.Message = "Lỗi hệ thống, không thể cập nhật.";
+        //    }
+        //    return response;
+        //}
 
         public static AddUpdateDeleteResponse<int> Delete(int PurchaseOrderID)
         {
