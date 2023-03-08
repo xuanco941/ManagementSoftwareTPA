@@ -2,6 +2,7 @@
 using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.WorkingListManagement;
 using ManagementSoftware.Models;
+using Syncfusion.Windows.Forms.Barcode;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,6 +39,10 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
             txtNguoiNhap.Text = Common.USERSESSION?.FullName ?? "";
 
 
+
+            sfBarcode1.Symbology = BarcodeSymbolType.Code128B;
+            sfBarcode1.TextGapHeight = 5;
+
         }
 
         private void LoadDGV()
@@ -47,7 +53,7 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Người nhập", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Ngày nhập", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng nhập", SortMode = DataGridViewColumnSortMode.NotSortable });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Barcode", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Mã barcode", SortMode = DataGridViewColumnSortMode.NotSortable });
 
 
 
@@ -81,13 +87,15 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
 
         }
 
+        List<ImportedWarehouse>? l = new List<ImportedWarehouse>();
+
         void LoadFormThongKe()
         {
 
             dataGridView1.Rows.Clear();
 
             List<string> strings = new List<string>() { "Tạo đơn mới" };
-            List<ImportedWarehouse>? l = new DALImportedWareHouse().GetAllImportedWareHousesFromIDDirective(directive.DirectiveID);
+            l = new DALImportedWareHouse().GetAllImportedWareHousesFromIDDirective(directive.DirectiveID);
             if (l != null && l.Count > 0)
             {
                 List<string> st = l.Select(a => Common.IMPORTED_WAREHOUSE + a.ImportedWarehouseID).ToList();
@@ -104,7 +112,7 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                 {
                     buttonConfirm.Enabled = true;
                 }
-                labelSLNhap.Text = $"Số lượng nhập (tối đa {soluongMax}) :";
+                labelSLNhap.Text = $"Số lượng nhập (tối đa thêm {soluongMax}) :";
                 txtSoLuongNhap.MaxValue = soluongMax;
 
                 foreach (var item in l)
@@ -121,7 +129,7 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                 }
 
             }
-            comboBoxDonNhapKho.DataSource = null;
+            comboBoxDonNhapKho.DataSource = new List<string>() { "Tạo đơn mới" };
             comboBoxDonNhapKho.DataSource = strings;
             buttonDelete.Enabled = false;
 
@@ -144,10 +152,39 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
             if (comboBoxDonNhapKho.Text == "Tạo đơn mới")
             {
                 buttonDelete.Enabled = false;
+                sfBarcode1.Text = "";
+                txtNguoiNhap.Text = Common.USERSESSION.FullName;
+                txtSoLuongNhap.IntegerValue = directive.SoLuongDaSanXuat - l.Sum(a => a.Amount);
+                NgayNhap.Value = DateTime.Now;
+                buttonDelete.Enabled = false;
             }
             else
             {
-                buttonDelete.Enabled = true;
+                int id = int.Parse(comboBoxDonNhapKho.Text.Replace(Common.IMPORTED_WAREHOUSE, ""));
+                if (l != null)
+                {
+                    var obj = l.FirstOrDefault(a => a.ImportedWarehouseID == id);
+                    if (obj != null)
+                    {
+                        sfBarcode1.Text = obj.BarCode;
+                        txtNguoiNhap.Text = obj.Importer;
+                        int x = directive.SoLuongDaSanXuat - l.Sum(a => a.Amount);
+                        txtSoLuongNhap.MaxValue = obj.Amount + x;
+
+                        txtSoLuongNhap.IntegerValue = obj.Amount;
+
+                        NgayNhap.Value = obj.DateAdded;
+                        buttonDelete.Enabled = true;
+                    }
+                    else
+                    {
+                        sfBarcode1.Text = "";
+                        txtNguoiNhap.Text = Common.USERSESSION.FullName;
+                        txtSoLuongNhap.IntegerValue = directive.SoLuongDaSanXuat - l.Sum(a => a.Amount);
+                        NgayNhap.Value = DateTime.Now;
+                        buttonDelete.Enabled = false;
+                    }
+                }
             }
         }
 
@@ -158,7 +195,8 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                 DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa đơn nhập kho này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
-
+                    int id = int.Parse(comboBoxDonNhapKho.Text.Replace(Common.IMPORTED_WAREHOUSE, ""));
+                    DALImportedWareHouse.Delete(id);
                     LoadFormThongKe();
                 }
             }
@@ -167,38 +205,49 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            buttonConfirm.Enabled = false;
-            string nguoiNhap = txtNguoiNhap.Text;
-            DateTime? ngay = NgayNhap.Value;
-            int sl = (int)txtSoLuongNhap.IntegerValue;
-            if (comboBoxDonNhapKho.Text == "Tạo đơn mới")
+            try
             {
-                if (String.IsNullOrEmpty(nguoiNhap) == false && ngay != null && sl != 0)
+                buttonConfirm.Enabled = false;
+                string nguoiNhap = txtNguoiNhap.Text;
+                DateTime? ngay = NgayNhap.Value;
+                int sl = (int)txtSoLuongNhap.IntegerValue;
+                if (comboBoxDonNhapKho.Text == "Tạo đơn mới")
                 {
-                    ImportedWarehouse obj = new ImportedWarehouse();
-                    obj.Importer = nguoiNhap;
-                    obj.DateAdded = ngay.Value;
-                    obj.Amount = sl;
-                    obj.DirectiveID = directive.DirectiveID;
-                    new DALImportedWareHouse().Add(obj, directive);
+                    if (String.IsNullOrEmpty(nguoiNhap) == false && ngay != null && sl != 0)
+                    {
+                        ImportedWarehouse obj = new ImportedWarehouse();
+                        obj.Importer = nguoiNhap;
+                        obj.DateAdded = ngay.Value;
+                        obj.Amount = sl;
+                        obj.DirectiveID = directive.DirectiveID;
+                        new DALImportedWareHouse().Add(obj, directive);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cần nhập đúng dữ liệu.", "Lỗi cú pháp", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cần nhập đúng dữ liệu.", "Lỗi cú pháp", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                int id = int.Parse(comboBoxDonNhapKho.Text.Replace(Common.IMPORTED_WAREHOUSE, ""));
-                ImportedWarehouse importedWarehouse = new ImportedWarehouse();
-                importedWarehouse.Importer = nguoiNhap;
-                importedWarehouse.DateAdded = ngay.Value;
-                importedWarehouse.Amount = sl;
 
-                DALImportedWareHouse.Update(importedWarehouse);
+                    int id = int.Parse(comboBoxDonNhapKho.Text.Replace(Common.IMPORTED_WAREHOUSE, ""));
+                    ImportedWarehouse importedWarehouse = new ImportedWarehouse();
+                    importedWarehouse.Importer = nguoiNhap;
+                    importedWarehouse.DateAdded = ngay.Value;
+                    importedWarehouse.Amount = sl;
+                    importedWarehouse.ImportedWarehouseID = id;
+                    importedWarehouse.BarCode = sfBarcode1.Text;
+
+                    DALImportedWareHouse.Update(importedWarehouse);
+                }
+                LoadFormThongKe();
+                buttonConfirm.Enabled = true;
             }
-            LoadFormThongKe();
-            buttonConfirm.Enabled = true;
+            catch
+            {
+
+            }
+
         }
     }
 }

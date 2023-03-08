@@ -71,6 +71,8 @@
             comboBoxDonNhapKho = new ComboBox();
             label6 = new Label();
             paneBarcode = new Panel();
+            sfBarcode1 = new Syncfusion.Windows.Forms.Barcode.SfBarcode();
+            buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             panel15 = new Panel();
             dataGridView1 = new DataGridView();
             panel6 = new Panel();
@@ -97,6 +99,7 @@
             panel20.SuspendLayout();
             panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)txtSoLuongNhap).BeginInit();
+            paneBarcode.SuspendLayout();
             panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel6.SuspendLayout();
@@ -411,7 +414,7 @@
             // 
             tableLayoutPanel2.ColumnCount = 2;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 300F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 330F));
             tableLayoutPanel2.Controls.Add(panel17, 1, 0);
             tableLayoutPanel2.Controls.Add(panel15, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
@@ -436,10 +439,10 @@
             panel17.Controls.Add(label6);
             panel17.Controls.Add(paneBarcode);
             panel17.Dock = DockStyle.Fill;
-            panel17.Location = new Point(549, 3);
+            panel17.Location = new Point(519, 3);
             panel17.Name = "panel17";
-            panel17.Padding = new Padding(6, 2, 6, 5);
-            panel17.Size = new Size(294, 594);
+            panel17.Padding = new Padding(10, 2, 10, 5);
+            panel17.Size = new Size(324, 594);
             panel17.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -450,22 +453,22 @@
             tableLayoutPanel3.Controls.Add(panel20, 1, 0);
             tableLayoutPanel3.Controls.Add(panel19, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Top;
-            tableLayoutPanel3.Location = new Point(6, 427);
+            tableLayoutPanel3.Location = new Point(10, 445);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(282, 74);
+            tableLayoutPanel3.Size = new Size(304, 74);
             tableLayoutPanel3.TabIndex = 127;
             // 
             // panel20
             // 
             panel20.Controls.Add(buttonDelete);
             panel20.Dock = DockStyle.Fill;
-            panel20.Location = new Point(144, 3);
+            panel20.Location = new Point(155, 3);
             panel20.Name = "panel20";
             panel20.Padding = new Padding(8, 15, 8, 5);
-            panel20.Size = new Size(135, 68);
+            panel20.Size = new Size(146, 68);
             panel20.TabIndex = 1;
             // 
             // buttonDelete
@@ -485,7 +488,7 @@
             buttonDelete.Location = new Point(8, 15);
             buttonDelete.Margin = new Padding(4, 3, 4, 3);
             buttonDelete.Name = "buttonDelete";
-            buttonDelete.Size = new Size(119, 48);
+            buttonDelete.Size = new Size(130, 48);
             buttonDelete.TabIndex = 126;
             buttonDelete.Text = "Xóa";
             buttonDelete.TextAlign = ContentAlignment.MiddleRight;
@@ -501,7 +504,7 @@
             panel19.Location = new Point(3, 3);
             panel19.Name = "panel19";
             panel19.Padding = new Padding(8, 15, 8, 5);
-            panel19.Size = new Size(135, 68);
+            panel19.Size = new Size(146, 68);
             panel19.TabIndex = 0;
             // 
             // buttonConfirm
@@ -521,7 +524,7 @@
             buttonConfirm.Location = new Point(8, 15);
             buttonConfirm.Margin = new Padding(4, 3, 4, 3);
             buttonConfirm.Name = "buttonConfirm";
-            buttonConfirm.Size = new Size(119, 48);
+            buttonConfirm.Size = new Size(130, 48);
             buttonConfirm.TabIndex = 125;
             buttonConfirm.Text = "Xác nhận";
             buttonConfirm.TextAlign = ContentAlignment.MiddleRight;
@@ -532,14 +535,14 @@
             // 
             // txtSoLuongNhap
             // 
-            txtSoLuongNhap.BeforeTouchSize = new Size(282, 35);
+            txtSoLuongNhap.BeforeTouchSize = new Size(304, 35);
             txtSoLuongNhap.Dock = DockStyle.Top;
             txtSoLuongNhap.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtSoLuongNhap.IntegerValue = 0L;
-            txtSoLuongNhap.Location = new Point(6, 392);
+            txtSoLuongNhap.Location = new Point(10, 410);
             txtSoLuongNhap.Margin = new Padding(4, 3, 4, 3);
             txtSoLuongNhap.Name = "txtSoLuongNhap";
-            txtSoLuongNhap.Size = new Size(282, 35);
+            txtSoLuongNhap.Size = new Size(304, 35);
             txtSoLuongNhap.TabIndex = 120;
             txtSoLuongNhap.Text = "0";
             // 
@@ -549,7 +552,7 @@
             labelSLNhap.Dock = DockStyle.Top;
             labelSLNhap.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             labelSLNhap.ForeColor = Color.White;
-            labelSLNhap.Location = new Point(6, 367);
+            labelSLNhap.Location = new Point(10, 385);
             labelSLNhap.Name = "labelSLNhap";
             labelSLNhap.Size = new Size(149, 25);
             labelSLNhap.TabIndex = 121;
@@ -562,11 +565,11 @@
             NgayNhap.Dock = DockStyle.Top;
             NgayNhap.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             NgayNhap.Format = "dd/MM/yyyy";
-            NgayNhap.Location = new Point(6, 331);
+            NgayNhap.Location = new Point(10, 349);
             NgayNhap.Margin = new Padding(4, 3, 4, 3);
             NgayNhap.MinDateTime = new DateTime(2022, 1, 1, 23, 59, 0, 0);
             NgayNhap.Name = "NgayNhap";
-            NgayNhap.Size = new Size(282, 36);
+            NgayNhap.Size = new Size(304, 36);
             NgayNhap.TabIndex = 119;
             NgayNhap.Value = new DateTime(2022, 10, 1, 23, 59, 0, 0);
             // 
@@ -576,7 +579,7 @@
             label4.Dock = DockStyle.Top;
             label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(6, 306);
+            label4.Location = new Point(10, 324);
             label4.Name = "label4";
             label4.Size = new Size(118, 25);
             label4.TabIndex = 3;
@@ -586,9 +589,9 @@
             // 
             txtNguoiNhap.Dock = DockStyle.Top;
             txtNguoiNhap.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNguoiNhap.Location = new Point(6, 273);
+            txtNguoiNhap.Location = new Point(10, 291);
             txtNguoiNhap.Name = "txtNguoiNhap";
-            txtNguoiNhap.Size = new Size(282, 33);
+            txtNguoiNhap.Size = new Size(304, 33);
             txtNguoiNhap.TabIndex = 2;
             // 
             // label3
@@ -597,7 +600,7 @@
             label3.Dock = DockStyle.Top;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(6, 248);
+            label3.Location = new Point(10, 266);
             label3.Name = "label3";
             label3.Size = new Size(126, 25);
             label3.TabIndex = 1;
@@ -609,9 +612,9 @@
             comboBoxDonNhapKho.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxDonNhapKho.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxDonNhapKho.FormattingEnabled = true;
-            comboBoxDonNhapKho.Location = new Point(6, 215);
+            comboBoxDonNhapKho.Location = new Point(10, 233);
             comboBoxDonNhapKho.Name = "comboBoxDonNhapKho";
-            comboBoxDonNhapKho.Size = new Size(282, 33);
+            comboBoxDonNhapKho.Size = new Size(304, 33);
             comboBoxDonNhapKho.TabIndex = 124;
             comboBoxDonNhapKho.SelectedIndexChanged += comboBoxDonNhapKho_SelectedIndexChanged;
             // 
@@ -621,7 +624,7 @@
             label6.Dock = DockStyle.Top;
             label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(6, 190);
+            label6.Location = new Point(10, 208);
             label6.Name = "label6";
             label6.Size = new Size(145, 25);
             label6.TabIndex = 123;
@@ -630,11 +633,57 @@
             // paneBarcode
             // 
             paneBarcode.BorderStyle = BorderStyle.FixedSingle;
+            paneBarcode.Controls.Add(sfBarcode1);
+            paneBarcode.Controls.Add(buttonPrint);
             paneBarcode.Dock = DockStyle.Top;
-            paneBarcode.Location = new Point(6, 2);
+            paneBarcode.Location = new Point(10, 2);
             paneBarcode.Name = "paneBarcode";
-            paneBarcode.Size = new Size(282, 188);
+            paneBarcode.Padding = new Padding(13);
+            paneBarcode.Size = new Size(304, 206);
             paneBarcode.TabIndex = 122;
+            // 
+            // sfBarcode1
+            // 
+            sfBarcode1.DarkBarColor = Color.Black;
+            sfBarcode1.DisplayText = true;
+            sfBarcode1.Dock = DockStyle.Fill;
+            sfBarcode1.LightBarColor = Color.White;
+            sfBarcode1.Location = new Point(13, 13);
+            sfBarcode1.Margin = new Padding(4, 3, 4, 3);
+            sfBarcode1.Name = "sfBarcode1";
+            sfBarcode1.Padding = new Padding(3);
+            sfBarcode1.Size = new Size(276, 140);
+            sfBarcode1.Symbology = Syncfusion.Windows.Forms.Barcode.BarcodeSymbolType.QRBarcode;
+            sfBarcode1.SymbologySettings = null;
+            sfBarcode1.TabIndex = 0;
+            sfBarcode1.TextAlignment = Syncfusion.Windows.Forms.Barcode.BarcodeTextAlignment.Center;
+            sfBarcode1.TextColor = Color.Black;
+            sfBarcode1.TextGapHeight = 0F;
+            // 
+            // buttonPrint
+            // 
+            buttonPrint.BackColor = SystemColors.ActiveCaption;
+            buttonPrint.BackgroundColor = SystemColors.ActiveCaption;
+            buttonPrint.BorderColor = Color.PaleVioletRed;
+            buttonPrint.BorderRadius = 3;
+            buttonPrint.BorderSize = 0;
+            buttonPrint.Cursor = Cursors.Hand;
+            buttonPrint.Dock = DockStyle.Bottom;
+            buttonPrint.FlatStyle = FlatStyle.Flat;
+            buttonPrint.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonPrint.ForeColor = Color.Black;
+            buttonPrint.Image = Properties.Resources.iconfinder_Save_278762;
+            buttonPrint.ImageAlign = ContentAlignment.MiddleRight;
+            buttonPrint.Location = new Point(13, 153);
+            buttonPrint.Margin = new Padding(4, 3, 4, 3);
+            buttonPrint.Name = "buttonPrint";
+            buttonPrint.Size = new Size(276, 38);
+            buttonPrint.TabIndex = 18;
+            buttonPrint.Text = "In Barcode";
+            buttonPrint.TextAlign = ContentAlignment.MiddleLeft;
+            buttonPrint.TextColor = Color.Black;
+            buttonPrint.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonPrint.UseVisualStyleBackColor = false;
             // 
             // panel15
             // 
@@ -643,7 +692,7 @@
             panel15.Dock = DockStyle.Fill;
             panel15.Location = new Point(3, 3);
             panel15.Name = "panel15";
-            panel15.Size = new Size(540, 594);
+            panel15.Size = new Size(510, 594);
             panel15.TabIndex = 0;
             // 
             // dataGridView1
@@ -653,7 +702,7 @@
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(538, 592);
+            dataGridView1.Size = new Size(508, 592);
             dataGridView1.TabIndex = 0;
             // 
             // panel6
@@ -713,6 +762,7 @@
             panel20.ResumeLayout(false);
             panel19.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)txtSoLuongNhap).EndInit();
+            paneBarcode.ResumeLayout(false);
             panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel6.ResumeLayout(false);
@@ -767,5 +817,7 @@
         private Panel panel19;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonConfirm;
         private DataGridView dataGridView1;
+        private Syncfusion.Windows.Forms.Barcode.SfBarcode sfBarcode1;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPrint;
     }
 }

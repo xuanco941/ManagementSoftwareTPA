@@ -51,7 +51,7 @@ namespace ManagementSoftware.GUI
             new MethodCommonGUI().CloseFormInPanel(panelMain);
 
             PaginationDirectiveImportWareHouse pagination = new PaginationDirectiveImportWareHouse();
-            pagination.Set(page, timeStart,timeEnd);
+            pagination.Set(page, timeStart, timeEnd);
             this.ListResults = pagination.ListResults;
             this.TotalPages = pagination.TotalPages;
             lbTotalPages.Text = this.TotalPages.ToString();

@@ -47,9 +47,28 @@ namespace ManagementSoftware.DAL
         {
             DataBaseContext dbContext = new DataBaseContext();
             var productUpdate = dbContext.Products.FirstOrDefault(g => g.ProductID == product.ProductID);
+
             if (productUpdate != null)
             {
                 productUpdate = product;
+                List<Directive>? directives = dbContext.Directives.Where(a => a.ProductID==productUpdate.ProductID).ToList();
+                List<ExportedWareHouse>? exportedWareHouses = dbContext.ExportedWareHouses.Where(a => a.ProductID == productUpdate.ProductID).ToList();
+
+                if (directives != null && directives.Count>0)
+                {
+                    int sumIm = 0;
+                    foreach (var item in directives)
+                    {
+                        sumIm = sumIm + dbContext.ImportedWarehouses.Where(a => a.DirectiveID == item.DirectiveID).Sum(o => o.Amount);
+                    }
+                    productUpdate.SoLuongDaNhapKho = sumIm;                    
+                }
+                if(exportedWareHouses!=null && exportedWareHouses.Count > 0)
+                {
+                    productUpdate.SoLuongDaXuatKho = exportedWareHouses.Sum(a => a.Amount);
+                }
+
+                dbContext.Products.Update(productUpdate);
             }
             return dbContext.SaveChanges();
         }
