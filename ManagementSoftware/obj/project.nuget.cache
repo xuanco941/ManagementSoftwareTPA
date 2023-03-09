@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "p/3/O6V7FxmRR/xPboVkSvUJ91h42XT7zRfnH44VAB2Xb8euy0Y30KSL5iunTdnSvDsNOhO2WcRzj3Vsqizh1g==",
+  "dgSpecHash": "Mgn+QhQ17iQy5qX5WGYaKwMGkMADPLJLhvktW4owe4izhiHC/pPKnm+JcJ7JOjcJAaoLv+0wKMED7oPv5SdvJg==",
   "success": true,
   "projectFilePath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\TPA\\ManagementSoftwareTPA\\ManagementSoftware\\ManagementSoftware.csproj",
   "expectedPackageFiles": [
@@ -91,7 +91,8 @@
     "C:\\Users\\xuanc\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\xuanc\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\xuanc\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\xuanc\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
+    "C:\\Users\\xuanc\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
+    "C:\\Users\\xuanc\\.nuget\\packages\\zxing.net\\0.16.6\\zxing.net.0.16.6.nupkg.sha512"
   ],
   "logs": []
 }

@@ -8,12 +8,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZXing;
+using ZXing.Common;
+using ZXing.Rendering;
 
 namespace ManagementSoftware.GUI.ImportWareHouseManagement
 {
@@ -38,10 +42,6 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
             NgayNhap.Value = DateTime.Now;
             txtNguoiNhap.Text = Common.USERSESSION?.FullName ?? "";
 
-
-
-            sfBarcode1.Symbology = BarcodeSymbolType.Code128B;
-            sfBarcode1.TextGapHeight = 5;
 
         }
 
@@ -156,9 +156,9 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
             if (comboBoxDonNhapKho.Text == "Tạo đơn mới")
             {
                 buttonDelete.Enabled = false;
-                sfBarcode1.Text = "";
+                GenerateBarcode("");
                 txtNguoiNhap.Text = Common.USERSESSION.FullName;
-                if(l!=null && l.Count > 0)
+                if (l != null && l.Count > 0)
                 {
                     txtSoLuongNhap.IntegerValue = directive.SoLuongDaSanXuat - l.Sum(a => a.Amount);
                     txtSoLuongNhap.MaxValue = directive.SoLuongDaSanXuat - l.Sum(a => a.Amount);
@@ -178,7 +178,7 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                     var obj = l.FirstOrDefault(a => a.ImportedWarehouseID == id);
                     if (obj != null)
                     {
-                        sfBarcode1.Text = obj.BarCode;
+                        GenerateBarcode(obj.BarCode);
                         txtNguoiNhap.Text = obj.Importer;
 
                         int x = directive.SoLuongDaSanXuat - l.Sum(a => a.Amount);
@@ -191,7 +191,7 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                     }
                     else
                     {
-                        sfBarcode1.Text = "";
+                        GenerateBarcode("");
                         txtNguoiNhap.Text = Common.USERSESSION.FullName;
                         txtSoLuongNhap.IntegerValue = directive.SoLuongDaSanXuat - l.Sum(a => a.Amount);
                         NgayNhap.Value = DateTime.Now;
@@ -209,7 +209,7 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                 if (dialogResult == DialogResult.Yes)
                 {
                     int id = int.Parse(comboBoxDonNhapKho.Text.Replace(Common.IMPORTED_WAREHOUSE, ""));
-                    new DALImportedWareHouse().Delete(id,directive);
+                    new DALImportedWareHouse().Delete(id, directive);
                     LoadFormThongKe();
                 }
             }
@@ -248,13 +248,66 @@ namespace ManagementSoftware.GUI.ImportWareHouseManagement
                 importedWarehouse.DateAdded = ngay.Value;
                 importedWarehouse.Amount = sl;
                 importedWarehouse.ImportedWarehouseID = id;
-                importedWarehouse.BarCode = sfBarcode1.Text;
+                importedWarehouse.BarCode = barcode;
 
                 new DALImportedWareHouse().Update(importedWarehouse, directive);
             }
             LoadFormThongKe();
             buttonConfirm.Enabled = true;
 
+
+        }
+
+        string barcode = "";
+
+        private void GenerateBarcode(string barcodeContent)
+        {
+            // Kiểm tra chuỗi dữ liệu mã vạch có hợp lệ hay không
+            if (string.IsNullOrEmpty(barcodeContent))
+            {
+                barcode = "";
+                pictureBox1.Image = null;
+                return;
+            }
+
+
+            barcode = barcodeContent;
+
+            // Tạo đối tượng BarcodeWriter và đặt định dạng mã vạch
+            var barcodeWriter = new BarcodeWriter<Bitmap>
+            {
+                Format = BarcodeFormat.CODE_128,
+                Renderer = new BitmapRenderer(),
+                Options = new EncodingOptions
+                {
+                    Height = 95,
+                    Width = 20,
+                    PureBarcode = false,
+                    Margin = 10,
+                }
+            };
+
+            // Tạo mã vạch từ chuỗi dữ liệu
+            var barcodeBitmap = barcodeWriter.Write(barcodeContent);
+
+            // Hiển thị mã vạch trên PictureBox
+            pictureBox1.Image = barcodeBitmap;
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e1)
+        {
+            if (pictureBox1.Image != null)
+            {
+                Bitmap barcodeBitmap = new Bitmap(pictureBox1.Image);
+
+                // In mã vạch
+                PrintDocument pd = new PrintDocument();
+                pd.PrintPage += (sender, e) =>
+                {
+                    e.Graphics.DrawImage(barcodeBitmap, new Point(0, 0));
+                };
+                pd.Print();
+            }
 
         }
     }

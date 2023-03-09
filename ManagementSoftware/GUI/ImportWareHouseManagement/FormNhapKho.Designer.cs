@@ -71,7 +71,7 @@
             comboBoxDonNhapKho = new ComboBox();
             label6 = new Label();
             paneBarcode = new Panel();
-            sfBarcode1 = new Syncfusion.Windows.Forms.Barcode.SfBarcode();
+            pictureBox1 = new PictureBox();
             buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             panel15 = new Panel();
             dataGridView1 = new DataGridView();
@@ -100,6 +100,7 @@
             panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)txtSoLuongNhap).BeginInit();
             paneBarcode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel6.SuspendLayout();
@@ -633,7 +634,7 @@
             // paneBarcode
             // 
             paneBarcode.BorderStyle = BorderStyle.FixedSingle;
-            paneBarcode.Controls.Add(sfBarcode1);
+            paneBarcode.Controls.Add(pictureBox1);
             paneBarcode.Controls.Add(buttonPrint);
             paneBarcode.Dock = DockStyle.Top;
             paneBarcode.Location = new Point(10, 2);
@@ -642,23 +643,15 @@
             paneBarcode.Size = new Size(304, 206);
             paneBarcode.TabIndex = 122;
             // 
-            // sfBarcode1
+            // pictureBox1
             // 
-            sfBarcode1.DarkBarColor = Color.Black;
-            sfBarcode1.DisplayText = true;
-            sfBarcode1.Dock = DockStyle.Fill;
-            sfBarcode1.LightBarColor = Color.White;
-            sfBarcode1.Location = new Point(13, 13);
-            sfBarcode1.Margin = new Padding(4, 3, 4, 3);
-            sfBarcode1.Name = "sfBarcode1";
-            sfBarcode1.Padding = new Padding(3);
-            sfBarcode1.Size = new Size(276, 140);
-            sfBarcode1.Symbology = Syncfusion.Windows.Forms.Barcode.BarcodeSymbolType.QRBarcode;
-            sfBarcode1.SymbologySettings = null;
-            sfBarcode1.TabIndex = 0;
-            sfBarcode1.TextAlignment = Syncfusion.Windows.Forms.Barcode.BarcodeTextAlignment.Center;
-            sfBarcode1.TextColor = Color.Black;
-            sfBarcode1.TextGapHeight = 0F;
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Location = new Point(13, 13);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(276, 140);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 19;
+            pictureBox1.TabStop = false;
             // 
             // buttonPrint
             // 
@@ -684,6 +677,7 @@
             buttonPrint.TextColor = Color.Black;
             buttonPrint.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonPrint.UseVisualStyleBackColor = false;
+            buttonPrint.Click += buttonPrint_Click;
             // 
             // panel15
             // 
@@ -763,6 +757,7 @@
             panel19.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)txtSoLuongNhap).EndInit();
             paneBarcode.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel6.ResumeLayout(false);
@@ -817,7 +812,7 @@
         private Panel panel19;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonConfirm;
         private DataGridView dataGridView1;
-        private Syncfusion.Windows.Forms.Barcode.SfBarcode sfBarcode1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPrint;
+        private PictureBox pictureBox1;
     }
 }

@@ -40,7 +40,35 @@ namespace ManagementSoftware.DAL
                 if (directiveToUpdate != null)
                 {
                     dbContext.Entry(directiveToUpdate).CurrentValues.SetValues(directive);
-                    return dbContext.SaveChanges();
+
+                    int x = dbContext.SaveChanges();
+
+                    //update sp đã nhập kho
+                    var productUpdate = dbContext.Products.FirstOrDefault(g => g.ProductID == directive.ProductID);
+
+                    if (productUpdate != null)
+                    {
+                        var importedWarehouses = dbContext.ImportedWarehouses
+                                            .Join(dbContext.Directives.Where(d => d.Status == true), iw => iw.DirectiveID, d => d.DirectiveID, (iw, d) => new { ImportedWarehouse = iw, Directive = d })
+                                            .Join(dbContext.Products, x => x.Directive.ProductID, p => p.ProductID, (x, p) => new { x.ImportedWarehouse, Product = p })
+                                            .Where(x => x.Product.ProductID == productUpdate.ProductID)
+                                            .Select(x => x.ImportedWarehouse)
+                                            .ToList();
+
+                        if (importedWarehouses != null && importedWarehouses.Count > 0)
+                        {
+                            int sumIm = importedWarehouses.Sum(a => a.Amount);
+
+                            productUpdate.SoLuongDaNhapKho = sumIm;
+                        }
+                        else
+                        {
+                            productUpdate.SoLuongDaNhapKho = 0;
+                        }
+                    }
+
+                    dbContext.SaveChanges();
+                    return x;
                 }
                 else
                 {
