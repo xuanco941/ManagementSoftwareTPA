@@ -1,19 +1,16 @@
-﻿using System;
+﻿using ManagementSoftware.DAL.DALPagination;
+using ManagementSoftware.GUI.ExportWareHouseManagement;
+using ManagementSoftware.GUI.Section;
+using ManagementSoftware.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ManagementSoftware.DAL.DALPagination;
-using ManagementSoftware.GUI.ExportWareHouseManagement;
-using ManagementSoftware.GUI.Section;
-using ManagementSoftware.GUI.WorkingListManagement;
-using ManagementSoftware.Models;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ManagementSoftware.GUI
 {
@@ -31,16 +28,15 @@ namespace ManagementSoftware.GUI
         private string poID = "";
         private string productID = "";
 
-
         List<Product> ListResults = new List<Product>();
 
         public WareHouse()
         {
             InitializeComponent();
-
             LoadDGV();
             LoadFormThongKe();
         }
+
 
         private void LoadDGV()
         {
@@ -120,7 +116,7 @@ namespace ManagementSoftware.GUI
         string strIDProduct = "";
         void LoadFormThongKe()
         {
-            panel1.Enabled = false;
+            tableLayoutPanel2.Enabled = false;
             dataGridView1.Rows.Clear();
 
             PaginationProductCanBeExportWarehouse pagination = new PaginationProductCanBeExportWarehouse();
@@ -157,18 +153,20 @@ namespace ManagementSoftware.GUI
 
                 if (item.SoLuongDaNhapKho == 0)
                 {
-                    row.DefaultCellStyle.BackColor = Color.Crimson;
+                    row.DefaultCellStyle.BackColor = Color.DarkGray;
+                    row.DefaultCellStyle.ForeColor = Color.White;
                 }
 
             }
 
-            panel1.Enabled = true;
+            tableLayoutPanel2.Enabled = true;
         }
+
 
 
         void LoadFormThongKe2()
         {
-            panel1.Enabled = false;
+            tableLayoutPanel2.Enabled = false;
             dataGridView1.Rows.Clear();
 
             PaginationProductCanBeExportWarehouse pagination = new PaginationProductCanBeExportWarehouse();
@@ -210,13 +208,40 @@ namespace ManagementSoftware.GUI
 
             }
 
-            panel1.Enabled = true;
+            tableLayoutPanel2.Enabled = true;
         }
 
 
-        private void WareHouse_Load(object sender, EventArgs e)
+
+        private void buttonCustom2_Click(object sender, EventArgs e)
+        {
+            this.page = int.Parse(pageNumberGoto.Text);
+            checkbtnAndReload();
+        }
+
+
+        private void Form1_Load(object sender, EventArgs e)
         {
             checkbtnAndReload();
+
+        }
+
+        private void buttonNextPage_Click(object sender, EventArgs e)
+        {
+            if (this.page < this.TotalPages)
+            {
+                this.page = this.page + 1;
+                checkbtnAndReload();
+            }
+        }
+
+        private void buttonPreviousPage_Click(object sender, EventArgs e)
+        {
+            if (this.page > 1)
+            {
+                this.page = this.page - 1;
+                checkbtnAndReload();
+            }
         }
 
         private void buttonCustomLoc_Click(object sender, EventArgs e)
@@ -225,18 +250,21 @@ namespace ManagementSoftware.GUI
             if (String.IsNullOrEmpty(textBoxSearchPO.Texts) == false && textBoxSearchPO.Texts != textBoxSearchPO.PlaceholderText)
             {
                 strIDPO = textBoxSearchPO.Texts;
+                LoadFormThongKe2();
             }
             else
             {
                 strIDPO = "";
             }
         }
+
         private void buttonCustom1_Click(object sender, EventArgs e)
         {
             check = false;
             if (String.IsNullOrEmpty(textBoxSearchProduct.Texts) == false && textBoxSearchProduct.Texts != textBoxSearchProduct.PlaceholderText)
             {
                 strIDProduct = textBoxSearchProduct.Texts;
+                LoadFormThongKe();
             }
             else
             {
@@ -255,30 +283,6 @@ namespace ManagementSoftware.GUI
             {
                 LoadFormThongKe2();
             }
-        }
-
-        private void buttonPreviousPage_Click_1(object sender, EventArgs e)
-        {
-            if (this.page > 1)
-            {
-                this.page = this.page - 1;
-                checkbtnAndReload();
-            }
-        }
-
-        private void buttonNextPage_Click_1(object sender, EventArgs e)
-        {
-            if (this.page < this.TotalPages)
-            {
-                this.page = this.page + 1;
-                checkbtnAndReload();
-            }
-        }
-
-        private void buttonCustom2_Click(object sender, EventArgs e)
-        {
-            this.page = int.Parse(pageNumberGoto.Text);
-            checkbtnAndReload();
         }
     }
 }

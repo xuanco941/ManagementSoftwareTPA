@@ -34,6 +34,9 @@
     <Compile Update="GUI\ExportWareHouseManagement\XuatKho.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\WareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\FormChanges.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,9 +119,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\WareHouse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\WorkingList.cs">
