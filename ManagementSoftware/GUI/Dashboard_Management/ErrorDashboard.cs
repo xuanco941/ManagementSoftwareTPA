@@ -10,22 +10,19 @@ using System.Windows.Forms;
 
 namespace ManagementSoftware.GUI
 {
-    public partial class Setting : Form
+    public partial class ErrorDashboard : Form
     {
-        public Setting()
+        public ErrorDashboard()
         {
             InitializeComponent();
             LoadDGV();
         }
-
-
-
         void LoadDGV()
         {
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "GIÁ TRỊ CÀI ĐẶT", SortMode = DataGridViewColumnSortMode.NotSortable });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "THÔNG SỐ", SortMode = DataGridViewColumnSortMode.NotSortable });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ĐƠN VỊ", SortMode = DataGridViewColumnSortMode.NotSortable });
-           
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "MÃ LỖI", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "GHI CHÚ", SortMode = DataGridViewColumnSortMode.NotSortable });
+
+
 
 
 
@@ -53,7 +50,7 @@ namespace ManagementSoftware.GUI
 
 
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 10; i++)
             {
                 int id = dataGridView1.Rows.Add();
                 dataGridView1.Rows[id].DefaultCellStyle.BackColor = Color.FromArgb(41, 44, 51);
@@ -62,6 +59,5 @@ namespace ManagementSoftware.GUI
 
 
         }
-
     }
 }

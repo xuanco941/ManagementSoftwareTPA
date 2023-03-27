@@ -212,7 +212,7 @@ namespace ManagementSoftware.GUI
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Image = Properties.Resources.ETEK_LOGO_01;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(211, 76);
@@ -223,13 +223,12 @@ namespace ManagementSoftware.GUI
             // labelHeader
             // 
             labelHeader.Dock = DockStyle.Fill;
-            labelHeader.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelHeader.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelHeader.ForeColor = SystemColors.GradientActiveCaption;
             labelHeader.Location = new Point(0, 0);
             labelHeader.Name = "labelHeader";
-            labelHeader.Size = new Size(187, 70);
+            labelHeader.Size = new Size(243, 70);
             labelHeader.TabIndex = 2;
-            labelHeader.Text = "Bảng điều khiển";
             labelHeader.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panelContainer
@@ -264,7 +263,7 @@ namespace ManagementSoftware.GUI
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 193F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 249F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(panelAleart, 1, 0);
             tableLayoutPanel1.Controls.Add(panel2, 0, 0);
@@ -293,7 +292,7 @@ namespace ManagementSoftware.GUI
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(187, 70);
+            panel2.Size = new Size(243, 70);
             panel2.TabIndex = 0;
             // 
             // Main
@@ -309,6 +308,7 @@ namespace ManagementSoftware.GUI
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Máy nạp khí TPA";
+            FormClosing += Main_FormClosing;
             Load += Main_Load;
             panelMenu.ResumeLayout(false);
             panelItemMenu.ResumeLayout(false);

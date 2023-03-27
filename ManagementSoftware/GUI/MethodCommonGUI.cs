@@ -24,5 +24,16 @@ namespace ManagementSoftware.GUI
                 oldForm.Dispose();
             }
         }
+
+
+
+        public void ShowFormOnPanel(Panel panel, Form form)
+        {
+            form.TopLevel = false;
+            panel.Controls.Add(form);
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
     }
 }

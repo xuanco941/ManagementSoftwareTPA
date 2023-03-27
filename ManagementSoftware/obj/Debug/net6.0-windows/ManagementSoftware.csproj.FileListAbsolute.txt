@@ -101,5 +101,10 @@ C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\Management
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\ManagementSoftware.pdb
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ref\ManagementSoftware.dll
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\zxing.dll
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Setting.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.ErrorDashboard.resources
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\TwinCAT.Ads.dll
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\TwinCAT.Ads.Abstractions.dll
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\TwinCAT.Ads.Server.dll
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\System.ComponentModel.Composition.dll
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\System.Reactive.dll
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.SettingDashboard.resources

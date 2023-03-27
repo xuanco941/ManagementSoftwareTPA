@@ -40,6 +40,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Beckhoff.TwinCAT.Ads": {
+              "target": "Package",
+              "version": "[6.0.249, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.1, )"
