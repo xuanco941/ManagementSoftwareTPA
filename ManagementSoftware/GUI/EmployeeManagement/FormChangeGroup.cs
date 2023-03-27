@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.BUS;
+using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
 using ManagementSoftware.ViewModels;
@@ -21,16 +22,28 @@ namespace ManagementSoftware.GUI.EmployeeManagement
         public delegate void ChangeData(string msg, FormAlert.enmType enmType);
         // Create instance (null)
         public ChangeData changeData;
+
+
+        public List<Group> listAllGroup = new List<Group>();
+
         public FormChangeGroup()
         {
             InitializeComponent();
-            LoadComboBox();
         }
 
         private void LoadComboBox()
         {
             //lấy tất cả tên các quyền cho vào combobox
-            comboBoxSelectGroup.DataSource = BUSGroup.GetListGroupName();
+            try
+            {
+                listAllGroup = new DALGroup().GetAll();
+                //lấy tất cả tên các quyền cho vào combobox
+                comboBoxSelectGroup.DataSource = listAllGroup.Select(a => a.GroupName).ToList();
+            }
+            catch
+            {
+                comboBoxSelectGroup.DataSource = null;
+            }
         }
 
         private void comboBoxSelectGroup_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,31 +61,20 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             }
 
             // lấy ra thông tin group có name group là text trên combobox
-            try
-            {
-                Group? group = BUSGroup.GetGroupFromGroupName(comboBoxSelectGroup.Text);
-                if(group!= null)
-                {
-                    checkBoxIsManagementUser.Checked = group.IsManagementUser;
-                    checkBoxIsManagementGroup.Checked = group.IsManagementGroup;
-                    //checkBoxIsControlMachine.Checked = group.IsControlMachine;
-                    //checkBoxIsSettingMachine.Checked = group.IsSettingMachine;
-                    //checkBoxIsSettingShift.Checked = group.IsSettingShift;
-                    //checkBoxIsSettingTemplateMachine.Checked = group.IsSettingTemplateMachine;
-                    //checkBoxIsViewResult.Checked = group.IsViewResult;
-                    //checkBoxIsViewActivity.Checked = group.IsViewActivity;
-                    //checkBoxIsDeleteResult.Checked = group.IsDeleteResult;
-                    //checkBoxIsDeleteActivity.Checked = group.IsDeleteActivity;
-                }
-                else
-                {
-                    MessageBox.Show($"Không tìm thấy nhóm quyền này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch
-            {
-                MessageBox.Show($"Tìm kiếm nhóm quyền gặp lỗi.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+            Group group = listAllGroup.Where(e => e.GroupName == comboBoxSelectGroup.Text).First();
+
+            checkBoxIsManagementUser.Checked = group.IsManagementUser;
+            checkBoxIsManagementGroup.Checked = group.IsManagementGroup;
+            //checkBoxIsControlMachine.Checked = group.IsControlMachine;
+            //checkBoxIsSettingMachine.Checked = group.IsSettingMachine;
+            //checkBoxIsSettingShift.Checked = group.IsSettingShift;
+            //checkBoxIsSettingTemplateMachine.Checked = group.IsSettingTemplateMachine;
+            //checkBoxIsViewResult.Checked = group.IsViewResult;
+            //checkBoxIsViewActivity.Checked = group.IsViewActivity;
+            //checkBoxIsDeleteResult.Checked = group.IsDeleteResult;
+            //checkBoxIsDeleteActivity.Checked = group.IsDeleteActivity;
+
 
 
         }
@@ -92,20 +94,12 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             {
                 try
                 {
-                    AddUpdateDeleteResponse<Group> response = BUSGroup.UpdateGroup(group);
-                    //nếu group là group của user current thì thay đổi groupsession
-                    if (response.Status == true)
-                    {
-                        changeData?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
-                    }
-                    else
-                    {
-                        changeData?.Invoke("Cập nhật không thành công.", FormAlert.enmType.Success);
-                    }
+                    new DALGroup().Update(group);
+                    changeData?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
                 }
                 catch (Exception ex)
                 {
-                    changeData?.Invoke(ex.Message, FormAlert.enmType.Error);
+                    changeData?.Invoke("Cập nhật thất bại", FormAlert.enmType.Error);
                 }
 
             }
@@ -121,44 +115,42 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa nhóm quyền {nameGroup}", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                DialogResult dialogResult2 = MessageBox.Show($"Xác nhận xóa đồng nghĩa với việc xóa mọi tài khoản trong nhóm quyền này.", "Cảnh báo quan trọng", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                DialogResult dialogResult2 = MessageBox.Show($"Xác nhận xóa đồng nghĩa với việc mọi tài khoản trong nhóm quyền này không còn quyền.", "Cảnh báo quan trọng", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
 
                 if (dialogResult2 == DialogResult.Yes)
                 {
                     //Xóa nhóm quyền, xóa xong sẽ load lại danh sách group của form
-                    try
-                    {
-                        Group? grDelete = BUSGroup.GetGroupFromGroupName(nameGroup);
-                        if(grDelete != null)
-                        {
-                            //nếu quyền bị xóa là quyền hiện tại của hệ thống thì báo lỗi
-                            if (Common.USERSESSION != null && (grDelete.GroupID == Common.USERSESSION.GroupID))
-                            {
-                                changeData?.Invoke($"Xóa không thành công, nhóm quyền {nameGroup} là nhóm quyền tài khoản của bạn.", FormAlert.enmType.Error);
-                            }
-                            else
-                            {
-                                AddUpdateDeleteResponse<string> respone = BUSGroup.DeleteGroup(nameGroup);
-                                if(respone.Status == true)
-                                {
-                                    changeData?.Invoke($"Xóa thành công nhóm quyền {nameGroup}.", FormAlert.enmType.Success);
-                                }
-                                else
-                                {
-                                    changeData?.Invoke($"Xóa nhóm quyền {nameGroup} không thành công.", FormAlert.enmType.Error);
-                                }
-                            }
-                        }
 
-                    }
-                    catch
+                    int grId = listAllGroup.Where(e => e.GroupName == nameGroup).First().GroupID;
+
+                    //nếu quyền bị xóa là quyền hiện tại của hệ thống thì báo lỗi
+                    if (Common.USERSESSION != null && (grId == Common.USERSESSION.GroupID))
                     {
-                        changeData?.Invoke($"Gặp lỗi, xóa thất bại.", FormAlert.enmType.Error);
+                        changeData?.Invoke($"Xóa không thành công, nhóm quyền {nameGroup} là nhóm quyền tài khoản của bạn.", FormAlert.enmType.Error);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            new DALGroup().Delete(grId);
+                            changeData?.Invoke($"Xóa thành công nhóm quyền {nameGroup}.", FormAlert.enmType.Success);
+                        }
+                        catch
+                        {
+                            changeData?.Invoke($"Xóa nhóm quyền {nameGroup} không thành công.", FormAlert.enmType.Error);
+
+                        }
                     }
                     LoadComboBox();
                 }
 
             }
+        }
+
+        private void FormChangeGroup_Load(object sender, EventArgs e)
+        {
+            LoadComboBox();
+
         }
     }
 }

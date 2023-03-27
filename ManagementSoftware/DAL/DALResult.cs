@@ -18,31 +18,59 @@ namespace ManagementSoftware.DAL
             }
         }
 
-        public static int Update(Result r)
+        public void Update(Result result)
         {
-            using (DataBaseContext dbContext = new DataBaseContext())
+            using (var context = new DataBaseContext())
             {
-                var result = dbContext.Results.FirstOrDefault(g => g.ResultID == r.ResultID);
-                if (result != null)
+                var existingResult = context.Results.FirstOrDefault(r => r.ResultID == result.ResultID);
+                if (existingResult != null)
                 {
-                    dbContext.Entry(result).CurrentValues.SetValues(r);
+                    existingResult.ApSuatMin = result.ApSuatMin;
+                    existingResult.ApSuatMax = result.ApSuatMax;
+                    existingResult.ApSuatAvg = result.ApSuatAvg;
+                    existingResult.TheTichMin = result.TheTichMin;
+                    existingResult.TheTichMax = result.TheTichMax;
+                    existingResult.TheTichAvg = result.TheTichAvg;
+                    existingResult.TimeStart = result.TimeStart;
+                    existingResult.TimeEnd = result.TimeEnd;
+                    existingResult.NameMachine = result.NameMachine;
+                    existingResult.Status = result.Status;
+                    existingResult.Username = result.Username;
+                    existingResult.UserID = result.UserID;
+                    context.SaveChanges();
                 }
-                return dbContext.SaveChanges();
             }
         }
 
-        public static int Delete(int resultID)
+
+        public void Delete(int resultId)
         {
-            using (DataBaseContext dbContext = new DataBaseContext())
+            using (var context = new DataBaseContext())
             {
-                var resultDelete = dbContext.Results.FirstOrDefault(s => s.ResultID == resultID);
-                if (resultDelete != null)
+                var result = context.Results.FirstOrDefault(r => r.ResultID == resultId);
+                if (result != null)
                 {
-                    dbContext.Results.Remove(resultDelete);
+                    context.Results.Remove(result);
+                    context.SaveChanges();
                 }
-                return dbContext.SaveChanges();
             }
         }
+
+
+
+
+        //public static int Update(Result r)
+        //{
+        //    using (DataBaseContext dbContext = new DataBaseContext())
+        //    {
+        //        var result = dbContext.Results.FirstOrDefault(g => g.ResultID == r.ResultID);
+        //        if (result != null)
+        //        {
+        //            dbContext.Entry(result).CurrentValues.SetValues(r);
+        //        }
+        //        return dbContext.SaveChanges();
+        //    }
+        //}
 
     }
 }

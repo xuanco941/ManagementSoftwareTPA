@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSoftware.BUS;
+using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
 using ManagementSoftware.ViewModels;
@@ -18,18 +19,28 @@ namespace ManagementSoftware.GUI.EmployeeManagement
     {
         // Define delegate
         public delegate void ChangeData(string msg, FormAlert.enmType enmType);
-
-        // Create instance (null)
         public ChangeData changeData;
+
+        public List<Group> listAllGroup = new List<Group>();
+        public List<User> listAllUser = new List<User>();
+
         public FormChangeUser()
         {
             InitializeComponent();
-            comboBoxSelectGroup.DataSource = BUSGroup.GetListGroupName();
-            LoadComboBoxUser();
         }
         void LoadComboBoxUser()
         {
-            comboBoxSelectUsername.DataSource = BUSUser.GetListUsername();
+            //lấy tất cả tên các quyền cho vào combobox
+            try
+            {
+                listAllUser = new DALUser().GetAll();
+                //lấy tất cả tên các quyền cho vào combobox
+                comboBoxSelectUsername.DataSource = listAllUser.Select(a => a.Username).ToList();
+            }
+            catch
+            {
+                comboBoxSelectUsername.DataSource = null;
+            }
         }
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
@@ -37,35 +48,34 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             string fullname = textBoxFullName.Texts;
             string password = textBoxPassword.Texts.Trim();
             string groupName = comboBoxSelectGroup.Text;
+            string email = textBoxtEmail.Texts;
+            string sdt = textBoxtSDT.Texts;
 
             if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password) || String.IsNullOrEmpty(groupName))
             {
-                MessageBox.Show("Vui lòng điền đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng điền đủ thông tin thiết yếu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+
+                User user = listAllUser.Where(a => a.Username == username).First();
+                int idGroup = listAllGroup.Where(a => a.GroupName == groupName).First().GroupID;
+
+                user.FullName = fullname;
+                user.Password = password;
+                user.GroupID = idGroup;
+                user.Email = email;
+                user.PhoneNumber = sdt;
+
                 try
                 {
-                    User user = new User();
-                    Group? gr = BUSGroup.GetGroupFromGroupName(groupName);
-                    if (gr != null)
-                    {
-                        user = new User(fullname, username, password, gr.GroupID);
-                    }
-                    AddUpdateDeleteResponse<User> response = BUSUser.UpdateUser(user);
-                    if (response != null && response.Status == true)
-                    {
-                        changeData?.Invoke($"Cập nhật thành công tài khoản {response?.Data?.Username}.", FormAlert.enmType.Success);
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Cập nhật tài khoản {response?.Data?.Username} thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    new DALUser().Update(user);
+                    changeData?.Invoke($"Cập nhật thành công tài khoản {username}.", FormAlert.enmType.Success);
+                    this.Close();
                 }
-                catch (Exception ex)
+                catch
                 {
-                    changeData?.Invoke(ex.Message, FormAlert.enmType.Error);
+                    MessageBox.Show($"Cập nhật tài khoản {username} thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -90,15 +100,11 @@ namespace ManagementSoftware.GUI.EmployeeManagement
                 {
                     try
                     {
-                        AddUpdateDeleteResponse<string> response = BUSUser.DeleteUser(username);
-                        if(response.Status == true)
-                        {
-                            changeData?.Invoke($"Xóa thành công tài khoản {username}.", FormAlert.enmType.Success);
-                        }
-                        else
-                        {
-                            MessageBox.Show($"Xóa tài khoản {username} thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        int idUser = listAllUser.Where(a => a.Username == username).First().UserID;
+                        new DALUser().Delete(idUser);
+
+                        changeData?.Invoke($"Xóa thành công tài khoản {username}.", FormAlert.enmType.Success);
+
                     }
                     catch
                     {
@@ -113,7 +119,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
         private void comboBoxSelectUsername_SelectedIndexChanged(object sender, EventArgs e)
         {
             //vô hiệu hóa nút xóa khi đây là tài khoản hiện tại
-            if ((Common.USERSESSION != null && comboBoxSelectUsername.Text != Common.USERSESSION.Username))
+            if ((Common.USERSESSION != null && comboBoxSelectUsername.Text != Common.USERSESSION.Username) || string.IsNullOrEmpty(comboBoxSelectUsername.Text))
             {
                 buttonDelete.Enabled = true;
             }
@@ -141,13 +147,16 @@ namespace ManagementSoftware.GUI.EmployeeManagement
                 // lấy ra thông tin user có username là username trên combobox
                 try
                 {
-                    User? user = BUSUser.GetUserFromUsername(comboBoxSelectUsername.Text);
+                    User user = listAllUser.Where(e => e.Username == comboBoxSelectUsername.Text).First();
 
                     //show trên textbox
 
-                    textBoxFullName.Texts = user?.FullName;
-                    textBoxPassword.Texts = user?.Password;
-                    comboBoxSelectGroup.Text = BUSGroup.GetGroupFromID(user.GroupID).GroupName;
+                    textBoxFullName.Texts = user.FullName;
+                    textBoxPassword.Texts = user.Password;
+                    comboBoxSelectGroup.Text = user.Group?.GroupName ?? "";
+                    textBoxtEmail.Texts = user.Email;
+                    textBoxtSDT.Texts = user.PhoneNumber;
+
                 }
                 catch
                 {
@@ -165,6 +174,24 @@ namespace ManagementSoftware.GUI.EmployeeManagement
                 buttonDelete.Enabled = true;
                 comboBoxSelectGroup.Enabled = true;
             }
+        }
+
+        private void FormChangeUser_Load(object sender, EventArgs e)
+        {
+            //lấy tất cả tên các quyền cho vào combobox
+            try
+            {
+                listAllGroup = new DALGroup().GetAll();
+                //lấy tất cả tên các quyền cho vào combobox
+                comboBoxSelectGroup.DataSource = listAllGroup.Select(a => a.GroupName).ToList();
+            }
+            catch
+            {
+                comboBoxSelectGroup.DataSource = null;
+            }
+
+
+            LoadComboBoxUser();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.BUS;
+using ManagementSoftware.DAL;
 using ManagementSoftware.DAL.DALPagination;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
@@ -40,10 +41,10 @@ namespace ManagementSoftware.GUI.ActivityManagement
             //}
         }
 
-        private void LoadPanelUser()
+        private async void LoadPanelUser()
         {
             //lấy danh sách id_user tham gia hoạt động, sau đó tìm thông tin user đó và thêm vào list user
-            var list = BUSActivity.GetListActivityHasDistinctUsername();
+            var list = await new DALActivity().GetDistinctUsernamesAsync();
             if (list != null)
             {
                 foreach (var a in list)
@@ -52,7 +53,7 @@ namespace ManagementSoftware.GUI.ActivityManagement
                     {
                         string fullnameButton = a;
 
-                        var user = BUSUser.GetUserFromUsername(a);
+                        var user = new DALUser().GetAll().Where(b => b.Username == a).FirstOrDefault();
                         if (user != null)
                         {
                             fullnameButton = user.FullName;
@@ -108,7 +109,7 @@ namespace ManagementSoftware.GUI.ActivityManagement
             activities.ForEach(delegate (Activity activity)
             {
                 string createAt = activity.CreateAt.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-                dt.Rows.Add(activity.ActivityName, activity.Description, createAt);
+                dt.Rows.Add(activity.Title, activity.Description, createAt);
             });
             dataGridViewUserActivity.DataSource = dt;
         }
@@ -118,7 +119,8 @@ namespace ManagementSoftware.GUI.ActivityManagement
 
             try
             {
-                PaginationActivityAUser paginationActivityAUser = BUSActivity.GetDataAUser(this.page, null, null, this.username);
+                PaginationActivityAUser paginationActivityAUser = new PaginationActivityAUser();
+                paginationActivityAUser.Set(this.page, null, null, this.username);
                 List<Activity>? activities = paginationActivityAUser.ListResults;
 
                 // pagesize bằng tổng số activity chia cho số phần tử mỗi trang

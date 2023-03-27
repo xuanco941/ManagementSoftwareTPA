@@ -17,5 +17,9 @@ namespace ManagementSoftware.GUI
             InitializeComponent();
         }
 
+        private void button57_Click(object sender, EventArgs e)
+        {
+            new ErrorDashboard().ShowDialog();
+        }
     }
 }

@@ -13,6 +13,8 @@ using ManagementSoftware.GUI.ActivityManagement;
 using ManagementSoftware.Models;
 using ManagementSoftware.BUS;
 using ManagementSoftware.DAL.DALPagination;
+using ManagementSoftware.DAL;
+
 namespace ManagementSoftware.GUI
 {
     public partial class ActivityHistory : Form
@@ -77,7 +79,7 @@ namespace ManagementSoftware.GUI
                 activities.ForEach(delegate (Activity activity)
                 {
                     string? fullnameButton = activity.Username;
-                    User? user = BUSUser.GetUserFromUsername(activity.Username);
+                    User? user = new DALUser().GetAll().Where(a => a.Username == activity.Username).FirstOrDefault();
                     if (String.IsNullOrEmpty(activity.Username) == false && user != null)
                     {
                         fullnameButton = user.FullName;
@@ -87,8 +89,8 @@ namespace ManagementSoftware.GUI
                         fullnameButton = activity.Username + " (không tồn tại)";
                     }
                     //format date từ sql -> c#
-                    string createAt = activity.CreateAt.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-                    dt.Rows.Add(activity.ActivityID, activity.ActivityName, activity.Description, createAt, fullnameButton);
+                    string createAt = activity.CreateAt.ToString("HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    dt.Rows.Add(activity.ActivityID, activity.Title, activity.Description, createAt, fullnameButton);
                 });
             }
             dataGridViewActivity.DataSource = dt;
@@ -99,7 +101,8 @@ namespace ManagementSoftware.GUI
 
             try
             {
-                PaginationActivity paginationActivity = BUSActivity.GetData(this.page, timeStart?.AddDays(-1), timeEnd);
+                PaginationActivity paginationActivity = new PaginationActivity();
+                paginationActivity.Set(this.page, timeStart?.AddDays(-1), timeEnd);
                 List<Activity>? activities = paginationActivity.ListResults;
                 //số trang max
                 inputNumPageGo.MaxValue = paginationActivity.TotalPages != 0 ? paginationActivity.TotalPages : 1;
@@ -289,9 +292,10 @@ namespace ManagementSoftware.GUI
                 }
                 try
                 {
-                    BUSActivity.DeleteActivities(atvIDs);
+                    new DALActivity().DeleteRange(atvIDs);
+                    callAlert?.Invoke("Xóa thành công!", FormAlert.enmType.Success);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     callAlert?.Invoke(ex.Message,FormAlert.enmType.Warning);
                 }
@@ -300,7 +304,6 @@ namespace ManagementSoftware.GUI
                 buttonPage2.Text = 2.ToString();
                 buttonPage3.Text = 3.ToString();
                 GetActivities();
-                callAlert?.Invoke("Xóa thành công!", FormAlert.enmType.Success);
             }
         }
 

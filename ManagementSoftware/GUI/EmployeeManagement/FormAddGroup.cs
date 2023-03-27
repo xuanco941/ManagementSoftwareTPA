@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.BUS;
+using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
 using ManagementSoftware.ViewModels;
@@ -72,35 +73,37 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             }
             else
             {
+                Group group = new Group();
+                group.GroupName = nameGroup;
+                group.IsManagementUser = checkBoxIsManagementUser.Checked;
+                group.IsManagementGroup = checkBoxIsManagementGroup.Checked;
+                //group.IsControlMachine = checkBoxIsControlMachine.Checked;
+                //group.IsSettingMachine = checkBoxIsSettingMachine.Checked;
+                //group.IsSettingShift = checkBoxIsSettingShift.Checked;
+                //group.IsSettingTemplateMachine = checkBoxIsSettingTemplateMachine.Checked;
+                //group.IsViewResult = checkBoxIsViewResult.Checked;
+                //group.IsViewActivity = checkBoxIsViewActivity.Checked;
+                //group.IsDeleteResult = checkBoxIsDeleteResult.Checked;
+                //group.IsDeleteActivity = checkBoxIsDeleteActivity.Checked;
+
+
+
                 try
                 {
-                    Group group = new Group();
-                    group.GroupName = nameGroup;
-                    group.IsManagementUser = checkBoxIsManagementUser.Checked;
-                    group.IsManagementGroup = checkBoxIsManagementGroup.Checked;
-                    //group.IsControlMachine = checkBoxIsControlMachine.Checked;
-                    //group.IsSettingMachine = checkBoxIsSettingMachine.Checked;
-                    //group.IsSettingShift = checkBoxIsSettingShift.Checked;
-                    //group.IsSettingTemplateMachine = checkBoxIsSettingTemplateMachine.Checked;
-                    //group.IsViewResult = checkBoxIsViewResult.Checked;
-                    //group.IsViewActivity = checkBoxIsViewActivity.Checked;
-                    //group.IsDeleteResult = checkBoxIsDeleteResult.Checked;
-                    //group.IsDeleteActivity = checkBoxIsDeleteActivity.Checked;
-                    AddUpdateDeleteResponse<Group> response = BUSGroup.AddGroup(group);
-                    if(response!=null && response.Status == true)
-                    {
-                        changeData?.Invoke($"Thêm thành công quyền {group.GroupName}.", FormAlert.enmType.Success);
-                    }
-                    else
-                    {
-                        changeData?.Invoke($"Thêm thất bại, tên nhóm quyền phải là duy nhất.", FormAlert.enmType.Error);
-                    }
-                    this.Close();
+                    new DALGroup().Add(group);
+                    changeData?.Invoke($"Thêm thành công quyền {group.GroupName}.", FormAlert.enmType.Success);
+
                 }
                 catch
                 {
-                    changeData?.Invoke("Thêm thất bại, tên nhóm quyền phải là duy nhất.", FormAlert.enmType.Error);
+                    changeData?.Invoke($"Thêm thất bại, tên nhóm quyền phải là duy nhất.", FormAlert.enmType.Error);
                 }
+                finally
+                {
+                    this.Close();
+                }
+
+
 
             }
         }

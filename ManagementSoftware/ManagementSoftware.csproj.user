@@ -31,16 +31,10 @@
     <Compile Update="GUI\EmployeeManagement\FormChangeUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\ExportWareHouseManagement\XuatKho.cs">
+    <Compile Update="GUI\SettingDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\WareHouse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\FormChanges.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\FormPurchaseOrder.cs">
+    <Compile Update="GUI\ErrorDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Hello.cs">
@@ -49,37 +43,10 @@
     <Compile Update="GUI\Help.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\ImportWareHouse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\ImportWareHouseManagement\FormNhapKho.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\ProductManagement\FormPhanChiThi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\PurchaseOrderManagement\FormAddDirective.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\PurchaseOrderManagement\FormAddProductOnPO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\PurchaseOrderManagement\FormAddPurchaseOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\PurchaseOrderManagement\FormDirectiveDecomposition.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\PurchaseOrderManagement\FormDirectiveDecompositionDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\PurchaseOrderManagement\FormViewDetailPurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\ResultHistory.cs">
@@ -94,37 +61,7 @@
     <Compile Update="GUI\Section\FormAleart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\Section\FormChiThiNhapKho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Section\FormItemAddChiThiSX.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Section\FormItemFormViewDetailPO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Section\FormItemPO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Section\FormItemProductOfListDirective.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Section\FormItemProductOfPO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Section\FormItemWorkingList.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="GUI\Section\FormStringConnectDatabase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\WorkingList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\WorkingListManagement\UpdateWorkingList.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

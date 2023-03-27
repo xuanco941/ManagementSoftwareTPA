@@ -13,9 +13,10 @@ namespace ManagementSoftware.Models
     {
         [Key]
         public int ResultWarningID { get; set; }
-        public string Description { get; set; }
+        public string? Title { get; set; } = "";
+        public string? Description { get; set; } = "";
         public DateTime CreateAt { get; set; }
-        public int ResultID { get; set; }
-        public Result Result { get; set; }
+        public int? ResultID { get; set; }
+        public Result? Result { get; set; }
     }
 }

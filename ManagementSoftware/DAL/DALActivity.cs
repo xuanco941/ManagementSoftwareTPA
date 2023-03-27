@@ -1,48 +1,58 @@
 ﻿using ManagementSoftware.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ManagementSoftware.DAL
 {
     public class DALActivity
     {
-
-        public static List<Activity>? GetAllActivities()
+        public void Add(Activity activity)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            List<Activity>? list = (from a in dbContext.Activities select a).OrderByDescending(e => e.ActivityID).ToList();
-            return list;
-        }
-
-        // Them Activity
-        public static int AddActivity(Activity activity)
-        {
-            DataBaseContext dbContext = new DataBaseContext();
-            dbContext.Activities.Add(activity);
-            return dbContext.SaveChanges();
-        }
-
-        // xóa nhiều activity
-        public static int DeleteActivities(List<Activity> activities)
-        {
-            DataBaseContext dbContext = new DataBaseContext();
-            if (activities.Count > 0)
+            using (var dbContext = new DataBaseContext())
             {
-                dbContext.Activities.RemoveRange(activities);
+                dbContext.Activities.Add(activity);
+                dbContext.SaveChanges();
             }
-            return dbContext.SaveChanges();
         }
 
-        public static Activity? GetActivityFromID(int activityID)
+        public void Update(Activity activity)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            return dbContext.Activities.Where(a => a.ActivityID == activityID).FirstOrDefault();
+            using (var dbContext = new DataBaseContext())
+            {
+                var existingActivity = dbContext.Activities.FirstOrDefault(a => a.ActivityID == activity.ActivityID);
+                if (existingActivity != null)
+                {
+                    dbContext.Entry(existingActivity).CurrentValues.SetValues(activity);
+                    dbContext.SaveChanges();
+                }
+            }
         }
 
-        public static List<string>? GetListActivityHasDistinctUsername()
+        public void Delete(int activityID)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            List<string>? list = new List<string>();
-            list = dbContext.Activities.Select(a => a.Username).Distinct().ToList();
-            return list;
+            using (var dbContext = new DataBaseContext())
+            {
+                var existingActivity = dbContext.Activities.FirstOrDefault(a => a.ActivityID == activityID);
+                if (existingActivity != null)
+                {
+                    dbContext.Activities.Remove(existingActivity);
+                    dbContext.SaveChanges();
+                }
+            }
+        }
+        public void DeleteRange(List<int> activityID)
+        {
+            using (var dbContext = new DataBaseContext())
+            {
+                List<Activity> usersToDelete = dbContext.Activities.Where(u => activityID.Contains(u.ActivityID)).ToList();
+                dbContext.Activities.RemoveRange(usersToDelete);
+                dbContext.SaveChanges();
+            }
+        }
+        public async Task<List<string>>? GetDistinctUsernamesAsync()
+        {
+            using var dbContext = new DataBaseContext();
+            var distinctUsernames = await dbContext.Activities.Select(a => a.Username).Distinct().ToListAsync();
+            return distinctUsernames;
         }
 
     }

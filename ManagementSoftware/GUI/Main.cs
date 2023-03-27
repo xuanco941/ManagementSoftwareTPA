@@ -92,26 +92,6 @@ namespace ManagementSoftware.GUI
             ChangeFormContent(form, sender);
         }
 
-        private void buttonQuanLyDonHang_Click(object sender, EventArgs e)
-        {
-            FormPurchaseOrder form = new FormPurchaseOrder();
-            form.callAlert = new FormPurchaseOrder.CallAlert(Alert);
-            ChangeFormContent(form, sender);
-        }
-
-        private void buttonWorkingList_Click(object sender, EventArgs e)
-        {
-            WorkingList form = new WorkingList();
-            form.callAlert = new WorkingList.CallAlert(Alert);
-            ChangeFormContent(form, sender);
-        }
-
-        private void buttonQuanLyKho_Click(object sender, EventArgs e)
-        {
-            WareHouse form = new WareHouse();
-            form.callAlert = new WareHouse.CallAlert(Alert);
-            ChangeFormContent(form, sender);
-        }
 
         private void buttonResult_Click(object sender, EventArgs e)
         {
@@ -134,12 +114,7 @@ namespace ManagementSoftware.GUI
             ChangeFormContent(form, sender);
         }
 
-        private void buttonSetting_Click(object sender, EventArgs e)
-        {
-            Settings form = new Settings();
-            form.callAlert = new Settings.CallAlert(Alert);
-            ChangeFormContent(form, sender);
-        }
+
         private void buttonHelp_Click(object sender, EventArgs e)
         {
             Help form = new Help();
@@ -165,13 +140,6 @@ namespace ManagementSoftware.GUI
 
             this.Close();
             Application.ExitThread();
-        }
-
-        private void buttonNhapKho_Click(object sender, EventArgs e)
-        {
-            ImportWareHouse form = new ImportWareHouse();
-            form.callAlert = new ImportWareHouse.CallAlert(Alert);
-            ChangeFormContent(form, sender);
         }
 
         private void Main_Load(object sender, EventArgs e)

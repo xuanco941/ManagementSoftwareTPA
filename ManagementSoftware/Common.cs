@@ -10,8 +10,8 @@ namespace ManagementSoftware
     public class Common
     {
         //Account Admin
-        public static User UserAdmin = new User("Admin","admin","123",1);
-        public static Group GroupAdmin = new Group("Admin", true, true);
+        public static User UserAdmin = new User { FullName = "Admin", Username = "admin", Password = "123", GroupID = 1 };
+        public static Group GroupAdmin = new Group { GroupName = "Admin", IsManagementUser = true, IsManagementGroup = true };
 
         //GUI
         public static Font FontForm = new Font("Segoe UI", 11, FontStyle.Regular);

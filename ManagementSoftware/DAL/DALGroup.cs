@@ -5,93 +5,64 @@ namespace ManagementSoftware.DAL
     public class DALGroup
     {
 
-        public static List<Group>? GetAllGroups()
+        // Hàm thêm mới một đối tượng Group vào database
+        public void Add(Group group)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            List<Group>? list = (from gr in dbContext.Groups select gr).ToList();
-            return list;
-        }
-
-
-        public static Group? GetGroupFromID(int id)
-        {
-            DataBaseContext dbContext = new DataBaseContext();
-            Group? group = (from gr in dbContext.Groups where gr.GroupID == id select gr).FirstOrDefault();
-            return group;
-        }
-        //Tìm kiếm group bằng tên
-        public static List<Group> FindGroupByGroupName(string groupName)
-        {
-            DataBaseContext dbContext = new DataBaseContext();
-            var list = (from gr in dbContext.Groups where (gr.GroupName != null && gr.GroupName.Contains(groupName) == true) select gr).ToList();
-            return list;
-        }
-
-        // Them nhóm quyền
-        public static int AddGroup(Group group)
-        {
-            DataBaseContext dbContext = new DataBaseContext();
-            dbContext.Groups.Add(group);
-            return dbContext.SaveChanges();
-        }
-
-        // Sua group
-        public static int UpdateGroup(Group group)
-        {
-            DataBaseContext dbContext = new DataBaseContext();
-            var groupUpdate = dbContext.Groups.FirstOrDefault(g => g.GroupName == group.GroupName);
-            if (groupUpdate != null)
+            using (var context = new DataBaseContext())
             {
-                groupUpdate.GroupName = group.GroupName;
-                groupUpdate.IsManagementUser = group.IsManagementUser;
-                groupUpdate.IsManagementGroup = group.IsManagementGroup;
+                context.Groups.Add(group);
+                context.SaveChanges();
             }
-            return dbContext.SaveChanges();
         }
 
-        public static int DeleteGroup(string grName)
+        // Hàm lấy tất cả các đối tượng Group trong database
+        public List<Group> GetAll()
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            var groupDelete = dbContext.Groups.FirstOrDefault(g => g.GroupName == grName);
-            if (groupDelete != null)
+            using (var context = new DataBaseContext())
             {
-                dbContext.Groups.Remove(groupDelete);
+                return context.Groups.ToList();
             }
-            return dbContext.SaveChanges();
         }
 
-        public static Group? GetGroupFromGroupName(string groupName)
+        // Hàm lấy một đối tượng Group theo GroupID
+        public Group? GetById(int groupId)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            return dbContext.Groups.Where(u => u.GroupName == groupName).FirstOrDefault();
-        }
-
-        public static List<string>? GetListGroupName()
-        {
-            DataBaseContext dbContext = new DataBaseContext();
-            return dbContext.Groups.Select(u => u.GroupName).ToList();
-        }
-        public static Group? GetGroupFromUserID(int? UserID)
-        {
-            Group? group = null;
-            if (UserID != null)
+            using (var context = new DataBaseContext())
             {
-                DataBaseContext dbContext = new DataBaseContext();
-                int? groupid = (from u in dbContext.Users where u.UserID == UserID select u.GroupID).FirstOrDefault();
-                if (groupid != null)
+                return context.Groups.FirstOrDefault(g => g.GroupID == groupId);
+            }
+        }
+
+        // Hàm cập nhật thông tin một đối tượng Group
+        public void Update(Group group)
+        {
+            using (var context = new DataBaseContext())
+            {
+                var existingGroup = context.Groups.FirstOrDefault(g => g.GroupID == group.GroupID);
+                if (existingGroup != null)
                 {
-                    group = (from gr in dbContext.Groups
-                             where gr.GroupID == groupid
-                             select gr).FirstOrDefault();
+                    // Cập nhật thuộc tính của đối tượng Group
+                    existingGroup.GroupName = group.GroupName;
+                    existingGroup.IsManagementUser = group.IsManagementUser;
+                    existingGroup.IsManagementGroup = group.IsManagementGroup;
+
+                    context.SaveChanges();
                 }
             }
-            return group;
         }
 
-        public static int ConvertGroupNameToGroupID(string grName)
+        // Hàm xóa một đối tượng Group khỏi database
+        public void Delete(int groupId)
         {
-            DataBaseContext context = new DataBaseContext();
-            return (from gr in context.Groups where gr.GroupName.Trim().ToLower() == grName.Trim().ToLower() select gr.GroupID).FirstOrDefault();
+            using (var context = new DataBaseContext())
+            {
+                var groupToDelete = context.Groups.FirstOrDefault(g => g.GroupID == groupId);
+                if (groupToDelete != null)
+                {
+                    context.Groups.Remove(groupToDelete);
+                    context.SaveChanges();
+                }
+            }
         }
 
     }

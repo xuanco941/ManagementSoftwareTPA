@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using ManagementSoftware.Models;
 using ManagementSoftware.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace ManagementSoftware.DAL;
 
@@ -9,91 +10,62 @@ public class DALUser
     public static User? AuthLogin(string username, string password)
     {
         DataBaseContext dbContext = new DataBaseContext();
-        User? user = (from u in dbContext.Users where (u.Username == username.Trim() && u.Password == password.Trim()) select u).FirstOrDefault();
-        return user;
-    }
-
-    public static List<UserHasGroupName> GetAllUsersHasGroupName()
-    {
-        DataBaseContext dbContext = new DataBaseContext();
-        var list = (from user in dbContext.Users
-                    join gr in dbContext.Groups on user.GroupID equals gr.GroupID
-                    select new UserHasGroupName
-                    {
-                        UserID = user.UserID,
-                        FullName = user.FullName,
-                        Username = user.Username,
-                        Password = user.Password,
-                        GroupName = gr.GroupName
-                    }).ToList();
-        return list;
-    }
-
-    public static List<User> FindUserByFullNameOrUsername(string name)
-    {
-        DataBaseContext dbContext = new DataBaseContext();
-        var list = (dbContext.Users.Where(u => u.Username.Contains(name) || u.FullName.Contains(name))).ToList();
-        return list;
-    }
-
-
-    public static User? GetUserFromID(int id)
-    {
-        DataBaseContext dbContext = new DataBaseContext();
-        var user = (from u in dbContext.Users where (u.UserID == id) select u).FirstOrDefault();
+        User? user = dbContext.Users.Include(u => u.Group).FirstOrDefault(u => u.Username == username.Trim() && u.Password == password.Trim());
         return user;
     }
 
 
     // Them TK
-    public static int AddUser(User user)
+    public void Add(User user)
     {
-        DataBaseContext dbContext = new DataBaseContext();
-        dbContext.Users.Add(user);
-        // số dòng thay đổi lớn hơn 0 thì đúng
-        return dbContext.SaveChanges();
-
+        using (var context = new DataBaseContext())
+        {
+            context.Users.Add(user);
+            context.SaveChanges();
+        }
     }
+
 
     // Sua TK
-    public static int UpdateUser(User user)
+    public void Update(User user)
     {
-        DataBaseContext dbContext = new DataBaseContext();
-        var userUpdate = dbContext.Users.FirstOrDefault(u => u.Username == user.Username);
-        if (userUpdate != null)
+        using (var context = new DataBaseContext())
         {
-            userUpdate.Username = user.Username;
-            userUpdate.Password = user.Password;
-            userUpdate.FullName = user.FullName;
-            userUpdate.GroupID = user.GroupID;
+            var existingUser = context.Users.FirstOrDefault(u => u.UserID == user.UserID);
+            if (existingUser != null)
+            {
+                existingUser.FullName = user.FullName;
+                existingUser.Username = user.Username;
+                existingUser.Password = user.Password;
+                existingUser.Email = user.Email;
+                existingUser.PhoneNumber = user.PhoneNumber;
+                existingUser.GroupID = user.GroupID;
+                context.SaveChanges();
+            }
         }
-
-        return dbContext.SaveChanges();
     }
 
-    public static int DeleteUser(string username)
+
+    public void Delete(int userId)
     {
-        DataBaseContext dbContext = new DataBaseContext();
-        var userDelete = dbContext.Users.FirstOrDefault(u => u.Username == username);
-        if (userDelete != null)
+        using (var context = new DataBaseContext())
         {
-            dbContext.Users.Remove(userDelete);
+            var user = context.Users.FirstOrDefault(u => u.UserID == userId);
+            if (user != null)
+            {
+                context.Users.Remove(user);
+                context.SaveChanges();
+            }
         }
-        return dbContext.SaveChanges();
-
     }
 
 
-    public static User? GetUserFromUsername(string username)
+    public List<User> GetAll()
     {
-        DataBaseContext dbContext = new DataBaseContext();
-        return dbContext.Users.Where(u => u.Username == username).FirstOrDefault();
-    }
-
-    public static List<string>? GetListUsername()
-    {
-        DataBaseContext dbContext = new DataBaseContext();
-        return dbContext.Users.Select(u => u.Username).ToList();
+        using (var dbContext = new DataBaseContext())
+        {
+            return dbContext.Users.Include(u => u.Group).ToList();
+        }
     }
 }
 

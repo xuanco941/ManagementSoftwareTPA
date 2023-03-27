@@ -8,15 +8,9 @@ namespace ManagementSoftware.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Activity> Activities { get; set; }
-        public DbSet<Shift> Shifts { get; set; }
-        public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<Directive> Directives { get; set; }
-        public DbSet<ImportedWarehouse> ImportedWarehouses { get; set; }
-        public DbSet<ExportedWareHouse> ExportedWareHouses { get; set; }
         public DbSet<Result> Results { get; set; }
-        public DbSet<DataResult> DataResults { get; set; }
         public DbSet<ResultWarning> ResultWarnings { get; set; }
+        public DbSet<UserWorking> UserWorkings { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -34,6 +28,16 @@ namespace ManagementSoftware.Models
                 entity.HasIndex(e => e.Username).IsUnique();
             });
 
+            //GroupID có thể null
+            modelBuilder.Entity<User>()
+            .HasOne(t => t.Group)
+            .WithMany()
+            .HasForeignKey(t => t.GroupID)
+            .OnDelete(DeleteBehavior.SetNull);
+
+
+
+
             //group
             modelBuilder.Entity<Group>(entity =>
             {
@@ -49,48 +53,26 @@ namespace ManagementSoftware.Models
                 entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
             });
 
-            //PO
-            modelBuilder.Entity<PurchaseOrder>(entity =>
-            {
-                entity.Property(e => e.Status).HasDefaultValueSql("(0)");
-                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
-                entity.Property(e => e.SoPRPQ).HasDefaultValueSql("(0)");
-            });
-            //Product
-            modelBuilder.Entity<Product>(entity =>
-            {
-                entity.Property(e => e.Status).HasDefaultValueSql("(0)");
-            });
-            //Directive
-            modelBuilder.Entity<Directive>(entity =>
-            {
-                entity.Property(e => e.Status).HasDefaultValueSql("(0)");
-                entity.Property(e => e.SoLuongDaSanXuat).HasDefaultValueSql("(0)");
-                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
-            });
-            //ImportedWareHouse
-            modelBuilder.Entity<ImportedWarehouse>(entity =>
-            {
-                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
-                entity.Property(e => e.DateAdded).HasDefaultValueSql("(getdate())");
+            modelBuilder.Entity<Activity>()
+            .HasOne(t => t.User)
+            .WithMany()
+            .HasForeignKey(t => t.UserID)
+            .OnDelete(DeleteBehavior.SetNull);
 
-            });
-            //ExportedWareHouse
-            modelBuilder.Entity<ExportedWareHouse>(entity =>
-            {
-                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
-            });
+
+
             //Result
             modelBuilder.Entity<Result>(entity =>
             {
                 entity.Property(e => e.Status).HasDefaultValueSql("(0)");
-                entity.Property(e => e.TimeStart).HasDefaultValueSql("(getdate())");
             });
-            //DataResult
-            modelBuilder.Entity<DataResult>(entity =>
-            {
-                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
-            });
+            modelBuilder.Entity<Result>()
+            .HasOne(t => t.User)
+            .WithMany()
+            .HasForeignKey(t => t.UserID)
+            .OnDelete(DeleteBehavior.SetNull);
+
+
             //ResultWarning
             modelBuilder.Entity<ResultWarning>(entity =>
             {
@@ -108,11 +90,11 @@ namespace ManagementSoftware.Models
                 if (this.Database.EnsureCreated() == true)
                 {
                     //tao quuyen cho admin
-                    DALGroup.AddGroup(Common.GroupAdmin);
+                    new DALGroup().Add(Common.GroupAdmin);
                     //tao tai khoan admin
-                    DALUser.AddUser(Common.UserAdmin);
+                    new DALUser().Add(Common.UserAdmin);
 
-                    DALActivity.AddActivity(new Activity("Hệ thống", "Khởi tạo tài khoản admin.", Common.UserAdmin.Username));
+                    new DALActivity().Add(new Activity { Title = "Tạo mới", Description = "Khởi tạo tài khoản admin.", Username = Common.UserAdmin.Username, UserID = Common.UserAdmin.UserID });
 
 
                 }

@@ -24,6 +24,7 @@ namespace ManagementSoftware
             string text = File.ReadAllText(path);
             Common.ConnectionString = text;
 
+            new DataBaseContext().Database.EnsureDeleted();
             if (new DataBaseContext().CreateDatabase() == false)
             {
                 MessageBox.Show("Lỗi khởi tạo cơ sở dữ liệu, hãy thử xem lại đường dẫn kết nối của bạn.", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);

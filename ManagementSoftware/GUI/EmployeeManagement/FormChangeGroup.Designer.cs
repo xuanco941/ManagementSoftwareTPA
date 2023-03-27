@@ -31,302 +31,302 @@ namespace ManagementSoftware.GUI.EmployeeManagement
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChangeGroup));
-            this.label7 = new System.Windows.Forms.Label();
-            this.buttonDeleteGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.buttonUpdateGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.comboBoxSelectGroup = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBoxIsDeleteActivity = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsDeleteResult = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsViewActivity = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsViewResult = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsSettingTemplateMachine = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsSettingShift = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsSettingMachine = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsControlMachine = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsManagementUser = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsManagementGroup = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            label7 = new Label();
+            buttonDeleteGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            buttonUpdateGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            comboBoxSelectGroup = new ComboBox();
+            groupBox1 = new GroupBox();
+            checkBoxIsDeleteActivity = new CheckBox();
+            checkBoxIsDeleteResult = new CheckBox();
+            checkBoxIsViewActivity = new CheckBox();
+            checkBoxIsViewResult = new CheckBox();
+            checkBoxIsSettingTemplateMachine = new CheckBox();
+            checkBoxIsSettingShift = new CheckBox();
+            checkBoxIsSettingMachine = new CheckBox();
+            checkBoxIsControlMachine = new CheckBox();
+            checkBoxIsManagementUser = new CheckBox();
+            checkBoxIsManagementGroup = new CheckBox();
+            panel1 = new Panel();
+            label8 = new Label();
+            groupBox1.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(145, 100);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(193, 21);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Chọn nhóm quyền hiện có";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.Transparent;
+            label7.Location = new Point(145, 100);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(193, 21);
+            label7.TabIndex = 27;
+            label7.Text = "Chọn nhóm quyền hiện có";
             // 
             // buttonDeleteGroup
             // 
-            this.buttonDeleteGroup.BackColor = System.Drawing.Color.Brown;
-            this.buttonDeleteGroup.BackgroundColor = System.Drawing.Color.Brown;
-            this.buttonDeleteGroup.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonDeleteGroup.BorderRadius = 3;
-            this.buttonDeleteGroup.BorderSize = 0;
-            this.buttonDeleteGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDeleteGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonDeleteGroup.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteGroup.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteGroup.Image")));
-            this.buttonDeleteGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDeleteGroup.Location = new System.Drawing.Point(357, 610);
-            this.buttonDeleteGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonDeleteGroup.Name = "buttonDeleteGroup";
-            this.buttonDeleteGroup.Size = new System.Drawing.Size(208, 42);
-            this.buttonDeleteGroup.TabIndex = 74;
-            this.buttonDeleteGroup.Text = "Xóa quyền này";
-            this.buttonDeleteGroup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDeleteGroup.TextColor = System.Drawing.Color.White;
-            this.buttonDeleteGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonDeleteGroup.UseVisualStyleBackColor = false;
-            this.buttonDeleteGroup.Click += new System.EventHandler(this.buttonDeleteGroup_Click);
+            buttonDeleteGroup.BackColor = Color.Brown;
+            buttonDeleteGroup.BackgroundColor = Color.Brown;
+            buttonDeleteGroup.BorderColor = Color.PaleVioletRed;
+            buttonDeleteGroup.BorderRadius = 3;
+            buttonDeleteGroup.BorderSize = 0;
+            buttonDeleteGroup.FlatStyle = FlatStyle.Flat;
+            buttonDeleteGroup.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonDeleteGroup.ForeColor = Color.White;
+            buttonDeleteGroup.Image = (Image)resources.GetObject("buttonDeleteGroup.Image");
+            buttonDeleteGroup.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonDeleteGroup.Location = new Point(357, 610);
+            buttonDeleteGroup.Margin = new Padding(4, 3, 4, 3);
+            buttonDeleteGroup.Name = "buttonDeleteGroup";
+            buttonDeleteGroup.Size = new Size(208, 42);
+            buttonDeleteGroup.TabIndex = 74;
+            buttonDeleteGroup.Text = "Xóa quyền này";
+            buttonDeleteGroup.TextAlign = ContentAlignment.MiddleRight;
+            buttonDeleteGroup.TextColor = Color.White;
+            buttonDeleteGroup.TextImageRelation = TextImageRelation.TextBeforeImage;
+            buttonDeleteGroup.UseVisualStyleBackColor = false;
+            buttonDeleteGroup.Click += buttonDeleteGroup_Click;
             // 
             // buttonUpdateGroup
             // 
-            this.buttonUpdateGroup.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.buttonUpdateGroup.BackgroundColor = System.Drawing.Color.DarkGoldenrod;
-            this.buttonUpdateGroup.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonUpdateGroup.BorderRadius = 3;
-            this.buttonUpdateGroup.BorderSize = 0;
-            this.buttonUpdateGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpdateGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonUpdateGroup.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdateGroup.Image = global::ManagementSoftware.Properties.Resources.iconfinder_Synchronize_278832;
-            this.buttonUpdateGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdateGroup.Location = new System.Drawing.Point(149, 610);
-            this.buttonUpdateGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonUpdateGroup.Name = "buttonUpdateGroup";
-            this.buttonUpdateGroup.Size = new System.Drawing.Size(201, 42);
-            this.buttonUpdateGroup.TabIndex = 73;
-            this.buttonUpdateGroup.Text = "Cập nhật";
-            this.buttonUpdateGroup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonUpdateGroup.TextColor = System.Drawing.Color.White;
-            this.buttonUpdateGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonUpdateGroup.UseVisualStyleBackColor = false;
-            this.buttonUpdateGroup.Click += new System.EventHandler(this.buttonUpdateGroup_Click);
+            buttonUpdateGroup.BackColor = Color.DarkGoldenrod;
+            buttonUpdateGroup.BackgroundColor = Color.DarkGoldenrod;
+            buttonUpdateGroup.BorderColor = Color.PaleVioletRed;
+            buttonUpdateGroup.BorderRadius = 3;
+            buttonUpdateGroup.BorderSize = 0;
+            buttonUpdateGroup.FlatStyle = FlatStyle.Flat;
+            buttonUpdateGroup.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonUpdateGroup.ForeColor = Color.White;
+            buttonUpdateGroup.Image = Properties.Resources.iconfinder_Synchronize_278832;
+            buttonUpdateGroup.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonUpdateGroup.Location = new Point(149, 610);
+            buttonUpdateGroup.Margin = new Padding(4, 3, 4, 3);
+            buttonUpdateGroup.Name = "buttonUpdateGroup";
+            buttonUpdateGroup.Size = new Size(201, 42);
+            buttonUpdateGroup.TabIndex = 73;
+            buttonUpdateGroup.Text = "Cập nhật";
+            buttonUpdateGroup.TextAlign = ContentAlignment.MiddleRight;
+            buttonUpdateGroup.TextColor = Color.White;
+            buttonUpdateGroup.TextImageRelation = TextImageRelation.TextBeforeImage;
+            buttonUpdateGroup.UseVisualStyleBackColor = false;
+            buttonUpdateGroup.Click += buttonUpdateGroup_Click;
             // 
             // comboBoxSelectGroup
             // 
-            this.comboBoxSelectGroup.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBoxSelectGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSelectGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxSelectGroup.FormattingEnabled = true;
-            this.comboBoxSelectGroup.IntegralHeight = false;
-            this.comboBoxSelectGroup.Location = new System.Drawing.Point(149, 128);
-            this.comboBoxSelectGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBoxSelectGroup.MaxDropDownItems = 9;
-            this.comboBoxSelectGroup.Name = "comboBoxSelectGroup";
-            this.comboBoxSelectGroup.Size = new System.Drawing.Size(415, 33);
-            this.comboBoxSelectGroup.TabIndex = 75;
-            this.comboBoxSelectGroup.SelectedIndexChanged += new System.EventHandler(this.comboBoxSelectGroup_SelectedIndexChanged);
+            comboBoxSelectGroup.BackColor = SystemColors.Window;
+            comboBoxSelectGroup.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxSelectGroup.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxSelectGroup.FormattingEnabled = true;
+            comboBoxSelectGroup.IntegralHeight = false;
+            comboBoxSelectGroup.Location = new Point(149, 128);
+            comboBoxSelectGroup.Margin = new Padding(4, 3, 4, 3);
+            comboBoxSelectGroup.MaxDropDownItems = 9;
+            comboBoxSelectGroup.Name = "comboBoxSelectGroup";
+            comboBoxSelectGroup.Size = new Size(415, 33);
+            comboBoxSelectGroup.TabIndex = 75;
+            comboBoxSelectGroup.SelectedIndexChanged += comboBoxSelectGroup_SelectedIndexChanged;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBoxIsDeleteActivity);
-            this.groupBox1.Controls.Add(this.checkBoxIsDeleteResult);
-            this.groupBox1.Controls.Add(this.checkBoxIsViewActivity);
-            this.groupBox1.Controls.Add(this.checkBoxIsViewResult);
-            this.groupBox1.Controls.Add(this.checkBoxIsSettingTemplateMachine);
-            this.groupBox1.Controls.Add(this.checkBoxIsSettingShift);
-            this.groupBox1.Controls.Add(this.checkBoxIsSettingMachine);
-            this.groupBox1.Controls.Add(this.checkBoxIsControlMachine);
-            this.groupBox1.Controls.Add(this.checkBoxIsManagementUser);
-            this.groupBox1.Controls.Add(this.checkBoxIsManagementGroup);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(149, 189);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Size = new System.Drawing.Size(415, 402);
-            this.groupBox1.TabIndex = 76;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cho phép";
+            groupBox1.Controls.Add(checkBoxIsDeleteActivity);
+            groupBox1.Controls.Add(checkBoxIsDeleteResult);
+            groupBox1.Controls.Add(checkBoxIsViewActivity);
+            groupBox1.Controls.Add(checkBoxIsViewResult);
+            groupBox1.Controls.Add(checkBoxIsSettingTemplateMachine);
+            groupBox1.Controls.Add(checkBoxIsSettingShift);
+            groupBox1.Controls.Add(checkBoxIsSettingMachine);
+            groupBox1.Controls.Add(checkBoxIsControlMachine);
+            groupBox1.Controls.Add(checkBoxIsManagementUser);
+            groupBox1.Controls.Add(checkBoxIsManagementGroup);
+            groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox1.ForeColor = Color.White;
+            groupBox1.Location = new Point(149, 189);
+            groupBox1.Margin = new Padding(4, 3, 4, 3);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(4, 3, 4, 3);
+            groupBox1.Size = new Size(415, 402);
+            groupBox1.TabIndex = 76;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Cho phép";
             // 
             // checkBoxIsDeleteActivity
             // 
-            this.checkBoxIsDeleteActivity.AutoSize = true;
-            this.checkBoxIsDeleteActivity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsDeleteActivity.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsDeleteActivity.Location = new System.Drawing.Point(24, 342);
-            this.checkBoxIsDeleteActivity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsDeleteActivity.Name = "checkBoxIsDeleteActivity";
-            this.checkBoxIsDeleteActivity.Size = new System.Drawing.Size(214, 29);
-            this.checkBoxIsDeleteActivity.TabIndex = 22;
-            this.checkBoxIsDeleteActivity.Text = "Xóa lịch sử hoạt động";
-            this.checkBoxIsDeleteActivity.UseVisualStyleBackColor = true;
+            checkBoxIsDeleteActivity.AutoSize = true;
+            checkBoxIsDeleteActivity.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIsDeleteActivity.ForeColor = Color.White;
+            checkBoxIsDeleteActivity.Location = new Point(24, 342);
+            checkBoxIsDeleteActivity.Margin = new Padding(4, 3, 4, 3);
+            checkBoxIsDeleteActivity.Name = "checkBoxIsDeleteActivity";
+            checkBoxIsDeleteActivity.Size = new Size(214, 29);
+            checkBoxIsDeleteActivity.TabIndex = 22;
+            checkBoxIsDeleteActivity.Text = "Xóa lịch sử hoạt động";
+            checkBoxIsDeleteActivity.UseVisualStyleBackColor = true;
             // 
             // checkBoxIsDeleteResult
             // 
-            this.checkBoxIsDeleteResult.AutoSize = true;
-            this.checkBoxIsDeleteResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsDeleteResult.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsDeleteResult.Location = new System.Drawing.Point(24, 307);
-            this.checkBoxIsDeleteResult.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsDeleteResult.Name = "checkBoxIsDeleteResult";
-            this.checkBoxIsDeleteResult.Size = new System.Drawing.Size(159, 29);
-            this.checkBoxIsDeleteResult.TabIndex = 21;
-            this.checkBoxIsDeleteResult.Text = "Xóa lịch sử nạp";
-            this.checkBoxIsDeleteResult.UseVisualStyleBackColor = true;
+            checkBoxIsDeleteResult.AutoSize = true;
+            checkBoxIsDeleteResult.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIsDeleteResult.ForeColor = Color.White;
+            checkBoxIsDeleteResult.Location = new Point(24, 307);
+            checkBoxIsDeleteResult.Margin = new Padding(4, 3, 4, 3);
+            checkBoxIsDeleteResult.Name = "checkBoxIsDeleteResult";
+            checkBoxIsDeleteResult.Size = new Size(159, 29);
+            checkBoxIsDeleteResult.TabIndex = 21;
+            checkBoxIsDeleteResult.Text = "Xóa lịch sử nạp";
+            checkBoxIsDeleteResult.UseVisualStyleBackColor = true;
             // 
             // checkBoxIsViewActivity
             // 
-            this.checkBoxIsViewActivity.AutoSize = true;
-            this.checkBoxIsViewActivity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsViewActivity.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsViewActivity.Location = new System.Drawing.Point(24, 272);
-            this.checkBoxIsViewActivity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsViewActivity.Name = "checkBoxIsViewActivity";
-            this.checkBoxIsViewActivity.Size = new System.Drawing.Size(219, 29);
-            this.checkBoxIsViewActivity.TabIndex = 20;
-            this.checkBoxIsViewActivity.Text = "Xem lịch sử hoạt động";
-            this.checkBoxIsViewActivity.UseVisualStyleBackColor = true;
+            checkBoxIsViewActivity.AutoSize = true;
+            checkBoxIsViewActivity.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIsViewActivity.ForeColor = Color.White;
+            checkBoxIsViewActivity.Location = new Point(24, 272);
+            checkBoxIsViewActivity.Margin = new Padding(4, 3, 4, 3);
+            checkBoxIsViewActivity.Name = "checkBoxIsViewActivity";
+            checkBoxIsViewActivity.Size = new Size(219, 29);
+            checkBoxIsViewActivity.TabIndex = 20;
+            checkBoxIsViewActivity.Text = "Xem lịch sử hoạt động";
+            checkBoxIsViewActivity.UseVisualStyleBackColor = true;
             // 
             // checkBoxIsViewResult
             // 
-            this.checkBoxIsViewResult.AutoSize = true;
-            this.checkBoxIsViewResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsViewResult.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsViewResult.Location = new System.Drawing.Point(24, 238);
-            this.checkBoxIsViewResult.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsViewResult.Name = "checkBoxIsViewResult";
-            this.checkBoxIsViewResult.Size = new System.Drawing.Size(164, 29);
-            this.checkBoxIsViewResult.TabIndex = 19;
-            this.checkBoxIsViewResult.Text = "Xem lịch sử nạp";
-            this.checkBoxIsViewResult.UseVisualStyleBackColor = true;
+            checkBoxIsViewResult.AutoSize = true;
+            checkBoxIsViewResult.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIsViewResult.ForeColor = Color.White;
+            checkBoxIsViewResult.Location = new Point(24, 238);
+            checkBoxIsViewResult.Margin = new Padding(4, 3, 4, 3);
+            checkBoxIsViewResult.Name = "checkBoxIsViewResult";
+            checkBoxIsViewResult.Size = new Size(164, 29);
+            checkBoxIsViewResult.TabIndex = 19;
+            checkBoxIsViewResult.Text = "Xem lịch sử nạp";
+            checkBoxIsViewResult.UseVisualStyleBackColor = true;
             // 
             // checkBoxIsSettingTemplateMachine
             // 
-            this.checkBoxIsSettingTemplateMachine.AutoSize = true;
-            this.checkBoxIsSettingTemplateMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsSettingTemplateMachine.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsSettingTemplateMachine.Location = new System.Drawing.Point(24, 203);
-            this.checkBoxIsSettingTemplateMachine.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsSettingTemplateMachine.Name = "checkBoxIsSettingTemplateMachine";
-            this.checkBoxIsSettingTemplateMachine.Size = new System.Drawing.Size(147, 29);
-            this.checkBoxIsSettingTemplateMachine.TabIndex = 17;
-            this.checkBoxIsSettingTemplateMachine.Text = "Thiết lập bình";
-            this.checkBoxIsSettingTemplateMachine.UseVisualStyleBackColor = true;
+            checkBoxIsSettingTemplateMachine.AutoSize = true;
+            checkBoxIsSettingTemplateMachine.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIsSettingTemplateMachine.ForeColor = Color.White;
+            checkBoxIsSettingTemplateMachine.Location = new Point(24, 203);
+            checkBoxIsSettingTemplateMachine.Margin = new Padding(4, 3, 4, 3);
+            checkBoxIsSettingTemplateMachine.Name = "checkBoxIsSettingTemplateMachine";
+            checkBoxIsSettingTemplateMachine.Size = new Size(147, 29);
+            checkBoxIsSettingTemplateMachine.TabIndex = 17;
+            checkBoxIsSettingTemplateMachine.Text = "Thiết lập bình";
+            checkBoxIsSettingTemplateMachine.UseVisualStyleBackColor = true;
             // 
             // checkBoxIsSettingShift
             // 
-            this.checkBoxIsSettingShift.AutoSize = true;
-            this.checkBoxIsSettingShift.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsSettingShift.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsSettingShift.Location = new System.Drawing.Point(24, 168);
-            this.checkBoxIsSettingShift.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsSettingShift.Name = "checkBoxIsSettingShift";
-            this.checkBoxIsSettingShift.Size = new System.Drawing.Size(164, 29);
-            this.checkBoxIsSettingShift.TabIndex = 16;
-            this.checkBoxIsSettingShift.Text = "Thiết lập ca làm";
-            this.checkBoxIsSettingShift.UseVisualStyleBackColor = true;
+            checkBoxIsSettingShift.AutoSize = true;
+            checkBoxIsSettingShift.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIsSettingShift.ForeColor = Color.White;
+            checkBoxIsSettingShift.Location = new Point(24, 168);
+            checkBoxIsSettingShift.Margin = new Padding(4, 3, 4, 3);
+            checkBoxIsSettingShift.Name = "checkBoxIsSettingShift";
+            checkBoxIsSettingShift.Size = new Size(164, 29);
+            checkBoxIsSettingShift.TabIndex = 16;
+            checkBoxIsSettingShift.Text = "Thiết lập ca làm";
+            checkBoxIsSettingShift.UseVisualStyleBackColor = true;
             // 
             // checkBoxIsSettingMachine
             // 
-            this.checkBoxIsSettingMachine.AutoSize = true;
-            this.checkBoxIsSettingMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsSettingMachine.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsSettingMachine.Location = new System.Drawing.Point(24, 134);
-            this.checkBoxIsSettingMachine.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsSettingMachine.Name = "checkBoxIsSettingMachine";
-            this.checkBoxIsSettingMachine.Size = new System.Drawing.Size(209, 29);
-            this.checkBoxIsSettingMachine.TabIndex = 15;
-            this.checkBoxIsSettingMachine.Text = "Cài đặt thông số máy";
-            this.checkBoxIsSettingMachine.UseVisualStyleBackColor = true;
+            checkBoxIsSettingMachine.AutoSize = true;
+            checkBoxIsSettingMachine.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIsSettingMachine.ForeColor = Color.White;
+            checkBoxIsSettingMachine.Location = new Point(24, 134);
+            checkBoxIsSettingMachine.Margin = new Padding(4, 3, 4, 3);
+            checkBoxIsSettingMachine.Name = "checkBoxIsSettingMachine";
+            checkBoxIsSettingMachine.Size = new Size(209, 29);
+            checkBoxIsSettingMachine.TabIndex = 15;
+            checkBoxIsSettingMachine.Text = "Cài đặt thông số máy";
+            checkBoxIsSettingMachine.UseVisualStyleBackColor = true;
             // 
             // checkBoxIsControlMachine
             // 
-            this.checkBoxIsControlMachine.AutoSize = true;
-            this.checkBoxIsControlMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsControlMachine.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsControlMachine.Location = new System.Drawing.Point(24, 99);
-            this.checkBoxIsControlMachine.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsControlMachine.Name = "checkBoxIsControlMachine";
-            this.checkBoxIsControlMachine.Size = new System.Drawing.Size(161, 29);
-            this.checkBoxIsControlMachine.TabIndex = 14;
-            this.checkBoxIsControlMachine.Text = "Điều khiển máy";
-            this.checkBoxIsControlMachine.UseVisualStyleBackColor = true;
+            checkBoxIsControlMachine.AutoSize = true;
+            checkBoxIsControlMachine.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIsControlMachine.ForeColor = Color.White;
+            checkBoxIsControlMachine.Location = new Point(24, 99);
+            checkBoxIsControlMachine.Margin = new Padding(4, 3, 4, 3);
+            checkBoxIsControlMachine.Name = "checkBoxIsControlMachine";
+            checkBoxIsControlMachine.Size = new Size(161, 29);
+            checkBoxIsControlMachine.TabIndex = 14;
+            checkBoxIsControlMachine.Text = "Điều khiển máy";
+            checkBoxIsControlMachine.UseVisualStyleBackColor = true;
             // 
             // checkBoxIsManagementUser
             // 
-            this.checkBoxIsManagementUser.AutoSize = true;
-            this.checkBoxIsManagementUser.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsManagementUser.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsManagementUser.Location = new System.Drawing.Point(24, 30);
-            this.checkBoxIsManagementUser.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsManagementUser.Name = "checkBoxIsManagementUser";
-            this.checkBoxIsManagementUser.Size = new System.Drawing.Size(188, 29);
-            this.checkBoxIsManagementUser.TabIndex = 12;
-            this.checkBoxIsManagementUser.Text = "Quản trị nhân viên";
-            this.checkBoxIsManagementUser.UseVisualStyleBackColor = true;
+            checkBoxIsManagementUser.AutoSize = true;
+            checkBoxIsManagementUser.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIsManagementUser.ForeColor = Color.White;
+            checkBoxIsManagementUser.Location = new Point(24, 30);
+            checkBoxIsManagementUser.Margin = new Padding(4, 3, 4, 3);
+            checkBoxIsManagementUser.Name = "checkBoxIsManagementUser";
+            checkBoxIsManagementUser.Size = new Size(188, 29);
+            checkBoxIsManagementUser.TabIndex = 12;
+            checkBoxIsManagementUser.Text = "Quản trị nhân viên";
+            checkBoxIsManagementUser.UseVisualStyleBackColor = true;
             // 
             // checkBoxIsManagementGroup
             // 
-            this.checkBoxIsManagementGroup.AutoSize = true;
-            this.checkBoxIsManagementGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsManagementGroup.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsManagementGroup.Location = new System.Drawing.Point(24, 65);
-            this.checkBoxIsManagementGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsManagementGroup.Name = "checkBoxIsManagementGroup";
-            this.checkBoxIsManagementGroup.Size = new System.Drawing.Size(211, 29);
-            this.checkBoxIsManagementGroup.TabIndex = 13;
-            this.checkBoxIsManagementGroup.Text = "Quản trị nhóm quyền";
-            this.checkBoxIsManagementGroup.UseVisualStyleBackColor = true;
+            checkBoxIsManagementGroup.AutoSize = true;
+            checkBoxIsManagementGroup.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIsManagementGroup.ForeColor = Color.White;
+            checkBoxIsManagementGroup.Location = new Point(24, 65);
+            checkBoxIsManagementGroup.Margin = new Padding(4, 3, 4, 3);
+            checkBoxIsManagementGroup.Name = "checkBoxIsManagementGroup";
+            checkBoxIsManagementGroup.Size = new Size(211, 29);
+            checkBoxIsManagementGroup.TabIndex = 13;
+            checkBoxIsManagementGroup.Text = "Quản trị nhóm quyền";
+            checkBoxIsManagementGroup.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(727, 97);
-            this.panel1.TabIndex = 77;
+            panel1.Controls.Add(label8);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(727, 97);
+            panel1.TabIndex = 77;
             // 
             // label8
             // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(727, 97);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Cập nhật Quyền";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label8.Dock = DockStyle.Fill;
+            label8.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.Goldenrod;
+            label8.Location = new Point(0, 0);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(727, 97);
+            label8.TabIndex = 32;
+            label8.Text = "Cập nhật Quyền";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FormChangeGroup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(727, 727);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.comboBoxSelectGroup);
-            this.Controls.Add(this.buttonDeleteGroup);
-            this.Controls.Add(this.buttonUpdateGroup);
-            this.Controls.Add(this.label7);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "FormChangeGroup";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cập nhật quyền";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(41, 44, 51);
+            ClientSize = new Size(727, 727);
+            Controls.Add(panel1);
+            Controls.Add(groupBox1);
+            Controls.Add(comboBoxSelectGroup);
+            Controls.Add(buttonDeleteGroup);
+            Controls.Add(buttonUpdateGroup);
+            Controls.Add(label7);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "FormChangeGroup";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Cập nhật quyền";
+            Load += FormChangeGroup_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

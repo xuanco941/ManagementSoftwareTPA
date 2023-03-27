@@ -13,28 +13,13 @@ namespace ManagementSoftware.Models
     {
         [Key]
         public int ActivityID { get; set; }
-        [MaxLength]
-        public string ActivityName { get; set; }
-        [MaxLength]
+        public string? Title { get; set; }
         public string? Description { get; set; }
-        [StringLength(100)]
-        public string? Username { get; set; }
         public DateTime CreateAt { get; set; }
+        public string? Username { get; set; } = "";
+        public int? UserID { get; set; }
+        public User? User { get; set; }
 
-        public Activity(string activityName, string? description, string? username)
-        {
-            ActivityName = activityName;
-            Description = description;
-            Username = username;
-        }
 
-        public Activity(int activityID, string activityName, string? description, string? username, DateTime createAt)
-        {
-            ActivityID = activityID;
-            ActivityName = activityName;
-            Description = description;
-            Username = username;
-            CreateAt = createAt;
-        }
     }
 }
