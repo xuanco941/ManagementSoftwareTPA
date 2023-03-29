@@ -134,6 +134,13 @@ namespace ManagementSoftware.GUI
             ChangeForm(form, sender);
         }
 
+        private void buttonUserWorking_Click(object sender, EventArgs e)
+        {
+            LichSuLamViec form = new LichSuLamViec();
+            //ChangeFormContent(form, sender);
+            ChangeForm(form, sender);
+        }
+
         private void buttonDangXuat_Click(object sender, EventArgs e)
         {
             Common.USERSESSION = null;
@@ -237,5 +244,7 @@ namespace ManagementSoftware.GUI
             new MethodCommonGUI().CloseFormInPanel(panelContent);
 
         }
+
+
     }
 }

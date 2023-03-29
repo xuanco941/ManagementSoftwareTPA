@@ -63,6 +63,26 @@ namespace ManagementSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _15706546551638029481_32 {
+            get {
+                object obj = ResourceManager.GetObject("15706546551638029481-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _17867729231644336865_31 {
+            get {
+                object obj = ResourceManager.GetObject("17867729231644336865-31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4406108 {
             get {
                 object obj = ResourceManager.GetObject("4406108", resourceCulture);
@@ -193,6 +213,26 @@ namespace ManagementSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EtekXam {
+            get {
+                object obj = ResourceManager.GetObject("EtekXam", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EtekXanh {
+            get {
+                object obj = ResourceManager.GetObject("EtekXanh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Remove_278742 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Remove_278742", resourceCulture);
@@ -266,6 +306,16 @@ namespace ManagementSoftware.Properties {
         internal static System.Drawing.Bitmap icons8_info_38__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-info-38 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_medium_risk_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-medium-risk-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

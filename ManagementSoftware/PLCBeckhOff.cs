@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagementSoftware
 {
-    internal class PLCBeckhOff
+    public class PLCBeckhOff
     {
     }
 }

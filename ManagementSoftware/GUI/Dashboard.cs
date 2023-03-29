@@ -35,13 +35,13 @@ namespace ManagementSoftware.GUI
 
 
 
-            ChartSeries seriesApSuat = new ChartSeries("Áp suất",ChartSeriesType.Line);
+            ChartSeries seriesApSuat = new ChartSeries("Áp suất", ChartSeriesType.Line);
             seriesApSuat.Style.Border.Width = 3;
             DateTime now = DateTime.Now.Date;
 
             for (int i = 0; i < 300; i++)
             {
-                seriesApSuat.Points.Add(now, new Random().Next(0,101));
+                seriesApSuat.Points.Add(now, new Random().Next(0, 101));
                 now = now.AddMinutes(1);
             }
             chartControlApSuat.Series.Add(seriesApSuat);
@@ -148,14 +148,17 @@ namespace ManagementSoftware.GUI
             chartControl.Trackball.Tooltip.Font = c;
         }
 
-
-
-
-
-
-
-
-
-
+        private void buttonShowHeNap_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<HeNapXam>().Count() == 0)
+            {
+                HeNapXam f2 = new HeNapXam();
+                f2.Show();
+            }
+            else
+            {
+                Application.OpenForms.OfType<HeNapXam>().First().Activate();
+            }
+        }
     }
 }

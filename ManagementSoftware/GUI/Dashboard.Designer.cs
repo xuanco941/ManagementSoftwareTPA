@@ -62,7 +62,8 @@
             chartControlTheTich = new Syncfusion.Windows.Forms.Chart.ChartControl();
             chartControlApSuat = new Syncfusion.Windows.Forms.Chart.ChartControl();
             tableLayoutPanel2 = new TableLayoutPanel();
-            button57 = new Button();
+            buttonShowHeNap = new Button();
+            buttonShowBangLoi = new Button();
             panel1 = new Panel();
             richTextBox1 = new RichTextBox();
             tabPage2 = new TabPage();
@@ -400,7 +401,7 @@
             button17.Name = "button17";
             button17.Size = new Size(555, 46);
             button17.TabIndex = 15;
-            button17.Text = "DỮ LIỆU THẺ NẠP";
+            button17.Text = "DỮ LIỆU MẺ NẠP";
             button17.TextAlign = ContentAlignment.MiddleRight;
             button17.TextImageRelation = TextImageRelation.TextBeforeImage;
             button17.UseVisualStyleBackColor = false;
@@ -634,11 +635,12 @@
             // tableLayoutPanel2
             // 
             tableLayoutPanel2.BackColor = Color.Transparent;
-            tableLayoutPanel2.ColumnCount = 2;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.Controls.Add(button57, 0, 0);
+            tableLayoutPanel2.ColumnCount = 3;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
+            tableLayoutPanel2.Controls.Add(buttonShowHeNap, 0, 0);
+            tableLayoutPanel2.Controls.Add(buttonShowBangLoi, 0, 0);
             tableLayoutPanel2.Controls.Add(panel1, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(4, 4);
@@ -648,25 +650,45 @@
             tableLayoutPanel2.Size = new Size(1113, 65);
             tableLayoutPanel2.TabIndex = 0;
             // 
-            // button57
+            // buttonShowHeNap
             // 
-            button57.BackColor = Color.Crimson;
-            button57.Cursor = Cursors.Hand;
-            button57.Dock = DockStyle.Fill;
-            button57.FlatAppearance.BorderSize = 0;
-            button57.FlatStyle = FlatStyle.Flat;
-            button57.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            button57.ForeColor = SystemColors.ButtonFace;
-            button57.Image = Properties.Resources.icons8_new_document_38;
-            button57.Location = new Point(893, 3);
-            button57.Name = "button57";
-            button57.Size = new Size(217, 59);
-            button57.TabIndex = 7;
-            button57.Text = "Bảng lỗi";
-            button57.TextAlign = ContentAlignment.MiddleRight;
-            button57.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button57.UseVisualStyleBackColor = false;
-            button57.Click += button57_Click_1;
+            buttonShowHeNap.BackColor = Color.Green;
+            buttonShowHeNap.Cursor = Cursors.Hand;
+            buttonShowHeNap.Dock = DockStyle.Fill;
+            buttonShowHeNap.FlatAppearance.BorderSize = 0;
+            buttonShowHeNap.FlatStyle = FlatStyle.Flat;
+            buttonShowHeNap.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonShowHeNap.ForeColor = SystemColors.ButtonFace;
+            buttonShowHeNap.Image = Properties.Resources.book24;
+            buttonShowHeNap.Location = new Point(948, 3);
+            buttonShowHeNap.Name = "buttonShowHeNap";
+            buttonShowHeNap.Size = new Size(162, 59);
+            buttonShowHeNap.TabIndex = 8;
+            buttonShowHeNap.Text = "HỆ NẠP";
+            buttonShowHeNap.TextAlign = ContentAlignment.MiddleRight;
+            buttonShowHeNap.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonShowHeNap.UseVisualStyleBackColor = false;
+            buttonShowHeNap.Click += buttonShowHeNap_Click;
+            // 
+            // buttonShowBangLoi
+            // 
+            buttonShowBangLoi.BackColor = Color.DarkCyan;
+            buttonShowBangLoi.Cursor = Cursors.Hand;
+            buttonShowBangLoi.Dock = DockStyle.Fill;
+            buttonShowBangLoi.FlatAppearance.BorderSize = 0;
+            buttonShowBangLoi.FlatStyle = FlatStyle.Flat;
+            buttonShowBangLoi.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonShowBangLoi.ForeColor = SystemColors.ButtonFace;
+            buttonShowBangLoi.Image = Properties.Resources.icons8_medium_risk_30;
+            buttonShowBangLoi.Location = new Point(782, 3);
+            buttonShowBangLoi.Name = "buttonShowBangLoi";
+            buttonShowBangLoi.Size = new Size(160, 59);
+            buttonShowBangLoi.TabIndex = 7;
+            buttonShowBangLoi.Text = "BẢNG LỖI";
+            buttonShowBangLoi.TextAlign = ContentAlignment.MiddleRight;
+            buttonShowBangLoi.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonShowBangLoi.UseVisualStyleBackColor = false;
+            buttonShowBangLoi.Click += button57_Click_1;
             // 
             // panel1
             // 
@@ -674,7 +696,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(884, 59);
+            panel1.Size = new Size(773, 59);
             panel1.TabIndex = 6;
             // 
             // richTextBox1
@@ -686,7 +708,7 @@
             richTextBox1.Location = new Point(0, 0);
             richTextBox1.Margin = new Padding(3, 2, 3, 2);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(884, 59);
+            richTextBox1.Size = new Size(773, 59);
             richTextBox1.TabIndex = 3;
             richTextBox1.Text = "- chưa có mẻ nạp";
             // 
@@ -1175,10 +1197,11 @@
         private Label label14;
         private Label label15;
         private Label label16;
-        private Button button57;
+        private Button buttonShowBangLoi;
         private Panel panel1;
         private RichTextBox richTextBox1;
         private Syncfusion.Windows.Forms.Chart.ChartControl chartControlTheTich;
         private Syncfusion.Windows.Forms.Chart.ChartControl chartControlApSuat;
+        private Button buttonShowHeNap;
     }
 }

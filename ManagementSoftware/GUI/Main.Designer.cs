@@ -48,6 +48,7 @@ namespace ManagementSoftware.GUI
             tableLayoutPanel1 = new TableLayoutPanel();
             panelAleart = new Panel();
             panel2 = new Panel();
+            buttonUserWorking = new Button();
             panelMenu.SuspendLayout();
             panelItemMenu.SuspendLayout();
             panel3.SuspendLayout();
@@ -76,6 +77,7 @@ namespace ManagementSoftware.GUI
             panelItemMenu.Controls.Add(buttonHelp);
             panelItemMenu.Controls.Add(buttonActivity);
             panelItemMenu.Controls.Add(buttonEmployee);
+            panelItemMenu.Controls.Add(buttonUserWorking);
             panelItemMenu.Controls.Add(buttonResult);
             panelItemMenu.Controls.Add(buttonDashboard);
             panelItemMenu.Dock = DockStyle.Fill;
@@ -93,7 +95,7 @@ namespace ManagementSoftware.GUI
             buttonDangXuat.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDangXuat.ForeColor = Color.White;
             buttonDangXuat.Image = Properties.Resources.red_x_10333;
-            buttonDangXuat.Location = new Point(0, 395);
+            buttonDangXuat.Location = new Point(0, 474);
             buttonDangXuat.Name = "buttonDangXuat";
             buttonDangXuat.Size = new Size(209, 79);
             buttonDangXuat.TabIndex = 12;
@@ -112,7 +114,7 @@ namespace ManagementSoftware.GUI
             buttonHelp.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonHelp.ForeColor = Color.White;
             buttonHelp.Image = (Image)resources.GetObject("buttonHelp.Image");
-            buttonHelp.Location = new Point(0, 316);
+            buttonHelp.Location = new Point(0, 395);
             buttonHelp.Name = "buttonHelp";
             buttonHelp.Size = new Size(209, 79);
             buttonHelp.TabIndex = 13;
@@ -131,7 +133,7 @@ namespace ManagementSoftware.GUI
             buttonActivity.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonActivity.ForeColor = Color.White;
             buttonActivity.Image = Properties.Resources.button3_Image;
-            buttonActivity.Location = new Point(0, 237);
+            buttonActivity.Location = new Point(0, 316);
             buttonActivity.Name = "buttonActivity";
             buttonActivity.Size = new Size(209, 79);
             buttonActivity.TabIndex = 10;
@@ -150,7 +152,7 @@ namespace ManagementSoftware.GUI
             buttonEmployee.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEmployee.ForeColor = Color.White;
             buttonEmployee.Image = Properties.Resources.button2_Image;
-            buttonEmployee.Location = new Point(0, 158);
+            buttonEmployee.Location = new Point(0, 237);
             buttonEmployee.Name = "buttonEmployee";
             buttonEmployee.Size = new Size(209, 79);
             buttonEmployee.TabIndex = 9;
@@ -173,7 +175,7 @@ namespace ManagementSoftware.GUI
             buttonResult.Name = "buttonResult";
             buttonResult.Size = new Size(209, 79);
             buttonResult.TabIndex = 8;
-            buttonResult.Text = "Lịch sử nạp khí";
+            buttonResult.Text = "Dữ liệu nạp khí";
             buttonResult.TextAlign = ContentAlignment.BottomCenter;
             buttonResult.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonResult.UseVisualStyleBackColor = true;
@@ -295,6 +297,25 @@ namespace ManagementSoftware.GUI
             panel2.Size = new Size(243, 70);
             panel2.TabIndex = 0;
             // 
+            // buttonUserWorking
+            // 
+            buttonUserWorking.Cursor = Cursors.Hand;
+            buttonUserWorking.Dock = DockStyle.Top;
+            buttonUserWorking.FlatAppearance.BorderSize = 0;
+            buttonUserWorking.FlatStyle = FlatStyle.Flat;
+            buttonUserWorking.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonUserWorking.ForeColor = Color.White;
+            buttonUserWorking.Image = Properties.Resources._17867729231644336865_31;
+            buttonUserWorking.Location = new Point(0, 158);
+            buttonUserWorking.Name = "buttonUserWorking";
+            buttonUserWorking.Size = new Size(209, 79);
+            buttonUserWorking.TabIndex = 14;
+            buttonUserWorking.Text = "Lịch sử làm việc";
+            buttonUserWorking.TextAlign = ContentAlignment.BottomCenter;
+            buttonUserWorking.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonUserWorking.UseVisualStyleBackColor = true;
+            buttonUserWorking.Click += buttonUserWorking_Click;
+            // 
             // Main
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -340,6 +361,7 @@ namespace ManagementSoftware.GUI
         private Button buttonResult;
         private Button buttonDashboard;
         private Button buttonHelp;
+        private Button buttonUserWorking;
     }
 }
 
