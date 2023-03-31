@@ -105,7 +105,6 @@ namespace ManagementSoftware.GUI
         private void buttonResult_Click(object sender, EventArgs e)
         {
             ResultHistory form = new ResultHistory();
-            form.callAlert = new ResultHistory.CallAlert(Alert);
             //ChangeFormContent(form, sender);
             ChangeForm(form, sender);
         }

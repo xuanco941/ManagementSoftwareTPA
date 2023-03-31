@@ -25,15 +25,10 @@ namespace ManagementSoftware.DAL
                 var existingResult = context.Results.FirstOrDefault(r => r.ResultID == result.ResultID);
                 if (existingResult != null)
                 {
-                    existingResult.ApSuatMin = result.ApSuatMin;
-                    existingResult.ApSuatMax = result.ApSuatMax;
-                    existingResult.ApSuatAvg = result.ApSuatAvg;
-                    existingResult.TheTichMin = result.TheTichMin;
-                    existingResult.TheTichMax = result.TheTichMax;
-                    existingResult.TheTichAvg = result.TheTichAvg;
+                    existingResult.ApSuatTong = result.ApSuatTong;
                     existingResult.TimeStart = result.TimeStart;
+                    existingResult.ProductionNumber = result.ProductionNumber;
                     existingResult.TimeEnd = result.TimeEnd;
-                    existingResult.NameMachine = result.NameMachine;
                     existingResult.Status = result.Status;
                     existingResult.Username = result.Username;
                     existingResult.UserID = result.UserID;

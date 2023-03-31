@@ -13,17 +13,12 @@ namespace ManagementSoftware.Models
     {
         [Key]
         public int ResultID { get; set; }
-        public double ApSuatMin { get; set; }
-        public double ApSuatMax { get; set; }
-        public double ApSuatAvg { get; set; }
-        public double TheTichMin { get; set; }
-        public double TheTichMax { get; set; }
-        public double TheTichAvg { get; set; }
+        public double ApSuatTong { get; set; }
         public DateTime TimeStart { get; set; }
         public DateTime TimeEnd { get; set; }
-        public string? NameMachine { get; set; }
+        public int ProductionNumber { get; set; }
         public bool Status { get; set; }
-        public string? Username { get; set; } = "";
+        public string Username { get; set; } = Common.UserAdmin.Username;
         public int? UserID { get; set; }
         public User? User { get; set; }
 

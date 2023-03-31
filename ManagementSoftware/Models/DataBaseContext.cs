@@ -10,7 +10,8 @@ namespace ManagementSoftware.Models
         public DbSet<Activity> Activities { get; set; }
         public DbSet<Result> Results { get; set; }
         public DbSet<ResultWarning> ResultWarnings { get; set; }
-        public DbSet<UserWorking> UserWorkings { get; set; }
+        public DbSet<Machine> Machines { get; set; }
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -65,6 +66,7 @@ namespace ManagementSoftware.Models
             modelBuilder.Entity<Result>(entity =>
             {
                 entity.Property(e => e.Status).HasDefaultValueSql("(0)");
+                entity.Property(e => e.TimeStart).HasDefaultValueSql("(getdate())");
             });
             modelBuilder.Entity<Result>()
             .HasOne(t => t.User)
@@ -78,6 +80,8 @@ namespace ManagementSoftware.Models
             {
                 entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
             });
+
+
 
         }
 

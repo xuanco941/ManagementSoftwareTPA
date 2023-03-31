@@ -17,8 +17,15 @@ namespace ManagementSoftware.GUI
             InitializeComponent();
         }
 
+        private void SettingDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
 
 
+        void SetTextLabel(string text, Label label)
+        {
 
+        }
     }
 }

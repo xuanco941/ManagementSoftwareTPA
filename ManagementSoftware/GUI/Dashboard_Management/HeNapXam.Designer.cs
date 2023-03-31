@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // HeNapXam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ManagementSoftware.Properties.Resources.EtekXam;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "HeNapXam";
-            this.Text = "HeNapXam";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.EtekXam;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(502, 322);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "HeNapXam";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "HeNapXam";
+            ResumeLayout(false);
         }
 
         #endregion

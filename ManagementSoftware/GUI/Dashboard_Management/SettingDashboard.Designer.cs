@@ -35,7 +35,7 @@
             label3 = new Label();
             label2 = new Label();
             panelGiaTri = new Panel();
-            label17 = new Label();
+            labelsda = new Label();
             label16 = new Label();
             label15 = new Label();
             label14 = new Label();
@@ -148,7 +148,7 @@
             // 
             // panelGiaTri
             // 
-            panelGiaTri.Controls.Add(label17);
+            panelGiaTri.Controls.Add(labelsda);
             panelGiaTri.Controls.Add(label16);
             panelGiaTri.Controls.Add(label15);
             panelGiaTri.Controls.Add(label14);
@@ -161,17 +161,17 @@
             panelGiaTri.Size = new Size(192, 376);
             panelGiaTri.TabIndex = 0;
             // 
-            // label17
+            // labelsda
             // 
-            label17.BorderStyle = BorderStyle.FixedSingle;
-            label17.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(0, 3);
-            label17.Name = "label17";
-            gridLayout2.SetParticipateInLayout(label17, true);
-            label17.Size = new Size(192, 53);
-            label17.TabIndex = 7;
-            label17.Text = "0";
-            label17.TextAlign = ContentAlignment.MiddleCenter;
+            labelsda.BorderStyle = BorderStyle.FixedSingle;
+            labelsda.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelsda.Location = new Point(0, 3);
+            labelsda.Name = "labelsda";
+            gridLayout2.SetParticipateInLayout(labelsda, true);
+            labelsda.Size = new Size(192, 53);
+            labelsda.TabIndex = 7;
+            labelsda.Text = "0";
+            labelsda.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label16
             // 
@@ -506,6 +506,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "SettingDashboard";
             Text = "Setting";
+            Load += SettingDashboard_Load;
             tableLayoutPanel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
@@ -557,6 +558,7 @@
         private Label label5;
         private Label label4;
         private Label label1;
+        private Label labelsda;
     }
 
 

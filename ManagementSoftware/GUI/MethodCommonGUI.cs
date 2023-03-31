@@ -35,5 +35,14 @@ namespace ManagementSoftware.GUI
             form.Dock = DockStyle.Fill;
             form.Show();
         }
+
+        public void ShowFormOnTabPage(TabPage tabPage, Form form)
+        {
+            form.TopLevel = false;
+            tabPage.Controls.Add(form);
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
     }
 }

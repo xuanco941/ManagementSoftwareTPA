@@ -16,6 +16,9 @@
     <Compile Update="GUI\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Dashboard_Management\HeNap.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Employee.cs">
       <SubType>Form</SubType>
     </Compile>

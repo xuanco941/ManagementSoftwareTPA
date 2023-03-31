@@ -1,4 +1,5 @@
-﻿using Syncfusion.Windows.Forms.Chart;
+﻿using ManagementSoftware.GUI.Dashboard_Management;
+using Syncfusion.Windows.Forms.Chart;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -150,14 +151,14 @@ namespace ManagementSoftware.GUI
 
         private void buttonShowHeNap_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.OfType<HeNapXam>().Count() == 0)
+            if (Application.OpenForms.OfType<HeNap>().Count() == 0)
             {
-                HeNapXam f2 = new HeNapXam();
-                f2.Show();
+                HeNap f = new HeNap();
+                f.Show();
             }
             else
             {
-                Application.OpenForms.OfType<HeNapXam>().First().Activate();
+                Application.OpenForms.OfType<HeNap>().First().Activate();
             }
         }
     }

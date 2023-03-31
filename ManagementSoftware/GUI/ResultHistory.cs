@@ -15,54 +15,100 @@ namespace ManagementSoftware.GUI
 {
     public partial class ResultHistory : Form
     {
-        // Aleart
-        public delegate void CallAlert(string msg, FormAlert.enmType type);
-        public CallAlert callAlert;
-
-
-        //var name query tất cả
-        private const string allMachine = "Tất cả";
-
-
-        //query 
-        private string time1 = null;
-        private string time2 = null;
-        private string nameMachine = allMachine;
-
-        private bool checkApSuat = false;
-        private double apSuat1 = 0;
-        private double apSuat2 = 0;
-
-        private bool checkTheTich = false;
-        private double theTich1 = 0;
-        private double theTich2 = 0;
-
-        private bool checkLuuLuong = false;
-        private double luuLuong1 = 0;
-        private double luuLuong2 = 0;
-
+        // ngày để query 
+        private DateTime? timeStart = null;
+        private DateTime? timeEnd = null;
         // trang hiện tại
         private int page = 1;
+
         // tổng số trang
-        private int pageSize = 1;
-
-
+        private int TotalPages = 0;
+        //Data
+        List<Models.Result> ListResults = new List<Models.Result>();
         public ResultHistory()
         {
             InitializeComponent();
-
-            buttonExcel.ForeColor = Color.Black;
-            buttonExcel.Font = new System.Drawing.Font("Segoe UI", 11, FontStyle.Bold);
-
-            buttonPrint.ForeColor = Color.Black;
-            buttonPrint.Font = new System.Drawing.Font("Segoe UI", 11, FontStyle.Bold);
-
-            dataGridViewResult.RowTemplate.Height = 45;
         }
 
-    }
 
-    //METHOD
+
+        void LoadDGV()
+        {
+            DataGridViewColumn STT = new DataGridViewTextBoxColumn();
+            STT.HeaderText = "ID-Date";
+            DataGridViewColumn name = new DataGridViewTextBoxColumn();
+            name.HeaderText = "Lõi lọc";
+            DataGridViewColumn lanTest = new DataGridViewTextBoxColumn();
+            lanTest.HeaderText = "Lần test thứ";
+            DataGridViewColumn dienAp = new DataGridViewTextBoxColumn();
+            dienAp.HeaderText = "Áp suất test (bar)";
+            DataGridViewColumn dongDC = new DataGridViewTextBoxColumn();
+            dongDC.HeaderText = "Thời gian cấp (giây)";
+            DataGridViewColumn congSuat = new DataGridViewTextBoxColumn();
+            congSuat.HeaderText = "Thời gian giữ (giây)";
+            DataGridViewColumn ThoiGian = new DataGridViewTextBoxColumn();
+            ThoiGian.HeaderText = "Thời gian xả (giây)";
+            DataGridViewColumn Loi = new DataGridViewTextBoxColumn();
+            Loi.HeaderText = "Tình trạng";
+
+
+
+            dataGridViewResult.Columns.Add(STT);
+            dataGridViewResult.Columns.Add(name);
+            dataGridViewResult.Columns.Add(lanTest);
+            dataGridViewResult.Columns.Add(dienAp);
+            dataGridViewResult.Columns.Add(dongDC);
+            dataGridViewResult.Columns.Add(congSuat);
+            dataGridViewResult.Columns.Add(ThoiGian);
+            dataGridViewResult.Columns.Add(Loi);
+
+
+
+            dataGridViewResult.RowTemplate.Height = 40;
+
+        }
+
+
+
+
+
+        void LoadFormThongKe()
+        {
+
+        }
+
+
+        private void buttonPreviousPage_Click(object sender, EventArgs e)
+        {
+            if (this.page > 1)
+            {
+                this.page = this.page - 1;
+                LoadFormThongKe();
+            }
+        }
+
+        private void buttonNextPage_Click(object sender, EventArgs e)
+        {
+            if (this.page < this.TotalPages)
+            {
+                this.page = this.page + 1;
+                LoadFormThongKe();
+            }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            timeStart = TimeStart.Value;
+            timeEnd = TimeEnd.Value;
+            LoadFormThongKe();
+        }
+
+        private void buttonGoto_Click(object sender, EventArgs e)
+        {
+            this.page = int.Parse(pageNumberGoto.Text);
+            LoadFormThongKe();
+        }
+    }
 
 
 
