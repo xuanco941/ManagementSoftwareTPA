@@ -89,6 +89,8 @@ namespace ManagementSoftware.GUI
             groupBox1 = new GroupBox();
             buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             buttonExcel = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            label5 = new Label();
+            comboBox1 = new ComboBox();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelPagination.SuspendLayout();
@@ -664,6 +666,8 @@ namespace ManagementSoftware.GUI
             // panel10
             // 
             panel10.AutoScroll = true;
+            panel10.Controls.Add(label5);
+            panel10.Controls.Add(comboBox1);
             panel10.Controls.Add(label6);
             panel10.Controls.Add(comboBoxNguoiVanHanh);
             panel10.Controls.Add(panel11);
@@ -682,7 +686,7 @@ namespace ManagementSoftware.GUI
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(20, 64);
+            label6.Location = new Point(20, 53);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(101, 17);
@@ -694,7 +698,7 @@ namespace ManagementSoftware.GUI
             comboBoxNguoiVanHanh.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxNguoiVanHanh.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxNguoiVanHanh.FormattingEnabled = true;
-            comboBoxNguoiVanHanh.Location = new Point(23, 84);
+            comboBoxNguoiVanHanh.Location = new Point(23, 73);
             comboBoxNguoiVanHanh.Margin = new Padding(4, 3, 4, 3);
             comboBoxNguoiVanHanh.Name = "comboBoxNguoiVanHanh";
             comboBoxNguoiVanHanh.Size = new Size(190, 28);
@@ -734,7 +738,7 @@ namespace ManagementSoftware.GUI
             buttonCustomLoc.ForeColor = Color.Black;
             buttonCustomLoc.Image = (Image)resources.GetObject("buttonCustomLoc.Image");
             buttonCustomLoc.ImageAlign = ContentAlignment.MiddleRight;
-            buttonCustomLoc.Location = new Point(60, 195);
+            buttonCustomLoc.Location = new Point(60, 234);
             buttonCustomLoc.Margin = new Padding(4, 3, 4, 3);
             buttonCustomLoc.Name = "buttonCustomLoc";
             buttonCustomLoc.Size = new Size(120, 37);
@@ -749,7 +753,7 @@ namespace ManagementSoftware.GUI
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(21, 157);
+            label3.Location = new Point(21, 196);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(65, 17);
@@ -760,7 +764,7 @@ namespace ManagementSoftware.GUI
             // 
             dateTimePickerToiNgay.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             dateTimePickerToiNgay.Format = DateTimePickerFormat.Custom;
-            dateTimePickerToiNgay.Location = new Point(88, 154);
+            dateTimePickerToiNgay.Location = new Point(88, 193);
             dateTimePickerToiNgay.Margin = new Padding(4, 3, 4, 3);
             dateTimePickerToiNgay.MaxDate = new DateTime(2050, 12, 31, 0, 0, 0, 0);
             dateTimePickerToiNgay.MinDate = new DateTime(2022, 1, 1, 0, 0, 0, 0);
@@ -772,7 +776,7 @@ namespace ManagementSoftware.GUI
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(21, 122);
+            label2.Location = new Point(21, 161);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(62, 17);
@@ -783,7 +787,7 @@ namespace ManagementSoftware.GUI
             // 
             dateTimePickerTuNgay.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             dateTimePickerTuNgay.Format = DateTimePickerFormat.Custom;
-            dateTimePickerTuNgay.Location = new Point(88, 118);
+            dateTimePickerTuNgay.Location = new Point(88, 157);
             dateTimePickerTuNgay.Margin = new Padding(4, 3, 4, 3);
             dateTimePickerTuNgay.MaxDate = new DateTime(2050, 12, 31, 0, 0, 0, 0);
             dateTimePickerTuNgay.MinDate = new DateTime(2022, 1, 1, 0, 0, 0, 0);
@@ -929,6 +933,28 @@ namespace ManagementSoftware.GUI
             buttonExcel.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonExcel.UseVisualStyleBackColor = false;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(21, 102);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(52, 17);
+            label5.TabIndex = 94;
+            label5.Text = "Loại khí";
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(24, 122);
+            comboBox1.Margin = new Padding(4, 3, 4, 3);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(190, 28);
+            comboBox1.TabIndex = 93;
+            // 
             // ResultHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1038,5 +1064,7 @@ namespace ManagementSoftware.GUI
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPreviousPage;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustomGoPage;
         private Syncfusion.Windows.Forms.Tools.IntegerTextBox inputNumPageGo;
+        private Label label5;
+        private ComboBox comboBox1;
     }
 }

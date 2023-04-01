@@ -25,7 +25,7 @@ namespace ManagementSoftware.GUI
             settingDashboard = new SettingDashboard();
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
+        private async void Dashboard_Load(object sender, EventArgs e)
         {
             new MethodCommonGUI().ShowFormOnPanel(panelMainThongSoCaiDat, settingDashboard);
 
@@ -35,32 +35,44 @@ namespace ManagementSoftware.GUI
 
 
 
-
-            ChartSeries seriesApSuat = new ChartSeries("Áp suất", ChartSeriesType.Line);
-            seriesApSuat.Style.Border.Width = 3;
-            DateTime now = DateTime.Now.Date;
-
-            for (int i = 0; i < 300; i++)
-            {
-                seriesApSuat.Points.Add(now, new Random().Next(0, 101));
-                now = now.AddMinutes(1);
-            }
-            chartControlApSuat.Series.Add(seriesApSuat);
-
-            ChartSeries seriesTheTich = new ChartSeries("Thể tích", ChartSeriesType.Line);
-            seriesTheTich.Style.Border.Width = 3;
-
-            for (int i = 0; i < 300; i++)
-            {
-                seriesApSuat.Points.Add(now, new Random().Next(0, 101));
-                now = now.AddMinutes(1);
-            }
-            chartControlTheTich.Series.Add(seriesTheTich);
+            chartControlApSuat.Series.Clear();
 
 
+            ChartSeries seriesApSuatTong = new ChartSeries("Áp suất tổng", ChartSeriesType.Line);
+            seriesApSuatTong.Style.Border.Width = 3;
+            ChartSeries seriesApSuatHe1 = new ChartSeries("Áp suất hệ 1", ChartSeriesType.Line);
+            seriesApSuatHe1.Style.Border.Width = 3;
+            ChartSeries seriesApSuatHe2 = new ChartSeries("Áp suất hệ 2", ChartSeriesType.Line);
+            seriesApSuatHe2.Style.Border.Width = 3;
 
-            chartControlApSuat.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(now, now.AddMinutes(300), 50, ChartDateTimeIntervalType.Minutes);
-            chartControlTheTich.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(now, now.AddMinutes(300), 50, ChartDateTimeIntervalType.Minutes);
+
+            ChartSeries seriesTheTichHe1 = new ChartSeries("Thể tích hệ 1", ChartSeriesType.Line);
+            seriesApSuatHe1.Style.Border.Width = 3;
+            ChartSeries seriesTheTichHe2 = new ChartSeries("Thể tích hệ 2", ChartSeriesType.Line);
+            seriesApSuatHe2.Style.Border.Width = 3;
+
+
+            DateTime start = DateTime.Now;
+
+            await SetValueSeries(seriesApSuatTong,start);
+            await SetValueSeries(seriesApSuatHe1,start);
+            await SetValueSeries(seriesApSuatHe2,start);
+
+
+
+            //chartControlApSuat.Series.Add(seriesApSuatTong);
+            //chartControlApSuat.Series.Add();
+            //chartControlApSuat.Series.Add();
+
+
+
+            //chartControlTheTich.Series.Add(seriesTheTichHe1);
+            //chartControlTheTich.Series.Add(seriesTheTichHe2);
+
+
+
+            DateTime end = start.AddHours(1);
+            chartControlApSuat.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, 6, ChartDateTimeIntervalType.Minutes);
 
 
         }
@@ -79,17 +91,27 @@ namespace ManagementSoftware.GUI
 
 
 
+        async Task SetValueSeries(ChartSeries series, DateTime now)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                series.Points.Add(now, new Random().Next(0, 10));
 
+                now = now.AddMinutes(1);
+            }
+            chartControlApSuat.Series.Add(series);
+
+        }
 
 
         void SettingChart(ChartControl chartControl, string title)
         {
             chartControl.Title.Text = title;
-            chartControl.Title.Font = new System.Drawing.Font("Candara", 20F, System.Drawing.FontStyle.Bold);
+            chartControl.Title.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
 
             //this.chartControl1.Crosshair.Visible = true;
 
-            chartControl.PrimaryYAxis.RoundingPlaces = 2;
+            //chartControl.PrimaryYAxis.RoundingPlaces = 2;
 
             chartControl.ShowToolbar = true;
             //this.chartControl1.PrimaryXAxis.TickLabelsDrawingMode = ChartAxisTickLabelDrawingMode.UserMode;
@@ -107,20 +129,8 @@ namespace ManagementSoftware.GUI
             chartControl.PrimaryXAxis.RangeType = ChartAxisRangeType.Set;
 
             chartControl.PrimaryXAxis.DateTimeInterval.Type = ChartDateTimeIntervalType.Minutes;
-            DateTime end = DateTime.Now;
-            DateTime start = end.AddHours(-1);
-            chartControl.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, 6, ChartDateTimeIntervalType.Minutes);
 
             chartControl.PrimaryXAxis.DateTimeFormat = "HH:mm:ss dd/MM/yyyy";
-
-
-
-
-
-
-
-
-
 
 
             chartControl.Trackball.Visible = true;

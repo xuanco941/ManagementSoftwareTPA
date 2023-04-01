@@ -38,7 +38,8 @@ namespace ManagementSoftware.GUI
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ID" });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Áp Suất Tổng", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Loại bình", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng sản xuất", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 HeaderText = "Time Start",
@@ -57,7 +58,7 @@ namespace ManagementSoftware.GUI
                     Font = new Font("Segoe UI", 11, FontStyle.Regular),
                 }
             });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng sản xuất", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Áp suất tổng", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Trạng thái", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Người giám sát", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewButtonColumn()
@@ -91,7 +92,7 @@ namespace ManagementSoftware.GUI
                 HeaderText = "",
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 UseColumnTextForButtonValue = true,
-                Text = "Tình Trạng Lỗi",
+                Text = "Báo Lỗi",
                 Name = "Error",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
                 DefaultCellStyle = new DataGridViewCellStyle()
@@ -99,20 +100,6 @@ namespace ManagementSoftware.GUI
                     Font = new Font("Segoe UI", 12, FontStyle.Regular),
                 }
             });
-            dataGridView1.Columns.Add(new DataGridViewButtonColumn()
-            {
-                HeaderText = "",
-                SortMode = DataGridViewColumnSortMode.NotSortable,
-                UseColumnTextForButtonValue = true,
-                Text = "Thông Số Cài Đặt",
-                Name = "Setting",
-                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
-                DefaultCellStyle = new DataGridViewCellStyle()
-                {
-                    Font = new Font("Segoe UI", 12, FontStyle.Regular),
-                }
-            });
-
 
 
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
@@ -162,12 +149,6 @@ namespace ManagementSoftware.GUI
                     ResultError u = new ResultError();
                     u.ShowDialog();
                 }
-                if (e.ColumnIndex == dataGridView1.Columns["Setting"].Index)
-                {
-
-                    ResultSetting u = new ResultSetting();
-                    u.ShowDialog();
-                }
             }
             catch
             {
@@ -197,13 +178,13 @@ namespace ManagementSoftware.GUI
                 row.Cells[0].Value = i;
 
                 //Product? p = dALProduct.GetProductFromID(item.ProductID);
-
-                row.Cells[1].Value = new Random().Next(0, 101);
-                row.Cells[2].Value = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
-                row.Cells[3].Value = DateTime.Now.AddHours(3).ToString("HH:mm:ss dd/MM/yyyy");
-                row.Cells[4].Value = new Random().Next(0, 20);
-                row.Cells[5].Value = "Done";
-                row.Cells[6].Value = "admin";
+                row.Cells[1].Value = "Oxy";
+                row.Cells[2].Value = new Random().Next(0, 101);
+                row.Cells[3].Value = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
+                row.Cells[4].Value = DateTime.Now.AddHours(3).ToString("HH:mm:ss dd/MM/yyyy");
+                row.Cells[5].Value = new Random().Next(0, 20);
+                row.Cells[6].Value = "Done";
+                row.Cells[7].Value = "admin";
 
 
                 if (color)

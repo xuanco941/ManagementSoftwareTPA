@@ -14,7 +14,7 @@ namespace ManagementSoftware.Models
         [Key]
         public int ResultID { get; set; }
         public double ApSuatTong { get; set; }
-        public double LoaiKhi { get; set; }
+        public string LoaiKhi { get; set; }
         public DateTime TimeStart { get; set; }
         public DateTime TimeEnd { get; set; }
         public int ProductionNumber { get; set; }

@@ -37,9 +37,11 @@
             tableLayoutPanel5 = new TableLayoutPanel();
             button4 = new Button();
             panelDuLieu = new Panel();
+            label6 = new Label();
             label11 = new Label();
-            label12 = new Label();
             label16 = new Label();
+            label17 = new Label();
+            label12 = new Label();
             tableLayoutPanel9 = new TableLayoutPanel();
             tableLayoutPanel11 = new TableLayoutPanel();
             label1 = new Label();
@@ -58,13 +60,24 @@
             tableLayoutPanel12 = new TableLayoutPanel();
             button36 = new Button();
             tableLayoutPanel13 = new TableLayoutPanel();
-            chartControlTheTich = new Syncfusion.Windows.Forms.Chart.ChartControl();
             chartControlApSuat = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            chartControlTheTich = new Syncfusion.Windows.Forms.Chart.ChartControl();
             tableLayoutPanel2 = new TableLayoutPanel();
             buttonShowHeNap = new Button();
             buttonShowBangLoi = new Button();
             panel1 = new Panel();
             richTextBox1 = new RichTextBox();
+            panelTrangThaiHeNap = new Panel();
+            label27 = new Label();
+            label26 = new Label();
+            label25 = new Label();
+            label24 = new Label();
+            label23 = new Label();
+            label22 = new Label();
+            label21 = new Label();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
             tabPage2 = new TabPage();
             panelMainThongSoCaiDat = new Panel();
             tableLayoutPanel30 = new TableLayoutPanel();
@@ -92,6 +105,7 @@
             panel5 = new Panel();
             button38 = new Button();
             gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
+            gridLayout2 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -104,6 +118,7 @@
             tableLayoutPanel13.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
+            panelTrangThaiHeNap.SuspendLayout();
             tabPage2.SuspendLayout();
             tableLayoutPanel30.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
@@ -114,6 +129,7 @@
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridLayout1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridLayout2).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -144,17 +160,19 @@
             tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 1);
-            tableLayoutPanel1.Controls.Add(tableLayoutPanel12, 0, 2);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 2);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel12, 0, 3);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
+            tableLayoutPanel1.Controls.Add(panelTrangThaiHeNap, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(3, 3);
             tableLayoutPanel1.Margin = new Padding(3, 0, 3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10.90909F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 43.63636F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 45.45454F));
+            tableLayoutPanel1.RowCount = 4;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 38F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 38F));
             tableLayoutPanel1.Size = new Size(1121, 660);
             tableLayoutPanel1.TabIndex = 0;
             // 
@@ -162,17 +180,17 @@
             // 
             tableLayoutPanel3.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel3.ColumnCount = 2;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel3.Controls.Add(tableLayoutPanel5, 1, 0);
             tableLayoutPanel3.Controls.Add(tableLayoutPanel9, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(4, 76);
+            tableLayoutPanel3.Location = new Point(4, 162);
             tableLayoutPanel3.Margin = new Padding(3, 3, 3, 0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(1113, 283);
+            tableLayoutPanel3.Size = new Size(1113, 245);
             tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -182,17 +200,17 @@
             tableLayoutPanel5.Controls.Add(button4, 0, 0);
             tableLayoutPanel5.Controls.Add(panelDuLieu, 0, 1);
             tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(726, 4);
+            tableLayoutPanel5.Location = new Point(560, 4);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 2;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 17F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 83F));
-            tableLayoutPanel5.Size = new Size(383, 275);
+            tableLayoutPanel5.Size = new Size(549, 237);
             tableLayoutPanel5.TabIndex = 3;
             // 
             // button4
             // 
-            button4.BackColor = SystemColors.ControlDarkDark;
+            button4.BackColor = Color.SaddleBrown;
             button4.Dock = DockStyle.Fill;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
@@ -203,7 +221,7 @@
             button4.Location = new Point(0, 0);
             button4.Margin = new Padding(0);
             button4.Name = "button4";
-            button4.Size = new Size(383, 46);
+            button4.Size = new Size(549, 40);
             button4.TabIndex = 16;
             button4.Text = "THÔNG TIN";
             button4.TextAlign = ContentAlignment.MiddleRight;
@@ -212,59 +230,91 @@
             // 
             // panelDuLieu
             // 
+            panelDuLieu.Controls.Add(label6);
             panelDuLieu.Controls.Add(label11);
-            panelDuLieu.Controls.Add(label12);
             panelDuLieu.Controls.Add(label16);
+            panelDuLieu.Controls.Add(label17);
+            panelDuLieu.Controls.Add(label12);
             panelDuLieu.Dock = DockStyle.Fill;
-            panelDuLieu.Location = new Point(3, 49);
+            panelDuLieu.Location = new Point(3, 43);
             panelDuLieu.Name = "panelDuLieu";
-            panelDuLieu.Size = new Size(377, 223);
+            panelDuLieu.Size = new Size(543, 191);
             panelDuLieu.TabIndex = 17;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.Black;
+            label6.BorderStyle = BorderStyle.FixedSingle;
+            label6.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Location = new Point(0, 1);
+            label6.Margin = new Padding(0);
+            label6.Name = "label6";
+            gridLayout1.SetParticipateInLayout(label6, true);
+            label6.Size = new Size(543, 38);
+            label6.TabIndex = 43;
+            label6.Text = "Người vận hành : admin";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
-            label11.BackColor = Color.Olive;
+            label11.BackColor = Color.Black;
             label11.BorderStyle = BorderStyle.FixedSingle;
             label11.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label11.ForeColor = SystemColors.ButtonHighlight;
-            label11.Location = new Point(0, 1);
+            label11.Location = new Point(0, 39);
             label11.Margin = new Padding(0);
             label11.Name = "label11";
             gridLayout1.SetParticipateInLayout(label11, true);
-            label11.Size = new Size(377, 74);
+            label11.Size = new Size(543, 38);
             label11.TabIndex = 39;
             label11.Text = "Thời gian bắt đầu : 16:40:00";
             label11.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label12
-            // 
-            label12.BackColor = Color.Olive;
-            label12.BorderStyle = BorderStyle.FixedSingle;
-            label12.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.ForeColor = SystemColors.ButtonHighlight;
-            label12.Location = new Point(0, 75);
-            label12.Margin = new Padding(0);
-            label12.Name = "label12";
-            gridLayout1.SetParticipateInLayout(label12, true);
-            label12.Size = new Size(377, 74);
-            label12.TabIndex = 41;
-            label12.Text = "Số lượng nạp : 100";
-            label12.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // label16
             // 
-            label16.BackColor = Color.Olive;
+            label16.BackColor = Color.Black;
             label16.BorderStyle = BorderStyle.FixedSingle;
             label16.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label16.ForeColor = SystemColors.ButtonHighlight;
-            label16.Location = new Point(0, 149);
+            label16.Location = new Point(0, 77);
             label16.Margin = new Padding(0);
             label16.Name = "label16";
             gridLayout1.SetParticipateInLayout(label16, true);
-            label16.Size = new Size(377, 74);
+            label16.Size = new Size(543, 38);
             label16.TabIndex = 42;
-            label16.Text = "Người vận hành : admin";
+            label16.Text = "Loại khí : Oxy";
             label16.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            label17.BackColor = Color.Black;
+            label17.BorderStyle = BorderStyle.FixedSingle;
+            label17.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label17.ForeColor = SystemColors.ButtonHighlight;
+            label17.Location = new Point(0, 115);
+            label17.Margin = new Padding(0);
+            label17.Name = "label17";
+            gridLayout1.SetParticipateInLayout(label17, true);
+            label17.Size = new Size(543, 38);
+            label17.TabIndex = 44;
+            label17.Text = "Số lượng nạp hệ 1 : 100";
+            label17.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            label12.BackColor = Color.Black;
+            label12.BorderStyle = BorderStyle.FixedSingle;
+            label12.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = SystemColors.ButtonHighlight;
+            label12.Location = new Point(0, 153);
+            label12.Margin = new Padding(0);
+            label12.Name = "label12";
+            gridLayout1.SetParticipateInLayout(label12, true);
+            label12.Size = new Size(543, 38);
+            label12.TabIndex = 41;
+            label12.Text = "Số lượng nạp hệ 2 : 100";
+            label12.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel9
             // 
@@ -280,7 +330,7 @@
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 17F));
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 83F));
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel9.Size = new Size(721, 275);
+            tableLayoutPanel9.Size = new Size(555, 237);
             tableLayoutPanel9.TabIndex = 1;
             // 
             // tableLayoutPanel11
@@ -304,14 +354,14 @@
             tableLayoutPanel11.Controls.Add(label14, 2, 1);
             tableLayoutPanel11.Controls.Add(label15, 2, 2);
             tableLayoutPanel11.Dock = DockStyle.Fill;
-            tableLayoutPanel11.Location = new Point(3, 49);
+            tableLayoutPanel11.Location = new Point(3, 43);
             tableLayoutPanel11.Name = "tableLayoutPanel11";
             tableLayoutPanel11.RowCount = 4;
             tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel11.Size = new Size(715, 223);
+            tableLayoutPanel11.Size = new Size(549, 191);
             tableLayoutPanel11.TabIndex = 17;
             // 
             // label1
@@ -320,10 +370,10 @@
             label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(1, 166);
+            label1.Location = new Point(1, 142);
             label1.Margin = new Padding(0);
             label1.Name = "label1";
-            label1.Size = new Size(170, 56);
+            label1.Size = new Size(130, 48);
             label1.TabIndex = 44;
             label1.Text = "TỔNG";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -333,10 +383,10 @@
             label5.BackColor = Color.Black;
             label5.Dock = DockStyle.Fill;
             label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(172, 166);
+            label5.Location = new Point(132, 142);
             label5.Margin = new Padding(0);
             label5.Name = "label5";
-            label5.Size = new Size(270, 56);
+            label5.Size = new Size(207, 48);
             label5.TabIndex = 43;
             label5.Text = "99.99";
             label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -346,10 +396,10 @@
             label2.BackColor = Color.Black;
             label2.Dock = DockStyle.Fill;
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(443, 166);
+            label2.Location = new Point(340, 142);
             label2.Margin = new Padding(0);
             label2.Name = "label2";
-            label2.Size = new Size(271, 56);
+            label2.Size = new Size(208, 48);
             label2.TabIndex = 42;
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -359,10 +409,10 @@
             label3.Dock = DockStyle.Fill;
             label3.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(172, 1);
+            label3.Location = new Point(132, 1);
             label3.Margin = new Padding(0);
             label3.Name = "label3";
-            label3.Size = new Size(270, 54);
+            label3.Size = new Size(207, 46);
             label3.TabIndex = 30;
             label3.Text = "ÁP SUẤT (BAR)";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -373,10 +423,10 @@
             label4.Dock = DockStyle.Fill;
             label4.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(443, 1);
+            label4.Location = new Point(340, 1);
             label4.Margin = new Padding(0);
             label4.Name = "label4";
-            label4.Size = new Size(271, 54);
+            label4.Size = new Size(208, 46);
             label4.TabIndex = 31;
             label4.Text = "THỂ TÍCH (L)";
             label4.TextAlign = ContentAlignment.MiddleCenter;
@@ -390,7 +440,7 @@
             label7.Location = new Point(1, 1);
             label7.Margin = new Padding(0);
             label7.Name = "label7";
-            label7.Size = new Size(170, 54);
+            label7.Size = new Size(130, 46);
             label7.TabIndex = 32;
             label7.Text = "GIÁ TRỊ";
             label7.TextAlign = ContentAlignment.MiddleCenter;
@@ -401,10 +451,10 @@
             label8.Dock = DockStyle.Fill;
             label8.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = SystemColors.ButtonHighlight;
-            label8.Location = new Point(1, 56);
+            label8.Location = new Point(1, 48);
             label8.Margin = new Padding(0);
             label8.Name = "label8";
-            label8.Size = new Size(170, 54);
+            label8.Size = new Size(130, 46);
             label8.TabIndex = 33;
             label8.Text = "HỆ NẠP 1";
             label8.TextAlign = ContentAlignment.MiddleCenter;
@@ -415,10 +465,10 @@
             label9.Dock = DockStyle.Fill;
             label9.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = SystemColors.ButtonHighlight;
-            label9.Location = new Point(1, 111);
+            label9.Location = new Point(1, 95);
             label9.Margin = new Padding(0);
             label9.Name = "label9";
-            label9.Size = new Size(170, 54);
+            label9.Size = new Size(130, 46);
             label9.TabIndex = 34;
             label9.Text = "HỆ NẠP 2";
             label9.TextAlign = ContentAlignment.MiddleCenter;
@@ -428,10 +478,10 @@
             label10.BackColor = Color.Black;
             label10.Dock = DockStyle.Fill;
             label10.ForeColor = SystemColors.ButtonHighlight;
-            label10.Location = new Point(172, 111);
+            label10.Location = new Point(132, 95);
             label10.Margin = new Padding(0);
             label10.Name = "label10";
-            label10.Size = new Size(270, 54);
+            label10.Size = new Size(207, 46);
             label10.TabIndex = 35;
             label10.Text = "99.99";
             label10.TextAlign = ContentAlignment.MiddleCenter;
@@ -441,10 +491,10 @@
             label13.BackColor = Color.Black;
             label13.Dock = DockStyle.Fill;
             label13.ForeColor = SystemColors.ButtonHighlight;
-            label13.Location = new Point(172, 56);
+            label13.Location = new Point(132, 48);
             label13.Margin = new Padding(0);
             label13.Name = "label13";
-            label13.Size = new Size(270, 54);
+            label13.Size = new Size(207, 46);
             label13.TabIndex = 38;
             label13.Text = "99.99";
             label13.TextAlign = ContentAlignment.MiddleCenter;
@@ -454,10 +504,10 @@
             label14.BackColor = Color.Black;
             label14.Dock = DockStyle.Fill;
             label14.ForeColor = SystemColors.ButtonHighlight;
-            label14.Location = new Point(443, 56);
+            label14.Location = new Point(340, 48);
             label14.Margin = new Padding(0);
             label14.Name = "label14";
-            label14.Size = new Size(271, 54);
+            label14.Size = new Size(208, 46);
             label14.TabIndex = 39;
             label14.Text = "99.99";
             label14.TextAlign = ContentAlignment.MiddleCenter;
@@ -467,17 +517,17 @@
             label15.BackColor = Color.Black;
             label15.Dock = DockStyle.Fill;
             label15.ForeColor = SystemColors.ButtonHighlight;
-            label15.Location = new Point(443, 111);
+            label15.Location = new Point(340, 95);
             label15.Margin = new Padding(0);
             label15.Name = "label15";
-            label15.Size = new Size(271, 54);
+            label15.Size = new Size(208, 46);
             label15.TabIndex = 40;
             label15.Text = "99.99";
             label15.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button17
             // 
-            button17.BackColor = SystemColors.ControlDarkDark;
+            button17.BackColor = Color.SaddleBrown;
             button17.Dock = DockStyle.Fill;
             button17.FlatAppearance.BorderSize = 0;
             button17.FlatStyle = FlatStyle.Flat;
@@ -488,7 +538,7 @@
             button17.Location = new Point(0, 0);
             button17.Margin = new Padding(0);
             button17.Name = "button17";
-            button17.Size = new Size(721, 46);
+            button17.Size = new Size(555, 40);
             button17.TabIndex = 15;
             button17.Text = "DỮ LIỆU HỆ NẠP";
             button17.TextAlign = ContentAlignment.MiddleRight;
@@ -503,18 +553,18 @@
             tableLayoutPanel12.Controls.Add(button36, 0, 0);
             tableLayoutPanel12.Controls.Add(tableLayoutPanel13, 0, 1);
             tableLayoutPanel12.Dock = DockStyle.Fill;
-            tableLayoutPanel12.Location = new Point(4, 360);
+            tableLayoutPanel12.Location = new Point(4, 408);
             tableLayoutPanel12.Margin = new Padding(3, 0, 3, 0);
             tableLayoutPanel12.Name = "tableLayoutPanel12";
             tableLayoutPanel12.RowCount = 2;
             tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
             tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 85F));
-            tableLayoutPanel12.Size = new Size(1113, 299);
+            tableLayoutPanel12.Size = new Size(1113, 251);
             tableLayoutPanel12.TabIndex = 2;
             // 
             // button36
             // 
-            button36.BackColor = SystemColors.ControlDarkDark;
+            button36.BackColor = Color.SaddleBrown;
             button36.Dock = DockStyle.Fill;
             button36.FlatAppearance.BorderSize = 0;
             button36.FlatStyle = FlatStyle.Flat;
@@ -525,7 +575,7 @@
             button36.Location = new Point(1, 1);
             button36.Margin = new Padding(0);
             button36.Name = "button36";
-            button36.Size = new Size(1111, 44);
+            button36.Size = new Size(1111, 37);
             button36.TabIndex = 16;
             button36.Text = "BIỂU ĐỒ DỮ LIỆU";
             button36.TextAlign = ContentAlignment.MiddleRight;
@@ -538,48 +588,22 @@
             tableLayoutPanel13.ColumnCount = 2;
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel13.Controls.Add(chartControlTheTich, 1, 0);
             tableLayoutPanel13.Controls.Add(chartControlApSuat, 0, 0);
+            tableLayoutPanel13.Controls.Add(chartControlTheTich, 1, 0);
             tableLayoutPanel13.Dock = DockStyle.Fill;
-            tableLayoutPanel13.Location = new Point(4, 49);
+            tableLayoutPanel13.Location = new Point(4, 42);
             tableLayoutPanel13.Name = "tableLayoutPanel13";
             tableLayoutPanel13.RowCount = 1;
             tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel13.Size = new Size(1105, 246);
+            tableLayoutPanel13.Size = new Size(1105, 205);
             tableLayoutPanel13.TabIndex = 18;
-            // 
-            // chartControlTheTich
-            // 
-            chartControlTheTich.ChartArea.CursorLocation = new Point(0, 0);
-            chartControlTheTich.ChartArea.CursorReDraw = false;
-            chartControlTheTich.Dock = DockStyle.Fill;
-            chartControlTheTich.IsWindowLess = false;
-            // 
-            // 
-            // 
-            chartControlTheTich.Legend.Location = new Point(436, 75);
-            chartControlTheTich.Localize = null;
-            chartControlTheTich.Location = new Point(556, 4);
-            chartControlTheTich.Name = "chartControlTheTich";
-            chartControlTheTich.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            chartControlTheTich.PrimaryXAxis.Margin = true;
-            chartControlTheTich.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            chartControlTheTich.PrimaryYAxis.Margin = true;
-            chartControlTheTich.Size = new Size(545, 238);
-            chartControlTheTich.TabIndex = 1;
-            chartControlTheTich.Text = "BIỂU ĐỒ THỂ TÍCH";
-            // 
-            // 
-            // 
-            chartControlTheTich.Title.Name = "Default";
-            chartControlTheTich.Titles.Add(chartControlTheTich.Title);
-            chartControlTheTich.VisualTheme = "";
             // 
             // chartControlApSuat
             // 
             chartControlApSuat.ChartArea.CursorLocation = new Point(0, 0);
             chartControlApSuat.ChartArea.CursorReDraw = false;
             chartControlApSuat.Dock = DockStyle.Fill;
+            chartControlApSuat.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             chartControlApSuat.IsWindowLess = false;
             // 
             // 
@@ -592,15 +616,43 @@
             chartControlApSuat.PrimaryXAxis.Margin = true;
             chartControlApSuat.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             chartControlApSuat.PrimaryYAxis.Margin = true;
-            chartControlApSuat.Size = new Size(545, 238);
+            chartControlApSuat.Size = new Size(545, 197);
             chartControlApSuat.TabIndex = 0;
-            chartControlApSuat.Text = "BIỂU ĐỒ ÁP SUẤT";
+            chartControlApSuat.Text = "chartControl3";
             // 
             // 
             // 
             chartControlApSuat.Title.Name = "Default";
             chartControlApSuat.Titles.Add(chartControlApSuat.Title);
             chartControlApSuat.VisualTheme = "";
+            // 
+            // chartControlTheTich
+            // 
+            chartControlTheTich.ChartArea.CursorLocation = new Point(0, 0);
+            chartControlTheTich.ChartArea.CursorReDraw = false;
+            chartControlTheTich.Dock = DockStyle.Fill;
+            chartControlTheTich.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            chartControlTheTich.IsWindowLess = false;
+            // 
+            // 
+            // 
+            chartControlTheTich.Legend.Location = new Point(436, 75);
+            chartControlTheTich.Localize = null;
+            chartControlTheTich.Location = new Point(556, 4);
+            chartControlTheTich.Name = "chartControlTheTich";
+            chartControlTheTich.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            chartControlTheTich.PrimaryXAxis.Margin = true;
+            chartControlTheTich.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            chartControlTheTich.PrimaryYAxis.Margin = true;
+            chartControlTheTich.Size = new Size(545, 197);
+            chartControlTheTich.TabIndex = 1;
+            chartControlTheTich.Text = "chartControl4";
+            // 
+            // 
+            // 
+            chartControlTheTich.Title.Name = "Default";
+            chartControlTheTich.Titles.Add(chartControlTheTich.Title);
+            chartControlTheTich.VisualTheme = "";
             // 
             // tableLayoutPanel2
             // 
@@ -617,12 +669,12 @@
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(1113, 65);
+            tableLayoutPanel2.Size = new Size(1113, 59);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // buttonShowHeNap
             // 
-            buttonShowHeNap.BackColor = Color.Green;
+            buttonShowHeNap.BackColor = Color.RoyalBlue;
             buttonShowHeNap.Cursor = Cursors.Hand;
             buttonShowHeNap.Dock = DockStyle.Fill;
             buttonShowHeNap.FlatAppearance.BorderSize = 0;
@@ -632,7 +684,7 @@
             buttonShowHeNap.Image = Properties.Resources.book24;
             buttonShowHeNap.Location = new Point(948, 3);
             buttonShowHeNap.Name = "buttonShowHeNap";
-            buttonShowHeNap.Size = new Size(162, 59);
+            buttonShowHeNap.Size = new Size(162, 53);
             buttonShowHeNap.TabIndex = 8;
             buttonShowHeNap.Text = "HỆ NẠP";
             buttonShowHeNap.TextAlign = ContentAlignment.MiddleRight;
@@ -652,7 +704,7 @@
             buttonShowBangLoi.Image = Properties.Resources.icons8_medium_risk_30;
             buttonShowBangLoi.Location = new Point(782, 3);
             buttonShowBangLoi.Name = "buttonShowBangLoi";
-            buttonShowBangLoi.Size = new Size(160, 59);
+            buttonShowBangLoi.Size = new Size(160, 53);
             buttonShowBangLoi.TabIndex = 7;
             buttonShowBangLoi.Text = "BẢNG LỖI";
             buttonShowBangLoi.TextAlign = ContentAlignment.MiddleRight;
@@ -666,7 +718,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(773, 59);
+            panel1.Size = new Size(773, 53);
             panel1.TabIndex = 6;
             // 
             // richTextBox1
@@ -678,9 +730,167 @@
             richTextBox1.Location = new Point(0, 0);
             richTextBox1.Margin = new Padding(3, 2, 3, 2);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(773, 59);
+            richTextBox1.Size = new Size(773, 53);
             richTextBox1.TabIndex = 3;
             richTextBox1.Text = "- chưa có mẻ nạp";
+            // 
+            // panelTrangThaiHeNap
+            // 
+            panelTrangThaiHeNap.Controls.Add(label27);
+            panelTrangThaiHeNap.Controls.Add(label26);
+            panelTrangThaiHeNap.Controls.Add(label25);
+            panelTrangThaiHeNap.Controls.Add(label24);
+            panelTrangThaiHeNap.Controls.Add(label23);
+            panelTrangThaiHeNap.Controls.Add(label22);
+            panelTrangThaiHeNap.Controls.Add(label21);
+            panelTrangThaiHeNap.Controls.Add(label20);
+            panelTrangThaiHeNap.Controls.Add(label19);
+            panelTrangThaiHeNap.Controls.Add(label18);
+            panelTrangThaiHeNap.Dock = DockStyle.Fill;
+            panelTrangThaiHeNap.Location = new Point(4, 70);
+            panelTrangThaiHeNap.Name = "panelTrangThaiHeNap";
+            panelTrangThaiHeNap.Size = new Size(1113, 85);
+            panelTrangThaiHeNap.TabIndex = 3;
+            // 
+            // label27
+            // 
+            label27.BackColor = Color.DarkSlateGray;
+            label27.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label27.ForeColor = SystemColors.ButtonHighlight;
+            label27.Location = new Point(2, 1);
+            label27.Margin = new Padding(0);
+            label27.Name = "label27";
+            gridLayout2.SetParticipateInLayout(label27, true);
+            label27.Size = new Size(222, 42);
+            label27.TabIndex = 43;
+            label27.Text = "HỆ NẠP 1 :";
+            label27.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label26
+            // 
+            label26.BackColor = Color.DimGray;
+            label26.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label26.ForeColor = SystemColors.ButtonHighlight;
+            label26.Location = new Point(224, 1);
+            label26.Margin = new Padding(0);
+            label26.Name = "label26";
+            gridLayout2.SetParticipateInLayout(label26, true);
+            label26.Size = new Size(222, 42);
+            label26.TabIndex = 42;
+            label26.Text = "SẴN SÀNG NẠP";
+            label26.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label25
+            // 
+            label25.BackColor = Color.LimeGreen;
+            label25.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label25.ForeColor = SystemColors.ButtonHighlight;
+            label25.Location = new Point(446, 1);
+            label25.Margin = new Padding(0);
+            label25.Name = "label25";
+            gridLayout2.SetParticipateInLayout(label25, true);
+            label25.Size = new Size(222, 42);
+            label25.TabIndex = 41;
+            label25.Text = "ĐANG NẠP";
+            label25.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            label24.BackColor = Color.DimGray;
+            label24.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label24.ForeColor = SystemColors.ButtonHighlight;
+            label24.Location = new Point(668, 1);
+            label24.Margin = new Padding(0);
+            label24.Name = "label24";
+            gridLayout2.SetParticipateInLayout(label24, true);
+            label24.Size = new Size(222, 42);
+            label24.TabIndex = 40;
+            label24.Text = "XẢ KHÍ";
+            label24.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            label23.BackColor = Color.DimGray;
+            label23.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label23.ForeColor = SystemColors.ButtonHighlight;
+            label23.Location = new Point(890, 1);
+            label23.Margin = new Padding(0);
+            label23.Name = "label23";
+            gridLayout2.SetParticipateInLayout(label23, true);
+            label23.Size = new Size(222, 42);
+            label23.TabIndex = 39;
+            label23.Text = "DỪNG NẠP";
+            label23.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            label22.BackColor = Color.DarkSlateGray;
+            label22.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label22.ForeColor = SystemColors.ButtonHighlight;
+            label22.Location = new Point(2, 43);
+            label22.Margin = new Padding(0);
+            label22.Name = "label22";
+            gridLayout2.SetParticipateInLayout(label22, true);
+            label22.Size = new Size(222, 42);
+            label22.TabIndex = 38;
+            label22.Text = "HỆ NẠP 2 :";
+            label22.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            label21.BackColor = Color.DimGray;
+            label21.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label21.ForeColor = SystemColors.ButtonHighlight;
+            label21.Location = new Point(224, 43);
+            label21.Margin = new Padding(0);
+            label21.Name = "label21";
+            gridLayout2.SetParticipateInLayout(label21, true);
+            label21.Size = new Size(222, 42);
+            label21.TabIndex = 37;
+            label21.Text = "SẴN SÀNG NẠP";
+            label21.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            label20.BackColor = Color.LimeGreen;
+            label20.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label20.ForeColor = SystemColors.ButtonHighlight;
+            label20.Location = new Point(446, 43);
+            label20.Margin = new Padding(0);
+            label20.Name = "label20";
+            gridLayout2.SetParticipateInLayout(label20, true);
+            label20.Size = new Size(222, 42);
+            label20.TabIndex = 36;
+            label20.Text = "ĐANG NẠP";
+            label20.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            label19.BackColor = Color.DimGray;
+            label19.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label19.ForeColor = SystemColors.ButtonHighlight;
+            label19.Location = new Point(668, 43);
+            label19.Margin = new Padding(0);
+            label19.Name = "label19";
+            gridLayout2.SetParticipateInLayout(label19, true);
+            label19.Size = new Size(222, 42);
+            label19.TabIndex = 35;
+            label19.Text = "XẢ KHÍ";
+            label19.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            label18.BackColor = Color.DimGray;
+            label18.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label18.ForeColor = SystemColors.ButtonHighlight;
+            label18.Location = new Point(890, 43);
+            label18.Margin = new Padding(0);
+            label18.Name = "label18";
+            gridLayout2.SetParticipateInLayout(label18, true);
+            label18.Size = new Size(222, 42);
+            label18.TabIndex = 34;
+            label18.Text = "DỪNG NẠP";
+            label18.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tabPage2
             // 
@@ -1074,7 +1284,13 @@
             // 
             gridLayout1.Columns = 1;
             gridLayout1.ContainerControl = panelDuLieu;
-            gridLayout1.Rows = 3;
+            gridLayout1.Rows = 5;
+            // 
+            // gridLayout2
+            // 
+            gridLayout2.Columns = 5;
+            gridLayout2.ContainerControl = panelTrangThaiHeNap;
+            gridLayout2.Rows = 2;
             // 
             // Dashboard
             // 
@@ -1099,6 +1315,7 @@
             tableLayoutPanel13.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            panelTrangThaiHeNap.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tableLayoutPanel30.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
@@ -1109,6 +1326,7 @@
             panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)gridLayout1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridLayout2).EndInit();
             ResumeLayout(false);
         }
 
@@ -1165,8 +1383,6 @@
         private Button buttonShowBangLoi;
         private Panel panel1;
         private RichTextBox richTextBox1;
-        private Syncfusion.Windows.Forms.Chart.ChartControl chartControlTheTich;
-        private Syncfusion.Windows.Forms.Chart.ChartControl chartControlApSuat;
         private Button buttonShowHeNap;
         private Label label1;
         private Label label5;
@@ -1178,5 +1394,21 @@
         private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout1;
         private Label label12;
         private Label label16;
+        private Label label6;
+        private Label label17;
+        private Panel panelTrangThaiHeNap;
+        private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout2;
+        private Label label18;
+        private Label label27;
+        private Label label26;
+        private Label label25;
+        private Label label24;
+        private Label label23;
+        private Label label22;
+        private Label label21;
+        private Label label20;
+        private Label label19;
+        private Syncfusion.Windows.Forms.Chart.ChartControl chartControlApSuat;
+        private Syncfusion.Windows.Forms.Chart.ChartControl chartControlTheTich;
     }
 }

@@ -25,8 +25,9 @@ namespace ManagementSoftware
             Common.ConnectionString = text;
 
 
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
+
+
+
             using (var context = new DataBaseContext())
             {
                 if (context.CheckDatabaseExists() == false)
@@ -38,8 +39,6 @@ namespace ManagementSoftware
                 }
 
             }
-            stopwatch.Stop();
-            System.Diagnostics.Debug.WriteLine("TIME :" + stopwatch.Elapsed.Seconds);
 
 
 
