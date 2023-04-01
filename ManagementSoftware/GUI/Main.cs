@@ -135,7 +135,7 @@ namespace ManagementSoftware.GUI
 
         private void buttonUserWorking_Click(object sender, EventArgs e)
         {
-            LichSuLamViec form = new LichSuLamViec();
+            LichSuDangNhap form = new LichSuDangNhap();
             //ChangeFormContent(form, sender);
             ChangeForm(form, sender);
         }

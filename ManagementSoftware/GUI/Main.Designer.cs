@@ -37,6 +37,7 @@ namespace ManagementSoftware.GUI
             buttonHelp = new Button();
             buttonActivity = new Button();
             buttonEmployee = new Button();
+            buttonUserWorking = new Button();
             buttonResult = new Button();
             buttonDashboard = new Button();
             panel3 = new Panel();
@@ -48,7 +49,6 @@ namespace ManagementSoftware.GUI
             tableLayoutPanel1 = new TableLayoutPanel();
             panelAleart = new Panel();
             panel2 = new Panel();
-            buttonUserWorking = new Button();
             panelMenu.SuspendLayout();
             panelItemMenu.SuspendLayout();
             panel3.SuspendLayout();
@@ -76,8 +76,8 @@ namespace ManagementSoftware.GUI
             panelItemMenu.Controls.Add(buttonDangXuat);
             panelItemMenu.Controls.Add(buttonHelp);
             panelItemMenu.Controls.Add(buttonActivity);
-            panelItemMenu.Controls.Add(buttonEmployee);
             panelItemMenu.Controls.Add(buttonUserWorking);
+            panelItemMenu.Controls.Add(buttonEmployee);
             panelItemMenu.Controls.Add(buttonResult);
             panelItemMenu.Controls.Add(buttonDashboard);
             panelItemMenu.Dock = DockStyle.Fill;
@@ -152,7 +152,7 @@ namespace ManagementSoftware.GUI
             buttonEmployee.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEmployee.ForeColor = Color.White;
             buttonEmployee.Image = Properties.Resources.button2_Image;
-            buttonEmployee.Location = new Point(0, 237);
+            buttonEmployee.Location = new Point(0, 158);
             buttonEmployee.Name = "buttonEmployee";
             buttonEmployee.Size = new Size(209, 79);
             buttonEmployee.TabIndex = 9;
@@ -161,6 +161,25 @@ namespace ManagementSoftware.GUI
             buttonEmployee.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonEmployee.UseVisualStyleBackColor = true;
             buttonEmployee.Click += buttonEmployee_Click;
+            // 
+            // buttonUserWorking
+            // 
+            buttonUserWorking.Cursor = Cursors.Hand;
+            buttonUserWorking.Dock = DockStyle.Top;
+            buttonUserWorking.FlatAppearance.BorderSize = 0;
+            buttonUserWorking.FlatStyle = FlatStyle.Flat;
+            buttonUserWorking.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonUserWorking.ForeColor = Color.White;
+            buttonUserWorking.Image = Properties.Resources._17867729231644336865_31;
+            buttonUserWorking.Location = new Point(0, 237);
+            buttonUserWorking.Name = "buttonUserWorking";
+            buttonUserWorking.Size = new Size(209, 79);
+            buttonUserWorking.TabIndex = 14;
+            buttonUserWorking.Text = "Lịch sử đăng nhập";
+            buttonUserWorking.TextAlign = ContentAlignment.BottomCenter;
+            buttonUserWorking.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonUserWorking.UseVisualStyleBackColor = true;
+            buttonUserWorking.Click += buttonUserWorking_Click;
             // 
             // buttonResult
             // 
@@ -296,25 +315,6 @@ namespace ManagementSoftware.GUI
             panel2.Name = "panel2";
             panel2.Size = new Size(243, 70);
             panel2.TabIndex = 0;
-            // 
-            // buttonUserWorking
-            // 
-            buttonUserWorking.Cursor = Cursors.Hand;
-            buttonUserWorking.Dock = DockStyle.Top;
-            buttonUserWorking.FlatAppearance.BorderSize = 0;
-            buttonUserWorking.FlatStyle = FlatStyle.Flat;
-            buttonUserWorking.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonUserWorking.ForeColor = Color.White;
-            buttonUserWorking.Image = Properties.Resources._17867729231644336865_31;
-            buttonUserWorking.Location = new Point(0, 158);
-            buttonUserWorking.Name = "buttonUserWorking";
-            buttonUserWorking.Size = new Size(209, 79);
-            buttonUserWorking.TabIndex = 14;
-            buttonUserWorking.Text = "Lịch sử làm việc";
-            buttonUserWorking.TextAlign = ContentAlignment.BottomCenter;
-            buttonUserWorking.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonUserWorking.UseVisualStyleBackColor = true;
-            buttonUserWorking.Click += buttonUserWorking_Click;
             // 
             // Main
             // 

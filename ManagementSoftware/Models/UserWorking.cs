@@ -8,15 +8,14 @@ using System.Threading.Tasks;
 
 namespace ManagementSoftware.Models
 {
-    [Table("ResultWarning")]
-    public class ResultWarning
+    [Table("UserWorking")]
+    public class UserWorking
     {
         [Key]
-        public int ResultWarningID { get; set; }
-        public string? Title { get; set; } = "";
-        public string? Description { get; set; } = "";
+        public int UserWorkingID { get; set; }
         public DateTime CreateAt { get; set; }
-        public int ResultID { get; set; }
-        public Result Result { get; set; }
+        public DateTime EndAt { get; set; }
+        public int UserID { get; set; }
+        public User User { get; set; }
     }
 }

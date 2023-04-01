@@ -11,7 +11,7 @@ namespace ManagementSoftware.Models
         public DbSet<Result> Results { get; set; }
         public DbSet<ResultWarning> ResultWarnings { get; set; }
         public DbSet<Machine> Machines { get; set; }
-
+        public DbSet<UserWorking> UserWorkings { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -81,8 +81,29 @@ namespace ManagementSoftware.Models
                 entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
             });
 
+            //UserWorking
+            modelBuilder.Entity<UserWorking>(entity =>
+            {
+                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
+                entity.Property(e => e.EndAt).HasDefaultValueSql("(getdate())");
+            });
+
+        }
 
 
+
+
+
+        public bool CheckDatabaseExists()
+        {
+            try
+            {
+                return this.Database.CanConnect();
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public bool CreateDatabase()

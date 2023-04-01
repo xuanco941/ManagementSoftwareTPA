@@ -40,7 +40,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1265, 580);
+            panel1.Size = new Size(937, 548);
             panel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -50,14 +50,14 @@
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1265, 580);
+            dataGridView1.Size = new Size(937, 548);
             dataGridView1.TabIndex = 0;
             // 
             // ErrorDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1265, 580);
+            ClientSize = new Size(937, 548);
             Controls.Add(panel1);
             Name = "ErrorDashboard";
             StartPosition = FormStartPosition.CenterScreen;

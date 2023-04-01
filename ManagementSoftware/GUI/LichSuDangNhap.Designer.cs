@@ -1,6 +1,6 @@
 ﻿namespace ManagementSoftware.GUI
 {
-    partial class LichSuLamViec
+    partial class LichSuDangNhap
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ManagementSoftware.GUI
 {
-    public partial class LichSuLamViec : Form
+    public partial class LichSuDangNhap : Form
     {
-        public LichSuLamViec()
+        public LichSuDangNhap()
         {
             InitializeComponent();
             LoadDGV();
@@ -21,7 +21,8 @@ namespace ManagementSoftware.GUI
         {
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "MÃ NHÂN VIÊN", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "TÊN NHÂN VIÊN", SortMode = DataGridViewColumnSortMode.NotSortable });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "SỐ LƯỢNG NẠP", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "NGÀY GIỜ ĐĂNG NHẬP", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "THỜI GIAN HOẠT ĐỘNG ĐẾN", SortMode = DataGridViewColumnSortMode.NotSortable });
 
 
 
@@ -48,12 +49,19 @@ namespace ManagementSoftware.GUI
 
 
 
-
-
-            for (int i = 0; i < 20; i++)
+            for (int i = 1; i < 7; i++)
             {
-                int id = dataGridView1.Rows.Add();
-                dataGridView1.Rows[id].DefaultCellStyle.BackColor = Color.FromArgb(41, 44, 51);
+                int rowId = dataGridView1.Rows.Add();
+                DataGridViewRow row = dataGridView1.Rows[rowId];
+
+                row.Cells[0].Value = Common.USERS + new Random().Next(0, 101);
+                row.Cells[1].Value = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
+                row.Cells[2].Value = DateTime.Now.AddHours(3).ToString("HH:mm:ss dd/MM/yyyy");
+                row.Cells[3].Value = "Đỗ Văn A";
+
+
+                dataGridView1.Rows[rowId].DefaultCellStyle.BackColor = Color.FromArgb(41, 44, 51);
+
             }
 
 
