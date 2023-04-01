@@ -60,8 +60,6 @@
             tableLayoutPanel12 = new TableLayoutPanel();
             button36 = new Button();
             tableLayoutPanel13 = new TableLayoutPanel();
-            chartControlApSuat = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            chartControlTheTich = new Syncfusion.Windows.Forms.Chart.ChartControl();
             tableLayoutPanel2 = new TableLayoutPanel();
             buttonShowHeNap = new Button();
             buttonShowBangLoi = new Button();
@@ -106,6 +104,8 @@
             button38 = new Button();
             gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
             gridLayout2 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
+            panelChartApSuat = new Panel();
+            panelChartTheTich = new Panel();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -588,8 +588,8 @@
             tableLayoutPanel13.ColumnCount = 2;
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel13.Controls.Add(chartControlApSuat, 0, 0);
-            tableLayoutPanel13.Controls.Add(chartControlTheTich, 1, 0);
+            tableLayoutPanel13.Controls.Add(panelChartApSuat, 0, 0);
+            tableLayoutPanel13.Controls.Add(panelChartTheTich, 1, 0);
             tableLayoutPanel13.Dock = DockStyle.Fill;
             tableLayoutPanel13.Location = new Point(4, 42);
             tableLayoutPanel13.Name = "tableLayoutPanel13";
@@ -597,62 +597,6 @@
             tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel13.Size = new Size(1105, 205);
             tableLayoutPanel13.TabIndex = 18;
-            // 
-            // chartControlApSuat
-            // 
-            chartControlApSuat.ChartArea.CursorLocation = new Point(0, 0);
-            chartControlApSuat.ChartArea.CursorReDraw = false;
-            chartControlApSuat.Dock = DockStyle.Fill;
-            chartControlApSuat.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            chartControlApSuat.IsWindowLess = false;
-            // 
-            // 
-            // 
-            chartControlApSuat.Legend.Location = new Point(436, 75);
-            chartControlApSuat.Localize = null;
-            chartControlApSuat.Location = new Point(4, 4);
-            chartControlApSuat.Name = "chartControlApSuat";
-            chartControlApSuat.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            chartControlApSuat.PrimaryXAxis.Margin = true;
-            chartControlApSuat.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            chartControlApSuat.PrimaryYAxis.Margin = true;
-            chartControlApSuat.Size = new Size(545, 197);
-            chartControlApSuat.TabIndex = 0;
-            chartControlApSuat.Text = "chartControl3";
-            // 
-            // 
-            // 
-            chartControlApSuat.Title.Name = "Default";
-            chartControlApSuat.Titles.Add(chartControlApSuat.Title);
-            chartControlApSuat.VisualTheme = "";
-            // 
-            // chartControlTheTich
-            // 
-            chartControlTheTich.ChartArea.CursorLocation = new Point(0, 0);
-            chartControlTheTich.ChartArea.CursorReDraw = false;
-            chartControlTheTich.Dock = DockStyle.Fill;
-            chartControlTheTich.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            chartControlTheTich.IsWindowLess = false;
-            // 
-            // 
-            // 
-            chartControlTheTich.Legend.Location = new Point(436, 75);
-            chartControlTheTich.Localize = null;
-            chartControlTheTich.Location = new Point(556, 4);
-            chartControlTheTich.Name = "chartControlTheTich";
-            chartControlTheTich.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            chartControlTheTich.PrimaryXAxis.Margin = true;
-            chartControlTheTich.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            chartControlTheTich.PrimaryYAxis.Margin = true;
-            chartControlTheTich.Size = new Size(545, 197);
-            chartControlTheTich.TabIndex = 1;
-            chartControlTheTich.Text = "chartControl4";
-            // 
-            // 
-            // 
-            chartControlTheTich.Title.Name = "Default";
-            chartControlTheTich.Titles.Add(chartControlTheTich.Title);
-            chartControlTheTich.VisualTheme = "";
             // 
             // tableLayoutPanel2
             // 
@@ -1292,6 +1236,22 @@
             gridLayout2.ContainerControl = panelTrangThaiHeNap;
             gridLayout2.Rows = 2;
             // 
+            // panelChartApSuat
+            // 
+            panelChartApSuat.Dock = DockStyle.Fill;
+            panelChartApSuat.Location = new Point(4, 4);
+            panelChartApSuat.Name = "panelChartApSuat";
+            panelChartApSuat.Size = new Size(545, 197);
+            panelChartApSuat.TabIndex = 0;
+            // 
+            // panelChartTheTich
+            // 
+            panelChartTheTich.Dock = DockStyle.Fill;
+            panelChartTheTich.Location = new Point(556, 4);
+            panelChartTheTich.Name = "panelChartTheTich";
+            panelChartTheTich.Size = new Size(545, 197);
+            panelChartTheTich.TabIndex = 1;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1408,7 +1368,7 @@
         private Label label21;
         private Label label20;
         private Label label19;
-        private Syncfusion.Windows.Forms.Chart.ChartControl chartControlApSuat;
-        private Syncfusion.Windows.Forms.Chart.ChartControl chartControlTheTich;
+        private Panel panelChartApSuat;
+        private Panel panelChartTheTich;
     }
 }

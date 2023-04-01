@@ -225,8 +225,9 @@ namespace ManagementSoftware.GUI
             form.Show();
             this.Font = Common.FontForm;
 
+            labelHeader.Text = "Xin chào," + Common.USERSESSION?.Username;
 
-            timer = new System.Threading.Timer(CallBack, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
+            //timer = new System.Threading.Timer(CallBack, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
         }
 
 

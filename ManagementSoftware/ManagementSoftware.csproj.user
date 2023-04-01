@@ -76,6 +76,9 @@
     <Compile Update="GUI\ResultManagement\ResultHeNap.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Section\Chart.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Section\FormAleart.cs">
       <SubType>Form</SubType>
     </Compile>
