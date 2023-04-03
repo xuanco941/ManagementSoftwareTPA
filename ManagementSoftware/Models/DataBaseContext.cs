@@ -83,6 +83,12 @@ namespace ManagementSoftware.Models
                 entity.Property(e => e.EndAt).HasDefaultValueSql("(getdate())");
             });
 
+            //machine
+            modelBuilder.Entity<Machine>(entity =>
+            {
+                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
+            });
+
         }
 
 
