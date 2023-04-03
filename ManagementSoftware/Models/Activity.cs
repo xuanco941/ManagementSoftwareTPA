@@ -17,8 +17,7 @@ namespace ManagementSoftware.Models
         public string? Description { get; set; }
         public DateTime CreateAt { get; set; }
         public string? Username { get; set; } = "";
-        public int? UserID { get; set; }
-        public User? User { get; set; }
+        public int UserID { get; set; }
 
 
     }

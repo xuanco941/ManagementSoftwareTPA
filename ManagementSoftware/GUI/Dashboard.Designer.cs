@@ -60,6 +60,8 @@
             tableLayoutPanel12 = new TableLayoutPanel();
             button36 = new Button();
             tableLayoutPanel13 = new TableLayoutPanel();
+            panelChartApSuat = new Panel();
+            panelChartTheTich = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
             buttonShowHeNap = new Button();
             buttonShowBangLoi = new Button();
@@ -104,8 +106,6 @@
             button38 = new Button();
             gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
             gridLayout2 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
-            panelChartApSuat = new Panel();
-            panelChartTheTich = new Panel();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -143,6 +143,7 @@
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(1135, 719);
             tabControl1.TabIndex = 0;
+            tabControl1.Selected += tabControl1_Selected;
             // 
             // tabPage1
             // 
@@ -597,6 +598,22 @@
             tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel13.Size = new Size(1105, 205);
             tableLayoutPanel13.TabIndex = 18;
+            // 
+            // panelChartApSuat
+            // 
+            panelChartApSuat.Dock = DockStyle.Fill;
+            panelChartApSuat.Location = new Point(4, 4);
+            panelChartApSuat.Name = "panelChartApSuat";
+            panelChartApSuat.Size = new Size(545, 197);
+            panelChartApSuat.TabIndex = 0;
+            // 
+            // panelChartTheTich
+            // 
+            panelChartTheTich.Dock = DockStyle.Fill;
+            panelChartTheTich.Location = new Point(556, 4);
+            panelChartTheTich.Name = "panelChartTheTich";
+            panelChartTheTich.Size = new Size(545, 197);
+            panelChartTheTich.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -1235,22 +1252,6 @@
             gridLayout2.Columns = 5;
             gridLayout2.ContainerControl = panelTrangThaiHeNap;
             gridLayout2.Rows = 2;
-            // 
-            // panelChartApSuat
-            // 
-            panelChartApSuat.Dock = DockStyle.Fill;
-            panelChartApSuat.Location = new Point(4, 4);
-            panelChartApSuat.Name = "panelChartApSuat";
-            panelChartApSuat.Size = new Size(545, 197);
-            panelChartApSuat.TabIndex = 0;
-            // 
-            // panelChartTheTich
-            // 
-            panelChartTheTich.Dock = DockStyle.Fill;
-            panelChartTheTich.Location = new Point(556, 4);
-            panelChartTheTich.Name = "panelChartTheTich";
-            panelChartTheTich.Size = new Size(545, 197);
-            panelChartTheTich.TabIndex = 1;
             // 
             // Dashboard
             // 

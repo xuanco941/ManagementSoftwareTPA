@@ -72,6 +72,8 @@ namespace ManagementSoftware.GUI
             panel7 = new Panel();
             panel8 = new Panel();
             panel10 = new Panel();
+            label5 = new Label();
+            comboBox1 = new ComboBox();
             label6 = new Label();
             comboBoxNguoiVanHanh = new ComboBox();
             panel11 = new Panel();
@@ -89,8 +91,6 @@ namespace ManagementSoftware.GUI
             groupBox1 = new GroupBox();
             buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             buttonExcel = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            label5 = new Label();
-            comboBox1 = new ComboBox();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelPagination.SuspendLayout();
@@ -682,6 +682,28 @@ namespace ManagementSoftware.GUI
             panel10.Size = new Size(234, 275);
             panel10.TabIndex = 1;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(21, 102);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(52, 17);
+            label5.TabIndex = 94;
+            label5.Text = "Loại khí";
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(24, 122);
+            comboBox1.Margin = new Padding(4, 3, 4, 3);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(190, 28);
+            comboBox1.TabIndex = 93;
+            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -932,28 +954,6 @@ namespace ManagementSoftware.GUI
             buttonExcel.TextColor = Color.Black;
             buttonExcel.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonExcel.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(21, 102);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(52, 17);
-            label5.TabIndex = 94;
-            label5.Text = "Loại khí";
-            // 
-            // comboBox1
-            // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(24, 122);
-            comboBox1.Margin = new Padding(4, 3, 4, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(190, 28);
-            comboBox1.TabIndex = 93;
             // 
             // ResultHistory
             // 

@@ -140,16 +140,14 @@ namespace ManagementSoftware.GUI
         {
             errorDashboard.Close();
             settingDashboard.Close();
+            chartApSuat.Close();
+            chartTheTich.Close();
         }
 
         private void button57_Click_1(object sender, EventArgs e)
         {
             errorDashboard.ShowDialog();
         }
-
-
-
-
 
 
         private void buttonShowHeNap_Click(object sender, EventArgs e)
@@ -162,6 +160,14 @@ namespace ManagementSoftware.GUI
             else
             {
                 Application.OpenForms.OfType<HeNap>().First().Activate();
+            }
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabPage2)
+            {
+                settingDashboard.LoadData();
             }
         }
     }

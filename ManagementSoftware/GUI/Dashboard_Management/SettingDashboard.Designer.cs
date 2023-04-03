@@ -35,13 +35,13 @@
             label3 = new Label();
             label2 = new Label();
             panelGiaTri = new Panel();
-            labelsda = new Label();
-            label16 = new Label();
-            label15 = new Label();
-            label14 = new Label();
-            label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
+            labelTheTichCanNap = new Label();
+            labelTheTichTieuChuan = new Label();
+            labelApSuatTieuChuan = new Label();
+            label1HeSoTieuChuan = new Label();
+            labelThoiGianTrichMau = new Label();
+            labelSoLuongBinhHe1 = new Label();
+            labelSoLuongBinhHe2 = new Label();
             panelDonVi = new Panel();
             label24 = new Label();
             label23 = new Label();
@@ -148,102 +148,102 @@
             // 
             // panelGiaTri
             // 
-            panelGiaTri.Controls.Add(labelsda);
-            panelGiaTri.Controls.Add(label16);
-            panelGiaTri.Controls.Add(label15);
-            panelGiaTri.Controls.Add(label14);
-            panelGiaTri.Controls.Add(label13);
-            panelGiaTri.Controls.Add(label12);
-            panelGiaTri.Controls.Add(label11);
+            panelGiaTri.Controls.Add(labelTheTichCanNap);
+            panelGiaTri.Controls.Add(labelTheTichTieuChuan);
+            panelGiaTri.Controls.Add(labelApSuatTieuChuan);
+            panelGiaTri.Controls.Add(label1HeSoTieuChuan);
+            panelGiaTri.Controls.Add(labelThoiGianTrichMau);
+            panelGiaTri.Controls.Add(labelSoLuongBinhHe1);
+            panelGiaTri.Controls.Add(labelSoLuongBinhHe2);
             panelGiaTri.Dock = DockStyle.Fill;
             panelGiaTri.Location = new Point(3, 86);
             panelGiaTri.Name = "panelGiaTri";
             panelGiaTri.Size = new Size(192, 376);
             panelGiaTri.TabIndex = 0;
             // 
-            // labelsda
+            // labelTheTichCanNap
             // 
-            labelsda.BorderStyle = BorderStyle.FixedSingle;
-            labelsda.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelsda.Location = new Point(0, 3);
-            labelsda.Name = "labelsda";
-            gridLayout2.SetParticipateInLayout(labelsda, true);
-            labelsda.Size = new Size(192, 53);
-            labelsda.TabIndex = 7;
-            labelsda.Text = "0";
-            labelsda.TextAlign = ContentAlignment.MiddleCenter;
+            labelTheTichCanNap.BorderStyle = BorderStyle.FixedSingle;
+            labelTheTichCanNap.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTheTichCanNap.Location = new Point(0, 3);
+            labelTheTichCanNap.Name = "labelTheTichCanNap";
+            gridLayout2.SetParticipateInLayout(labelTheTichCanNap, true);
+            labelTheTichCanNap.Size = new Size(192, 53);
+            labelTheTichCanNap.TabIndex = 7;
+            labelTheTichCanNap.Text = "0";
+            labelTheTichCanNap.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // labelTheTichTieuChuan
             // 
-            label16.BorderStyle = BorderStyle.FixedSingle;
-            label16.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.Location = new Point(0, 56);
-            label16.Name = "label16";
-            gridLayout2.SetParticipateInLayout(label16, true);
-            label16.Size = new Size(192, 53);
-            label16.TabIndex = 6;
-            label16.Text = "0";
-            label16.TextAlign = ContentAlignment.MiddleCenter;
+            labelTheTichTieuChuan.BorderStyle = BorderStyle.FixedSingle;
+            labelTheTichTieuChuan.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTheTichTieuChuan.Location = new Point(0, 56);
+            labelTheTichTieuChuan.Name = "labelTheTichTieuChuan";
+            gridLayout2.SetParticipateInLayout(labelTheTichTieuChuan, true);
+            labelTheTichTieuChuan.Size = new Size(192, 53);
+            labelTheTichTieuChuan.TabIndex = 6;
+            labelTheTichTieuChuan.Text = "0";
+            labelTheTichTieuChuan.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // labelApSuatTieuChuan
             // 
-            label15.BorderStyle = BorderStyle.FixedSingle;
-            label15.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label15.Location = new Point(0, 109);
-            label15.Name = "label15";
-            gridLayout2.SetParticipateInLayout(label15, true);
-            label15.Size = new Size(192, 53);
-            label15.TabIndex = 5;
-            label15.Text = "0";
-            label15.TextAlign = ContentAlignment.MiddleCenter;
+            labelApSuatTieuChuan.BorderStyle = BorderStyle.FixedSingle;
+            labelApSuatTieuChuan.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelApSuatTieuChuan.Location = new Point(0, 109);
+            labelApSuatTieuChuan.Name = "labelApSuatTieuChuan";
+            gridLayout2.SetParticipateInLayout(labelApSuatTieuChuan, true);
+            labelApSuatTieuChuan.Size = new Size(192, 53);
+            labelApSuatTieuChuan.TabIndex = 5;
+            labelApSuatTieuChuan.Text = "0";
+            labelApSuatTieuChuan.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // label1HeSoTieuChuan
             // 
-            label14.BorderStyle = BorderStyle.FixedSingle;
-            label14.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.Location = new Point(0, 162);
-            label14.Name = "label14";
-            gridLayout2.SetParticipateInLayout(label14, true);
-            label14.Size = new Size(192, 53);
-            label14.TabIndex = 4;
-            label14.Text = "0";
-            label14.TextAlign = ContentAlignment.MiddleCenter;
+            label1HeSoTieuChuan.BorderStyle = BorderStyle.FixedSingle;
+            label1HeSoTieuChuan.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1HeSoTieuChuan.Location = new Point(0, 162);
+            label1HeSoTieuChuan.Name = "label1HeSoTieuChuan";
+            gridLayout2.SetParticipateInLayout(label1HeSoTieuChuan, true);
+            label1HeSoTieuChuan.Size = new Size(192, 53);
+            label1HeSoTieuChuan.TabIndex = 4;
+            label1HeSoTieuChuan.Text = "0";
+            label1HeSoTieuChuan.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // labelThoiGianTrichMau
             // 
-            label13.BorderStyle = BorderStyle.FixedSingle;
-            label13.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(0, 215);
-            label13.Name = "label13";
-            gridLayout2.SetParticipateInLayout(label13, true);
-            label13.Size = new Size(192, 53);
-            label13.TabIndex = 3;
-            label13.Text = "0";
-            label13.TextAlign = ContentAlignment.MiddleCenter;
+            labelThoiGianTrichMau.BorderStyle = BorderStyle.FixedSingle;
+            labelThoiGianTrichMau.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelThoiGianTrichMau.Location = new Point(0, 215);
+            labelThoiGianTrichMau.Name = "labelThoiGianTrichMau";
+            gridLayout2.SetParticipateInLayout(labelThoiGianTrichMau, true);
+            labelThoiGianTrichMau.Size = new Size(192, 53);
+            labelThoiGianTrichMau.TabIndex = 3;
+            labelThoiGianTrichMau.Text = "0";
+            labelThoiGianTrichMau.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label12
+            // labelSoLuongBinhHe1
             // 
-            label12.BorderStyle = BorderStyle.FixedSingle;
-            label12.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(0, 268);
-            label12.Name = "label12";
-            gridLayout2.SetParticipateInLayout(label12, true);
-            label12.Size = new Size(192, 53);
-            label12.TabIndex = 2;
-            label12.Text = "0";
-            label12.TextAlign = ContentAlignment.MiddleCenter;
+            labelSoLuongBinhHe1.BorderStyle = BorderStyle.FixedSingle;
+            labelSoLuongBinhHe1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSoLuongBinhHe1.Location = new Point(0, 268);
+            labelSoLuongBinhHe1.Name = "labelSoLuongBinhHe1";
+            gridLayout2.SetParticipateInLayout(labelSoLuongBinhHe1, true);
+            labelSoLuongBinhHe1.Size = new Size(192, 53);
+            labelSoLuongBinhHe1.TabIndex = 2;
+            labelSoLuongBinhHe1.Text = "0";
+            labelSoLuongBinhHe1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // labelSoLuongBinhHe2
             // 
-            label11.BorderStyle = BorderStyle.FixedSingle;
-            label11.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(0, 321);
-            label11.Name = "label11";
-            gridLayout2.SetParticipateInLayout(label11, true);
-            label11.Size = new Size(192, 53);
-            label11.TabIndex = 1;
-            label11.Text = "0";
-            label11.TextAlign = ContentAlignment.MiddleCenter;
+            labelSoLuongBinhHe2.BorderStyle = BorderStyle.FixedSingle;
+            labelSoLuongBinhHe2.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSoLuongBinhHe2.Location = new Point(0, 321);
+            labelSoLuongBinhHe2.Name = "labelSoLuongBinhHe2";
+            gridLayout2.SetParticipateInLayout(labelSoLuongBinhHe2, true);
+            labelSoLuongBinhHe2.Size = new Size(192, 53);
+            labelSoLuongBinhHe2.TabIndex = 1;
+            labelSoLuongBinhHe2.Text = "0";
+            labelSoLuongBinhHe2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panelDonVi
             // 
@@ -506,6 +506,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "SettingDashboard";
             Text = "Setting";
+            FormClosing += SettingDashboard_FormClosing;
             Load += SettingDashboard_Load;
             tableLayoutPanel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
@@ -532,12 +533,12 @@
         private Panel panelGiaTri;
         private Label label17;
         private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout2;
-        private Label label16;
-        private Label label15;
-        private Label label14;
-        private Label label13;
-        private Label label12;
-        private Label label11;
+        private Label labelTheTichTieuChuan;
+        private Label labelApSuatTieuChuan;
+        private Label label1HeSoTieuChuan;
+        private Label labelThoiGianTrichMau;
+        private Label labelSoLuongBinhHe1;
+        private Label labelSoLuongBinhHe2;
         private Panel panelDonVi;
         private Label label24;
         private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout3;
@@ -558,7 +559,7 @@
         private Label label5;
         private Label label4;
         private Label label1;
-        private Label labelsda;
+        private Label labelTheTichCanNap;
     }
 
 

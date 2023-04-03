@@ -85,7 +85,6 @@ namespace ManagementSoftware.GUI.Section
                 DateTime end = dic.Values.SelectMany(v => v).Max(x => x.date);
 
 
-                this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, dic.Values.Count / 5, ChartDateTimeIntervalType.Minutes);
 
                 foreach (var item in dic)
                 {
@@ -95,6 +94,8 @@ namespace ManagementSoftware.GUI.Section
                     }
                     chartControl1.Series.Add(item.Key);
                 }
+                this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, dic.Values.Count / 5, ChartDateTimeIntervalType.Minutes);
+
 
 
             }

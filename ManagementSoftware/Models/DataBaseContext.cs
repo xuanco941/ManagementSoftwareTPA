@@ -54,12 +54,6 @@ namespace ManagementSoftware.Models
                 entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
             });
 
-            modelBuilder.Entity<Activity>()
-            .HasOne(t => t.User)
-            .WithMany()
-            .HasForeignKey(t => t.UserID)
-            .OnDelete(DeleteBehavior.SetNull);
-
 
 
             //Result

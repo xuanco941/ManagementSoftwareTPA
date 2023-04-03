@@ -97,7 +97,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
                     new DALGroup().Update(group);
                     changeData?.Invoke("Cập nhật thành công.", FormAlert.enmType.Success);
                 }
-                catch (Exception ex)
+                catch
                 {
                     changeData?.Invoke("Cập nhật thất bại", FormAlert.enmType.Error);
                 }

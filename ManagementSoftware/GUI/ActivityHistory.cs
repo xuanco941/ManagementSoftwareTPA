@@ -29,319 +29,149 @@ namespace ManagementSoftware.GUI
         private DateTime? timeEnd = null;
         // trang hiện tại
         private int page = 1;
-        // tổng số trang
-        private int TotalPages = 1;
 
+        // tổng số trang
+        private int TotalPages = 0;
+        //Data
+        List<Models.Activity> ListResults = new List<Models.Activity>();
+
+        PaginationActivity pagination = new PaginationActivity();
         public ActivityHistory()
         {
             InitializeComponent();
 
-            //setting header column
-            dataGridViewActivity.ColumnHeadersDefaultCellStyle.Font = Common.FontHeaderColumnDGV;
-            dataGridViewActivity.RowTemplate.Height = 35;
+        }
+        void LoadDGV()
+        {
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            inputNumPageGo.DefaultValue = 1;
-            inputNumPageGo.MinValue = 1;
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "STT" });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Tiêu đề", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Mô tả", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Ngày", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Tài khoản", SortMode = DataGridViewColumnSortMode.NotSortable });
 
-            GetActivities();
+
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 16, FontStyle.Regular);
+
+            //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+
+            dataGridView1.RowTemplate.Height = 50;
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dataGridView1.DefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Regular);
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
+
+            //dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+
         }
 
-        private void LoadForm(List<Activity>? activities)
+
+        void LoadFormThongKe()
         {
-            //
-            labelBanGhiMoiTrang.Text = "- Tổng số trang: " + this.TotalPages + ".";
-            labelTongSoTrang.Text = "- Bản ghi mỗi trang: " + PaginationActivity.NumberRows + ".";
-            labelPage.Text = "- Đang ở trang: " + this.page + ".";
+            panelPagination.Enabled = false;
 
-            //
-            if (timeStart != null && timeEnd != null)
-            {
-                labelTuNgay.Text = "- Lọc từ ngày: " + timeStart?.Day + "-" + timeStart?.Month + "-" + timeStart?.Year + ".";
-                labelToiNgay.Text = "- Lọc tới ngày: " + timeEnd?.Day + "-" + timeEnd?.Month + "-" + timeEnd?.Year + ".";
-            }
-            else
-            {
-                labelTuNgay.Text = "- Lọc từ ngày: trống.";
-                labelToiNgay.Text = "- Lọc tới ngày: trống.";
-            }
+            dataGridView1.Rows.Clear();
 
-            //
-            DataTable dt = new DataTable();
-            dt.Columns.Add("ID");
-            dt.Columns.Add("Loại");
-            dt.Columns.Add("Mô tả");
-            dt.Columns.Add("Thời gian");
-            dt.Columns.Add("Người thực hiện");
 
-            if (activities != null)
+            pagination.Set(page, timeStart, timeEnd);
+
+            this.ListResults = pagination.ListResults;
+            this.TotalPages = pagination.TotalPages;
+            lbTotalPages.Text = this.TotalPages.ToString();
+
+            buttonPreviousPage.Enabled = this.page > 1;
+            buttonNextPage.Enabled = this.page < this.TotalPages;
+            buttonPage.Text = this.page.ToString();
+
+            pageNumberGoto.MinValue = 1;
+            pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
+
+
+
+            int i = 1;
+
+            if (ListResults != null && ListResults.Count > 0)
             {
-                // load datagridview từ tham số activities truyền vào
-                activities.ForEach(delegate (Activity activity)
+                foreach (var item in this.ListResults)
                 {
-                    string? fullnameButton = activity.Username;
-                    User? user = new DALUser().GetAll().Where(a => a.Username == activity.Username).FirstOrDefault();
-                    if (String.IsNullOrEmpty(activity.Username) == false && user != null)
+                    int rowId = dataGridView1.Rows.Add();
+                    DataGridViewRow row = dataGridView1.Rows[rowId];
+                    row.Cells[0].Value = i;
+
+                    //Product? p = dALProduct.GetProductFromID(item.ProductID);
+                    row.Cells[1].Value = item.Title;
+                    row.Cells[2].Value = item.Description;
+                    row.Cells[3].Value = item.CreateAt.ToString("HH:mm:ss dd/MM/yyyy");
+                    row.Cells[4].Value = item.Username;
+
+
+                    if (i%2==0)
                     {
-                        fullnameButton = user.FullName;
+                        row.DefaultCellStyle.BackColor = Color.LightGreen;
+                        row.DefaultCellStyle.ForeColor = Color.Black;
                     }
                     else
                     {
-                        fullnameButton = activity.Username + " (không tồn tại)";
+                        row.DefaultCellStyle.BackColor = Color.YellowGreen;
+                        row.DefaultCellStyle.ForeColor = Color.Black;
                     }
-                    //format date từ sql -> c#
-                    string createAt = activity.CreateAt.ToString("HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-                    dt.Rows.Add(activity.ActivityID, activity.Title, activity.Description, createAt, fullnameButton);
-                });
-            }
-            dataGridViewActivity.DataSource = dt;
-        }
-
-        private void GetActivities()
-        {
-
-            try
-            {
-                PaginationActivity paginationActivity = new PaginationActivity();
-                paginationActivity.Set(this.page, timeStart?.AddDays(-1), timeEnd);
-                List<Activity>? activities = paginationActivity.ListResults;
-                //số trang max
-                inputNumPageGo.MaxValue = paginationActivity.TotalPages != 0 ? paginationActivity.TotalPages : 1;
-
-                // pagesize bằng tổng số activity chia cho số phần tử mỗi trang
-                this.TotalPages = paginationActivity.TotalPages;
-                if (this.TotalPages == 0)
-                {
-                    buttonPage1.Enabled = false;
-                    buttonPage2.Enabled = false;
-                    buttonPage3.Enabled = false;
-                    buttonPageNext.Enabled = false;
-                }
-                else if (this.TotalPages == 1)
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = false;
-                    buttonPage3.Enabled = false;
-                    buttonPageNext.Enabled = false;
-                }
-                else if (this.TotalPages == 2)
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = true;
-                    buttonPage3.Enabled = false;
-                    buttonPageNext.Enabled = false;
-                }
-                else if (this.TotalPages == 3)
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = true;
-                    buttonPage3.Enabled = true;
-                    buttonPageNext.Enabled = false;
-                }
-                else
-                {
-                    buttonPage1.Enabled = true;
-                    buttonPage2.Enabled = true;
-                    buttonPage3.Enabled = true;
-                    buttonPageNext.Enabled = true;
-                }
-
-                LoadForm(activities);
-
-            }
-            catch
-            {
-                // Lỗi
-                MessageBox.Show("Lỗi truy xuất liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void buttonLoc_Click(object sender, EventArgs e)
-        {
-            //lấy ngày ở datetimepicker rồi chuyển về dạng yyyy-mm-dd, lưu vào các strdatetime, field của lớp
-            timeStart = dateTimePickerTuNgay.Value;
-            timeEnd = dateTimePickerToiNgay.Value;
-
-            //đặt page về trang 1, đặt các button về mặc định
-            this.page = 1;
-            buttonPage1.Text = 1.ToString();
-            buttonPage2.Text = 2.ToString();
-            buttonPage3.Text = 3.ToString();
-
-            GetActivities();
-        }
-
-        private void buttonPage1_Click(object sender, EventArgs e)
-        {
-            // select button trang
-            Button button = sender as Button;
-
-            if (this.page > this.TotalPages)
-            {
-                this.page = this.TotalPages;
-            }
-            else
-            {
-                this.page = int.Parse(button.Text);
-                if (this.page <= 2)
-                {
-                    buttonPage1.Text = 1.ToString();
-                    buttonPage2.Text = 2.ToString();
-                    buttonPage3.Text = 3.ToString();
-                }
-                else
-                {
-                    buttonPage1.Text = (page - 1).ToString();
-                    buttonPage2.Text = page.ToString();
-                    buttonPage3.Text = (page + 1).ToString();
-                    //nếu tràng hiện tại là trang cuối cùng thì đặt các nút là các những trang cuối
-                    if (this.page == this.TotalPages)
-                    {
-                        buttonPage1.Text = (page - 2).ToString();
-                        buttonPage2.Text = (page - 1).ToString();
-                        buttonPage3.Text = page.ToString();
-                    }
+                    i++;
                 }
             }
-            GetActivities();
+
+            panelPagination.Enabled = true;
 
         }
 
-        private void buttonPageNext_Click(object sender, EventArgs e)
+
+
+
+
+        private void buttonPreviousPage_Click(object sender, EventArgs e)
         {
-            if (this.page == this.TotalPages)
+            if (this.page > 1)
             {
-                callAlert?.Invoke("Bạn đang ở trang cuối cùng.", FormAlert.enmType.Info);
-            }
-            else
-            {
-                // bấm next sẽ là trang số ở button3 + 1
-                int numPageButton3 = int.Parse(buttonPage3.Text);
-                if (numPageButton3 < this.TotalPages)
-                {
-                    if (this.page == 1)
-                    {
-                        this.page = 3;
-                        buttonPage1.Text = 2.ToString();
-                        buttonPage2.Text = 3.ToString();
-                        buttonPage3.Text = 4.ToString();
-                    }
-                    else
-                    {
-                        this.page = numPageButton3 + 1;
-                        //set lại button 1,2,3 
-                        if (this.page == this.TotalPages)
-                        {
-                            buttonPage1.Text = (this.page - 2).ToString();
-                            buttonPage2.Text = (this.page - 1).ToString();
-                            buttonPage3.Text = (this.page).ToString();
-                        }
-                        if (this.page + 1 <= this.TotalPages)
-                        {
-                            buttonPage1.Text = (this.page - 1).ToString();
-                            buttonPage2.Text = (this.page).ToString();
-                            buttonPage3.Text = (this.page + 1).ToString();
-                        }
-                        if (this.page + 2 <= this.TotalPages)
-                        {
-                            buttonPage1.Text = (this.page).ToString();
-                            buttonPage2.Text = (this.page + 1).ToString();
-                            buttonPage3.Text = (this.page + 2).ToString();
-                        }
-                    }
-
-
-                }
-                else
-                {
-                    this.page = this.TotalPages;
-                }
-                GetActivities();
+                this.page = this.page - 1;
+                LoadFormThongKe();
             }
         }
 
-
-        public void AlertActive(string msg, FormAlert.enmType enmType)
+        private void buttonNextPage_Click(object sender, EventArgs e)
         {
-            callAlert?.Invoke(msg, enmType);
-            //load lai datagridview
-            this.page = 1;
-            buttonPage1.Text = 1.ToString();
-            buttonPage2.Text = 2.ToString();
-            buttonPage3.Text = 3.ToString();
-            GetActivities();
-
-        }
-
-        private void btnChangeNumElmPage_Click(object sender, EventArgs e)
-        {
-            FormChangeNumElmOnPage form = new FormChangeNumElmOnPage();
-            form.changeData = new FormChangeNumElmOnPage.ChangeData(AlertActive);
-            form.ShowDialog();
-        }
-
-        private void buttonDeleteDataActivity_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa dữ liệu hoạt động đang hiển thị tại trang này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
+            if (this.page < this.TotalPages)
             {
-                List<int> atvIDs = new List<int>();
-                foreach (DataGridViewRow row in dataGridViewActivity.Rows)
-                {
-                    //tao mang id activity can xoa
-                    atvIDs.Add(int.Parse(row.Cells[0].Value.ToString()));
-                }
-                try
-                {
-                    new DALActivity().DeleteRange(atvIDs);
-                    callAlert?.Invoke("Xóa thành công!", FormAlert.enmType.Success);
-                }
-                catch (Exception ex)
-                {
-                    callAlert?.Invoke(ex.Message,FormAlert.enmType.Warning);
-                }
-                this.page = 1;
-                buttonPage1.Text = 1.ToString();
-                buttonPage2.Text = 2.ToString();
-                buttonPage3.Text = 3.ToString();
-                GetActivities();
+                this.page = this.page + 1;
+                LoadFormThongKe();
             }
         }
 
-        private void buttonCallFormEmployeeActivities_Click(object sender, EventArgs e)
+        private void buttonSearch_Click(object sender, EventArgs e)
         {
-            new FormEmployeeActivities().Show();
+            timeStart = TimeStart.Value;
+            timeEnd = TimeEnd.Value;
+            LoadFormThongKe();
         }
 
-        private void buttonCustomGoPage_Click(object sender, EventArgs e)
+        private void buttonGoto_Click(object sender, EventArgs e)
         {
-            if (this.page > this.TotalPages)
-            {
-                this.page = this.TotalPages;
-            }
-            else
-            {
-                this.page = (int) inputNumPageGo.IntegerValue;
-                if (this.page <= 2)
-                {
-                    buttonPage1.Text = 1.ToString();
-                    buttonPage2.Text = 2.ToString();
-                    buttonPage3.Text = 3.ToString();
-                }
-                else
-                {
-                    buttonPage1.Text = (page - 1).ToString();
-                    buttonPage2.Text = page.ToString();
-                    buttonPage3.Text = (page + 1).ToString();
-                    //nếu tràng hiện tại là trang cuối cùng thì đặt các nút là các những trang cuối
-                    if (this.page == this.TotalPages)
-                    {
-                        buttonPage1.Text = (page - 2).ToString();
-                        buttonPage2.Text = (page - 1).ToString();
-                        buttonPage3.Text = page.ToString();
-                    }
-                }
-            }
-            GetActivities();
+            this.page = int.Parse(pageNumberGoto.Text);
+            LoadFormThongKe();
+        }
+
+        private void ActivityHistory_Load(object sender, EventArgs e)
+        {
+            LoadDGV();
+            LoadFormThongKe();
         }
     }
 }

@@ -62,12 +62,12 @@ namespace ManagementSoftware
         //Read bool, float, uint
         public T ReadAVariableNumber<T>(string variableName)
         {
-
             T value = (T)client.ReadValue(variableName, typeof(T));
             return value;
         }
 
-        //read DateTime
+
+        //read TimeSpan
         public T ReadAVariableNumber_ReadAny<T>(string variableName)
         {
             var symbol = client.ReadSymbol(variableName);
@@ -82,7 +82,7 @@ namespace ManagementSoftware
         public string ReadAVariableString(string variableName)
         {
             var symbol = client.ReadSymbol(variableName);
-            string value = client.ReadAnyString(symbol.IndexGroup, symbol.IndexOffset, symbol.Size, Encoding.UTF8);
+            string value = client.ReadAnyString(symbol.IndexGroup, symbol.IndexOffset, 9999, Encoding.ASCII);
             return value;
         }
 
