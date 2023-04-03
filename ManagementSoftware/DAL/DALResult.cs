@@ -19,7 +19,7 @@ namespace ManagementSoftware.DAL
         }
 
 
-        public bool UpdateResult(Result result)
+        public bool Update(Result result)
         {
             using (var context = new DataBaseContext())
             {

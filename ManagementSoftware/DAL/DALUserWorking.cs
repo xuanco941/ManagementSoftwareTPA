@@ -9,7 +9,7 @@ namespace ManagementSoftware.DAL
 {
     public class DALUserWorking
     {
-        public void AddUserWorking(UserWorking userWorking)
+        public void Add(UserWorking userWorking)
         {
             using (var context = new DataBaseContext())
             {
@@ -17,7 +17,7 @@ namespace ManagementSoftware.DAL
                 context.SaveChanges();
             }
         }
-        public void UpdateUserWorking(UserWorking userWorking)
+        public void Update(UserWorking userWorking)
         {
             using (var context = new DataBaseContext())
             {
@@ -26,14 +26,13 @@ namespace ManagementSoftware.DAL
                 {
                     userWorkingToUpdate.CreateAt = userWorking.CreateAt;
                     userWorkingToUpdate.EndAt = userWorking.EndAt;
-                    userWorkingToUpdate.UserID = userWorking.UserID;
                     userWorkingToUpdate.Username = userWorking.Username;
                     userWorkingToUpdate.Fullname = userWorking.Fullname;
                     context.SaveChanges();
                 }
             }
         }
-        public void DeleteUserWorking(int userWorkingID)
+        public void Delete(int userWorkingID)
         {
             using (var context = new DataBaseContext())
             {

@@ -9,7 +9,7 @@ namespace ManagementSoftware.DAL
 {
     public class DALResultWarning
     {
-        public void AddResult(ResultWarning resultWarning)
+        public void Add(ResultWarning resultWarning)
         {
             using (var context = new DataBaseContext())
             {
