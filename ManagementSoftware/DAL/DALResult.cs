@@ -9,47 +9,61 @@ namespace ManagementSoftware.DAL
 {
     public class DALResult
     {
-        public static int Add(Result r)
-        {
-            using (DataBaseContext dbContext = new DataBaseContext())
-            {
-                dbContext.Results.Add(r);
-                return dbContext.SaveChanges();
-            }
-        }
-
-        public void Update(Result result)
+        public void Add(Result result)
         {
             using (var context = new DataBaseContext())
             {
-                var existingResult = context.Results.FirstOrDefault(r => r.ResultID == result.ResultID);
-                if (existingResult != null)
+                context.Results.Add(result);
+                context.SaveChanges();
+            }
+        }
+
+
+        public bool UpdateResult(Result result)
+        {
+            using (var context = new DataBaseContext())
+            {
+                var resultToUpdate = context.Results.FirstOrDefault(r => r.ResultID == result.ResultID);
+                if (resultToUpdate == null)
                 {
-                    existingResult.ApSuatTong = result.ApSuatTong;
-                    existingResult.TimeStart = result.TimeStart;
-                    existingResult.ProductionNumber = result.ProductionNumber;
-                    existingResult.TimeEnd = result.TimeEnd;
-                    existingResult.Status = result.Status;
-                    existingResult.Username = result.Username;
-                    existingResult.UserID = result.UserID;
+                    return false;
+                }
+
+                resultToUpdate.ApSuatTong = result.ApSuatTong;
+                resultToUpdate.LoaiKhi = result.LoaiKhi;
+                resultToUpdate.TimeStart = result.TimeStart;
+                resultToUpdate.TimeEnd = result.TimeEnd;
+                resultToUpdate.Status = result.Status;
+                resultToUpdate.UserID = result.UserID;
+                resultToUpdate.Username = result.Username;
+                resultToUpdate.TheTichCanNap = result.TheTichCanNap;
+                resultToUpdate.TheTichTieuChuan = result.TheTichTieuChuan;
+                resultToUpdate.ApSuatTieuChuan = result.ApSuatTieuChuan;
+                resultToUpdate.HeSoTieuChuan = result.HeSoTieuChuan;
+                resultToUpdate.ThoiGianTrichMau = result.ThoiGianTrichMau;
+                resultToUpdate.SoLuongBinhCanNapHe1 = result.SoLuongBinhCanNapHe1;
+                resultToUpdate.SoLuongBinhCanNapHe2 = result.SoLuongBinhCanNapHe2;
+
+                context.SaveChanges();
+                return true;
+            }
+        }
+
+
+
+        public void Delete(int resultID)
+        {
+            using (var context = new DataBaseContext())
+            {
+                var resultToDelete = context.Results.Find(resultID);
+                if (resultToDelete != null)
+                {
+                    context.Results.Remove(resultToDelete);
                     context.SaveChanges();
                 }
             }
         }
 
-
-        public void Delete(int resultId)
-        {
-            using (var context = new DataBaseContext())
-            {
-                var result = context.Results.FirstOrDefault(r => r.ResultID == resultId);
-                if (result != null)
-                {
-                    context.Results.Remove(result);
-                    context.SaveChanges();
-                }
-            }
-        }
 
 
 

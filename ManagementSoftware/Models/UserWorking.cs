@@ -16,6 +16,7 @@ namespace ManagementSoftware.Models
         public DateTime CreateAt { get; set; }
         public DateTime EndAt { get; set; }
         public int UserID { get; set; }
-        public User User { get; set; }
+        public string Username { get; set; } = "";
+        public string Fullname { get; set; } = "";
     }
 }

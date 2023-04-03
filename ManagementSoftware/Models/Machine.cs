@@ -15,7 +15,7 @@ namespace ManagementSoftware.Models
         public int MachineID { get; set; }
         public double ApSuat { get; set; }
         public double TheTich { get; set; }
-        public string NameMachine { get; set; } = "Hệ Nạp 1";
+        public string NameMachine { get; set; } = "Hệ Nạp";
         public int ResultID { get; set; }
         public Result Result { get; set; }
 

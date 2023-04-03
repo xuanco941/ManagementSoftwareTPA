@@ -35,25 +35,25 @@
             panelApSuatChart = new Panel();
             panelTheTichChart = new Panel();
             panel2 = new Panel();
+            panelThongTin = new Panel();
+            label8 = new Label();
+            label26 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            label9 = new Label();
             label10 = new Label();
             gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
-            label9 = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label26 = new Label();
-            label8 = new Label();
-            panelThongTin = new Panel();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)gridLayout1).BeginInit();
             panelThongTin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gridLayout1).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -123,6 +123,183 @@
             panel2.Size = new Size(530, 516);
             panel2.TabIndex = 1;
             // 
+            // panelThongTin
+            // 
+            panelThongTin.Controls.Add(label26);
+            panelThongTin.Controls.Add(label6);
+            panelThongTin.Controls.Add(label5);
+            panelThongTin.Controls.Add(label4);
+            panelThongTin.Controls.Add(label8);
+            panelThongTin.Controls.Add(label7);
+            panelThongTin.Controls.Add(label3);
+            panelThongTin.Controls.Add(label2);
+            panelThongTin.Controls.Add(label1);
+            panelThongTin.Controls.Add(label9);
+            panelThongTin.Dock = DockStyle.Fill;
+            panelThongTin.Location = new Point(0, 69);
+            panelThongTin.Name = "panelThongTin";
+            panelThongTin.Size = new Size(530, 447);
+            panelThongTin.TabIndex = 1;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.DimGray;
+            label8.BorderStyle = BorderStyle.FixedSingle;
+            label8.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = SystemColors.ButtonHighlight;
+            label8.Location = new Point(0, 180);
+            label8.Margin = new Padding(0);
+            label8.Name = "label8";
+            label8.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(label8, true);
+            label8.Size = new Size(530, 44);
+            label8.TabIndex = 51;
+            label8.Text = "Áp suất tiêu chuẩn : 30 bar";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label26
+            // 
+            label26.BackColor = Color.DimGray;
+            label26.BorderStyle = BorderStyle.FixedSingle;
+            label26.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label26.ForeColor = SystemColors.ButtonHighlight;
+            label26.Location = new Point(0, 4);
+            label26.Margin = new Padding(0);
+            label26.Name = "label26";
+            label26.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(label26, true);
+            label26.Size = new Size(530, 44);
+            label26.TabIndex = 43;
+            label26.Text = "Người vận hành : admin";
+            label26.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.DimGray;
+            label7.BorderStyle = BorderStyle.FixedSingle;
+            label7.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.ButtonHighlight;
+            label7.Location = new Point(0, 224);
+            label7.Margin = new Padding(0);
+            label7.Name = "label7";
+            label7.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(label7, true);
+            label7.Size = new Size(530, 44);
+            label7.TabIndex = 50;
+            label7.Text = "Số lượng bình nạp : 100";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.DimGray;
+            label6.BorderStyle = BorderStyle.FixedSingle;
+            label6.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Location = new Point(0, 48);
+            label6.Margin = new Padding(0);
+            label6.Name = "label6";
+            label6.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(label6, true);
+            label6.Size = new Size(530, 44);
+            label6.TabIndex = 49;
+            label6.Text = "Loại khí : Oxy";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            label5.BackColor = Color.DimGray;
+            label5.BorderStyle = BorderStyle.FixedSingle;
+            label5.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.ButtonHighlight;
+            label5.Location = new Point(0, 92);
+            label5.Margin = new Padding(0);
+            label5.Name = "label5";
+            label5.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(label5, true);
+            label5.Size = new Size(530, 44);
+            label5.TabIndex = 48;
+            label5.Text = "Thời gian bắt đầu : 13:00:00 21/03/2023";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.DimGray;
+            label4.BorderStyle = BorderStyle.FixedSingle;
+            label4.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ButtonHighlight;
+            label4.Location = new Point(0, 136);
+            label4.Margin = new Padding(0);
+            label4.Name = "label4";
+            label4.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(label4, true);
+            label4.Size = new Size(530, 44);
+            label4.TabIndex = 47;
+            label4.Text = "Thời gian kết thúc : 13:00:00 21/03/2023";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.BackColor = Color.DimGray;
+            label3.BorderStyle = BorderStyle.FixedSingle;
+            label3.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(0, 268);
+            label3.Margin = new Padding(0);
+            label3.Name = "label3";
+            gridLayout1.SetParticipateInLayout(label3, true);
+            label3.Size = new Size(530, 44);
+            label3.TabIndex = 46;
+            label3.Text = "Thể tích cần nạp : 10L";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.DimGray;
+            label2.BorderStyle = BorderStyle.FixedSingle;
+            label2.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(0, 312);
+            label2.Margin = new Padding(0);
+            label2.Name = "label2";
+            label2.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(label2, true);
+            label2.Size = new Size(530, 44);
+            label2.TabIndex = 45;
+            label2.Text = "Thể tích tiêu chuẩn : 20L";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.DimGray;
+            label1.BorderStyle = BorderStyle.FixedSingle;
+            label1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(0, 356);
+            label1.Margin = new Padding(0);
+            label1.Name = "label1";
+            label1.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(label1, true);
+            label1.Size = new Size(530, 44);
+            label1.TabIndex = 44;
+            label1.Text = "Hệ số tiêu chuẩn : 0";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            label9.BackColor = Color.DimGray;
+            label9.BorderStyle = BorderStyle.FixedSingle;
+            label9.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = SystemColors.ButtonHighlight;
+            label9.Location = new Point(0, 400);
+            label9.Margin = new Padding(0);
+            label9.Name = "label9";
+            label9.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(label9, true);
+            label9.Size = new Size(530, 44);
+            label9.TabIndex = 52;
+            label9.Text = "Thời gian trích mẫu : 100s";
+            label9.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // label10
             // 
             label10.BackColor = Color.PaleGreen;
@@ -145,183 +322,6 @@
             gridLayout1.ContainerControl = panelThongTin;
             gridLayout1.Rows = 10;
             // 
-            // label9
-            // 
-            label9.BackColor = Color.DimGray;
-            label9.BorderStyle = BorderStyle.FixedSingle;
-            label9.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.ButtonHighlight;
-            label9.Location = new Point(0, 400);
-            label9.Margin = new Padding(0);
-            label9.Name = "label9";
-            label9.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label9, true);
-            label9.Size = new Size(530, 44);
-            label9.TabIndex = 52;
-            label9.Text = "Thời gian trích mẫu : 100s";
-            label9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            label1.BackColor = Color.DimGray;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(0, 356);
-            label1.Margin = new Padding(0);
-            label1.Name = "label1";
-            label1.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label1, true);
-            label1.Size = new Size(530, 44);
-            label1.TabIndex = 44;
-            label1.Text = "Hệ số tiêu chuẩn : 0";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            label2.BackColor = Color.DimGray;
-            label2.BorderStyle = BorderStyle.FixedSingle;
-            label2.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(0, 312);
-            label2.Margin = new Padding(0);
-            label2.Name = "label2";
-            label2.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label2, true);
-            label2.Size = new Size(530, 44);
-            label2.TabIndex = 45;
-            label2.Text = "Thể tích tiêu chuẩn : 20L";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            label3.BackColor = Color.DimGray;
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(0, 268);
-            label3.Margin = new Padding(0);
-            label3.Name = "label3";
-            gridLayout1.SetParticipateInLayout(label3, true);
-            label3.Size = new Size(530, 44);
-            label3.TabIndex = 46;
-            label3.Text = "Thể tích cần nạp : 10L";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            label4.BackColor = Color.DimGray;
-            label4.BorderStyle = BorderStyle.FixedSingle;
-            label4.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(0, 224);
-            label4.Margin = new Padding(0);
-            label4.Name = "label4";
-            label4.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label4, true);
-            label4.Size = new Size(530, 44);
-            label4.TabIndex = 47;
-            label4.Text = "Thời gian kết thúc : 13:00:00 21/03/2023";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            label5.BackColor = Color.DimGray;
-            label5.BorderStyle = BorderStyle.FixedSingle;
-            label5.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(0, 180);
-            label5.Margin = new Padding(0);
-            label5.Name = "label5";
-            label5.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label5, true);
-            label5.Size = new Size(530, 44);
-            label5.TabIndex = 48;
-            label5.Text = "Thời gian bắt đầu : 13:00:00 21/03/2023";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            label6.BackColor = Color.DimGray;
-            label6.BorderStyle = BorderStyle.FixedSingle;
-            label6.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(0, 136);
-            label6.Margin = new Padding(0);
-            label6.Name = "label6";
-            label6.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label6, true);
-            label6.Size = new Size(530, 44);
-            label6.TabIndex = 49;
-            label6.Text = "Loại khí : Oxy";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            label7.BackColor = Color.DimGray;
-            label7.BorderStyle = BorderStyle.FixedSingle;
-            label7.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(0, 92);
-            label7.Margin = new Padding(0);
-            label7.Name = "label7";
-            label7.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label7, true);
-            label7.Size = new Size(530, 44);
-            label7.TabIndex = 50;
-            label7.Text = "Số lượng bình nạp : 100";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label26
-            // 
-            label26.BackColor = Color.DimGray;
-            label26.BorderStyle = BorderStyle.FixedSingle;
-            label26.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label26.ForeColor = SystemColors.ButtonHighlight;
-            label26.Location = new Point(0, 48);
-            label26.Margin = new Padding(0);
-            label26.Name = "label26";
-            label26.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label26, true);
-            label26.Size = new Size(530, 44);
-            label26.TabIndex = 43;
-            label26.Text = "Người vận hành : admin";
-            label26.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            label8.BackColor = Color.DimGray;
-            label8.BorderStyle = BorderStyle.FixedSingle;
-            label8.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = SystemColors.ButtonHighlight;
-            label8.Location = new Point(0, 4);
-            label8.Margin = new Padding(0);
-            label8.Name = "label8";
-            label8.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label8, true);
-            label8.Size = new Size(530, 44);
-            label8.TabIndex = 51;
-            label8.Text = "Áp suất tiêu chuẩn : 30 bar";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // panelThongTin
-            // 
-            panelThongTin.Controls.Add(label8);
-            panelThongTin.Controls.Add(label26);
-            panelThongTin.Controls.Add(label7);
-            panelThongTin.Controls.Add(label6);
-            panelThongTin.Controls.Add(label5);
-            panelThongTin.Controls.Add(label4);
-            panelThongTin.Controls.Add(label3);
-            panelThongTin.Controls.Add(label2);
-            panelThongTin.Controls.Add(label1);
-            panelThongTin.Controls.Add(label9);
-            panelThongTin.Dock = DockStyle.Fill;
-            panelThongTin.Location = new Point(0, 69);
-            panelThongTin.Name = "panelThongTin";
-            panelThongTin.Size = new Size(530, 447);
-            panelThongTin.TabIndex = 1;
-            // 
             // ResultHeNap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -336,8 +336,8 @@
             panel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)gridLayout1).EndInit();
             panelThongTin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)gridLayout1).EndInit();
             ResumeLayout(false);
         }
 

@@ -68,11 +68,6 @@ namespace ManagementSoftware.Models
                 entity.Property(e => e.Status).HasDefaultValueSql("(0)");
                 entity.Property(e => e.TimeStart).HasDefaultValueSql("(getdate())");
             });
-            modelBuilder.Entity<Result>()
-            .HasOne(t => t.User)
-            .WithMany()
-            .HasForeignKey(t => t.UserID)
-            .OnDelete(DeleteBehavior.SetNull);
 
 
             //ResultWarning
