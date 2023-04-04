@@ -1,4 +1,5 @@
-﻿using ManagementSoftware.DAL.DALPagination;
+﻿using ManagementSoftware.DAL;
+using ManagementSoftware.DAL.DALPagination;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,22 +14,15 @@ namespace ManagementSoftware.GUI
 {
     public partial class ErrorDashboard : Form
     {
-        // ngày để query 
-        private DateTime? timeStart = null;
-        private DateTime? timeEnd = null;
-        // trang hiện tại
-        private int page = 1;
 
-        // tổng số trang
-        private int TotalPages = 0;
         //Data
         List<Models.ResultWarning> ListResults = new List<Models.ResultWarning>();
 
-        PaginationResultWarning pagination = new PaginationResultWarning();
-
-        public ErrorDashboard()
+        int idResult;
+        public ErrorDashboard(int iR)
         {
             InitializeComponent();
+            idResult = iR;
             LoadDGV();
         }
         void LoadDGV()
@@ -68,85 +62,32 @@ namespace ManagementSoftware.GUI
 
         void LoadFormThongKe()
         {
-            panelPagination.Enabled = false;
 
-            dataGridView1.Rows.Clear();
-
-
-            pagination.Set(page, timeStart, timeEnd);
-
-            this.ListResults = pagination.ListResults;
-            this.TotalPages = pagination.TotalPages;
-            lbTotalPages.Text = this.TotalPages.ToString();
-
-            buttonPreviousPage.Enabled = this.page > 1;
-            buttonNextPage.Enabled = this.page < this.TotalPages;
-            buttonPage.Text = this.page.ToString();
-
-            pageNumberGoto.MinValue = 1;
-            pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
+            //dataGridView1.Rows.Clear();
 
 
+            ListResults = new DALResultWarning().GetAllResultWarningsByResultID(idResult);
 
             if (ListResults != null && ListResults.Count > 0)
             {
-
-                int idSpace = 0;
-
-                for (int i = 0; i < ListResults.Count; i++)
+                int i = 1;
+                foreach (var item in ListResults)
                 {
-                    if (idSpace != 0 && idSpace != ListResults[i].ResultID)
-                    {
-                        dataGridView1.Rows.Add();
-                    }
-
                     int rowId = dataGridView1.Rows.Add();
                     DataGridViewRow row = dataGridView1.Rows[rowId];
-                    row.Cells[0].Value = i + 1;
+                    row.Cells[0].Value = i;
 
-                    row.Cells[1].Value = ListResults[i].Title;
-                    row.Cells[2].Value = ListResults[i].Description;
-                    row.Cells[3].Value = Common.RESULT + ListResults[i].ResultID;
-                    row.Cells[4].Value = ListResults[i].CreateAt.ToString("HH:mm:ss dd/MM/yyyy");
-
-                    idSpace = ListResults[i].ResultID;
+                    row.Cells[1].Value = item.Title;
+                    row.Cells[2].Value = item.Description;
+                    row.Cells[3].Value = Common.RESULT + item.ResultID;
+                    row.Cells[4].Value = item.CreateAt.ToString("HH:mm:ss dd/MM/yyyy");
+                    i++;
                 }
 
             }
 
-            panelPagination.Enabled = true;
         }
 
-        private void buttonPreviousPage_Click(object sender, EventArgs e)
-        {
-            if (this.page > 1)
-            {
-                this.page = this.page - 1;
-                LoadFormThongKe();
-            }
-        }
-
-        private void buttonNextPage_Click(object sender, EventArgs e)
-        {
-            if (this.page < this.TotalPages)
-            {
-                this.page = this.page + 1;
-                LoadFormThongKe();
-            }
-        }
-
-        private void buttonSearch_Click(object sender, EventArgs e)
-        {
-            timeStart = TimeStart.Value;
-            timeEnd = TimeEnd.Value;
-            LoadFormThongKe();
-        }
-
-        private void buttonGoto_Click(object sender, EventArgs e)
-        {
-            this.page = int.Parse(pageNumberGoto.Text);
-            LoadFormThongKe();
-        }
 
         private void ErrorDashboard_Load(object sender, EventArgs e)
         {

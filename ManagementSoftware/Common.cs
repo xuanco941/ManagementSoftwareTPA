@@ -51,5 +51,14 @@ namespace ManagementSoftware
         //Loại khí
         public const string Oxy = "Oxy";
         public const string Nitor = "Nitor";
+
+
+
+
+
+        //Data trong quá trình nạp
+        public static Result? ResultCurrent { get; set; } = null;
+        public static UserWorking? UserCurrent { get; set; } = null;
+
     }
 }

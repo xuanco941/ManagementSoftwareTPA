@@ -36,8 +36,8 @@ namespace ManagementSoftware.GUI
             buttonDangXuat = new Button();
             buttonHelp = new Button();
             buttonActivity = new Button();
-            buttonEmployee = new Button();
             buttonUserWorking = new Button();
+            buttonEmployee = new Button();
             buttonResult = new Button();
             buttonDashboard = new Button();
             panel3 = new Panel();
@@ -137,30 +137,11 @@ namespace ManagementSoftware.GUI
             buttonActivity.Name = "buttonActivity";
             buttonActivity.Size = new Size(209, 79);
             buttonActivity.TabIndex = 10;
-            buttonActivity.Text = "Hoạt động";
+            buttonActivity.Text = "Hoạt động hệ thống";
             buttonActivity.TextAlign = ContentAlignment.BottomCenter;
             buttonActivity.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonActivity.UseVisualStyleBackColor = true;
             buttonActivity.Click += buttonActivity_Click;
-            // 
-            // buttonEmployee
-            // 
-            buttonEmployee.Cursor = Cursors.Hand;
-            buttonEmployee.Dock = DockStyle.Top;
-            buttonEmployee.FlatAppearance.BorderSize = 0;
-            buttonEmployee.FlatStyle = FlatStyle.Flat;
-            buttonEmployee.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonEmployee.ForeColor = Color.White;
-            buttonEmployee.Image = Properties.Resources.button2_Image;
-            buttonEmployee.Location = new Point(0, 158);
-            buttonEmployee.Name = "buttonEmployee";
-            buttonEmployee.Size = new Size(209, 79);
-            buttonEmployee.TabIndex = 9;
-            buttonEmployee.Text = "Quản lý nhân sự";
-            buttonEmployee.TextAlign = ContentAlignment.BottomCenter;
-            buttonEmployee.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonEmployee.UseVisualStyleBackColor = true;
-            buttonEmployee.Click += buttonEmployee_Click;
             // 
             // buttonUserWorking
             // 
@@ -180,6 +161,25 @@ namespace ManagementSoftware.GUI
             buttonUserWorking.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonUserWorking.UseVisualStyleBackColor = true;
             buttonUserWorking.Click += buttonUserWorking_Click;
+            // 
+            // buttonEmployee
+            // 
+            buttonEmployee.Cursor = Cursors.Hand;
+            buttonEmployee.Dock = DockStyle.Top;
+            buttonEmployee.FlatAppearance.BorderSize = 0;
+            buttonEmployee.FlatStyle = FlatStyle.Flat;
+            buttonEmployee.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonEmployee.ForeColor = Color.White;
+            buttonEmployee.Image = Properties.Resources.button2_Image;
+            buttonEmployee.Location = new Point(0, 158);
+            buttonEmployee.Name = "buttonEmployee";
+            buttonEmployee.Size = new Size(209, 79);
+            buttonEmployee.TabIndex = 9;
+            buttonEmployee.Text = "Quản lý nhân sự";
+            buttonEmployee.TextAlign = ContentAlignment.BottomCenter;
+            buttonEmployee.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonEmployee.UseVisualStyleBackColor = true;
+            buttonEmployee.Click += buttonEmployee_Click;
             // 
             // buttonResult
             // 

@@ -22,6 +22,13 @@ namespace ManagementSoftware
         //Bắt đầu quá trình xả khí hệ 2  (Bool)
         public const string DATA_PC_ST_Xa_Khi_H2 = "DATA_PC.ST_Xa_Khi_H2";
 
+        //enable (đèn)
+        //Trạng thái hệ 1 đang chạy  (Bool)
+        public const string DATA_PC_D_Run_1 = "DATA_PC.D_Run_1";
+        //Trạng thái hệ 2 đang chạy  (Bool)
+        public const string DATA_PC_D_Run_2 = "DATA_PC.D_Run_2";
+
+
         //Các giá trị  cài dặt
 
         //Cài đặt thể tích bình cần nạp   (Real)
@@ -39,6 +46,8 @@ namespace ManagementSoftware
         //Cài đặt số lượng bình cần nạp cho hệ 2  (UDint)
         public const string DATA_SETUP_SL_Binh_Nap_H2 = "DATA_SETUP.SL_Binh_Nap_H2";
 
+
+
         //Giá trị hiển thị
 
         //Hiển thị giá trị áp xuất hiện tại của đường ống hệ 1     (Real)
@@ -51,14 +60,18 @@ namespace ManagementSoftware
         public const string DATA_PC_GT_V_ST_H1 = "DATA_PC.GT_V_ST_H1";
         //Hiển thị giá trị thể tích hiện tại của  hệ 2   (Real)
         public const string DATA_PC_GT_V_ST_H2 = "DATA_PC.GT_V_ST_H2";
-        //Hiển thị giá trị thể tích trích mẫu của  hệ 1   (Real)
-        public const string DATA_PC_GT_V_TM_H1 = "DATA_PC.GT_V_TM_H1";
-        //Hiển thị giá trị thể tích trích mẫu của  hệ 2   (Real)
-        public const string DATA_PC_GT_V_TM_H2 = "DATA_PC.GT_V_TM_H2";
+        ////Hiển thị giá trị thể tích trích mẫu của  hệ 1   (Real)
+        //public const string DATA_PC_GT_V_TM_H1 = "DATA_PC.GT_V_TM_H1";
+        ////Hiển thị giá trị thể tích trích mẫu của  hệ 2   (Real)
+        //public const string DATA_PC_GT_V_TM_H2 = "DATA_PC.GT_V_TM_H2";
 
         //Trạng thái các tín hiệu vào, ra
 
 
+        //Trạng thái đường ống nạp hệ 1
+        public const string DATA_PC_PC_ong_H1 = "DATA_PC.PC_ong_H1";
+        //Trạng thái đường ống nạp hệ 2
+        public const string DATA_PC_PC_ong_H2 = "DATA_PC.PC_ong_H2";
         //Động cơ băng tải vào hệ 1 chạy  (Bool)
         public const string DATA_PC_Motor_BT1_Vao = "DATA_PC.Motor_BT1_Vao";
         //Động cơ băng tải nạp 1 hệ 1 chạy  (Bool)
@@ -75,10 +88,7 @@ namespace ManagementSoftware
         public const string DATA_PC_Motor_BT2_Nap2 = "DATA_PC.Motor_BT2_Nap2";
         //Động cơ băng tải ra hệ 2 chạy  (Bool)
         public const string DATA_PC_Motor_BT2_Ra = "DATA_PC.Motor_BT2_Ra";
-        //Trạng thái hệ 1 đang chạy  (Bool)
-        public const string DATA_PC_D_Run_1 = "DATA_PC.D_Run_1";
-        //Trạng thái hệ 2 đang chạy  (Bool)
-        public const string DATA_PC_D_Run_2 = "DATA_PC.D_Run_2";
+
         //Trạng thái hệ 1 dừng  (Bool)
         public const string DATA_PC_D_Stop_1 = "DATA_PC.D_Stop_1";
         //Trạng thái hệ 2 dừng  (Bool)

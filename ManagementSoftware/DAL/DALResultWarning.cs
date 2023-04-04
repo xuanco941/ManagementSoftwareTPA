@@ -76,8 +76,8 @@ namespace ManagementSoftware.DAL
                 try
                 {
                     var resultWarnings = context.ResultWarnings
-    .Where(rw => rw.ResultID == resultID)
-    .ToList();
+                    .Where(rw => rw.ResultID == resultID)
+                    .ToList();
                     return resultWarnings;
                 }
                 catch
