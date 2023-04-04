@@ -30,10 +30,10 @@ namespace ManagementSoftware.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultHistory));
             panel3 = new Panel();
             dataGridView1 = new DataGridView();
@@ -71,22 +71,15 @@ namespace ManagementSoftware.GUI
             panel5 = new Panel();
             panel7 = new Panel();
             panel8 = new Panel();
-            panel10 = new Panel();
+            panelLoc = new Panel();
+            buttonCallFormData = new Button();
             label5 = new Label();
-            comboBox1 = new ComboBox();
+            comboBoxLoaiKhi = new ComboBox();
             label6 = new Label();
             comboBoxNguoiVanHanh = new ComboBox();
             panel11 = new Panel();
             label1 = new Label();
             buttonCustomLoc = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            label3 = new Label();
-            dateTimePickerToiNgay = new DateTimePicker();
-            label2 = new Label();
-            dateTimePickerTuNgay = new DateTimePicker();
-            panel9 = new Panel();
-            buttonCallFormData = new Button();
-            btnInfoPage = new Button();
-            buttonDeleteResult = new Button();
             panel6 = new Panel();
             groupBox1 = new GroupBox();
             buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
@@ -115,9 +108,8 @@ namespace ManagementSoftware.GUI
             panel5.SuspendLayout();
             panel7.SuspendLayout();
             panel8.SuspendLayout();
-            panel10.SuspendLayout();
+            panelLoc.SuspendLayout();
             panel11.SuspendLayout();
-            panel9.SuspendLayout();
             panel6.SuspendLayout();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -137,40 +129,40 @@ namespace ManagementSoftware.GUI
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.BackgroundColor = SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             dataGridView1.Size = new Size(1058, 482);
             dataGridView1.TabIndex = 0;
             // 
@@ -654,8 +646,7 @@ namespace ManagementSoftware.GUI
             // 
             // panel8
             // 
-            panel8.Controls.Add(panel10);
-            panel8.Controls.Add(panel9);
+            panel8.Controls.Add(panelLoc);
             panel8.Dock = DockStyle.Fill;
             panel8.Location = new Point(0, 0);
             panel8.Margin = new Padding(4, 3, 4, 3);
@@ -663,67 +654,81 @@ namespace ManagementSoftware.GUI
             panel8.Size = new Size(234, 398);
             panel8.TabIndex = 48;
             // 
-            // panel10
+            // panelLoc
             // 
-            panel10.AutoScroll = true;
-            panel10.Controls.Add(label5);
-            panel10.Controls.Add(comboBox1);
-            panel10.Controls.Add(label6);
-            panel10.Controls.Add(comboBoxNguoiVanHanh);
-            panel10.Controls.Add(panel11);
-            panel10.Controls.Add(buttonCustomLoc);
-            panel10.Controls.Add(label3);
-            panel10.Controls.Add(dateTimePickerToiNgay);
-            panel10.Controls.Add(label2);
-            panel10.Controls.Add(dateTimePickerTuNgay);
-            panel10.Dock = DockStyle.Fill;
-            panel10.Location = new Point(0, 0);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(234, 275);
-            panel10.TabIndex = 1;
+            panelLoc.AutoScroll = true;
+            panelLoc.Controls.Add(buttonCallFormData);
+            panelLoc.Controls.Add(label5);
+            panelLoc.Controls.Add(comboBoxLoaiKhi);
+            panelLoc.Controls.Add(label6);
+            panelLoc.Controls.Add(comboBoxNguoiVanHanh);
+            panelLoc.Controls.Add(panel11);
+            panelLoc.Controls.Add(buttonCustomLoc);
+            panelLoc.Dock = DockStyle.Fill;
+            panelLoc.Location = new Point(0, 0);
+            panelLoc.Name = "panelLoc";
+            panelLoc.Size = new Size(234, 398);
+            panelLoc.TabIndex = 1;
+            // 
+            // buttonCallFormData
+            // 
+            buttonCallFormData.Cursor = Cursors.Hand;
+            buttonCallFormData.Dock = DockStyle.Bottom;
+            buttonCallFormData.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonCallFormData.ForeColor = SystemColors.HotTrack;
+            buttonCallFormData.Image = (Image)resources.GetObject("buttonCallFormData.Image");
+            buttonCallFormData.Location = new Point(0, 358);
+            buttonCallFormData.Margin = new Padding(4, 3, 4, 3);
+            buttonCallFormData.Name = "buttonCallFormData";
+            buttonCallFormData.Size = new Size(234, 40);
+            buttonCallFormData.TabIndex = 95;
+            buttonCallFormData.Text = "Dữ liệu chi tiết";
+            buttonCallFormData.TextAlign = ContentAlignment.MiddleRight;
+            buttonCallFormData.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonCallFormData.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(21, 102);
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(20, 111);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(52, 17);
+            label5.Size = new Size(67, 21);
             label5.TabIndex = 94;
-            label5.Text = "Loại khí";
+            label5.Text = "Loại khí:";
             // 
-            // comboBox1
+            // comboBoxLoaiKhi
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(24, 122);
-            comboBox1.Margin = new Padding(4, 3, 4, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(190, 28);
-            comboBox1.TabIndex = 93;
+            comboBoxLoaiKhi.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxLoaiKhi.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxLoaiKhi.FormattingEnabled = true;
+            comboBoxLoaiKhi.Location = new Point(20, 133);
+            comboBoxLoaiKhi.Margin = new Padding(4, 3, 4, 3);
+            comboBoxLoaiKhi.Name = "comboBoxLoaiKhi";
+            comboBoxLoaiKhi.Size = new Size(190, 33);
+            comboBoxLoaiKhi.TabIndex = 93;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(20, 53);
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(20, 55);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(101, 17);
+            label6.Size = new Size(125, 21);
             label6.TabIndex = 92;
-            label6.Text = "Người vận hành";
+            label6.Text = "Người vận hành:";
             // 
             // comboBoxNguoiVanHanh
             // 
             comboBoxNguoiVanHanh.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxNguoiVanHanh.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxNguoiVanHanh.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxNguoiVanHanh.FormattingEnabled = true;
-            comboBoxNguoiVanHanh.Location = new Point(23, 73);
+            comboBoxNguoiVanHanh.Location = new Point(20, 77);
             comboBoxNguoiVanHanh.Margin = new Padding(4, 3, 4, 3);
             comboBoxNguoiVanHanh.Name = "comboBoxNguoiVanHanh";
-            comboBoxNguoiVanHanh.Size = new Size(190, 28);
+            comboBoxNguoiVanHanh.Size = new Size(190, 33);
             comboBoxNguoiVanHanh.TabIndex = 91;
             // 
             // panel11
@@ -738,7 +743,7 @@ namespace ManagementSoftware.GUI
             // label1
             // 
             label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(0, 0);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
@@ -756,11 +761,11 @@ namespace ManagementSoftware.GUI
             buttonCustomLoc.BorderSize = 0;
             buttonCustomLoc.Cursor = Cursors.Hand;
             buttonCustomLoc.FlatStyle = FlatStyle.Flat;
-            buttonCustomLoc.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonCustomLoc.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonCustomLoc.ForeColor = Color.Black;
             buttonCustomLoc.Image = (Image)resources.GetObject("buttonCustomLoc.Image");
             buttonCustomLoc.ImageAlign = ContentAlignment.MiddleRight;
-            buttonCustomLoc.Location = new Point(60, 234);
+            buttonCustomLoc.Location = new Point(60, 173);
             buttonCustomLoc.Margin = new Padding(4, 3, 4, 3);
             buttonCustomLoc.Name = "buttonCustomLoc";
             buttonCustomLoc.Size = new Size(120, 37);
@@ -770,115 +775,7 @@ namespace ManagementSoftware.GUI
             buttonCustomLoc.TextColor = Color.Black;
             buttonCustomLoc.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonCustomLoc.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(21, 196);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(65, 17);
-            label3.TabIndex = 71;
-            label3.Text = "Tới ngày :";
-            // 
-            // dateTimePickerToiNgay
-            // 
-            dateTimePickerToiNgay.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePickerToiNgay.Format = DateTimePickerFormat.Custom;
-            dateTimePickerToiNgay.Location = new Point(88, 193);
-            dateTimePickerToiNgay.Margin = new Padding(4, 3, 4, 3);
-            dateTimePickerToiNgay.MaxDate = new DateTime(2050, 12, 31, 0, 0, 0, 0);
-            dateTimePickerToiNgay.MinDate = new DateTime(2022, 1, 1, 0, 0, 0, 0);
-            dateTimePickerToiNgay.Name = "dateTimePickerToiNgay";
-            dateTimePickerToiNgay.Size = new Size(125, 25);
-            dateTimePickerToiNgay.TabIndex = 70;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(21, 161);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(62, 17);
-            label2.TabIndex = 69;
-            label2.Text = "Từ ngày :";
-            // 
-            // dateTimePickerTuNgay
-            // 
-            dateTimePickerTuNgay.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePickerTuNgay.Format = DateTimePickerFormat.Custom;
-            dateTimePickerTuNgay.Location = new Point(88, 157);
-            dateTimePickerTuNgay.Margin = new Padding(4, 3, 4, 3);
-            dateTimePickerTuNgay.MaxDate = new DateTime(2050, 12, 31, 0, 0, 0, 0);
-            dateTimePickerTuNgay.MinDate = new DateTime(2022, 1, 1, 0, 0, 0, 0);
-            dateTimePickerTuNgay.Name = "dateTimePickerTuNgay";
-            dateTimePickerTuNgay.Size = new Size(125, 25);
-            dateTimePickerTuNgay.TabIndex = 68;
-            // 
-            // panel9
-            // 
-            panel9.AutoScroll = true;
-            panel9.Controls.Add(buttonCallFormData);
-            panel9.Controls.Add(btnInfoPage);
-            panel9.Controls.Add(buttonDeleteResult);
-            panel9.Dock = DockStyle.Bottom;
-            panel9.Location = new Point(0, 275);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(234, 123);
-            panel9.TabIndex = 0;
-            // 
-            // buttonCallFormData
-            // 
-            buttonCallFormData.Cursor = Cursors.Hand;
-            buttonCallFormData.Dock = DockStyle.Bottom;
-            buttonCallFormData.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCallFormData.ForeColor = SystemColors.HotTrack;
-            buttonCallFormData.Image = (Image)resources.GetObject("buttonCallFormData.Image");
-            buttonCallFormData.Location = new Point(0, 3);
-            buttonCallFormData.Margin = new Padding(4, 3, 4, 3);
-            buttonCallFormData.Name = "buttonCallFormData";
-            buttonCallFormData.Size = new Size(234, 40);
-            buttonCallFormData.TabIndex = 68;
-            buttonCallFormData.Text = "Dữ liệu chi tiết";
-            buttonCallFormData.TextAlign = ContentAlignment.MiddleRight;
-            buttonCallFormData.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonCallFormData.UseVisualStyleBackColor = false;
-            // 
-            // btnInfoPage
-            // 
-            btnInfoPage.Cursor = Cursors.Hand;
-            btnInfoPage.Dock = DockStyle.Bottom;
-            btnInfoPage.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnInfoPage.ForeColor = SystemColors.HotTrack;
-            btnInfoPage.Image = (Image)resources.GetObject("btnInfoPage.Image");
-            btnInfoPage.Location = new Point(0, 43);
-            btnInfoPage.Margin = new Padding(4, 3, 4, 3);
-            btnInfoPage.Name = "btnInfoPage";
-            btnInfoPage.Size = new Size(234, 40);
-            btnInfoPage.TabIndex = 69;
-            btnInfoPage.Text = "Thông tin trang";
-            btnInfoPage.TextAlign = ContentAlignment.MiddleRight;
-            btnInfoPage.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnInfoPage.UseVisualStyleBackColor = false;
-            // 
-            // buttonDeleteResult
-            // 
-            buttonDeleteResult.Cursor = Cursors.Hand;
-            buttonDeleteResult.Dock = DockStyle.Bottom;
-            buttonDeleteResult.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonDeleteResult.ForeColor = Color.Crimson;
-            buttonDeleteResult.Image = (Image)resources.GetObject("buttonDeleteResult.Image");
-            buttonDeleteResult.Location = new Point(0, 83);
-            buttonDeleteResult.Margin = new Padding(4, 3, 4, 3);
-            buttonDeleteResult.Name = "buttonDeleteResult";
-            buttonDeleteResult.Size = new Size(234, 40);
-            buttonDeleteResult.TabIndex = 70;
-            buttonDeleteResult.Text = "Xóa dữ liệu trang này";
-            buttonDeleteResult.TextAlign = ContentAlignment.MiddleRight;
-            buttonDeleteResult.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonDeleteResult.UseVisualStyleBackColor = false;
+            buttonCustomLoc.Click += buttonCustomLoc_Click;
             // 
             // panel6
             // 
@@ -992,10 +889,9 @@ namespace ManagementSoftware.GUI
             panel5.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel8.ResumeLayout(false);
-            panel10.ResumeLayout(false);
-            panel10.PerformLayout();
+            panelLoc.ResumeLayout(false);
+            panelLoc.PerformLayout();
             panel11.ResumeLayout(false);
-            panel9.ResumeLayout(false);
             panel6.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
@@ -1015,7 +911,7 @@ namespace ManagementSoftware.GUI
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPrint;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonExcel;
         private DataGridView dataGridView1;
-        private Panel panel10;
+        private Panel panelLoc;
         private Panel panel11;
         private Label label1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustomLoc;
@@ -1023,20 +919,12 @@ namespace ManagementSoftware.GUI
         private CheckBox checkBoxTheTich;
         private Label label4;
         private CheckBox checkBoxApSuat;
-        private Label label3;
-        private DateTimePicker dateTimePickerToiNgay;
-        private Label label2;
-        private DateTimePicker dateTimePickerTuNgay;
         private Syncfusion.Windows.Forms.Tools.IntegerTextBox TheTichInput2;
         private Syncfusion.Windows.Forms.Tools.IntegerTextBox TheTichInput1;
         private Syncfusion.Windows.Forms.Tools.IntegerTextBox ApSuatInput2;
         private Syncfusion.Windows.Forms.Tools.IntegerTextBox ApSuatInput1;
         private Label label6;
         private ComboBox comboBoxNguoiVanHanh;
-        private Panel panel9;
-        private Button buttonCallFormData;
-        private Button btnInfoPage;
-        private Button buttonDeleteResult;
         private Panel panelPagination;
         private TableLayoutPanel tableLayoutPanel5;
         private TableLayoutPanel tableLayoutPanel7;
@@ -1066,5 +954,7 @@ namespace ManagementSoftware.GUI
         private Syncfusion.Windows.Forms.Tools.IntegerTextBox inputNumPageGo;
         private Label label5;
         private ComboBox comboBox1;
+        private Button buttonCallFormData;
+        private ComboBox comboBoxLoaiKhi;
     }
 }

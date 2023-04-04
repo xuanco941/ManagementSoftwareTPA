@@ -23,8 +23,7 @@ namespace ManagementSoftware
             try
             {
                 client.Connect(amsAddress);
-                var state = client.ReadState();
-                return true;
+                return CheckState();
             }
             catch
             {
@@ -60,30 +59,59 @@ namespace ManagementSoftware
 
 
         //Read bool, float, uint
-        public T ReadAVariableNumber<T>(string variableName)
+        public T? ReadAVariableNumber<T>(string variableName) where T : struct
         {
-            T value = (T)client.ReadValue(variableName, typeof(T));
-            return value;
+            try
+            {
+                T? value = (T)client.ReadValue(variableName, typeof(T));
+                return value;
+            }
+            catch
+            {
+                return null;
+            }
+
         }
 
 
-        //read TimeSpan
-        public T ReadAVariableNumber_ReadAny<T>(string variableName)
+        //read TimeSpanTwinCAT.ClientNotConnectedException: 'Client is not connected!'
+        public T? ReadAVariableNumber_ReadAny<T>(string variableName) where T : struct
         {
-            var symbol = client.ReadSymbol(variableName);
 
-            T value = (T)(client.ReadAny(symbol.IndexGroup, symbol.IndexOffset, typeof(T)));
+            try
+            {
+                var symbol = client.ReadSymbol(variableName);
 
-            return value;
+                T? value = (T)(client.ReadAny(symbol.IndexGroup, symbol.IndexOffset, typeof(T)));
+
+                return value;
+            }
+            catch
+            {
+                return null;
+            }
+
+
+
         }
 
 
         //read String
-        public string ReadAVariableString(string variableName)
+        public string? ReadAVariableString(string variableName)
         {
-            var symbol = client.ReadSymbol(variableName);
-            string value = client.ReadAnyString(symbol.IndexGroup, symbol.IndexOffset, 9999, Encoding.ASCII);
-            return value;
+
+            try
+            {
+                var symbol = client.ReadSymbol(variableName);
+                string? value = client.ReadAnyString(symbol.IndexGroup, symbol.IndexOffset, 9999, Encoding.ASCII);
+                return value;
+            }
+            catch
+            {
+                return null;
+            }
+
+
         }
 
     }

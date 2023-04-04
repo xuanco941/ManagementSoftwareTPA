@@ -13,8 +13,16 @@ namespace ManagementSoftware.DAL
         {
             using (var context = new DataBaseContext())
             {
-                context.Results.Add(result);
-                context.SaveChanges();
+                try
+                {
+                    context.Results.Add(result);
+                    context.SaveChanges();
+                }
+                catch
+                {
+
+                }
+
             }
         }
 
@@ -23,29 +31,37 @@ namespace ManagementSoftware.DAL
         {
             using (var context = new DataBaseContext())
             {
-                var resultToUpdate = context.Results.FirstOrDefault(r => r.ResultID == result.ResultID);
-                if (resultToUpdate == null)
+                try
+                {
+                    var resultToUpdate = context.Results.FirstOrDefault(r => r.ResultID == result.ResultID);
+                    if (resultToUpdate == null)
+                    {
+                        return false;
+                    }
+
+                    resultToUpdate.ApSuatTong = result.ApSuatTong;
+                    resultToUpdate.LoaiKhi = result.LoaiKhi;
+                    resultToUpdate.TimeStart = result.TimeStart;
+                    resultToUpdate.TimeEnd = result.TimeEnd;
+                    resultToUpdate.Status = result.Status;
+                    resultToUpdate.UserID = result.UserID;
+                    resultToUpdate.Username = result.Username;
+                    resultToUpdate.TheTichCanNap = result.TheTichCanNap;
+                    resultToUpdate.TheTichTieuChuan = result.TheTichTieuChuan;
+                    resultToUpdate.ApSuatTieuChuan = result.ApSuatTieuChuan;
+                    resultToUpdate.HeSoTieuChuan = result.HeSoTieuChuan;
+                    resultToUpdate.ThoiGianTrichMau = result.ThoiGianTrichMau;
+                    resultToUpdate.SoLuongBinhCanNapHe1 = result.SoLuongBinhCanNapHe1;
+                    resultToUpdate.SoLuongBinhCanNapHe2 = result.SoLuongBinhCanNapHe2;
+
+                    context.SaveChanges();
+                    return true;
+                }
+                catch
                 {
                     return false;
                 }
-
-                resultToUpdate.ApSuatTong = result.ApSuatTong;
-                resultToUpdate.LoaiKhi = result.LoaiKhi;
-                resultToUpdate.TimeStart = result.TimeStart;
-                resultToUpdate.TimeEnd = result.TimeEnd;
-                resultToUpdate.Status = result.Status;
-                resultToUpdate.UserID = result.UserID;
-                resultToUpdate.Username = result.Username;
-                resultToUpdate.TheTichCanNap = result.TheTichCanNap;
-                resultToUpdate.TheTichTieuChuan = result.TheTichTieuChuan;
-                resultToUpdate.ApSuatTieuChuan = result.ApSuatTieuChuan;
-                resultToUpdate.HeSoTieuChuan = result.HeSoTieuChuan;
-                resultToUpdate.ThoiGianTrichMau = result.ThoiGianTrichMau;
-                resultToUpdate.SoLuongBinhCanNapHe1 = result.SoLuongBinhCanNapHe1;
-                resultToUpdate.SoLuongBinhCanNapHe2 = result.SoLuongBinhCanNapHe2;
-
-                context.SaveChanges();
-                return true;
+                
             }
         }
 
@@ -55,15 +71,52 @@ namespace ManagementSoftware.DAL
         {
             using (var context = new DataBaseContext())
             {
-                var resultToDelete = context.Results.Find(resultID);
-                if (resultToDelete != null)
+                try
                 {
-                    context.Results.Remove(resultToDelete);
-                    context.SaveChanges();
+                    var resultToDelete = context.Results.Find(resultID);
+                    if (resultToDelete != null)
+                    {
+                        context.Results.Remove(resultToDelete);
+                        context.SaveChanges();
+                    }
                 }
+                catch
+                {
+
+                }
+
             }
         }
 
+
+        public List<string> GetListNameLoaiKhi()
+        {
+            using (var context = new DataBaseContext())
+            {
+                try
+                {
+                    return context.Results.Select(x => x.LoaiKhi).Distinct().ToList();
+                }
+                catch
+                {
+                    return new List<string>();
+                }
+            }
+        }
+        public List<string> GetListNameNguoiVanHanh()
+        {
+            using (var context = new DataBaseContext())
+            {
+                try
+                {
+                    return context.Results.Select(x => x.Username).Distinct().ToList();
+                }
+                catch
+                {
+                    return new List<string>();
+                }
+            }
+        }
 
 
 

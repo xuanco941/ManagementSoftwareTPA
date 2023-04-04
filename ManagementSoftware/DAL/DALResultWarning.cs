@@ -13,35 +13,58 @@ namespace ManagementSoftware.DAL
         {
             using (var context = new DataBaseContext())
             {
-                context.ResultWarnings.Add(resultWarning);
-                context.SaveChanges();
+                try
+                {
+                    context.ResultWarnings.Add(resultWarning);
+                    context.SaveChanges();
+                }
+                catch
+                {
+
+                }
+
             }
         }
         public void Update(ResultWarning resultWarning)
         {
             using (var context = new DataBaseContext())
             {
-                var resultWarningToUpdate = context.ResultWarnings.Find(resultWarning.ResultWarningID);
-                if (resultWarningToUpdate != null)
+                try
                 {
-                    resultWarningToUpdate.Title = resultWarning.Title;
-                    resultWarningToUpdate.Description = resultWarning.Description;
-                    resultWarningToUpdate.CreateAt = resultWarning.CreateAt;
-                    resultWarningToUpdate.ResultID = resultWarning.ResultID;
-                    resultWarningToUpdate.Result = resultWarning.Result;
-                    context.SaveChanges();
+                    var resultWarningToUpdate = context.ResultWarnings.Find(resultWarning.ResultWarningID);
+                    if (resultWarningToUpdate != null)
+                    {
+                        resultWarningToUpdate.Title = resultWarning.Title;
+                        resultWarningToUpdate.Description = resultWarning.Description;
+                        resultWarningToUpdate.CreateAt = resultWarning.CreateAt;
+                        resultWarningToUpdate.ResultID = resultWarning.ResultID;
+                        resultWarningToUpdate.Result = resultWarning.Result;
+                        context.SaveChanges();
+                    }
                 }
+                catch
+                {
+
+                }
+
             }
         }
         public void Delete(int resultWarningID)
         {
             using (var context = new DataBaseContext())
             {
-                var resultWarningToDelete = context.ResultWarnings.Find(resultWarningID);
-                if (resultWarningToDelete != null)
+                try
                 {
-                    context.ResultWarnings.Remove(resultWarningToDelete);
-                    context.SaveChanges();
+                    var resultWarningToDelete = context.ResultWarnings.Find(resultWarningID);
+                    if (resultWarningToDelete != null)
+                    {
+                        context.ResultWarnings.Remove(resultWarningToDelete);
+                        context.SaveChanges();
+                    }
+                }
+                catch
+                {
+
                 }
             }
         }
@@ -50,10 +73,17 @@ namespace ManagementSoftware.DAL
         {
             using (var context = new DataBaseContext())
             {
-                var resultWarnings = context.ResultWarnings
-                    .Where(rw => rw.ResultID == resultID)
-                    .ToList();
-                return resultWarnings;
+                try
+                {
+                    var resultWarnings = context.ResultWarnings
+    .Where(rw => rw.ResultID == resultID)
+    .ToList();
+                    return resultWarnings;
+                }
+                catch
+                {
+                    return new List<ResultWarning>();
+                }
             }
         }
 

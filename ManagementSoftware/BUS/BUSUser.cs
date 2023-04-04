@@ -15,20 +15,14 @@ namespace ManagementSoftware.BUS
     {
         public static bool AuthLogin(string username, string password)
         {
-            try
+
+            User? user = DALUser.AuthLogin(username, password);
+            if (user != null)
             {
-                User? user = DALUser.AuthLogin(username, password);
-                if (user != null)
-                {
-                    Common.USERSESSION = user;
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                Common.USERSESSION = user;
+                return true;
             }
-            catch
+            else
             {
                 return false;
             }

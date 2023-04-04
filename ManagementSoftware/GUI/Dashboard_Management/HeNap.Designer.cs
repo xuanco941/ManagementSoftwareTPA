@@ -61,7 +61,7 @@
             tabPage2.Location = new Point(4, 39);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1063, 573);
+            tabPage2.Size = new Size(1428, 851);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Hệ Nạp 2";
             tabPage2.UseVisualStyleBackColor = true;
@@ -77,6 +77,7 @@
             Name = "HeNap";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HeNap";
+            FormClosing += HeNap_FormClosing;
             Load += HeNap_Load;
             tabControl1.ResumeLayout(false);
             ResumeLayout(false);

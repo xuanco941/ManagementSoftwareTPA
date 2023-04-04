@@ -111,6 +111,8 @@ namespace ManagementSoftware.Models
                 {
                     //tao quuyen cho admin
                     new DALGroup().Add(Common.GroupAdmin);
+                    new DALGroup().Add(Common.GroupUser);
+
                     //tao tai khoan admin
                     new DALUser().Add(Common.UserAdmin);
 

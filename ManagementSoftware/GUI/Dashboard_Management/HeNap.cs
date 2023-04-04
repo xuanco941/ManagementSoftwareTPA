@@ -29,5 +29,24 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             new MethodCommonGUI().ShowFormOnTabPage(tabPage2, heNap2);
 
         }
+
+        private void HeNap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (IsHandleCreated && InvokeRequired)
+            {
+                BeginInvoke(new Action(() =>
+                {
+                    heNap1.Close();
+                    heNap2.Close();
+                }));
+
+            }
+            else
+            {
+                heNap1.Close();
+                heNap2.Close();
+            }
+
+        }
     }
 }

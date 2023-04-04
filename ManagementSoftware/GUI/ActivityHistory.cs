@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSoftware.GUI.Section;
-using ManagementSoftware.GUI.ActivityManagement;
 using ManagementSoftware.Models;
 using ManagementSoftware.BUS;
 using ManagementSoftware.DAL.DALPagination;
@@ -39,6 +38,8 @@ namespace ManagementSoftware.GUI
         public ActivityHistory()
         {
             InitializeComponent();
+            LoadDGV();
+
 
         }
         void LoadDGV()
@@ -56,7 +57,7 @@ namespace ManagementSoftware.GUI
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 16, FontStyle.Regular);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 16, FontStyle.Bold);
 
             //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -64,7 +65,7 @@ namespace ManagementSoftware.GUI
             dataGridView1.RowTemplate.Height = 50;
             dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dataGridView1.DefaultCellStyle.ForeColor = Color.White;
-            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Regular);
+            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 15, FontStyle.Regular);
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ReadOnly = true;
@@ -170,7 +171,6 @@ namespace ManagementSoftware.GUI
 
         private void ActivityHistory_Load(object sender, EventArgs e)
         {
-            LoadDGV();
             LoadFormThongKe();
         }
     }

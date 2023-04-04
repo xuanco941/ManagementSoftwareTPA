@@ -11,37 +11,62 @@ namespace ManagementSoftware.DAL
     {
         public void Add(Machine machine)
         {
+
             using (var context = new DataBaseContext())
             {
-                context.Machines.Add(machine);
-                context.SaveChanges();
+                try
+                {
+                    context.Machines.Add(machine);
+                    context.SaveChanges();
+                }
+                catch
+                {
+
+                }
+
             }
         }
         public void Update(Machine machine)
         {
             using (var context = new DataBaseContext())
             {
-                var machineToUpdate = context.Machines.FirstOrDefault(m => m.MachineID == machine.MachineID);
-                if (machineToUpdate != null)
+                try
                 {
-                    machineToUpdate.ApSuat = machine.ApSuat;
-                    machineToUpdate.TheTich = machine.TheTich;
-                    machineToUpdate.NameMachine = machine.NameMachine;
-                    machineToUpdate.ResultID = machine.ResultID;
-                    context.SaveChanges();
+                    var machineToUpdate = context.Machines.FirstOrDefault(m => m.MachineID == machine.MachineID);
+                    if (machineToUpdate != null)
+                    {
+                        machineToUpdate.ApSuat = machine.ApSuat;
+                        machineToUpdate.TheTich = machine.TheTich;
+                        machineToUpdate.NameMachine = machine.NameMachine;
+                        machineToUpdate.ResultID = machine.ResultID;
+                        context.SaveChanges();
+                    }
                 }
+                catch
+                {
+
+                }
+
             }
         }
         public void Delete(int machineID)
         {
             using (var context = new DataBaseContext())
             {
-                var machineToDelete = context.Machines.FirstOrDefault(m => m.MachineID == machineID);
-                if (machineToDelete != null)
+                try
                 {
-                    context.Machines.Remove(machineToDelete);
-                    context.SaveChanges();
+                    var machineToDelete = context.Machines.FirstOrDefault(m => m.MachineID == machineID);
+                    if (machineToDelete != null)
+                    {
+                        context.Machines.Remove(machineToDelete);
+                        context.SaveChanges();
+                    }
                 }
+                catch
+                {
+
+                }
+
             }
         }
 

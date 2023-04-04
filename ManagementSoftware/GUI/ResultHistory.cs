@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManagementSoftware.DAL;
+using ManagementSoftware.DAL.DALPagination;
 using ManagementSoftware.GUI.ResultManagement;
 using ManagementSoftware.GUI.Section;
 
@@ -24,11 +26,23 @@ namespace ManagementSoftware.GUI
 
         // tổng số trang
         private int TotalPages = 0;
+
+        string nguoiVanHanhDefaul = "Tất cả";
+        string loaiKhiDefaul = "Tất cả";
+
+
         //Data
         List<Models.Result> ListResults = new List<Models.Result>();
+
+        PaginationResult pagination = new PaginationResult();
+
+        DALResult dalResult = new DALResult();
         public ResultHistory()
         {
             InitializeComponent();
+
+            LoadDGV();
+
         }
 
 
@@ -38,8 +52,8 @@ namespace ManagementSoftware.GUI
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ID" });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Loại bình", SortMode = DataGridViewColumnSortMode.NotSortable });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Số lượng sản xuất", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Loại khí", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Áp suất tổng", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 HeaderText = "Time Start",
@@ -58,9 +72,8 @@ namespace ManagementSoftware.GUI
                     Font = new Font("Segoe UI", 11, FontStyle.Regular),
                 }
             });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Áp suất tổng", SortMode = DataGridViewColumnSortMode.NotSortable });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Trạng thái", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Người giám sát", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Trạng thái", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewButtonColumn()
             {
                 HeaderText = "",
@@ -130,29 +143,43 @@ namespace ManagementSoftware.GUI
 
             try
             {
-                string id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                if (e.ColumnIndex == dataGridView1.Columns["HN1"].Index)
-                {
+                string? idSTR = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-                    ResultHeNap u = new ResultHeNap();
-                    u.ShowDialog();
-                }
-                if (e.ColumnIndex == dataGridView1.Columns["HN2"].Index)
+                if (idSTR != null)
                 {
+                    int index = idSTR.IndexOf(Common.RESULT);
+                    string numOnly = idSTR.Substring(index + Common.RESULT.Length);
+                    int id = int.Parse(numOnly);
 
-                    ResultHeNap u = new ResultHeNap();
-                    u.ShowDialog();
+                    if (e.ColumnIndex == dataGridView1.Columns["HN1"].Index)
+                    {
+
+                        ResultHeNap u = new ResultHeNap(id, "Hệ Nạp 1");
+                        u.ShowDialog();
+                    }
+                    if (e.ColumnIndex == dataGridView1.Columns["HN2"].Index)
+                    {
+
+                        ResultHeNap u = new ResultHeNap(id, "Hệ Nạp 2");
+                        u.ShowDialog();
+                    }
+                    if (e.ColumnIndex == dataGridView1.Columns["Error"].Index)
+                    {
+
+                        ResultError u = new ResultError(id);
+                        u.ShowDialog();
+                    }
                 }
-                if (e.ColumnIndex == dataGridView1.Columns["Error"].Index)
+                else
                 {
-
-                    ResultError u = new ResultError();
-                    u.ShowDialog();
+                    MessageBox.Show("Không tìm thấy ID của bản ghi này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+
             }
             catch
             {
-
+                MessageBox.Show("Không tìm thấy dữ liệu bản ghi này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -166,25 +193,39 @@ namespace ManagementSoftware.GUI
 
         void LoadFormThongKe()
         {
-            dataGridView1.Rows.Clear();
 
+            panelPagination.Enabled = false;
+            panelLoc.Enabled = false;
+
+            dataGridView1.Rows.Clear();
+            pagination.Set(page, timeStart, timeEnd, loaiKhiDefaul, nguoiVanHanhDefaul);
+
+            this.ListResults = pagination.ListResults;
+            this.TotalPages = pagination.TotalPages;
+            lbTotalPages.Text = this.TotalPages.ToString();
+
+            buttonPreviousPage.Enabled = this.page > 1;
+            buttonNextPage.Enabled = this.page < this.TotalPages;
+            buttonPage.Text = this.page.ToString();
+
+            pageNumberGoto.MinValue = 1;
+            pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
 
             bool color = false;
 
-            for (int i = 1; i < 25; i++)
+            foreach (var item in this.ListResults)
             {
                 int rowId = dataGridView1.Rows.Add();
                 DataGridViewRow row = dataGridView1.Rows[rowId];
-                row.Cells[0].Value = i;
+                row.Cells[0].Value = Common.RESULT + item.ResultID;
 
                 //Product? p = dALProduct.GetProductFromID(item.ProductID);
-                row.Cells[1].Value = "Oxy";
-                row.Cells[2].Value = new Random().Next(0, 101);
-                row.Cells[3].Value = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
-                row.Cells[4].Value = DateTime.Now.AddHours(3).ToString("HH:mm:ss dd/MM/yyyy");
-                row.Cells[5].Value = new Random().Next(0, 20);
-                row.Cells[6].Value = "Done";
-                row.Cells[7].Value = "admin";
+                row.Cells[1].Value = item.LoaiKhi;
+                row.Cells[2].Value = item.ApSuatTong;
+                row.Cells[3].Value = item.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
+                row.Cells[4].Value = item.TimeEnd.ToString("HH:mm:ss dd/MM/yyyy");
+                row.Cells[5].Value = item.Username;
+                row.Cells[6].Value = item.Status == true ? "OK" : "NG";
 
 
                 if (color)
@@ -199,6 +240,10 @@ namespace ManagementSoftware.GUI
                 }
                 color = !color;
             }
+
+
+            panelPagination.Enabled = true;
+            panelLoc.Enabled = true;
 
         }
 
@@ -234,11 +279,40 @@ namespace ManagementSoftware.GUI
             LoadFormThongKe();
         }
 
-        private void ResultHistory_Load(object sender, EventArgs e)
+        private async void ResultHistory_Load(object sender, EventArgs e)
         {
-            LoadDGV();
+
+            List<string> nguoiVanHanh = new List<string> { nguoiVanHanhDefaul };
+            List<string> loaiKhi = new List<string> { loaiKhiDefaul };
+
+            List<string> lk = await Task.Run(() => dalResult.GetListNameLoaiKhi());
+            if (lk != null && lk.Count > 0)
+            {
+                loaiKhi.AddRange(lk);
+            }
+
+            List<string> nvh = await Task.Run(() => dalResult.GetListNameNguoiVanHanh());
+            if (nvh != null && nvh.Count > 0)
+            {
+                nguoiVanHanh.AddRange(nvh);
+            }
+
+            comboBoxNguoiVanHanh.DataSource = nguoiVanHanh;
+            comboBoxLoaiKhi.DataSource = loaiKhi;
+
             LoadFormThongKe();
-            comboBoxNguoiVanHanh.DataSource = new List<string>() { "Tất cả" };
+        }
+
+        private void buttonCustomLoc_Click(object sender, EventArgs e)
+        {
+            loaiKhiDefaul = comboBoxLoaiKhi.Text;
+            nguoiVanHanhDefaul = comboBoxNguoiVanHanh.Text;
+            page = 1;
+            timeStart = null;
+            TimeEnd = null;
+            TotalPages = 0;
+
+            LoadFormThongKe();
         }
     }
 

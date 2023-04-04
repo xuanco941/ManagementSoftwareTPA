@@ -2,6 +2,7 @@
 using ManagementSoftware.GUI.Section;
 using Syncfusion.Drawing;
 using Syncfusion.Windows.Forms.Chart;
+using Syncfusion.XlsIO.Implementation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -138,10 +139,24 @@ namespace ManagementSoftware.GUI
 
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
-            errorDashboard.Close();
-            settingDashboard.Close();
-            chartApSuat.Close();
-            chartTheTich.Close();
+            if (IsHandleCreated && InvokeRequired)
+            {
+                BeginInvoke(new Action(() =>
+                {
+                    errorDashboard.Close();
+                    settingDashboard.Close();
+                    chartApSuat.Close();
+                    chartTheTich.Close();
+                }));
+
+            }
+            else
+            {
+                errorDashboard.Close();
+                settingDashboard.Close();
+                chartApSuat.Close();
+                chartTheTich.Close();
+            }
         }
 
         private void button57_Click_1(object sender, EventArgs e)

@@ -87,7 +87,7 @@ namespace ManagementSoftware.GUI.ResultManagement
             chartTheTich.UpdateChart(dic);
         }
 
-        public ResultHeNap()
+        public ResultHeNap(int id, string heNap)
         {
             InitializeComponent();
 

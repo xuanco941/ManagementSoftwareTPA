@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagementSoftware.DAL.DALPagination;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,18 @@ namespace ManagementSoftware.GUI
 {
     public partial class LichSuDangNhap : Form
     {
+        // ngày để query 
+        private DateTime? timeStart = null;
+        private DateTime? timeEnd = null;
+        // trang hiện tại
+        private int page = 1;
+
+        // tổng số trang
+        private int TotalPages = 0;
+        //Data
+        List<Models.UserWorking> ListResults = new List<Models.UserWorking>();
+
+        PaginationUserWorking pagination = new PaginationUserWorking();
         public LichSuDangNhap()
         {
             InitializeComponent();
@@ -19,7 +32,8 @@ namespace ManagementSoftware.GUI
         }
         void LoadDGV()
         {
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "MÃ NHÂN VIÊN", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "STT", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "TÊN ĐĂNG NHẬP", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "TÊN NHÂN VIÊN", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "NGÀY GIỜ ĐĂNG NHẬP", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "THỜI GIAN HOẠT ĐỘNG ĐẾN", SortMode = DataGridViewColumnSortMode.NotSortable });
@@ -45,27 +59,94 @@ namespace ManagementSoftware.GUI
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.ColumnHeadersHeight = 50;
+            dataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(41, 44, 51);
+
+
+        }
+
+        void LoadFormThongKe()
+        {
+            panelPagination.Enabled = false;
+
+            dataGridView1.Rows.Clear();
+
+
+            pagination.Set(page, timeStart, timeEnd);
+
+            this.ListResults = pagination.ListResults;
+            this.TotalPages = pagination.TotalPages;
+            lbTotalPages.Text = this.TotalPages.ToString();
+
+            buttonPreviousPage.Enabled = this.page > 1;
+            buttonNextPage.Enabled = this.page < this.TotalPages;
+            buttonPage.Text = this.page.ToString();
+
+            pageNumberGoto.MinValue = 1;
+            pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
 
 
 
+            int i = 1;
 
-            for (int i = 1; i < 7; i++)
+            if (ListResults != null && ListResults.Count > 0)
             {
-                int rowId = dataGridView1.Rows.Add();
-                DataGridViewRow row = dataGridView1.Rows[rowId];
+                foreach (var item in this.ListResults)
+                {
+                    int rowId = dataGridView1.Rows.Add();
+                    DataGridViewRow row = dataGridView1.Rows[rowId];
 
-                row.Cells[0].Value = Common.USERS + new Random().Next(0, 101);
-                row.Cells[1].Value = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
-                row.Cells[2].Value = DateTime.Now.AddHours(3).ToString("HH:mm:ss dd/MM/yyyy");
-                row.Cells[3].Value = "Đỗ Văn A";
+                    row.Cells[0].Value = i;
+                    row.Cells[1].Value = item.Username;
+                    row.Cells[2].Value = item.Fullname;
+                    row.Cells[3].Value = item.CreateAt.ToString("HH:mm:ss dd/MM/yyyy");
+                    row.Cells[4].Value = item.EndAt.ToString("HH:mm:ss dd/MM/yyyy");
 
 
-                dataGridView1.Rows[rowId].DefaultCellStyle.BackColor = Color.FromArgb(41, 44, 51);
-
+                    //dataGridView1.Rows[rowId].DefaultCellStyle.BackColor = Color.FromArgb(41, 44, 51);
+                    i++;
+                }
             }
 
+            panelPagination.Enabled = true;
+
+        }
 
 
+
+        private void LichSuDangNhap_Load(object sender, EventArgs e)
+        {
+            LoadFormThongKe();
+        }
+
+        private void buttonPreviousPage_Click(object sender, EventArgs e)
+        {
+            if (this.page > 1)
+            {
+                this.page = this.page - 1;
+                LoadFormThongKe();
+            }
+        }
+
+        private void buttonNextPage_Click(object sender, EventArgs e)
+        {
+            if (this.page < this.TotalPages)
+            {
+                this.page = this.page + 1;
+                LoadFormThongKe();
+            }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            timeStart = TimeStart.Value;
+            timeEnd = TimeEnd.Value;
+            LoadFormThongKe();
+        }
+
+        private void buttonGoto_Click(object sender, EventArgs e)
+        {
+            this.page = int.Parse(pageNumberGoto.Text);
+            LoadFormThongKe();
         }
     }
 }

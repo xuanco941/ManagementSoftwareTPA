@@ -9,8 +9,16 @@ namespace ManagementSoftware.DAL
         {
             using (var dbContext = new DataBaseContext())
             {
-                dbContext.Activities.Add(activity);
-                dbContext.SaveChanges();
+                try
+                {
+                    dbContext.Activities.Add(activity);
+                    dbContext.SaveChanges();
+                }
+                catch
+                {
+
+                }
+
             }
         }
 
@@ -18,12 +26,20 @@ namespace ManagementSoftware.DAL
         {
             using (var dbContext = new DataBaseContext())
             {
-                var existingActivity = dbContext.Activities.FirstOrDefault(a => a.ActivityID == activity.ActivityID);
-                if (existingActivity != null)
+                try
                 {
-                    dbContext.Entry(existingActivity).CurrentValues.SetValues(activity);
-                    dbContext.SaveChanges();
+                    var existingActivity = dbContext.Activities.FirstOrDefault(a => a.ActivityID == activity.ActivityID);
+                    if (existingActivity != null)
+                    {
+                        dbContext.Entry(existingActivity).CurrentValues.SetValues(activity);
+                        dbContext.SaveChanges();
+                    }
                 }
+                catch
+                {
+
+                }
+
             }
         }
 
@@ -31,28 +47,38 @@ namespace ManagementSoftware.DAL
         {
             using (var dbContext = new DataBaseContext())
             {
-                var existingActivity = dbContext.Activities.FirstOrDefault(a => a.ActivityID == activityID);
-                if (existingActivity != null)
+                try
                 {
-                    dbContext.Activities.Remove(existingActivity);
-                    dbContext.SaveChanges();
+                    var existingActivity = dbContext.Activities.FirstOrDefault(a => a.ActivityID == activityID);
+                    if (existingActivity != null)
+                    {
+                        dbContext.Activities.Remove(existingActivity);
+                        dbContext.SaveChanges();
+                    }
                 }
+                catch
+                {
+
+                }
+
             }
         }
         public void DeleteRange(List<int> activityID)
         {
             using (var dbContext = new DataBaseContext())
             {
-                List<Activity> usersToDelete = dbContext.Activities.Where(u => activityID.Contains(u.ActivityID)).ToList();
-                dbContext.Activities.RemoveRange(usersToDelete);
-                dbContext.SaveChanges();
+                try
+                {
+                    List<Activity> usersToDelete = dbContext.Activities.Where(u => activityID.Contains(u.ActivityID)).ToList();
+                    dbContext.Activities.RemoveRange(usersToDelete);
+                    dbContext.SaveChanges();
+                }
+                catch
+                {
+
+                }
+
             }
-        }
-        public async Task<List<string>>? GetDistinctUsernamesAsync()
-        {
-            using var dbContext = new DataBaseContext();
-            var distinctUsernames = await dbContext.Activities.Select(a => a.Username).Distinct().ToListAsync();
-            return distinctUsernames;
         }
 
     }

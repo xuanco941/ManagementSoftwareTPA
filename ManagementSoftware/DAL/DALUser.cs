@@ -9,9 +9,19 @@ public class DALUser
 {
     public static User? AuthLogin(string username, string password)
     {
-        DataBaseContext dbContext = new DataBaseContext();
-        User? user = dbContext.Users.Include(u => u.Group).FirstOrDefault(u => u.Username == username.Trim() && u.Password == password.Trim());
-        return user;
+        using (var dbContext = new DataBaseContext())
+        {
+            try
+            {
+                User? user = dbContext.Users.Include(u => u.Group).FirstOrDefault(u => u.Username == username.Trim() && u.Password == password.Trim());
+                return user;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
     }
 
 
@@ -20,8 +30,16 @@ public class DALUser
     {
         using (var context = new DataBaseContext())
         {
-            context.Users.Add(user);
-            context.SaveChanges();
+            try
+            {
+                context.Users.Add(user);
+                context.SaveChanges();
+            }
+            catch
+            {
+
+            }
+
         }
     }
 

@@ -12,6 +12,8 @@ namespace ManagementSoftware
         //Account Admin
         public static User UserAdmin = new User { FullName = "Admin", Username = "admin", Password = "123", GroupID = 1 };
         public static Group GroupAdmin = new Group { GroupName = "Admin", IsManagementUser = true, IsManagementGroup = true };
+        public static Group GroupUser = new Group { GroupName = "User", IsManagementUser = false, IsManagementGroup = false };
+
 
         //GUI
         public static Font FontForm = new Font("Segoe UI", 11, FontStyle.Regular);
@@ -31,6 +33,7 @@ namespace ManagementSoftware
         //User
         public const string USERS = "NV";
         public const string GROUPS = "GR";
+        public const string RESULT = "R";
         public const string ACTIVITIES = "A";
         public const string PURCHASEORDER = "PO";
         public const string PRODUCT = "SP";
@@ -38,5 +41,15 @@ namespace ManagementSoftware
         public const string IMPORTED_WAREHOUSE = "PN";
         public const string EXPORTED_WAREHOUSE = "PX";
 
+
+
+
+        //When Read From PLC Error
+        public const string ERR = "Error";
+
+
+        //Loại khí
+        public const string Oxy = "Oxy";
+        public const string Nitor = "Nitor";
     }
 }

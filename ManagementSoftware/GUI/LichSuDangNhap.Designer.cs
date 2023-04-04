@@ -212,10 +212,11 @@
             buttonGoto.TextColor = Color.Black;
             buttonGoto.TextImageRelation = TextImageRelation.TextBeforeImage;
             buttonGoto.UseVisualStyleBackColor = false;
+            buttonGoto.Click += buttonGoto_Click;
             // 
             // pageNumberGoto
             // 
-            pageNumberGoto.BeforeTouchSize = new Size(120, 25);
+            pageNumberGoto.BeforeTouchSize = new Size(66, 35);
             pageNumberGoto.BorderStyle = BorderStyle.FixedSingle;
             pageNumberGoto.Dock = DockStyle.Top;
             pageNumberGoto.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -363,6 +364,7 @@
             buttonSearch.TextColor = Color.Black;
             buttonSearch.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonSearch.UseVisualStyleBackColor = false;
+            buttonSearch.Click += buttonSearch_Click;
             // 
             // panel45
             // 
@@ -422,6 +424,7 @@
             buttonNextPage.TextColor = Color.Black;
             buttonNextPage.TextImageRelation = TextImageRelation.TextBeforeImage;
             buttonNextPage.UseVisualStyleBackColor = false;
+            buttonNextPage.Click += buttonNextPage_Click;
             // 
             // buttonPreviousPage
             // 
@@ -445,6 +448,7 @@
             buttonPreviousPage.TextColor = Color.Black;
             buttonPreviousPage.TextImageRelation = TextImageRelation.TextBeforeImage;
             buttonPreviousPage.UseVisualStyleBackColor = false;
+            buttonPreviousPage.Click += buttonPreviousPage_Click;
             // 
             // buttonCustomGoPage
             // 
@@ -474,7 +478,7 @@
             // inputNumPageGo
             // 
             inputNumPageGo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inputNumPageGo.BeforeTouchSize = new Size(120, 25);
+            inputNumPageGo.BeforeTouchSize = new Size(66, 35);
             inputNumPageGo.BorderColor = SystemColors.ActiveCaption;
             inputNumPageGo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             inputNumPageGo.IntegerValue = 1L;
@@ -496,6 +500,7 @@
             Controls.Add(panelPagination);
             Name = "LichSuDangNhap";
             Text = "formDuLieu";
+            Load += LichSuDangNhap_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panelPagination.ResumeLayout(false);
             panelPagination.PerformLayout();

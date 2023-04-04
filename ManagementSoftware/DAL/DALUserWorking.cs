@@ -13,35 +13,58 @@ namespace ManagementSoftware.DAL
         {
             using (var context = new DataBaseContext())
             {
-                context.UserWorkings.Add(userWorking);
-                context.SaveChanges();
+                try
+                {
+                    context.UserWorkings.Add(userWorking);
+                    context.SaveChanges();
+                }
+                catch
+                {
+
+                }
             }
         }
         public void Update(UserWorking userWorking)
         {
             using (var context = new DataBaseContext())
             {
-                var userWorkingToUpdate = context.UserWorkings.FirstOrDefault(uw => uw.UserWorkingID == userWorking.UserWorkingID);
-                if (userWorkingToUpdate != null)
+                try
                 {
-                    userWorkingToUpdate.CreateAt = userWorking.CreateAt;
-                    userWorkingToUpdate.EndAt = userWorking.EndAt;
-                    userWorkingToUpdate.Username = userWorking.Username;
-                    userWorkingToUpdate.Fullname = userWorking.Fullname;
-                    context.SaveChanges();
+                    var userWorkingToUpdate = context.UserWorkings.FirstOrDefault(uw => uw.UserWorkingID == userWorking.UserWorkingID);
+                    if (userWorkingToUpdate != null)
+                    {
+                        userWorkingToUpdate.CreateAt = userWorking.CreateAt;
+                        userWorkingToUpdate.EndAt = userWorking.EndAt;
+                        userWorkingToUpdate.Username = userWorking.Username;
+                        userWorkingToUpdate.Fullname = userWorking.Fullname;
+                        context.SaveChanges();
+                    }
                 }
+                catch
+                {
+
+                }
+
             }
         }
         public void Delete(int userWorkingID)
         {
             using (var context = new DataBaseContext())
             {
-                var userWorkingToDelete = context.UserWorkings.FirstOrDefault(uw => uw.UserWorkingID == userWorkingID);
-                if (userWorkingToDelete != null)
+                try
                 {
-                    context.UserWorkings.Remove(userWorkingToDelete);
-                    context.SaveChanges();
+                    var userWorkingToDelete = context.UserWorkings.FirstOrDefault(uw => uw.UserWorkingID == userWorkingID);
+                    if (userWorkingToDelete != null)
+                    {
+                        context.UserWorkings.Remove(userWorkingToDelete);
+                        context.SaveChanges();
+                    }
                 }
+                catch
+                {
+
+                }
+
             }
         }
 

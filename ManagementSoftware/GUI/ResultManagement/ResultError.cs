@@ -12,7 +12,7 @@ namespace ManagementSoftware.GUI.ResultManagement
 {
     public partial class ResultError : Form
     {
-        public ResultError()
+        public ResultError(int id)
         {
             InitializeComponent();
         }
