@@ -33,7 +33,7 @@ namespace ManagementSoftware.GUI
             InitializeComponent();
 
             methodUpdateDataFormDashboard = new MethodUpdateDataFormDashboard(this, label1ApSuatHeNap1, labelApSuatHeNap2, labelTheTichHeNap1, labelTheTichHeNap2, labelApSuatTong, labelSanSangNapHe1, labelSanSangNapHe2, labelDangNapHe1, labelDangNapHe2, labelXaKhiHe1, labelXaKhiHe2, labelDungNapHe1, labelDungNapHe2);
-            
+
 
             settingDashboard = new SettingDashboard(plc);
 

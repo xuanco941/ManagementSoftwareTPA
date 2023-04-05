@@ -21,6 +21,11 @@ namespace ManagementSoftware
         public const string DATA_PC_ST_Xa_Khi_H1 = "DATA_PC.ST_Xa_Khi_H1";
         //Bắt đầu quá trình xả khí hệ 2  (Bool)
         public const string DATA_PC_ST_Xa_Khi_H2 = "DATA_PC.ST_Xa_Khi_H2";
+        //Trạng thái hệ 1 sẵn sàng chạy  (Bool)
+        public const string DATA_PC_Enable_H1 = "DATA_PC.Enable_H1";
+        //Trạng thái hệ 2 sẵn sàng chạy  (Bool)
+        public const string DATA_PC_Enable_H2 = "DATA_PC.Enable_H2";
+
 
         //enable (đèn)
         //Trạng thái hệ 1 đang chạy  (Bool)
@@ -38,9 +43,9 @@ namespace ManagementSoftware
         //Cài đặt áp suất tiêu chuẩn theo thể tích   (Real)
         public const string DATA_SETUP_P_Tieu_Chuan = "DATA_SETUP.P_Tieu_Chuan";
         //Cài đặt hệ số biến đổi áp suất theo nhiệt độ   (Real)
-        public const string DATA_SETUP_DATA_SetupHS_Nhiet_do = "DATA_SETUP.DATA_SetupHS_Nhiet_do";
+        public const string DATA_SETUP_DATA_HS_Nhiet_do = "DATA_SETUP.HS_Nhiet_do";
         //Cài đặt thời gian trích mẫu    (DateTime)
-        public const string DATA_SETUP_Time_trich_mau = "DATA_SETUP.Time_trich_mau";
+        public const string DATA_SETUP_Time_trich_mau_V = "DATA_SETUP.Time_trich_mau_V";
         //Cài đặt số lượng bình cần nạp cho hệ 1   (UDint)
         public const string DATA_SETUP_SL_Binh_Nap_H1 = "DATA_SETUP.SL_Binh_Nap_H1";
         //Cài đặt số lượng bình cần nạp cho hệ 2  (UDint)

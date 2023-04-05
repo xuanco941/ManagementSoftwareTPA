@@ -253,7 +253,7 @@
             gridLayout1.SetParticipateInLayout(labelNguoiVanHanh, true);
             labelNguoiVanHanh.Size = new Size(543, 38);
             labelNguoiVanHanh.TabIndex = 43;
-            labelNguoiVanHanh.Text = "Người vận hành : admin";
+            labelNguoiVanHanh.Text = "Người vận hành : Chưa có";
             labelNguoiVanHanh.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1TimeStart
@@ -268,7 +268,7 @@
             gridLayout1.SetParticipateInLayout(label1TimeStart, true);
             label1TimeStart.Size = new Size(543, 38);
             label1TimeStart.TabIndex = 39;
-            label1TimeStart.Text = "Thời gian bắt đầu : 00:00:00";
+            label1TimeStart.Text = "Thời gian bắt đầu : Chưa có";
             label1TimeStart.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSoLuongNapHe1
@@ -283,7 +283,7 @@
             gridLayout1.SetParticipateInLayout(labelSoLuongNapHe1, true);
             labelSoLuongNapHe1.Size = new Size(543, 38);
             labelSoLuongNapHe1.TabIndex = 44;
-            labelSoLuongNapHe1.Text = "Số lượng nạp hệ 1 : 0";
+            labelSoLuongNapHe1.Text = "Số lượng nạp hệ 1 : Chưa có";
             labelSoLuongNapHe1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // SoLuongNapHe2
@@ -298,7 +298,7 @@
             gridLayout1.SetParticipateInLayout(SoLuongNapHe2, true);
             SoLuongNapHe2.Size = new Size(543, 38);
             SoLuongNapHe2.TabIndex = 41;
-            SoLuongNapHe2.Text = "Số lượng nạp hệ 2 : 0";
+            SoLuongNapHe2.Text = "Số lượng nạp hệ 2 : Chưa có";
             SoLuongNapHe2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1LoaiKhi
@@ -313,7 +313,7 @@
             gridLayout1.SetParticipateInLayout(label1LoaiKhi, true);
             label1LoaiKhi.Size = new Size(543, 38);
             label1LoaiKhi.TabIndex = 42;
-            label1LoaiKhi.Text = "Loại khí : ";
+            label1LoaiKhi.Text = "Loại khí : Chưa có";
             label1LoaiKhi.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel9
@@ -715,7 +715,7 @@
             // label27
             // 
             label27.BackColor = Color.DarkSlateGray;
-            label27.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label27.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label27.ForeColor = SystemColors.ButtonHighlight;
             label27.Location = new Point(2, 1);
             label27.Margin = new Padding(0);
@@ -723,7 +723,7 @@
             gridLayout2.SetParticipateInLayout(label27, true);
             label27.Size = new Size(222, 42);
             label27.TabIndex = 43;
-            label27.Text = "HỆ NẠP 1 :";
+            label27.Text = "TRẠNG THÁI HỆ NẠP 1 :";
             label27.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSanSangNapHe1
@@ -785,7 +785,7 @@
             // label22
             // 
             label22.BackColor = Color.DarkSlateGray;
-            label22.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label22.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label22.ForeColor = SystemColors.ButtonHighlight;
             label22.Location = new Point(2, 43);
             label22.Margin = new Padding(0);
@@ -793,7 +793,7 @@
             gridLayout2.SetParticipateInLayout(label22, true);
             label22.Size = new Size(222, 42);
             label22.TabIndex = 38;
-            label22.Text = "HỆ NẠP 2 :";
+            label22.Text = "TRẠNG THÁI HỆ NẠP 2 :";
             label22.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSanSangNapHe2

@@ -31,7 +31,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         public MethodUpdateDataFormDashboard(Dashboard dashboard, Label label1ApSuatHeNap1, Label labelApSuatHeNap2, Label labelTheTichHeNap1, Label labelTheTichHeNap2, Label labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelXaKhiHe1, Label labelXaKhiHe2, Label labelDungNapHe1, Label labelDungNapHe2)
         {
             plc = new PLCBeckhOff();
-            timerUpdateGUILabel1 = new TimerUpdateGUI(200, 3000, UpdateData);
+            timerUpdateGUILabel1 = new TimerUpdateGUI(200, 500, UpdateData);
 
             this.dashboard = dashboard;
             this.label1ApSuatHeNap1 = label1ApSuatHeNap1;
@@ -101,8 +101,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             bool? batDauNapHe1 = false;
             bool? batDauNapHe2 = false;
 
-            sanSangNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_D_Run_1));
-            sanSangNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_D_Run_2));
+            sanSangNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H1));
+            sanSangNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H2));
             ketThucNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H1));
             ketThucNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H2));
             xaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H1));

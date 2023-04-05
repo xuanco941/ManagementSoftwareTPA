@@ -62,7 +62,7 @@ namespace ManagementSoftware.GUI
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
-                    Font = new Font("Segoe UI", 11, FontStyle.Regular),
+                    Font = new Font("Segoe UI", 13, FontStyle.Regular),
                 }
             });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
@@ -71,7 +71,7 @@ namespace ManagementSoftware.GUI
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
-                    Font = new Font("Segoe UI", 11, FontStyle.Regular),
+                    Font = new Font("Segoe UI", 13, FontStyle.Regular),
                 }
             });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Người giám sát", SortMode = DataGridViewColumnSortMode.NotSortable });
@@ -86,7 +86,7 @@ namespace ManagementSoftware.GUI
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
-                    Font = new Font("Segoe UI", 12, FontStyle.Regular),
+                    Font = new Font("Segoe UI", 13, FontStyle.Regular),
                 }
             });
             dataGridView1.Columns.Add(new DataGridViewButtonColumn()
@@ -99,7 +99,7 @@ namespace ManagementSoftware.GUI
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
-                    Font = new Font("Segoe UI", 12, FontStyle.Regular),
+                    Font = new Font("Segoe UI", 13, FontStyle.Regular),
                 }
             });
             dataGridView1.Columns.Add(new DataGridViewButtonColumn()
@@ -112,7 +112,7 @@ namespace ManagementSoftware.GUI
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
-                    Font = new Font("Segoe UI", 12, FontStyle.Regular),
+                    Font = new Font("Segoe UI", 13, FontStyle.Regular),
                 }
             });
 
@@ -120,7 +120,7 @@ namespace ManagementSoftware.GUI
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 14, FontStyle.Regular);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 16, FontStyle.Bold);
 
             //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
