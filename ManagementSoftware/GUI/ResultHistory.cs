@@ -13,6 +13,8 @@ using ManagementSoftware.DAL;
 using ManagementSoftware.DAL.DALPagination;
 using ManagementSoftware.GUI.ResultManagement;
 using ManagementSoftware.GUI.Section;
+using ManagementSoftware.Models;
+using Syncfusion.Windows.Forms.Chart;
 
 namespace ManagementSoftware.GUI
 {
@@ -188,20 +190,23 @@ namespace ManagementSoftware.GUI
 
 
 
-
-
-
-        void LoadFormThongKe()
+        private void UpdateGUI(List<Result> list)
         {
+
+            if (this.IsHandleCreated && this.InvokeRequired)
+            {
+                this.BeginInvoke(new Action<List<Result>>(UpdateGUI), list);
+                return;
+            }
+
+
+            //update gui
 
             panelPagination.Enabled = false;
             panelLoc.Enabled = false;
 
             dataGridView1.Rows.Clear();
-            pagination.Set(page, timeStart, timeEnd, loaiKhiDefaul, nguoiVanHanhDefaul);
 
-            this.ListResults = pagination.ListResults;
-            this.TotalPages = pagination.TotalPages;
             lbTotalPages.Text = this.TotalPages.ToString();
 
             buttonPreviousPage.Enabled = this.page > 1;
@@ -245,6 +250,19 @@ namespace ManagementSoftware.GUI
             panelPagination.Enabled = true;
             panelLoc.Enabled = true;
 
+        }
+
+
+        void LoadFormThongKe()
+        {
+            pagination.Set(page, timeStart, timeEnd, loaiKhiDefaul, nguoiVanHanhDefaul);
+
+            this.ListResults = pagination.ListResults;
+            this.TotalPages = pagination.TotalPages;
+
+
+
+            UpdateGUI(pagination.ListResults);
         }
 
 

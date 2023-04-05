@@ -143,7 +143,6 @@
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(1135, 719);
             tabControl1.TabIndex = 0;
-            tabControl1.Selected += tabControl1_Selected;
             // 
             // tabPage1
             // 

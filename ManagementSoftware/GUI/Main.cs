@@ -38,6 +38,7 @@ namespace ManagementSoftware.GUI
 
         private void ChangeForm(Form form, object sender)
         {
+            panelItemMenu.Enabled = false;
             //focus button
             Button button = sender as Button;
 
@@ -59,6 +60,9 @@ namespace ManagementSoftware.GUI
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             form.Show();
+
+            panelItemMenu.Enabled = true;
+
         }
 
 

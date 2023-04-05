@@ -31,7 +31,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         public MethodUpdateDataFormDashboard(Dashboard dashboard, Label label1ApSuatHeNap1, Label labelApSuatHeNap2, Label labelTheTichHeNap1, Label labelTheTichHeNap2, Label labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelXaKhiHe1, Label labelXaKhiHe2, Label labelDungNapHe1, Label labelDungNapHe2)
         {
             plc = new PLCBeckhOff();
-            timerUpdateGUILabel1 = new TimerUpdateGUI(200, 100, UpdateData);
+            timerUpdateGUILabel1 = new TimerUpdateGUI(200, 3000, UpdateData);
 
             this.dashboard = dashboard;
             this.label1ApSuatHeNap1 = label1ApSuatHeNap1;
@@ -134,30 +134,31 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
         private void UpdateGUI(DataAlwaysUpdate data)
         {
+            //update gui
 
             if (dashboard.IsHandleCreated && dashboard.InvokeRequired)
             {
-                dashboard.BeginInvoke(new Action<DataAlwaysUpdate>(UpdateGUI), data);
-                return;
+                dashboard.BeginInvoke(() =>
+                {
+                    label1ApSuatHeNap1.Text = data.apSuatHe1 != null ? string.Format("{0:0.00}", data.apSuatHe1) : Common.ERR;
+                    labelApSuatHeNap2.Text = data.apSuatHe2 != null ? string.Format("{0:0.00}", data.apSuatHe2) : Common.ERR;
+                    labelApSuatTong.Text = data.apSuatTong != null ? string.Format("{0:0.00}", data.apSuatTong) : Common.ERR;
+                    labelTheTichHeNap1.Text = data.theTichHe1 != null ? string.Format("{0:0.00}", data.theTichHe1) : Common.ERR;
+                    labelTheTichHeNap2.Text = data.theTichHe2 != null ? string.Format("{0:0.00}", data.theTichHe2) : Common.ERR;
+
+                    labelSanSangNapHe1.BackColor = data.sanSangNapHe1 != null && data.sanSangNapHe1 == true ? Color.LimeGreen : Color.DimGray;
+                    labelSanSangNapHe2.BackColor = data.sanSangNapHe2 != null && data.sanSangNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+                    labelDangNapHe1.BackColor = data.batDauNapHe1 != null && data.batDauNapHe1 == true ? Color.LimeGreen : Color.DimGray;
+                    labelDangNapHe2.BackColor = data.batDauNapHe2 != null && data.batDauNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+                    labelXaKhiHe1.BackColor = data.xaKhiHe1 != null && data.xaKhiHe1 == true ? Color.LimeGreen : Color.DimGray;
+                    labelXaKhiHe2.BackColor = data.xaKhiHe2 != null && data.xaKhiHe2 == true ? Color.LimeGreen : Color.DimGray;
+                    labelDungNapHe1.BackColor = data.ketThucNapHe1 != null && data.ketThucNapHe1 == true ? Color.LimeGreen : Color.DimGray;
+                    labelDungNapHe2.BackColor = data.ketThucNapHe2 != null && data.ketThucNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+                });
             }
 
 
-            //update gui
-
-            label1ApSuatHeNap1.Text = data.apSuatHe1 != null ? string.Format("{0:0.00}", data.apSuatHe1) : Common.ERR;
-            labelApSuatHeNap2.Text = data.apSuatHe2 != null ? string.Format("{0:0.00}", data.apSuatHe2) : Common.ERR;
-            labelApSuatTong.Text = data.apSuatTong != null ? string.Format("{0:0.00}", data.apSuatTong) : Common.ERR;
-            labelTheTichHeNap1.Text = data.theTichHe1 != null ? string.Format("{0:0.00}", data.theTichHe1) : Common.ERR;
-            labelTheTichHeNap2.Text = data.theTichHe2 != null ? string.Format("{0:0.00}", data.theTichHe2) : Common.ERR;
-
-            labelSanSangNapHe1.BackColor = data.sanSangNapHe1 != null && data.sanSangNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-            labelSanSangNapHe2.BackColor = data.sanSangNapHe2 != null && data.sanSangNapHe2 == true ? Color.LimeGreen : Color.DimGray;
-            labelDangNapHe1.BackColor = data.batDauNapHe1 != null && data.batDauNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-            labelDangNapHe2.BackColor = data.batDauNapHe2 != null && data.batDauNapHe2 == true ? Color.LimeGreen : Color.DimGray;
-            labelXaKhiHe1.BackColor = data.xaKhiHe1 != null && data.xaKhiHe1 == true ? Color.LimeGreen : Color.DimGray;
-            labelXaKhiHe2.BackColor = data.xaKhiHe2 != null && data.xaKhiHe2 == true ? Color.LimeGreen : Color.DimGray;
-            labelDungNapHe1.BackColor = data.ketThucNapHe1 != null && data.ketThucNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-            labelDungNapHe2.BackColor = data.ketThucNapHe2 != null && data.ketThucNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+           
 
         }
     }

@@ -506,7 +506,6 @@
             Controls.Add(tableLayoutPanel1);
             Name = "SettingDashboard";
             Text = "Setting";
-            FormClosing += SettingDashboard_FormClosing;
             Load += SettingDashboard_Load;
             tableLayoutPanel1.ResumeLayout(false);
             panel2.ResumeLayout(false);

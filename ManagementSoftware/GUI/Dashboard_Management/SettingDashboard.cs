@@ -14,19 +14,20 @@ namespace ManagementSoftware.GUI
     public partial class SettingDashboard : Form
     {
 
-        PLCBeckhOff plc = new PLCBeckhOff();
-        public SettingDashboard()
+        PLCBeckhOff plc;
+        public SettingDashboard(PLCBeckhOff plc)
         {
             InitializeComponent();
+            this.plc = plc;
         }
 
         private void SettingDashboard_Load(object sender, EventArgs e)
         {
-            plc.Connect();
+            LoadData();
         }
 
 
-        public async void LoadData()
+        public async Task LoadData()
         {
             float? theTichCanNap = 0;
             float? thetichTieuChuan = 0;
@@ -62,9 +63,5 @@ namespace ManagementSoftware.GUI
 
         }
 
-        private async void SettingDashboard_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            await Task.Run(() => plc.Disconnect());
-        }
     }
 }

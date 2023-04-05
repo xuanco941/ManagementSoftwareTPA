@@ -35,7 +35,7 @@ namespace ManagementSoftware.GUI
             methodUpdateDataFormDashboard = new MethodUpdateDataFormDashboard(this, label1ApSuatHeNap1, labelApSuatHeNap2, labelTheTichHeNap1, labelTheTichHeNap2, labelApSuatTong, labelSanSangNapHe1, labelSanSangNapHe2, labelDangNapHe1, labelDangNapHe2, labelXaKhiHe1, labelXaKhiHe2, labelDungNapHe1, labelDungNapHe2);
             
 
-            settingDashboard = new SettingDashboard();
+            settingDashboard = new SettingDashboard(plc);
 
             chartApSuat = new Chart("BIỂU ĐỒ ÁP SUẤT");
             chartTheTich = new Chart("BIỂU ĐỒ THỂ TÍCH");
@@ -47,8 +47,10 @@ namespace ManagementSoftware.GUI
 
 
 
-        private async void Dashboard_Load(object sender, EventArgs e)
+        private void Dashboard_Load(object sender, EventArgs e)
         {
+            plc.Connect();
+
             MethodCommonGUI commonGUI = new MethodCommonGUI();
 
             commonGUI.ShowFormOnPanel(panelMainThongSoCaiDat, settingDashboard);
@@ -58,10 +60,8 @@ namespace ManagementSoftware.GUI
             commonGUI.ShowFormOnPanel(panelChartTheTich, chartTheTich);
 
 
-            plc.Connect();
 
             methodUpdateDataFormDashboard.StartUpdate();
-
 
         }
 
@@ -118,13 +118,6 @@ namespace ManagementSoftware.GUI
             }
         }
 
-        private void tabControl1_Selected(object sender, TabControlEventArgs e)
-        {
-            if (tabControl1.SelectedTab == tabPage2)
-            {
-                settingDashboard.LoadData();
-            }
-        }
 
 
 
