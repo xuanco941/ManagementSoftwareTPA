@@ -71,5 +71,25 @@ namespace ManagementSoftware.DAL
         }
 
 
+
+        public List<Machine> GetAllMachinesByResultID(int resultID)
+        {
+            using (var context = new DataBaseContext())
+            {
+                try
+                {
+                    var machines = context.Machines
+                    .Where(rw => rw.ResultID == resultID)
+                    .ToList();
+                    return machines;
+                }
+                catch
+                {
+                    return new List<Machine>();
+                }
+            }
+        }
+
+
     }
 }

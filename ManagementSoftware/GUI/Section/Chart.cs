@@ -78,7 +78,7 @@ namespace ManagementSoftware.GUI.Section
         public void UpdateChart(Dictionary<ChartSeries, List<DataDoThi>> dic)
         {
             chartControl1.Series.Clear();
-            if (dic != null && dic.Count > 0)
+            if (dic != null && dic.Count > 0 && dic.Values != null && dic.Values.Count > 0)
             {
 
                 DateTime start = dic.Values.SelectMany(v => v).Min(x => x.date);

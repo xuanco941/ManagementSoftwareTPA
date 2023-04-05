@@ -54,7 +54,7 @@
             label9 = new Label();
             labelApSuatHeNap2 = new Label();
             label1ApSuatHeNap1 = new Label();
-            label1TheTichHeNap1 = new Label();
+            labelTheTichHeNap1 = new Label();
             labelTheTichHeNap2 = new Label();
             button17 = new Button();
             tableLayoutPanel12 = new TableLayoutPanel();
@@ -69,15 +69,15 @@
             richTextBox1 = new RichTextBox();
             panelTrangThaiHeNap = new Panel();
             label27 = new Label();
-            label26 = new Label();
-            label25 = new Label();
-            label24 = new Label();
-            label23 = new Label();
+            labelSanSangNapHe1 = new Label();
+            labelDangNapHe1 = new Label();
+            labelXaKhiHe1 = new Label();
+            labelDungNapHe1 = new Label();
             label22 = new Label();
-            label21 = new Label();
-            label20 = new Label();
-            label19 = new Label();
-            label18 = new Label();
+            labelSanSangNapHe2 = new Label();
+            labelDangNapHe2 = new Label();
+            labelXaKhiHe2 = new Label();
+            labelDungNapHe2 = new Label();
             tabPage2 = new TabPage();
             panelMainThongSoCaiDat = new Panel();
             tableLayoutPanel30 = new TableLayoutPanel();
@@ -352,7 +352,7 @@
             tableLayoutPanel11.Controls.Add(label9, 0, 2);
             tableLayoutPanel11.Controls.Add(labelApSuatHeNap2, 1, 2);
             tableLayoutPanel11.Controls.Add(label1ApSuatHeNap1, 1, 1);
-            tableLayoutPanel11.Controls.Add(label1TheTichHeNap1, 2, 1);
+            tableLayoutPanel11.Controls.Add(labelTheTichHeNap1, 2, 1);
             tableLayoutPanel11.Controls.Add(labelTheTichHeNap2, 2, 2);
             tableLayoutPanel11.Dock = DockStyle.Fill;
             tableLayoutPanel11.Location = new Point(3, 43);
@@ -500,18 +500,18 @@
             label1ApSuatHeNap1.Text = "0.00";
             label1ApSuatHeNap1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label1TheTichHeNap1
+            // labelTheTichHeNap1
             // 
-            label1TheTichHeNap1.BackColor = Color.Black;
-            label1TheTichHeNap1.Dock = DockStyle.Fill;
-            label1TheTichHeNap1.ForeColor = SystemColors.ButtonHighlight;
-            label1TheTichHeNap1.Location = new Point(340, 48);
-            label1TheTichHeNap1.Margin = new Padding(0);
-            label1TheTichHeNap1.Name = "label1TheTichHeNap1";
-            label1TheTichHeNap1.Size = new Size(208, 46);
-            label1TheTichHeNap1.TabIndex = 39;
-            label1TheTichHeNap1.Text = "0.00";
-            label1TheTichHeNap1.TextAlign = ContentAlignment.MiddleCenter;
+            labelTheTichHeNap1.BackColor = Color.Black;
+            labelTheTichHeNap1.Dock = DockStyle.Fill;
+            labelTheTichHeNap1.ForeColor = SystemColors.ButtonHighlight;
+            labelTheTichHeNap1.Location = new Point(340, 48);
+            labelTheTichHeNap1.Margin = new Padding(0);
+            labelTheTichHeNap1.Name = "labelTheTichHeNap1";
+            labelTheTichHeNap1.Size = new Size(208, 46);
+            labelTheTichHeNap1.TabIndex = 39;
+            labelTheTichHeNap1.Text = "0.00";
+            labelTheTichHeNap1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelTheTichHeNap2
             // 
@@ -698,15 +698,15 @@
             // panelTrangThaiHeNap
             // 
             panelTrangThaiHeNap.Controls.Add(label27);
-            panelTrangThaiHeNap.Controls.Add(label26);
-            panelTrangThaiHeNap.Controls.Add(label25);
-            panelTrangThaiHeNap.Controls.Add(label24);
-            panelTrangThaiHeNap.Controls.Add(label23);
+            panelTrangThaiHeNap.Controls.Add(labelSanSangNapHe1);
+            panelTrangThaiHeNap.Controls.Add(labelDangNapHe1);
+            panelTrangThaiHeNap.Controls.Add(labelXaKhiHe1);
+            panelTrangThaiHeNap.Controls.Add(labelDungNapHe1);
             panelTrangThaiHeNap.Controls.Add(label22);
-            panelTrangThaiHeNap.Controls.Add(label21);
-            panelTrangThaiHeNap.Controls.Add(label20);
-            panelTrangThaiHeNap.Controls.Add(label19);
-            panelTrangThaiHeNap.Controls.Add(label18);
+            panelTrangThaiHeNap.Controls.Add(labelSanSangNapHe2);
+            panelTrangThaiHeNap.Controls.Add(labelDangNapHe2);
+            panelTrangThaiHeNap.Controls.Add(labelXaKhiHe2);
+            panelTrangThaiHeNap.Controls.Add(labelDungNapHe2);
             panelTrangThaiHeNap.Dock = DockStyle.Fill;
             panelTrangThaiHeNap.Location = new Point(4, 70);
             panelTrangThaiHeNap.Name = "panelTrangThaiHeNap";
@@ -727,61 +727,61 @@
             label27.Text = "HỆ NẠP 1 :";
             label27.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label26
+            // labelSanSangNapHe1
             // 
-            label26.BackColor = Color.DimGray;
-            label26.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label26.ForeColor = SystemColors.ButtonHighlight;
-            label26.Location = new Point(224, 1);
-            label26.Margin = new Padding(0);
-            label26.Name = "label26";
-            gridLayout2.SetParticipateInLayout(label26, true);
-            label26.Size = new Size(222, 42);
-            label26.TabIndex = 42;
-            label26.Text = "SẴN SÀNG NẠP";
-            label26.TextAlign = ContentAlignment.MiddleCenter;
+            labelSanSangNapHe1.BackColor = Color.DimGray;
+            labelSanSangNapHe1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSanSangNapHe1.ForeColor = SystemColors.ButtonHighlight;
+            labelSanSangNapHe1.Location = new Point(224, 1);
+            labelSanSangNapHe1.Margin = new Padding(0);
+            labelSanSangNapHe1.Name = "labelSanSangNapHe1";
+            gridLayout2.SetParticipateInLayout(labelSanSangNapHe1, true);
+            labelSanSangNapHe1.Size = new Size(222, 42);
+            labelSanSangNapHe1.TabIndex = 42;
+            labelSanSangNapHe1.Text = "SẴN SÀNG NẠP";
+            labelSanSangNapHe1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label25
+            // labelDangNapHe1
             // 
-            label25.BackColor = Color.LimeGreen;
-            label25.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label25.ForeColor = SystemColors.ButtonHighlight;
-            label25.Location = new Point(446, 1);
-            label25.Margin = new Padding(0);
-            label25.Name = "label25";
-            gridLayout2.SetParticipateInLayout(label25, true);
-            label25.Size = new Size(222, 42);
-            label25.TabIndex = 41;
-            label25.Text = "ĐANG NẠP";
-            label25.TextAlign = ContentAlignment.MiddleCenter;
+            labelDangNapHe1.BackColor = Color.DimGray;
+            labelDangNapHe1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelDangNapHe1.ForeColor = SystemColors.ButtonHighlight;
+            labelDangNapHe1.Location = new Point(446, 1);
+            labelDangNapHe1.Margin = new Padding(0);
+            labelDangNapHe1.Name = "labelDangNapHe1";
+            gridLayout2.SetParticipateInLayout(labelDangNapHe1, true);
+            labelDangNapHe1.Size = new Size(222, 42);
+            labelDangNapHe1.TabIndex = 41;
+            labelDangNapHe1.Text = "ĐANG NẠP";
+            labelDangNapHe1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label24
+            // labelXaKhiHe1
             // 
-            label24.BackColor = Color.DimGray;
-            label24.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label24.ForeColor = SystemColors.ButtonHighlight;
-            label24.Location = new Point(668, 1);
-            label24.Margin = new Padding(0);
-            label24.Name = "label24";
-            gridLayout2.SetParticipateInLayout(label24, true);
-            label24.Size = new Size(222, 42);
-            label24.TabIndex = 40;
-            label24.Text = "XẢ KHÍ";
-            label24.TextAlign = ContentAlignment.MiddleCenter;
+            labelXaKhiHe1.BackColor = Color.DimGray;
+            labelXaKhiHe1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelXaKhiHe1.ForeColor = SystemColors.ButtonHighlight;
+            labelXaKhiHe1.Location = new Point(668, 1);
+            labelXaKhiHe1.Margin = new Padding(0);
+            labelXaKhiHe1.Name = "labelXaKhiHe1";
+            gridLayout2.SetParticipateInLayout(labelXaKhiHe1, true);
+            labelXaKhiHe1.Size = new Size(222, 42);
+            labelXaKhiHe1.TabIndex = 40;
+            labelXaKhiHe1.Text = "XẢ KHÍ";
+            labelXaKhiHe1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label23
+            // labelDungNapHe1
             // 
-            label23.BackColor = Color.DimGray;
-            label23.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label23.ForeColor = SystemColors.ButtonHighlight;
-            label23.Location = new Point(890, 1);
-            label23.Margin = new Padding(0);
-            label23.Name = "label23";
-            gridLayout2.SetParticipateInLayout(label23, true);
-            label23.Size = new Size(222, 42);
-            label23.TabIndex = 39;
-            label23.Text = "DỪNG NẠP";
-            label23.TextAlign = ContentAlignment.MiddleCenter;
+            labelDungNapHe1.BackColor = Color.DimGray;
+            labelDungNapHe1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelDungNapHe1.ForeColor = SystemColors.ButtonHighlight;
+            labelDungNapHe1.Location = new Point(890, 1);
+            labelDungNapHe1.Margin = new Padding(0);
+            labelDungNapHe1.Name = "labelDungNapHe1";
+            gridLayout2.SetParticipateInLayout(labelDungNapHe1, true);
+            labelDungNapHe1.Size = new Size(222, 42);
+            labelDungNapHe1.TabIndex = 39;
+            labelDungNapHe1.Text = "DỪNG NẠP";
+            labelDungNapHe1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label22
             // 
@@ -797,61 +797,61 @@
             label22.Text = "HỆ NẠP 2 :";
             label22.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label21
+            // labelSanSangNapHe2
             // 
-            label21.BackColor = Color.DimGray;
-            label21.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label21.ForeColor = SystemColors.ButtonHighlight;
-            label21.Location = new Point(224, 43);
-            label21.Margin = new Padding(0);
-            label21.Name = "label21";
-            gridLayout2.SetParticipateInLayout(label21, true);
-            label21.Size = new Size(222, 42);
-            label21.TabIndex = 37;
-            label21.Text = "SẴN SÀNG NẠP";
-            label21.TextAlign = ContentAlignment.MiddleCenter;
+            labelSanSangNapHe2.BackColor = Color.DimGray;
+            labelSanSangNapHe2.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSanSangNapHe2.ForeColor = SystemColors.ButtonHighlight;
+            labelSanSangNapHe2.Location = new Point(224, 43);
+            labelSanSangNapHe2.Margin = new Padding(0);
+            labelSanSangNapHe2.Name = "labelSanSangNapHe2";
+            gridLayout2.SetParticipateInLayout(labelSanSangNapHe2, true);
+            labelSanSangNapHe2.Size = new Size(222, 42);
+            labelSanSangNapHe2.TabIndex = 37;
+            labelSanSangNapHe2.Text = "SẴN SÀNG NẠP";
+            labelSanSangNapHe2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label20
+            // labelDangNapHe2
             // 
-            label20.BackColor = Color.LimeGreen;
-            label20.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label20.ForeColor = SystemColors.ButtonHighlight;
-            label20.Location = new Point(446, 43);
-            label20.Margin = new Padding(0);
-            label20.Name = "label20";
-            gridLayout2.SetParticipateInLayout(label20, true);
-            label20.Size = new Size(222, 42);
-            label20.TabIndex = 36;
-            label20.Text = "ĐANG NẠP";
-            label20.TextAlign = ContentAlignment.MiddleCenter;
+            labelDangNapHe2.BackColor = Color.DimGray;
+            labelDangNapHe2.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelDangNapHe2.ForeColor = SystemColors.ButtonHighlight;
+            labelDangNapHe2.Location = new Point(446, 43);
+            labelDangNapHe2.Margin = new Padding(0);
+            labelDangNapHe2.Name = "labelDangNapHe2";
+            gridLayout2.SetParticipateInLayout(labelDangNapHe2, true);
+            labelDangNapHe2.Size = new Size(222, 42);
+            labelDangNapHe2.TabIndex = 36;
+            labelDangNapHe2.Text = "ĐANG NẠP";
+            labelDangNapHe2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label19
+            // labelXaKhiHe2
             // 
-            label19.BackColor = Color.DimGray;
-            label19.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label19.ForeColor = SystemColors.ButtonHighlight;
-            label19.Location = new Point(668, 43);
-            label19.Margin = new Padding(0);
-            label19.Name = "label19";
-            gridLayout2.SetParticipateInLayout(label19, true);
-            label19.Size = new Size(222, 42);
-            label19.TabIndex = 35;
-            label19.Text = "XẢ KHÍ";
-            label19.TextAlign = ContentAlignment.MiddleCenter;
+            labelXaKhiHe2.BackColor = Color.DimGray;
+            labelXaKhiHe2.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelXaKhiHe2.ForeColor = SystemColors.ButtonHighlight;
+            labelXaKhiHe2.Location = new Point(668, 43);
+            labelXaKhiHe2.Margin = new Padding(0);
+            labelXaKhiHe2.Name = "labelXaKhiHe2";
+            gridLayout2.SetParticipateInLayout(labelXaKhiHe2, true);
+            labelXaKhiHe2.Size = new Size(222, 42);
+            labelXaKhiHe2.TabIndex = 35;
+            labelXaKhiHe2.Text = "XẢ KHÍ";
+            labelXaKhiHe2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label18
+            // labelDungNapHe2
             // 
-            label18.BackColor = Color.DimGray;
-            label18.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label18.ForeColor = SystemColors.ButtonHighlight;
-            label18.Location = new Point(890, 43);
-            label18.Margin = new Padding(0);
-            label18.Name = "label18";
-            gridLayout2.SetParticipateInLayout(label18, true);
-            label18.Size = new Size(222, 42);
-            label18.TabIndex = 34;
-            label18.Text = "DỪNG NẠP";
-            label18.TextAlign = ContentAlignment.MiddleCenter;
+            labelDungNapHe2.BackColor = Color.DimGray;
+            labelDungNapHe2.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelDungNapHe2.ForeColor = SystemColors.ButtonHighlight;
+            labelDungNapHe2.Location = new Point(890, 43);
+            labelDungNapHe2.Margin = new Padding(0);
+            labelDungNapHe2.Name = "labelDungNapHe2";
+            gridLayout2.SetParticipateInLayout(labelDungNapHe2, true);
+            labelDungNapHe2.Size = new Size(222, 42);
+            labelDungNapHe2.TabIndex = 34;
+            labelDungNapHe2.Text = "DỪNG NẠP";
+            labelDungNapHe2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tabPage2
             // 
@@ -1339,7 +1339,7 @@
         private Label label9;
         private Label labelApSuatHeNap2;
         private Label label1ApSuatHeNap1;
-        private Label label1TheTichHeNap1;
+        private Label labelTheTichHeNap1;
         private Label labelTheTichHeNap2;
         private Button buttonShowBangLoi;
         private Panel panel1;
@@ -1359,16 +1359,16 @@
         private Label labelSoLuongNapHe1;
         private Panel panelTrangThaiHeNap;
         private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout2;
-        private Label label18;
+        private Label labelDungNapHe2;
         private Label label27;
-        private Label label26;
-        private Label label25;
-        private Label label24;
-        private Label label23;
+        private Label labelSanSangNapHe1;
+        private Label labelDangNapHe1;
+        private Label labelXaKhiHe1;
+        private Label labelDungNapHe1;
         private Label label22;
-        private Label label21;
-        private Label label20;
-        private Label label19;
+        private Label labelSanSangNapHe2;
+        private Label labelDangNapHe2;
+        private Label labelXaKhiHe2;
         private Panel panelChartApSuat;
         private Panel panelChartTheTich;
     }

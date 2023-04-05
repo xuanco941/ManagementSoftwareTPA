@@ -60,5 +60,11 @@ namespace ManagementSoftware
         public static Result? ResultCurrent { get; set; } = null;
         public static UserWorking? UserCurrent { get; set; } = null;
 
+
+
+        //Name Machine
+        public const string HeNap1 = "HỆ NẠP 1";
+        public const string HeNap2 = "HỆ NẠP 2";
+
     }
 }

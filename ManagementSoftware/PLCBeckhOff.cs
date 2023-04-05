@@ -34,15 +34,23 @@ namespace ManagementSoftware
 
         public bool CheckState()
         {
-            try
+            if (client.IsConnected == true)
             {
-                var state = client.ReadState();
-                return true;
+                try
+                {
+                    var state = client.ReadState();
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
             }
-            catch
+            else
             {
                 return false;
             }
+
         }
 
         public bool Disconnect()
