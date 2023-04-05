@@ -1,5 +1,6 @@
 ﻿using ManagementSoftware.DAL;
 using ManagementSoftware.DAL.DALPagination;
+using ManagementSoftware.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,11 +19,11 @@ namespace ManagementSoftware.GUI
         //Data
         List<Models.ResultWarning> ListResults = new List<Models.ResultWarning>();
 
-        int idResult;
-        public ErrorDashboard(int iR)
+        Result result;
+        public ErrorDashboard(Result result)
         {
             InitializeComponent();
-            idResult = iR;
+            this.result = result;
             LoadDGV();
         }
         void LoadDGV()
@@ -30,7 +31,6 @@ namespace ManagementSoftware.GUI
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "STT", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "MÃ LỖI", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "MÔ TẢ", SortMode = DataGridViewColumnSortMode.NotSortable });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "THUỘC MẺ NẠP", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "THỜI GIAN", SortMode = DataGridViewColumnSortMode.NotSortable });
 
 
@@ -66,7 +66,7 @@ namespace ManagementSoftware.GUI
             //dataGridView1.Rows.Clear();
 
 
-            ListResults = new DALResultWarning().GetAllResultWarningsByResultID(idResult);
+            ListResults = new DALResultWarning().GetAllResultWarningsByResultID(result.ResultID);
 
             if (ListResults != null && ListResults.Count > 0)
             {
@@ -79,8 +79,7 @@ namespace ManagementSoftware.GUI
 
                     row.Cells[1].Value = item.Title;
                     row.Cells[2].Value = item.Description;
-                    row.Cells[3].Value = Common.RESULT + item.ResultID;
-                    row.Cells[4].Value = item.CreateAt.ToString("HH:mm:ss dd/MM/yyyy");
+                    row.Cells[3].Value = item.CreateAt.ToString("HH:mm:ss dd/MM/yyyy");
                     i++;
                 }
 
@@ -91,6 +90,7 @@ namespace ManagementSoftware.GUI
 
         private void ErrorDashboard_Load(object sender, EventArgs e)
         {
+            labelBangLoi.Text = "BẢNG LỖI MẺ NẠP " + Common.RESULT + result.ResultID; 
             LoadFormThongKe();
         }
     }

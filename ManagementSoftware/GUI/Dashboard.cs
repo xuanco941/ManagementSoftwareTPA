@@ -32,13 +32,15 @@ namespace ManagementSoftware.GUI
         {
             InitializeComponent();
 
-            methodUpdateDataFormDashboard = new MethodUpdateDataFormDashboard(this, label1ApSuatHeNap1, labelApSuatHeNap2, labelTheTichHeNap1, labelTheTichHeNap2, labelApSuatTong, labelSanSangNapHe1, labelSanSangNapHe2, labelDangNapHe1, labelDangNapHe2, labelXaKhiHe1, labelXaKhiHe2, labelDungNapHe1, labelDungNapHe2);
-
-
-            settingDashboard = new SettingDashboard(plc);
 
             chartApSuat = new Chart("BIỂU ĐỒ ÁP SUẤT");
             chartTheTich = new Chart("BIỂU ĐỒ THỂ TÍCH");
+
+            methodUpdateDataFormDashboard = new MethodUpdateDataFormDashboard(this, label1ApSuatHeNap1, labelApSuatHeNap2, labelTheTichHeNap1, labelTheTichHeNap2, labelApSuatTong, labelSanSangNapHe1, labelSanSangNapHe2, labelDangNapHe1, labelDangNapHe2, labelXaKhiHe1, labelXaKhiHe2, labelDungNapHe1, labelDungNapHe2);
+            methodUpdateChartFormDashboard = new MethodUpdateChartFormDashboard(this,chartApSuat, chartTheTich, 0);
+
+            settingDashboard = new SettingDashboard(plc);
+
         }
 
 
@@ -62,6 +64,7 @@ namespace ManagementSoftware.GUI
 
 
             methodUpdateDataFormDashboard.StartUpdate();
+            methodUpdateChartFormDashboard.StartUpdate();
 
         }
 
@@ -85,16 +88,16 @@ namespace ManagementSoftware.GUI
                 chartApSuat.Close();
                 chartTheTich.Close();
             }
-
-            plc.Disconnect();
             methodUpdateDataFormDashboard.StopUpdate();
+            methodUpdateChartFormDashboard.StopUpdate();
+            plc.Disconnect();
         }
 
         private void button57_Click_1(object sender, EventArgs e)
         {
             if (Common.ResultCurrent != null)
             {
-                ErrorDashboard errorDashboard = new ErrorDashboard(Common.ResultCurrent.ResultID);
+                ErrorDashboard errorDashboard = new ErrorDashboard(Common.ResultCurrent);
                 errorDashboard.ShowDialog();
             }
             else

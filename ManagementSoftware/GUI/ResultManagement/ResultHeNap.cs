@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.GUI.Section;
+using ManagementSoftware.Models;
 using Syncfusion.Drawing;
 using Syncfusion.Windows.Forms.Chart;
 using System;
@@ -7,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,7 +39,6 @@ namespace ManagementSoftware.GUI.ResultManagement
 
             List<DataDoThi> dataDoThiASTong = new List<DataDoThi>();
             List<DataDoThi> dataDoThiAS1 = new List<DataDoThi>();
-            List<DataDoThi> dataDoThiAS2 = new List<DataDoThi>();
 
 
             for (int i = 0; i < 30; i++)
@@ -87,10 +88,15 @@ namespace ManagementSoftware.GUI.ResultManagement
             chartTheTich.UpdateChart(dic);
         }
 
-        public ResultHeNap(int id, string heNap)
+        string heNap;
+        Result result;
+        
+        public ResultHeNap(Result result, string heNap)
         {
             InitializeComponent();
 
+            this.result = result;
+            this.heNap = heNap;
 
             chartApSuat = new Chart("BIỂU ĐỒ ÁP SUẤT");
             chartTheTich = new Chart("BIỂU ĐỒ THỂ TÍCH");

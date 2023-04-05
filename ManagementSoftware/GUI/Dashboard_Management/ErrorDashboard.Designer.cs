@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            labelBangLoi = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -36,11 +37,25 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Location = new Point(0, 46);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(937, 548);
+            dataGridView1.Size = new Size(937, 502);
             dataGridView1.TabIndex = 1;
+            // 
+            // labelBangLoi
+            // 
+            labelBangLoi.BackColor = Color.Crimson;
+            labelBangLoi.Dock = DockStyle.Top;
+            labelBangLoi.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelBangLoi.ForeColor = SystemColors.ButtonHighlight;
+            labelBangLoi.Location = new Point(0, 0);
+            labelBangLoi.Margin = new Padding(0);
+            labelBangLoi.Name = "labelBangLoi";
+            labelBangLoi.Size = new Size(937, 46);
+            labelBangLoi.TabIndex = 35;
+            labelBangLoi.Text = "BẢNG LỖI";
+            labelBangLoi.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ErrorDashboard
             // 
@@ -48,9 +63,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(937, 548);
             Controls.Add(dataGridView1);
+            Controls.Add(labelBangLoi);
             Name = "ErrorDashboard";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "formLoi";
+            Text = "Error";
             Load += ErrorDashboard_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -59,5 +75,6 @@
         #endregion
 
         private DataGridView dataGridView1;
+        private Label labelBangLoi;
     }
 }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using ManagementSoftware.DAL;
 using ManagementSoftware.DAL.DALPagination;
 using ManagementSoftware.GUI.ResultManagement;
@@ -120,7 +121,7 @@ namespace ManagementSoftware.GUI
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 16, FontStyle.Bold);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 15, FontStyle.Bold);
 
             //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -142,35 +143,36 @@ namespace ManagementSoftware.GUI
 
         private void dataGridViewSoftware_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex == -1)
+            {
+                // Đây là sự kiện click vào header column
+                return;
+            }
             try
             {
-                string? idSTR = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-
-                if (idSTR != null)
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                if (row != null && row.Tag != null)
                 {
-                    int index = idSTR.IndexOf(Common.RESULT);
-                    string numOnly = idSTR.Substring(index + Common.RESULT.Length);
-                    int id = int.Parse(numOnly);
-
+                    Result obj = (Result)row.Tag;
                     if (e.ColumnIndex == dataGridView1.Columns["HN1"].Index)
                     {
 
-                        ResultHeNap u = new ResultHeNap(id, "Hệ Nạp 1");
+                        ResultHeNap u = new ResultHeNap(obj, Common.HeNap1);
                         u.ShowDialog();
                     }
                     if (e.ColumnIndex == dataGridView1.Columns["HN2"].Index)
                     {
 
-                        ResultHeNap u = new ResultHeNap(id, "Hệ Nạp 2");
+                        ResultHeNap u = new ResultHeNap(obj, Common.HeNap2);
                         u.ShowDialog();
                     }
                     if (e.ColumnIndex == dataGridView1.Columns["Error"].Index)
                     {
 
-                        ResultError u = new ResultError(id);
+                        ErrorDashboard u = new ErrorDashboard(obj);
                         u.ShowDialog();
                     }
+
                 }
                 else
                 {
@@ -222,6 +224,8 @@ namespace ManagementSoftware.GUI
             {
                 int rowId = dataGridView1.Rows.Add();
                 DataGridViewRow row = dataGridView1.Rows[rowId];
+                row.Tag = item;
+
                 row.Cells[0].Value = Common.RESULT + item.ResultID;
 
                 //Product? p = dALProduct.GetProductFromID(item.ProductID);
@@ -231,7 +235,6 @@ namespace ManagementSoftware.GUI
                 row.Cells[4].Value = item.TimeEnd.ToString("HH:mm:ss dd/MM/yyyy");
                 row.Cells[5].Value = item.Username;
                 row.Cells[6].Value = item.Status == true ? "OK" : "NG";
-
 
                 if (color)
                 {

@@ -131,17 +131,25 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         private void UpdateGUI(Dictionary<ChartSeries, List<DataDoThi>> dicApSuat, Dictionary<ChartSeries, List<DataDoThi>> dicTheTich)
         {
 
+            //if (dashboard.IsHandleCreated && dashboard.InvokeRequired)
+            //{
+            //    dashboard.BeginInvoke(new Action<Dictionary<ChartSeries, List<DataDoThi>>, Dictionary<ChartSeries, List<DataDoThi>>>(UpdateGUI), dicApSuat,dicTheTich);
+            //    return;
+            //}
+            //chartApSuat.UpdateChart(dicApSuat);
+            //chartTheTich.UpdateChart(dicTheTich);
+
+            //update gui
             if (dashboard.IsHandleCreated && dashboard.InvokeRequired)
             {
-                dashboard.BeginInvoke(new Action<Dictionary<ChartSeries, List<DataDoThi>>, Dictionary<ChartSeries, List<DataDoThi>>>(UpdateGUI), dicApSuat,dicTheTich);
-                return;
+                dashboard.BeginInvoke(() =>
+                {
+                    chartApSuat.UpdateChart(dicApSuat);
+                    chartTheTich.UpdateChart(dicTheTich);
+                });
             }
 
 
-            //update gui
-
-            chartApSuat.UpdateChart(dicApSuat);
-            chartTheTich.UpdateChart(dicTheTich);
 
         }
 

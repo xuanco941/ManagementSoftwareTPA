@@ -36,17 +36,17 @@
             panelTheTichChart = new Panel();
             panel2 = new Panel();
             panelThongTin = new Panel();
-            label8 = new Label();
             label26 = new Label();
-            label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
+            label8 = new Label();
+            label7 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             label9 = new Label();
-            label10 = new Label();
+            labelTitle = new Label();
             gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
@@ -59,8 +59,8 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 56.81818F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 43.18182F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -68,7 +68,6 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Size = new Size(1071, 522);
             tableLayoutPanel1.TabIndex = 0;
             // 
@@ -78,7 +77,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(529, 516);
+            panel1.Size = new Size(602, 516);
             panel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -94,7 +93,7 @@
             tableLayoutPanel2.RowCount = 2;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(529, 516);
+            tableLayoutPanel2.Size = new Size(602, 516);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // panelApSuatChart
@@ -102,7 +101,7 @@
             panelApSuatChart.Dock = DockStyle.Fill;
             panelApSuatChart.Location = new Point(3, 3);
             panelApSuatChart.Name = "panelApSuatChart";
-            panelApSuatChart.Size = new Size(523, 252);
+            panelApSuatChart.Size = new Size(596, 252);
             panelApSuatChart.TabIndex = 0;
             // 
             // panelTheTichChart
@@ -110,17 +109,17 @@
             panelTheTichChart.Dock = DockStyle.Fill;
             panelTheTichChart.Location = new Point(3, 261);
             panelTheTichChart.Name = "panelTheTichChart";
-            panelTheTichChart.Size = new Size(523, 252);
+            panelTheTichChart.Size = new Size(596, 252);
             panelTheTichChart.TabIndex = 1;
             // 
             // panel2
             // 
             panel2.Controls.Add(panelThongTin);
-            panel2.Controls.Add(label10);
+            panel2.Controls.Add(labelTitle);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(538, 3);
+            panel2.Location = new Point(611, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(530, 516);
+            panel2.Size = new Size(457, 516);
             panel2.TabIndex = 1;
             // 
             // panelThongTin
@@ -138,24 +137,8 @@
             panelThongTin.Dock = DockStyle.Fill;
             panelThongTin.Location = new Point(0, 69);
             panelThongTin.Name = "panelThongTin";
-            panelThongTin.Size = new Size(530, 447);
+            panelThongTin.Size = new Size(457, 447);
             panelThongTin.TabIndex = 1;
-            // 
-            // label8
-            // 
-            label8.BackColor = Color.DimGray;
-            label8.BorderStyle = BorderStyle.FixedSingle;
-            label8.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = SystemColors.ButtonHighlight;
-            label8.Location = new Point(0, 180);
-            label8.Margin = new Padding(0);
-            label8.Name = "label8";
-            label8.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label8, true);
-            label8.Size = new Size(530, 44);
-            label8.TabIndex = 51;
-            label8.Text = "Áp suất tiêu chuẩn : 30 bar";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label26
             // 
@@ -168,26 +151,10 @@
             label26.Name = "label26";
             label26.Padding = new Padding(0, 1, 0, 1);
             gridLayout1.SetParticipateInLayout(label26, true);
-            label26.Size = new Size(530, 44);
+            label26.Size = new Size(457, 44);
             label26.TabIndex = 43;
             label26.Text = "Người vận hành : admin";
             label26.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            label7.BackColor = Color.DimGray;
-            label7.BorderStyle = BorderStyle.FixedSingle;
-            label7.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(0, 224);
-            label7.Margin = new Padding(0);
-            label7.Name = "label7";
-            label7.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label7, true);
-            label7.Size = new Size(530, 44);
-            label7.TabIndex = 50;
-            label7.Text = "Số lượng bình nạp : 100";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -200,7 +167,7 @@
             label6.Name = "label6";
             label6.Padding = new Padding(0, 1, 0, 1);
             gridLayout1.SetParticipateInLayout(label6, true);
-            label6.Size = new Size(530, 44);
+            label6.Size = new Size(457, 44);
             label6.TabIndex = 49;
             label6.Text = "Loại khí : Oxy";
             label6.TextAlign = ContentAlignment.MiddleCenter;
@@ -216,7 +183,7 @@
             label5.Name = "label5";
             label5.Padding = new Padding(0, 1, 0, 1);
             gridLayout1.SetParticipateInLayout(label5, true);
-            label5.Size = new Size(530, 44);
+            label5.Size = new Size(457, 44);
             label5.TabIndex = 48;
             label5.Text = "Thời gian bắt đầu : 13:00:00 21/03/2023";
             label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -232,10 +199,42 @@
             label4.Name = "label4";
             label4.Padding = new Padding(0, 1, 0, 1);
             gridLayout1.SetParticipateInLayout(label4, true);
-            label4.Size = new Size(530, 44);
+            label4.Size = new Size(457, 44);
             label4.TabIndex = 47;
             label4.Text = "Thời gian kết thúc : 13:00:00 21/03/2023";
             label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.DimGray;
+            label8.BorderStyle = BorderStyle.FixedSingle;
+            label8.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = SystemColors.ButtonHighlight;
+            label8.Location = new Point(0, 180);
+            label8.Margin = new Padding(0);
+            label8.Name = "label8";
+            label8.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(label8, true);
+            label8.Size = new Size(457, 44);
+            label8.TabIndex = 51;
+            label8.Text = "Áp suất tiêu chuẩn : 30 bar";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.DimGray;
+            label7.BorderStyle = BorderStyle.FixedSingle;
+            label7.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.ButtonHighlight;
+            label7.Location = new Point(0, 224);
+            label7.Margin = new Padding(0);
+            label7.Name = "label7";
+            label7.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(label7, true);
+            label7.Size = new Size(457, 44);
+            label7.TabIndex = 50;
+            label7.Text = "Số lượng bình nạp : 100";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -247,7 +246,7 @@
             label3.Margin = new Padding(0);
             label3.Name = "label3";
             gridLayout1.SetParticipateInLayout(label3, true);
-            label3.Size = new Size(530, 44);
+            label3.Size = new Size(457, 44);
             label3.TabIndex = 46;
             label3.Text = "Thể tích cần nạp : 10L";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -263,7 +262,7 @@
             label2.Name = "label2";
             label2.Padding = new Padding(0, 1, 0, 1);
             gridLayout1.SetParticipateInLayout(label2, true);
-            label2.Size = new Size(530, 44);
+            label2.Size = new Size(457, 44);
             label2.TabIndex = 45;
             label2.Text = "Thể tích tiêu chuẩn : 20L";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -279,7 +278,7 @@
             label1.Name = "label1";
             label1.Padding = new Padding(0, 1, 0, 1);
             gridLayout1.SetParticipateInLayout(label1, true);
-            label1.Size = new Size(530, 44);
+            label1.Size = new Size(457, 44);
             label1.TabIndex = 44;
             label1.Text = "Hệ số tiêu chuẩn : 0";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -295,26 +294,26 @@
             label9.Name = "label9";
             label9.Padding = new Padding(0, 1, 0, 1);
             gridLayout1.SetParticipateInLayout(label9, true);
-            label9.Size = new Size(530, 44);
+            label9.Size = new Size(457, 44);
             label9.TabIndex = 52;
             label9.Text = "Thời gian trích mẫu : 100s";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // labelTitle
             // 
-            label10.BackColor = Color.PaleGreen;
-            label10.BorderStyle = BorderStyle.FixedSingle;
-            label10.Dock = DockStyle.Top;
-            label10.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = SystemColors.ActiveCaptionText;
-            label10.Location = new Point(0, 0);
-            label10.Margin = new Padding(0);
-            label10.Name = "label10";
-            label10.Padding = new Padding(0, 1, 0, 1);
-            label10.Size = new Size(530, 69);
-            label10.TabIndex = 52;
-            label10.Text = "Dữ liệu Hệ Nạp 1 (Result ID-94)";
-            label10.TextAlign = ContentAlignment.MiddleCenter;
+            labelTitle.BackColor = Color.PaleGreen;
+            labelTitle.BorderStyle = BorderStyle.FixedSingle;
+            labelTitle.Dock = DockStyle.Top;
+            labelTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTitle.ForeColor = SystemColors.ActiveCaptionText;
+            labelTitle.Location = new Point(0, 0);
+            labelTitle.Margin = new Padding(0);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Padding = new Padding(0, 1, 0, 1);
+            labelTitle.Size = new Size(457, 69);
+            labelTitle.TabIndex = 52;
+            labelTitle.Text = "Thông tin dữ liệu (Result ID-94)";
+            labelTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // gridLayout1
             // 
@@ -350,7 +349,7 @@
         private Panel panelTheTichChart;
         private Panel panel2;
         private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout1;
-        private Label label10;
+        private Label labelTitle;
         private Panel panelThongTin;
         private Label label8;
         private Label label26;
