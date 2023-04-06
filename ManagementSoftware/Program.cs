@@ -58,10 +58,13 @@ namespace ManagementSoftware
             if (Common.USERSESSION != null)
             {
                 Main main = new Main();
-                Application.Run(main);
+
                 AlwaysCheckConnection alwaysCheckConnection = new AlwaysCheckConnection(main);
                 alwaysCheckConnection.ConnectPLC();
                 alwaysCheckConnection.StartTimer();
+
+                Application.Run(main);
+
                    
             }
         }

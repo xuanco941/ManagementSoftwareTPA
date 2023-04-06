@@ -23,7 +23,7 @@ namespace ManagementSoftware
             try
             {
                 client.Connect(amsAddress);
-               
+
                 return CheckState();
             }
             catch
@@ -109,19 +109,54 @@ namespace ManagementSoftware
         public string? ReadAVariableString(string variableName)
         {
 
-            try
+            var symbol = client.ReadSymbol(variableName);
+            string value = client.ReadAnyString(symbol.IndexGroup, symbol.IndexOffset, 50, Encoding.ASCII);
+            //return value;
+            byte[] asciiBytes = Encoding.UTF8.GetBytes(value); // Chuyển chuỗi sang byte array
+
+            List<byte> listByte = new List<byte>();
+            foreach (var item in asciiBytes)
             {
-                var symbol = client.ReadSymbol(variableName);
-                string? value = client.ReadAnyString(symbol.IndexGroup, symbol.IndexOffset, 9999, Encoding.ASCII);
-                return value;
+                if (item != 0)
+                {
+                    listByte.Add(item);
+                }
+                else
+                {
+                    break;
+                }
             }
-            catch
+
+            byte[] bytes = new byte[listByte.Count];
+
+            for (int i = 0; i < bytes.Length; i++)
             {
-                return null;
+                bytes[i] = listByte[i];
             }
 
 
+            string result = Encoding.UTF8.GetString(bytes);
+
+            System.Diagnostics.Debug.WriteLine(result);
+
+            return result;
         }
+        //public string? ReadAVariableString(string variableName)
+        //{
+
+        //    try
+        //    {
+        //        var symbol = client.ReadSymbol(variableName);
+        //        string value = client.ReadAnyString(symbol.IndexGroup, symbol.IndexOffset, 100, Encoding.ASCII);
+        //        return value;
+        //    }
+        //    catch
+        //    {
+        //        return null;
+        //    }
+
+        //}
+
 
 
 

@@ -66,7 +66,7 @@ namespace ManagementSoftware
             plc.Disconnect();
         }
 
-        private async void Callback(Object state)
+        private void Callback(Object state)
         {
             Stopwatch watch = new Stopwatch();
 
@@ -77,23 +77,21 @@ namespace ManagementSoftware
 
             if (plc.CheckState() == true)
             {
-                await Task.Run(() => plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, true));
+                plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, true);
 
-                bool? isLogIn = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Dang_nhap_thanh_cong));
+                bool? isLogIn = plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Dang_nhap_thanh_cong);
 
-                if(isLogIn!=null && isLogIn == false && Common.UserCurrent == null)
+                if (isLogIn != null && isLogIn == false && Common.UserCurrent == null)
                 {
-                    string? taiKhoan = await Task.Run(() => plc.ReadAVariableString(AddressPLC.DATA_PC_Tai_Khoan));
-                    string? matKhau = await Task.Run(() => plc.ReadAVariableString(AddressPLC.DATA_PC_Mat_khau));
-
+                    string? taiKhoan = plc.ReadAVariableString(AddressPLC.DATA_PC_Tai_Khoan);
+                    string? matKhau = plc.ReadAVariableString(AddressPLC.DATA_PC_Mat_khau);
 
                     if (taiKhoan != null && matKhau != null)
                     {
                         User? user;
                         if (Common.listAllUser != null && Common.listAllUser.Count > 0)
                         {
-                            user = Common.listAllUser.FirstOrDefault(u => u.Username == taiKhoan.Trim() && u.Password == matKhau.Trim());
-
+                            user = Common.listAllUser.FirstOrDefault(u => u.Username == taiKhoan && u.Password == matKhau);
                         }
                         else
                         {
@@ -110,13 +108,13 @@ namespace ManagementSoftware
                                 if (userWorkingAdded != null)
                                 {
                                     Common.UserCurrent = userWorkingAdded;
-                                    await Task.Run(() => plc.WriteAVariableNumber(AddressPLC.DATA_PC_Dang_nhap_thanh_cong, true));
+                                    plc.WriteAVariableNumber(AddressPLC.DATA_PC_Dang_nhap_thanh_cong, true);
                                     ChangeTextTitleFormMain();
                                 }
                                 else
                                 {
                                     Common.UserCurrent = null;
-                                    await Task.Run(() => plc.WriteAVariableNumber(AddressPLC.DATA_PC_Dang_nhap_thanh_cong, false));
+                                    plc.WriteAVariableNumber(AddressPLC.DATA_PC_Dang_nhap_thanh_cong, false);
                                     ChangeTextTitleFormMain();
                                 }
                             }
@@ -126,7 +124,7 @@ namespace ManagementSoftware
                         else
                         {
                             Common.UserCurrent = null;
-                            await Task.Run(() => plc.WriteAVariableNumber(AddressPLC.DATA_PC_Dang_nhap_thanh_cong, false));
+                            plc.WriteAVariableNumber(AddressPLC.DATA_PC_Dang_nhap_thanh_cong, false);
                             ChangeTextTitleFormMain();
 
                         }

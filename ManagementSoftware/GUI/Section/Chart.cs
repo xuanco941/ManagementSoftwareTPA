@@ -80,21 +80,25 @@ namespace ManagementSoftware.GUI.Section
             chartControl1.Series.Clear();
             if (dic != null && dic.Count > 0 && dic.Values != null && dic.Values.Count > 0)
             {
-
-                DateTime start = dic.Values.SelectMany(v => v).Min(x => x.date);
-                DateTime end = dic.Values.SelectMany(v => v).Max(x => x.date);
-
-
-
-                foreach (var item in dic)
+                var valuesAll = dic.Values.SelectMany(v => v);
+                if (valuesAll.Any())
                 {
-                    foreach (DataDoThi l in item.Value)
+                    DateTime start = valuesAll.Min(x => x.date);
+                    DateTime end = valuesAll.Max(x => x.date);
+
+
+
+                    foreach (var item in dic)
                     {
-                        item.Key.Points.Add(l.date, l.value);
+                        foreach (DataDoThi l in item.Value)
+                        {
+                            item.Key.Points.Add(l.date, l.value);
+                        }
+                        chartControl1.Series.Add(item.Key);
                     }
-                    chartControl1.Series.Add(item.Key);
+                    this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, dic.Values.Count / 5, ChartDateTimeIntervalType.Minutes);
+
                 }
-                this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, dic.Values.Count / 5, ChartDateTimeIntervalType.Minutes);
 
 
 
