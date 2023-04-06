@@ -16,7 +16,7 @@ namespace ManagementSoftware.BUS
         public static bool AuthLogin(string username, string password)
         {
 
-            User? user = DALUser.AuthLogin(username, password);
+            User? user = new DALUser().AuthLogin(username, password);
             if (user != null)
             {
                 Common.USERSESSION = user;

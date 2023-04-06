@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSoftware.GUI.Section;
+using Syncfusion.XPS;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 
@@ -22,7 +23,6 @@ namespace ManagementSoftware.GUI
 
             //fullscreen
             this.WindowState = FormWindowState.Maximized;
-            dateTimeNow = DateTime.Now;
         }
 
         public void Alert(string msg, FormAlert.enmType type)
@@ -33,6 +33,15 @@ namespace ManagementSoftware.GUI
         }
 
 
+        public void SetLabelHeaderUserPLC()
+        {
+            //if (this.IsHandleCreated && this.InvokeRequired)
+            //{
+            //    this.BeginInvoke(() => SetLabelHeaderUserPLC());
+            //    return;
+            //}
+            labelHeaderUserPLC.Text = "Tài khoản PLC: " + (Common.UserCurrent?.Username ?? "");
+        }
 
 
 
@@ -75,7 +84,6 @@ namespace ManagementSoftware.GUI
             //focus button
             Button button = sender as Button;
 
-            labelHeader.Text = button.Text;
             foreach (Control control in panelItemMenu.Controls)
             {
                 control.BackColor = Color.FromArgb(41, 44, 51);
@@ -146,7 +154,7 @@ namespace ManagementSoftware.GUI
 
         private void buttonDangXuat_Click(object sender, EventArgs e)
         {
-            Common.USERSESSION = null;
+
 
             List<Form> oldForms = new List<Form>();
             foreach (Form oldForm in panelContent.Controls)
@@ -161,8 +169,11 @@ namespace ManagementSoftware.GUI
                 oldForm.Dispose();
             }
 
-            this.Close();
-            Application.ExitThread();
+            Common.USERSESSION = null;
+            Common.ResultCurrent = null;
+            Common.UserCurrent = null;
+
+            Application.Restart();            
         }
 
 
@@ -179,40 +190,6 @@ namespace ManagementSoftware.GUI
 
 
 
-        int TIME_INTERVAL_IN_MILLISECONDS = 500;
-
-
-        System.Threading.Timer timer = null;
-
-        DateTime dateTimeNow;
-        void ChangeTime()
-        {
-            if (IsHandleCreated && InvokeRequired)
-            {
-                BeginInvoke(() => ChangeTime());
-                return;
-            }
-
-            labelHeader.Text = "Xin chào, " + (Common.USERSESSION?.Username ?? "") + " (" + (DateTime.Now - dateTimeNow).ToString("hh\\:mm\\:ss") + ")";
-        }
-
-        private void CallBack(object obj)
-        {
-            Stopwatch watch = new Stopwatch();
-
-            watch.Start();
-
-
-            // update data
-            // Long running operation
-            ChangeTime();
-
-
-            if (timer != null)
-            {
-                timer.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
-            }
-        }
 
 
 
@@ -229,23 +206,29 @@ namespace ManagementSoftware.GUI
             form.Show();
             this.Font = Common.FontForm;
 
-            labelHeader.Text = "Xin chào," + Common.USERSESSION?.Username;
+            labelHeaderUserPC.Text = "Tài khoản PC: " + (Common.USERSESSION?.Username ?? "");
+            labelHeaderUserPLC.Text = "Tài khoản PLC: " + (Common.UserCurrent?.Username ?? "");
 
-            //timer = new System.Threading.Timer(CallBack, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
         }
-
 
 
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (timer != null)
+            PLCBeckhOff plc = new PLCBeckhOff();
+            
+            if (plc.Connect() == true)
             {
-                this.timer.Change(Timeout.Infinite, Timeout.Infinite);
-                timer.Dispose();
-                timer = null;
+                plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, false);
             }
-            new MethodCommonGUI().CloseFormInPanel(panelContent);
+            //new MethodCommonGUI().CloseFormInPanel(panelContent);
+
+            Common.USERSESSION = null;
+            Common.ResultCurrent = null;
+            Common.UserCurrent = null;
+
+            Application.ExitThread();
+
 
         }
 

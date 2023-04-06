@@ -36,7 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.EtekXam;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(502, 322);
+            ClientSize = new Size(929, 487);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "HeNapXam";

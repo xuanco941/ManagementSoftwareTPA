@@ -9,7 +9,7 @@ namespace ManagementSoftware.DAL
 {
     public class DALUserWorking
     {
-        public void Add(UserWorking userWorking)
+        public UserWorking? Add(UserWorking userWorking)
         {
             using (var context = new DataBaseContext())
             {
@@ -17,10 +17,11 @@ namespace ManagementSoftware.DAL
                 {
                     context.UserWorkings.Add(userWorking);
                     context.SaveChanges();
+                    return userWorking;
                 }
                 catch
                 {
-
+                    return null;
                 }
             }
         }

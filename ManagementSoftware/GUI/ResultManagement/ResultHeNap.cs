@@ -90,7 +90,7 @@ namespace ManagementSoftware.GUI.ResultManagement
 
         string heNap;
         Result result;
-        
+
         public ResultHeNap(Result result, string heNap)
         {
             InitializeComponent();

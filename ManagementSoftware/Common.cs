@@ -54,11 +54,14 @@ namespace ManagementSoftware
 
 
 
+        public static List<User> listAllUser = new List<User>();
 
 
         //Data trong quá trình nạp
         public static Result? ResultCurrent { get; set; } = null;
         public static UserWorking? UserCurrent { get; set; } = null;
+        public static bool? isPLCActive = false;
+
 
 
 

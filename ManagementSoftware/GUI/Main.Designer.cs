@@ -30,6 +30,7 @@ namespace ManagementSoftware.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             panelMenu = new Panel();
             panelItemMenu = new Panel();
@@ -42,13 +43,15 @@ namespace ManagementSoftware.GUI
             buttonDashboard = new Button();
             panel3 = new Panel();
             pictureBox1 = new PictureBox();
-            labelHeader = new Label();
             panelContainer = new Panel();
             panelContent = new Panel();
             panelHeader = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panelAleart = new Panel();
             panel2 = new Panel();
+            labelHeaderUserPLC = new Label();
+            labelHeaderUserPC = new Label();
+            gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
             panelMenu.SuspendLayout();
             panelItemMenu.SuspendLayout();
             panel3.SuspendLayout();
@@ -57,6 +60,7 @@ namespace ManagementSoftware.GUI
             panelHeader.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gridLayout1).BeginInit();
             SuspendLayout();
             // 
             // panelMenu
@@ -241,17 +245,6 @@ namespace ManagementSoftware.GUI
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // labelHeader
-            // 
-            labelHeader.Dock = DockStyle.Fill;
-            labelHeader.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            labelHeader.ForeColor = SystemColors.GradientActiveCaption;
-            labelHeader.Location = new Point(0, 0);
-            labelHeader.Name = "labelHeader";
-            labelHeader.Size = new Size(243, 70);
-            labelHeader.TabIndex = 2;
-            labelHeader.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // panelContainer
             // 
             panelContainer.Controls.Add(panelContent);
@@ -284,7 +277,7 @@ namespace ManagementSoftware.GUI
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 249F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 350F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(panelAleart, 1, 0);
             tableLayoutPanel1.Controls.Add(panel2, 0, 0);
@@ -309,12 +302,43 @@ namespace ManagementSoftware.GUI
             // 
             // panel2
             // 
-            panel2.Controls.Add(labelHeader);
+            panel2.Controls.Add(labelHeaderUserPLC);
+            panel2.Controls.Add(labelHeaderUserPC);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(243, 70);
+            panel2.Size = new Size(344, 70);
             panel2.TabIndex = 0;
+            // 
+            // labelHeaderUserPLC
+            // 
+            labelHeaderUserPLC.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelHeaderUserPLC.ForeColor = SystemColors.GradientActiveCaption;
+            labelHeaderUserPLC.Location = new Point(0, 0);
+            labelHeaderUserPLC.Name = "labelHeaderUserPLC";
+            labelHeaderUserPLC.Padding = new Padding(15, 0, 0, 0);
+            gridLayout1.SetParticipateInLayout(labelHeaderUserPLC, true);
+            labelHeaderUserPLC.Size = new Size(344, 35);
+            labelHeaderUserPLC.TabIndex = 4;
+            labelHeaderUserPLC.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // labelHeaderUserPC
+            // 
+            labelHeaderUserPC.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelHeaderUserPC.ForeColor = SystemColors.GradientActiveCaption;
+            labelHeaderUserPC.Location = new Point(0, 35);
+            labelHeaderUserPC.Name = "labelHeaderUserPC";
+            labelHeaderUserPC.Padding = new Padding(15, 0, 0, 0);
+            gridLayout1.SetParticipateInLayout(labelHeaderUserPC, true);
+            labelHeaderUserPC.Size = new Size(344, 35);
+            labelHeaderUserPC.TabIndex = 3;
+            labelHeaderUserPC.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // gridLayout1
+            // 
+            gridLayout1.Columns = 1;
+            gridLayout1.ContainerControl = panel2;
+            gridLayout1.Rows = 2;
             // 
             // Main
             // 
@@ -339,13 +363,13 @@ namespace ManagementSoftware.GUI
             panelHeader.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)gridLayout1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.Panel panelHeader;
@@ -362,6 +386,9 @@ namespace ManagementSoftware.GUI
         private Button buttonDashboard;
         private Button buttonHelp;
         private Button buttonUserWorking;
+        private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout1;
+        private Label labelHeaderUserPLC;
+        private Label labelHeaderUserPC;
     }
 }
 

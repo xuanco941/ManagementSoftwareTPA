@@ -23,6 +23,7 @@ namespace ManagementSoftware
             try
             {
                 client.Connect(amsAddress);
+               
                 return CheckState();
             }
             catch
@@ -82,7 +83,7 @@ namespace ManagementSoftware
         }
 
 
-        //read TimeSpanTwinCAT.ClientNotConnectedException: 'Client is not connected!'
+        //read DateTime
         public T? ReadAVariableNumber_ReadAny<T>(string variableName) where T : struct
         {
 
@@ -120,6 +121,34 @@ namespace ManagementSoftware
             }
 
 
+        }
+
+
+
+        public bool WriteAVariableNumber(string variableName, object value)
+        {
+            //if (value != null)
+            //{
+            try
+            {
+                client.WriteValue(variableName, value);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            //}
+            //{
+            //    return false;
+            //}
+        }
+        public void WriteAVariableString(string variableName, string value)
+        {
+            if (value != null)
+            {
+                client.WriteAnyString(variableName, value, value.Length, Encoding.ASCII);
+            }
         }
 
     }

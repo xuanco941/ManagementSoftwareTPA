@@ -1,6 +1,7 @@
 ﻿using ManagementSoftware.Models;
 using ManagementSoftware.GUI;
 using System.Diagnostics;
+using ManagementSoftware.DAL;
 
 namespace ManagementSoftware
 {
@@ -41,12 +42,27 @@ namespace ManagementSoftware
             }
 
 
+            try
+            {
+                Common.listAllUser = new DALUser().GetAll();
+            }
+            catch
+            {
+
+            }
+
+
 
             Application.Run(new Login());
 
             if (Common.USERSESSION != null)
             {
-                Application.Run(new Main());
+                Main main = new Main();
+                Application.Run(main);
+                AlwaysCheckConnection alwaysCheckConnection = new AlwaysCheckConnection(main);
+                alwaysCheckConnection.ConnectPLC();
+                alwaysCheckConnection.StartTimer();
+                   
             }
         }
     }

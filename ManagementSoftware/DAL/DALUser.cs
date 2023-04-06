@@ -7,7 +7,7 @@ namespace ManagementSoftware.DAL;
 
 public class DALUser
 {
-    public static User? AuthLogin(string username, string password)
+    public User? AuthLogin(string username, string password)
     {
         using (var dbContext = new DataBaseContext())
         {
@@ -33,7 +33,11 @@ public class DALUser
             try
             {
                 context.Users.Add(user);
-                context.SaveChanges();
+                int x = context.SaveChanges();
+                if (x > 0)
+                {
+                    Common.listAllUser.Add(user);
+                }
             }
             catch
             {
@@ -49,17 +53,39 @@ public class DALUser
     {
         using (var context = new DataBaseContext())
         {
-            var existingUser = context.Users.FirstOrDefault(u => u.UserID == user.UserID);
-            if (existingUser != null)
+            try
             {
-                existingUser.FullName = user.FullName;
-                existingUser.Username = user.Username;
-                existingUser.Password = user.Password;
-                existingUser.Email = user.Email;
-                existingUser.PhoneNumber = user.PhoneNumber;
-                existingUser.GroupID = user.GroupID;
-                context.SaveChanges();
+                var existingUser = context.Users.FirstOrDefault(u => u.UserID == user.UserID);
+                if (existingUser != null)
+                {
+                    existingUser.FullName = user.FullName;
+                    existingUser.Username = user.Username;
+                    existingUser.Password = user.Password;
+                    existingUser.Email = user.Email;
+                    existingUser.PhoneNumber = user.PhoneNumber;
+                    existingUser.GroupID = user.GroupID;
+                    int x = context.SaveChanges();
+                    if (x > 0)
+                    {
+                        int index = Common.listAllUser.FindIndex(u => u.UserID == user.UserID);
+
+                        if (index != -1)
+                        {
+                            Common.listAllUser[index].FullName = user.FullName;
+                            Common.listAllUser[index].Username = user.Username;
+                            Common.listAllUser[index].Password = user.Password;
+                            Common.listAllUser[index].Email = user.Email;
+                            Common.listAllUser[index].PhoneNumber = user.PhoneNumber;
+                            Common.listAllUser[index].GroupID = user.GroupID;
+                        }
+                    }
+                }
             }
+            catch
+            {
+
+            }
+
         }
     }
 
@@ -68,12 +94,28 @@ public class DALUser
     {
         using (var context = new DataBaseContext())
         {
-            var user = context.Users.FirstOrDefault(u => u.UserID == userId);
-            if (user != null)
+            try
             {
-                context.Users.Remove(user);
-                context.SaveChanges();
+                var user = context.Users.FirstOrDefault(u => u.UserID == userId);
+                if (user != null)
+                {
+                    context.Users.Remove(user);
+                    int x = context.SaveChanges();
+                    if (x > 0)
+                    {
+                        var u2 = Common.listAllUser.FirstOrDefault(u => u.UserID == userId);
+                        if (u2 != null)
+                        {
+                            Common.listAllUser.Remove(u2);
+                        }
+                    }
+                }
             }
+            catch
+            {
+
+            }
+
         }
     }
 

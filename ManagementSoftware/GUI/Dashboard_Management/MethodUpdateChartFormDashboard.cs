@@ -133,7 +133,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
             //if (dashboard.IsHandleCreated && dashboard.InvokeRequired)
             //{
-            //    dashboard.BeginInvoke(new Action<Dictionary<ChartSeries, List<DataDoThi>>, Dictionary<ChartSeries, List<DataDoThi>>>(UpdateGUI), dicApSuat,dicTheTich);
+            //    dashboard.BeginInvoke(new Action<Dictionary<ChartSeries, List<DataDoThi>>, Dictionary<ChartSeries, List<DataDoThi>>>(UpdateGUI), dicApSuat, dicTheTich);
             //    return;
             //}
             //chartApSuat.UpdateChart(dicApSuat);
