@@ -121,9 +121,6 @@
   <data name="ETEK-LOGO-02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ETEK-LOGO-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EtekXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EtekXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iconfinder_Remove_278742" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_Remove_278742.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -228,5 +225,68 @@
   </data>
   <data name="17867729231644336865-31" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\17867729231644336865-31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BangTaiXam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BangTaiXam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BangTaiXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BangTaiXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DauOngXam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DauOngXam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DauOngXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DauOngXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DuongOng1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DuongOng1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MotorXam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MotorXam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MotorXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MotorXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ong1Xam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ong1Xam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ong1Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ong1Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ong2Xam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ong2Xam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ong2Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ong2Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ongThoatXam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ongThoatXam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ongThoatXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ongThoatXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RunNapXam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RunNapXam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RunNapXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RunNapXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VanCapXam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VanCapXam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VanCapXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VanCapXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VanXaXam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VanXaXam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VanXaXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VanXaXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SensorXam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SensorXam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SensorXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SensorXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

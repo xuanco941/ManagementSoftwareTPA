@@ -15,12 +15,13 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         public HeNap()
         {
             InitializeComponent();
-            heNap1 = new HeNapXam();
-            heNap2 = new HeNapXam();
+            heNap1 = new TheoDoiHeNap();
+            heNap2 = new TheoDoiHeNap();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
-        HeNapXam heNap1;
-        HeNapXam heNap2;
+        TheoDoiHeNap heNap1;
+        TheoDoiHeNap heNap2;
 
         private void HeNap_Load(object sender, EventArgs e)
         {
