@@ -1,6 +1,7 @@
 ﻿using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
+using Microsoft.Extensions.Caching.Memory;
 using Syncfusion.Drawing;
 using Syncfusion.Windows.Forms.Chart;
 using System;
@@ -152,6 +153,49 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
 
         }
+
+
+        //update theo  cache
+
+        //MemoryCache cache = new MemoryCache(new MemoryCacheOptions());
+
+        //private void UpdateGUI(Dictionary<ChartSeries, List<DataDoThi>> dicApSuat, Dictionary<ChartSeries, List<DataDoThi>> dicTheTich)
+        //{
+        //    // Check cache for previous data
+        //    Dictionary<ChartSeries, List<DataDoThi>>? cachedApSuat = cache.Get("dicApSuat") as Dictionary<ChartSeries, List<DataDoThi>>;
+        //    Dictionary<ChartSeries, List<DataDoThi>>? cachedTheTich = cache.Get("dicTheTich") as Dictionary<ChartSeries, List<DataDoThi>>;
+
+
+        //    bool apSuatChanged = cachedApSuat == null || !dicApSuat.SequenceEqual(cachedApSuat);
+        //    bool theTichChanged = cachedTheTich == null || !dicTheTich.SequenceEqual(cachedTheTich);
+
+        //    if (!apSuatChanged && !theTichChanged)
+        //    {
+        //        return;
+        //    }
+
+        //    // Save new data to cache
+        //    cache.Set("dicApSuat", dicApSuat);
+        //    cache.Set("dicTheTich", dicTheTich);
+
+        //    // Update gui
+        //    if (dashboard.IsHandleCreated && dashboard.InvokeRequired)
+        //    {
+        //        dashboard.BeginInvoke(() =>
+        //        {
+        //            if (apSuatChanged)
+        //            {
+        //                chartApSuat.UpdateChart(dicApSuat);
+        //            }
+        //            if (theTichChanged)
+        //            {
+        //                chartTheTich.UpdateChart(dicTheTich);
+        //            }
+        //        });
+        //    }
+        //}
+
+
 
     }
 }

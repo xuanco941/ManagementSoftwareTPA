@@ -170,6 +170,10 @@ namespace ManagementSoftware
         //Lỗi quá trình nạp khí hệ 2  (Bool)
         public const string DATA_PC_Loi_TT_NAP_KHI_H2 = "DATA_PC.Loi_TT_NAP_KHI_H2";
 
+
+
+
+
         //Trạng thái đăng nhập lên PC
 
         //Tài khoản đăng nhập điều khiển hệ thống (String)

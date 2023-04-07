@@ -26,6 +26,11 @@ namespace ManagementSoftware
 
         //App
         public static User? USERSESSION { get; set; } = null;
+
+
+
+
+
         public static int NumberRows = 40;
         public static int NumberRowsFormPurchaseOrder = 10;
 
@@ -58,8 +63,14 @@ namespace ManagementSoftware
 
 
         //Data trong quá trình nạp
+
+        private static SemaphoreSlim semaphoreResultCurrent = new SemaphoreSlim(1);
+        private static SemaphoreSlim semaphoreUserCurrent = new SemaphoreSlim(1);
+
         public static Result? ResultCurrent { get; set; } = null;
         public static UserWorking? UserCurrent { get; set; } = null;
+
+
         public static bool? isPLCActive = false;
 
 

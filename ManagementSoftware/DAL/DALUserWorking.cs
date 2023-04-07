@@ -48,6 +48,28 @@ namespace ManagementSoftware.DAL
 
             }
         }
+
+        public void UpdateEndAt(int id)
+        {
+            using (var context = new DataBaseContext())
+            {
+                try
+                {
+                    var userWorkingToUpdate = context.UserWorkings.FirstOrDefault(uw => uw.UserWorkingID == id);
+                    if (userWorkingToUpdate != null)
+                    {
+                        userWorkingToUpdate.EndAt = DateTime.Now;
+
+                        context.SaveChanges();
+                    }
+                }
+                catch
+                {
+
+                }
+
+            }
+        }
         public void Delete(int userWorkingID)
         {
             using (var context = new DataBaseContext())

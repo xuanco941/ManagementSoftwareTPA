@@ -120,7 +120,11 @@ namespace ManagementSoftware
                                     ChangeTextTitleFormMain();
                                 }
                             }
-
+                            else
+                            {
+                                //update thời gian hoạt động
+                                dalUserWorking.UpdateEndAt(Common.UserCurrent.UserWorkingID);
+                            }
                             // có userCurrent rồi thì thôi
                         }
                         else

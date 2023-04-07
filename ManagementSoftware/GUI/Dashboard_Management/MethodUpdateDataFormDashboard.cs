@@ -28,10 +28,12 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         Label labelDungNapHe1;
         Label labelDungNapHe2;
 
-        public MethodUpdateDataFormDashboard(Dashboard dashboard, Label label1ApSuatHeNap1, Label labelApSuatHeNap2, Label labelTheTichHeNap1, Label labelTheTichHeNap2, Label labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelXaKhiHe1, Label labelXaKhiHe2, Label labelDungNapHe1, Label labelDungNapHe2)
+        ListBox listBoxError;
+
+        public MethodUpdateDataFormDashboard(Dashboard dashboard, Label label1ApSuatHeNap1, Label labelApSuatHeNap2, Label labelTheTichHeNap1, Label labelTheTichHeNap2, Label labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelXaKhiHe1, Label labelXaKhiHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError)
         {
             plc = new PLCBeckhOff();
-            timerUpdateGUILabel1 = new TimerUpdateGUI(300, 500, UpdateData);
+            timerUpdateGUILabel1 = new TimerUpdateGUI(300, 700, UpdateData);
 
             this.dashboard = dashboard;
             this.label1ApSuatHeNap1 = label1ApSuatHeNap1;
@@ -47,6 +49,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             this.labelXaKhiHe2 = labelXaKhiHe2;
             this.labelDungNapHe1 = labelDungNapHe1;
             this.labelDungNapHe2 = labelDungNapHe2;
+
+            this.listBoxError = listBoxError;
         }
 
         public void StartUpdate()
@@ -75,21 +79,15 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             // call data
             // Long running operation
 
+
+
+
             //dữ liệu hiển thị
             float? apSuatHe1 = 0;
             float? apSuatHe2 = 0;
             float? theTichHe1 = 0;
             float? theTichHe2 = 0;
             float? apSuatTong = 0;
-
-
-            apSuatHe1 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_ST_H1));
-            apSuatHe2 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_ST_H2));
-            theTichHe1 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_V_ST_H1));
-            theTichHe2 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_V_ST_H2));
-            apSuatTong = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_Tong));
-
-
 
             //trạng thái quy trinh
             bool? sanSangNapHe1 = false;
@@ -101,6 +99,22 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             bool? batDauNapHe1 = false;
             bool? batDauNapHe2 = false;
 
+
+            bool? canhBaoLoiDongCoOHeHoaHoi = false;
+            bool? canhBaoChuaMoHeHoaHoi = false;
+            bool? loiQuaTrinhXaKhiHe1 = false;
+            bool? loiQuaTrinhXaKhiHe2 = false;
+            bool? loiQuaTrinhNapKhiHe1 = false;
+            bool? loiQuaTrinhNapKhiHe2 = false;
+
+
+
+            apSuatHe1 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_ST_H1));
+            apSuatHe2 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_ST_H2));
+            theTichHe1 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_V_ST_H1));
+            theTichHe2 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_V_ST_H2));
+            apSuatTong = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_Tong));
+
             sanSangNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H1));
             sanSangNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H2));
             ketThucNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H1));
@@ -109,6 +123,15 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             xaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H2));
             batDauNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H1));
             batDauNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H2));
+
+            canhBaoLoiDongCoOHeHoaHoi = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_VFP_Trip));
+            canhBaoChuaMoHeHoaHoi = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_OFF_Hoa_Hoi));
+            loiQuaTrinhXaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_XA_KHI_H1));
+            loiQuaTrinhXaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_XA_KHI_H2));
+            loiQuaTrinhNapKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H1));
+            loiQuaTrinhNapKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H2));
+
+
 
 
             DataAlwaysUpdate data = new DataAlwaysUpdate();
@@ -125,6 +148,15 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             data.xaKhiHe2 = xaKhiHe2;
             data.batDauNapHe1 = batDauNapHe1;
             data.batDauNapHe2 = batDauNapHe2;
+
+
+            //error
+            data.canhBaoLoiDongCoOHeHoaHoi = canhBaoLoiDongCoOHeHoaHoi;
+            data.canhBaoChuaMoHeHoaHoi = canhBaoChuaMoHeHoaHoi;
+            data.loiQuaTrinhXaKhiHe1 = loiQuaTrinhXaKhiHe1;
+            data.loiQuaTrinhXaKhiHe2 = loiQuaTrinhXaKhiHe2;
+            data.loiQuaTrinhNapKhiHe1 = loiQuaTrinhNapKhiHe1;
+            data.loiQuaTrinhNapKhiHe2 = loiQuaTrinhNapKhiHe2;
 
             //method update gui
             UpdateGUI(data);
@@ -154,11 +186,41 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                     labelXaKhiHe2.BackColor = data.xaKhiHe2 != null && data.xaKhiHe2 == true ? Color.LimeGreen : Color.DimGray;
                     labelDungNapHe1.BackColor = data.ketThucNapHe1 != null && data.ketThucNapHe1 == true ? Color.LimeGreen : Color.DimGray;
                     labelDungNapHe2.BackColor = data.ketThucNapHe2 != null && data.ketThucNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+
+                    //err
+                    if(this.listBoxError.Items.Count > 0)
+                    {
+                        this.listBoxError.Items.Clear();
+                    }
+                    if (data.canhBaoLoiDongCoOHeHoaHoi == true)
+                    {
+                        this.listBoxError.Items.Add("Cảnh báo lỗi động cơ ở hệ hóa hơi.");
+                    }
+                    if (data.canhBaoChuaMoHeHoaHoi == true)
+                    {
+                        this.listBoxError.Items.Add("Cảnh báo chưa mở hệ hóa hơi.");
+                    }
+                    if (data.loiQuaTrinhXaKhiHe1 == true)
+                    {
+                        this.listBoxError.Items.Add("Lỗi quá trình xả khí hệ 1.");
+                    }
+                    if (data.loiQuaTrinhXaKhiHe2 == true)
+                    {
+                        this.listBoxError.Items.Add("Lỗi quá trình xả khí hệ 2.");
+                    }
+                    if (data.loiQuaTrinhNapKhiHe1 == true)
+                    {
+                        this.listBoxError.Items.Add("Lỗi quá trình nạp khí hệ 1.");
+                    }
+                    if (data.loiQuaTrinhNapKhiHe2 == true)
+                    {
+                        this.listBoxError.Items.Add("Lỗi quá trình nạp khí hệ 2.");
+                    }
                 });
             }
 
 
-           
+
 
         }
     }

@@ -65,8 +65,6 @@
             tableLayoutPanel2 = new TableLayoutPanel();
             buttonShowHeNap = new Button();
             buttonShowBangLoi = new Button();
-            panel1 = new Panel();
-            richTextBox1 = new RichTextBox();
             panelTrangThaiHeNap = new Panel();
             label27 = new Label();
             labelSanSangNapHe1 = new Label();
@@ -106,6 +104,7 @@
             button38 = new Button();
             gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
             gridLayout2 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
+            listBoxError = new ListBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -117,7 +116,6 @@
             tableLayoutPanel12.SuspendLayout();
             tableLayoutPanel13.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
-            panel1.SuspendLayout();
             panelTrangThaiHeNap.SuspendLayout();
             tabPage2.SuspendLayout();
             tableLayoutPanel30.SuspendLayout();
@@ -623,7 +621,7 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
             tableLayoutPanel2.Controls.Add(buttonShowHeNap, 0, 0);
             tableLayoutPanel2.Controls.Add(buttonShowBangLoi, 0, 0);
-            tableLayoutPanel2.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel2.Controls.Add(listBoxError, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(4, 4);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -671,28 +669,6 @@
             buttonShowBangLoi.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonShowBangLoi.UseVisualStyleBackColor = false;
             buttonShowBangLoi.Click += button57_Click_1;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(richTextBox1);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(773, 53);
-            panel1.TabIndex = 6;
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            richTextBox1.Dock = DockStyle.Fill;
-            richTextBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            richTextBox1.ForeColor = Color.Red;
-            richTextBox1.Location = new Point(0, 0);
-            richTextBox1.Margin = new Padding(3, 2, 3, 2);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(773, 53);
-            richTextBox1.TabIndex = 3;
-            richTextBox1.Text = "- chưa có mẻ nạp";
             // 
             // panelTrangThaiHeNap
             // 
@@ -1252,6 +1228,18 @@
             gridLayout2.ContainerControl = panelTrangThaiHeNap;
             gridLayout2.Rows = 2;
             // 
+            // listBoxError
+            // 
+            listBoxError.Dock = DockStyle.Fill;
+            listBoxError.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            listBoxError.ForeColor = Color.Red;
+            listBoxError.FormattingEnabled = true;
+            listBoxError.ItemHeight = 21;
+            listBoxError.Location = new Point(3, 3);
+            listBoxError.Name = "listBoxError";
+            listBoxError.Size = new Size(773, 53);
+            listBoxError.TabIndex = 9;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1274,7 +1262,6 @@
             tableLayoutPanel12.ResumeLayout(false);
             tableLayoutPanel13.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
-            panel1.ResumeLayout(false);
             panelTrangThaiHeNap.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tableLayoutPanel30.ResumeLayout(false);
@@ -1341,8 +1328,6 @@
         private Label labelTheTichHeNap1;
         private Label labelTheTichHeNap2;
         private Button buttonShowBangLoi;
-        private Panel panel1;
-        private RichTextBox richTextBox1;
         private Button buttonShowHeNap;
         private Label label1;
         private Label labelApSuatTong;
@@ -1370,5 +1355,6 @@
         private Label labelXaKhiHe2;
         private Panel panelChartApSuat;
         private Panel panelChartTheTich;
+        private ListBox listBoxError;
     }
 }

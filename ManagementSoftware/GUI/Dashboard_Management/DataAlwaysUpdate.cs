@@ -22,6 +22,13 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         public bool? batDauNapHe1 { get; set; } = false;
         public bool? batDauNapHe2 { get; set; } = false;
 
+        //error
+        public bool? canhBaoLoiDongCoOHeHoaHoi = false;
+        public bool? canhBaoChuaMoHeHoaHoi = false;
+        public bool? loiQuaTrinhXaKhiHe1 = false;
+        public bool? loiQuaTrinhXaKhiHe2 = false;
+        public bool? loiQuaTrinhNapKhiHe1 = false;
+        public bool? loiQuaTrinhNapKhiHe2 = false;
 
 
 
