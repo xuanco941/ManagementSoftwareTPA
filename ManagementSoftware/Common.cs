@@ -11,8 +11,8 @@ namespace ManagementSoftware
     {
         //Account Admin
         public static User UserAdmin = new User { FullName = "Admin", Username = "admin", Password = "123", GroupID = 1 };
-        public static Group GroupAdmin = new Group { GroupName = "Admin", IsManagementUser = true, IsManagementGroup = true };
-        public static Group GroupUser = new Group { GroupName = "User", IsManagementUser = false, IsManagementGroup = false };
+        public static Group GroupAdmin = new Group { GroupName = "Admin", IsManagementUser = true, IsManagementMachine = true };
+        public static Group GroupUser = new Group { GroupName = "User", IsManagementUser = false, IsManagementMachine = true };
 
 
         //GUI

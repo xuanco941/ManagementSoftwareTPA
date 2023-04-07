@@ -198,6 +198,12 @@ namespace ManagementSoftware.GUI
 
         private void Main_Load(object sender, EventArgs e)
         {
+
+            if(Common.USERSESSION!=null && Common.USERSESSION.Group != null && Common.USERSESSION.Group.IsManagementUser == false)
+            {
+                buttonEmployee.Enabled = false;
+            }
+
             Hello form = new Hello();
             form.TopLevel = false;
             panelContent.Controls.Add(form);

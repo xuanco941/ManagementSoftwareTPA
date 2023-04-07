@@ -42,7 +42,7 @@ namespace ManagementSoftware.Models
             //group
             modelBuilder.Entity<Group>(entity =>
             {
-                entity.Property(e => e.IsManagementGroup).HasDefaultValueSql("(0)");
+                entity.Property(e => e.IsManagementMachine).HasDefaultValueSql("(0)");
                 entity.Property(e => e.IsManagementUser).HasDefaultValueSql("(0)");
                 entity.HasIndex(e => e.GroupName).IsUnique();
 

@@ -57,7 +57,7 @@ namespace ManagementSoftware.GUI
             List<User> list = new DALUser().GetAll();
             foreach (var user in list)
             {
-                dtUser.Rows.Add(Common.USERS + user.UserID, user.FullName,user.Email ,user.PhoneNumber,user.Username, user.Password, user.Group?.GroupName ?? "Không có quyền");
+                dtUser.Rows.Add(Common.USERS + user.UserID, user.FullName, user.Email, user.PhoneNumber, user.Username, user.Password, user.Group?.GroupName ?? "Không có quyền");
             }
             dataGridViewUser.DataSource = dtUser;
 
@@ -67,14 +67,14 @@ namespace ManagementSoftware.GUI
             DataTable dtGroup = new DataTable();
             dtGroup.Columns.Add("Mã nhóm quyền");
             dtGroup.Columns.Add("Tên nhóm quyền");
-            dtGroup.Columns.Add("Quản trị nhân viên");
-            dtGroup.Columns.Add("Quản trị nhóm quyền");
+            dtGroup.Columns.Add("Quyền quản trị nhân viên");
+            dtGroup.Columns.Add("Quyền giám sát và theo dõi kết quả máy");
 
             List<Group> list = new DALGroup().GetAll();
             foreach (var group in list)
             {
                 string IsManagementUser = group.IsManagementUser == true ? "Có" : "Không";
-                string IsManagementGroup = group.IsManagementGroup == true ? "Có" : "Không";
+                string IsManagementGroup = group.IsManagementMachine == true ? "Có" : "Không";
 
 
                 dtGroup.Rows.Add(Common.GROUPS + group.GroupID, group.GroupName, IsManagementUser, IsManagementGroup
@@ -99,19 +99,19 @@ namespace ManagementSoftware.GUI
             formChangeUser.ShowDialog();
         }
 
-        private void buttonAddGroup_Click(object sender, EventArgs e)
-        {
-            FormAddGroup formAddGroup = new FormAddGroup();
-            formAddGroup.changeData = new FormAddGroup.ChangeData(AlertActive);
-            formAddGroup.ShowDialog();
-        }
+        //private void buttonAddGroup_Click(object sender, EventArgs e)
+        //{
+        //    FormAddGroup formAddGroup = new FormAddGroup();
+        //    formAddGroup.changeData = new FormAddGroup.ChangeData(AlertActive);
+        //    formAddGroup.ShowDialog();
+        //}
 
-        private void buttonChangeGroup_Click(object sender, EventArgs e)
-        {
-            FormChangeGroup formChangeGroup = new FormChangeGroup();
-            formChangeGroup.changeData = new FormChangeGroup.ChangeData(AlertActive);
-            formChangeGroup.ShowDialog();
-        }
+        //private void buttonChangeGroup_Click(object sender, EventArgs e)
+        //{
+        //    FormChangeGroup formChangeGroup = new FormChangeGroup();
+        //    formChangeGroup.changeData = new FormChangeGroup.ChangeData(AlertActive);
+        //    formChangeGroup.ShowDialog();
+        //}
 
         private void Employee_Load(object sender, EventArgs e)
         {

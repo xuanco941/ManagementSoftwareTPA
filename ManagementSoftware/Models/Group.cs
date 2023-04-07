@@ -12,6 +12,6 @@ namespace ManagementSoftware.Models
         [StringLength(100)]
         public string? GroupName { get; set; } = "";
         public bool IsManagementUser { get; set; }
-        public bool IsManagementGroup { get; set; }
+        public bool IsManagementMachine { get; set; }
     }
 }

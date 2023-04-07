@@ -44,7 +44,7 @@ namespace ManagementSoftware.DAL
                     // Cập nhật thuộc tính của đối tượng Group
                     existingGroup.GroupName = group.GroupName;
                     existingGroup.IsManagementUser = group.IsManagementUser;
-                    existingGroup.IsManagementGroup = group.IsManagementGroup;
+                    existingGroup.IsManagementMachine = group.IsManagementMachine;
 
                     context.SaveChanges();
                 }

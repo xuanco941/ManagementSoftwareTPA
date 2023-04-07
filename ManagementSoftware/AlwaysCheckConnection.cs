@@ -75,6 +75,8 @@ namespace ManagementSoftware
             // update data
             // Long running operation
 
+
+
             if (plc.CheckState() == true)
             {
                 plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, true);
@@ -132,9 +134,6 @@ namespace ManagementSoftware
 
                 }
             }
-
-
-
 
 
             if (timer != null)

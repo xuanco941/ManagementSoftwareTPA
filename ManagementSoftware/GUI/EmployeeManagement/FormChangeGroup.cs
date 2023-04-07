@@ -65,7 +65,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             Group group = listAllGroup.Where(e => e.GroupName == comboBoxSelectGroup.Text).First();
 
             checkBoxIsManagementUser.Checked = group.IsManagementUser;
-            checkBoxIsManagementGroup.Checked = group.IsManagementGroup;
+            checkBoxIsManagementGroup.Checked = group.IsManagementMachine;
             //checkBoxIsControlMachine.Checked = group.IsControlMachine;
             //checkBoxIsSettingMachine.Checked = group.IsSettingMachine;
             //checkBoxIsSettingShift.Checked = group.IsSettingShift;
@@ -84,7 +84,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             Group group = new Group();
             group.GroupName = comboBoxSelectGroup.Text;
             group.IsManagementUser = checkBoxIsManagementUser.Checked;
-            group.IsManagementGroup = checkBoxIsManagementGroup.Checked;
+            group.IsManagementMachine = checkBoxIsManagementGroup.Checked;
 
             if (String.IsNullOrEmpty(comboBoxSelectGroup.Text))
             {

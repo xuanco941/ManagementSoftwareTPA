@@ -17,13 +17,14 @@ namespace ManagementSoftware.BUS
         {
 
             User? user = new DALUser().AuthLogin(username, password);
+            Common.USERSESSION = user;
             if (user != null)
             {
-                Common.USERSESSION = user;
                 return true;
             }
             else
             {
+
                 return false;
             }
 

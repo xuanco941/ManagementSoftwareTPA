@@ -47,13 +47,6 @@ namespace ManagementSoftware.GUI
             tabPageGroup = new TabPage();
             panel1 = new Panel();
             dataGridViewGroup = new DataGridView();
-            panel4 = new Panel();
-            buttonChangeGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            buttonAddGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            button1 = new Button();
-            button2 = new Button();
-            button4 = new Button();
-            button5 = new Button();
             tabControl1.SuspendLayout();
             tabPageUser.SuspendLayout();
             panel2.SuspendLayout();
@@ -62,7 +55,6 @@ namespace ManagementSoftware.GUI
             tabPageGroup.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewGroup).BeginInit();
-            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -227,14 +219,13 @@ namespace ManagementSoftware.GUI
             // 
             tabPageGroup.BackColor = SystemColors.InactiveCaption;
             tabPageGroup.Controls.Add(panel1);
-            tabPageGroup.Controls.Add(panel4);
             tabPageGroup.Location = new Point(4, 30);
             tabPageGroup.Margin = new Padding(4, 3, 4, 3);
             tabPageGroup.Name = "tabPageGroup";
             tabPageGroup.Padding = new Padding(4, 3, 4, 3);
             tabPageGroup.Size = new Size(1155, 561);
             tabPageGroup.TabIndex = 1;
-            tabPageGroup.Text = "Phân quyền";
+            tabPageGroup.Text = "Quyền người dùng";
             // 
             // panel1
             // 
@@ -243,7 +234,7 @@ namespace ManagementSoftware.GUI
             panel1.Location = new Point(4, 3);
             panel1.Margin = new Padding(4, 3, 4, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1147, 496);
+            panel1.Size = new Size(1147, 555);
             panel1.TabIndex = 10;
             // 
             // dataGridViewGroup
@@ -268,137 +259,8 @@ namespace ManagementSoftware.GUI
             dataGridViewGroup.RowHeadersVisible = false;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewGroup.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewGroup.Size = new Size(1147, 496);
+            dataGridViewGroup.Size = new Size(1147, 555);
             dataGridViewGroup.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.Transparent;
-            panel4.Controls.Add(buttonChangeGroup);
-            panel4.Controls.Add(buttonAddGroup);
-            panel4.Controls.Add(button1);
-            panel4.Controls.Add(button2);
-            panel4.Controls.Add(button4);
-            panel4.Controls.Add(button5);
-            panel4.Dock = DockStyle.Bottom;
-            panel4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            panel4.Location = new Point(4, 499);
-            panel4.Margin = new Padding(4, 3, 4, 3);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(1147, 59);
-            panel4.TabIndex = 11;
-            // 
-            // buttonChangeGroup
-            // 
-            buttonChangeGroup.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonChangeGroup.BackColor = Color.DarkGoldenrod;
-            buttonChangeGroup.BackgroundColor = Color.DarkGoldenrod;
-            buttonChangeGroup.BorderColor = Color.PaleVioletRed;
-            buttonChangeGroup.BorderRadius = 3;
-            buttonChangeGroup.BorderSize = 0;
-            buttonChangeGroup.Cursor = Cursors.Hand;
-            buttonChangeGroup.FlatStyle = FlatStyle.Flat;
-            buttonChangeGroup.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonChangeGroup.ForeColor = Color.White;
-            buttonChangeGroup.Image = Properties.Resources.iconfinder_Synchronize_278832;
-            buttonChangeGroup.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonChangeGroup.Location = new Point(1020, 14);
-            buttonChangeGroup.Margin = new Padding(4, 3, 4, 3);
-            buttonChangeGroup.Name = "buttonChangeGroup";
-            buttonChangeGroup.Size = new Size(124, 33);
-            buttonChangeGroup.TabIndex = 24;
-            buttonChangeGroup.Text = "Thay đổi";
-            buttonChangeGroup.TextAlign = ContentAlignment.MiddleRight;
-            buttonChangeGroup.TextColor = Color.White;
-            buttonChangeGroup.TextImageRelation = TextImageRelation.TextBeforeImage;
-            buttonChangeGroup.UseVisualStyleBackColor = false;
-            buttonChangeGroup.Click += buttonChangeGroup_Click;
-            // 
-            // buttonAddGroup
-            // 
-            buttonAddGroup.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonAddGroup.BackColor = Color.Green;
-            buttonAddGroup.BackgroundColor = Color.Green;
-            buttonAddGroup.BorderColor = Color.PaleVioletRed;
-            buttonAddGroup.BorderRadius = 3;
-            buttonAddGroup.BorderSize = 0;
-            buttonAddGroup.Cursor = Cursors.Hand;
-            buttonAddGroup.FlatStyle = FlatStyle.Flat;
-            buttonAddGroup.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonAddGroup.ForeColor = Color.White;
-            buttonAddGroup.Image = (Image)resources.GetObject("buttonAddGroup.Image");
-            buttonAddGroup.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAddGroup.Location = new Point(892, 14);
-            buttonAddGroup.Margin = new Padding(4, 3, 4, 3);
-            buttonAddGroup.Name = "buttonAddGroup";
-            buttonAddGroup.Size = new Size(124, 33);
-            buttonAddGroup.TabIndex = 23;
-            buttonAddGroup.Text = "Thêm mới";
-            buttonAddGroup.TextAlign = ContentAlignment.MiddleRight;
-            buttonAddGroup.TextColor = Color.White;
-            buttonAddGroup.TextImageRelation = TextImageRelation.TextBeforeImage;
-            buttonAddGroup.UseVisualStyleBackColor = false;
-            buttonAddGroup.Click += buttonAddGroup_Click;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Image = Properties.Resources.iconfinder_Stock_Index_Up_278812;
-            button1.ImageAlign = ContentAlignment.MiddleRight;
-            button1.Location = new Point(1676, -27);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 28);
-            button1.TabIndex = 6;
-            button1.Text = "Thêm mới";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Image = Properties.Resources.iconfinder_Synchronize_278832;
-            button2.ImageAlign = ContentAlignment.MiddleRight;
-            button2.Location = new Point(1778, -27);
-            button2.Margin = new Padding(4, 3, 4, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 28);
-            button2.TabIndex = 7;
-            button2.Text = "Thay đổi";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Image = Properties.Resources.iconfinder_Stock_Index_Up_278812;
-            button4.ImageAlign = ContentAlignment.MiddleRight;
-            button4.Location = new Point(2522, -72);
-            button4.Margin = new Padding(4, 3, 4, 3);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 28);
-            button4.TabIndex = 2;
-            button4.Text = "Thêm mới";
-            button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button5.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.Image = Properties.Resources.iconfinder_Synchronize_278832;
-            button5.ImageAlign = ContentAlignment.MiddleRight;
-            button5.Location = new Point(2624, -72);
-            button5.Margin = new Padding(4, 3, 4, 3);
-            button5.Name = "button5";
-            button5.Size = new Size(94, 28);
-            button5.TabIndex = 3;
-            button5.Text = "Thay đổi";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = true;
             // 
             // Employee
             // 
@@ -420,7 +282,6 @@ namespace ManagementSoftware.GUI
             tabPageGroup.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewGroup).EndInit();
-            panel4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -436,14 +297,7 @@ namespace ManagementSoftware.GUI
         private Button buttonSuaNhanVien;
         private Panel panel1;
         private DataGridView dataGridViewGroup;
-        private Panel panel4;
-        private Button button1;
-        private Button button2;
-        private Button button4;
-        private Button button5;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddUser;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonChangeUser;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonChangeGroup;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonAddGroup;
     }
 }

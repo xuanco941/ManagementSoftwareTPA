@@ -76,7 +76,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
                 Group group = new Group();
                 group.GroupName = nameGroup;
                 group.IsManagementUser = checkBoxIsManagementUser.Checked;
-                group.IsManagementGroup = checkBoxIsManagementGroup.Checked;
+                group.IsManagementMachine = checkBoxIsManagementGroup.Checked;
                 //group.IsControlMachine = checkBoxIsControlMachine.Checked;
                 //group.IsSettingMachine = checkBoxIsSettingMachine.Checked;
                 //group.IsSettingShift = checkBoxIsSettingShift.Checked;
