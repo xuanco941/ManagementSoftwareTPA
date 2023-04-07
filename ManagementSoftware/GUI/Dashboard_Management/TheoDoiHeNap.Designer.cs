@@ -34,35 +34,43 @@
             VanXa = new PictureBox();
             OngXa = new PictureBox();
             BangTai1 = new PictureBox();
-            CB1 = new PictureBox();
             BangTai2 = new PictureBox();
             BangTai3 = new PictureBox();
             BangTai4 = new PictureBox();
-            CB2 = new PictureBox();
-            CB3 = new PictureBox();
-            CB4 = new PictureBox();
-            CB5 = new PictureBox();
-            CB6 = new PictureBox();
-            CB7 = new PictureBox();
-            CB8 = new PictureBox();
-            CB9 = new PictureBox();
-            CB10 = new PictureBox();
             Motor1 = new PictureBox();
             Motor2 = new PictureBox();
             Motor3 = new PictureBox();
             Motor4 = new PictureBox();
             ong2 = new PictureBox();
             RunNap = new PictureBox();
+            CB1 = new CusPictureBox();
+            CB2 = new CusPictureBox();
+            CB3 = new CusPictureBox();
+            CB4 = new CusPictureBox();
+            CB5 = new CusPictureBox();
+            CB6 = new CusPictureBox();
+            CB7 = new CusPictureBox();
+            CB8 = new CusPictureBox();
+            CB9 = new CusPictureBox();
+            CB10 = new CusPictureBox();
+            textBoxASTong = new TextBox();
+            textBoxASHeNap = new TextBox();
             ((System.ComponentModel.ISupportInitialize)VanCap).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DauOng).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ong1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)VanXa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)OngXa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BangTai1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)CB1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BangTai2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BangTai3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BangTai4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Motor1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Motor2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Motor3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Motor4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ong2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)RunNap).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CB1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CB2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CB3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CB4).BeginInit();
@@ -72,12 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)CB8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CB9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CB10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Motor1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Motor2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Motor3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Motor4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ong2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)RunNap).BeginInit();
             SuspendLayout();
             // 
             // VanCap
@@ -93,7 +95,7 @@
             // DauOng
             // 
             DauOng.Image = Properties.Resources.DauOngXam;
-            DauOng.Location = new Point(150, 47);
+            DauOng.Location = new Point(151, 48);
             DauOng.Name = "DauOng";
             DauOng.Size = new Size(98, 49);
             DauOng.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -140,16 +142,6 @@
             BangTai1.TabIndex = 6;
             BangTai1.TabStop = false;
             // 
-            // CB1
-            // 
-            CB1.Image = Properties.Resources.SensorXam;
-            CB1.Location = new Point(206, 279);
-            CB1.Name = "CB1";
-            CB1.Size = new Size(12, 28);
-            CB1.SizeMode = PictureBoxSizeMode.StretchImage;
-            CB1.TabIndex = 7;
-            CB1.TabStop = false;
-            // 
             // BangTai2
             // 
             BangTai2.Image = Properties.Resources.BangTaiXam;
@@ -179,96 +171,6 @@
             BangTai4.SizeMode = PictureBoxSizeMode.StretchImage;
             BangTai4.TabIndex = 10;
             BangTai4.TabStop = false;
-            // 
-            // CB2
-            // 
-            CB2.Image = Properties.Resources.SensorXam;
-            CB2.Location = new Point(229, 279);
-            CB2.Name = "CB2";
-            CB2.Size = new Size(12, 28);
-            CB2.SizeMode = PictureBoxSizeMode.StretchImage;
-            CB2.TabIndex = 11;
-            CB2.TabStop = false;
-            // 
-            // CB3
-            // 
-            CB3.Image = Properties.Resources.SensorXam;
-            CB3.Location = new Point(326, 278);
-            CB3.Name = "CB3";
-            CB3.Size = new Size(12, 30);
-            CB3.SizeMode = PictureBoxSizeMode.StretchImage;
-            CB3.TabIndex = 12;
-            CB3.TabStop = false;
-            // 
-            // CB4
-            // 
-            CB4.Image = Properties.Resources.SensorXam;
-            CB4.Location = new Point(361, 278);
-            CB4.Name = "CB4";
-            CB4.Size = new Size(12, 29);
-            CB4.SizeMode = PictureBoxSizeMode.StretchImage;
-            CB4.TabIndex = 13;
-            CB4.TabStop = false;
-            // 
-            // CB5
-            // 
-            CB5.Image = Properties.Resources.SensorXam;
-            CB5.Location = new Point(483, 279);
-            CB5.Name = "CB5";
-            CB5.Size = new Size(12, 29);
-            CB5.SizeMode = PictureBoxSizeMode.StretchImage;
-            CB5.TabIndex = 14;
-            CB5.TabStop = false;
-            // 
-            // CB6
-            // 
-            CB6.Image = Properties.Resources.SensorXam;
-            CB6.Location = new Point(520, 278);
-            CB6.Name = "CB6";
-            CB6.Size = new Size(12, 28);
-            CB6.SizeMode = PictureBoxSizeMode.StretchImage;
-            CB6.TabIndex = 15;
-            CB6.TabStop = false;
-            // 
-            // CB7
-            // 
-            CB7.Image = Properties.Resources.SensorXam;
-            CB7.Location = new Point(641, 277);
-            CB7.Name = "CB7";
-            CB7.Size = new Size(12, 30);
-            CB7.SizeMode = PictureBoxSizeMode.StretchImage;
-            CB7.TabIndex = 16;
-            CB7.TabStop = false;
-            // 
-            // CB8
-            // 
-            CB8.Image = Properties.Resources.SensorXam;
-            CB8.Location = new Point(676, 277);
-            CB8.Name = "CB8";
-            CB8.Size = new Size(12, 30);
-            CB8.SizeMode = PictureBoxSizeMode.StretchImage;
-            CB8.TabIndex = 17;
-            CB8.TabStop = false;
-            // 
-            // CB9
-            // 
-            CB9.Image = Properties.Resources.SensorXam;
-            CB9.Location = new Point(780, 278);
-            CB9.Name = "CB9";
-            CB9.Size = new Size(13, 30);
-            CB9.SizeMode = PictureBoxSizeMode.StretchImage;
-            CB9.TabIndex = 18;
-            CB9.TabStop = false;
-            // 
-            // CB10
-            // 
-            CB10.Image = Properties.Resources.SensorXam;
-            CB10.Location = new Point(798, 278);
-            CB10.Name = "CB10";
-            CB10.Size = new Size(13, 30);
-            CB10.SizeMode = PictureBoxSizeMode.StretchImage;
-            CB10.TabIndex = 19;
-            CB10.TabStop = false;
             // 
             // Motor1
             // 
@@ -330,6 +232,104 @@
             RunNap.TabIndex = 25;
             RunNap.TabStop = false;
             // 
+            // CB1
+            // 
+            CB1.Location = new Point(206, 279);
+            CB1.Name = "CB1";
+            CB1.Size = new Size(12, 28);
+            CB1.TabIndex = 26;
+            CB1.TabStop = false;
+            // 
+            // CB2
+            // 
+            CB2.Location = new Point(229, 279);
+            CB2.Name = "CB2";
+            CB2.Size = new Size(12, 28);
+            CB2.TabIndex = 27;
+            CB2.TabStop = false;
+            // 
+            // CB3
+            // 
+            CB3.Location = new Point(326, 279);
+            CB3.Name = "CB3";
+            CB3.Size = new Size(12, 28);
+            CB3.TabIndex = 28;
+            CB3.TabStop = false;
+            // 
+            // CB4
+            // 
+            CB4.Location = new Point(361, 279);
+            CB4.Name = "CB4";
+            CB4.Size = new Size(12, 28);
+            CB4.TabIndex = 29;
+            CB4.TabStop = false;
+            // 
+            // CB5
+            // 
+            CB5.Location = new Point(483, 279);
+            CB5.Name = "CB5";
+            CB5.Size = new Size(12, 28);
+            CB5.TabIndex = 30;
+            CB5.TabStop = false;
+            // 
+            // CB6
+            // 
+            CB6.Location = new Point(520, 279);
+            CB6.Name = "CB6";
+            CB6.Size = new Size(12, 28);
+            CB6.TabIndex = 31;
+            CB6.TabStop = false;
+            // 
+            // CB7
+            // 
+            CB7.Location = new Point(641, 278);
+            CB7.Name = "CB7";
+            CB7.Size = new Size(12, 28);
+            CB7.TabIndex = 32;
+            CB7.TabStop = false;
+            // 
+            // CB8
+            // 
+            CB8.Location = new Point(676, 278);
+            CB8.Name = "CB8";
+            CB8.Size = new Size(12, 28);
+            CB8.TabIndex = 33;
+            CB8.TabStop = false;
+            // 
+            // CB9
+            // 
+            CB9.Location = new Point(780, 279);
+            CB9.Name = "CB9";
+            CB9.Size = new Size(12, 28);
+            CB9.TabIndex = 34;
+            CB9.TabStop = false;
+            // 
+            // CB10
+            // 
+            CB10.Location = new Point(798, 279);
+            CB10.Name = "CB10";
+            CB10.Size = new Size(12, 28);
+            CB10.TabIndex = 35;
+            CB10.TabStop = false;
+            // 
+            // textBoxASTong
+            // 
+            textBoxASTong.Location = new Point(148, 8);
+            textBoxASTong.Name = "textBoxASTong";
+            textBoxASTong.ReadOnly = true;
+            textBoxASTong.Size = new Size(70, 23);
+            textBoxASTong.TabIndex = 36;
+            textBoxASTong.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBoxASHeNap
+            // 
+            textBoxASHeNap.Location = new Point(453, 8);
+            textBoxASHeNap.Name = "textBoxASHeNap";
+            textBoxASHeNap.ReadOnly = true;
+            textBoxASHeNap.Size = new Size(70, 23);
+            textBoxASHeNap.TabIndex = 37;
+            textBoxASHeNap.TextAlign = HorizontalAlignment.Center;
+            // 
             // TheoDoiHeNap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -337,12 +337,8 @@
             BackgroundImage = Properties.Resources.EtekXam;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1121, 616);
-            Controls.Add(RunNap);
-            Controls.Add(ong2);
-            Controls.Add(Motor4);
-            Controls.Add(Motor3);
-            Controls.Add(Motor2);
-            Controls.Add(Motor1);
+            Controls.Add(textBoxASHeNap);
+            Controls.Add(textBoxASTong);
             Controls.Add(CB10);
             Controls.Add(CB9);
             Controls.Add(CB8);
@@ -352,10 +348,16 @@
             Controls.Add(CB4);
             Controls.Add(CB3);
             Controls.Add(CB2);
+            Controls.Add(CB1);
+            Controls.Add(RunNap);
+            Controls.Add(ong2);
+            Controls.Add(Motor4);
+            Controls.Add(Motor3);
+            Controls.Add(Motor2);
+            Controls.Add(Motor1);
             Controls.Add(BangTai4);
             Controls.Add(BangTai3);
             Controls.Add(BangTai2);
-            Controls.Add(CB1);
             Controls.Add(BangTai1);
             Controls.Add(OngXa);
             Controls.Add(VanXa);
@@ -367,17 +369,24 @@
             MinimizeBox = false;
             Name = "TheoDoiHeNap";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "HeNapXam";
+            Text = "Theo dõi hệ nạp";
+            FormClosing += TheoDoiHeNap_FormClosing;
             ((System.ComponentModel.ISupportInitialize)VanCap).EndInit();
             ((System.ComponentModel.ISupportInitialize)DauOng).EndInit();
             ((System.ComponentModel.ISupportInitialize)ong1).EndInit();
             ((System.ComponentModel.ISupportInitialize)VanXa).EndInit();
             ((System.ComponentModel.ISupportInitialize)OngXa).EndInit();
             ((System.ComponentModel.ISupportInitialize)BangTai1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)CB1).EndInit();
             ((System.ComponentModel.ISupportInitialize)BangTai2).EndInit();
             ((System.ComponentModel.ISupportInitialize)BangTai3).EndInit();
             ((System.ComponentModel.ISupportInitialize)BangTai4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Motor1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Motor2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Motor3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Motor4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ong2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)RunNap).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CB1).EndInit();
             ((System.ComponentModel.ISupportInitialize)CB2).EndInit();
             ((System.ComponentModel.ISupportInitialize)CB3).EndInit();
             ((System.ComponentModel.ISupportInitialize)CB4).EndInit();
@@ -387,13 +396,8 @@
             ((System.ComponentModel.ISupportInitialize)CB8).EndInit();
             ((System.ComponentModel.ISupportInitialize)CB9).EndInit();
             ((System.ComponentModel.ISupportInitialize)CB10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Motor1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Motor2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Motor3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Motor4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ong2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)RunNap).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -404,24 +408,26 @@
         private PictureBox VanXa;
         private PictureBox OngXa;
         private PictureBox BangTai1;
-        private PictureBox CB1;
         private PictureBox BangTai2;
         private PictureBox BangTai3;
         private PictureBox BangTai4;
-        private PictureBox CB2;
-        private PictureBox CB3;
-        private PictureBox CB4;
-        private PictureBox CB5;
-        private PictureBox CB6;
-        private PictureBox CB7;
-        private PictureBox CB8;
-        private PictureBox CB9;
-        private PictureBox CB10;
         private PictureBox Motor1;
         private PictureBox Motor2;
         private PictureBox Motor3;
         private PictureBox Motor4;
         private PictureBox ong2;
         private PictureBox RunNap;
+        private CusPictureBox CB1;
+        private CusPictureBox CB2;
+        private CusPictureBox CB3;
+        private CusPictureBox CB4;
+        private CusPictureBox CB5;
+        private CusPictureBox CB6;
+        private CusPictureBox CB7;
+        private CusPictureBox CB8;
+        private CusPictureBox CB9;
+        private CusPictureBox CB10;
+        private TextBox textBoxASTong;
+        private TextBox textBoxASHeNap;
     }
 }
