@@ -120,6 +120,8 @@ namespace ManagementSoftware
                 else
                 {
                     Common.ResultCurrent = null;
+                    statusGian1Run = false;
+                    statusGian2Run = false;
                 }
             }
 

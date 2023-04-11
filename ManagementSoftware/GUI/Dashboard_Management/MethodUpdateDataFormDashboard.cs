@@ -110,8 +110,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             //trạng thái quy trinh
             bool? sanSangNapHe1 = false;
             bool? sanSangNapHe2 = false;
-            bool? ketThucNapHe1 = false;
-            bool? ketThucNapHe2 = false;
+            //bool? ketThucNapHe1 = false;
+            //bool? ketThucNapHe2 = false;
             bool? xaKhiHe1 = false;
             bool? xaKhiHe2 = false;
             bool? batDauNapHe1 = false;
@@ -135,8 +135,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
             sanSangNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H1));
             sanSangNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H2));
-            ketThucNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H1));
-            ketThucNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H2));
+            //ketThucNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H1));
+            //ketThucNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H2));
             xaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H1));
             xaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H2));
             batDauNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H1));
@@ -160,8 +160,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             data.theTichHe2 = theTichHe2;
             data.sanSangNapHe1 = sanSangNapHe1;
             data.sanSangNapHe2 = sanSangNapHe2;
-            data.ketThucNapHe1 = ketThucNapHe1;
-            data.ketThucNapHe2 = ketThucNapHe2;
+            //data.ketThucNapHe1 = ketThucNapHe1;
+            //data.ketThucNapHe2 = ketThucNapHe2;
             data.xaKhiHe1 = xaKhiHe1;
             data.xaKhiHe2 = xaKhiHe2;
             data.batDauNapHe1 = batDauNapHe1;
@@ -209,8 +209,12 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                     labelDangNapHe2.BackColor = data.batDauNapHe2 != null && data.batDauNapHe2 == true ? Color.LimeGreen : Color.DimGray;
                     labelXaKhiHe1.BackColor = data.xaKhiHe1 != null && data.xaKhiHe1 == true ? Color.LimeGreen : Color.DimGray;
                     labelXaKhiHe2.BackColor = data.xaKhiHe2 != null && data.xaKhiHe2 == true ? Color.LimeGreen : Color.DimGray;
-                    labelDungNapHe1.BackColor = data.ketThucNapHe1 != null && data.ketThucNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-                    labelDungNapHe2.BackColor = data.ketThucNapHe2 != null && data.ketThucNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+
+
+                    //kết thúc
+
+                    labelDungNapHe1.BackColor = Common.UserCurrent == null && data.sanSangNapHe1 == true && data.batDauNapHe1 == false && data.xaKhiHe1 == false ? Color.LimeGreen : Color.DimGray;
+                    labelDungNapHe2.BackColor = Common.UserCurrent == null && data.sanSangNapHe2 == true && data.batDauNapHe2 == false && data.xaKhiHe2 == false ? Color.LimeGreen : Color.DimGray;
 
 
 
