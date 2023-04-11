@@ -56,7 +56,6 @@ namespace ManagementSoftware.GUI
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ID" });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Loại khí", SortMode = DataGridViewColumnSortMode.NotSortable });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Áp suất tổng", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 HeaderText = "Time Start",
@@ -82,7 +81,7 @@ namespace ManagementSoftware.GUI
                 HeaderText = "",
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 UseColumnTextForButtonValue = true,
-                Text = "Hệ Nạp 1",
+                Text = "Giàn Nạp 1",
                 Name = "HN1",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
                 DefaultCellStyle = new DataGridViewCellStyle()
@@ -95,7 +94,7 @@ namespace ManagementSoftware.GUI
                 HeaderText = "",
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 UseColumnTextForButtonValue = true,
-                Text = "Hệ Nạp 2",
+                Text = "Giàn Nạp 2",
                 Name = "HN2",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
                 DefaultCellStyle = new DataGridViewCellStyle()
@@ -157,13 +156,13 @@ namespace ManagementSoftware.GUI
                     if (e.ColumnIndex == dataGridView1.Columns["HN1"].Index)
                     {
 
-                        ResultHeNap u = new ResultHeNap(obj, Common.HeNap1);
+                        ResultHeNap u = new ResultHeNap(obj, Common.GianNap1);
                         u.ShowDialog();
                     }
                     if (e.ColumnIndex == dataGridView1.Columns["HN2"].Index)
                     {
 
-                        ResultHeNap u = new ResultHeNap(obj, Common.HeNap2);
+                        ResultHeNap u = new ResultHeNap(obj, Common.GianNap2);
                         u.ShowDialog();
                     }
                     if (e.ColumnIndex == dataGridView1.Columns["Error"].Index)
@@ -230,11 +229,10 @@ namespace ManagementSoftware.GUI
 
                 //Product? p = dALProduct.GetProductFromID(item.ProductID);
                 row.Cells[1].Value = item.LoaiKhi;
-                row.Cells[2].Value = item.ApSuatTong;
-                row.Cells[3].Value = item.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
-                row.Cells[4].Value = item.TimeEnd.ToString("HH:mm:ss dd/MM/yyyy");
-                row.Cells[5].Value = item.Username;
-                row.Cells[6].Value = item.Status == true ? "OK" : "NG";
+                row.Cells[2].Value = item.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
+                row.Cells[3].Value = item.TimeEnd.ToString("HH:mm:ss dd/MM/yyyy");
+                row.Cells[4].Value = item.Username;
+                row.Cells[5].Value = item.Status == true ? "OK" : "NG";
 
                 if (color)
                 {

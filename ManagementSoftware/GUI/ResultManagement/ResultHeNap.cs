@@ -72,7 +72,6 @@ namespace ManagementSoftware.GUI.ResultManagement
             DateTime now = DateTime.Now;
 
             List<DataDoThi> dataDoThiAS1 = new List<DataDoThi>();
-            List<DataDoThi> dataDoThiAS2 = new List<DataDoThi>();
 
 
             for (int i = 0; i < 30; i++)
@@ -88,18 +87,24 @@ namespace ManagementSoftware.GUI.ResultManagement
             chartTheTich.UpdateChart(dic);
         }
 
-        string heNap;
+        string gianNap;
         Result result;
 
-        public ResultHeNap(Result result, string heNap)
+        public ResultHeNap(Result result, string gianNap)
         {
             InitializeComponent();
 
             this.result = result;
-            this.heNap = heNap;
+            this.gianNap = gianNap;
+
+
+            this.Text = gianNap;
+
 
             chartApSuat = new Chart("BIỂU ĐỒ ÁP SUẤT");
             chartTheTich = new Chart("BIỂU ĐỒ THỂ TÍCH");
+
+
         }
 
 

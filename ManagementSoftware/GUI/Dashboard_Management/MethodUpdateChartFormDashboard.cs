@@ -20,8 +20,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         Chart chartApSuat;
         Chart chartTheTich;
         DALMachine dalMachine;
-        int idResult;
-        public MethodUpdateChartFormDashboard(Dashboard dashboard, Chart chartApSuat, Chart chartTheTich, int idResult)
+        public MethodUpdateChartFormDashboard(Dashboard dashboard, Chart chartApSuat, Chart chartTheTich)
         {
             plc = new PLCBeckhOff();
             dalMachine = new DALMachine();
@@ -30,13 +29,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             this.dashboard = dashboard;
             this.chartApSuat = chartApSuat;
             this.chartTheTich = chartTheTich;
-            this.idResult = idResult;
 
-        }
-
-        public void ChangeidResult(int id)
-        {
-            idResult = id;
         }
 
         public void StartUpdate()
@@ -88,43 +81,45 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             Dictionary<ChartSeries, List<DataDoThi>> dicApSuat = new Dictionary<ChartSeries, List<DataDoThi>>();
             Dictionary<ChartSeries, List<DataDoThi>> dicTheTich = new Dictionary<ChartSeries, List<DataDoThi>>();
 
-            List<Machine> listData = dalMachine.GetAllMachinesByResultID(this.idResult);
-
-            List<DataDoThi> dataDoThiASTong = new List<DataDoThi>();
-            List<DataDoThi> dataDoThiAS1 = new List<DataDoThi>();
-            List<DataDoThi> dataDoThiAS2 = new List<DataDoThi>();
-            List<DataDoThi> dataDoThiTT1 = new List<DataDoThi>();
-            List<DataDoThi> dataDoThiTT2 = new List<DataDoThi>();
-
-            foreach (var item in listData)
+            if (Common.ResultCurrent != null)
             {
-                if (item.NameMachine == Common.HeNap1)
+                List<Machine> listData = dalMachine.GetAllMachinesByResultID(Common.ResultCurrent.ResultID);
+
+                List<DataDoThi> dataDoThiASTong = new List<DataDoThi>();
+                List<DataDoThi> dataDoThiAS1 = new List<DataDoThi>();
+                List<DataDoThi> dataDoThiAS2 = new List<DataDoThi>();
+                List<DataDoThi> dataDoThiTT1 = new List<DataDoThi>();
+                List<DataDoThi> dataDoThiTT2 = new List<DataDoThi>();
+
+                foreach (var item in listData)
                 {
-                    dataDoThiASTong.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuatTong });
-                    dataDoThiAS1.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat });
-                    dataDoThiTT1.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich });
+                    if (item.NameMachine == Common.GianNap1)
+                    {
+                        dataDoThiASTong.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuatTong });
+                        dataDoThiAS1.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat });
+                        dataDoThiTT1.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich });
+                    }
+                    else if (item.NameMachine == Common.GianNap2)
+                    {
+                        dataDoThiAS2.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat });
+                        dataDoThiTT2.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich });
+                    }
                 }
-                else if (item.NameMachine == Common.HeNap2)
-                {
-                    dataDoThiAS2.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat });
-                    dataDoThiTT2.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich });
-                }
+
+                dicApSuat.Add(seriesApSuatTong, dataDoThiASTong);
+                dicApSuat.Add(seriesApSuatHe1, dataDoThiAS1);
+                dicApSuat.Add(seriesApSuatHe2, dataDoThiAS2);
+
+                dicTheTich.Add(seriesTheTich1, dataDoThiTT1);
+                dicTheTich.Add(seriesTheTich2, dataDoThiTT2);
+
+
             }
 
-            dicApSuat.Add(seriesApSuatTong, dataDoThiASTong);
-            dicApSuat.Add(seriesApSuatHe1, dataDoThiAS1);
-            dicApSuat.Add(seriesApSuatHe2, dataDoThiAS2);
-
-            dicTheTich.Add(seriesTheTich1, dataDoThiTT1);
-            dicTheTich.Add(seriesTheTich2, dataDoThiTT2);
-
-
-
-
-
-
             //method update gui
-            UpdateGUI(dicApSuat,dicTheTich);
+            UpdateGUI(dicApSuat, dicTheTich);
+
+
 
         }
 

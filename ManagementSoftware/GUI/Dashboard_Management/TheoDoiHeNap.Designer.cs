@@ -369,7 +369,7 @@
             MinimizeBox = false;
             Name = "TheoDoiHeNap";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Theo dõi hệ nạp";
+            Text = "Theo dõi giàn nạp";
             FormClosing += TheoDoiHeNap_FormClosing;
             ((System.ComponentModel.ISupportInitialize)VanCap).EndInit();
             ((System.ComponentModel.ISupportInitialize)DauOng).EndInit();

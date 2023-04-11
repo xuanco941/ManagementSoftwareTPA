@@ -9,7 +9,7 @@ namespace ManagementSoftware.DAL
 {
     public class DALResult
     {
-        public void Add(Result result)
+        public Result? Add(Result result)
         {
             using (var context = new DataBaseContext())
             {
@@ -17,10 +17,12 @@ namespace ManagementSoftware.DAL
                 {
                     context.Results.Add(result);
                     context.SaveChanges();
+
+                    return result;
                 }
                 catch
                 {
-
+                    return null;
                 }
 
             }
@@ -39,7 +41,6 @@ namespace ManagementSoftware.DAL
                         return false;
                     }
 
-                    resultToUpdate.ApSuatTong = result.ApSuatTong;
                     resultToUpdate.LoaiKhi = result.LoaiKhi;
                     resultToUpdate.TimeStart = result.TimeStart;
                     resultToUpdate.TimeEnd = result.TimeEnd;
@@ -61,7 +62,7 @@ namespace ManagementSoftware.DAL
                 {
                     return false;
                 }
-                
+
             }
         }
 
@@ -114,6 +115,22 @@ namespace ManagementSoftware.DAL
                 catch
                 {
                     return new List<string>();
+                }
+            }
+        }
+
+        public Result? GetResultNewestWithStatusFalse()
+        {
+            using (var context = new DataBaseContext())
+            {
+                try
+                {
+                    Result? latestResult = context.Results.OrderByDescending(r => r.ResultID).FirstOrDefault(a => a.Status == false);
+                    return latestResult;
+                }
+                catch
+                {
+                    return null;
                 }
             }
         }

@@ -38,7 +38,7 @@
             button4 = new Button();
             panelDuLieu = new Panel();
             labelNguoiVanHanh = new Label();
-            label1TimeStart = new Label();
+            labelTimeStart = new Label();
             labelSoLuongNapHe1 = new Label();
             SoLuongNapHe2 = new Label();
             label1LoaiKhi = new Label();
@@ -65,6 +65,7 @@
             tableLayoutPanel2 = new TableLayoutPanel();
             buttonShowHeNap = new Button();
             buttonShowBangLoi = new Button();
+            listBoxError = new ListBox();
             panelTrangThaiHeNap = new Panel();
             label27 = new Label();
             labelSanSangNapHe1 = new Label();
@@ -104,7 +105,6 @@
             button38 = new Button();
             gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
             gridLayout2 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
-            listBoxError = new ListBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -229,7 +229,7 @@
             // panelDuLieu
             // 
             panelDuLieu.Controls.Add(labelNguoiVanHanh);
-            panelDuLieu.Controls.Add(label1TimeStart);
+            panelDuLieu.Controls.Add(labelTimeStart);
             panelDuLieu.Controls.Add(labelSoLuongNapHe1);
             panelDuLieu.Controls.Add(SoLuongNapHe2);
             panelDuLieu.Controls.Add(label1LoaiKhi);
@@ -254,20 +254,20 @@
             labelNguoiVanHanh.Text = "Người vận hành : Chưa có";
             labelNguoiVanHanh.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label1TimeStart
+            // labelTimeStart
             // 
-            label1TimeStart.BackColor = Color.Black;
-            label1TimeStart.BorderStyle = BorderStyle.FixedSingle;
-            label1TimeStart.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1TimeStart.ForeColor = SystemColors.ButtonHighlight;
-            label1TimeStart.Location = new Point(0, 39);
-            label1TimeStart.Margin = new Padding(0);
-            label1TimeStart.Name = "label1TimeStart";
-            gridLayout1.SetParticipateInLayout(label1TimeStart, true);
-            label1TimeStart.Size = new Size(543, 38);
-            label1TimeStart.TabIndex = 39;
-            label1TimeStart.Text = "Thời gian bắt đầu : Chưa có";
-            label1TimeStart.TextAlign = ContentAlignment.MiddleCenter;
+            labelTimeStart.BackColor = Color.Black;
+            labelTimeStart.BorderStyle = BorderStyle.FixedSingle;
+            labelTimeStart.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTimeStart.ForeColor = SystemColors.ButtonHighlight;
+            labelTimeStart.Location = new Point(0, 39);
+            labelTimeStart.Margin = new Padding(0);
+            labelTimeStart.Name = "labelTimeStart";
+            gridLayout1.SetParticipateInLayout(labelTimeStart, true);
+            labelTimeStart.Size = new Size(543, 38);
+            labelTimeStart.TabIndex = 39;
+            labelTimeStart.Text = "Thời gian bắt đầu : Chưa có";
+            labelTimeStart.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSoLuongNapHe1
             // 
@@ -281,7 +281,7 @@
             gridLayout1.SetParticipateInLayout(labelSoLuongNapHe1, true);
             labelSoLuongNapHe1.Size = new Size(543, 38);
             labelSoLuongNapHe1.TabIndex = 44;
-            labelSoLuongNapHe1.Text = "Số lượng nạp hệ 1 : Chưa có";
+            labelSoLuongNapHe1.Text = "Số lượng nạp giàn 1 : Chưa có";
             labelSoLuongNapHe1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // SoLuongNapHe2
@@ -296,7 +296,7 @@
             gridLayout1.SetParticipateInLayout(SoLuongNapHe2, true);
             SoLuongNapHe2.Size = new Size(543, 38);
             SoLuongNapHe2.TabIndex = 41;
-            SoLuongNapHe2.Text = "Số lượng nạp hệ 2 : Chưa có";
+            SoLuongNapHe2.Text = "Số lượng nạp giàn 2 : Chưa có";
             SoLuongNapHe2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1LoaiKhi
@@ -454,7 +454,7 @@
             label8.Name = "label8";
             label8.Size = new Size(130, 46);
             label8.TabIndex = 33;
-            label8.Text = "HỆ NẠP 1";
+            label8.Text = "GIÀN NẠP 1";
             label8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label9
@@ -468,7 +468,7 @@
             label9.Name = "label9";
             label9.Size = new Size(130, 46);
             label9.TabIndex = 34;
-            label9.Text = "HỆ NẠP 2";
+            label9.Text = "GIÀN NẠP 2";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelApSuatHeNap2
@@ -616,9 +616,9 @@
             // 
             tableLayoutPanel2.BackColor = Color.Transparent;
             tableLayoutPanel2.ColumnCount = 3;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel2.Controls.Add(buttonShowHeNap, 0, 0);
             tableLayoutPanel2.Controls.Add(buttonShowBangLoi, 0, 0);
             tableLayoutPanel2.Controls.Add(listBoxError, 0, 0);
@@ -637,14 +637,14 @@
             buttonShowHeNap.Dock = DockStyle.Fill;
             buttonShowHeNap.FlatAppearance.BorderSize = 0;
             buttonShowHeNap.FlatStyle = FlatStyle.Flat;
-            buttonShowHeNap.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonShowHeNap.Font = new Font("Segoe UI", 17.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonShowHeNap.ForeColor = SystemColors.ButtonFace;
             buttonShowHeNap.Image = Properties.Resources.book24;
-            buttonShowHeNap.Location = new Point(948, 3);
+            buttonShowHeNap.Location = new Point(892, 3);
             buttonShowHeNap.Name = "buttonShowHeNap";
-            buttonShowHeNap.Size = new Size(162, 53);
+            buttonShowHeNap.Size = new Size(218, 53);
             buttonShowHeNap.TabIndex = 8;
-            buttonShowHeNap.Text = "HỆ NẠP";
+            buttonShowHeNap.Text = "GIÀN NẠP";
             buttonShowHeNap.TextAlign = ContentAlignment.MiddleRight;
             buttonShowHeNap.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonShowHeNap.UseVisualStyleBackColor = false;
@@ -657,18 +657,30 @@
             buttonShowBangLoi.Dock = DockStyle.Fill;
             buttonShowBangLoi.FlatAppearance.BorderSize = 0;
             buttonShowBangLoi.FlatStyle = FlatStyle.Flat;
-            buttonShowBangLoi.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonShowBangLoi.Font = new Font("Segoe UI", 17.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonShowBangLoi.ForeColor = SystemColors.ButtonFace;
             buttonShowBangLoi.Image = Properties.Resources.icons8_medium_risk_30;
-            buttonShowBangLoi.Location = new Point(782, 3);
+            buttonShowBangLoi.Location = new Point(670, 3);
             buttonShowBangLoi.Name = "buttonShowBangLoi";
-            buttonShowBangLoi.Size = new Size(160, 53);
+            buttonShowBangLoi.Size = new Size(216, 53);
             buttonShowBangLoi.TabIndex = 7;
             buttonShowBangLoi.Text = "BẢNG LỖI";
             buttonShowBangLoi.TextAlign = ContentAlignment.MiddleRight;
             buttonShowBangLoi.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonShowBangLoi.UseVisualStyleBackColor = false;
             buttonShowBangLoi.Click += button57_Click_1;
+            // 
+            // listBoxError
+            // 
+            listBoxError.Dock = DockStyle.Fill;
+            listBoxError.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            listBoxError.ForeColor = Color.Red;
+            listBoxError.FormattingEnabled = true;
+            listBoxError.ItemHeight = 21;
+            listBoxError.Location = new Point(3, 3);
+            listBoxError.Name = "listBoxError";
+            listBoxError.Size = new Size(661, 53);
+            listBoxError.TabIndex = 9;
             // 
             // panelTrangThaiHeNap
             // 
@@ -699,7 +711,7 @@
             gridLayout2.SetParticipateInLayout(label27, true);
             label27.Size = new Size(222, 42);
             label27.TabIndex = 43;
-            label27.Text = "TRẠNG THÁI HỆ NẠP 1 :";
+            label27.Text = "TRẠNG THÁI GIÀN NẠP 1 :";
             label27.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSanSangNapHe1
@@ -769,7 +781,7 @@
             gridLayout2.SetParticipateInLayout(label22, true);
             label22.Size = new Size(222, 42);
             label22.TabIndex = 38;
-            label22.Text = "TRẠNG THÁI HỆ NẠP 2 :";
+            label22.Text = "TRẠNG THÁI GIÀN NẠP 2 :";
             label22.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSanSangNapHe2
@@ -1228,18 +1240,6 @@
             gridLayout2.ContainerControl = panelTrangThaiHeNap;
             gridLayout2.Rows = 2;
             // 
-            // listBoxError
-            // 
-            listBoxError.Dock = DockStyle.Fill;
-            listBoxError.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            listBoxError.ForeColor = Color.Red;
-            listBoxError.FormattingEnabled = true;
-            listBoxError.ItemHeight = 21;
-            listBoxError.Location = new Point(3, 3);
-            listBoxError.Name = "listBoxError";
-            listBoxError.Size = new Size(773, 53);
-            listBoxError.TabIndex = 9;
-            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1335,7 +1335,7 @@
         private TableLayoutPanel tableLayoutPanel5;
         private Button button4;
         private Panel panelDuLieu;
-        private Label label1TimeStart;
+        private Label labelTimeStart;
         private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout1;
         private Label SoLuongNapHe2;
         private Label label1LoaiKhi;

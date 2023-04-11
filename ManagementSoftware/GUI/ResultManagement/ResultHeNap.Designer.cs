@@ -30,38 +30,38 @@
         {
             components = new System.ComponentModel.Container();
             gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
+            panelThongTin = new Panel();
+            labelNguoiVanHanh = new Label();
+            labelLoaiKhi = new Label();
+            labelThoiGianBatDau = new Label();
+            labelThoiGianKetThuc = new Label();
+            labelApSuatTieuChuan = new Label();
+            labelSoLuongBinhNap = new Label();
+            labelTheTichCanNap = new Label();
+            labelTheTichTieuChuan = new Label();
+            labelHeSoTieuChuan = new Label();
+            labelThoiGianTrichMau = new Label();
             panel2 = new Panel();
             labelTitle = new Label();
-            panelThongTin = new Panel();
-            label9 = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label26 = new Label();
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
-            panelTheTichChart = new Panel();
             panelApSuatChart = new Panel();
+            panelTheTichChart = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
-            tableLayoutPanel3 = new TableLayoutPanel();
             dataGridView1 = new DataGridView();
-            buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            tableLayoutPanel3 = new TableLayoutPanel();
             buttonExcel = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            buttonPrint = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             ((System.ComponentModel.ISupportInitialize)gridLayout1).BeginInit();
-            panel2.SuspendLayout();
             panelThongTin.SuspendLayout();
+            panel2.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel3.SuspendLayout();
-            tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // gridLayout1
@@ -69,6 +69,183 @@
             gridLayout1.Columns = 1;
             gridLayout1.ContainerControl = panelThongTin;
             gridLayout1.Rows = 10;
+            // 
+            // panelThongTin
+            // 
+            panelThongTin.Controls.Add(labelNguoiVanHanh);
+            panelThongTin.Controls.Add(labelLoaiKhi);
+            panelThongTin.Controls.Add(labelThoiGianBatDau);
+            panelThongTin.Controls.Add(labelThoiGianKetThuc);
+            panelThongTin.Controls.Add(labelApSuatTieuChuan);
+            panelThongTin.Controls.Add(labelSoLuongBinhNap);
+            panelThongTin.Controls.Add(labelTheTichCanNap);
+            panelThongTin.Controls.Add(labelTheTichTieuChuan);
+            panelThongTin.Controls.Add(labelHeSoTieuChuan);
+            panelThongTin.Controls.Add(labelThoiGianTrichMau);
+            panelThongTin.Dock = DockStyle.Fill;
+            panelThongTin.Location = new Point(0, 69);
+            panelThongTin.Name = "panelThongTin";
+            panelThongTin.Size = new Size(316, 447);
+            panelThongTin.TabIndex = 1;
+            // 
+            // labelNguoiVanHanh
+            // 
+            labelNguoiVanHanh.BackColor = Color.DimGray;
+            labelNguoiVanHanh.BorderStyle = BorderStyle.FixedSingle;
+            labelNguoiVanHanh.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelNguoiVanHanh.ForeColor = SystemColors.ButtonHighlight;
+            labelNguoiVanHanh.Location = new Point(0, 4);
+            labelNguoiVanHanh.Margin = new Padding(0);
+            labelNguoiVanHanh.Name = "labelNguoiVanHanh";
+            labelNguoiVanHanh.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(labelNguoiVanHanh, true);
+            labelNguoiVanHanh.Size = new Size(316, 44);
+            labelNguoiVanHanh.TabIndex = 43;
+            labelNguoiVanHanh.Text = "Người vận hành : admin";
+            labelNguoiVanHanh.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelLoaiKhi
+            // 
+            labelLoaiKhi.BackColor = Color.DimGray;
+            labelLoaiKhi.BorderStyle = BorderStyle.FixedSingle;
+            labelLoaiKhi.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelLoaiKhi.ForeColor = SystemColors.ButtonHighlight;
+            labelLoaiKhi.Location = new Point(0, 48);
+            labelLoaiKhi.Margin = new Padding(0);
+            labelLoaiKhi.Name = "labelLoaiKhi";
+            labelLoaiKhi.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(labelLoaiKhi, true);
+            labelLoaiKhi.Size = new Size(316, 44);
+            labelLoaiKhi.TabIndex = 49;
+            labelLoaiKhi.Text = "Loại khí : Oxy";
+            labelLoaiKhi.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelThoiGianBatDau
+            // 
+            labelThoiGianBatDau.BackColor = Color.DimGray;
+            labelThoiGianBatDau.BorderStyle = BorderStyle.FixedSingle;
+            labelThoiGianBatDau.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelThoiGianBatDau.ForeColor = SystemColors.ButtonHighlight;
+            labelThoiGianBatDau.Location = new Point(0, 92);
+            labelThoiGianBatDau.Margin = new Padding(0);
+            labelThoiGianBatDau.Name = "labelThoiGianBatDau";
+            labelThoiGianBatDau.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(labelThoiGianBatDau, true);
+            labelThoiGianBatDau.Size = new Size(316, 44);
+            labelThoiGianBatDau.TabIndex = 48;
+            labelThoiGianBatDau.Text = "Thời gian bắt đầu : 13:00:00 21/03/2023";
+            labelThoiGianBatDau.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelThoiGianKetThuc
+            // 
+            labelThoiGianKetThuc.BackColor = Color.DimGray;
+            labelThoiGianKetThuc.BorderStyle = BorderStyle.FixedSingle;
+            labelThoiGianKetThuc.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelThoiGianKetThuc.ForeColor = SystemColors.ButtonHighlight;
+            labelThoiGianKetThuc.Location = new Point(0, 136);
+            labelThoiGianKetThuc.Margin = new Padding(0);
+            labelThoiGianKetThuc.Name = "labelThoiGianKetThuc";
+            labelThoiGianKetThuc.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(labelThoiGianKetThuc, true);
+            labelThoiGianKetThuc.Size = new Size(316, 44);
+            labelThoiGianKetThuc.TabIndex = 47;
+            labelThoiGianKetThuc.Text = "Thời gian kết thúc : 13:00:00 21/03/2023";
+            labelThoiGianKetThuc.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelApSuatTieuChuan
+            // 
+            labelApSuatTieuChuan.BackColor = Color.DimGray;
+            labelApSuatTieuChuan.BorderStyle = BorderStyle.FixedSingle;
+            labelApSuatTieuChuan.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelApSuatTieuChuan.ForeColor = SystemColors.ButtonHighlight;
+            labelApSuatTieuChuan.Location = new Point(0, 180);
+            labelApSuatTieuChuan.Margin = new Padding(0);
+            labelApSuatTieuChuan.Name = "labelApSuatTieuChuan";
+            labelApSuatTieuChuan.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(labelApSuatTieuChuan, true);
+            labelApSuatTieuChuan.Size = new Size(316, 44);
+            labelApSuatTieuChuan.TabIndex = 51;
+            labelApSuatTieuChuan.Text = "Áp suất tiêu chuẩn : 30 bar";
+            labelApSuatTieuChuan.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelSoLuongBinhNap
+            // 
+            labelSoLuongBinhNap.BackColor = Color.DimGray;
+            labelSoLuongBinhNap.BorderStyle = BorderStyle.FixedSingle;
+            labelSoLuongBinhNap.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSoLuongBinhNap.ForeColor = SystemColors.ButtonHighlight;
+            labelSoLuongBinhNap.Location = new Point(0, 224);
+            labelSoLuongBinhNap.Margin = new Padding(0);
+            labelSoLuongBinhNap.Name = "labelSoLuongBinhNap";
+            labelSoLuongBinhNap.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(labelSoLuongBinhNap, true);
+            labelSoLuongBinhNap.Size = new Size(316, 44);
+            labelSoLuongBinhNap.TabIndex = 50;
+            labelSoLuongBinhNap.Text = "Số lượng bình nạp : 100";
+            labelSoLuongBinhNap.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelTheTichCanNap
+            // 
+            labelTheTichCanNap.BackColor = Color.DimGray;
+            labelTheTichCanNap.BorderStyle = BorderStyle.FixedSingle;
+            labelTheTichCanNap.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTheTichCanNap.ForeColor = SystemColors.ButtonHighlight;
+            labelTheTichCanNap.Location = new Point(0, 268);
+            labelTheTichCanNap.Margin = new Padding(0);
+            labelTheTichCanNap.Name = "labelTheTichCanNap";
+            gridLayout1.SetParticipateInLayout(labelTheTichCanNap, true);
+            labelTheTichCanNap.Size = new Size(316, 44);
+            labelTheTichCanNap.TabIndex = 46;
+            labelTheTichCanNap.Text = "Thể tích cần nạp : 10L";
+            labelTheTichCanNap.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelTheTichTieuChuan
+            // 
+            labelTheTichTieuChuan.BackColor = Color.DimGray;
+            labelTheTichTieuChuan.BorderStyle = BorderStyle.FixedSingle;
+            labelTheTichTieuChuan.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTheTichTieuChuan.ForeColor = SystemColors.ButtonHighlight;
+            labelTheTichTieuChuan.Location = new Point(0, 312);
+            labelTheTichTieuChuan.Margin = new Padding(0);
+            labelTheTichTieuChuan.Name = "labelTheTichTieuChuan";
+            labelTheTichTieuChuan.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(labelTheTichTieuChuan, true);
+            labelTheTichTieuChuan.Size = new Size(316, 44);
+            labelTheTichTieuChuan.TabIndex = 45;
+            labelTheTichTieuChuan.Text = "Thể tích tiêu chuẩn : 20L";
+            labelTheTichTieuChuan.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelHeSoTieuChuan
+            // 
+            labelHeSoTieuChuan.BackColor = Color.DimGray;
+            labelHeSoTieuChuan.BorderStyle = BorderStyle.FixedSingle;
+            labelHeSoTieuChuan.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelHeSoTieuChuan.ForeColor = SystemColors.ButtonHighlight;
+            labelHeSoTieuChuan.Location = new Point(0, 356);
+            labelHeSoTieuChuan.Margin = new Padding(0);
+            labelHeSoTieuChuan.Name = "labelHeSoTieuChuan";
+            labelHeSoTieuChuan.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(labelHeSoTieuChuan, true);
+            labelHeSoTieuChuan.Size = new Size(316, 44);
+            labelHeSoTieuChuan.TabIndex = 44;
+            labelHeSoTieuChuan.Text = "Hệ số tiêu chuẩn : 0";
+            labelHeSoTieuChuan.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelThoiGianTrichMau
+            // 
+            labelThoiGianTrichMau.BackColor = Color.DimGray;
+            labelThoiGianTrichMau.BorderStyle = BorderStyle.FixedSingle;
+            labelThoiGianTrichMau.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelThoiGianTrichMau.ForeColor = SystemColors.ButtonHighlight;
+            labelThoiGianTrichMau.Location = new Point(0, 400);
+            labelThoiGianTrichMau.Margin = new Padding(0);
+            labelThoiGianTrichMau.Name = "labelThoiGianTrichMau";
+            labelThoiGianTrichMau.Padding = new Padding(0, 1, 0, 1);
+            gridLayout1.SetParticipateInLayout(labelThoiGianTrichMau, true);
+            labelThoiGianTrichMau.Size = new Size(316, 44);
+            labelThoiGianTrichMau.TabIndex = 52;
+            labelThoiGianTrichMau.Text = "Thời gian trích mẫu : 100s";
+            labelThoiGianTrichMau.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -96,183 +273,6 @@
             labelTitle.Text = "Thông tin dữ liệu (Result ID-94)";
             labelTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panelThongTin
-            // 
-            panelThongTin.Controls.Add(label26);
-            panelThongTin.Controls.Add(label6);
-            panelThongTin.Controls.Add(label5);
-            panelThongTin.Controls.Add(label4);
-            panelThongTin.Controls.Add(label8);
-            panelThongTin.Controls.Add(label7);
-            panelThongTin.Controls.Add(label3);
-            panelThongTin.Controls.Add(label2);
-            panelThongTin.Controls.Add(label1);
-            panelThongTin.Controls.Add(label9);
-            panelThongTin.Dock = DockStyle.Fill;
-            panelThongTin.Location = new Point(0, 69);
-            panelThongTin.Name = "panelThongTin";
-            panelThongTin.Size = new Size(316, 447);
-            panelThongTin.TabIndex = 1;
-            // 
-            // label9
-            // 
-            label9.BackColor = Color.DimGray;
-            label9.BorderStyle = BorderStyle.FixedSingle;
-            label9.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.ButtonHighlight;
-            label9.Location = new Point(0, 400);
-            label9.Margin = new Padding(0);
-            label9.Name = "label9";
-            label9.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label9, true);
-            label9.Size = new Size(316, 44);
-            label9.TabIndex = 52;
-            label9.Text = "Thời gian trích mẫu : 100s";
-            label9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            label1.BackColor = Color.DimGray;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(0, 356);
-            label1.Margin = new Padding(0);
-            label1.Name = "label1";
-            label1.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label1, true);
-            label1.Size = new Size(316, 44);
-            label1.TabIndex = 44;
-            label1.Text = "Hệ số tiêu chuẩn : 0";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            label2.BackColor = Color.DimGray;
-            label2.BorderStyle = BorderStyle.FixedSingle;
-            label2.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(0, 312);
-            label2.Margin = new Padding(0);
-            label2.Name = "label2";
-            label2.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label2, true);
-            label2.Size = new Size(316, 44);
-            label2.TabIndex = 45;
-            label2.Text = "Thể tích tiêu chuẩn : 20L";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            label3.BackColor = Color.DimGray;
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(0, 268);
-            label3.Margin = new Padding(0);
-            label3.Name = "label3";
-            gridLayout1.SetParticipateInLayout(label3, true);
-            label3.Size = new Size(316, 44);
-            label3.TabIndex = 46;
-            label3.Text = "Thể tích cần nạp : 10L";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            label7.BackColor = Color.DimGray;
-            label7.BorderStyle = BorderStyle.FixedSingle;
-            label7.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(0, 224);
-            label7.Margin = new Padding(0);
-            label7.Name = "label7";
-            label7.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label7, true);
-            label7.Size = new Size(316, 44);
-            label7.TabIndex = 50;
-            label7.Text = "Số lượng bình nạp : 100";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            label8.BackColor = Color.DimGray;
-            label8.BorderStyle = BorderStyle.FixedSingle;
-            label8.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = SystemColors.ButtonHighlight;
-            label8.Location = new Point(0, 180);
-            label8.Margin = new Padding(0);
-            label8.Name = "label8";
-            label8.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label8, true);
-            label8.Size = new Size(316, 44);
-            label8.TabIndex = 51;
-            label8.Text = "Áp suất tiêu chuẩn : 30 bar";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            label4.BackColor = Color.DimGray;
-            label4.BorderStyle = BorderStyle.FixedSingle;
-            label4.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(0, 136);
-            label4.Margin = new Padding(0);
-            label4.Name = "label4";
-            label4.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label4, true);
-            label4.Size = new Size(316, 44);
-            label4.TabIndex = 47;
-            label4.Text = "Thời gian kết thúc : 13:00:00 21/03/2023";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            label5.BackColor = Color.DimGray;
-            label5.BorderStyle = BorderStyle.FixedSingle;
-            label5.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(0, 92);
-            label5.Margin = new Padding(0);
-            label5.Name = "label5";
-            label5.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label5, true);
-            label5.Size = new Size(316, 44);
-            label5.TabIndex = 48;
-            label5.Text = "Thời gian bắt đầu : 13:00:00 21/03/2023";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            label6.BackColor = Color.DimGray;
-            label6.BorderStyle = BorderStyle.FixedSingle;
-            label6.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(0, 48);
-            label6.Margin = new Padding(0);
-            label6.Name = "label6";
-            label6.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label6, true);
-            label6.Size = new Size(316, 44);
-            label6.TabIndex = 49;
-            label6.Text = "Loại khí : Oxy";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label26
-            // 
-            label26.BackColor = Color.DimGray;
-            label26.BorderStyle = BorderStyle.FixedSingle;
-            label26.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label26.ForeColor = SystemColors.ButtonHighlight;
-            label26.Location = new Point(0, 4);
-            label26.Margin = new Padding(0);
-            label26.Name = "label26";
-            label26.Padding = new Padding(0, 1, 0, 1);
-            gridLayout1.SetParticipateInLayout(label26, true);
-            label26.Size = new Size(316, 44);
-            label26.TabIndex = 43;
-            label26.Text = "Người vận hành : admin";
-            label26.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // panel1
             // 
             panel1.Controls.Add(tableLayoutPanel2);
@@ -298,14 +298,6 @@
             tableLayoutPanel2.Size = new Size(315, 516);
             tableLayoutPanel2.TabIndex = 0;
             // 
-            // panelTheTichChart
-            // 
-            panelTheTichChart.Dock = DockStyle.Fill;
-            panelTheTichChart.Location = new Point(3, 261);
-            panelTheTichChart.Name = "panelTheTichChart";
-            panelTheTichChart.Size = new Size(309, 252);
-            panelTheTichChart.TabIndex = 1;
-            // 
             // panelApSuatChart
             // 
             panelApSuatChart.Dock = DockStyle.Fill;
@@ -313,6 +305,14 @@
             panelApSuatChart.Name = "panelApSuatChart";
             panelApSuatChart.Size = new Size(309, 252);
             panelApSuatChart.TabIndex = 0;
+            // 
+            // panelTheTichChart
+            // 
+            panelTheTichChart.Dock = DockStyle.Fill;
+            panelTheTichChart.Location = new Point(3, 261);
+            panelTheTichChart.Name = "panelTheTichChart";
+            panelTheTichChart.Size = new Size(309, 252);
+            panelTheTichChart.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -341,6 +341,16 @@
             panel3.Size = new Size(422, 516);
             panel3.TabIndex = 2;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(422, 450);
+            dataGridView1.TabIndex = 1;
+            // 
             // tableLayoutPanel3
             // 
             tableLayoutPanel3.ColumnCount = 2;
@@ -356,41 +366,6 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.Size = new Size(422, 66);
             tableLayoutPanel3.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(422, 450);
-            dataGridView1.TabIndex = 1;
-            // 
-            // buttonPrint
-            // 
-            buttonPrint.BackColor = SystemColors.ActiveCaption;
-            buttonPrint.BackgroundColor = SystemColors.ActiveCaption;
-            buttonPrint.BorderColor = Color.PaleVioletRed;
-            buttonPrint.BorderRadius = 3;
-            buttonPrint.BorderSize = 0;
-            buttonPrint.Cursor = Cursors.Hand;
-            buttonPrint.Dock = DockStyle.Fill;
-            buttonPrint.FlatStyle = FlatStyle.Flat;
-            buttonPrint.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonPrint.ForeColor = Color.Black;
-            buttonPrint.Image = Properties.Resources.iconfinder_Save_278762;
-            buttonPrint.ImageAlign = ContentAlignment.MiddleRight;
-            buttonPrint.Location = new Point(4, 3);
-            buttonPrint.Margin = new Padding(4, 3, 4, 3);
-            buttonPrint.Name = "buttonPrint";
-            buttonPrint.Size = new Size(203, 60);
-            buttonPrint.TabIndex = 18;
-            buttonPrint.Text = "In báo cáo";
-            buttonPrint.TextAlign = ContentAlignment.MiddleLeft;
-            buttonPrint.TextColor = Color.Black;
-            buttonPrint.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonPrint.UseVisualStyleBackColor = false;
             // 
             // buttonExcel
             // 
@@ -417,6 +392,31 @@
             buttonExcel.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonExcel.UseVisualStyleBackColor = false;
             // 
+            // buttonPrint
+            // 
+            buttonPrint.BackColor = SystemColors.ActiveCaption;
+            buttonPrint.BackgroundColor = SystemColors.ActiveCaption;
+            buttonPrint.BorderColor = Color.PaleVioletRed;
+            buttonPrint.BorderRadius = 3;
+            buttonPrint.BorderSize = 0;
+            buttonPrint.Cursor = Cursors.Hand;
+            buttonPrint.Dock = DockStyle.Fill;
+            buttonPrint.FlatStyle = FlatStyle.Flat;
+            buttonPrint.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonPrint.ForeColor = Color.Black;
+            buttonPrint.Image = Properties.Resources.iconfinder_Save_278762;
+            buttonPrint.ImageAlign = ContentAlignment.MiddleRight;
+            buttonPrint.Location = new Point(4, 3);
+            buttonPrint.Margin = new Padding(4, 3, 4, 3);
+            buttonPrint.Name = "buttonPrint";
+            buttonPrint.Size = new Size(203, 60);
+            buttonPrint.TabIndex = 18;
+            buttonPrint.Text = "In báo cáo";
+            buttonPrint.TextAlign = ContentAlignment.MiddleLeft;
+            buttonPrint.TextColor = Color.Black;
+            buttonPrint.TextImageRelation = TextImageRelation.ImageBeforeText;
+            buttonPrint.UseVisualStyleBackColor = false;
+            // 
             // ResultHeNap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -425,33 +425,33 @@
             Controls.Add(tableLayoutPanel1);
             Name = "ResultHeNap";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ResultHeNap";
+            Text = "Giàn Nạp";
             Load += ResultHeNap_Load;
             ((System.ComponentModel.ISupportInitialize)gridLayout1).EndInit();
-            panel2.ResumeLayout(false);
             panelThongTin.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
-            tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            tableLayoutPanel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
         private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout1;
         private Panel panelThongTin;
-        private Label label26;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label8;
-        private Label label7;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Label label9;
+        private Label labelNguoiVanHanh;
+        private Label labelLoaiKhi;
+        private Label labelThoiGianBatDau;
+        private Label labelThoiGianKetThuc;
+        private Label labelApSuatTieuChuan;
+        private Label labelSoLuongBinhNap;
+        private Label labelTheTichCanNap;
+        private Label labelTheTichTieuChuan;
+        private Label labelHeSoTieuChuan;
+        private Label labelThoiGianTrichMau;
         private Panel panel2;
         private Label labelTitle;
         private Panel panel1;

@@ -56,6 +56,7 @@ namespace ManagementSoftware
         //Loại khí
         public const string Oxy = "Oxy";
         public const string Nitor = "Nitor";
+        public static string TenHeNap = "";
 
 
 
@@ -77,8 +78,8 @@ namespace ManagementSoftware
 
 
         //Name Machine
-        public const string HeNap1 = "HỆ NẠP 1";
-        public const string HeNap2 = "HỆ NẠP 2";
+        public const string GianNap1 = "GIÀN NẠP 1";
+        public const string GianNap2 = "GIÀN NẠP 2";
 
     }
 }

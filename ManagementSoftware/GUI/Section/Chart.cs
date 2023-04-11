@@ -92,7 +92,10 @@ namespace ManagementSoftware.GUI.Section
                     {
                         foreach (DataDoThi l in item.Value)
                         {
-                            item.Key.Points.Add(l.date, l.value);
+                            if (l.value != null)
+                            {
+                                item.Key.Points.Add(l.date, l.value ?? 0);
+                            }
                         }
                         chartControl1.Series.Add(item.Key);
                     }

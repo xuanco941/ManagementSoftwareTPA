@@ -352,6 +352,7 @@ namespace ManagementSoftware.GUI
             // 
             TimeEnd.Dock = DockStyle.Fill;
             TimeEnd.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            TimeEnd.Format = "HH:mm:ss dd-MM-yyyy";
             TimeEnd.Location = new Point(0, 0);
             TimeEnd.Name = "TimeEnd";
             TimeEnd.Size = new Size(215, 22);

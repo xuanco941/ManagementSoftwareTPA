@@ -13,10 +13,10 @@ namespace ManagementSoftware.Models
     {
         [Key]
         public int MachineID { get; set; }
-        public double ApSuatTong { get; set; }
-        public double ApSuat { get; set; }
-        public double TheTich { get; set; }
-        public string NameMachine { get; set; } = "HỆ NẠP";
+        public double? ApSuatTong { get; set; }
+        public double? ApSuat { get; set; }
+        public double? TheTich { get; set; }
+        public string NameMachine { get; set; } = "";
         public DateTime CreateAt { get; set; }
         public int ResultID { get; set; }
         public Result Result { get; set; }

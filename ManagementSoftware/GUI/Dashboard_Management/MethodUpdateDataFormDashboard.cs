@@ -28,12 +28,21 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         Label labelDungNapHe1;
         Label labelDungNapHe2;
 
+
+        Label labelNguoiVanHanh;
+        Label labelTimeStart;
+        Label labelSoLuongNapGian1;
+        Label labelSoLuongNapGian2;
+        Label labelLoaiKhi;
+
+
+
         ListBox listBoxError;
 
-        public MethodUpdateDataFormDashboard(Dashboard dashboard, Label label1ApSuatHeNap1, Label labelApSuatHeNap2, Label labelTheTichHeNap1, Label labelTheTichHeNap2, Label labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelXaKhiHe1, Label labelXaKhiHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError)
+        public MethodUpdateDataFormDashboard(Dashboard dashboard, Label label1ApSuatHeNap1, Label labelApSuatHeNap2, Label labelTheTichHeNap1, Label labelTheTichHeNap2, Label labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelXaKhiHe1, Label labelXaKhiHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError,Label labelNguoiVanHanh, Label labelTimeStart, Label labelSoLuongNapGian1, Label labelSoLuongNapGian2, Label labelLoaiKhi)
         {
             plc = new PLCBeckhOff();
-            timerUpdateGUILabel1 = new TimerUpdateGUI(300, 700, UpdateData);
+            timerUpdateGUILabel1 = new TimerUpdateGUI(500, 900, UpdateData);
 
             this.dashboard = dashboard;
             this.label1ApSuatHeNap1 = label1ApSuatHeNap1;
@@ -49,6 +58,15 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             this.labelXaKhiHe2 = labelXaKhiHe2;
             this.labelDungNapHe1 = labelDungNapHe1;
             this.labelDungNapHe2 = labelDungNapHe2;
+
+
+            this.labelNguoiVanHanh = labelNguoiVanHanh;
+            this.labelTimeStart = labelTimeStart;
+            this.labelSoLuongNapGian1 = labelSoLuongNapGian1;
+            this.labelSoLuongNapGian2 = labelSoLuongNapGian2;
+            this.labelLoaiKhi = labelLoaiKhi;
+
+
 
             this.listBoxError = listBoxError;
         }
@@ -158,6 +176,9 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             data.loiQuaTrinhNapKhiHe1 = loiQuaTrinhNapKhiHe1;
             data.loiQuaTrinhNapKhiHe2 = loiQuaTrinhNapKhiHe2;
 
+
+
+
             //method update gui
             UpdateGUI(data);
 
@@ -178,44 +199,81 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                     labelTheTichHeNap1.Text = data.theTichHe1 != null ? string.Format("{0:0.00}", data.theTichHe1) : Common.ERR;
                     labelTheTichHeNap2.Text = data.theTichHe2 != null ? string.Format("{0:0.00}", data.theTichHe2) : Common.ERR;
 
-                    labelSanSangNapHe1.BackColor = data.sanSangNapHe1 != null && data.sanSangNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-                    labelSanSangNapHe2.BackColor = data.sanSangNapHe2 != null && data.sanSangNapHe2 == true ? Color.LimeGreen : Color.DimGray;
-                    labelDangNapHe1.BackColor = data.batDauNapHe1 != null && data.batDauNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-                    labelDangNapHe2.BackColor = data.batDauNapHe2 != null && data.batDauNapHe2 == true ? Color.LimeGreen : Color.DimGray;
-                    labelXaKhiHe1.BackColor = data.xaKhiHe1 != null && data.xaKhiHe1 == true ? Color.LimeGreen : Color.DimGray;
-                    labelXaKhiHe2.BackColor = data.xaKhiHe2 != null && data.xaKhiHe2 == true ? Color.LimeGreen : Color.DimGray;
-                    labelDungNapHe1.BackColor = data.ketThucNapHe1 != null && data.ketThucNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-                    labelDungNapHe2.BackColor = data.ketThucNapHe2 != null && data.ketThucNapHe2 == true ? Color.LimeGreen : Color.DimGray;
 
-                    //err
-                    if(this.listBoxError.Items.Count > 0)
+
+
+
+                    if (Common.ResultCurrent != null)
                     {
+
+                        labelNguoiVanHanh.Text = "Người vận hành : " + Common.ResultCurrent.Username;
+                        labelTimeStart.Text = "Thời gian bắt đầu : " + Common.ResultCurrent.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
+                        labelSoLuongNapGian1.Text = "Số lượng nạp giàn 1 : " + Common.ResultCurrent.SoLuongBinhCanNapHe1.ToString();
+                        labelSoLuongNapGian2.Text = "Số lượng nạp giàn 1 : " + Common.ResultCurrent.SoLuongBinhCanNapHe2.ToString();
+                        labelLoaiKhi.Text = "Loại khí : " + Common.ResultCurrent.LoaiKhi;
+
+
+                        labelSanSangNapHe1.BackColor = data.sanSangNapHe1 != null && data.sanSangNapHe1 == true ? Color.LimeGreen : Color.DimGray;
+                        labelSanSangNapHe2.BackColor = data.sanSangNapHe2 != null && data.sanSangNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+                        labelDangNapHe1.BackColor = data.batDauNapHe1 != null && data.batDauNapHe1 == true ? Color.LimeGreen : Color.DimGray;
+                        labelDangNapHe2.BackColor = data.batDauNapHe2 != null && data.batDauNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+                        labelXaKhiHe1.BackColor = data.xaKhiHe1 != null && data.xaKhiHe1 == true ? Color.LimeGreen : Color.DimGray;
+                        labelXaKhiHe2.BackColor = data.xaKhiHe2 != null && data.xaKhiHe2 == true ? Color.LimeGreen : Color.DimGray;
+                        labelDungNapHe1.BackColor = data.ketThucNapHe1 != null && data.ketThucNapHe1 == true ? Color.LimeGreen : Color.DimGray;
+                        labelDungNapHe2.BackColor = data.ketThucNapHe2 != null && data.ketThucNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+
+                        //err
+                        if (this.listBoxError.Items.Count > 0)
+                        {
+                            this.listBoxError.Items.Clear();
+                        }
+                        if (data.canhBaoLoiDongCoOHeHoaHoi == true)
+                        {
+                            this.listBoxError.Items.Add("Cảnh báo lỗi động cơ ở hệ hóa hơi.");
+                        }
+                        if (data.canhBaoChuaMoHeHoaHoi == true)
+                        {
+                            this.listBoxError.Items.Add("Cảnh báo chưa mở hệ hóa hơi.");
+                        }
+                        if (data.loiQuaTrinhXaKhiHe1 == true)
+                        {
+                            this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 1.");
+                        }
+                        if (data.loiQuaTrinhXaKhiHe2 == true)
+                        {
+                            this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 2.");
+                        }
+                        if (data.loiQuaTrinhNapKhiHe1 == true)
+                        {
+                            this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 1.");
+                        }
+                        if (data.loiQuaTrinhNapKhiHe2 == true)
+                        {
+                            this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 2.");
+                        }
+                    }
+                    else
+                    {
+                        labelSanSangNapHe1.BackColor = Color.DimGray;
+                        labelSanSangNapHe2.BackColor = Color.DimGray;
+                        labelDangNapHe1.BackColor = Color.DimGray;
+                        labelDangNapHe2.BackColor = Color.DimGray;
+                        labelXaKhiHe1.BackColor = Color.DimGray;
+                        labelXaKhiHe2.BackColor = Color.DimGray;
+                        labelDungNapHe1.BackColor = Color.DimGray;
+                        labelDungNapHe2.BackColor = Color.DimGray;
+
+
+                        labelNguoiVanHanh.Text = "Người vận hành : Chưa có";
+                        labelTimeStart.Text = "Thời gian bắt đầu : Chưa có";
+                        labelSoLuongNapGian1.Text = "Số lượng nạp giàn 1 : Chưa có";
+                        labelSoLuongNapGian2.Text = "Số lượng nạp giàn 1 : Chưa có";
+                        labelLoaiKhi.Text = "Loại khí : Chưa có";
+
+
                         this.listBoxError.Items.Clear();
                     }
-                    if (data.canhBaoLoiDongCoOHeHoaHoi == true)
-                    {
-                        this.listBoxError.Items.Add("Cảnh báo lỗi động cơ ở hệ hóa hơi.");
-                    }
-                    if (data.canhBaoChuaMoHeHoaHoi == true)
-                    {
-                        this.listBoxError.Items.Add("Cảnh báo chưa mở hệ hóa hơi.");
-                    }
-                    if (data.loiQuaTrinhXaKhiHe1 == true)
-                    {
-                        this.listBoxError.Items.Add("Lỗi quá trình xả khí hệ 1.");
-                    }
-                    if (data.loiQuaTrinhXaKhiHe2 == true)
-                    {
-                        this.listBoxError.Items.Add("Lỗi quá trình xả khí hệ 2.");
-                    }
-                    if (data.loiQuaTrinhNapKhiHe1 == true)
-                    {
-                        this.listBoxError.Items.Add("Lỗi quá trình nạp khí hệ 1.");
-                    }
-                    if (data.loiQuaTrinhNapKhiHe2 == true)
-                    {
-                        this.listBoxError.Items.Add("Lỗi quá trình nạp khí hệ 2.");
-                    }
+
                 });
             }
 

@@ -83,6 +83,14 @@ namespace ManagementSoftware
 
                 bool? isLogIn = plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Dang_nhap_thanh_cong);
 
+                if(isLogIn != null && isLogIn == false)
+                {
+                    Common.UserCurrent = null;
+                    ChangeTextTitleFormMain();
+                    return;
+                }
+
+
                 if (isLogIn != null && isLogIn == false && Common.UserCurrent == null)
                 {
                     string? taiKhoan = plc.ReadAVariableString(AddressPLC.DATA_PC_Tai_Khoan);
@@ -135,8 +143,14 @@ namespace ManagementSoftware
 
                         }
                     }
+                    else
+                    {
+                        Common.UserCurrent = null;
+                        ChangeTextTitleFormMain();
+                    }
 
                 }
+                // có userCurrent rồi thì thôi
             }
 
 

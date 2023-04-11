@@ -63,6 +63,11 @@ namespace ManagementSoftware
                 alwaysCheckConnection.ConnectPLC();
                 alwaysCheckConnection.StartTimer();
 
+
+                AlwaysCheckResult alwaysCheckResult = new AlwaysCheckResult();
+                alwaysCheckResult.ConnectPLC();
+                alwaysCheckResult.StartTimer();
+
                 Application.Run(main);
 
                    
