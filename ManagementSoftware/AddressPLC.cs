@@ -73,6 +73,9 @@ namespace ManagementSoftware
         //Trạng thái các tín hiệu vào, ra
 
 
+        //trạng thái ống đầu
+        public const string DATA_PC_PC_RunSYS = "DATA_PC.PC_RunSYS";
+
         //Trạng thái đường ống nạp hệ 1
         public const string DATA_PC_PC_ong_H1 = "DATA_PC.PC_ong_H1";
         //Trạng thái đường ống nạp hệ 2

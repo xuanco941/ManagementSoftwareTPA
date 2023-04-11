@@ -201,6 +201,17 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
 
 
+                    //quy trình
+
+                    labelSanSangNapHe1.BackColor = data.sanSangNapHe1 != null && data.sanSangNapHe1 == true ? Color.LimeGreen : Color.DimGray;
+                    labelSanSangNapHe2.BackColor = data.sanSangNapHe2 != null && data.sanSangNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+                    labelDangNapHe1.BackColor = data.batDauNapHe1 != null && data.batDauNapHe1 == true ? Color.LimeGreen : Color.DimGray;
+                    labelDangNapHe2.BackColor = data.batDauNapHe2 != null && data.batDauNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+                    labelXaKhiHe1.BackColor = data.xaKhiHe1 != null && data.xaKhiHe1 == true ? Color.LimeGreen : Color.DimGray;
+                    labelXaKhiHe2.BackColor = data.xaKhiHe2 != null && data.xaKhiHe2 == true ? Color.LimeGreen : Color.DimGray;
+                    labelDungNapHe1.BackColor = data.ketThucNapHe1 != null && data.ketThucNapHe1 == true ? Color.LimeGreen : Color.DimGray;
+                    labelDungNapHe2.BackColor = data.ketThucNapHe2 != null && data.ketThucNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+
 
 
                     if (Common.ResultCurrent != null)
@@ -213,14 +224,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                         labelLoaiKhi.Text = "Loại khí : " + Common.ResultCurrent.LoaiKhi;
 
 
-                        labelSanSangNapHe1.BackColor = data.sanSangNapHe1 != null && data.sanSangNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-                        labelSanSangNapHe2.BackColor = data.sanSangNapHe2 != null && data.sanSangNapHe2 == true ? Color.LimeGreen : Color.DimGray;
-                        labelDangNapHe1.BackColor = data.batDauNapHe1 != null && data.batDauNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-                        labelDangNapHe2.BackColor = data.batDauNapHe2 != null && data.batDauNapHe2 == true ? Color.LimeGreen : Color.DimGray;
-                        labelXaKhiHe1.BackColor = data.xaKhiHe1 != null && data.xaKhiHe1 == true ? Color.LimeGreen : Color.DimGray;
-                        labelXaKhiHe2.BackColor = data.xaKhiHe2 != null && data.xaKhiHe2 == true ? Color.LimeGreen : Color.DimGray;
-                        labelDungNapHe1.BackColor = data.ketThucNapHe1 != null && data.ketThucNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-                        labelDungNapHe2.BackColor = data.ketThucNapHe2 != null && data.ketThucNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+
 
                         //err
                         if (this.listBoxError.Items.Count > 0)
@@ -254,15 +258,14 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                     }
                     else
                     {
-                        labelSanSangNapHe1.BackColor = Color.DimGray;
-                        labelSanSangNapHe2.BackColor = Color.DimGray;
-                        labelDangNapHe1.BackColor = Color.DimGray;
-                        labelDangNapHe2.BackColor = Color.DimGray;
-                        labelXaKhiHe1.BackColor = Color.DimGray;
-                        labelXaKhiHe2.BackColor = Color.DimGray;
-                        labelDungNapHe1.BackColor = Color.DimGray;
-                        labelDungNapHe2.BackColor = Color.DimGray;
-
+                        //labelSanSangNapHe1.BackColor = Color.DimGray;
+                        //labelSanSangNapHe2.BackColor = Color.DimGray;
+                        //labelDangNapHe1.BackColor = Color.DimGray;
+                        //labelDangNapHe2.BackColor = Color.DimGray;
+                        //labelXaKhiHe1.BackColor = Color.DimGray;
+                        //labelXaKhiHe2.BackColor = Color.DimGray;
+                        //labelDungNapHe1.BackColor = Color.DimGray;
+                        //labelDungNapHe2.BackColor = Color.DimGray;
 
                         labelNguoiVanHanh.Text = "Người vận hành : Chưa có";
                         labelTimeStart.Text = "Thời gian bắt đầu : Chưa có";

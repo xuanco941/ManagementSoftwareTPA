@@ -24,7 +24,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         {
             plc = new PLCBeckhOff();
             dalMachine = new DALMachine();
-            timerUpdateGUILabel1 = new TimerUpdateGUI(300, 120000, UpdateData);
+            timerUpdateGUILabel1 = new TimerUpdateGUI(1000, 300000, UpdateData);
 
             this.dashboard = dashboard;
             this.chartApSuat = chartApSuat;
@@ -57,10 +57,10 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             // Long running operation
 
             ChartSeries seriesApSuatTong = new ChartSeries("ÁP SUẤT TỔNG", ChartSeriesType.Line);
-            ChartSeries seriesApSuatHe1 = new ChartSeries("ÁP SUẤT HỆ 1", ChartSeriesType.Line);
-            ChartSeries seriesApSuatHe2 = new ChartSeries("ÁP SUẤT HỆ 2", ChartSeriesType.Line);
-            ChartSeries seriesTheTich1 = new ChartSeries("THỂ TÍCH HỆ 1", ChartSeriesType.Line);
-            ChartSeries seriesTheTich2 = new ChartSeries("THỂ TÍCH HỆ 2", ChartSeriesType.Line);
+            ChartSeries seriesApSuatHe1 = new ChartSeries("ÁP SUẤT GIÀN 1", ChartSeriesType.Line);
+            ChartSeries seriesApSuatHe2 = new ChartSeries("ÁP SUẤT GIÀN 2", ChartSeriesType.Line);
+            ChartSeries seriesTheTich1 = new ChartSeries("THỂ TÍCH GIÀN 1", ChartSeriesType.Line);
+            ChartSeries seriesTheTich2 = new ChartSeries("THỂ TÍCH GIÀN 2", ChartSeriesType.Line);
 
             seriesApSuatTong.Style.Border.Width = 3;
             seriesApSuatTong.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.SeaGreen);

@@ -48,6 +48,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
                 try
                 {
                     new DALUser().Add(user);
+                    new DALActivity().Add(new Activity { Title = "Tạo mới tài khoản", Description = $"Username : {user.Username}, Fullname : {user.FullName}" , Username = Common.USERSESSION?.Username ?? "Hệ thống", UserID = Common.USERSESSION?.UserID ?? 0});
                     changeData?.Invoke($"Thêm thành công tài khoản {username}.", FormAlert.enmType.Success);
                     this.Close();
                 }

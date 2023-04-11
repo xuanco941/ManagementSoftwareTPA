@@ -13,6 +13,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         PLCBeckhOff plc;
         TheoDoiHeNap formTheoDoiHeNap;
 
+        PictureBox DauOng;
         PictureBox ong1;
         PictureBox ong2;
         PictureBox RunNap;
@@ -29,6 +30,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         PictureBox Motor3;
         PictureBox BangTai4;
         PictureBox Motor4;
+
 
         PictureBox CB1;
         PictureBox CB2;
@@ -54,7 +56,9 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         string DATA_PCGT_AS_Tong;
         string DATA_PCGT_AS_ST_H1;
 
-        public MethodUpdateStatusTheoDoiHeNap(TheoDoiHeNap theoDoiHeNap, TextBox ApSuatTong, TextBox ASHeNap ,PictureBox ong1,
+        string DATA_PC_PC_RunSYS;
+
+        public MethodUpdateStatusTheoDoiHeNap(TheoDoiHeNap theoDoiHeNap, PictureBox DauOng, TextBox ApSuatTong, TextBox ASHeNap ,PictureBox ong1,
         PictureBox ong2,
         PictureBox RunNap,
         PictureBox VanCap,
@@ -78,6 +82,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         PictureBox CB8,
         PictureBox CB9,
         PictureBox CB10,
+        string DATA_PC_PC_RunSYS,
         string DATA_PCPC_ong_H1, string DATA_PCST_Run_Nap_H1, string DATA_PCVan_Cap_H1, string DATA_PCVan_Xa_H1,
         string DATA_PCST_Xa_Khi_H1, string DATA_PCMotor_BT1_Vao, string DATA_PCMotor_BT1_Nap1, string DATA_PCMotor_BT1_Nap2,
         string DATA_PCMotor_BT1_Ra, string DATA_PCCB_PL_VT_Cap1, string DATA_PCCB_PL_qua_Vtcap1, string DATA_PCCB_PL_cuoi_Btvao1, string DATA_PCCB_RunBT_Nap1_1,
@@ -142,8 +147,9 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             this.DATA_PCGT_AS_Tong = DATA_PCGT_AS_Tong;
             this.DATA_PCGT_AS_ST_H1 = DATA_PCGT_AS_ST_H1;
 
-
-
+            //dau ong
+            this.DauOng = DauOng;
+            this.DATA_PC_PC_RunSYS = DATA_PC_PC_RunSYS;
 
         }
 
@@ -194,6 +200,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             bool? DATA_PCCB_PL_den_VTRa1_BOOL = false;
             bool? DATA_PCCB_CB_PL_VT_Lay1_BOOL = false;
 
+            bool? DATA_PC_PC_RunSYS_BOOL = false;
 
             DATA_PCPC_ong_H1_BOOL = await Task.Run(() => plc.ReadAVariableNumber<bool>(this.DATA_PCPC_ong_H1));
             DATA_PCST_Run_Nap_H1_BOOL = await Task.Run(() => plc.ReadAVariableNumber<bool>(this.DATA_PCST_Run_Nap_H1));
@@ -219,6 +226,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             float? DATA_PCGT_AS_ST_H1_REAL = await Task.Run(() => plc.ReadAVariableNumber<float>(this.DATA_PCGT_AS_ST_H1));
             float? DATA_PCGT_AS_Tong_REAL = await Task.Run(() => plc.ReadAVariableNumber<float>(this.DATA_PCGT_AS_Tong));
 
+            DATA_PC_PC_RunSYS_BOOL = await Task.Run(() => plc.ReadAVariableNumber<bool>(this.DATA_PC_PC_RunSYS));
+
 
             //method update gui
             UpdateGUI(DATA_PCPC_ong_H1_BOOL,
@@ -240,7 +249,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         DATA_PCCB_StopBT_Nap1_2_BOOL,
         DATA_PCCB_co_PL_Ra1_BOOL,
          DATA_PCCB_PL_den_VTRa1_BOOL,
-         DATA_PCCB_CB_PL_VT_Lay1_BOOL, DATA_PCGT_AS_Tong_REAL, DATA_PCGT_AS_ST_H1_REAL);
+         DATA_PCCB_CB_PL_VT_Lay1_BOOL, DATA_PCGT_AS_Tong_REAL, DATA_PCGT_AS_ST_H1_REAL, DATA_PC_PC_RunSYS_BOOL);
 
         }
 
@@ -264,7 +273,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         bool? DATA_PCCB_StopBT_Nap1_2_BOOL,
         bool? DATA_PCCB_co_PL_Ra1_BOOL,
         bool? DATA_PCCB_PL_den_VTRa1_BOOL,
-        bool? DATA_PCCB_CB_PL_VT_Lay1_BOOL, float? DATA_PCGT_AS_Tong_REAL, float? DATA_PCGT_AS_ST_H1_REAL)
+        bool? DATA_PCCB_CB_PL_VT_Lay1_BOOL, float? DATA_PCGT_AS_Tong_REAL, float? DATA_PCGT_AS_ST_H1_REAL, bool? DATA_PC_PC_RunSYS_BOOL)
         {
             //update gui
 
@@ -308,6 +317,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                     //update text apSuat
                     this.ASTong.Text = DATA_PCGT_AS_Tong_REAL != null ? String.Format("{0:0.00}", DATA_PCGT_AS_Tong_REAL) : "";
                     this.ASHeNap.Text = DATA_PCGT_AS_ST_H1_REAL != null ? String.Format("{0:0.00}", DATA_PCGT_AS_ST_H1_REAL) : "";
+
+                    this.DauOng.Image = (DATA_PC_PC_RunSYS_BOOL != null && DATA_PC_PC_RunSYS_BOOL == true) ? Resources.DauOngXanh : Resources.DauOngXam;
 
                 });
             }

@@ -70,6 +70,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
                 try
                 {
                     new DALUser().Update(user);
+                    new DALActivity().Add(new Activity { Title = "Cập nhật tài khoản", Description = $"Cập nhật thành công tài khoản {username}.", Username = Common.USERSESSION?.Username ?? "Hệ thống", UserID = Common.USERSESSION?.UserID ?? 0 });
                     changeData?.Invoke($"Cập nhật thành công tài khoản {username}.", FormAlert.enmType.Success);
                     this.Close();
                 }
@@ -102,7 +103,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
                     {
                         int idUser = listAllUser.Where(a => a.Username == username).First().UserID;
                         new DALUser().Delete(idUser);
-
+                        new DALActivity().Add(new Activity { Title = "Cập nhật tài khoản", Description = $"Xóa thành công tài khoản {username}.", Username = Common.USERSESSION?.Username ?? "Hệ thống", UserID = Common.USERSESSION?.UserID ?? 0 });
                         changeData?.Invoke($"Xóa thành công tài khoản {username}.", FormAlert.enmType.Success);
 
                     }
