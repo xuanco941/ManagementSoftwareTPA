@@ -30,9 +30,15 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             string email = textBoxtEmail.Texts;
             string sdt = textBoxtSDT.Texts;
 
+            if(username.Length  > 50 || password.Length > 50)
+            {
+                MessageBox.Show("Tối đa cho trường tài khoản và mật khẩu là 50 ký tự.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (String.IsNullOrEmpty(fullname) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password) || String.IsNullOrEmpty(groupName))
             {
-                MessageBox.Show("Vui lòng điền đủ thông tin thiết yếu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng điền đủ thông tin thiết yếu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

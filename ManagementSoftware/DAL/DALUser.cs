@@ -13,7 +13,7 @@ public class DALUser
         {
             try
             {
-                User? user = dbContext.Users.Include(u => u.Group).FirstOrDefault(u => u.Username == username.Trim() && u.Password == password.Trim());
+                User? user = dbContext.Users.Include(u => u.Group).FirstOrDefault(u => u.Username.ToLower() == username.Trim().ToLower() && u.Password.ToLower() == password.Trim().ToLower());
                 return user;
             }
             catch

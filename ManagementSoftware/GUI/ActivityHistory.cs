@@ -50,7 +50,7 @@ namespace ManagementSoftware.GUI
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Tiêu đề", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Mô tả", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Ngày", SortMode = DataGridViewColumnSortMode.NotSortable });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Tài khoản", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Tài khoản thao tác", SortMode = DataGridViewColumnSortMode.NotSortable });
 
 
 
