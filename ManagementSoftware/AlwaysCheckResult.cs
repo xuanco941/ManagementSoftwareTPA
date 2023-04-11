@@ -49,11 +49,10 @@ namespace ManagementSoftware
             plc.Disconnect();
         }
 
-        int statusGian1 = 0;
-        int statusGian2 = 0;
 
 
-
+        bool statusGian1Run = false;
+        bool statusGian2Run = false;
         private async void Callback(Object state)
         {
             Stopwatch watch = new Stopwatch();
@@ -64,92 +63,68 @@ namespace ManagementSoftware
             // Long running operation
             //trạng thái quy trinh
 
-
-            bool? sanSangNapHe1 = false;
-            bool? sanSangNapHe2 = false;
-            bool? ketThucNapHe1 = false;
-            bool? ketThucNapHe2 = false;
-            bool? xaKhiHe1 = false;
-            bool? xaKhiHe2 = false;
-            bool? batDauNapHe1 = false;
-            bool? batDauNapHe2 = false;
-
-
-
-
-
-            if (Common.UserCurrent != null)
+            if (plc.CheckState())
             {
-                //sanSangNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H1));
-                //sanSangNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H2));
-                ketThucNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H1));
-                ketThucNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H2));
-                xaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H1));
-                xaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H2));
-                batDauNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H1));
-                batDauNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H2));
 
-                if ((sanSangNapHe1 != null && sanSangNapHe1 == true))
+                bool? EnableNapHe1 = false;
+                bool? EnableNapHe2 = false;
+                bool? batDauNapHe1 = false;
+                bool? batDauNapHe2 = false;
+                bool? xaKhiHe1 = false;
+                bool? xaKhiHe2 = false;
+
+
+
+                if (Common.UserCurrent != null)
                 {
-                    statusGian1 = 1;
+                    EnableNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H1));
+                    EnableNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H2));
+
+                    batDauNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H1));
+                    batDauNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H2));
+
+                    xaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H1));
+                    xaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H2));
+
+
+
+
+                    if (EnableNapHe1 != null && EnableNapHe1 == true && ((batDauNapHe1 != null && batDauNapHe1 == true) || (xaKhiHe1 != null && xaKhiHe1 == true)))
+                    {
+                        statusGian1Run = true;
+                    }
+                    else
+                    {
+                        statusGian1Run = false;
+                    }
+
+                    if (EnableNapHe2 != null && EnableNapHe2 == true && ((batDauNapHe2 != null && batDauNapHe2 == true) || (xaKhiHe2 != null && xaKhiHe2 == true)))
+                    {
+                        statusGian2Run = true;
+                    }
+                    else
+                    {
+                        statusGian2Run = false;
+                    }
+
+
+                    // action
+
+                    await Run();
+
+
+
+
                 }
-                else if ((batDauNapHe1 != null && batDauNapHe1 == true))
-                {
-                    statusGian1 = 2;
-                }
-                else if ((xaKhiHe1 != null && xaKhiHe1 == true))
-                {
-                    statusGian1 = 3;
-                }
-                else if ((ketThucNapHe1 != null && ketThucNapHe1 == true))
-                {
-                    statusGian1 = 4;
-                }
+                //đăng xuất thì mất luôn dữ liệu mẻ đang nạp
                 else
                 {
-                    statusGian1 = 0;
+                    Common.ResultCurrent = null;
                 }
-
-
-                if ((sanSangNapHe2 != null && sanSangNapHe2 == true))
-                {
-                    statusGian2 = 1;
-                }
-                else if ((batDauNapHe2 != null && batDauNapHe2 == true))
-                {
-                    statusGian2 = 2;
-                }
-                else if ((xaKhiHe2 != null && xaKhiHe2 == true))
-                {
-                    statusGian2 = 3;
-                }
-                else if ((ketThucNapHe2 != null && ketThucNapHe2 == true))
-                {
-                    statusGian2 = 4;
-                }
-                else
-                {
-                    statusGian2 = 0;
-                }
-
-                // action
-
-                if (plc.CheckState())
-                {
-                    ActionSTT4();
-
-                    await ActionSTT2();
-                }
-
-
-
-
             }
-            //đăng xuất thì mất luôn dữ liệu mẻ đang nạp
-            else
-            {
-                Common.ResultCurrent = null;
-            }
+
+
+            watch.Stop();
 
             if (timer != null)
             {
@@ -159,9 +134,16 @@ namespace ManagementSoftware
 
 
 
-        async Task ActionSTT2()
+        async Task Run()
         {
-            if ((statusGian1 == 2 || statusGian2 == 2) && Common.ResultCurrent == null)
+            if ((statusGian1Run == true || statusGian2Run == true) == false && Common.ResultCurrent != null)
+            {
+                Common.ResultCurrent.Status = true;
+                Common.ResultCurrent.TimeEnd = DateTime.Now;
+                dalResult.Update(Common.ResultCurrent);
+                Common.ResultCurrent = null;
+            }
+            else if ((statusGian1Run == true || statusGian2Run == true) == true && Common.ResultCurrent == null)
             {
                 float? theTichCanNap = 0;
                 float? thetichTieuChuan = 0;
@@ -198,14 +180,13 @@ namespace ManagementSoftware
                     UserID = Common.UserCurrent.UserWorkingID,
                 });
             }
-
-            if (Common.ResultCurrent != null)
+            else if ((statusGian1Run == true || statusGian2Run == true) == true && Common.ResultCurrent != null)
             {
                 float? apSuatTong = 0;
                 apSuatTong = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_Tong));
 
 
-                if (statusGian1 == 2 || statusGian1 == 3)
+                if (statusGian1Run == true)
                 {
                     float? apSuatHe1 = 0;
                     float? theTichHe1 = 0;
@@ -215,10 +196,10 @@ namespace ManagementSoftware
                     theTichHe1 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_V_ST_H1));
 
 
-                    dalMachine.Add(new Machine() { NameMachine = Common.GianNap1, ApSuat = apSuatHe1, TheTich = theTichHe1, ApSuatTong = apSuatTong });
+                    dalMachine.Add(new Machine() { NameMachine = Common.GianNap1, ApSuat = apSuatHe1, TheTich = theTichHe1, ApSuatTong = apSuatTong, ResultID = Common.ResultCurrent.ResultID });
                 }
 
-                if (statusGian1 == 2 || statusGian1 == 3)
+                if (statusGian2Run == true)
                 {
                     float? apSuatHe2 = 0;
                     float? theTichHe2 = 0;
@@ -228,66 +209,59 @@ namespace ManagementSoftware
                     theTichHe2 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_V_ST_H2));
 
 
-                    dalMachine.Add(new Machine() { NameMachine = Common.GianNap2, ApSuat = apSuatHe2, TheTich = theTichHe2, ApSuatTong = apSuatTong });
+                    dalMachine.Add(new Machine() { NameMachine = Common.GianNap2, ApSuat = apSuatHe2, TheTich = theTichHe2, ApSuatTong = apSuatTong, ResultID = Common.ResultCurrent.ResultID });
                 }
 
 
+                // err
+                bool? canhBaoLoiDongCoOHeHoaHoi = false;
+                bool? canhBaoChuaMoHeHoaHoi = false;
+                bool? loiQuaTrinhXaKhiHe1 = false;
+                bool? loiQuaTrinhXaKhiHe2 = false;
+                bool? loiQuaTrinhNapKhiHe1 = false;
+                bool? loiQuaTrinhNapKhiHe2 = false;
 
+                canhBaoLoiDongCoOHeHoaHoi = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_VFP_Trip));
+                canhBaoChuaMoHeHoaHoi = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_OFF_Hoa_Hoi));
+                loiQuaTrinhXaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_XA_KHI_H1));
+                loiQuaTrinhXaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_XA_KHI_H2));
+                loiQuaTrinhNapKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H1));
+                loiQuaTrinhNapKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H2));
 
-
-                if (statusGian1 == 2 || statusGian1 == 3 || statusGian2 == 2 || statusGian2 == 3)
+                if (canhBaoLoiDongCoOHeHoaHoi != null && canhBaoLoiDongCoOHeHoaHoi == true)
                 {
-                    bool? canhBaoLoiDongCoOHeHoaHoi = false;
-                    bool? canhBaoChuaMoHeHoaHoi = false;
-                    bool? loiQuaTrinhXaKhiHe1 = false;
-                    bool? loiQuaTrinhXaKhiHe2 = false;
-                    bool? loiQuaTrinhNapKhiHe1 = false;
-                    bool? loiQuaTrinhNapKhiHe2 = false;
-
-                    canhBaoLoiDongCoOHeHoaHoi = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_VFP_Trip));
-                    canhBaoChuaMoHeHoaHoi = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_OFF_Hoa_Hoi));
-                    loiQuaTrinhXaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_XA_KHI_H1));
-                    loiQuaTrinhXaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_XA_KHI_H2));
-                    loiQuaTrinhNapKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H1));
-                    loiQuaTrinhNapKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H2));
-
-                    if (canhBaoLoiDongCoOHeHoaHoi != null && canhBaoLoiDongCoOHeHoaHoi == true)
-                    {
-                        dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Cảnh báo", Description = "Cảnh báo lỗi động cơ ở hệ hóa hơi." });
-                    }
-                    if (canhBaoChuaMoHeHoaHoi != null && canhBaoChuaMoHeHoaHoi == true)
-                    {
-                        dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Cảnh báo", Description = "Cảnh báo chưa mở hệ hóa hơi." });
-                    }
-                    if (loiQuaTrinhXaKhiHe1 != null && loiQuaTrinhXaKhiHe1 == true)
-                    {
-                        dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Lỗi quá trình xả khí giàn 1." });
-                    }
-                    if (loiQuaTrinhXaKhiHe2 != null && loiQuaTrinhXaKhiHe2 == true)
-                    {
-                        dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Lỗi quá trình xả khí giàn 2." });
-                    }
-                    if (loiQuaTrinhNapKhiHe1 != null && loiQuaTrinhNapKhiHe1 == true)
-                    {
-                        dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Lỗi quá trình nạp khí giàn 1." });
-                    }
-                    if (loiQuaTrinhNapKhiHe2 != null && loiQuaTrinhNapKhiHe2 == true)
-                    {
-                        dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Lỗi quá trình nạp khí giàn 2." });
-                    }
-
+                    dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Cảnh báo", Description = "Cảnh báo lỗi động cơ ở hệ hóa hơi." });
                 }
+                if (canhBaoChuaMoHeHoaHoi != null && canhBaoChuaMoHeHoaHoi == true)
+                {
+                    dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Cảnh báo", Description = "Cảnh báo chưa mở hệ hóa hơi." });
+                }
+                if (loiQuaTrinhXaKhiHe1 != null && loiQuaTrinhXaKhiHe1 == true)
+                {
+                    dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Lỗi quá trình xả khí giàn 1." });
+                }
+                if (loiQuaTrinhXaKhiHe2 != null && loiQuaTrinhXaKhiHe2 == true)
+                {
+                    dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Lỗi quá trình xả khí giàn 2." });
+                }
+                if (loiQuaTrinhNapKhiHe1 != null && loiQuaTrinhNapKhiHe1 == true)
+                {
+                    dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Lỗi quá trình nạp khí giàn 1." });
+                }
+                if (loiQuaTrinhNapKhiHe2 != null && loiQuaTrinhNapKhiHe2 == true)
+                {
+                    dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Lỗi quá trình nạp khí giàn 2." });
+                }
+
+
+            }
+            else if ((statusGian1Run == true || statusGian2Run == true) == false && Common.ResultCurrent == null)
+            {
+                //nothing
             }
 
-        }
-        void ActionSTT4()
-        {
-            if (statusGian1 != 2 && statusGian1 != 3 && statusGian2 != 2 && statusGian2 != 3 && Common.ResultCurrent != null)
-            {
-                Common.ResultCurrent.TimeEnd = DateTime.Now;
-                dalResult.Update(Common.ResultCurrent);
-                Common.ResultCurrent = null;
-            }
+
+
         }
     }
 }

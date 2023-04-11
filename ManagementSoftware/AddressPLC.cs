@@ -27,6 +27,12 @@ namespace ManagementSoftware
         public const string DATA_PC_Enable_H2 = "DATA_PC.Enable_H2";
 
 
+        //trạng thái pallet (0 đưa pallet vào, 1 đang nạp, 2 đưa ra); (int)
+        public const string DATA_PC_PALLET1 = "DATA_PC.Trang_Thai_GN_1";
+        public const string DATA_PC_PALLET2 = "DATA_PC.Trang_Thai_GN_2";
+
+
+
         //enable (đèn)
         //Trạng thái hệ 1 đang chạy  (Bool)
         public const string DATA_PC_D_Run_1 = "DATA_PC.D_Run_1";

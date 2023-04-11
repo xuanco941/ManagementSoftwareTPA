@@ -55,6 +55,7 @@
             CB10 = new CusPictureBox();
             textBoxASTong = new TextBox();
             textBoxASHeNap = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)VanCap).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DauOng).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ong1).BeginInit();
@@ -330,6 +331,16 @@
             textBoxASHeNap.TabIndex = 37;
             textBoxASHeNap.TextAlign = HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(24, 216);
+            label1.Name = "label1";
+            label1.Size = new Size(143, 295);
+            label1.TabIndex = 38;
+            label1.Text = "QUY TRÌNH CÔNG NGHỆ GIÀN NẠP 1";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // TheoDoiHeNap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -337,6 +348,7 @@
             BackgroundImage = Properties.Resources.EtekXam;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1121, 616);
+            Controls.Add(label1);
             Controls.Add(textBoxASHeNap);
             Controls.Add(textBoxASTong);
             Controls.Add(CB10);
@@ -429,5 +441,6 @@
         private CusPictureBox CB10;
         private TextBox textBoxASTong;
         private TextBox textBoxASHeNap;
+        private Label label1;
     }
 }

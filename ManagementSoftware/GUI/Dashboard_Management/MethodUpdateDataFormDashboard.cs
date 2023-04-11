@@ -39,7 +39,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
         ListBox listBoxError;
 
-        public MethodUpdateDataFormDashboard(Dashboard dashboard, Label label1ApSuatHeNap1, Label labelApSuatHeNap2, Label labelTheTichHeNap1, Label labelTheTichHeNap2, Label labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelXaKhiHe1, Label labelXaKhiHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError,Label labelNguoiVanHanh, Label labelTimeStart, Label labelSoLuongNapGian1, Label labelSoLuongNapGian2, Label labelLoaiKhi)
+        public MethodUpdateDataFormDashboard(Dashboard dashboard, Label label1ApSuatHeNap1, Label labelApSuatHeNap2, Label labelTheTichHeNap1, Label labelTheTichHeNap2, Label labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelXaKhiHe1, Label labelXaKhiHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError, Label labelNguoiVanHanh, Label labelTimeStart, Label labelSoLuongNapGian1, Label labelSoLuongNapGian2, Label labelLoaiKhi)
         {
             plc = new PLCBeckhOff();
             timerUpdateGUILabel1 = new TimerUpdateGUI(500, 900, UpdateData);
@@ -214,49 +214,49 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
 
 
-                    if (Common.ResultCurrent != null)
+                    labelNguoiVanHanh.Text = "Người vận hành : " + Common.ResultCurrent.Username;
+                    labelTimeStart.Text = "Thời gian bắt đầu : " + Common.ResultCurrent.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
+                    labelSoLuongNapGian1.Text = "Số lượng nạp giàn 1 : " + Common.ResultCurrent.SoLuongBinhCanNapHe1.ToString();
+                    labelSoLuongNapGian2.Text = "Số lượng nạp giàn 1 : " + Common.ResultCurrent.SoLuongBinhCanNapHe2.ToString();
+                    labelLoaiKhi.Text = "Loại khí : " + Common.ResultCurrent.LoaiKhi;
+
+
+
+
+                    //err
+                    if (this.listBoxError.Items.Count > 0)
                     {
-
-                        labelNguoiVanHanh.Text = "Người vận hành : " + Common.ResultCurrent.Username;
-                        labelTimeStart.Text = "Thời gian bắt đầu : " + Common.ResultCurrent.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
-                        labelSoLuongNapGian1.Text = "Số lượng nạp giàn 1 : " + Common.ResultCurrent.SoLuongBinhCanNapHe1.ToString();
-                        labelSoLuongNapGian2.Text = "Số lượng nạp giàn 1 : " + Common.ResultCurrent.SoLuongBinhCanNapHe2.ToString();
-                        labelLoaiKhi.Text = "Loại khí : " + Common.ResultCurrent.LoaiKhi;
-
-
-
-
-                        //err
-                        if (this.listBoxError.Items.Count > 0)
-                        {
-                            this.listBoxError.Items.Clear();
-                        }
-                        if (data.canhBaoLoiDongCoOHeHoaHoi == true)
-                        {
-                            this.listBoxError.Items.Add("Cảnh báo lỗi động cơ ở hệ hóa hơi.");
-                        }
-                        if (data.canhBaoChuaMoHeHoaHoi == true)
-                        {
-                            this.listBoxError.Items.Add("Cảnh báo chưa mở hệ hóa hơi.");
-                        }
-                        if (data.loiQuaTrinhXaKhiHe1 == true)
-                        {
-                            this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 1.");
-                        }
-                        if (data.loiQuaTrinhXaKhiHe2 == true)
-                        {
-                            this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 2.");
-                        }
-                        if (data.loiQuaTrinhNapKhiHe1 == true)
-                        {
-                            this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 1.");
-                        }
-                        if (data.loiQuaTrinhNapKhiHe2 == true)
-                        {
-                            this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 2.");
-                        }
+                        this.listBoxError.Items.Clear();
                     }
-                    else
+                    if (data.canhBaoLoiDongCoOHeHoaHoi == true)
+                    {
+                        this.listBoxError.Items.Add("Cảnh báo lỗi động cơ ở hệ hóa hơi.");
+                    }
+                    if (data.canhBaoChuaMoHeHoaHoi == true)
+                    {
+                        this.listBoxError.Items.Add("Cảnh báo chưa mở hệ hóa hơi.");
+                    }
+                    if (data.loiQuaTrinhXaKhiHe1 == true)
+                    {
+                        this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 1.");
+                    }
+                    if (data.loiQuaTrinhXaKhiHe2 == true)
+                    {
+                        this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 2.");
+                    }
+                    if (data.loiQuaTrinhNapKhiHe1 == true)
+                    {
+                        this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 1.");
+                    }
+                    if (data.loiQuaTrinhNapKhiHe2 == true)
+                    {
+                        this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 2.");
+                    }
+
+
+
+
+                    if (Common.ResultCurrent == null)
                     {
                         //labelSanSangNapHe1.BackColor = Color.DimGray;
                         //labelSanSangNapHe2.BackColor = Color.DimGray;
@@ -274,7 +274,6 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                         labelLoaiKhi.Text = "Loại khí : Chưa có";
 
 
-                        this.listBoxError.Items.Clear();
                     }
 
                 });

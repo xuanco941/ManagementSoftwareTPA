@@ -725,7 +725,7 @@
             gridLayout2.SetParticipateInLayout(labelSanSangNapHe1, true);
             labelSanSangNapHe1.Size = new Size(222, 42);
             labelSanSangNapHe1.TabIndex = 42;
-            labelSanSangNapHe1.Text = "SẴN SÀNG NẠP";
+            labelSanSangNapHe1.Text = "ENABLE";
             labelSanSangNapHe1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelDangNapHe1
@@ -767,7 +767,7 @@
             gridLayout2.SetParticipateInLayout(labelDungNapHe1, true);
             labelDungNapHe1.Size = new Size(222, 42);
             labelDungNapHe1.TabIndex = 39;
-            labelDungNapHe1.Text = "DỪNG NẠP";
+            labelDungNapHe1.Text = "KẾT THÚC";
             labelDungNapHe1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label22
@@ -795,7 +795,7 @@
             gridLayout2.SetParticipateInLayout(labelSanSangNapHe2, true);
             labelSanSangNapHe2.Size = new Size(222, 42);
             labelSanSangNapHe2.TabIndex = 37;
-            labelSanSangNapHe2.Text = "SẴN SÀNG NẠP";
+            labelSanSangNapHe2.Text = "ENABLE";
             labelSanSangNapHe2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelDangNapHe2
@@ -837,7 +837,7 @@
             gridLayout2.SetParticipateInLayout(labelDungNapHe2, true);
             labelDungNapHe2.Size = new Size(222, 42);
             labelDungNapHe2.TabIndex = 34;
-            labelDungNapHe2.Text = "DỪNG NẠP";
+            labelDungNapHe2.Text = "KẾT THÚC";
             labelDungNapHe2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tabPage2

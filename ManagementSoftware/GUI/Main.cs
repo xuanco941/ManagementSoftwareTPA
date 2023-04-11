@@ -170,8 +170,6 @@ namespace ManagementSoftware.GUI
             }
 
             Common.USERSESSION = null;
-            Common.ResultCurrent = null;
-            Common.UserCurrent = null;
 
             Application.Restart();            
         }
@@ -230,8 +228,6 @@ namespace ManagementSoftware.GUI
             //new MethodCommonGUI().CloseFormInPanel(panelContent);
 
             Common.USERSESSION = null;
-            Common.ResultCurrent = null;
-            Common.UserCurrent = null;
 
             Application.ExitThread();
 
