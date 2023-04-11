@@ -145,6 +145,12 @@ namespace ManagementSoftware
 
 
             }
+            //đăng xuất thì mất luôn dữ liệu mẻ đang nạp
+            else
+            {
+                Common.ResultCurrent = null;
+            }
+
             if (timer != null)
             {
                 timer.Change(Math.Max(0, 600000 - watch.ElapsedMilliseconds), Timeout.Infinite);

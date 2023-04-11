@@ -76,22 +76,20 @@ namespace ManagementSoftware
             // Long running operation
 
 
-
             if (plc.CheckState() == true)
             {
                 plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, true);
 
                 bool? isLogIn = plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Dang_nhap_thanh_cong);
 
-                if(isLogIn != null && isLogIn == false)
+                //đăng nhập thành công, đã có usercurrent trên hệ thống
+                if (isLogIn != null && isLogIn == true && Common.UserCurrent != null)
                 {
-                    Common.UserCurrent = null;
-                    ChangeTextTitleFormMain();
-                    return;
+                    dalUserWorking.UpdateEndAt(Common.UserCurrent.UserWorkingID);
                 }
 
-
-                if (isLogIn != null && isLogIn == false && Common.UserCurrent == null)
+                //chưa đăng nhập, chưa có usercurrent trên hệ thống
+                else if (isLogIn != null && isLogIn == false && Common.UserCurrent == null)
                 {
                     string? taiKhoan = plc.ReadAVariableString(AddressPLC.DATA_PC_Tai_Khoan);
                     string? matKhau = plc.ReadAVariableString(AddressPLC.DATA_PC_Mat_khau);
@@ -111,34 +109,25 @@ namespace ManagementSoftware
                         //trả kết quả về plc
                         if (user != null)
                         {
-                            if (Common.UserCurrent == null)
+
+                            UserWorking userWorking = new UserWorking() { Username = user.Username, Fullname = user.FullName };
+                            UserWorking? userWorkingAdded = dalUserWorking.Add(userWorking);
+                            if (userWorkingAdded != null)
                             {
-                                UserWorking userWorking = new UserWorking() { Username = user.Username, Fullname = user.FullName };
-                                UserWorking? userWorkingAdded = dalUserWorking.Add(userWorking);
-                                if (userWorkingAdded != null)
-                                {
-                                    Common.UserCurrent = userWorkingAdded;
-                                    plc.WriteAVariableNumber(AddressPLC.DATA_PC_Dang_nhap_thanh_cong, true);
-                                    ChangeTextTitleFormMain();
-                                }
-                                else
-                                {
-                                    Common.UserCurrent = null;
-                                    plc.WriteAVariableNumber(AddressPLC.DATA_PC_Dang_nhap_thanh_cong, false);
-                                    ChangeTextTitleFormMain();
-                                }
+                                Common.UserCurrent = userWorkingAdded;
+                                plc.WriteAVariableNumber(AddressPLC.DATA_PC_Dang_nhap_thanh_cong, true);
+                                ChangeTextTitleFormMain();
                             }
                             else
                             {
-                                //update thời gian hoạt động
-                                dalUserWorking.UpdateEndAt(Common.UserCurrent.UserWorkingID);
+                                Common.UserCurrent = null;
+                                ChangeTextTitleFormMain();
                             }
-                            // có userCurrent rồi thì thôi
+
                         }
                         else
                         {
                             Common.UserCurrent = null;
-                            plc.WriteAVariableNumber(AddressPLC.DATA_PC_Dang_nhap_thanh_cong, false);
                             ChangeTextTitleFormMain();
 
                         }
@@ -150,8 +139,14 @@ namespace ManagementSoftware
                     }
 
                 }
-                // có userCurrent rồi thì thôi
+                else
+                {
+                    Common.UserCurrent = null;
+                    ChangeTextTitleFormMain();
+                }
+
             }
+
 
 
             if (timer != null)
@@ -159,5 +154,6 @@ namespace ManagementSoftware
                 timer.Change(Math.Max(0, 1000 - watch.ElapsedMilliseconds), Timeout.Infinite);
             }
         }
+
     }
 }

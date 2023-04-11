@@ -110,6 +110,19 @@ namespace ManagementSoftware.GUI.ResultManagement
 
         private void ResultHeNap_Load(object sender, EventArgs e)
         {
+            //
+            labelNguoiVanHanh.Text = "Người vận hành : " + result.Username;
+            labelLoaiKhi.Text = "Loại khí : " + result.LoaiKhi;
+            labelThoiGianBatDau.Text = "";
+
+
+
+
+
+
+
+
+
             MethodCommonGUI commonGUI = new MethodCommonGUI();
 
 
