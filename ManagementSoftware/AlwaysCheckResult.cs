@@ -134,10 +134,14 @@ namespace ManagementSoftware
 
                 // action
 
+                if (plc.CheckState())
+                {
+                    ActionSTT4();
 
-                ActionSTT4();
+                    await ActionSTT2();
+                }
 
-                await ActionSTT2();
+
 
 
             }
@@ -241,7 +245,7 @@ namespace ManagementSoftware
                     loiQuaTrinhNapKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H1));
                     loiQuaTrinhNapKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H2));
 
-                    if(canhBaoLoiDongCoOHeHoaHoi != null && canhBaoLoiDongCoOHeHoaHoi == true)
+                    if (canhBaoLoiDongCoOHeHoaHoi != null && canhBaoLoiDongCoOHeHoaHoi == true)
                     {
                         dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Cảnh báo", Description = "Cảnh báo lỗi động cơ ở hệ hóa hơi." });
                     }

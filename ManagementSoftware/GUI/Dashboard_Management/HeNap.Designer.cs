@@ -53,7 +53,7 @@
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(1428, 851);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "Hệ Nạp 1";
+            tabPage1.Text = "Giàn Nạp 1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -63,7 +63,7 @@
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(1428, 851);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Hệ Nạp 2";
+            tabPage2.Text = "Giàn Nạp 2";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // HeNap
@@ -76,7 +76,7 @@
             MinimizeBox = false;
             Name = "HeNap";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "HeNap";
+            Text = "Giàn Nạp";
             FormClosing += HeNap_FormClosing;
             Load += HeNap_Load;
             tabControl1.ResumeLayout(false);

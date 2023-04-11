@@ -61,12 +61,6 @@
     <Compile Update="GUI\ResultManagement\FormData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\ResultManagement\FormInfoPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\ResultManagement\ResultError.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="GUI\ResultManagement\ResultHeNap.cs">
       <SubType>Form</SubType>
     </Compile>

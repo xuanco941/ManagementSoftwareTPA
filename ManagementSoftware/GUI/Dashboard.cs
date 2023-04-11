@@ -102,7 +102,7 @@ namespace ManagementSoftware.GUI
             }
             else
             {
-                MessageBox.Show("Hiện tại không trong chu trình nạp.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hiện tại đang không trong chu trình nạp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
