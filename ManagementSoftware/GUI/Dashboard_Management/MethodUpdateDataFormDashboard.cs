@@ -264,7 +264,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                         labelNguoiVanHanh.Text = "Người vận hành : " + Common.ResultCurrent.Username;
                         labelTimeStart.Text = "Thời gian bắt đầu : " + Common.ResultCurrent.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
                         labelSoLuongNapGian1.Text = "Số lượng nạp giàn 1 : " + Common.ResultCurrent.SoLuongBinhCanNapHe1.ToString();
-                        labelSoLuongNapGian2.Text = "Số lượng nạp giàn 1 : " + Common.ResultCurrent.SoLuongBinhCanNapHe2.ToString();
+                        labelSoLuongNapGian2.Text = "Số lượng nạp giàn 2 : " + Common.ResultCurrent.SoLuongBinhCanNapHe2.ToString();
                         labelLoaiKhi.Text = "Loại khí : " + Common.ResultCurrent.LoaiKhi;
                     }
                     else
@@ -281,7 +281,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                         labelNguoiVanHanh.Text = "Người vận hành : Chưa có";
                         labelTimeStart.Text = "Thời gian bắt đầu : Chưa có";
                         labelSoLuongNapGian1.Text = "Số lượng nạp giàn 1 : Chưa có";
-                        labelSoLuongNapGian2.Text = "Số lượng nạp giàn 1 : Chưa có";
+                        labelSoLuongNapGian2.Text = "Số lượng nạp giàn 2 : Chưa có";
                         labelLoaiKhi.Text = "Loại khí : Chưa có";
 
                     }
