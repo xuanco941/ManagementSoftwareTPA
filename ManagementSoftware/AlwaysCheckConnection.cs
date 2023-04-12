@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ManagementSoftware
 {
@@ -99,7 +100,7 @@ namespace ManagementSoftware
                         User? user;
                         if (Common.listAllUser != null && Common.listAllUser.Count > 0)
                         {
-                            user = Common.listAllUser.FirstOrDefault(u => u.Username == taiKhoan && u.Password == matKhau);
+                            user = Common.listAllUser.FirstOrDefault(u => u.Username.ToLower() == taiKhoan.ToLower() && u.Password.ToLower() == matKhau.ToLower());
                         }
                         else
                         {
@@ -151,7 +152,7 @@ namespace ManagementSoftware
 
             if (timer != null)
             {
-                timer.Change(Math.Max(0, 800 - watch.ElapsedMilliseconds), Timeout.Infinite);
+                timer.Change(Math.Max(0, 900 - watch.ElapsedMilliseconds), Timeout.Infinite);
             }
         }
 

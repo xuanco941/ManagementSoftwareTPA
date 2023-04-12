@@ -13,6 +13,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TwinCAT.PlcOpen;
 
 namespace ManagementSoftware.GUI.ResultManagement
 {
@@ -32,6 +33,8 @@ namespace ManagementSoftware.GUI.ResultManagement
         List<DataDoThi> dataDoThiAS2 = new List<DataDoThi>();
         List<DataDoThi> dataDoThiTT2 = new List<DataDoThi>();
 
+        List<Machine> listDataMachine = new List<Machine>();
+
         void GetData()
         {
             dataDoThiASTong1.Clear();
@@ -43,10 +46,9 @@ namespace ManagementSoftware.GUI.ResultManagement
 
 
 
+            listDataMachine = dalMachine.GetAllMachinesByResultID(result.ResultID);
 
-            List<Machine> listData = dalMachine.GetAllMachinesByResultID(result.ResultID);
-
-            foreach (var item in listData)
+            foreach (var item in listDataMachine)
             {
                 if (item.NameMachine == Common.GianNap1)
                 {
@@ -124,6 +126,42 @@ namespace ManagementSoftware.GUI.ResultManagement
 
 
 
+        void LoadDGV()
+        {
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "STT" });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "TÊN GIÀN", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ÁP SUẤT TỔNG", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ÁP SUẤT", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "THỂ TÍCH", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "THỜI ĐIỂM", SortMode = DataGridViewColumnSortMode.NotSortable });
+
+
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 15, FontStyle.Bold);
+
+            //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+
+            dataGridView1.RowTemplate.Height = 50;
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dataGridView1.DefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Regular);
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
+
+            //dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+
+        }
+
+
 
 
 
@@ -132,6 +170,8 @@ namespace ManagementSoftware.GUI.ResultManagement
         public ResultHeNap(Result result)
         {
             InitializeComponent();
+
+            LoadDGV();
 
             this.result = result;
 
@@ -145,13 +185,53 @@ namespace ManagementSoftware.GUI.ResultManagement
         }
 
 
+        void LoadFormThongKe()
+        {
+            int i = 1;
+
+            foreach (var item in this.listDataMachine)
+            {
+                int rowId = dataGridView1.Rows.Add();
+                DataGridViewRow row = dataGridView1.Rows[rowId];
+
+                row.Cells[0].Value = i;
+
+                row.Cells[1].Value = item.NameMachine;
+                row.Cells[2].Value = string.Format("{0:0.00}", item.ApSuatTong);
+                row.Cells[3].Value = string.Format("{0:0.00}", item.ApSuat);
+                row.Cells[4].Value = string.Format("{0:0.00}", item.TheTich);
+                row.Cells[5].Value = item.CreateAt.ToString("HH:mm:ss dd/MM/yyyy");
+
+                if (i % 2 == 0)
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightSeaGreen;
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.YellowGreen;
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                }
+
+                i++;
+            }
+        }
+
         private void ResultHeNap_Load(object sender, EventArgs e)
         {
             //
+            labelTitle.Text = $"Thông tin cài đặt (Result ID-{Common.RESULT + result.ResultID})";
             labelNguoiVanHanh.Text = "Người vận hành : " + result.Username;
             labelLoaiKhi.Text = "Loại khí : " + result.LoaiKhi;
             labelThoiGianBatDau.Text = "Thời gian bắt đầu : " + result.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
-
+            labelThoiGianKetThuc.Text = "Thời gian kết thúc : " + result.TimeEnd.ToString("HH:mm:ss dd/MM/yyyy");
+            labelApSuatTieuChuan.Text = "Áp suất tiêu chuẩn : " + (result.ApSuatTieuChuan ?? 0) + " Bar";
+            labelTheTichTieuChuan.Text = "Thể tích tiêu chuẩn : " + (result.TheTichTieuChuan ?? 0).ToString() + " L";
+            labelTheTichCanNap.Text = "Thể tích cần nạp : " + (result.TheTichCanNap ?? 0).ToString() + " L";
+            labelHeSoTieuChuan.Text = "Hệ số tiêu chuẩn : " + (result.HeSoTieuChuan ?? 0).ToString();
+            labelThoiGianTrichMau.Text = "Thời gian trích mẫu : " + result.ThoiGianTrichMau?.ToString("HH:mm:ss") ?? "00:00:00";
+            labelSoLuongBinhNapGian1.Text = "Số lượng bình nạp giàn 1 : " + (result.SoLuongBinhCanNapHe1 ?? 0).ToString();
+            labelSoLuongBinhNapGian2.Text = "Số lượng bình nạp giàn 2 : " + (result.SoLuongBinhCanNapHe2 ?? 0).ToString();
 
             MethodCommonGUI commonGUI = new MethodCommonGUI();
             commonGUI.ShowFormOnPanel(panelApSuatChart, chartGian1);
@@ -159,8 +239,16 @@ namespace ManagementSoftware.GUI.ResultManagement
 
 
             GetData();
+
+            LoadFormThongKe();
+
             UpdateCharGian1();
             UpdateCharGian2();
         }
+
+
+
+
+
     }
 }

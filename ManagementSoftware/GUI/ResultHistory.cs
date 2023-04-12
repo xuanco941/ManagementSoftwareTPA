@@ -58,7 +58,7 @@ namespace ManagementSoftware.GUI
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Loại khí", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Time Start",
+                HeaderText = "Thời gian bắt đầu",
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
@@ -67,7 +67,7 @@ namespace ManagementSoftware.GUI
             });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Time End",
+                HeaderText = "Thời gian kết thúc",
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {

@@ -102,7 +102,7 @@ namespace ManagementSoftware
 
             if (timer != null)
             {
-                timer.Change(Math.Max(0, 1500 - watch.ElapsedMilliseconds), Timeout.Infinite);
+                timer.Change(Math.Max(0, 1000 - watch.ElapsedMilliseconds), Timeout.Infinite);
             }
         }
 
@@ -186,46 +186,43 @@ namespace ManagementSoftware
 
 
             }
-            else if (isPalletRunning == true && Common.ResultCurrent == null)
+            else if (isPalletRunning == true && Common.ResultCurrent == null && Common.UserCurrent != null)
             {
 
-                if (Common.UserCurrent != null)
+                float? theTichCanNap = 0;
+                float? thetichTieuChuan = 0;
+                float? apSuatTieuChuan = 0;
+                float? heSoTieuChuan = 0;
+                DateTime? thoiGianTrichMau = new DateTime(0);
+                int? soLuongBinhCanNapCHoHe1 = 0;
+                int? soLuongBinhCanNapCHoHe2 = 0;
+
+                theTichCanNap = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_SETUP_V_Nap));
+                thetichTieuChuan = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_SETUP_V_Tieu_Chuan));
+                apSuatTieuChuan = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_SETUP_P_Tieu_Chuan));
+                heSoTieuChuan = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_SETUP_DATA_HS_Nhiet_do));
+                thoiGianTrichMau = await Task.Run(() => plc.ReadAVariableNumber_ReadAny<DateTime>(AddressPLC.DATA_SETUP_Time_trich_mau_V));
+                soLuongBinhCanNapCHoHe1 = await Task.Run(() => plc.ReadAVariableNumber<int>(AddressPLC.DATA_SETUP_SL_Binh_Nap_H1));
+                soLuongBinhCanNapCHoHe2 = await Task.Run(() => plc.ReadAVariableNumber<int>(AddressPLC.DATA_SETUP_SL_Binh_Nap_H2));
+
+
+
+
+
+                Common.ResultCurrent = dalResult.Add(new Result()
                 {
-                    float? theTichCanNap = 0;
-                    float? thetichTieuChuan = 0;
-                    float? apSuatTieuChuan = 0;
-                    float? heSoTieuChuan = 0;
-                    DateTime? thoiGianTrichMau = new DateTime(0);
-                    int? soLuongBinhCanNapCHoHe1 = 0;
-                    int? soLuongBinhCanNapCHoHe2 = 0;
-
-                    theTichCanNap = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_SETUP_V_Nap));
-                    thetichTieuChuan = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_SETUP_V_Tieu_Chuan));
-                    apSuatTieuChuan = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_SETUP_P_Tieu_Chuan));
-                    heSoTieuChuan = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_SETUP_DATA_HS_Nhiet_do));
-                    thoiGianTrichMau = await Task.Run(() => plc.ReadAVariableNumber_ReadAny<DateTime>(AddressPLC.DATA_SETUP_Time_trich_mau_V));
-                    soLuongBinhCanNapCHoHe1 = await Task.Run(() => plc.ReadAVariableNumber<int>(AddressPLC.DATA_SETUP_SL_Binh_Nap_H1));
-                    soLuongBinhCanNapCHoHe2 = await Task.Run(() => plc.ReadAVariableNumber<int>(AddressPLC.DATA_SETUP_SL_Binh_Nap_H2));
-
-
-
-
-
-                    Common.ResultCurrent = dalResult.Add(new Result()
-                    {
-                        LoaiKhi = Common.TenHeNap,
-                        ApSuatTieuChuan = apSuatTieuChuan,
-                        TheTichCanNap = theTichCanNap,
-                        TheTichTieuChuan = thetichTieuChuan,
-                        HeSoTieuChuan = heSoTieuChuan,
-                        ThoiGianTrichMau = thoiGianTrichMau,
-                        SoLuongBinhCanNapHe1 = soLuongBinhCanNapCHoHe1,
-                        SoLuongBinhCanNapHe2 = soLuongBinhCanNapCHoHe2,
-                        Username = Common.UserCurrent.Username,
-                        Status = false,
-                        UserID = Common.UserCurrent.UserWorkingID,
-                    });
-                }
+                    LoaiKhi = Common.TenHeNap,
+                    ApSuatTieuChuan = apSuatTieuChuan,
+                    TheTichCanNap = theTichCanNap,
+                    TheTichTieuChuan = thetichTieuChuan,
+                    HeSoTieuChuan = heSoTieuChuan,
+                    ThoiGianTrichMau = thoiGianTrichMau,
+                    SoLuongBinhCanNapHe1 = soLuongBinhCanNapCHoHe1,
+                    SoLuongBinhCanNapHe2 = soLuongBinhCanNapCHoHe2,
+                    Username = Common.UserCurrent.Username,
+                    Status = false,
+                    UserID = Common.UserCurrent.UserWorkingID,
+                });
 
             }
 

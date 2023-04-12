@@ -59,6 +59,7 @@ namespace ManagementSoftware
 
             if (plc.CheckState() && Common.ResultCurrent != null)
             {
+                int id = Common.ResultCurrent.ResultID;
                 DateTime now = DateTime.Now;
 
                 float? apSuatTong = 0;
@@ -73,9 +74,31 @@ namespace ManagementSoftware
                 apSuatHe2 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_ST_H2));
                 theTichHe2 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_V_ST_H2));
 
-                dalMachine.AddRange(new List<Machine>() { new Machine() { CreateAt = now, NameMachine = Common.GianNap1, ApSuat = apSuatHe1, TheTich = theTichHe1, ApSuatTong = apSuatTong, ResultID = Common.ResultCurrent.ResultID },
-                    new Machine() { CreateAt = now, NameMachine = Common.GianNap2, ApSuat = apSuatHe2, TheTich = theTichHe2, ApSuatTong = apSuatTong, ResultID = Common.ResultCurrent.ResultID } });
 
+                if (apSuatTong == null || apSuatTong == float.PositiveInfinity)
+                {
+                    apSuatTong = 0;
+                }
+                if (apSuatHe1 == null || apSuatHe1 == float.PositiveInfinity)
+                {
+                    apSuatHe1 = 0;
+                }
+                if (apSuatHe2 == null || apSuatHe2 == float.PositiveInfinity)
+                {
+                    apSuatHe2 = 0;
+                }
+                if (theTichHe1 == null || theTichHe1 == float.PositiveInfinity)
+                {
+                    theTichHe1 = 0;
+                }
+                if (theTichHe2 == null || theTichHe2 == float.PositiveInfinity)
+                {
+                    theTichHe2 = 0;
+                }
+
+
+                dalMachine.AddRange(new List<Machine>() { new Machine() { CreateAt = now, NameMachine = Common.GianNap1, ApSuat = apSuatHe1, TheTich = theTichHe1, ApSuatTong = apSuatTong, ResultID = id },
+                    new Machine() { CreateAt = now, NameMachine = Common.GianNap2, ApSuat = apSuatHe2, TheTich = theTichHe2, ApSuatTong = apSuatTong, ResultID = id } });
             }
 
 
