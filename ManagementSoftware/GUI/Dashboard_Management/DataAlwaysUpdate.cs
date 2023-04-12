@@ -16,8 +16,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         public int? pallet1 { get; set; } = 0;
         public int? pallet2 { get; set; } = 0;
 
-        //public bool? sanSangNapHe1 { get; set; } = false;
-        //public bool? sanSangNapHe2 { get; set; } = false;
+        public bool? sanSangNapHe1 { get; set; } = false;
+        public bool? sanSangNapHe2 { get; set; } = false;
         //public bool? ketThucNapHe1 { get; set; } = false;
         //public bool? ketThucNapHe2 { get; set; } = false;
         //public bool? xaKhiHe1 { get; set; } = false;
