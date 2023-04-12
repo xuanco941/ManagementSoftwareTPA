@@ -146,7 +146,7 @@ namespace ManagementSoftware
             {
                 return null;
             }
-            
+
         }
         //public string? ReadAVariableString(string variableName)
         //{
@@ -169,8 +169,7 @@ namespace ManagementSoftware
 
         public bool WriteAVariableNumber(string variableName, object value)
         {
-            //if (value != null)
-            //{
+
             try
             {
                 client.WriteValue(variableName, value);
@@ -180,10 +179,7 @@ namespace ManagementSoftware
             {
                 return false;
             }
-            //}
-            //{
-            //    return false;
-            //}
+
         }
         public void WriteAVariableString(string variableName, string value)
         {

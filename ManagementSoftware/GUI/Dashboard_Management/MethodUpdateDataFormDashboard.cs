@@ -218,8 +218,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
                     //kết thúc
 
-                    labelDungNapHe1.BackColor = data.pallet1 != null && data.pallet1 == 0 ? Color.LimeGreen : Color.DimGray;
-                    labelDungNapHe2.BackColor = data.pallet2 != null && data.pallet2 == 0 ? Color.LimeGreen : Color.DimGray;
+                    labelDungNapHe1.BackColor = data.pallet1 != null && data.pallet1 == 2 ? Color.LimeGreen : Color.DimGray;
+                    labelDungNapHe2.BackColor = data.pallet2 != null && data.pallet2 == 2 ? Color.LimeGreen : Color.DimGray;
 
 
 

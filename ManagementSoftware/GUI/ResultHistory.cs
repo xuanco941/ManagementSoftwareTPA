@@ -81,21 +81,8 @@ namespace ManagementSoftware.GUI
                 HeaderText = "",
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 UseColumnTextForButtonValue = true,
-                Text = "Giàn Nạp 1",
-                Name = "HN1",
-                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
-                DefaultCellStyle = new DataGridViewCellStyle()
-                {
-                    Font = new Font("Segoe UI", 13, FontStyle.Regular),
-                }
-            });
-            dataGridView1.Columns.Add(new DataGridViewButtonColumn()
-            {
-                HeaderText = "",
-                SortMode = DataGridViewColumnSortMode.NotSortable,
-                UseColumnTextForButtonValue = true,
-                Text = "Giàn Nạp 2",
-                Name = "HN2",
+                Text = "Dữ liệu Giàn Nạp",
+                Name = "Data",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
@@ -153,16 +140,10 @@ namespace ManagementSoftware.GUI
                 if (row != null && row.Tag != null)
                 {
                     Result obj = (Result)row.Tag;
-                    if (e.ColumnIndex == dataGridView1.Columns["HN1"].Index)
+                    if (e.ColumnIndex == dataGridView1.Columns["Data"].Index)
                     {
 
-                        ResultHeNap u = new ResultHeNap(obj, Common.GianNap1);
-                        u.ShowDialog();
-                    }
-                    if (e.ColumnIndex == dataGridView1.Columns["HN2"].Index)
-                    {
-
-                        ResultHeNap u = new ResultHeNap(obj, Common.GianNap2);
+                        ResultHeNap u = new ResultHeNap(obj);
                         u.ShowDialog();
                     }
                     if (e.ColumnIndex == dataGridView1.Columns["Error"].Index)
@@ -175,7 +156,7 @@ namespace ManagementSoftware.GUI
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy ID của bản ghi này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Không tìm thấy dữ liệu của bản ghi này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
 

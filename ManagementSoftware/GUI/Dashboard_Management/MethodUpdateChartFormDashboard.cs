@@ -83,7 +83,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
             if (Common.ResultCurrent != null)
             {
-                List<Machine> listData = dalMachine.GetAllMachinesByResultID(Common.ResultCurrent.ResultID);
+                List<Machine> listData = await Task.Run(() => dalMachine.GetAllMachinesByResultID(Common.ResultCurrent.ResultID));
 
                 List<DataDoThi> dataDoThiASTong = new List<DataDoThi>();
                 List<DataDoThi> dataDoThiAS1 = new List<DataDoThi>();
