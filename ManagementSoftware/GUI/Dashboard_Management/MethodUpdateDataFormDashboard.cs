@@ -23,8 +23,6 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         Label labelSanSangNapHe2;
         Label labelDangNapHe1;
         Label labelDangNapHe2;
-        Label labelXaKhiHe1;
-        Label labelXaKhiHe2;
         Label labelDungNapHe1;
         Label labelDungNapHe2;
 
@@ -39,7 +37,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
         ListBox listBoxError;
 
-        public MethodUpdateDataFormDashboard(Dashboard dashboard, Label label1ApSuatHeNap1, Label labelApSuatHeNap2, Label labelTheTichHeNap1, Label labelTheTichHeNap2, Label labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelXaKhiHe1, Label labelXaKhiHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError, Label labelNguoiVanHanh, Label labelTimeStart, Label labelSoLuongNapGian1, Label labelSoLuongNapGian2, Label labelLoaiKhi)
+        public MethodUpdateDataFormDashboard(Dashboard dashboard, Label label1ApSuatHeNap1, Label labelApSuatHeNap2, Label labelTheTichHeNap1, Label labelTheTichHeNap2, Label labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError, Label labelNguoiVanHanh, Label labelTimeStart, Label labelSoLuongNapGian1, Label labelSoLuongNapGian2, Label labelLoaiKhi)
         {
             plc = new PLCBeckhOff();
             timerUpdateGUILabel1 = new TimerUpdateGUI(500, 900, UpdateData);
@@ -54,8 +52,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             this.labelSanSangNapHe2 = labelSanSangNapHe2;
             this.labelDangNapHe1 = labelDangNapHe1;
             this.labelDangNapHe2 = labelDangNapHe2;
-            this.labelXaKhiHe1 = labelXaKhiHe1;
-            this.labelXaKhiHe2 = labelXaKhiHe2;
+
             this.labelDungNapHe1 = labelDungNapHe1;
             this.labelDungNapHe2 = labelDungNapHe2;
 
@@ -108,14 +105,16 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             float? apSuatTong = 0;
 
             //trạng thái quy trinh
-            bool? sanSangNapHe1 = false;
-            bool? sanSangNapHe2 = false;
+            //bool? sanSangNapHe1 = false;
+            //bool? sanSangNapHe2 = false;
             //bool? ketThucNapHe1 = false;
             //bool? ketThucNapHe2 = false;
-            bool? xaKhiHe1 = false;
-            bool? xaKhiHe2 = false;
-            bool? batDauNapHe1 = false;
-            bool? batDauNapHe2 = false;
+
+            //bool? batDauNapHe1 = false;
+            //bool? batDauNapHe2 = false;
+
+            int? pallet1 = 0;
+            int? pallet2 = 0;
 
 
             bool? canhBaoLoiDongCoOHeHoaHoi = false;
@@ -133,14 +132,20 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             theTichHe2 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_V_ST_H2));
             apSuatTong = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_Tong));
 
-            sanSangNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H1));
-            sanSangNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H2));
+            //sanSangNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H1));
+            //sanSangNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H2));
             //ketThucNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H1));
             //ketThucNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H2));
-            xaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H1));
-            xaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H2));
-            batDauNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H1));
-            batDauNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H2));
+            //xaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H1));
+            //xaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H2));
+            //batDauNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H1));
+            //batDauNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H2));
+
+            pallet1 = await Task.Run(() => plc.ReadAVariableNumber<int>(AddressPLC.DATA_PC_PALLET1));
+            pallet2 = await Task.Run(() => plc.ReadAVariableNumber<int>(AddressPLC.DATA_PC_PALLET2));
+
+
+
 
             canhBaoLoiDongCoOHeHoaHoi = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_VFP_Trip));
             canhBaoChuaMoHeHoaHoi = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_OFF_Hoa_Hoi));
@@ -158,14 +163,14 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             data.apSuatTong = apSuatTong;
             data.theTichHe1 = theTichHe1;
             data.theTichHe2 = theTichHe2;
-            data.sanSangNapHe1 = sanSangNapHe1;
-            data.sanSangNapHe2 = sanSangNapHe2;
+            //data.sanSangNapHe1 = sanSangNapHe1;
+            //data.sanSangNapHe2 = sanSangNapHe2;
             //data.ketThucNapHe1 = ketThucNapHe1;
             //data.ketThucNapHe2 = ketThucNapHe2;
-            data.xaKhiHe1 = xaKhiHe1;
-            data.xaKhiHe2 = xaKhiHe2;
-            data.batDauNapHe1 = batDauNapHe1;
-            data.batDauNapHe2 = batDauNapHe2;
+            //data.xaKhiHe1 = xaKhiHe1;
+            //data.xaKhiHe2 = xaKhiHe2;
+            //data.batDauNapHe1 = batDauNapHe1;
+            //data.batDauNapHe2 = batDauNapHe2;
 
 
             //error
@@ -203,18 +208,18 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
                     //quy trình
 
-                    labelSanSangNapHe1.BackColor = data.sanSangNapHe1 != null && data.sanSangNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-                    labelSanSangNapHe2.BackColor = data.sanSangNapHe2 != null && data.sanSangNapHe2 == true ? Color.LimeGreen : Color.DimGray;
-                    labelDangNapHe1.BackColor = data.batDauNapHe1 != null && data.batDauNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-                    labelDangNapHe2.BackColor = data.batDauNapHe2 != null && data.batDauNapHe2 == true ? Color.LimeGreen : Color.DimGray;
-                    labelXaKhiHe1.BackColor = data.xaKhiHe1 != null && data.xaKhiHe1 == true ? Color.LimeGreen : Color.DimGray;
-                    labelXaKhiHe2.BackColor = data.xaKhiHe2 != null && data.xaKhiHe2 == true ? Color.LimeGreen : Color.DimGray;
+                    labelSanSangNapHe1.BackColor = data.pallet1 != null && data.pallet1 == 0 ? Color.LimeGreen : Color.DimGray;
+                    labelSanSangNapHe2.BackColor = data.pallet2 != null && data.pallet2 == 0 ? Color.LimeGreen : Color.DimGray;
+                    labelDangNapHe1.BackColor = data.pallet1 != null && data.pallet1 == 1 ? Color.LimeGreen : Color.DimGray;
+                    labelDangNapHe2.BackColor = data.pallet2 != null && data.pallet2 == 1 ? Color.LimeGreen : Color.DimGray;
+                    //labelXaKhiHe1.BackColor = data.xaKhiHe1 != null && data.xaKhiHe1 == true ? Color.LimeGreen : Color.DimGray;
+                    //labelXaKhiHe2.BackColor = data.xaKhiHe2 != null && data.xaKhiHe2 == true ? Color.LimeGreen : Color.DimGray;
 
 
                     //kết thúc
 
-                    labelDungNapHe1.BackColor = Common.UserCurrent == null && data.sanSangNapHe1 == true && data.batDauNapHe1 == false && data.xaKhiHe1 == false ? Color.LimeGreen : Color.DimGray;
-                    labelDungNapHe2.BackColor = Common.UserCurrent == null && data.sanSangNapHe2 == true && data.batDauNapHe2 == false && data.xaKhiHe2 == false ? Color.LimeGreen : Color.DimGray;
+                    labelDungNapHe1.BackColor = data.pallet1 != null && data.pallet1 == 0 ? Color.LimeGreen : Color.DimGray;
+                    labelDungNapHe2.BackColor = data.pallet2 != null && data.pallet2 == 0 ? Color.LimeGreen : Color.DimGray;
 
 
 
@@ -254,7 +259,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                     }
 
 
-                    if(Common.ResultCurrent != null)
+                    if (Common.ResultCurrent != null)
                     {
                         labelNguoiVanHanh.Text = "Người vận hành : " + Common.ResultCurrent.Username;
                         labelTimeStart.Text = "Thời gian bắt đầu : " + Common.ResultCurrent.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");

@@ -70,6 +70,11 @@ namespace ManagementSoftware
                 alwaysCheckResult.ConnectPLC();
                 alwaysCheckResult.StartTimer();
 
+                AlwaysCheckAddMachine alwaysCheckAddMachine = new AlwaysCheckAddMachine();
+                alwaysCheckAddMachine.ConnectPLC();
+                alwaysCheckAddMachine.StartTimer();
+
+
                 Application.Run(main);
 
                    

@@ -1,5 +1,4 @@
 ﻿using ManagementSoftware.DAL;
-using ManagementSoftware.DAL.DALPagination;
 using ManagementSoftware.Models;
 using System;
 using System.Collections.Generic;
@@ -11,27 +10,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ManagementSoftware.GUI
+namespace ManagementSoftware.GUI.ResultManagement
 {
-    public partial class ErrorDashboard : Form
+    public partial class ResultError : Form
     {
-        // ngày để query 
-        private DateTime? timeStart = null;
-        private DateTime? timeEnd = null;
-        // trang hiện tại
-        private int page = 1;
-
-        // tổng số trang
-        private int TotalPages = 0;
-
-        PaginationResultWarning pagination = new PaginationResultWarning();
         //Data
         List<Models.ResultWarning> ListResults = new List<Models.ResultWarning>();
-        public ErrorDashboard()
+
+        Result result;
+        public ResultError(Result result)
         {
             InitializeComponent();
+            this.result = result;
             LoadDGV();
         }
+
+
         void LoadDGV()
         {
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "STT", SortMode = DataGridViewColumnSortMode.NotSortable });
@@ -69,24 +63,10 @@ namespace ManagementSoftware.GUI
         void LoadFormThongKe()
         {
 
-            panelPagination.Enabled = false;
-
-            dataGridView1.Rows.Clear();
+            //dataGridView1.Rows.Clear();
 
 
-            pagination.Set(page, timeStart, timeEnd);
-
-            this.ListResults = pagination.ListResults;
-            this.TotalPages = pagination.TotalPages;
-            lbTotalPages.Text = this.TotalPages.ToString();
-
-            buttonPreviousPage.Enabled = this.page > 1;
-            buttonNextPage.Enabled = this.page < this.TotalPages;
-            buttonPage.Text = this.page.ToString();
-
-            pageNumberGoto.MinValue = 1;
-            pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
-
+            ListResults = new DALResultWarning().GetAllResultWarningsByResultID(result.ResultID);
 
             if (ListResults != null && ListResults.Count > 0)
             {
@@ -105,44 +85,11 @@ namespace ManagementSoftware.GUI
 
             }
 
-            panelPagination.Enabled = true;
-
         }
 
-
-        private void ErrorDashboard_Load(object sender, EventArgs e)
+        private void ResultError_Load(object sender, EventArgs e)
         {
-            LoadFormThongKe();
-        }
-
-        private void buttonPreviousPage_Click(object sender, EventArgs e)
-        {
-            if (this.page > 1)
-            {
-                this.page = this.page - 1;
-                LoadFormThongKe();
-            }
-        }
-
-        private void buttonNextPage_Click(object sender, EventArgs e)
-        {
-            if (this.page < this.TotalPages)
-            {
-                this.page = this.page + 1;
-                LoadFormThongKe();
-            }
-        }
-
-        private void buttonSearch_Click(object sender, EventArgs e)
-        {
-            timeStart = TimeStart.Value;
-            timeEnd = TimeEnd.Value;
-            LoadFormThongKe();
-        }
-
-        private void buttonGoto_Click(object sender, EventArgs e)
-        {
-            this.page = int.Parse(pageNumberGoto.Text);
+            labelBangLoi.Text = "BẢNG LỖI MẺ NẠP " + Common.RESULT + result.ResultID;
             LoadFormThongKe();
         }
     }

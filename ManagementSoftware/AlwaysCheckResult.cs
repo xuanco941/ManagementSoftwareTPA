@@ -15,18 +15,15 @@ namespace ManagementSoftware
         public System.Threading.Timer? timer = null;
         public PLCBeckhOff plc = new PLCBeckhOff();
         private DALResult dalResult = new DALResult();
-        private DALMachine dalMachine = new DALMachine();
         private DALResultWarning dalResultWarning = new DALResultWarning();
-        public AlwaysCheckResult()
-        {
-        }
+
 
 
         public void StartTimer()
         {
             if (timer == null)
             {
-                timer = new System.Threading.Timer(Callback, null, 5000, Timeout.Infinite);
+                timer = new System.Threading.Timer(Callback, null, 1000, Timeout.Infinite);
             }
         }
 
@@ -49,10 +46,8 @@ namespace ManagementSoftware
             plc.Disconnect();
         }
 
-
-
-        bool statusGian1Run = false;
-        bool statusGian2Run = false;
+        int trangThaiOld1 = 0;
+        int trangThaiOld = 0;
         private async void Callback(Object state)
         {
             Stopwatch watch = new Stopwatch();
@@ -66,64 +61,50 @@ namespace ManagementSoftware
             if (plc.CheckState())
             {
 
-                bool? EnableNapHe1 = false;
-                bool? EnableNapHe2 = false;
-                bool? batDauNapHe1 = false;
-                bool? batDauNapHe2 = false;
-                bool? xaKhiHe1 = false;
-                bool? xaKhiHe2 = false;
+                int? pallet1 = await Task.Run(() => plc.ReadAVariableNumber<int>(AddressPLC.DATA_PC_PALLET1));
+                int? pallet2 = await Task.Run(() => plc.ReadAVariableNumber<int>(AddressPLC.DATA_PC_PALLET2));
 
-
-
-                if (Common.UserCurrent != null)
+                if(pallet1 !=null || pallet2 != null)
                 {
-                    EnableNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H1));
-                    EnableNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H2));
 
-                    batDauNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H1));
-                    batDauNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Run_Nap_H2));
-
-                    xaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H1));
-                    xaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H2));
-
-                    if (EnableNapHe1 != null && EnableNapHe1 == true && ((batDauNapHe1 != null && batDauNapHe1 == true) || (xaKhiHe1 != null && xaKhiHe1 == true)))
+                    if (((pallet1 != null && pallet1 == 1) || (pallet2 != null && pallet2 == 1)) && Common.ResultCurrent == null)
                     {
-                        statusGian1Run = true;
-                    }
-                    else
-                    {
-                        statusGian1Run = false;
-                    }
 
-                    if (EnableNapHe2 != null && EnableNapHe2 == true && ((batDauNapHe2 != null && batDauNapHe2 == true) || (xaKhiHe2 != null && xaKhiHe2 == true)))
-                    {
-                        statusGian2Run = true;
-                    }
-                    else
-                    {
-                        statusGian2Run = false;
-                    }
 
+                    }
                 }
                 else
                 {
-                    statusGian1Run = false;
-                    statusGian2Run = false;
+
                 }
-
-                // action
-
-                await Run();
 
 
             }
 
 
-            watch.Stop();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             if (timer != null)
             {
-                timer.Change(Math.Max(0, 5000 - watch.ElapsedMilliseconds), Timeout.Infinite);
+                timer.Change(Math.Max(0, 2000 - watch.ElapsedMilliseconds), Timeout.Infinite);
             }
         }
 

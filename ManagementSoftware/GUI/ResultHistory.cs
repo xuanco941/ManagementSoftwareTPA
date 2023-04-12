@@ -168,7 +168,7 @@ namespace ManagementSoftware.GUI
                     if (e.ColumnIndex == dataGridView1.Columns["Error"].Index)
                     {
 
-                        ErrorDashboard u = new ErrorDashboard(obj);
+                        ResultError u = new ResultError(obj);
                         u.ShowDialog();
                     }
 

@@ -26,6 +26,23 @@ namespace ManagementSoftware.DAL
 
             }
         }
+        public void AddRange(List<Machine> machine)
+        {
+
+            using (var context = new DataBaseContext())
+            {
+                try
+                {
+                    context.Machines.AddRange(machine);
+                    context.SaveChanges();
+                }
+                catch
+                {
+
+                }
+
+            }
+        }
         public void Update(Machine machine)
         {
             using (var context = new DataBaseContext())
