@@ -43,7 +43,7 @@ namespace ManagementSoftware
         {
             if (timer == null)
             {
-                timer = new System.Threading.Timer(Callback, null, 1000, Timeout.Infinite);
+                timer = new System.Threading.Timer(Callback, null, 500, Timeout.Infinite);
             }
         }
 
@@ -151,7 +151,7 @@ namespace ManagementSoftware
 
             if (timer != null)
             {
-                timer.Change(Math.Max(0, 1000 - watch.ElapsedMilliseconds), Timeout.Infinite);
+                timer.Change(Math.Max(0, 800 - watch.ElapsedMilliseconds), Timeout.Infinite);
             }
         }
 

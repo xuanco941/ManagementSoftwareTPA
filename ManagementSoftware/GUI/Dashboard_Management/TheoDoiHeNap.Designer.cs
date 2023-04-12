@@ -55,7 +55,7 @@
             CB10 = new CusPictureBox();
             textBoxASTong = new TextBox();
             textBoxASHeNap = new TextBox();
-            label1 = new Label();
+            labelHeader = new Label();
             ((System.ComponentModel.ISupportInitialize)VanCap).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DauOng).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ong1).BeginInit();
@@ -331,15 +331,16 @@
             textBoxASHeNap.TabIndex = 37;
             textBoxASHeNap.TextAlign = HorizontalAlignment.Center;
             // 
-            // label1
+            // labelHeader
             // 
-            label1.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(24, 216);
-            label1.Name = "label1";
-            label1.Size = new Size(143, 295);
-            label1.TabIndex = 38;
-            label1.Text = "QUY TRÌNH CÔNG NGHỆ GIÀN NẠP 1";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            labelHeader.BackColor = Color.Transparent;
+            labelHeader.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            labelHeader.Location = new Point(58, 132);
+            labelHeader.Name = "labelHeader";
+            labelHeader.Size = new Size(80, 160);
+            labelHeader.TabIndex = 38;
+            labelHeader.Text = "QUY TRÌNH CÔNG NGHỆ GIÀN NẠP";
+            labelHeader.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // TheoDoiHeNap
             // 
@@ -348,7 +349,7 @@
             BackgroundImage = Properties.Resources.EtekXam;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1121, 616);
-            Controls.Add(label1);
+            Controls.Add(labelHeader);
             Controls.Add(textBoxASHeNap);
             Controls.Add(textBoxASTong);
             Controls.Add(CB10);
@@ -442,5 +443,6 @@
         private TextBox textBoxASTong;
         private TextBox textBoxASHeNap;
         private Label label1;
+        private Label labelHeader;
     }
 }

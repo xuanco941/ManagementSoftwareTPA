@@ -11,7 +11,7 @@ namespace ManagementSoftware.GUI
     public class TimerUpdateGUI
     {
         public System.Threading.Timer? timer = null;
-        private int dueTimeInit = 500;
+        private int dueTimeInit = 1000;
         private int dueTimeChange = 1000;
         public delegate Task DelegateGetDataAndUpdateGUI();
         private DelegateGetDataAndUpdateGUI delegateUpdateGUI;

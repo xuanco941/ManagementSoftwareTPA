@@ -86,9 +86,6 @@ namespace ManagementSoftware
                     xaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H1));
                     xaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_ST_Xa_Khi_H2));
 
-
-
-
                     if (EnableNapHe1 != null && EnableNapHe1 == true && ((batDauNapHe1 != null && batDauNapHe1 == true) || (xaKhiHe1 != null && xaKhiHe1 == true)))
                     {
                         statusGian1Run = true;
@@ -107,22 +104,18 @@ namespace ManagementSoftware
                         statusGian2Run = false;
                     }
 
-
-                    // action
-
-                    await Run();
-
-
-
-
                 }
-                //đăng xuất thì mất luôn dữ liệu mẻ đang nạp
                 else
                 {
-                    Common.ResultCurrent = null;
                     statusGian1Run = false;
                     statusGian2Run = false;
                 }
+
+                // action
+
+                await Run();
+
+
             }
 
 
@@ -130,7 +123,7 @@ namespace ManagementSoftware
 
             if (timer != null)
             {
-                timer.Change(Math.Max(0, 600000 - watch.ElapsedMilliseconds), Timeout.Infinite);
+                timer.Change(Math.Max(0, 5000 - watch.ElapsedMilliseconds), Timeout.Infinite);
             }
         }
 
@@ -187,7 +180,7 @@ namespace ManagementSoftware
                 float? apSuatTong = 0;
                 apSuatTong = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_Tong));
 
-
+                DateTime now = DateTime.Now;
                 if (statusGian1Run == true)
                 {
                     float? apSuatHe1 = 0;
@@ -198,7 +191,7 @@ namespace ManagementSoftware
                     theTichHe1 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_V_ST_H1));
 
 
-                    dalMachine.Add(new Machine() { NameMachine = Common.GianNap1, ApSuat = apSuatHe1, TheTich = theTichHe1, ApSuatTong = apSuatTong, ResultID = Common.ResultCurrent.ResultID });
+                    dalMachine.Add(new Machine() { CreateAt = now, NameMachine = Common.GianNap1, ApSuat = apSuatHe1, TheTich = theTichHe1, ApSuatTong = apSuatTong, ResultID = Common.ResultCurrent.ResultID });
                 }
 
                 if (statusGian2Run == true)
@@ -211,7 +204,7 @@ namespace ManagementSoftware
                     theTichHe2 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_V_ST_H2));
 
 
-                    dalMachine.Add(new Machine() { NameMachine = Common.GianNap2, ApSuat = apSuatHe2, TheTich = theTichHe2, ApSuatTong = apSuatTong, ResultID = Common.ResultCurrent.ResultID });
+                    dalMachine.Add(new Machine() { CreateAt = now, NameMachine = Common.GianNap2, ApSuat = apSuatHe2, TheTich = theTichHe2, ApSuatTong = apSuatTong, ResultID = Common.ResultCurrent.ResultID });
                 }
 
 

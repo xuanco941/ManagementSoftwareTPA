@@ -15,12 +15,14 @@ namespace ManagementSoftware.GUI
     public partial class TheoDoiHeNap : Form
     {
         MethodUpdateStatusTheoDoiHeNap methodUpdate;
-        public TheoDoiHeNap(string DATA_PC_PC_RunSYS, string DATA_PCPC_ong_H1, string DATA_PCST_Run_Nap_H1, string DATA_PCVan_Cap_H1, string DATA_PCVan_Xa_H1,
+        public TheoDoiHeNap(int henapso ,string DATA_PC_PC_RunSYS, string DATA_PCPC_ong_H1, string DATA_PCST_Run_Nap_H1, string DATA_PCVan_Cap_H1, string DATA_PCVan_Xa_H1,
         string DATA_PCST_Xa_Khi_H1, string DATA_PCMotor_BT1_Vao, string DATA_PCMotor_BT1_Nap1, string DATA_PCMotor_BT1_Nap2,
         string DATA_PCMotor_BT1_Ra, string DATA_PCCB_PL_VT_Cap1, string DATA_PCCB_PL_qua_Vtcap1, string DATA_PCCB_PL_cuoi_Btvao1, string DATA_PCCB_RunBT_Nap1_1,
         string DATA_PCCB_StopBT_Nap1_1, string DATA_PCCB_RunBT_Nap1_2, string DATA_PCCB_StopBT_Nap1_2, string DATA_PCCB_co_PL_Ra1, string DATA_PCCB_PL_den_VTRa1, string DATA_PCCB_CB_PL_VT_Lay1, string apSuatTong, string apSuatHe)
         {
             InitializeComponent();
+
+            labelHeader.Text = labelHeader.Text + " " + henapso;
 
             this.CB1.Image = Resources.SensorXam;
             this.CB2.Image = Resources.SensorXam;

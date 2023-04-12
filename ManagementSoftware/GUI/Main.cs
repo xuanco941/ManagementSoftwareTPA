@@ -169,6 +169,13 @@ namespace ManagementSoftware.GUI
                 oldForm.Dispose();
             }
 
+            PLCBeckhOff plc = new PLCBeckhOff();
+
+            if (plc.Connect() == true)
+            {
+                plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, false);
+            }
+
             Common.USERSESSION = null;
 
             Application.Restart();            

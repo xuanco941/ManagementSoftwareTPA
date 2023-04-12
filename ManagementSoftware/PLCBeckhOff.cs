@@ -108,38 +108,45 @@ namespace ManagementSoftware
         //read String
         public string? ReadAVariableString(string variableName)
         {
-
-            var symbol = client.ReadSymbol(variableName);
-            string value = client.ReadAnyString(symbol.IndexGroup, symbol.IndexOffset, 50, Encoding.ASCII);
-            //return value;
-            byte[] asciiBytes = Encoding.UTF8.GetBytes(value); // Chuyển chuỗi sang byte array
-
-            List<byte> listByte = new List<byte>();
-            foreach (var item in asciiBytes)
+            try
             {
-                if (item != 0)
+                var symbol = client.ReadSymbol(variableName);
+                string value = client.ReadAnyString(symbol.IndexGroup, symbol.IndexOffset, 50, Encoding.ASCII);
+                //return value;
+                byte[] asciiBytes = Encoding.UTF8.GetBytes(value); // Chuyển chuỗi sang byte array
+
+                List<byte> listByte = new List<byte>();
+                foreach (var item in asciiBytes)
                 {
-                    listByte.Add(item);
+                    if (item != 0)
+                    {
+                        listByte.Add(item);
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
-                else
+
+                byte[] bytes = new byte[listByte.Count];
+
+                for (int i = 0; i < bytes.Length; i++)
                 {
-                    break;
+                    bytes[i] = listByte[i];
                 }
+
+
+                string result = Encoding.UTF8.GetString(bytes);
+
+                System.Diagnostics.Debug.WriteLine(result);
+
+                return result;
             }
-
-            byte[] bytes = new byte[listByte.Count];
-
-            for (int i = 0; i < bytes.Length; i++)
+            catch
             {
-                bytes[i] = listByte[i];
+                return null;
             }
-
-
-            string result = Encoding.UTF8.GetString(bytes);
-
-            System.Diagnostics.Debug.WriteLine(result);
-
-            return result;
+            
         }
         //public string? ReadAVariableString(string variableName)
         //{

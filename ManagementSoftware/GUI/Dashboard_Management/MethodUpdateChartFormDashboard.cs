@@ -24,7 +24,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         {
             plc = new PLCBeckhOff();
             dalMachine = new DALMachine();
-            timerUpdateGUILabel1 = new TimerUpdateGUI(1000, 300000, UpdateData);
+            timerUpdateGUILabel1 = new TimerUpdateGUI(1000, 5000, UpdateData);
 
             this.dashboard = dashboard;
             this.chartApSuat = chartApSuat;
