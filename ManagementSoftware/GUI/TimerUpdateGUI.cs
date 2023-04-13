@@ -23,11 +23,18 @@ namespace ManagementSoftware.GUI
             this.delegateUpdateGUI = myDelegate;
         }
 
-        public void StartTimer()
+        public void StartTimer(bool isStop)
         {
             if (timer == null)
             {
-                timer = new System.Threading.Timer(Callback, null, dueTimeInit, Timeout.Infinite);
+                if (isStop == true)
+                {
+                    timer = new System.Threading.Timer(CallbackStop, null, dueTimeInit, Timeout.Infinite);
+                }
+                else
+                {
+                    timer = new System.Threading.Timer(CallbackNoStop, null, dueTimeInit, Timeout.Infinite);
+                }
             }
         }
 
@@ -41,7 +48,7 @@ namespace ManagementSoftware.GUI
             }
         }
 
-        private void Callback(Object state)
+        private void CallbackStop(Object state)
         {
             Stopwatch watch = new Stopwatch();
 
@@ -54,6 +61,23 @@ namespace ManagementSoftware.GUI
 
 
             watch.Stop();
+            if (timer != null)
+            {
+                timer.Change(Math.Max(0, dueTimeChange - watch.ElapsedMilliseconds), Timeout.Infinite);
+            }
+        }
+        private void CallbackNoStop(Object state)
+        {
+            Stopwatch watch = new Stopwatch();
+
+            watch.Start();
+
+
+            // update data
+            // Long running operation
+            delegateUpdateGUI.Invoke();
+
+
             if (timer != null)
             {
                 timer.Change(Math.Max(0, dueTimeChange - watch.ElapsedMilliseconds), Timeout.Infinite);

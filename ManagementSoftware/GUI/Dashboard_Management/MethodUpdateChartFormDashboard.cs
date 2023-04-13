@@ -36,7 +36,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         {
             if (plc.Connect() == true)
             {
-                timerUpdateGUILabel1.StartTimer();
+                timerUpdateGUILabel1.StartTimer(false);
             }
         }
         public void StopUpdate()

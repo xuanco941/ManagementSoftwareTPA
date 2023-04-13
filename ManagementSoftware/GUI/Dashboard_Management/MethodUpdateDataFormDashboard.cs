@@ -73,7 +73,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         {
             if (plc.Connect() == true)
             {
-                timerUpdateGUILabel1.StartTimer();
+                timerUpdateGUILabel1.StartTimer(false);
             }
         }
         public void StopUpdate()
@@ -193,7 +193,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
         }
 
-
+        List<string> listDataErrbefore = new List<string>();
         private void UpdateGUI(DataAlwaysUpdate data)
         {
             //update gui
@@ -226,34 +226,60 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
 
                     //err
-                    if (this.listBoxError.Items.Count > 0)
+                    List<string> strsErr = new List<string>();
+                    foreach (var item in this.listBoxError.Items)
                     {
-                        this.listBoxError.Items.Clear();
+                        if (item != null)
+                        {
+                            strsErr.Add((string)item);
+                        }
                     }
-                    if (data.canhBaoLoiDongCoOHeHoaHoi == true)
+
+                    if (strsErr.SequenceEqual(listDataErrbefore) == false)
                     {
-                        this.listBoxError.Items.Add("Cảnh báo lỗi động cơ ở hệ hóa hơi.");
+                        listDataErrbefore = new List<string>(strsErr);
+
+                        if (this.listBoxError.Items.Count > 0)
+                        {
+                            this.listBoxError.Items.Clear();
+                        }
+                        if (data.canhBaoLoiDongCoOHeHoaHoi == true)
+                        {
+                            this.listBoxError.Items.Add("Cảnh báo lỗi động cơ ở hệ hóa hơi.");
+                        }
+                        if (data.canhBaoChuaMoHeHoaHoi == true)
+                        {
+                            this.listBoxError.Items.Add("Cảnh báo chưa mở hệ hóa hơi.");
+                        }
+                        if (data.loiQuaTrinhXaKhiHe1 == true)
+                        {
+                            this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 1.");
+                        }
+                        if (data.loiQuaTrinhXaKhiHe2 == true)
+                        {
+                            this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 2.");
+                        }
+                        if (data.loiQuaTrinhNapKhiHe1 == true)
+                        {
+                            this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 1.");
+                        }
+                        if (data.loiQuaTrinhNapKhiHe2 == true)
+                        {
+                            this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 2.");
+                        }
                     }
-                    if (data.canhBaoChuaMoHeHoaHoi == true)
-                    {
-                        this.listBoxError.Items.Add("Cảnh báo chưa mở hệ hóa hơi.");
-                    }
-                    if (data.loiQuaTrinhXaKhiHe1 == true)
-                    {
-                        this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 1.");
-                    }
-                    if (data.loiQuaTrinhXaKhiHe2 == true)
-                    {
-                        this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 2.");
-                    }
-                    if (data.loiQuaTrinhNapKhiHe1 == true)
-                    {
-                        this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 1.");
-                    }
-                    if (data.loiQuaTrinhNapKhiHe2 == true)
-                    {
-                        this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 2.");
-                    }
+
+
+
+
+
+
+
+
+
+
+
+                    
 
 
                     if (Common.ResultCurrent != null)

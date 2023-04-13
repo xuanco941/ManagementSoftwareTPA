@@ -40,7 +40,7 @@ namespace ManagementSoftware.GUI.Section
             DateTime start = end.AddHours(-1);
             this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, 12, ChartDateTimeIntervalType.Minutes);
 
-            this.chartControl1.PrimaryXAxis.DateTimeFormat = "HH:mm:ss dd/MM/yy";
+            this.chartControl1.PrimaryXAxis.DateTimeFormat = "HH:mm:ss\ndd/MM/yyyy";
 
 
 
