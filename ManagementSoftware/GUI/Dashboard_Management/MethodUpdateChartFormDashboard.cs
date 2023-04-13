@@ -24,7 +24,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         {
             plc = new PLCBeckhOff();
             dalMachine = new DALMachine();
-            timerUpdateGUILabel1 = new TimerUpdateGUI(1000, 100000, UpdateData);
+            timerUpdateGUILabel1 = new TimerUpdateGUI(1000, 60000, UpdateData);
 
             this.dashboard = dashboard;
             this.chartApSuat = chartApSuat;
@@ -83,7 +83,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
             if (Common.ResultCurrent != null)
             {
-                List<Machine> listData = await Task.Run(() => dalMachine.GetAllMachinesByResultID(Common.ResultCurrent.ResultID));
+                List<Machine> listData = dalMachine.GetAllMachinesByResultID(Common.ResultCurrent.ResultID);
 
                 List<DataDoThi> dataDoThiASTong = new List<DataDoThi>();
                 List<DataDoThi> dataDoThiAS1 = new List<DataDoThi>();
@@ -95,14 +95,14 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                 {
                     if (item.NameMachine == Common.GianNap1)
                     {
-                        dataDoThiASTong.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuatTong });
-                        dataDoThiAS1.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat });
-                        dataDoThiTT1.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich });
+                        dataDoThiASTong.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuatTong ?? 0 });
+                        dataDoThiAS1.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat ?? 0 });
+                        dataDoThiTT1.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich ?? 0 });
                     }
-                    else if (item.NameMachine == Common.GianNap2)
+                    else
                     {
-                        dataDoThiAS2.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat });
-                        dataDoThiTT2.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich });
+                        dataDoThiAS2.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat ?? 0 });
+                        dataDoThiTT2.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich ?? 0 });
                     }
                 }
 

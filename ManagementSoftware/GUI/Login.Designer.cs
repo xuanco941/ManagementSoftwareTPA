@@ -191,13 +191,13 @@
             buttonChangeStringConnect.Cursor = Cursors.Hand;
             buttonChangeStringConnect.FlatAppearance.BorderSize = 0;
             buttonChangeStringConnect.FlatStyle = FlatStyle.Flat;
-            buttonChangeStringConnect.Font = new Font("Segoe UI", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonChangeStringConnect.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             buttonChangeStringConnect.ForeColor = Color.White;
             buttonChangeStringConnect.Location = new Point(0, 327);
             buttonChangeStringConnect.Name = "buttonChangeStringConnect";
-            buttonChangeStringConnect.Size = new Size(92, 33);
+            buttonChangeStringConnect.Size = new Size(155, 33);
             buttonChangeStringConnect.TabIndex = 21;
-            buttonChangeStringConnect.Text = "Thay chuỗi kết nối Database";
+            buttonChangeStringConnect.Text = "Kết Nối Database";
             buttonChangeStringConnect.UseVisualStyleBackColor = false;
             buttonChangeStringConnect.Click += buttonBepTu_Click;
             // 
@@ -206,9 +206,9 @@
             panel2.BackColor = Color.FromArgb(32, 32, 32);
             panel2.Controls.Add(comboBox1);
             panel2.Controls.Add(label4);
-            panel2.Location = new Point(520, 327);
+            panel2.Location = new Point(487, 327);
             panel2.Name = "panel2";
-            panel2.Size = new Size(122, 33);
+            panel2.Size = new Size(155, 33);
             panel2.TabIndex = 22;
             // 
             // comboBox1
@@ -220,7 +220,7 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(53, 0);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(69, 31);
+            comboBox1.Size = new Size(102, 31);
             comboBox1.TabIndex = 25;
             // 
             // label4
