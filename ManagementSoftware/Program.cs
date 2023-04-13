@@ -58,7 +58,6 @@ namespace ManagementSoftware
 
             if (Common.USERSESSION != null)
             {
-                Common.TenHeNap = "Oxy";
                 Main main = new Main();
 
                 AlwaysCheckConnection alwaysCheckConnection = new AlwaysCheckConnection(main);

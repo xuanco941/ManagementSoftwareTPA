@@ -117,7 +117,7 @@ namespace ManagementSoftware.Models
                     //tao tai khoan admin
                     new DALUser().Add(Common.UserAdmin);
 
-                    new DALActivity().Add(new Activity { Title = "Tạo mới", Description = "Khởi tạo tài khoản admin.", Username = Common.UserAdmin.Username, UserID = Common.UserAdmin.UserID });
+                    new DALActivity().Add(new Activity { Title = "Khởi tạo hệ thống", Description = "Khởi tạo tài khoản admin.", Username = Common.UserAdmin.Username, UserID = Common.UserAdmin.UserID });
 
 
                 }

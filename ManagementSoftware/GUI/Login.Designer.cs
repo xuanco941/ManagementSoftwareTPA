@@ -36,11 +36,13 @@
             buttonExit = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             buttonDangNhap = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             label3 = new Label();
-            pictureBox2 = new PictureBox();
             panel1 = new Panel();
             buttonChangeStringConnect = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel2 = new Panel();
+            comboBox1 = new ComboBox();
+            label4 = new Label();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -174,18 +176,6 @@
             label3.Text = "MÁY NẠP KHÍ TPA";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(555, 336);
-            pictureBox2.Margin = new Padding(4, 3, 4, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(87, 24);
-            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox2.TabIndex = 17;
-            pictureBox2.TabStop = false;
-            // 
             // panel1
             // 
             panel1.Controls.Add(label3);
@@ -211,15 +201,48 @@
             buttonChangeStringConnect.UseVisualStyleBackColor = false;
             buttonChangeStringConnect.Click += buttonBepTu_Click;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(32, 32, 32);
+            panel2.Controls.Add(comboBox1);
+            panel2.Controls.Add(label4);
+            panel2.Location = new Point(520, 327);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(122, 33);
+            panel2.TabIndex = 22;
+            // 
+            // comboBox1
+            // 
+            comboBox1.BackColor = SystemColors.Control;
+            comboBox1.Dock = DockStyle.Fill;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(53, 0);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(69, 31);
+            comboBox1.TabIndex = 25;
+            // 
+            // label4
+            // 
+            label4.Dock = DockStyle.Left;
+            label4.ForeColor = SystemColors.ButtonFace;
+            label4.Location = new Point(0, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(53, 33);
+            label4.TabIndex = 24;
+            label4.Text = "Hệ Nạp:";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(41, 44, 51);
             ClientSize = new Size(642, 361);
+            Controls.Add(panel2);
             Controls.Add(buttonChangeStringConnect);
             Controls.Add(panel1);
-            Controls.Add(pictureBox2);
             Controls.Add(textBoxMatKhau);
             Controls.Add(textBoxTaiKhoan);
             Controls.Add(buttonExit);
@@ -235,8 +258,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Đăng nhập";
             Load += Login_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -249,8 +272,10 @@
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxTaiKhoan;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxMatKhau;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private Panel panel1;
         private Button buttonChangeStringConnect;
+        private Panel panel2;
+        private ComboBox comboBox1;
+        private Label label4;
     }
 }

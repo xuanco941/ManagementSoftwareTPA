@@ -833,6 +833,7 @@ namespace ManagementSoftware.GUI
             buttonExcel.TextColor = Color.Black;
             buttonExcel.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonExcel.UseVisualStyleBackColor = false;
+            buttonExcel.Click += buttonExcel_Click;
             // 
             // ResultHistory
             // 

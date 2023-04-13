@@ -55,8 +55,8 @@ namespace ManagementSoftware
 
         //Loại khí
         public const string Oxy = "Oxy";
-        public const string Nitor = "Nitor";
-        public static string TenHeNap = "";
+        public const string Nitrogen = "Nitrogen";
+        public static string TenHeNap = "Oxy";
 
 
 

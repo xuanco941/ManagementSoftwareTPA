@@ -320,6 +320,18 @@ namespace ManagementSoftware.GUI
 
             LoadFormThongKe();
         }
+
+
+
+
+
+
+
+        ExportData exportData = new ExportData();
+        private async void buttonExcel_Click(object sender, EventArgs e)
+        {
+            exportData.ExportResultToExcel(ListResults);
+        }
     }
 
 
