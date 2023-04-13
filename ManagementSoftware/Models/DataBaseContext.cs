@@ -61,6 +61,7 @@ namespace ManagementSoftware.Models
             {
                 entity.Property(e => e.Status).HasDefaultValueSql("(0)");
                 entity.Property(e => e.TimeStart).HasDefaultValueSql("(getdate())");
+                //entity.Property(e => e.TimeEnd).HasDefaultValueSql("(getdate())");
             });
 
 

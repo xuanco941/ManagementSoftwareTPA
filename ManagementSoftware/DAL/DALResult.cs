@@ -66,8 +66,6 @@ namespace ManagementSoftware.DAL
             }
         }
 
-
-
         public void Delete(int resultID)
         {
             using (var context = new DataBaseContext())

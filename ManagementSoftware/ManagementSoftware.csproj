@@ -21,7 +21,6 @@
     <PackageReference Include="Syncfusion.Chart.Windows" Version="20.2.0.36" />
     <PackageReference Include="Syncfusion.Gauge.Windows" Version="20.2.0.36" />
     <PackageReference Include="Syncfusion.GridHelperClasses.Windows" Version="20.2.0.36" />
-    <PackageReference Include="ZXing.Net" Version="0.16.6" />
 </ItemGroup>
 
   <ItemGroup>

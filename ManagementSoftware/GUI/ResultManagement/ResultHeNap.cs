@@ -52,15 +52,15 @@ namespace ManagementSoftware.GUI.ResultManagement
             {
                 if (item.NameMachine == Common.GianNap1)
                 {
-                    dataDoThiASTong1.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuatTong });
-                    dataDoThiAS1.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat });
-                    dataDoThiTT1.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich });
+                    dataDoThiASTong1.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuatTong ?? 0 });
+                    dataDoThiAS1.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat ?? 0 });
+                    dataDoThiTT1.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich ?? 0 });
                 }
                 else if (item.NameMachine == Common.GianNap2)
                 {
-                    dataDoThiASTong2.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuatTong });
-                    dataDoThiAS2.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat });
-                    dataDoThiTT2.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich });
+                    dataDoThiASTong2.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuatTong ?? 0 });
+                    dataDoThiAS2.Add(new DataDoThi() { date = item.CreateAt, value = item.ApSuat ?? 0 });
+                    dataDoThiTT2.Add(new DataDoThi() { date = item.CreateAt, value = item.TheTich ?? 0 });
                 }
             }
         }
@@ -76,10 +76,10 @@ namespace ManagementSoftware.GUI.ResultManagement
             seriesApSuatTong.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.SeaGreen);
 
             seriesApSuat.Style.Border.Width = 3;
-            seriesApSuat.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.YellowGreen);
+            seriesApSuat.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.Crimson);
 
             seriesTheTich.Style.Border.Width = 3;
-            seriesTheTich.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.YellowGreen);
+            seriesTheTich.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.DarkGoldenrod);
 
             Dictionary<ChartSeries, List<DataDoThi>> dic = new Dictionary<ChartSeries, List<DataDoThi>>();
 
@@ -102,14 +102,15 @@ namespace ManagementSoftware.GUI.ResultManagement
             ChartSeries seriesTheTich = new ChartSeries("Thể tích", ChartSeriesType.Line);
 
 
+
             seriesApSuatTong.Style.Border.Width = 3;
             seriesApSuatTong.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.SeaGreen);
 
             seriesApSuat.Style.Border.Width = 3;
-            seriesApSuat.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.YellowGreen);
+            seriesApSuat.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.Crimson);
 
             seriesTheTich.Style.Border.Width = 3;
-            seriesTheTich.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.YellowGreen);
+            seriesTheTich.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.DarkGoldenrod);
 
             Dictionary<ChartSeries, List<DataDoThi>> dic = new Dictionary<ChartSeries, List<DataDoThi>>();
 
@@ -142,7 +143,7 @@ namespace ManagementSoftware.GUI.ResultManagement
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkOrange;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 15, FontStyle.Bold);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Bold);
 
             //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -150,7 +151,7 @@ namespace ManagementSoftware.GUI.ResultManagement
             dataGridView1.RowTemplate.Height = 50;
             dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             //dataGridView1.DefaultCellStyle.ForeColor = Color.White;
-            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Regular);
+            dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Regular);
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ReadOnly = true;
@@ -197,9 +198,9 @@ namespace ManagementSoftware.GUI.ResultManagement
                 row.Cells[0].Value = i;
 
                 row.Cells[1].Value = item.NameMachine;
-                row.Cells[2].Value = string.Format("{0:0.00}", item.ApSuatTong);
-                row.Cells[3].Value = string.Format("{0:0.00}", item.ApSuat);
-                row.Cells[4].Value = string.Format("{0:0.00}", item.TheTich);
+                row.Cells[2].Value = string.Format("{0:0.00}", item.ApSuatTong ?? 0);
+                row.Cells[3].Value = string.Format("{0:0.00}", item.ApSuat ?? 0);
+                row.Cells[4].Value = string.Format("{0:0.00}", item.TheTich ?? 0);
                 row.Cells[5].Value = item.CreateAt.ToString("HH:mm:ss dd/MM/yyyy");
 
                 if (i % 2 == 0)
@@ -220,11 +221,19 @@ namespace ManagementSoftware.GUI.ResultManagement
         private void ResultHeNap_Load(object sender, EventArgs e)
         {
             //
-            labelTitle.Text = $"Thông tin cài đặt (Result ID-{Common.RESULT + result.ResultID})";
+            labelTitle.Text = $"THÔNG TIN CÀI ĐẶT (MẺ NẠP ID-{Common.RESULT + result.ResultID})";
+
             labelNguoiVanHanh.Text = "Người vận hành : " + result.Username;
             labelLoaiKhi.Text = "Loại khí : " + result.LoaiKhi;
             labelThoiGianBatDau.Text = "Thời gian bắt đầu : " + result.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
-            labelThoiGianKetThuc.Text = "Thời gian kết thúc : " + result.TimeEnd.ToString("HH:mm:ss dd/MM/yyyy");
+            if (result.TimeStart < result.TimeEnd)
+            {
+                labelThoiGianKetThuc.Text = "Thời gian kết thúc : " + result.TimeEnd.ToString("HH:mm:ss dd/MM/yyyy");
+            }
+            else
+            {
+                labelThoiGianKetThuc.Text = "Thời gian kết thúc : ";
+            }
             labelApSuatTieuChuan.Text = "Áp suất tiêu chuẩn : " + (result.ApSuatTieuChuan ?? 0) + " Bar";
             labelTheTichTieuChuan.Text = "Thể tích tiêu chuẩn : " + (result.TheTichTieuChuan ?? 0).ToString() + " L";
             labelTheTichCanNap.Text = "Thể tích cần nạp : " + (result.TheTichCanNap ?? 0).ToString() + " L";

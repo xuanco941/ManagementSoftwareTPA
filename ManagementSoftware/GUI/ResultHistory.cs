@@ -63,7 +63,9 @@ namespace ManagementSoftware.GUI
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
                     Font = new Font("Segoe UI", 13, FontStyle.Regular),
-                }
+                },
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+
             });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
@@ -72,7 +74,8 @@ namespace ManagementSoftware.GUI
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
                     Font = new Font("Segoe UI", 13, FontStyle.Regular),
-                }
+                },
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
             });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Người giám sát", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Trạng thái", SortMode = DataGridViewColumnSortMode.NotSortable });
@@ -81,9 +84,9 @@ namespace ManagementSoftware.GUI
                 HeaderText = "",
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 UseColumnTextForButtonValue = true,
-                Text = "Dữ liệu Giàn Nạp",
+                Text = "Dữ Liệu Giàn Nạp",
                 Name = "Data",
-                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
+                //AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
                     Font = new Font("Segoe UI", 13, FontStyle.Regular),
@@ -96,7 +99,7 @@ namespace ManagementSoftware.GUI
                 UseColumnTextForButtonValue = true,
                 Text = "Báo Lỗi",
                 Name = "Error",
-                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
+                //AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
                     Font = new Font("Segoe UI", 13, FontStyle.Regular),
@@ -211,7 +214,10 @@ namespace ManagementSoftware.GUI
                 //Product? p = dALProduct.GetProductFromID(item.ProductID);
                 row.Cells[1].Value = item.LoaiKhi;
                 row.Cells[2].Value = item.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
-                row.Cells[3].Value = item.TimeEnd.ToString("HH:mm:ss dd/MM/yyyy");
+                if (item.TimeStart < item.TimeEnd)
+                {
+                    row.Cells[3].Value = item.TimeEnd.ToString("HH:mm:ss dd/MM/yyyy");
+                }
                 row.Cells[4].Value = item.Username;
                 row.Cells[5].Value = item.Status == true ? "OK" : "NG";
 

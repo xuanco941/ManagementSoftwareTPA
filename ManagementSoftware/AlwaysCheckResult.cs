@@ -207,18 +207,16 @@ namespace ManagementSoftware
 
 
 
-
-
                 Common.ResultCurrent = dalResult.Add(new Result()
                 {
                     LoaiKhi = Common.TenHeNap,
-                    ApSuatTieuChuan = apSuatTieuChuan,
-                    TheTichCanNap = theTichCanNap,
-                    TheTichTieuChuan = thetichTieuChuan,
-                    HeSoTieuChuan = heSoTieuChuan,
-                    ThoiGianTrichMau = thoiGianTrichMau,
-                    SoLuongBinhCanNapHe1 = soLuongBinhCanNapCHoHe1,
-                    SoLuongBinhCanNapHe2 = soLuongBinhCanNapCHoHe2,
+                    ApSuatTieuChuan = (apSuatTieuChuan != null && apSuatTieuChuan != float.PositiveInfinity) ? apSuatTieuChuan : 0,
+                    TheTichCanNap = (theTichCanNap != null && theTichCanNap != float.PositiveInfinity) ? theTichCanNap : 0,
+                    TheTichTieuChuan = (thetichTieuChuan != null && thetichTieuChuan != float.PositiveInfinity) ? thetichTieuChuan : 0,
+                    HeSoTieuChuan = (heSoTieuChuan != null && heSoTieuChuan != float.PositiveInfinity) ? heSoTieuChuan : 0,
+                    ThoiGianTrichMau = thoiGianTrichMau != null ? thoiGianTrichMau : new DateTime(0),
+                    SoLuongBinhCanNapHe1 = soLuongBinhCanNapCHoHe1 != null ? soLuongBinhCanNapCHoHe1 : 0,
+                    SoLuongBinhCanNapHe2 = soLuongBinhCanNapCHoHe2 != null ? soLuongBinhCanNapCHoHe2 : 0,
                     Username = Common.UserCurrent.Username,
                     Status = false,
                     UserID = Common.UserCurrent.UserWorkingID,

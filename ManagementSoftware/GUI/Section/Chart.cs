@@ -20,7 +20,7 @@ namespace ManagementSoftware.GUI.Section
             InitializeComponent();
 
             chartControl1.Title.Text = title;
-            this.chartControl1.Title.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chartControl1.Title.Font = new System.Drawing.Font("Segoe UI", 11, FontStyle.Bold);
             this.chartControl1.Crosshair.Visible = true;
             this.chartControl1.PrimaryYAxis.RoundingPlaces = 2;
 
