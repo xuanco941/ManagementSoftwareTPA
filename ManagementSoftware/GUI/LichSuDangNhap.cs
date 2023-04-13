@@ -36,7 +36,7 @@ namespace ManagementSoftware.GUI
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "TÊN ĐĂNG NHẬP", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "TÊN NHÂN VIÊN", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "NGÀY GIỜ ĐĂNG NHẬP", SortMode = DataGridViewColumnSortMode.NotSortable });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "THỜI GIAN HOẠT ĐỘNG ĐẾN", SortMode = DataGridViewColumnSortMode.NotSortable });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "HOẠT ĐỘNG ĐẾN", SortMode = DataGridViewColumnSortMode.NotSortable });
 
 
 

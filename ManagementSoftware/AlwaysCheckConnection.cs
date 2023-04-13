@@ -44,7 +44,7 @@ namespace ManagementSoftware
         {
             if (timer == null)
             {
-                timer = new System.Threading.Timer(Callback, null, 500, Timeout.Infinite);
+                timer = new System.Threading.Timer(Callback, null, 1000, Timeout.Infinite);
             }
         }
 
@@ -88,9 +88,8 @@ namespace ManagementSoftware
                 {
                     dalUserWorking.UpdateEndAt(Common.UserCurrent.UserWorkingID);
                 }
-
                 //chưa đăng nhập, chưa có usercurrent trên hệ thống
-                else if (isLogIn != null && isLogIn == false && Common.UserCurrent == null)
+                else if (isLogIn != null /*&& isLogIn == false*/ && Common.UserCurrent == null)
                 {
                     string? taiKhoan = plc.ReadAVariableString(AddressPLC.DATA_PC_Tai_Khoan);
                     string? matKhau = plc.ReadAVariableString(AddressPLC.DATA_PC_Mat_khau);
@@ -147,12 +146,17 @@ namespace ManagementSoftware
                 }
 
             }
+            else
+            {
+                Common.UserCurrent = null;
+                ChangeTextTitleFormMain();
+            }
 
 
 
             if (timer != null)
             {
-                timer.Change(Math.Max(0, 900 - watch.ElapsedMilliseconds), Timeout.Infinite);
+                timer.Change(Math.Max(0, 1000 - watch.ElapsedMilliseconds), Timeout.Infinite);
             }
         }
 

@@ -195,9 +195,9 @@
             buttonChangeStringConnect.ForeColor = Color.White;
             buttonChangeStringConnect.Location = new Point(0, 327);
             buttonChangeStringConnect.Name = "buttonChangeStringConnect";
-            buttonChangeStringConnect.Size = new Size(155, 33);
+            buttonChangeStringConnect.Size = new Size(140, 33);
             buttonChangeStringConnect.TabIndex = 21;
-            buttonChangeStringConnect.Text = "Kết Nối Database";
+            buttonChangeStringConnect.Text = "Chuỗi Kết Nối Database";
             buttonChangeStringConnect.UseVisualStyleBackColor = false;
             buttonChangeStringConnect.Click += buttonBepTu_Click;
             // 

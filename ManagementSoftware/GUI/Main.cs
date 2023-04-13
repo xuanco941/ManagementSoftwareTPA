@@ -178,7 +178,7 @@ namespace ManagementSoftware.GUI
 
             Common.USERSESSION = null;
 
-            Application.Restart();            
+            Application.Restart();
         }
 
 
@@ -204,7 +204,7 @@ namespace ManagementSoftware.GUI
         private void Main_Load(object sender, EventArgs e)
         {
 
-            if(Common.USERSESSION!=null && Common.USERSESSION.Group != null && Common.USERSESSION.Group.IsManagementUser == false)
+            if (Common.USERSESSION != null && Common.USERSESSION.Group != null && Common.USERSESSION.Group.IsManagementUser == false)
             {
                 buttonEmployee.Enabled = false;
             }
@@ -227,7 +227,7 @@ namespace ManagementSoftware.GUI
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             PLCBeckhOff plc = new PLCBeckhOff();
-            
+
             if (plc.Connect() == true)
             {
                 plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, false);

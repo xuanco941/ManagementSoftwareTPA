@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LW_PhanMemBaoGia.MyControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,11 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         PLCBeckhOff plc;
         Dashboard dashboard;
 
-        Label label1ApSuatHeNap1;
-        Label labelApSuatHeNap2;
-        Label labelTheTichHeNap1;
-        Label labelTheTichHeNap2;
-        Label labelApSuatTong;
+        ButtonCustom label1ApSuatHeNap1;
+        ButtonCustom labelApSuatHeNap2;
+        ButtonCustom labelTheTichHeNap1;
+        ButtonCustom labelTheTichHeNap2;
+        ButtonCustom labelApSuatTong;
 
 
         Label labelSanSangNapHe1;
@@ -37,7 +38,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
         ListBox listBoxError;
 
-        public MethodUpdateDataFormDashboard(Dashboard dashboard, Label label1ApSuatHeNap1, Label labelApSuatHeNap2, Label labelTheTichHeNap1, Label labelTheTichHeNap2, Label labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError, Label labelNguoiVanHanh, Label labelTimeStart, Label labelSoLuongNapGian1, Label labelSoLuongNapGian2, Label labelLoaiKhi)
+        public MethodUpdateDataFormDashboard(Dashboard dashboard, ButtonCustom label1ApSuatHeNap1, ButtonCustom labelApSuatHeNap2, ButtonCustom labelTheTichHeNap1, ButtonCustom labelTheTichHeNap2, ButtonCustom labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError, Label labelNguoiVanHanh, Label labelTimeStart, Label labelSoLuongNapGian1, Label labelSoLuongNapGian2, Label labelLoaiKhi)
         {
             plc = new PLCBeckhOff();
             timerUpdateGUILabel1 = new TimerUpdateGUI(500, 900, UpdateData);
@@ -201,13 +202,6 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             {
                 dashboard.BeginInvoke(() =>
                 {
-                    label1ApSuatHeNap1.Text = data.apSuatHe1 != null ? string.Format("{0:0.00}", data.apSuatHe1) : Common.ERR;
-                    labelApSuatHeNap2.Text = data.apSuatHe2 != null ? string.Format("{0:0.00}", data.apSuatHe2) : Common.ERR;
-                    labelApSuatTong.Text = data.apSuatTong != null ? string.Format("{0:0.00}", data.apSuatTong) : Common.ERR;
-                    labelTheTichHeNap1.Text = data.theTichHe1 != null ? string.Format("{0:0.00}", data.theTichHe1) : Common.ERR;
-                    labelTheTichHeNap2.Text = data.theTichHe2 != null ? string.Format("{0:0.00}", data.theTichHe2) : Common.ERR;
-
-
 
                     //quy trình
 
@@ -264,6 +258,17 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
                     if (Common.ResultCurrent != null)
                     {
+                        //value
+                        label1ApSuatHeNap1.Text = data.apSuatHe1 != null ? string.Format("{0:0.00}", data.apSuatHe1) : Common.ERR;
+                        labelApSuatHeNap2.Text = data.apSuatHe2 != null ? string.Format("{0:0.00}", data.apSuatHe2) : Common.ERR;
+                        labelApSuatTong.Text = data.apSuatTong != null ? string.Format("{0:0.00}", data.apSuatTong) : Common.ERR;
+                        labelTheTichHeNap1.Text = data.theTichHe1 != null ? string.Format("{0:0.00}", data.theTichHe1) : Common.ERR;
+                        labelTheTichHeNap2.Text = data.theTichHe2 != null ? string.Format("{0:0.00}", data.theTichHe2) : Common.ERR;
+
+
+
+                        //thong tin
+
                         labelNguoiVanHanh.Text = "Người vận hành : " + Common.ResultCurrent.Username;
                         labelTimeStart.Text = "Thời gian bắt đầu : " + Common.ResultCurrent.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
                         labelSoLuongNapGian1.Text = "Số lượng nạp giàn 1 : " + Common.ResultCurrent.SoLuongBinhCanNapHe1.ToString();
@@ -272,14 +277,12 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                     }
                     else
                     {
-                        //labelSanSangNapHe1.BackColor = Color.DimGray;
-                        //labelSanSangNapHe2.BackColor = Color.DimGray;
-                        //labelDangNapHe1.BackColor = Color.DimGray;
-                        //labelDangNapHe2.BackColor = Color.DimGray;
-                        //labelXaKhiHe1.BackColor = Color.DimGray;
-                        //labelXaKhiHe2.BackColor = Color.DimGray;
-                        //labelDungNapHe1.BackColor = Color.DimGray;
-                        //labelDungNapHe2.BackColor = Color.DimGray;
+                        //value
+                        label1ApSuatHeNap1.Text = "0.00";
+                        labelApSuatHeNap2.Text = "0.00";
+                        labelApSuatTong.Text = "0.00";
+                        labelTheTichHeNap1.Text = "0.00";
+                        labelTheTichHeNap2.Text = "0.00";
 
                         labelNguoiVanHanh.Text = "Người vận hành : Chưa có";
                         labelTimeStart.Text = "Thời gian bắt đầu : Chưa có";

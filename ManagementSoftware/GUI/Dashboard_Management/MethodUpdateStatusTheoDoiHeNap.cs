@@ -89,7 +89,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         string DATA_PCCB_StopBT_Nap1_1, string DATA_PCCB_RunBT_Nap1_2, string DATA_PCCB_StopBT_Nap1_2, string DATA_PCCB_co_PL_Ra1, string DATA_PCCB_PL_den_VTRa1, string DATA_PCCB_CB_PL_VT_Lay1, string DATA_PCGT_AS_Tong, string DATA_PCGT_AS_ST_H1)
         {
             plc = new PLCBeckhOff();
-            timerUpdateGUILabel1 = new TimerUpdateGUI(500, 800, UpdateData);
+            timerUpdateGUILabel1 = new TimerUpdateGUI(500, 900, UpdateData);
             this.formTheoDoiHeNap = theoDoiHeNap;
             this.ong1 = ong1;
             this.ong2 = ong2;

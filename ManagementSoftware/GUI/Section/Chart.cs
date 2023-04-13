@@ -40,7 +40,7 @@ namespace ManagementSoftware.GUI.Section
             DateTime start = end.AddHours(-1);
             this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, 12, ChartDateTimeIntervalType.Minutes);
 
-            this.chartControl1.PrimaryXAxis.DateTimeFormat = "HH:mm:ss dd/MM/yyyy";
+            this.chartControl1.PrimaryXAxis.DateTimeFormat = "HH:mm:ss dd/MM/yy";
 
 
 
@@ -66,7 +66,7 @@ namespace ManagementSoftware.GUI.Section
 
             this.chartControl1.Trackball.Symbol.Border.Color = Color.White;
 
-            this.chartControl1.Trackball.Symbol.Size = new Size(5, 5);
+            this.chartControl1.Trackball.Symbol.Size = new Size(7, 7);
 
             this.chartControl1.Trackball.Tooltip.YValueFormat = "0.00";
 
@@ -108,7 +108,7 @@ namespace ManagementSoftware.GUI.Section
                         }
                         chartControl1.Series.Add(item.Key);
                     }
-                    this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, dic.Values.Count / 5, ChartDateTimeIntervalType.Minutes);
+                    this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, dic.Values.Count / 6, ChartDateTimeIntervalType.Minutes);
 
                 }
 

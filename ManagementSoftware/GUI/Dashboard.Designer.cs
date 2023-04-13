@@ -44,18 +44,18 @@
             label1LoaiKhi = new Label();
             tableLayoutPanel9 = new TableLayoutPanel();
             tableLayoutPanel11 = new TableLayoutPanel();
+            buttonCustom5 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            labelApSuatTong = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            labelTheTichHeNap2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            labelApSuatHeNap2 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            labelTheTichHeNap1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            label1ApSuatHeNap1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             label1 = new Label();
-            labelApSuatTong = new Label();
-            label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
-            labelApSuatHeNap2 = new Label();
-            label1ApSuatHeNap1 = new Label();
-            labelTheTichHeNap1 = new Label();
-            labelTheTichHeNap2 = new Label();
             button17 = new Button();
             tableLayoutPanel12 = new TableLayoutPanel();
             button36 = new Button();
@@ -239,10 +239,10 @@
             // 
             // labelNguoiVanHanh
             // 
-            labelNguoiVanHanh.BackColor = Color.Black;
+            labelNguoiVanHanh.BackColor = Color.FromArgb(32, 32, 32);
             labelNguoiVanHanh.BorderStyle = BorderStyle.FixedSingle;
             labelNguoiVanHanh.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            labelNguoiVanHanh.ForeColor = SystemColors.ButtonHighlight;
+            labelNguoiVanHanh.ForeColor = Color.White;
             labelNguoiVanHanh.Location = new Point(0, 1);
             labelNguoiVanHanh.Margin = new Padding(0);
             labelNguoiVanHanh.Name = "labelNguoiVanHanh";
@@ -254,10 +254,10 @@
             // 
             // labelTimeStart
             // 
-            labelTimeStart.BackColor = Color.Black;
+            labelTimeStart.BackColor = Color.FromArgb(32, 32, 32);
             labelTimeStart.BorderStyle = BorderStyle.FixedSingle;
             labelTimeStart.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTimeStart.ForeColor = SystemColors.ButtonHighlight;
+            labelTimeStart.ForeColor = Color.White;
             labelTimeStart.Location = new Point(0, 39);
             labelTimeStart.Margin = new Padding(0);
             labelTimeStart.Name = "labelTimeStart";
@@ -269,10 +269,10 @@
             // 
             // labelSoLuongNapHe1
             // 
-            labelSoLuongNapHe1.BackColor = Color.Black;
+            labelSoLuongNapHe1.BackColor = Color.FromArgb(32, 32, 32);
             labelSoLuongNapHe1.BorderStyle = BorderStyle.FixedSingle;
             labelSoLuongNapHe1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            labelSoLuongNapHe1.ForeColor = SystemColors.ButtonHighlight;
+            labelSoLuongNapHe1.ForeColor = Color.White;
             labelSoLuongNapHe1.Location = new Point(0, 77);
             labelSoLuongNapHe1.Margin = new Padding(0);
             labelSoLuongNapHe1.Name = "labelSoLuongNapHe1";
@@ -284,10 +284,10 @@
             // 
             // SoLuongNapHe2
             // 
-            SoLuongNapHe2.BackColor = Color.Black;
+            SoLuongNapHe2.BackColor = Color.FromArgb(32, 32, 32);
             SoLuongNapHe2.BorderStyle = BorderStyle.FixedSingle;
             SoLuongNapHe2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            SoLuongNapHe2.ForeColor = SystemColors.ButtonHighlight;
+            SoLuongNapHe2.ForeColor = Color.White;
             SoLuongNapHe2.Location = new Point(0, 115);
             SoLuongNapHe2.Margin = new Padding(0);
             SoLuongNapHe2.Name = "SoLuongNapHe2";
@@ -299,10 +299,10 @@
             // 
             // label1LoaiKhi
             // 
-            label1LoaiKhi.BackColor = Color.Black;
+            label1LoaiKhi.BackColor = Color.FromArgb(32, 32, 32);
             label1LoaiKhi.BorderStyle = BorderStyle.FixedSingle;
             label1LoaiKhi.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1LoaiKhi.ForeColor = SystemColors.ButtonHighlight;
+            label1LoaiKhi.ForeColor = Color.White;
             label1LoaiKhi.Location = new Point(0, 153);
             label1LoaiKhi.Margin = new Padding(0);
             label1LoaiKhi.Name = "label1LoaiKhi";
@@ -337,18 +337,18 @@
             tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24F));
             tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38F));
             tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38F));
+            tableLayoutPanel11.Controls.Add(buttonCustom5, 2, 3);
+            tableLayoutPanel11.Controls.Add(labelApSuatTong, 1, 3);
+            tableLayoutPanel11.Controls.Add(labelTheTichHeNap2, 2, 2);
+            tableLayoutPanel11.Controls.Add(labelApSuatHeNap2, 1, 2);
+            tableLayoutPanel11.Controls.Add(labelTheTichHeNap1, 2, 1);
+            tableLayoutPanel11.Controls.Add(label1ApSuatHeNap1, 1, 1);
             tableLayoutPanel11.Controls.Add(label1, 0, 3);
-            tableLayoutPanel11.Controls.Add(labelApSuatTong, 0, 3);
-            tableLayoutPanel11.Controls.Add(label2, 0, 3);
             tableLayoutPanel11.Controls.Add(label3, 1, 0);
             tableLayoutPanel11.Controls.Add(label4, 2, 0);
             tableLayoutPanel11.Controls.Add(label7, 0, 0);
             tableLayoutPanel11.Controls.Add(label8, 0, 1);
             tableLayoutPanel11.Controls.Add(label9, 0, 2);
-            tableLayoutPanel11.Controls.Add(labelApSuatHeNap2, 1, 2);
-            tableLayoutPanel11.Controls.Add(label1ApSuatHeNap1, 1, 1);
-            tableLayoutPanel11.Controls.Add(labelTheTichHeNap1, 2, 1);
-            tableLayoutPanel11.Controls.Add(labelTheTichHeNap2, 2, 2);
             tableLayoutPanel11.Dock = DockStyle.Fill;
             tableLayoutPanel11.Location = new Point(3, 43);
             tableLayoutPanel11.Name = "tableLayoutPanel11";
@@ -360,6 +360,130 @@
             tableLayoutPanel11.Size = new Size(549, 191);
             tableLayoutPanel11.TabIndex = 17;
             // 
+            // buttonCustom5
+            // 
+            buttonCustom5.BackColor = Color.FromArgb(32, 32, 32);
+            buttonCustom5.BackgroundColor = Color.FromArgb(32, 32, 32);
+            buttonCustom5.BorderColor = Color.PaleVioletRed;
+            buttonCustom5.BorderRadius = 0;
+            buttonCustom5.BorderSize = 0;
+            buttonCustom5.Dock = DockStyle.Fill;
+            buttonCustom5.FlatStyle = FlatStyle.Flat;
+            buttonCustom5.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonCustom5.ForeColor = Color.White;
+            buttonCustom5.Location = new Point(340, 142);
+            buttonCustom5.Margin = new Padding(0);
+            buttonCustom5.Name = "buttonCustom5";
+            buttonCustom5.Size = new Size(208, 48);
+            buttonCustom5.TabIndex = 56;
+            buttonCustom5.TextColor = Color.White;
+            buttonCustom5.UseVisualStyleBackColor = false;
+            // 
+            // labelApSuatTong
+            // 
+            labelApSuatTong.BackColor = Color.FromArgb(32, 32, 32);
+            labelApSuatTong.BackgroundColor = Color.FromArgb(32, 32, 32);
+            labelApSuatTong.BorderColor = Color.PaleVioletRed;
+            labelApSuatTong.BorderRadius = 0;
+            labelApSuatTong.BorderSize = 0;
+            labelApSuatTong.Dock = DockStyle.Fill;
+            labelApSuatTong.FlatStyle = FlatStyle.Flat;
+            labelApSuatTong.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelApSuatTong.ForeColor = Color.White;
+            labelApSuatTong.Location = new Point(132, 142);
+            labelApSuatTong.Margin = new Padding(0);
+            labelApSuatTong.Name = "labelApSuatTong";
+            labelApSuatTong.Size = new Size(207, 48);
+            labelApSuatTong.TabIndex = 55;
+            labelApSuatTong.Text = "0.00";
+            labelApSuatTong.TextColor = Color.White;
+            labelApSuatTong.TextImageRelation = TextImageRelation.TextBeforeImage;
+            labelApSuatTong.UseVisualStyleBackColor = false;
+            // 
+            // labelTheTichHeNap2
+            // 
+            labelTheTichHeNap2.BackColor = Color.FromArgb(32, 32, 32);
+            labelTheTichHeNap2.BackgroundColor = Color.FromArgb(32, 32, 32);
+            labelTheTichHeNap2.BorderColor = Color.PaleVioletRed;
+            labelTheTichHeNap2.BorderRadius = 0;
+            labelTheTichHeNap2.BorderSize = 0;
+            labelTheTichHeNap2.Dock = DockStyle.Fill;
+            labelTheTichHeNap2.FlatStyle = FlatStyle.Flat;
+            labelTheTichHeNap2.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTheTichHeNap2.ForeColor = Color.White;
+            labelTheTichHeNap2.Location = new Point(340, 95);
+            labelTheTichHeNap2.Margin = new Padding(0);
+            labelTheTichHeNap2.Name = "labelTheTichHeNap2";
+            labelTheTichHeNap2.Size = new Size(208, 46);
+            labelTheTichHeNap2.TabIndex = 54;
+            labelTheTichHeNap2.Text = "0.00";
+            labelTheTichHeNap2.TextColor = Color.White;
+            labelTheTichHeNap2.TextImageRelation = TextImageRelation.TextBeforeImage;
+            labelTheTichHeNap2.UseVisualStyleBackColor = false;
+            // 
+            // labelApSuatHeNap2
+            // 
+            labelApSuatHeNap2.BackColor = Color.FromArgb(32, 32, 32);
+            labelApSuatHeNap2.BackgroundColor = Color.FromArgb(32, 32, 32);
+            labelApSuatHeNap2.BorderColor = Color.PaleVioletRed;
+            labelApSuatHeNap2.BorderRadius = 0;
+            labelApSuatHeNap2.BorderSize = 0;
+            labelApSuatHeNap2.Dock = DockStyle.Fill;
+            labelApSuatHeNap2.FlatStyle = FlatStyle.Flat;
+            labelApSuatHeNap2.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelApSuatHeNap2.ForeColor = Color.White;
+            labelApSuatHeNap2.Location = new Point(132, 95);
+            labelApSuatHeNap2.Margin = new Padding(0);
+            labelApSuatHeNap2.Name = "labelApSuatHeNap2";
+            labelApSuatHeNap2.Size = new Size(207, 46);
+            labelApSuatHeNap2.TabIndex = 53;
+            labelApSuatHeNap2.Text = "0.00";
+            labelApSuatHeNap2.TextColor = Color.White;
+            labelApSuatHeNap2.TextImageRelation = TextImageRelation.TextBeforeImage;
+            labelApSuatHeNap2.UseVisualStyleBackColor = false;
+            // 
+            // labelTheTichHeNap1
+            // 
+            labelTheTichHeNap1.BackColor = Color.FromArgb(32, 32, 32);
+            labelTheTichHeNap1.BackgroundColor = Color.FromArgb(32, 32, 32);
+            labelTheTichHeNap1.BorderColor = Color.PaleVioletRed;
+            labelTheTichHeNap1.BorderRadius = 0;
+            labelTheTichHeNap1.BorderSize = 0;
+            labelTheTichHeNap1.Dock = DockStyle.Fill;
+            labelTheTichHeNap1.FlatStyle = FlatStyle.Flat;
+            labelTheTichHeNap1.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTheTichHeNap1.ForeColor = Color.White;
+            labelTheTichHeNap1.Location = new Point(340, 48);
+            labelTheTichHeNap1.Margin = new Padding(0);
+            labelTheTichHeNap1.Name = "labelTheTichHeNap1";
+            labelTheTichHeNap1.Size = new Size(208, 46);
+            labelTheTichHeNap1.TabIndex = 52;
+            labelTheTichHeNap1.Text = "0.00";
+            labelTheTichHeNap1.TextColor = Color.White;
+            labelTheTichHeNap1.TextImageRelation = TextImageRelation.TextBeforeImage;
+            labelTheTichHeNap1.UseVisualStyleBackColor = false;
+            // 
+            // label1ApSuatHeNap1
+            // 
+            label1ApSuatHeNap1.BackColor = Color.FromArgb(32, 32, 32);
+            label1ApSuatHeNap1.BackgroundColor = Color.FromArgb(32, 32, 32);
+            label1ApSuatHeNap1.BorderColor = Color.PaleVioletRed;
+            label1ApSuatHeNap1.BorderRadius = 0;
+            label1ApSuatHeNap1.BorderSize = 0;
+            label1ApSuatHeNap1.Dock = DockStyle.Fill;
+            label1ApSuatHeNap1.FlatStyle = FlatStyle.Flat;
+            label1ApSuatHeNap1.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1ApSuatHeNap1.ForeColor = Color.White;
+            label1ApSuatHeNap1.Location = new Point(132, 48);
+            label1ApSuatHeNap1.Margin = new Padding(0);
+            label1ApSuatHeNap1.Name = "label1ApSuatHeNap1";
+            label1ApSuatHeNap1.Size = new Size(207, 46);
+            label1ApSuatHeNap1.TabIndex = 51;
+            label1ApSuatHeNap1.Text = "0.00";
+            label1ApSuatHeNap1.TextColor = Color.White;
+            label1ApSuatHeNap1.TextImageRelation = TextImageRelation.TextBeforeImage;
+            label1ApSuatHeNap1.UseVisualStyleBackColor = false;
+            // 
             // label1
             // 
             label1.BackColor = Color.DarkSlateGray;
@@ -367,37 +491,12 @@
             label1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
             label1.Location = new Point(1, 142);
-            label1.Margin = new Padding(0);
+            label1.Margin = new Padding(0, 0, 1, 1);
             label1.Name = "label1";
-            label1.Size = new Size(130, 48);
+            label1.Size = new Size(129, 47);
             label1.TabIndex = 44;
             label1.Text = "TỔNG";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // labelApSuatTong
-            // 
-            labelApSuatTong.BackColor = Color.Black;
-            labelApSuatTong.Dock = DockStyle.Fill;
-            labelApSuatTong.ForeColor = SystemColors.ButtonHighlight;
-            labelApSuatTong.Location = new Point(132, 142);
-            labelApSuatTong.Margin = new Padding(0);
-            labelApSuatTong.Name = "labelApSuatTong";
-            labelApSuatTong.Size = new Size(207, 48);
-            labelApSuatTong.TabIndex = 43;
-            labelApSuatTong.Text = "0.00";
-            labelApSuatTong.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            label2.BackColor = Color.Black;
-            label2.Dock = DockStyle.Fill;
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(340, 142);
-            label2.Margin = new Padding(0);
-            label2.Name = "label2";
-            label2.Size = new Size(208, 48);
-            label2.TabIndex = 42;
-            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -405,10 +504,10 @@
             label3.Dock = DockStyle.Fill;
             label3.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(132, 1);
-            label3.Margin = new Padding(0);
+            label3.Location = new Point(133, 1);
+            label3.Margin = new Padding(1, 0, 1, 1);
             label3.Name = "label3";
-            label3.Size = new Size(207, 46);
+            label3.Size = new Size(205, 45);
             label3.TabIndex = 30;
             label3.Text = "ÁP SUẤT (BAR)";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -419,10 +518,10 @@
             label4.Dock = DockStyle.Fill;
             label4.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(340, 1);
-            label4.Margin = new Padding(0);
+            label4.Location = new Point(341, 1);
+            label4.Margin = new Padding(1, 0, 1, 1);
             label4.Name = "label4";
-            label4.Size = new Size(208, 46);
+            label4.Size = new Size(206, 45);
             label4.TabIndex = 31;
             label4.Text = "THỂ TÍCH (L)";
             label4.TextAlign = ContentAlignment.MiddleCenter;
@@ -434,9 +533,9 @@
             label7.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
             label7.Location = new Point(1, 1);
-            label7.Margin = new Padding(0);
+            label7.Margin = new Padding(0, 0, 1, 1);
             label7.Name = "label7";
-            label7.Size = new Size(130, 46);
+            label7.Size = new Size(129, 45);
             label7.TabIndex = 32;
             label7.Text = "GIÁ TRỊ";
             label7.TextAlign = ContentAlignment.MiddleCenter;
@@ -448,9 +547,9 @@
             label8.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = SystemColors.ButtonHighlight;
             label8.Location = new Point(1, 48);
-            label8.Margin = new Padding(0);
+            label8.Margin = new Padding(0, 0, 1, 1);
             label8.Name = "label8";
-            label8.Size = new Size(130, 46);
+            label8.Size = new Size(129, 45);
             label8.TabIndex = 33;
             label8.Text = "GIÀN NẠP 1";
             label8.TextAlign = ContentAlignment.MiddleCenter;
@@ -462,64 +561,12 @@
             label9.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = SystemColors.ButtonHighlight;
             label9.Location = new Point(1, 95);
-            label9.Margin = new Padding(0);
+            label9.Margin = new Padding(0, 0, 1, 1);
             label9.Name = "label9";
-            label9.Size = new Size(130, 46);
+            label9.Size = new Size(129, 45);
             label9.TabIndex = 34;
             label9.Text = "GIÀN NẠP 2";
             label9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // labelApSuatHeNap2
-            // 
-            labelApSuatHeNap2.BackColor = Color.Black;
-            labelApSuatHeNap2.Dock = DockStyle.Fill;
-            labelApSuatHeNap2.ForeColor = SystemColors.ButtonHighlight;
-            labelApSuatHeNap2.Location = new Point(132, 95);
-            labelApSuatHeNap2.Margin = new Padding(0);
-            labelApSuatHeNap2.Name = "labelApSuatHeNap2";
-            labelApSuatHeNap2.Size = new Size(207, 46);
-            labelApSuatHeNap2.TabIndex = 35;
-            labelApSuatHeNap2.Text = "0.00";
-            labelApSuatHeNap2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label1ApSuatHeNap1
-            // 
-            label1ApSuatHeNap1.BackColor = Color.Black;
-            label1ApSuatHeNap1.Dock = DockStyle.Fill;
-            label1ApSuatHeNap1.ForeColor = SystemColors.ButtonHighlight;
-            label1ApSuatHeNap1.Location = new Point(132, 48);
-            label1ApSuatHeNap1.Margin = new Padding(0);
-            label1ApSuatHeNap1.Name = "label1ApSuatHeNap1";
-            label1ApSuatHeNap1.Size = new Size(207, 46);
-            label1ApSuatHeNap1.TabIndex = 38;
-            label1ApSuatHeNap1.Text = "0.00";
-            label1ApSuatHeNap1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // labelTheTichHeNap1
-            // 
-            labelTheTichHeNap1.BackColor = Color.Black;
-            labelTheTichHeNap1.Dock = DockStyle.Fill;
-            labelTheTichHeNap1.ForeColor = SystemColors.ButtonHighlight;
-            labelTheTichHeNap1.Location = new Point(340, 48);
-            labelTheTichHeNap1.Margin = new Padding(0);
-            labelTheTichHeNap1.Name = "labelTheTichHeNap1";
-            labelTheTichHeNap1.Size = new Size(208, 46);
-            labelTheTichHeNap1.TabIndex = 39;
-            labelTheTichHeNap1.Text = "0.00";
-            labelTheTichHeNap1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // labelTheTichHeNap2
-            // 
-            labelTheTichHeNap2.BackColor = Color.Black;
-            labelTheTichHeNap2.Dock = DockStyle.Fill;
-            labelTheTichHeNap2.ForeColor = SystemColors.ButtonHighlight;
-            labelTheTichHeNap2.Location = new Point(340, 95);
-            labelTheTichHeNap2.Margin = new Padding(0);
-            labelTheTichHeNap2.Name = "labelTheTichHeNap2";
-            labelTheTichHeNap2.Size = new Size(208, 46);
-            labelTheTichHeNap2.TabIndex = 40;
-            labelTheTichHeNap2.Text = "0.00";
-            labelTheTichHeNap2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button17
             // 
@@ -1291,15 +1338,9 @@
         private Label label7;
         private Label label8;
         private Label label9;
-        private Label labelApSuatHeNap2;
-        private Label label1ApSuatHeNap1;
-        private Label labelTheTichHeNap1;
-        private Label labelTheTichHeNap2;
         private Button buttonShowBangLoi;
         private Button buttonShowHeNap;
         private Label label1;
-        private Label labelApSuatTong;
-        private Label label2;
         private TableLayoutPanel tableLayoutPanel5;
         private Button button4;
         private Panel panelDuLieu;
@@ -1322,5 +1363,11 @@
         private Panel panelChartApSuat;
         private Panel panelChartTheTich;
         private ListBox listBoxError;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom5;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom labelApSuatTong;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom labelTheTichHeNap2;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom labelApSuatHeNap2;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom labelTheTichHeNap1;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom label1ApSuatHeNap1;
     }
 }

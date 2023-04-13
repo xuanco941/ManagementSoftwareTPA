@@ -160,7 +160,7 @@ namespace ManagementSoftware.GUI
             buttonUserWorking.Name = "buttonUserWorking";
             buttonUserWorking.Size = new Size(209, 79);
             buttonUserWorking.TabIndex = 14;
-            buttonUserWorking.Text = "Lịch sử đăng nhập";
+            buttonUserWorking.Text = "Lịch sử đăng nhập PLC";
             buttonUserWorking.TextAlign = ContentAlignment.BottomCenter;
             buttonUserWorking.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonUserWorking.UseVisualStyleBackColor = true;
