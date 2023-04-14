@@ -328,9 +328,14 @@ namespace ManagementSoftware.GUI
 
 
         ExportData exportData = new ExportData();
-        private async void buttonExcel_Click(object sender, EventArgs e)
+        private void buttonExcel_Click(object sender, EventArgs e)
         {
             exportData.ExportResultToExcel(ListResults);
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            exportData.ExportResultToPdf(ListResults);
         }
     }
 

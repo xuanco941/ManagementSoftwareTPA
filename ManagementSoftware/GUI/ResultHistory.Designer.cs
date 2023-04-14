@@ -808,6 +808,7 @@ namespace ManagementSoftware.GUI
             buttonPrint.TextColor = Color.Black;
             buttonPrint.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonPrint.UseVisualStyleBackColor = false;
+            buttonPrint.Click += buttonPrint_Click;
             // 
             // buttonExcel
             // 
