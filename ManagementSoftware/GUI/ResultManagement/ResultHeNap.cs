@@ -256,8 +256,10 @@ namespace ManagementSoftware.GUI.ResultManagement
         }
 
 
-
-
-
+        ExportData exportData = new ExportData();
+        private void buttonExcel_Click(object sender, EventArgs e)
+        {
+            exportData.ExportMachineOnAResultToExcel(listDataMachine, result);
+        }
     }
 }

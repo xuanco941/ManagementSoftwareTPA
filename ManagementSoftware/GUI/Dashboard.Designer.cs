@@ -718,10 +718,10 @@
             // listBoxError
             // 
             listBoxError.Dock = DockStyle.Fill;
-            listBoxError.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            listBoxError.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             listBoxError.ForeColor = Color.Red;
             listBoxError.FormattingEnabled = true;
-            listBoxError.ItemHeight = 21;
+            listBoxError.ItemHeight = 23;
             listBoxError.Location = new Point(3, 3);
             listBoxError.Name = "listBoxError";
             listBoxError.Size = new Size(661, 53);

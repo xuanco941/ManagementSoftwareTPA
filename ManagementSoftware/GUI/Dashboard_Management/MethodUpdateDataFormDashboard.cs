@@ -125,6 +125,12 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             bool? loiQuaTrinhNapKhiHe1 = false;
             bool? loiQuaTrinhNapKhiHe2 = false;
 
+            bool? Lockup_Temp_High = false;
+            bool? Cavi_Temp_High = false;
+            bool? Seal_Leak_Temp_Low = false;
+            bool? Apter_Vapolization = false;
+            bool? Discharge_PRS_High = false;
+
 
 
             apSuatHe1 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_ST_H1));
@@ -156,6 +162,13 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             loiQuaTrinhNapKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H1));
             loiQuaTrinhNapKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H2));
 
+            Lockup_Temp_High = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Lockup_Temp_High));
+            Cavi_Temp_High = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Cavi_Temp_High));
+            Seal_Leak_Temp_Low = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Seal_Leak_Temp_Low));
+            Apter_Vapolization = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Apter_Vapolization));
+            Discharge_PRS_High = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Discharge_PRS_High));
+
+
 
 
 
@@ -167,12 +180,6 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             data.theTichHe2 = theTichHe2;
             data.sanSangNapHe1 = sanSangNapHe1;
             data.sanSangNapHe2 = sanSangNapHe2;
-            //data.ketThucNapHe1 = ketThucNapHe1;
-            //data.ketThucNapHe2 = ketThucNapHe2;
-            //data.xaKhiHe1 = xaKhiHe1;
-            //data.xaKhiHe2 = xaKhiHe2;
-            //data.batDauNapHe1 = batDauNapHe1;
-            //data.batDauNapHe2 = batDauNapHe2;
 
 
             //error
@@ -182,6 +189,12 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             data.loiQuaTrinhXaKhiHe2 = loiQuaTrinhXaKhiHe2;
             data.loiQuaTrinhNapKhiHe1 = loiQuaTrinhNapKhiHe1;
             data.loiQuaTrinhNapKhiHe2 = loiQuaTrinhNapKhiHe2;
+
+            data.Lockup_Temp_High = Lockup_Temp_High;
+            data.Cavi_Temp_High = Cavi_Temp_High;
+            data.Seal_Leak_Temp_Low = Seal_Leak_Temp_Low;
+            data.Apter_Vapolization = Apter_Vapolization;
+            data.Discharge_PRS_High = Discharge_PRS_High;
 
 
             data.pallet1 = pallet1;
@@ -209,12 +222,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                     labelSanSangNapHe2.BackColor = data.pallet2 != null && data.pallet2 == 0 && data.sanSangNapHe2 != null && data.sanSangNapHe2 == true ? Color.LimeGreen : Color.DimGray;
                     labelDangNapHe1.BackColor = data.pallet1 != null && data.pallet1 == 1 ? Color.LimeGreen : Color.DimGray;
                     labelDangNapHe2.BackColor = data.pallet2 != null && data.pallet2 == 1 ? Color.LimeGreen : Color.DimGray;
-                    //labelXaKhiHe1.BackColor = data.xaKhiHe1 != null && data.xaKhiHe1 == true ? Color.LimeGreen : Color.DimGray;
-                    //labelXaKhiHe2.BackColor = data.xaKhiHe2 != null && data.xaKhiHe2 == true ? Color.LimeGreen : Color.DimGray;
-
-
                     //kết thúc
-
                     labelDungNapHe1.BackColor = data.pallet1 != null && data.pallet1 == 2 ? Color.LimeGreen : Color.DimGray;
                     labelDungNapHe2.BackColor = data.pallet2 != null && data.pallet2 == 2 ? Color.LimeGreen : Color.DimGray;
 
@@ -237,35 +245,65 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
                     if (strsErr.SequenceEqual(listDataErrbefore) == false)
                     {
-                        listDataErrbefore = new List<string>(strsErr);
+                        listDataErrbefore = new List<string>();
 
-                        if (this.listBoxError.Items.Count > 0)
-                        {
-                            this.listBoxError.Items.Clear();
-                        }
+                        this.listBoxError.Items.Clear();
+
                         if (data.canhBaoLoiDongCoOHeHoaHoi == true)
                         {
-                            this.listBoxError.Items.Add("Cảnh báo lỗi động cơ ở hệ hóa hơi.");
+                            this.listBoxError.Items.Add("- Cảnh báo lỗi động cơ ở hệ hóa hơi.");
+                            listDataErrbefore.Add("- Cảnh báo lỗi động cơ ở hệ hóa hơi.");
                         }
                         if (data.canhBaoChuaMoHeHoaHoi == true)
                         {
-                            this.listBoxError.Items.Add("Cảnh báo chưa mở hệ hóa hơi.");
+                            this.listBoxError.Items.Add("- Cảnh báo chưa mở hệ hóa hơi.");
+                            listDataErrbefore.Add("- Cảnh báo chưa mở hệ hóa hơi.");
                         }
                         if (data.loiQuaTrinhXaKhiHe1 == true)
                         {
-                            this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 1.");
+                            this.listBoxError.Items.Add("- Lỗi quá trình xả khí giàn 1.");
+                            listDataErrbefore.Add("- Lỗi quá trình xả khí giàn 1.");
                         }
                         if (data.loiQuaTrinhXaKhiHe2 == true)
                         {
-                            this.listBoxError.Items.Add("Lỗi quá trình xả khí giàn 2.");
+                            this.listBoxError.Items.Add("- Lỗi quá trình xả khí giàn 2.");
+                            listDataErrbefore.Add("- Lỗi quá trình xả khí giàn 2.");
                         }
                         if (data.loiQuaTrinhNapKhiHe1 == true)
                         {
-                            this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 1.");
+                            this.listBoxError.Items.Add("- Lỗi quá trình nạp khí giàn 1.");
+                            listDataErrbefore.Add("- Lỗi quá trình nạp khí giàn 1.");
                         }
                         if (data.loiQuaTrinhNapKhiHe2 == true)
                         {
-                            this.listBoxError.Items.Add("Lỗi quá trình nạp khí giàn 2.");
+                            this.listBoxError.Items.Add("- Lỗi quá trình nạp khí giàn 2.");
+                            listDataErrbefore.Add("- Lỗi quá trình nạp khí giàn 2.");
+                        }
+                        //
+                        if (data.Lockup_Temp_High == true)
+                        {
+                            this.listBoxError.Items.Add("- Lockup Temp High.");
+                            listDataErrbefore.Add("- Lockup Temp High.");
+                        }
+                        if (data.Cavi_Temp_High == true)
+                        {
+                            this.listBoxError.Items.Add("- Cavi Temp High.");
+                            listDataErrbefore.Add("- Cavi Temp High.");
+                        }
+                        if (data.Seal_Leak_Temp_Low == true)
+                        {
+                            this.listBoxError.Items.Add("- Seal Leak Temp Low.");
+                            listDataErrbefore.Add("- Seal Leak Temp Low.");
+                        }
+                        if (data.Apter_Vapolization == true)
+                        {
+                            this.listBoxError.Items.Add("- Apter Vapolization.");
+                            listDataErrbefore.Add("- Apter Vapolization.");
+                        }
+                        if (data.Discharge_PRS_High == true)
+                        {
+                            this.listBoxError.Items.Add("- Discharge PRS High.");
+                            listDataErrbefore.Add("- Discharge PRS High.");
                         }
                     }
 
@@ -279,7 +317,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
 
 
-                    
+
 
 
                     if (Common.ResultCurrent != null)

@@ -82,7 +82,7 @@
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(937, 488);
+            dataGridView1.Size = new Size(1384, 723);
             dataGridView1.TabIndex = 1;
             // 
             // panelPagination
@@ -93,10 +93,10 @@
             panelPagination.Controls.Add(buttonCustomGoPage);
             panelPagination.Controls.Add(inputNumPageGo);
             panelPagination.Dock = DockStyle.Bottom;
-            panelPagination.Location = new Point(0, 488);
+            panelPagination.Location = new Point(0, 723);
             panelPagination.Margin = new Padding(4, 3, 4, 3);
             panelPagination.Name = "panelPagination";
-            panelPagination.Size = new Size(937, 60);
+            panelPagination.Size = new Size(1384, 74);
             panelPagination.TabIndex = 4;
             // 
             // tableLayoutPanel5
@@ -115,7 +115,7 @@
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel5.Size = new Size(935, 58);
+            tableLayoutPanel5.Size = new Size(1382, 72);
             tableLayoutPanel5.TabIndex = 35;
             // 
             // tableLayoutPanel7
@@ -125,12 +125,12 @@
             tableLayoutPanel7.Controls.Add(panel52, 0, 0);
             tableLayoutPanel7.Controls.Add(panel53, 0, 1);
             tableLayoutPanel7.Dock = DockStyle.Fill;
-            tableLayoutPanel7.Location = new Point(208, 3);
+            tableLayoutPanel7.Location = new Point(307, 3);
             tableLayoutPanel7.Name = "tableLayoutPanel7";
             tableLayoutPanel7.RowCount = 2;
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
-            tableLayoutPanel7.Size = new Size(87, 52);
+            tableLayoutPanel7.Size = new Size(132, 66);
             tableLayoutPanel7.TabIndex = 4;
             // 
             // panel52
@@ -140,7 +140,7 @@
             panel52.Dock = DockStyle.Fill;
             panel52.Location = new Point(3, 3);
             panel52.Name = "panel52";
-            panel52.Size = new Size(81, 14);
+            panel52.Size = new Size(126, 20);
             panel52.TabIndex = 0;
             // 
             // label22
@@ -150,7 +150,7 @@
             label22.ForeColor = Color.SkyBlue;
             label22.Location = new Point(0, 0);
             label22.Name = "label22";
-            label22.Size = new Size(79, 12);
+            label22.Size = new Size(124, 18);
             label22.TabIndex = 4;
             label22.Text = "Tổng trang";
             label22.TextAlign = ContentAlignment.MiddleCenter;
@@ -160,9 +160,9 @@
             panel53.BorderStyle = BorderStyle.FixedSingle;
             panel53.Controls.Add(lbTotalPages);
             panel53.Dock = DockStyle.Fill;
-            panel53.Location = new Point(3, 23);
+            panel53.Location = new Point(3, 29);
             panel53.Name = "panel53";
-            panel53.Size = new Size(81, 26);
+            panel53.Size = new Size(126, 34);
             panel53.TabIndex = 1;
             // 
             // lbTotalPages
@@ -172,7 +172,7 @@
             lbTotalPages.ForeColor = Color.SpringGreen;
             lbTotalPages.Location = new Point(0, 0);
             lbTotalPages.Name = "lbTotalPages";
-            lbTotalPages.Size = new Size(79, 24);
+            lbTotalPages.Size = new Size(124, 32);
             lbTotalPages.TabIndex = 5;
             lbTotalPages.Text = "1";
             lbTotalPages.TextAlign = ContentAlignment.MiddleCenter;
@@ -183,9 +183,9 @@
             panel47.Controls.Add(buttonGoto);
             panel47.Controls.Add(pageNumberGoto);
             panel47.Dock = DockStyle.Fill;
-            panel47.Location = new Point(796, 3);
+            panel47.Location = new Point(1177, 3);
             panel47.Name = "panel47";
-            panel47.Size = new Size(136, 52);
+            panel47.Size = new Size(202, 66);
             panel47.TabIndex = 2;
             // 
             // buttonGoto
@@ -205,7 +205,7 @@
             buttonGoto.Location = new Point(0, 25);
             buttonGoto.Margin = new Padding(4, 3, 4, 3);
             buttonGoto.Name = "buttonGoto";
-            buttonGoto.Size = new Size(134, 25);
+            buttonGoto.Size = new Size(200, 39);
             buttonGoto.TabIndex = 34;
             buttonGoto.Text = "Tới trang";
             buttonGoto.TextAlign = ContentAlignment.MiddleRight;
@@ -216,7 +216,7 @@
             // 
             // pageNumberGoto
             // 
-            pageNumberGoto.BeforeTouchSize = new Size(66, 35);
+            pageNumberGoto.BeforeTouchSize = new Size(200, 25);
             pageNumberGoto.BorderStyle = BorderStyle.FixedSingle;
             pageNumberGoto.Dock = DockStyle.Top;
             pageNumberGoto.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -224,7 +224,7 @@
             pageNumberGoto.Location = new Point(0, 0);
             pageNumberGoto.Margin = new Padding(4, 3, 4, 3);
             pageNumberGoto.Name = "pageNumberGoto";
-            pageNumberGoto.Size = new Size(134, 25);
+            pageNumberGoto.Size = new Size(200, 25);
             pageNumberGoto.TabIndex = 7;
             pageNumberGoto.Text = "1";
             pageNumberGoto.TextAlign = HorizontalAlignment.Center;
@@ -235,9 +235,9 @@
             panel46.Controls.Add(tableLayoutPanel6);
             panel46.Controls.Add(buttonSearch);
             panel46.Dock = DockStyle.Fill;
-            panel46.Location = new Point(301, 3);
+            panel46.Location = new Point(445, 3);
             panel46.Name = "panel46";
-            panel46.Size = new Size(489, 52);
+            panel46.Size = new Size(726, 66);
             panel46.TabIndex = 1;
             // 
             // tableLayoutPanel6
@@ -255,7 +255,7 @@
             tableLayoutPanel6.RowCount = 2;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
-            tableLayoutPanel6.Size = new Size(382, 50);
+            tableLayoutPanel6.Size = new Size(619, 64);
             tableLayoutPanel6.TabIndex = 33;
             // 
             // panel51
@@ -263,9 +263,9 @@
             panel51.BorderStyle = BorderStyle.FixedSingle;
             panel51.Controls.Add(TimeEnd);
             panel51.Dock = DockStyle.Fill;
-            panel51.Location = new Point(194, 23);
+            panel51.Location = new Point(312, 28);
             panel51.Name = "panel51";
-            panel51.Size = new Size(185, 24);
+            panel51.Size = new Size(304, 33);
             panel51.TabIndex = 3;
             // 
             // TimeEnd
@@ -274,7 +274,7 @@
             TimeEnd.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             TimeEnd.Location = new Point(0, 0);
             TimeEnd.Name = "TimeEnd";
-            TimeEnd.Size = new Size(183, 22);
+            TimeEnd.Size = new Size(302, 31);
             TimeEnd.TabIndex = 35;
             // 
             // panel50
@@ -282,9 +282,9 @@
             panel50.BorderStyle = BorderStyle.FixedSingle;
             panel50.Controls.Add(TimeStart);
             panel50.Dock = DockStyle.Fill;
-            panel50.Location = new Point(3, 23);
+            panel50.Location = new Point(3, 28);
             panel50.Name = "panel50";
-            panel50.Size = new Size(185, 24);
+            panel50.Size = new Size(303, 33);
             panel50.TabIndex = 2;
             // 
             // TimeStart
@@ -293,7 +293,7 @@
             TimeStart.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             TimeStart.Location = new Point(0, 0);
             TimeStart.Name = "TimeStart";
-            TimeStart.Size = new Size(183, 22);
+            TimeStart.Size = new Size(301, 31);
             TimeStart.TabIndex = 34;
             // 
             // panel49
@@ -301,9 +301,9 @@
             panel49.BorderStyle = BorderStyle.FixedSingle;
             panel49.Controls.Add(label21);
             panel49.Dock = DockStyle.Fill;
-            panel49.Location = new Point(194, 3);
+            panel49.Location = new Point(312, 3);
             panel49.Name = "panel49";
-            panel49.Size = new Size(185, 14);
+            panel49.Size = new Size(304, 19);
             panel49.TabIndex = 1;
             // 
             // label21
@@ -313,7 +313,7 @@
             label21.ForeColor = Color.SkyBlue;
             label21.Location = new Point(0, 0);
             label21.Name = "label21";
-            label21.Size = new Size(183, 12);
+            label21.Size = new Size(302, 17);
             label21.TabIndex = 4;
             label21.Text = "Đến ngày";
             label21.TextAlign = ContentAlignment.MiddleCenter;
@@ -325,7 +325,7 @@
             panel48.Dock = DockStyle.Fill;
             panel48.Location = new Point(3, 3);
             panel48.Name = "panel48";
-            panel48.Size = new Size(185, 14);
+            panel48.Size = new Size(303, 19);
             panel48.TabIndex = 0;
             // 
             // label20
@@ -335,7 +335,7 @@
             label20.ForeColor = Color.SkyBlue;
             label20.Location = new Point(0, 0);
             label20.Name = "label20";
-            label20.Size = new Size(183, 12);
+            label20.Size = new Size(301, 17);
             label20.TabIndex = 3;
             label20.Text = "Từ ngày";
             label20.TextAlign = ContentAlignment.MiddleCenter;
@@ -354,10 +354,10 @@
             buttonSearch.ForeColor = Color.Black;
             buttonSearch.Image = (Image)resources.GetObject("buttonSearch.Image");
             buttonSearch.ImageAlign = ContentAlignment.MiddleRight;
-            buttonSearch.Location = new Point(382, 0);
+            buttonSearch.Location = new Point(619, 0);
             buttonSearch.Margin = new Padding(4, 3, 4, 3);
             buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new Size(105, 50);
+            buttonSearch.Size = new Size(105, 64);
             buttonSearch.TabIndex = 32;
             buttonSearch.Text = "Tìm kiếm";
             buttonSearch.TextAlign = ContentAlignment.MiddleLeft;
@@ -375,7 +375,7 @@
             panel45.Dock = DockStyle.Fill;
             panel45.Location = new Point(3, 3);
             panel45.Name = "panel45";
-            panel45.Size = new Size(199, 52);
+            panel45.Size = new Size(298, 66);
             panel45.TabIndex = 0;
             // 
             // buttonPage
@@ -395,7 +395,7 @@
             buttonPage.Location = new Point(60, 0);
             buttonPage.Margin = new Padding(4, 3, 4, 3);
             buttonPage.Name = "buttonPage";
-            buttonPage.Size = new Size(77, 50);
+            buttonPage.Size = new Size(176, 64);
             buttonPage.TabIndex = 32;
             buttonPage.Text = "1";
             buttonPage.TextColor = Color.Black;
@@ -415,10 +415,10 @@
             buttonNextPage.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonNextPage.ForeColor = Color.Black;
             buttonNextPage.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonNextPage.Location = new Point(137, 0);
+            buttonNextPage.Location = new Point(236, 0);
             buttonNextPage.Margin = new Padding(4, 3, 4, 3);
             buttonNextPage.Name = "buttonNextPage";
-            buttonNextPage.Size = new Size(60, 50);
+            buttonNextPage.Size = new Size(60, 64);
             buttonNextPage.TabIndex = 31;
             buttonNextPage.Text = ">";
             buttonNextPage.TextColor = Color.Black;
@@ -442,7 +442,7 @@
             buttonPreviousPage.Location = new Point(0, 0);
             buttonPreviousPage.Margin = new Padding(4, 3, 4, 3);
             buttonPreviousPage.Name = "buttonPreviousPage";
-            buttonPreviousPage.Size = new Size(60, 50);
+            buttonPreviousPage.Size = new Size(60, 64);
             buttonPreviousPage.TabIndex = 29;
             buttonPreviousPage.Text = "<";
             buttonPreviousPage.TextColor = Color.Black;
@@ -464,7 +464,7 @@
             buttonCustomGoPage.ForeColor = Color.Black;
             buttonCustomGoPage.Image = (Image)resources.GetObject("buttonCustomGoPage.Image");
             buttonCustomGoPage.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonCustomGoPage.Location = new Point(3777, -150);
+            buttonCustomGoPage.Location = new Point(4224, -136);
             buttonCustomGoPage.Margin = new Padding(4, 3, 4, 3);
             buttonCustomGoPage.Name = "buttonCustomGoPage";
             buttonCustomGoPage.Size = new Size(93, 35);
@@ -478,11 +478,11 @@
             // inputNumPageGo
             // 
             inputNumPageGo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inputNumPageGo.BeforeTouchSize = new Size(66, 35);
+            inputNumPageGo.BeforeTouchSize = new Size(200, 25);
             inputNumPageGo.BorderColor = SystemColors.ActiveCaption;
             inputNumPageGo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             inputNumPageGo.IntegerValue = 1L;
-            inputNumPageGo.Location = new Point(3707, -148);
+            inputNumPageGo.Location = new Point(4154, -134);
             inputNumPageGo.Margin = new Padding(4, 3, 4, 3);
             inputNumPageGo.Multiline = true;
             inputNumPageGo.Name = "inputNumPageGo";
@@ -495,7 +495,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(937, 548);
+            ClientSize = new Size(1384, 797);
             Controls.Add(dataGridView1);
             Controls.Add(panelPagination);
             Name = "ErrorDashboard";

@@ -1,4 +1,5 @@
 ﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
 using ManagementSoftware.Models;
 using System;
 using System.Collections.Generic;
@@ -32,9 +33,8 @@ namespace ManagementSoftware
 
                                 ws.Range(1, 1, 1, 6).Merge();
                                 ws.Range(1, 1, 1, 6).Value = "THỐNG KÊ MẺ NẠP";
-                                ws.Range(1, 1, 1, 6).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                                 ws.Range(1, 1, 1, 6).Style.Font.Bold = true;
-                                ws.Range(1, 1, 1, 6).Style.Font.FontSize = 18;
+                                ws.Range(1, 1, 1, 6).Style.Font.FontSize = 24;
                                 ws.Range(1, 1, 1, 6).Style.Fill.BackgroundColor = XLColor.Purple;
                                 ws.Range(1, 1, 1, 6).Style.Font.FontColor = XLColor.White;
 
@@ -46,8 +46,7 @@ namespace ManagementSoftware
                                 ws.Cell(2, 6).Value = "Trạng thái";
 
                                 ws.Range(2, 1, 2, 6).Style.Font.Bold = true;
-                                ws.Range(2, 1, 2, 6).Style.Font.FontSize = 16;
-                                ws.Range(2, 1, 2, 6).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                ws.Range(2, 1, 2, 6).Style.Font.FontSize = 20;
                                 ws.Range(2, 1, 2, 6).Style.Fill.BackgroundColor = XLColor.Yellow;
 
 
@@ -70,9 +69,11 @@ namespace ManagementSoftware
                                         ws.Range(3 + row, 1, 3 + row, 6).Style.Fill.BackgroundColor = XLColor.FromHtml("#dfe8f2");
                                     }
                                 }
-
+                                ws.Range(1, 1, 3 + list.Count, 6).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                ws.Range(3, 1, 3 + list.Count, 6).Style.Font.FontSize = 18;
 
                                 ws.Columns(1, 6).AdjustToContents();
+
 
 
                                 string tenfile = ".xlsx";
@@ -97,7 +98,7 @@ namespace ManagementSoftware
 
         public void ExportMachineOnAResultToExcel(List<Machine>? list, Result result)
         {
-            if (list == null || list.Count <= 0)
+            if (list == null || list.Count <= 0 || result == null)
             {
                 MessageBox.Show("Không tìm thấy dữ liệu để xuất Excel.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -114,13 +115,49 @@ namespace ManagementSoftware
 
                                 var ws = workBook.Worksheets.Add($"THỐNG KÊ DỮ LIỆU MẺ NẠP {Common.RESULT + result.ResultID}");
 
+                                //
+                                ws.Range(1, 1, 1, 6).Merge();
+                                ws.Range(1, 1, 1, 6).Value = "THÔNG TIN MẺ NẠP " + (Common.RESULT + result.ResultID) + "";
+                                ws.Range(1, 1, 1, 6).Style.Font.Bold = true;
+                                ws.Range(1, 1, 1, 6).Style.Font.FontSize = 24;
+                                ws.Range(1, 1, 1, 6).Style.Fill.BackgroundColor = XLColor.Green;
+                                ws.Range(1, 1, 1, 6).Style.Font.FontColor = XLColor.White;
+
+                                ws.Range(2, 1, 2, 2).Merge();
+                                ws.Range(2, 1, 2, 2).Value = "Áp suất tiêu chuẩn : " + (result.ApSuatTieuChuan ?? 0) + " Bar";
+                                ws.Range(2, 3, 2, 4).Merge();
+                                ws.Range(2, 3, 2, 4).Value = "Thể tích tiêu chuẩn : " + (result.TheTichTieuChuan ?? 0).ToString() + " L";
+                                ws.Range(2, 5, 2, 6).Merge();
+                                ws.Range(2, 5, 2, 6).Value = "Hệ số tiêu chuẩn : " + (result.HeSoTieuChuan ?? 0).ToString();
+
+
+                                ws.Range(3, 3, 3, 6).Merge();
+                                ws.Range(3, 3, 3, 6).Value = "Thời gian trích mẫu : " + result.ThoiGianTrichMau?.ToString("HH:mm:ss") ?? "00:00:00";
+
+                                ws.Range(3, 1, 3, 3).Merge();
+                                ws.Range(3, 1, 3, 3).Value = "Hệ số tiêu chuẩn : " + (result.HeSoTieuChuan ?? 0).ToString();
+                                ws.Range(3, 3, 3, 6).Merge();
+                                ws.Range(3, 3, 3, 6).Value = "Thời gian trích mẫu : " + result.ThoiGianTrichMau?.ToString("HH:mm:ss") ?? "00:00:00";
+
+
+
+
+                                //
+
+
+
+
+
                                 ws.Range(1, 1, 1, 6).Merge();
                                 ws.Range(1, 1, 1, 6).Value = $"THỐNG KÊ DỮ LIỆU MẺ NẠP {Common.RESULT + result.ResultID}";
-                                ws.Range(1, 1, 1, 6).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                                 ws.Range(1, 1, 1, 6).Style.Font.Bold = true;
-                                ws.Range(1, 1, 1, 6).Style.Font.FontSize = 18;
-                                ws.Range(1, 1, 1, 6).Style.Fill.BackgroundColor = XLColor.Purple;
+                                ws.Range(1, 1, 1, 6).Style.Font.FontSize = 24;
+                                ws.Range(1, 1, 1, 6).Style.Fill.BackgroundColor = XLColor.Green;
                                 ws.Range(1, 1, 1, 6).Style.Font.FontColor = XLColor.White;
+
+
+
+
 
 
                                 ws.Cell(2, 1).Value = "Stt";
@@ -131,9 +168,8 @@ namespace ManagementSoftware
                                 ws.Cell(2, 6).Value = "Thời điểm";
 
                                 ws.Range(2, 1, 2, 6).Style.Font.Bold = true;
-                                ws.Range(2, 1, 2, 6).Style.Font.FontSize = 16;
-                                ws.Range(2, 1, 2, 6).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                                ws.Range(2, 1, 2, 6).Style.Fill.BackgroundColor = XLColor.Yellow;
+                                ws.Range(2, 1, 2, 6).Style.Font.FontSize = 20;
+                                ws.Range(2, 1, 2, 6).Style.Fill.BackgroundColor = XLColor.LightGreen;
 
 
 
@@ -154,8 +190,10 @@ namespace ManagementSoftware
                                 }
 
 
-                                ws.Columns(1, 6).AdjustToContents();
+                                ws.Range(1, 1, 3 + list.Count, 6).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                ws.Range(3, 1, 3 + list.Count, 6).Style.Font.FontSize = 18;
 
+                                ws.Columns(1, 6).AdjustToContents();
 
                                 string tenfile = ".xlsx";
                                 workBook.SaveAs(sfd.FileName + DateTime.Now.ToString("dd_MM_yyyy_hhmmss") + tenfile);

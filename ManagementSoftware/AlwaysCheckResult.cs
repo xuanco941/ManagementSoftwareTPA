@@ -114,6 +114,11 @@ namespace ManagementSoftware
         bool? loiQuaTrinhXaKhiHe2_Before = false;
         bool? loiQuaTrinhNapKhiHe1_Before = false;
         bool? loiQuaTrinhNapKhiHe2_Before = false;
+        bool? Lockup_Temp_High_Before = false;
+        bool? Cavi_Temp_High_Before = false;
+        bool? Seal_Leak_Temp_Low_Before = false;
+        bool? Apter_Vapolization_Before = false;
+        bool? Discharge_PRS_High_Before = false;
 
         async Task Run()
         {
@@ -141,12 +146,24 @@ namespace ManagementSoftware
                 bool? loiQuaTrinhNapKhiHe1 = false;
                 bool? loiQuaTrinhNapKhiHe2 = false;
 
+                bool? Lockup_Temp_High = false;
+                bool? Cavi_Temp_High = false;
+                bool? Seal_Leak_Temp_Low = false;
+                bool? Apter_Vapolization = false;
+                bool? Discharge_PRS_High = false;
+
                 canhBaoLoiDongCoOHeHoaHoi = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_VFP_Trip));
                 canhBaoChuaMoHeHoaHoi = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_OFF_Hoa_Hoi));
                 loiQuaTrinhXaKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_XA_KHI_H1));
                 loiQuaTrinhXaKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_XA_KHI_H2));
                 loiQuaTrinhNapKhiHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H1));
                 loiQuaTrinhNapKhiHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Loi_TT_NAP_KHI_H2));
+
+                Lockup_Temp_High = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Lockup_Temp_High));
+                Cavi_Temp_High = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Cavi_Temp_High));
+                Seal_Leak_Temp_Low = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Seal_Leak_Temp_Low));
+                Apter_Vapolization = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Apter_Vapolization));
+                Discharge_PRS_High = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Discharge_PRS_High));
 
                 if (canhBaoLoiDongCoOHeHoaHoi != null && canhBaoLoiDongCoOHeHoaHoi == true && (canhBaoLoiDongCoOHeHoaHoi_Before == null || canhBaoLoiDongCoOHeHoaHoi_Before == false))
                 {
@@ -173,6 +190,27 @@ namespace ManagementSoftware
                     dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Lỗi quá trình nạp khí giàn 2." });
                 }
 
+                //
+                if (Lockup_Temp_High != null && Lockup_Temp_High == true && (Lockup_Temp_High_Before == null || Lockup_Temp_High_Before == false))
+                {
+                    dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Lockup Temp High." });
+                }
+                if (Cavi_Temp_High != null && Cavi_Temp_High == true && (Cavi_Temp_High_Before == null || Cavi_Temp_High_Before == false))
+                {
+                    dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Cavi Temp High." });
+                }
+                if (Seal_Leak_Temp_Low != null && Seal_Leak_Temp_Low == true && (Seal_Leak_Temp_Low_Before == null || Seal_Leak_Temp_Low_Before == false))
+                {
+                    dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Seal Leak Temp Low." });
+                }
+                if (Apter_Vapolization != null && Apter_Vapolization == true && (Apter_Vapolization_Before == null || Apter_Vapolization_Before == false))
+                {
+                    dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Apter Vapolization." });
+                }
+                if (Discharge_PRS_High != null && Discharge_PRS_High == true && (Discharge_PRS_High_Before == null || Discharge_PRS_High_Before == false))
+                {
+                    dalResultWarning.Add(new ResultWarning() { ResultID = Common.ResultCurrent.ResultID, Title = "Lỗi", Description = "Discharge PRS High." });
+                }
 
 
 
@@ -183,6 +221,11 @@ namespace ManagementSoftware
                 loiQuaTrinhNapKhiHe1_Before = loiQuaTrinhNapKhiHe1;
                 loiQuaTrinhNapKhiHe2_Before = loiQuaTrinhNapKhiHe2;
 
+                Lockup_Temp_High_Before = Lockup_Temp_High;
+                Cavi_Temp_High_Before = Cavi_Temp_High;
+                Seal_Leak_Temp_Low_Before = Seal_Leak_Temp_Low;
+                Apter_Vapolization_Before = Apter_Vapolization;
+                Discharge_PRS_High_Before = Discharge_PRS_High;
 
 
             }

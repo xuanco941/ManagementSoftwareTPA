@@ -164,7 +164,15 @@ namespace ManagementSoftware
         //Tín hiệu bắt đầu quá trình nạp khí hệ 2  (Bool)
         public const string DATA_PC_Run_Nap_H2 = "DATA_PC.Run_Nap_H2";
 
+
+
+
         //Trạng thái lỗi
+        public const string DATA_PC_Lockup_Temp_High = "DATA_PC.Lockup_Temp_High";
+        public const string DATA_PC_Cavi_Temp_High = "DATA_PC.Cavi_Temp_High";
+        public const string DATA_PC_Seal_Leak_Temp_Low = "DATA_PC.Seal_Leak_Temp_Low";
+        public const string DATA_PC_Apter_Vapolization = "DATA_PC.Apter_Vapolization";
+        public const string DATA_PC_Discharge_PRS_High = "DATA_PC.Discharge_PRS_High";
 
         //Cảnh báo lỗi động cơ ở hệ hóa hơi  (Bool)
         public const string DATA_PC_VFP_Trip = "DATA_PC.VFP_Trip";

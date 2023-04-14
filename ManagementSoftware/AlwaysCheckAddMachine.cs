@@ -97,8 +97,8 @@ namespace ManagementSoftware
                 }
 
 
-                dalMachine.AddRange(new List<Machine>() { new Machine() { CreateAt = now, NameMachine = Common.GianNap1, ApSuat = apSuatHe1, TheTich = theTichHe1, ApSuatTong = apSuatTong, ResultID = id },
-                    new Machine() { CreateAt = now, NameMachine = Common.GianNap2, ApSuat = apSuatHe2, TheTich = theTichHe2, ApSuatTong = apSuatTong, ResultID = id } });
+                dalMachine.AddRange(new List<Machine>() { new Machine() { CreateAt = now, NameMachine = Common.GianNap1, ApSuat = Math.Round( (double)apSuatHe1,2,MidpointRounding.AwayFromZero), TheTich = Math.Round( (double)theTichHe1,2,MidpointRounding.AwayFromZero), ApSuatTong = Math.Round( (double)apSuatTong,2,MidpointRounding.AwayFromZero), ResultID = id },
+                    new Machine() { CreateAt = now, NameMachine = Common.GianNap2, ApSuat = Math.Round( (double)apSuatHe2,2,MidpointRounding.AwayFromZero), TheTich = Math.Round( (double)theTichHe2,2,MidpointRounding.AwayFromZero), ApSuatTong = Math.Round( (double)apSuatTong,2,MidpointRounding.AwayFromZero), ResultID = id } });
             }
 
 
@@ -109,6 +109,6 @@ namespace ManagementSoftware
                 timer.Change(Math.Max(0, 300000 - watch.ElapsedMilliseconds), Timeout.Infinite);
             }
         }
-       
+
     }
 }
