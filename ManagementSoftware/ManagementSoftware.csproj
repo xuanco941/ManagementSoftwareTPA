@@ -67,6 +67,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="arial-unicode-ms.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="ConnectStringDB.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

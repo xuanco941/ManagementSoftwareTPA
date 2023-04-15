@@ -685,9 +685,10 @@
             buttonShowHeNap.Font = new Font("Segoe UI", 17.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonShowHeNap.ForeColor = SystemColors.ButtonFace;
             buttonShowHeNap.Image = Properties.Resources.book24;
-            buttonShowHeNap.Location = new Point(892, 3);
+            buttonShowHeNap.Location = new Point(890, 0);
+            buttonShowHeNap.Margin = new Padding(1, 0, 0, 0);
             buttonShowHeNap.Name = "buttonShowHeNap";
-            buttonShowHeNap.Size = new Size(218, 53);
+            buttonShowHeNap.Size = new Size(223, 59);
             buttonShowHeNap.TabIndex = 8;
             buttonShowHeNap.Text = "GIÀN NẠP";
             buttonShowHeNap.TextAlign = ContentAlignment.MiddleRight;
@@ -705,9 +706,10 @@
             buttonShowBangLoi.Font = new Font("Segoe UI", 17.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonShowBangLoi.ForeColor = SystemColors.ButtonFace;
             buttonShowBangLoi.Image = Properties.Resources.icons8_medium_risk_30;
-            buttonShowBangLoi.Location = new Point(670, 3);
+            buttonShowBangLoi.Location = new Point(667, 0);
+            buttonShowBangLoi.Margin = new Padding(0, 0, 1, 0);
             buttonShowBangLoi.Name = "buttonShowBangLoi";
-            buttonShowBangLoi.Size = new Size(216, 53);
+            buttonShowBangLoi.Size = new Size(221, 59);
             buttonShowBangLoi.TabIndex = 7;
             buttonShowBangLoi.Text = "BẢNG LỖI";
             buttonShowBangLoi.TextAlign = ContentAlignment.MiddleRight;
@@ -722,9 +724,10 @@
             listBoxError.ForeColor = Color.Red;
             listBoxError.FormattingEnabled = true;
             listBoxError.ItemHeight = 23;
-            listBoxError.Location = new Point(3, 3);
+            listBoxError.Location = new Point(0, 0);
+            listBoxError.Margin = new Padding(0);
             listBoxError.Name = "listBoxError";
-            listBoxError.Size = new Size(661, 53);
+            listBoxError.Size = new Size(667, 59);
             listBoxError.TabIndex = 9;
             // 
             // panelTrangThaiHeNap

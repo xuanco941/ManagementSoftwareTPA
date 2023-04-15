@@ -803,7 +803,7 @@ namespace ManagementSoftware.GUI
             buttonPrint.Name = "buttonPrint";
             buttonPrint.Size = new Size(145, 42);
             buttonPrint.TabIndex = 17;
-            buttonPrint.Text = "In báo cáo";
+            buttonPrint.Text = "Xuất báo cáo";
             buttonPrint.TextAlign = ContentAlignment.MiddleLeft;
             buttonPrint.TextColor = Color.Black;
             buttonPrint.TextImageRelation = TextImageRelation.ImageBeforeText;

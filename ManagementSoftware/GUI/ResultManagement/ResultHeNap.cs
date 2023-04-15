@@ -131,7 +131,7 @@ namespace ManagementSoftware.GUI.ResultManagement
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "STT" });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "No.", AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "TÊN GIÀN", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ÁP SUẤT TỔNG", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ÁP SUẤT", SortMode = DataGridViewColumnSortMode.NotSortable });
@@ -260,6 +260,11 @@ namespace ManagementSoftware.GUI.ResultManagement
         private void buttonExcel_Click(object sender, EventArgs e)
         {
             exportData.ExportMachineOnAResultToExcel(listDataMachine, result);
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            exportData.ExportMachineOnAResultToPdf(listDataMachine, result);
         }
     }
 }

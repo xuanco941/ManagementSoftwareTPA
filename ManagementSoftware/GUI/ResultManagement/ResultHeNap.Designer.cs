@@ -430,11 +430,12 @@
             buttonPrint.Name = "buttonPrint";
             buttonPrint.Size = new Size(259, 54);
             buttonPrint.TabIndex = 18;
-            buttonPrint.Text = "In báo cáo";
+            buttonPrint.Text = "Xuất báo cáo";
             buttonPrint.TextAlign = ContentAlignment.MiddleLeft;
             buttonPrint.TextColor = Color.Black;
             buttonPrint.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonPrint.UseVisualStyleBackColor = false;
+            buttonPrint.Click += buttonPrint_Click;
             // 
             // ResultHeNap
             // 

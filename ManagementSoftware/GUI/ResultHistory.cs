@@ -54,7 +54,9 @@ namespace ManagementSoftware.GUI
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ID" });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "No.",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells            });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ID", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Loại khí", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
             {
@@ -201,7 +203,7 @@ namespace ManagementSoftware.GUI
             pageNumberGoto.MinValue = 1;
             pageNumberGoto.MaxValue = this.TotalPages != 0 ? this.TotalPages : 1;
 
-            bool color = false;
+            int color = 1;
 
             foreach (var item in this.ListResults)
             {
@@ -209,19 +211,19 @@ namespace ManagementSoftware.GUI
                 DataGridViewRow row = dataGridView1.Rows[rowId];
                 row.Tag = item;
 
-                row.Cells[0].Value = Common.RESULT + item.ResultID;
+                row.Cells[0].Value = color;
+                row.Cells[1].Value = Common.RESULT + item.ResultID;
 
-                //Product? p = dALProduct.GetProductFromID(item.ProductID);
-                row.Cells[1].Value = item.LoaiKhi;
-                row.Cells[2].Value = item.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
+                row.Cells[2].Value = item.LoaiKhi;
+                row.Cells[3].Value = item.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
                 if (item.TimeStart < item.TimeEnd)
                 {
-                    row.Cells[3].Value = item.TimeEnd.ToString("HH:mm:ss dd/MM/yyyy");
+                    row.Cells[4].Value = item.TimeEnd.ToString("HH:mm:ss dd/MM/yyyy");
                 }
-                row.Cells[4].Value = item.Username;
-                row.Cells[5].Value = item.Status == true ? "OK" : "NG";
+                row.Cells[5].Value = item.Username;
+                row.Cells[6].Value = item.Status == true ? "OK" : "NG";
 
-                if (color)
+                if (color%2==0)
                 {
                     row.DefaultCellStyle.BackColor = Color.LightSeaGreen;
                     row.DefaultCellStyle.ForeColor = Color.Black;
@@ -231,7 +233,7 @@ namespace ManagementSoftware.GUI
                     row.DefaultCellStyle.BackColor = Color.YellowGreen;
                     row.DefaultCellStyle.ForeColor = Color.Black;
                 }
-                color = !color;
+                color++;
             }
 
 
