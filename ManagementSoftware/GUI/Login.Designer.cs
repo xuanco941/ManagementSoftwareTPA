@@ -173,7 +173,7 @@
             label3.Name = "label3";
             label3.Size = new Size(642, 104);
             label3.TabIndex = 10;
-            label3.Text = "MÁY NẠP KHÍ TPA";
+            label3.Text = "HỆ NẠP KHÍ";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1

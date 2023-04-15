@@ -77,14 +77,14 @@ namespace ManagementSoftware.GUI
         }
 
 
-        void LoadFormThongKe()
+        async void LoadFormThongKe()
         {
             panelPagination.Enabled = false;
 
             dataGridView1.Rows.Clear();
 
 
-            pagination.Set(page, timeStart, timeEnd);
+            await Task.Run(() => pagination.Set(page, timeStart, timeEnd));
 
             this.ListResults = pagination.ListResults;
             this.TotalPages = pagination.TotalPages;
@@ -116,7 +116,7 @@ namespace ManagementSoftware.GUI
                     row.Cells[4].Value = item.Username;
 
 
-                    if (i%2==0)
+                    if (i % 2 == 0)
                     {
                         row.DefaultCellStyle.BackColor = Color.LightGreen;
                         row.DefaultCellStyle.ForeColor = Color.Black;

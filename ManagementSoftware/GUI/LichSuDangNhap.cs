@@ -64,14 +64,14 @@ namespace ManagementSoftware.GUI
 
         }
 
-        void LoadFormThongKe()
+        async void LoadFormThongKe()
         {
             panelPagination.Enabled = false;
 
             dataGridView1.Rows.Clear();
 
 
-            pagination.Set(page, timeStart, timeEnd);
+            await Task.Run(() => pagination.Set(page, timeStart, timeEnd));
 
             this.ListResults = pagination.ListResults;
             this.TotalPages = pagination.TotalPages;

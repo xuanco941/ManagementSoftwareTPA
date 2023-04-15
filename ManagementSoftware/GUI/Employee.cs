@@ -41,7 +41,7 @@ namespace ManagementSoftware.GUI
             LoadDataGroup();
         }
 
-        public void LoadDataUser()
+        public async void LoadDataUser()
         {
             // get all user from model
             DataTable dtUser = new DataTable();
@@ -54,7 +54,7 @@ namespace ManagementSoftware.GUI
             dtUser.Columns.Add("Quyền");
 
 
-            List<User> list = new DALUser().GetAll();
+            List<User> list = await Task.Run(() => new DALUser().GetAll());
             foreach (var user in list)
             {
                 dtUser.Rows.Add(Common.USERS + user.UserID, user.FullName, user.Email, user.PhoneNumber, user.Username, user.Password, user.Group?.GroupName ?? "Không có quyền");

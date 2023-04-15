@@ -35,7 +35,7 @@ namespace ManagementSoftware.GUI.ResultManagement
 
         List<Machine> listDataMachine = new List<Machine>();
 
-        void GetData()
+        async void GetData()
         {
             dataDoThiASTong1.Clear();
             dataDoThiAS1.Clear();
@@ -46,7 +46,7 @@ namespace ManagementSoftware.GUI.ResultManagement
 
 
 
-            listDataMachine = dalMachine.GetAllMachinesByResultID(result.ResultID);
+            listDataMachine = await Task.Run(() => dalMachine.GetAllMachinesByResultID(result.ResultID));
 
             foreach (var item in listDataMachine)
             {

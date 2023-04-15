@@ -80,7 +80,6 @@ C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\Management
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Login.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Main.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.ResultHistory.resources
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.ResultManagement.FormData.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Section.FormAlert.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Section.FormStringConnectDatabase.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.Properties.Resources.resources
@@ -131,3 +130,4 @@ C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\Management
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\arial-unicode-ms.ttf
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\TPA\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.ResultManagement.FormDataMachine.resources

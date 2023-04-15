@@ -1,13 +1,9 @@
 ﻿using ManagementSoftware.GUI.Dashboard_Management;
 using ManagementSoftware.GUI.Section;
-using Syncfusion.Drawing;
-using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.XlsIO.Implementation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,7 +14,6 @@ namespace ManagementSoftware.GUI
 {
     public partial class Dashboard : Form
     {
-
         SettingDashboard settingDashboard;
 
         Chart chartApSuat;
@@ -31,8 +26,6 @@ namespace ManagementSoftware.GUI
         public Dashboard()
         {
             InitializeComponent();
-
-
             chartApSuat = new Chart("BIỂU ĐỒ ÁP SUẤT");
             chartTheTich = new Chart("BIỂU ĐỒ THỂ TÍCH");
 
@@ -40,16 +33,9 @@ namespace ManagementSoftware.GUI
             methodUpdateChartFormDashboard = new MethodUpdateChartFormDashboard(this, chartApSuat, chartTheTich);
 
             settingDashboard = new SettingDashboard(plc);
-
         }
 
-
-
-
-
-
-
-        private void Dashboard_Load(object sender, EventArgs e)
+        private void DashboardRepair_Load(object sender, EventArgs e)
         {
             plc.Connect();
 
@@ -65,13 +51,10 @@ namespace ManagementSoftware.GUI
 
             methodUpdateDataFormDashboard.StartUpdate();
             methodUpdateChartFormDashboard.StartUpdate();
-
         }
 
-        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        private void DashboardRepair_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-
             if (IsHandleCreated && InvokeRequired)
             {
                 BeginInvoke(new Action(() =>
@@ -93,12 +76,11 @@ namespace ManagementSoftware.GUI
             plc.Disconnect();
         }
 
-        private void button57_Click_1(object sender, EventArgs e)
+        private void buttonShowBangLoi_Click(object sender, EventArgs e)
         {
             ErrorDashboard errorDashboard = new ErrorDashboard();
             errorDashboard.ShowDialog();
         }
-
 
         private void buttonShowHeNap_Click(object sender, EventArgs e)
         {
@@ -112,29 +94,5 @@ namespace ManagementSoftware.GUI
                 Application.OpenForms.OfType<HeNap>().First().Activate();
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

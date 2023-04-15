@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using ManagementSoftware.DAL;
 using ManagementSoftware.DAL.DALPagination;
+using ManagementSoftware.GUI.Dashboard_Management;
 using ManagementSoftware.GUI.ResultManagement;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
@@ -54,8 +55,11 @@ namespace ManagementSoftware.GUI
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "No.",
-                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells            });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                HeaderText = "No.",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+            });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "ID", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = "Loại khí", SortMode = DataGridViewColumnSortMode.NotSortable });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn()
@@ -223,7 +227,7 @@ namespace ManagementSoftware.GUI
                 row.Cells[5].Value = item.Username;
                 row.Cells[6].Value = item.Status == true ? "OK" : "NG";
 
-                if (color%2==0)
+                if (color % 2 == 0)
                 {
                     row.DefaultCellStyle.BackColor = Color.LightSeaGreen;
                     row.DefaultCellStyle.ForeColor = Color.Black;
@@ -243,9 +247,9 @@ namespace ManagementSoftware.GUI
         }
 
 
-        void LoadFormThongKe()
+        async void LoadFormThongKe()
         {
-            pagination.Set(page, timeStart, timeEnd, loaiKhiDefaul, nguoiVanHanhDefaul);
+            await Task.Run(() => pagination.Set(page, timeStart, timeEnd, loaiKhiDefaul, nguoiVanHanhDefaul));
 
             this.ListResults = pagination.ListResults;
             this.TotalPages = pagination.TotalPages;
@@ -338,6 +342,20 @@ namespace ManagementSoftware.GUI
         private void buttonPrint_Click(object sender, EventArgs e)
         {
             exportData.ExportResultToPdf(ListResults);
+        }
+
+
+        private void buttonCustom1_Click_1(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<FormDataMachine>().Count() == 0)
+            {
+                FormDataMachine f = new FormDataMachine();
+                f.Show();
+            }
+            else
+            {
+                Application.OpenForms.OfType<FormDataMachine>().First().Activate();
+            }
         }
     }
 
