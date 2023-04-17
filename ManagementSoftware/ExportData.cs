@@ -687,7 +687,7 @@ namespace ManagementSoftware
 
                                 table.SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER);
 
-                                Cell cell1 = new Cell().Add(new Paragraph("Stt"));
+                                Cell cell1 = new Cell().Add(new Paragraph("No."));
                                 cell1.SetTextAlignment(TextAlignment.CENTER).SetVerticalAlignment(VerticalAlignment.MIDDLE);
                                 cell1.SetFontSize(13).SetBold();
                                 Cell cell2 = new Cell().Add(new Paragraph("Tên giàn"));
@@ -719,7 +719,7 @@ namespace ManagementSoftware
                                 {
                                     if(machine.ResultID != r)
                                     {
-                                        table.AddCell(new Cell().Add(new Paragraph($"#{Common.RESULT + machine.ResultID}").SetTextAlignment(TextAlignment.CENTER)));
+                                        table.AddCell(new Cell().Add(new Paragraph($"#{Common.RESULT + machine.ResultID}").SetBold().SetTextAlignment(TextAlignment.CENTER)));
                                         table.AddCell(new Cell().Add(new Paragraph("")));
                                         table.AddCell(new Cell().Add(new Paragraph("")));
                                         table.AddCell(new Cell().Add(new Paragraph("")));
@@ -727,7 +727,6 @@ namespace ManagementSoftware
                                         table.AddCell(new Cell().Add(new Paragraph("")));
                                         i = 1;
                                         r = machine.ResultID;
-                                        continue;
                                     }
                                     table.AddCell(new Cell().Add(new Paragraph($"{i}").SetTextAlignment(TextAlignment.CENTER)));
                                     table.AddCell(new Cell().Add(new Paragraph($"{machine.NameMachine}").SetTextAlignment(TextAlignment.CENTER)));
@@ -744,7 +743,7 @@ namespace ManagementSoftware
                                 doc.Close();
 
                             });
-                            MessageBox.Show($"Xuất file báo cáo thống kê mẻ nạp {RID} thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"Xuất file báo cáo thống kê mẻ nạp thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 

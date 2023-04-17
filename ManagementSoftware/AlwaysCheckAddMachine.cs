@@ -97,8 +97,9 @@ namespace ManagementSoftware
                 }
 
 
-                dalMachine.AddRange(new List<Machine>() { new Machine() { CreateAt = now, NameMachine = Common.GianNap1, ApSuat = Math.Round( (double)apSuatHe1,2,MidpointRounding.AwayFromZero), TheTich = Math.Round( (double)theTichHe1,2,MidpointRounding.AwayFromZero), ApSuatTong = Math.Round( (double)apSuatTong,2,MidpointRounding.AwayFromZero), ResultID = id },
-                    new Machine() { CreateAt = now, NameMachine = Common.GianNap2, ApSuat = Math.Round( (double)apSuatHe2,2,MidpointRounding.AwayFromZero), TheTich = Math.Round( (double)theTichHe2,2,MidpointRounding.AwayFromZero), ApSuatTong = Math.Round( (double)apSuatTong,2,MidpointRounding.AwayFromZero), ResultID = id } });
+                dalMachine.AddRange(new List<Machine>() {
+                    new Machine() { CreateAt = now, NameMachine = Common.GianNap2, ApSuat = Math.Round( (double)apSuatHe2,2,MidpointRounding.AwayFromZero), TheTich = Math.Round( (double)theTichHe2,2,MidpointRounding.AwayFromZero), ApSuatTong = Math.Round( (double)apSuatTong,2,MidpointRounding.AwayFromZero), ResultID = id },
+                new Machine() { CreateAt = now, NameMachine = Common.GianNap1, ApSuat = Math.Round( (double)apSuatHe1,2,MidpointRounding.AwayFromZero), TheTich = Math.Round( (double)theTichHe1,2,MidpointRounding.AwayFromZero), ApSuatTong = Math.Round( (double)apSuatTong,2,MidpointRounding.AwayFromZero), ResultID = id }});
             }
 
 

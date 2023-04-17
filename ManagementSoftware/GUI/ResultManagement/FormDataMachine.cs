@@ -202,7 +202,7 @@ namespace ManagementSoftware.GUI.ResultManagement
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-
+            exportData.ExportManyMachineToPdf(ListResults);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace ManagementSoftware.DAL.DALPagination
                     {
                         end = end.Value.AddDays(1);
                     }
-                    ListResults = dbContext.Machines.OrderByDescending(t => t.MachineID)
+                    ListResults = dbContext.Machines.Include(a => a.Result).OrderByDescending(t => t.MachineID)
                     .Where(a => (start <= a.CreateAt && end >= a.CreateAt) && (listStrings.Contains(a.ResultID.ToString()) || listStrings.Contains(Common.RESULT + a.ResultID)))
                     .Skip(position)
                     .Take(NumberRows)
@@ -52,7 +53,7 @@ namespace ManagementSoftware.DAL.DALPagination
                 }
                 else
                 {
-                    ListResults = dbContext.Machines.OrderByDescending(t => t.MachineID)
+                    ListResults = dbContext.Machines.Include(a => a.Result).OrderByDescending(t => t.MachineID)
                         .Where(a => listStrings.Contains(a.ResultID.ToString()) || listStrings.Contains(Common.RESULT + a.ResultID))
                     .Skip(position)
                     .Take(NumberRows)
@@ -69,7 +70,7 @@ namespace ManagementSoftware.DAL.DALPagination
                     {
                         end = end.Value.AddDays(1);
                     }
-                    ListResults = dbContext.Machines.OrderByDescending(t => t.MachineID)
+                    ListResults = dbContext.Machines.Include(a => a.Result).OrderByDescending(t => t.MachineID)
                     .Where(a => start <= a.CreateAt && end >= a.CreateAt)
                     .Skip(position)
                     .Take(NumberRows)
@@ -80,7 +81,7 @@ namespace ManagementSoftware.DAL.DALPagination
                 }
                 else
                 {
-                    ListResults = dbContext.Machines.OrderByDescending(t => t.MachineID)
+                    ListResults = dbContext.Machines.Include(a => a.Result).OrderByDescending(t => t.MachineID)
                     .Skip(position)
                     .Take(NumberRows)
                     .ToList();
