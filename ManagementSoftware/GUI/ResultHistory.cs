@@ -45,7 +45,6 @@ namespace ManagementSoftware.GUI
         {
             InitializeComponent();
 
-            LoadDGV();
 
         }
 
@@ -293,6 +292,8 @@ namespace ManagementSoftware.GUI
 
         private async void ResultHistory_Load(object sender, EventArgs e)
         {
+            LoadDGV();
+
 
             List<string> nguoiVanHanh = new List<string> { nguoiVanHanhDefaul };
             List<string> loaiKhi = new List<string> { loaiKhiDefaul };

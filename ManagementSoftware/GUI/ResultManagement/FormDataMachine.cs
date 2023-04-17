@@ -21,7 +21,6 @@ namespace ManagementSoftware.GUI.ResultManagement
             InitializeComponent();
             integerTextBoxSoLuongDong.MinValue = 1;
             integerTextBoxSoLuongDong.MaxValue = 1000;
-            LoadDGV();
         }
 
         void LoadDGV()
@@ -169,6 +168,7 @@ namespace ManagementSoftware.GUI.ResultManagement
 
         private async void FormDataMachine_Load(object sender, EventArgs e)
         {
+            LoadDGV();
             await LoadFormThongKe();
         }
 

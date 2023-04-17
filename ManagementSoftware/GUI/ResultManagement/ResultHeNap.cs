@@ -172,7 +172,6 @@ namespace ManagementSoftware.GUI.ResultManagement
         {
             InitializeComponent();
 
-            LoadDGV();
 
             this.result = result;
 
@@ -221,6 +220,10 @@ namespace ManagementSoftware.GUI.ResultManagement
         private async void ResultHeNap_Load(object sender, EventArgs e)
         {
             //
+            LoadDGV();
+
+
+
             labelTitle.Text = $"THÔNG TIN CÀI ĐẶT (MẺ NẠP ID-{Common.RESULT + result.ResultID})";
 
             labelNguoiVanHanh.Text = "Người vận hành : " + result.Username;

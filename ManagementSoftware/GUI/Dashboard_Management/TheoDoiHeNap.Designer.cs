@@ -86,7 +86,7 @@
             // VanCap
             // 
             VanCap.Image = Properties.Resources.VanCapXam;
-            VanCap.Location = new Point(247, 53);
+            VanCap.Location = new Point(246, 53);
             VanCap.Name = "VanCap";
             VanCap.Size = new Size(32, 45);
             VanCap.SizeMode = PictureBoxSizeMode.StretchImage;

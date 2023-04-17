@@ -84,14 +84,14 @@ namespace ManagementSoftware.GUI
 
         private void buttonShowHeNap_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.OfType<HeNap>().Count() == 0)
+            if (Application.OpenForms.OfType<TheoDoiHeNapRepair>().Count() == 0)
             {
-                HeNap f = new HeNap();
+                TheoDoiHeNapRepair f = new TheoDoiHeNapRepair();
                 f.Show();
             }
             else
             {
-                Application.OpenForms.OfType<HeNap>().First().Activate();
+                Application.OpenForms.OfType<TheoDoiHeNapRepair>().First().Activate();
             }
         }
     }

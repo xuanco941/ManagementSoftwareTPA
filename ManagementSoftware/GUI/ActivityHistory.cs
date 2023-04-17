@@ -38,7 +38,6 @@ namespace ManagementSoftware.GUI
         public ActivityHistory()
         {
             InitializeComponent();
-            LoadDGV();
 
 
         }
@@ -171,6 +170,7 @@ namespace ManagementSoftware.GUI
 
         private void ActivityHistory_Load(object sender, EventArgs e)
         {
+            LoadDGV();
             LoadFormThongKe();
         }
     }

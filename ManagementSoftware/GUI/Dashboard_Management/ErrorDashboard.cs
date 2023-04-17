@@ -30,7 +30,6 @@ namespace ManagementSoftware.GUI
         public ErrorDashboard()
         {
             InitializeComponent();
-            LoadDGV();
         }
         void LoadDGV()
         {
@@ -112,6 +111,7 @@ namespace ManagementSoftware.GUI
 
         private void ErrorDashboard_Load(object sender, EventArgs e)
         {
+            LoadDGV();
             LoadFormThongKe();
         }
 

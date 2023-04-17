@@ -28,7 +28,6 @@ namespace ManagementSoftware.GUI
         public LichSuDangNhap()
         {
             InitializeComponent();
-            LoadDGV();
         }
         void LoadDGV()
         {
@@ -115,6 +114,7 @@ namespace ManagementSoftware.GUI
 
         private void LichSuDangNhap_Load(object sender, EventArgs e)
         {
+            LoadDGV();
             LoadFormThongKe();
         }
 

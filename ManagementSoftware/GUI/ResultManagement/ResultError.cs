@@ -22,7 +22,6 @@ namespace ManagementSoftware.GUI.ResultManagement
         {
             InitializeComponent();
             this.result = result;
-            LoadDGV();
         }
 
 
@@ -89,6 +88,7 @@ namespace ManagementSoftware.GUI.ResultManagement
 
         private void ResultError_Load(object sender, EventArgs e)
         {
+            LoadDGV();
             labelBangLoi.Text = "BẢNG LỖI MẺ NẠP " + Common.RESULT + result.ResultID;
             LoadFormThongKe();
         }

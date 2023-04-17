@@ -293,6 +293,16 @@ namespace ManagementSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EtekXamRepair {
+            get {
+                object obj = ResourceManager.GetObject("EtekXamRepair", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Remove_278742 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Remove_278742", resourceCulture);
