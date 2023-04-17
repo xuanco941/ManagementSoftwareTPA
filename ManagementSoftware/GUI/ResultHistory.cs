@@ -287,7 +287,7 @@ namespace ManagementSoftware.GUI
 
         private void buttonGoto_Click(object sender, EventArgs e)
         {
-            this.page = int.Parse(pageNumberGoto.Text);
+            this.page = Convert.ToInt32(pageNumberGoto.IntegerValue);
             LoadFormThongKe();
         }
 
@@ -321,7 +321,7 @@ namespace ManagementSoftware.GUI
             nguoiVanHanhDefaul = comboBoxNguoiVanHanh.Text;
             page = 1;
             timeStart = null;
-            TimeEnd = null;
+            timeEnd = null;
             TotalPages = 0;
 
             LoadFormThongKe();

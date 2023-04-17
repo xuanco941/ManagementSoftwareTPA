@@ -145,7 +145,7 @@ namespace ManagementSoftware.GUI
 
         private void buttonGoto_Click(object sender, EventArgs e)
         {
-            this.page = int.Parse(pageNumberGoto.Text);
+            this.page = Convert.ToInt32(pageNumberGoto.IntegerValue);
             LoadFormThongKe();
         }
     }

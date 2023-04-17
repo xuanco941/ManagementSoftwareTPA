@@ -15,9 +15,9 @@ namespace ManagementSoftware.DAL.DALPagination
         public int TotalPages { get; set; } = 1;
         public int TotalResults { get; set; } = 0;
         public List<ResultWarning> ListResults { get; set; } = new List<ResultWarning>();
+        DataBaseContext dbContext = new DataBaseContext();
         public void Set(int page, DateTime? start, DateTime? end)
         {
-            DataBaseContext dbContext = new DataBaseContext();
 
             int position = (page - 1) * NumberRows;
 

@@ -35,7 +35,7 @@ namespace ManagementSoftware.GUI.ResultManagement
 
         List<Machine> listDataMachine = new List<Machine>();
 
-        async void GetData()
+        async Task GetData()
         {
             dataDoThiASTong1.Clear();
             dataDoThiAS1.Clear();
@@ -218,7 +218,7 @@ namespace ManagementSoftware.GUI.ResultManagement
             }
         }
 
-        private void ResultHeNap_Load(object sender, EventArgs e)
+        private async void ResultHeNap_Load(object sender, EventArgs e)
         {
             //
             labelTitle.Text = $"THÔNG TIN CÀI ĐẶT (MẺ NẠP ID-{Common.RESULT + result.ResultID})";
@@ -247,7 +247,7 @@ namespace ManagementSoftware.GUI.ResultManagement
             commonGUI.ShowFormOnPanel(panelTheTichChart, chartGian2);
 
 
-            GetData();
+            await GetData();
 
             LoadFormThongKe();
 
