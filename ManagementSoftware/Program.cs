@@ -29,7 +29,7 @@ namespace ManagementSoftware
 
 
 
-            
+
 
             using (var context = new DataBaseContext())
             {
@@ -72,7 +72,6 @@ namespace ManagementSoftware
                 AlwaysCheckAddMachine alwaysCheckAddMachine = new AlwaysCheckAddMachine();
                 alwaysCheckAddMachine.ConnectPLC();
                 alwaysCheckAddMachine.StartTimer();
-
 
                 Application.Run(main);
 

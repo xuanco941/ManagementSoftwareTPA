@@ -331,12 +331,17 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             });
         }
 
-        private void TheoDoiHeNapRepair_Load(object sender, EventArgs e)
+        private async void TheoDoiHeNapRepair_Load(object sender, EventArgs e)
         {
-            if (plc.Connect() == true)
+
+            await Task.Run(() =>
             {
-                timerUpdateGUI.StartTimer(false);
-            }
+                if (plc.Connect() == true)
+                {
+                    timerUpdateGUI.StartTimer(false);
+                }
+            });
         }
+
     }
 }

@@ -33,7 +33,7 @@ namespace ManagementSoftware.GUI
             settingDashboard = new SettingDashboard(plc);
         }
 
-        private void DashboardRepair_Load(object sender, EventArgs e)
+        private async void DashboardRepair_Load(object sender, EventArgs e)
         {
 
             MethodCommonGUI commonGUI = new MethodCommonGUI();
@@ -46,12 +46,15 @@ namespace ManagementSoftware.GUI
 
 
 
-            methodUpdateDataFormDashboard.StartUpdate();
-            methodUpdateChartFormDashboard.StartUpdate();
+            await Task.Run(() => methodUpdateDataFormDashboard.StartUpdate());
+            await Task.Run(() => methodUpdateChartFormDashboard.StartUpdate());
         }
 
-        private void DashboardRepair_FormClosing(object sender, FormClosingEventArgs e)
+        private async void DashboardRepair_FormClosing(object sender, FormClosingEventArgs e)
         {
+            await Task.Run(() => methodUpdateDataFormDashboard.StopUpdate());
+            await Task.Run(() => methodUpdateChartFormDashboard.StopUpdate());
+
             if (IsHandleCreated && InvokeRequired)
             {
                 BeginInvoke(new Action(() =>
@@ -68,8 +71,7 @@ namespace ManagementSoftware.GUI
                 chartApSuat.Close();
                 chartTheTich.Close();
             }
-            methodUpdateDataFormDashboard.StopUpdate();
-            methodUpdateChartFormDashboard.StopUpdate();
+
         }
 
         private void buttonShowBangLoi_Click(object sender, EventArgs e)

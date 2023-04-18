@@ -17,16 +17,26 @@ namespace ManagementSoftware.GUI
         PLCBeckhOff plc;
         public SettingDashboard(PLCBeckhOff plc)
         {
-            InitializeComponent();
             this.plc = plc;
+            InitializeComponent();
         }
 
         private async void SettingDashboard_Load(object sender, EventArgs e)
         {
-            if(plc.CheckState() == true)
+            if( await Task.Run(() => plc.CheckState()) == true)
             {
                 await LoadData();
             }
+            //else
+            //{
+            //    labelTheTichCanNap.Text =  Common.ERR;
+            //    labelTheTichTieuChuan.Text = Common.ERR;
+            //    labelApSuatTieuChuan.Text = Common.ERR;
+            //    label1HeSoTieuChuan.Text = Common.ERR;
+            //    labelThoiGianTrichMau.Text = Common.ERR;
+            //    labelSoLuongBinhHe1.Text = Common.ERR;
+            //    labelSoLuongBinhHe2.Text = Common.ERR;
+            //}
         }
 
 

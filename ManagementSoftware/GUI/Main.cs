@@ -105,11 +105,18 @@ namespace ManagementSoftware.GUI
         }
 
 
-        private void buttonDashboard_Click(object sender, EventArgs e)
+        private async void buttonDashboard_Click(object sender, EventArgs e)
         {
             Dashboard form = new Dashboard(plc);
-            //ChangeFormContent(form, sender);
             ChangeForm(form, sender);
+
+            bool? con = await Task.Run(() => plc.Connect());
+            if (con == null || con == false)
+            {
+                Alert("Kết nối tới PLC thất bại.", FormAlert.enmType.Error);
+            }
+
+
         }
 
 
