@@ -8,7 +8,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ManagementSoftware
 {
@@ -79,7 +78,6 @@ namespace ManagementSoftware
 
             if (plc.CheckState() == true)
             {
-                plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, true);
 
                 bool? isLogIn = plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Dang_nhap_thanh_cong);
 

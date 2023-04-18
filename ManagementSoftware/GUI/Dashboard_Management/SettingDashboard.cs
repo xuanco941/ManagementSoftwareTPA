@@ -21,9 +21,12 @@ namespace ManagementSoftware.GUI
             this.plc = plc;
         }
 
-        private void SettingDashboard_Load(object sender, EventArgs e)
+        private async void SettingDashboard_Load(object sender, EventArgs e)
         {
-            LoadData();
+            if(plc.CheckState() == true)
+            {
+                await LoadData();
+            }
         }
 
 

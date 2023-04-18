@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSoftware.GUI.Section;
 using Syncfusion.XPS;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 
 namespace ManagementSoftware.GUI
@@ -108,7 +107,7 @@ namespace ManagementSoftware.GUI
 
         private void buttonDashboard_Click(object sender, EventArgs e)
         {
-            Dashboard form = new Dashboard();
+            Dashboard form = new Dashboard(plc);
             //ChangeFormContent(form, sender);
             ChangeForm(form, sender);
         }
@@ -152,7 +151,7 @@ namespace ManagementSoftware.GUI
             ChangeForm(form, sender);
         }
 
-        private void buttonDangXuat_Click(object sender, EventArgs e)
+        private async void buttonDangXuat_Click(object sender, EventArgs e)
         {
 
 
@@ -169,12 +168,8 @@ namespace ManagementSoftware.GUI
                 oldForm.Dispose();
             }
 
-            PLCBeckhOff plc = new PLCBeckhOff();
 
-            if (plc.Connect() == true)
-            {
-                plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, false);
-            }
+            await Task.Run(() => plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, false));
 
             Common.USERSESSION = null;
 
@@ -196,12 +191,12 @@ namespace ManagementSoftware.GUI
 
 
 
+        PLCBeckhOff plc = new PLCBeckhOff();
 
 
 
 
-
-        private void Main_Load(object sender, EventArgs e)
+        private async void Main_Load(object sender, EventArgs e)
         {
 
             if (Common.USERSESSION != null && Common.USERSESSION.Group != null && Common.USERSESSION.Group.IsManagementUser == false)
@@ -220,19 +215,26 @@ namespace ManagementSoftware.GUI
             labelHeaderUserPC.Text = "Tài khoản PC: " + (Common.USERSESSION?.Username ?? "");
             labelHeaderUserPLC.Text = "Tài khoản PLC: " + (Common.UserCurrent?.Username ?? "");
 
+            bool? con = await Task.Run(() => plc.Connect());
+            if(con!=null && con == true)
+            {
+                await Task.Run(() => plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, true));
+                Alert("Kết nối tới PLC thành công.", FormAlert.enmType.Success);
+            }
+            else
+            {
+                Alert("Kết nối tới PLC thất bại.", FormAlert.enmType.Error);
+            }
+
         }
 
 
 
-        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        private async void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            PLCBeckhOff plc = new PLCBeckhOff();
 
-            if (plc.Connect() == true)
-            {
-                plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, false);
-            }
-            //new MethodCommonGUI().CloseFormInPanel(panelContent);
+            await Task.Run(() => plc.WriteAVariableNumber(AddressPLC.DATA_PC_Trang_Thai_PC, false));
+            new MethodCommonGUI().CloseFormInPanel(panelContent);
 
             Common.USERSESSION = null;
 

@@ -19,11 +19,9 @@ namespace ManagementSoftware.GUI
         Chart chartApSuat;
         Chart chartTheTich;
 
-        PLCBeckhOff plc = new PLCBeckhOff();
-
         MethodUpdateDataFormDashboard methodUpdateDataFormDashboard;
         MethodUpdateChartFormDashboard methodUpdateChartFormDashboard;
-        public Dashboard()
+        public Dashboard(PLCBeckhOff plc )
         {
             InitializeComponent();
             chartApSuat = new Chart("BIỂU ĐỒ ÁP SUẤT");
@@ -37,7 +35,6 @@ namespace ManagementSoftware.GUI
 
         private void DashboardRepair_Load(object sender, EventArgs e)
         {
-            plc.Connect();
 
             MethodCommonGUI commonGUI = new MethodCommonGUI();
 
@@ -73,7 +70,6 @@ namespace ManagementSoftware.GUI
             }
             methodUpdateDataFormDashboard.StopUpdate();
             methodUpdateChartFormDashboard.StopUpdate();
-            plc.Disconnect();
         }
 
         private void buttonShowBangLoi_Click(object sender, EventArgs e)
