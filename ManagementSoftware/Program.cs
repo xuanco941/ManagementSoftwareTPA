@@ -54,31 +54,30 @@ namespace ManagementSoftware
             }
 
 
-            Application.Run(new Main());
-            //Application.Run(new Login());
+            Application.Run(new Login());
 
-            //if (Common.USERSESSION != null)
-            //{
-            //    Main main = new Main();
+            if (Common.USERSESSION != null)
+            {
+                Main main = new Main();
 
-            //    AlwaysCheckConnection alwaysCheckConnection = new AlwaysCheckConnection(main);
-            //    alwaysCheckConnection.ConnectPLC();
-            //    alwaysCheckConnection.StartTimer();
-
-
-            //    AlwaysCheckResult alwaysCheckResult = new AlwaysCheckResult();
-            //    alwaysCheckResult.ConnectPLC();
-            //    alwaysCheckResult.StartTimer();
-
-            //    AlwaysCheckAddMachine alwaysCheckAddMachine = new AlwaysCheckAddMachine();
-            //    alwaysCheckAddMachine.ConnectPLC();
-            //    alwaysCheckAddMachine.StartTimer();
+                AlwaysCheckConnection alwaysCheckConnection = new AlwaysCheckConnection(main);
+                alwaysCheckConnection.ConnectPLC();
+                alwaysCheckConnection.StartTimer();
 
 
-            //    Application.Run(main);
+                AlwaysCheckResult alwaysCheckResult = new AlwaysCheckResult();
+                alwaysCheckResult.ConnectPLC();
+                alwaysCheckResult.StartTimer();
 
-                   
-            //}
+                AlwaysCheckAddMachine alwaysCheckAddMachine = new AlwaysCheckAddMachine();
+                alwaysCheckAddMachine.ConnectPLC();
+                alwaysCheckAddMachine.StartTimer();
+
+
+                Application.Run(main);
+
+
+            }
         }
     }
 }
