@@ -31,7 +31,6 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             label1 = new Label();
-            textBoxASHeNap = new TextBox();
             CB10 = new CusPictureBox();
             CB9 = new CusPictureBox();
             CB8 = new CusPictureBox();
@@ -57,10 +56,8 @@
             ong1 = new PictureBox();
             VanCap = new PictureBox();
             DauOng = new PictureBox();
-            textBoxASTong = new TextBox();
             panel2 = new Panel();
             label2 = new Label();
-            textBoxASHeNap2 = new TextBox();
             CB102 = new CusPictureBox();
             CB92 = new CusPictureBox();
             CB82 = new CusPictureBox();
@@ -86,7 +83,10 @@
             ong12 = new PictureBox();
             VanCap2 = new PictureBox();
             DauOng2 = new PictureBox();
-            textBoxASTong2 = new TextBox();
+            textBoxASHeNap2 = new Label();
+            this.textBoxASHeNap = new Label();
+            textBoxASTong = new Label();
+            textBoxASTong2 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CB10).BeginInit();
@@ -162,8 +162,9 @@
             // 
             panel1.BackgroundImage = Properties.Resources.EtekXamRepair;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(textBoxASTong);
+            panel1.Controls.Add(this.textBoxASHeNap);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(textBoxASHeNap);
             panel1.Controls.Add(CB10);
             panel1.Controls.Add(CB9);
             panel1.Controls.Add(CB8);
@@ -189,7 +190,6 @@
             panel1.Controls.Add(ong1);
             panel1.Controls.Add(VanCap);
             panel1.Controls.Add(DauOng);
-            panel1.Controls.Add(textBoxASTong);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
@@ -206,16 +206,6 @@
             label1.Size = new Size(116, 25);
             label1.TabIndex = 54;
             label1.Text = "GIÀN NẠP 1";
-            // 
-            // textBoxASHeNap
-            // 
-            textBoxASHeNap.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxASHeNap.Location = new Point(479, 20);
-            textBoxASHeNap.Name = "textBoxASHeNap";
-            textBoxASHeNap.ReadOnly = true;
-            textBoxASHeNap.Size = new Size(64, 29);
-            textBoxASHeNap.TabIndex = 1;
-            textBoxASHeNap.TextAlign = HorizontalAlignment.Center;
             // 
             // CB10
             // 
@@ -457,22 +447,13 @@
             DauOng.TabIndex = 2;
             DauOng.TabStop = false;
             // 
-            // textBoxASTong
-            // 
-            textBoxASTong.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxASTong.Location = new Point(120, 17);
-            textBoxASTong.Name = "textBoxASTong";
-            textBoxASTong.ReadOnly = true;
-            textBoxASTong.Size = new Size(64, 29);
-            textBoxASTong.TabIndex = 0;
-            textBoxASTong.TextAlign = HorizontalAlignment.Center;
-            // 
             // panel2
             // 
             panel2.BackgroundImage = Properties.Resources.EtekXamRepair;
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Controls.Add(label2);
+            panel2.Controls.Add(textBoxASTong2);
             panel2.Controls.Add(textBoxASHeNap2);
+            panel2.Controls.Add(label2);
             panel2.Controls.Add(CB102);
             panel2.Controls.Add(CB92);
             panel2.Controls.Add(CB82);
@@ -498,7 +479,6 @@
             panel2.Controls.Add(ong12);
             panel2.Controls.Add(VanCap2);
             panel2.Controls.Add(DauOng2);
-            panel2.Controls.Add(textBoxASTong2);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 445);
             panel2.Name = "panel2";
@@ -515,16 +495,6 @@
             label2.Size = new Size(119, 25);
             label2.TabIndex = 81;
             label2.Text = "GIÀN NẠP 2";
-            // 
-            // textBoxASHeNap2
-            // 
-            textBoxASHeNap2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxASHeNap2.Location = new Point(479, 20);
-            textBoxASHeNap2.Name = "textBoxASHeNap2";
-            textBoxASHeNap2.ReadOnly = true;
-            textBoxASHeNap2.Size = new Size(64, 29);
-            textBoxASHeNap2.TabIndex = 55;
-            textBoxASHeNap2.TextAlign = HorizontalAlignment.Center;
             // 
             // CB102
             // 
@@ -766,15 +736,45 @@
             DauOng2.TabIndex = 56;
             DauOng2.TabStop = false;
             // 
+            // textBoxASHeNap2
+            // 
+            textBoxASHeNap2.AutoSize = true;
+            textBoxASHeNap2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxASHeNap2.Location = new Point(479, 20);
+            textBoxASHeNap2.Name = "textBoxASHeNap2";
+            textBoxASHeNap2.Size = new Size(61, 25);
+            textBoxASHeNap2.TabIndex = 82;
+            textBoxASHeNap2.Text = "00.00";
+            // 
+            // textBoxASHeNap
+            // 
+            this.textBoxASHeNap.AutoSize = true;
+            this.textBoxASHeNap.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            this.textBoxASHeNap.Location = new Point(479, 20);
+            this.textBoxASHeNap.Name = "textBoxASHeNap";
+            this.textBoxASHeNap.Size = new Size(61, 25);
+            this.textBoxASHeNap.TabIndex = 83;
+            this.textBoxASHeNap.Text = "00.00";
+            // 
+            // textBoxASTong
+            // 
+            textBoxASTong.AutoSize = true;
+            textBoxASTong.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxASTong.Location = new Point(118, 20);
+            textBoxASTong.Name = "textBoxASTong";
+            textBoxASTong.Size = new Size(61, 25);
+            textBoxASTong.TabIndex = 84;
+            textBoxASTong.Text = "00.00";
+            // 
             // textBoxASTong2
             // 
-            textBoxASTong2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxASTong2.Location = new Point(120, 17);
+            textBoxASTong2.AutoSize = true;
+            textBoxASTong2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxASTong2.Location = new Point(118, 20);
             textBoxASTong2.Name = "textBoxASTong2";
-            textBoxASTong2.ReadOnly = true;
-            textBoxASTong2.Size = new Size(64, 29);
-            textBoxASTong2.TabIndex = 54;
-            textBoxASTong2.TextAlign = HorizontalAlignment.Center;
+            textBoxASTong2.Size = new Size(61, 25);
+            textBoxASTong2.TabIndex = 85;
+            textBoxASTong2.Text = "00.00";
             // 
             // TheoDoiHeNapRepair
             // 
@@ -852,8 +852,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
         private Panel panel2;
-        private TextBox textBoxASHeNap;
-        private TextBox textBoxASTong;
         private PictureBox DauOng;
         private PictureBox VanCap;
         private PictureBox ong1;
@@ -879,7 +877,6 @@
         private PictureBox BangTai3;
         private PictureBox BangTai2;
         private PictureBox BangTai1;
-        private TextBox textBoxASHeNap2;
         private CusPictureBox CB102;
         private CusPictureBox CB92;
         private CusPictureBox CB82;
@@ -905,8 +902,11 @@
         private PictureBox ong12;
         private PictureBox VanCap2;
         private PictureBox DauOng2;
-        private TextBox textBoxASTong2;
         private Label label1;
         private Label label2;
+        private Label textBoxASHeNap2;
+        private Label textBoxASTong;
+        private Label textBoxASHeNap;
+        private Label textBoxASTong2;
     }
 }
