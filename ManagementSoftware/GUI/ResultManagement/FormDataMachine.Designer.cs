@@ -281,15 +281,16 @@
             // 
             // integerTextBoxSoLuongDong
             // 
-            integerTextBoxSoLuongDong.BeforeTouchSize = new Size(66, 35);
+            integerTextBoxSoLuongDong.BackGroundColor = Color.Gainsboro;
+            integerTextBoxSoLuongDong.BeforeTouchSize = new Size(60, 38);
             integerTextBoxSoLuongDong.BorderStyle = BorderStyle.FixedSingle;
             integerTextBoxSoLuongDong.Dock = DockStyle.Fill;
-            integerTextBoxSoLuongDong.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            integerTextBoxSoLuongDong.Font = new Font("Segoe UI", 17.25F, FontStyle.Regular, GraphicsUnit.Point);
             integerTextBoxSoLuongDong.IntegerValue = 1L;
-            integerTextBoxSoLuongDong.Location = new Point(288, 0);
+            integerTextBoxSoLuongDong.Location = new Point(280, 0);
             integerTextBoxSoLuongDong.Margin = new Padding(4, 3, 4, 3);
             integerTextBoxSoLuongDong.Name = "integerTextBoxSoLuongDong";
-            integerTextBoxSoLuongDong.Size = new Size(52, 39);
+            integerTextBoxSoLuongDong.Size = new Size(60, 38);
             integerTextBoxSoLuongDong.TabIndex = 8;
             integerTextBoxSoLuongDong.Text = "1";
             integerTextBoxSoLuongDong.TextAlign = HorizontalAlignment.Center;
@@ -301,7 +302,7 @@
             label3.ForeColor = Color.LightGray;
             label3.Location = new Point(0, 0);
             label3.Name = "label3";
-            label3.Size = new Size(288, 39);
+            label3.Size = new Size(280, 39);
             label3.TabIndex = 0;
             label3.Text = "- Số lượng dòng hiển thị tối đa : ";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -471,7 +472,7 @@
             // 
             // pageNumberGoto
             // 
-            pageNumberGoto.BeforeTouchSize = new Size(66, 35);
+            pageNumberGoto.BeforeTouchSize = new Size(60, 38);
             pageNumberGoto.BorderStyle = BorderStyle.FixedSingle;
             pageNumberGoto.Dock = DockStyle.Top;
             pageNumberGoto.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -734,7 +735,7 @@
             // inputNumPageGo
             // 
             inputNumPageGo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inputNumPageGo.BeforeTouchSize = new Size(66, 35);
+            inputNumPageGo.BeforeTouchSize = new Size(60, 38);
             inputNumPageGo.BorderColor = SystemColors.ActiveCaption;
             inputNumPageGo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             inputNumPageGo.IntegerValue = 1L;
