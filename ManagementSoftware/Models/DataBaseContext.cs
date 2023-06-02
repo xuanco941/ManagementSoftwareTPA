@@ -123,10 +123,10 @@ namespace ManagementSoftware.Models
                 }
                 return true;
 
-            }
+        }
             catch
             {
-                return false;
+                throw;
             }
 
 

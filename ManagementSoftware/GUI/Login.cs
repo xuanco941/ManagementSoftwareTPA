@@ -16,18 +16,17 @@ namespace ManagementSoftware.GUI
     public partial class Login : Form
     {
 
-        public Login()
+        public Login(string name)
         {
             InitializeComponent();
             this.ActiveControl = textBoxMatKhau;
+            this.label3.Text = (this.label3.Text + " " + name).ToUpper();
             //buttonChangeStringConnect.Enabled = false;
         }
 
 
         private void LoginActive()
         {
-            Common.TenHeNap = comboBox1.Text;
-
             string Username = textBoxTaiKhoan.Texts.Trim();
             string Password = textBoxMatKhau.Texts.Trim();
             if (String.IsNullOrEmpty(Username) == true && String.IsNullOrEmpty(Password) == true)
@@ -83,8 +82,11 @@ namespace ManagementSoftware.GUI
         private void Login_Load(object sender, EventArgs e)
         {
             textBoxTaiKhoan.Texts = "admin";
-            comboBox1.DataSource = new List<string>() { Common.Oxy, Common.Nitrogen };
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new FormConnectTwincat().ShowDialog();
+        }
     }
 }

@@ -27,21 +27,28 @@ namespace ManagementSoftware
             Common.ConnectionString = text;
 
 
+            Common.TenHeNap = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "LoaiKhi.txt"));
+            
 
-
-
-
-            using (var context = new DataBaseContext())
+            try
             {
-                if (context.CheckDatabaseExists() == false)
+                using (var context = new DataBaseContext())
                 {
-                    if (context.CreateDatabase() == false)
+                    if (context.CheckDatabaseExists() == false)
                     {
-                        MessageBox.Show("Lỗi khởi tạo cơ sở dữ liệu, hãy thử xem lại đường dẫn kết nối của bạn.", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (context.CreateDatabase() == false)
+                        {
+                            MessageBox.Show("Lỗi khởi tạo cơ sở dữ liệu, hãy thử xem lại đường dẫn kết nối của bạn.", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                }
 
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
 
             try
@@ -54,7 +61,7 @@ namespace ManagementSoftware
             }
 
 
-            Application.Run(new Login());
+            Application.Run(new Login(Common.TenHeNap));
 
             if (Common.USERSESSION != null)
             {

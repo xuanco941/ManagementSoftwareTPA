@@ -9504,11 +9504,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\TPA\\ManagementSoftwareTPA\\ManagementSoftware\\ManagementSoftware.csproj",
+      "projectUniqueName": "C:\\Users\\xuanc\\Desktop\\ManagementSoftwareTPA\\ManagementSoftware\\ManagementSoftware.csproj",
       "projectName": "ManagementSoftware",
-      "projectPath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\TPA\\ManagementSoftwareTPA\\ManagementSoftware\\ManagementSoftware.csproj",
+      "projectPath": "C:\\Users\\xuanc\\Desktop\\ManagementSoftwareTPA\\ManagementSoftware\\ManagementSoftware.csproj",
       "packagesPath": "C:\\Users\\xuanc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\TPA\\ManagementSoftwareTPA\\ManagementSoftware\\obj\\",
+      "outputPath": "C:\\Users\\xuanc\\Desktop\\ManagementSoftwareTPA\\ManagementSoftware\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xuanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9613,7 +9613,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

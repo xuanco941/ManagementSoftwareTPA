@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TwinCAT.Ads;
 
 namespace ManagementSoftware
 {
@@ -20,14 +21,12 @@ namespace ManagementSoftware
         public static Font FontHeaderColumnDGV = new Font("Segoe UI", 12, FontStyle.Regular);
 
         //Connect
-        public static string ConnectionString = @"Data Source=DESKTOP-NU3N490\SQLEXPRESS;Initial Catalog=ManagementSoftwareTPA;User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=True";
+        public static string ConnectionString = @"Data Source=DESKTOP-U4GO50V\SQLEXPRESS;Initial Catalog=TPA_Oxy;User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=true";
 
         public const string LicenseSyncfusion = "NzE5NjE0QDMyMzAyZTMyMmUzMFlqaFh1Qk9GKytyNHNaaE16dktXZFg0cERMU2Qvai9KQmdEYUZSL0U4OE09";
 
         //App
         public static User? USERSESSION { get; set; } = null;
-
-
 
 
 
@@ -77,6 +76,11 @@ namespace ManagementSoftware
         //Name Machine
         public const string GianNap1 = "GIÀN NẠP 1";
         public const string GianNap2 = "GIÀN NẠP 2";
+
+
+        public static string AMSID = "5.100.108.136.1.1";
+        public static int PORT = 851;
+
 
     }
 }

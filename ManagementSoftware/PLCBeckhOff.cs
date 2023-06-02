@@ -10,7 +10,7 @@ namespace ManagementSoftware
 {
     public class PLCBeckhOff
     {
-        public AmsAddress amsAddress = new AmsAddress(new AmsNetId("5.100.108.136.1.1"), 851);
+        public AmsAddress amsAddress = new AmsAddress(new AmsNetId(Common.AMSID), Common.PORT);
         public AdsClient client;
 
         public PLCBeckhOff()
