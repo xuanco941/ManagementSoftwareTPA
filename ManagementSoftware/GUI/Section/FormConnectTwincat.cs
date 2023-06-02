@@ -25,15 +25,30 @@ namespace ManagementSoftware.GUI
         {
             try
             {
-                if(string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
+                if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
                 {
                     MessageBox.Show("Không để trống các ô trên.", "Lỗi Cú Pháp", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                Common.AMSID = textBox1.Text;
-                Common.PORT = int.Parse(textBox2.Text);
-                Common.TenHeNap = textBox3.Text;
+                else
+                {
+                    var path1 = Path.Combine(Directory.GetCurrentDirectory(), "amsid.txt");
+                    File.WriteAllText(path1, String.Empty);
+                    File.WriteAllText(path1, textBox1.Text);
+
+                    var path2 = Path.Combine(Directory.GetCurrentDirectory(), "port.txt");
+                    File.WriteAllText(path2, String.Empty);
+                    File.WriteAllText(path2, textBox2.Text);
+
+                    var path3 = Path.Combine(Directory.GetCurrentDirectory(), "LoaiKhi.txt");
+                    File.WriteAllText(path3, String.Empty);
+                    File.WriteAllText(path3, textBox3.Text);
+
+                    Application.Restart();
+                }
+
             }
-            catch {
+            catch
+            {
                 MessageBox.Show("Sai cú pháp, Port phải là số.", "Lỗi Cú Pháp", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

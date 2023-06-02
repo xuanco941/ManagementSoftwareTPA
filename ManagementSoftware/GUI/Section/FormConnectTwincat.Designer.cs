@@ -99,7 +99,6 @@
             // 
             // textBox3
             // 
-            textBox3.Enabled = false;
             textBox3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.Location = new Point(96, 235);
             textBox3.Name = "textBox3";

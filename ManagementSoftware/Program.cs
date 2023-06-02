@@ -22,13 +22,24 @@ namespace ManagementSoftware
             //Syncfusion
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(Common.LicenseSyncfusion);
 
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "ConnectStringDB.txt");
-            string text = File.ReadAllText(path);
-            Common.ConnectionString = text;
+            try
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "ConnectStringDB.txt");
+                string text = File.ReadAllText(path);
+                Common.ConnectionString = text;
 
 
-            Common.TenHeNap = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "LoaiKhi.txt"));
-            
+                Common.TenHeNap = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "LoaiKhi.txt"));
+                Common.AMSID = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "amsid.txt"));
+                Common.PORT = int.Parse(File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "port.txt")));
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
 
             try
             {

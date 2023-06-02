@@ -268,3 +268,5 @@ C:\Users\xuanc\Desktop\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0
 C:\Users\xuanc\Desktop\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.genruntimeconfig.cache
 C:\Users\xuanc\Desktop\ManagementSoftwareTPA\ManagementSoftware\obj\Debug\net6.0-windows\ref\ManagementSoftware.dll
 C:\Users\xuanc\Desktop\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\LoaiKhi.txt
+C:\Users\xuanc\Desktop\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\amsid.txt
+C:\Users\xuanc\Desktop\ManagementSoftwareTPA\ManagementSoftware\bin\Debug\net6.0-windows\port.txt
