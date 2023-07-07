@@ -78,10 +78,6 @@ namespace ManagementSoftware
             {
                 Main main = new Main();
 
-                AlwaysCheckConnection alwaysCheckConnection = new AlwaysCheckConnection(main);
-                alwaysCheckConnection.ConnectPLC();
-                alwaysCheckConnection.StartTimer();
-
 
                 AlwaysCheckResult alwaysCheckResult = new AlwaysCheckResult();
                 alwaysCheckResult.ConnectPLC();

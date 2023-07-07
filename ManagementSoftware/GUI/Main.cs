@@ -205,7 +205,7 @@ namespace ManagementSoftware.GUI
 
         private async void Main_Load(object sender, EventArgs e)
         {
-
+            SetLabelHeaderUserPLC();
             if (Common.USERSESSION != null && Common.USERSESSION.Group != null && Common.USERSESSION.Group.IsManagementUser == false)
             {
                 buttonEmployee.Enabled = false;

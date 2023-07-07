@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.BUS;
+using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
 using System;
@@ -38,9 +39,22 @@ namespace ManagementSoftware.GUI
                 try
                 {
                     // Lưu quyền và thông tin của user vào 2 biến USERSESSION và GROUPSESSION
-                    if (BUSUser.AuthLogin(Username, Password) == true)
+                    User? user = new DALUser().AuthLogin(Username, Password);
+                    Common.USERSESSION = user;
+                    if (user != null)
                     {
-                        this.Close();
+                        UserWorking userWorking = new UserWorking() { Username = user.Username, Fullname = user.FullName };
+                        UserWorking? userWorkingAdded = new DALUserWorking().Add(userWorking);
+                        if (userWorkingAdded != null)
+                        {
+                            Common.UserCurrent = userWorkingAdded;
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sai tài khoản hoặc mật khẩu.", "Lỗi Đăng Nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
                     }
                     else
                     {

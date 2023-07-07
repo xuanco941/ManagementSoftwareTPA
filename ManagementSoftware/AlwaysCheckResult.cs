@@ -39,7 +39,17 @@ namespace ManagementSoftware
 
         public void ConnectPLC()
         {
-            plc.Connect();
+            try
+            {
+                plc.Connect();
+                plc.WriteAVariableNumber(AddressPLC.DATA_PC_Dang_nhap_thanh_cong, true);
+            }
+            catch
+            {
+
+            }
+
+
         }
         public void DisconnectPLC()
         {
