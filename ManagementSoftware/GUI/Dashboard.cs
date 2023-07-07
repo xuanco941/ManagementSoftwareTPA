@@ -21,7 +21,7 @@ namespace ManagementSoftware.GUI
 
         MethodUpdateDataFormDashboard methodUpdateDataFormDashboard;
         MethodUpdateChartFormDashboard methodUpdateChartFormDashboard;
-        public Dashboard(PLCBeckhOff plc )
+        public Dashboard(PLCBeckhOff plc)
         {
             InitializeComponent();
             chartApSuat = new Chart("BIỂU ĐỒ ÁP SUẤT");

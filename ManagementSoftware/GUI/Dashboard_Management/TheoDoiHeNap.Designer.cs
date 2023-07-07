@@ -56,6 +56,7 @@
             textBoxASTong = new TextBox();
             textBoxASHeNap = new TextBox();
             labelHeader = new Label();
+            labeltrangthaiAuto = new Label();
             ((System.ComponentModel.ISupportInitialize)VanCap).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DauOng).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ong1).BeginInit();
@@ -342,6 +343,17 @@
             labelHeader.Text = "QUY TRÌNH CÔNG NGHỆ GIÀN NẠP";
             labelHeader.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // labeltrangthaiAuto
+            // 
+            labeltrangthaiAuto.AutoSize = true;
+            labeltrangthaiAuto.BackColor = Color.Lime;
+            labeltrangthaiAuto.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labeltrangthaiAuto.Location = new Point(666, 59);
+            labeltrangthaiAuto.Name = "labeltrangthaiAuto";
+            labeltrangthaiAuto.Size = new Size(93, 40);
+            labeltrangthaiAuto.TabIndex = 39;
+            labeltrangthaiAuto.Text = "AUTO";
+            // 
             // TheoDoiHeNap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -349,6 +361,7 @@
             BackgroundImage = Properties.Resources.EtekXam;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1121, 616);
+            Controls.Add(labeltrangthaiAuto);
             Controls.Add(labelHeader);
             Controls.Add(textBoxASHeNap);
             Controls.Add(textBoxASTong);
@@ -444,5 +457,6 @@
         private TextBox textBoxASHeNap;
         private Label label1;
         private Label labelHeader;
+        private Label labeltrangthaiAuto;
     }
 }

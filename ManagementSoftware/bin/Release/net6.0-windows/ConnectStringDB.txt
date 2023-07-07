@@ -1,1 +1,1 @@
-Data Source=DESKTOP-U4GO50V\SQLEXPRESS;Initial Catalog=TPA_Oxy;User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=true
+Data Source=DESKTOP-U4GO50V\SQLEXPRESS;Initial Catalog=TPA_Nitrogen;User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=true

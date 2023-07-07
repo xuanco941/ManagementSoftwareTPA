@@ -1,4 +1,5 @@
 ﻿using LW_PhanMemBaoGia.MyControls;
+using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
         Label labelNguoiVanHanh;
         Label labelTimeStart;
+        Label labelTimeStart2;
         Label labelSoLuongNapGian1;
         Label labelSoLuongNapGian2;
         Label labelLoaiKhi;
@@ -41,6 +43,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
         public MethodUpdateDataFormDashboard(Dashboard dashboard, ButtonCustom label1ApSuatHeNap1, ButtonCustom labelApSuatHeNap2, ButtonCustom labelTheTichHeNap1, ButtonCustom labelTheTichHeNap2, ButtonCustom labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError, Label labelNguoiVanHanh, Label labelTimeStart, Label labelSoLuongNapGian1, Label labelSoLuongNapGian2, Label labelLoaiKhi)
         {
             plc = new PLCBeckhOff();
+            cache = new MemoryCache(new MemoryCacheOptions());
             timerUpdateGUILabel1 = new TimerUpdateGUI(500, 900, UpdateData);
 
             this.dashboard = dashboard;
@@ -131,6 +134,12 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             bool? Apter_Vapolization = false;
             bool? Discharge_PRS_High = false;
 
+            bool? run_nap_h1 = false;
+            bool? run_nap_h2 = false;
+
+            run_nap_h1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Run_Nap_H1));
+            run_nap_h2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Run_Nap_H2));
+
 
 
             apSuatHe1 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_ST_H1));
@@ -202,12 +211,14 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
 
             //method update gui
-            UpdateGUI(data);
+            UpdateGUI(data,run_nap_h1,run_nap_h2);
 
         }
 
+        IMemoryCache cache;
+
         List<string> listDataErrbefore = new List<string>();
-        private void UpdateGUI(DataAlwaysUpdate data)
+        private void UpdateGUI(DataAlwaysUpdate data,bool? run_nap_h1, bool? run_nap_h2)
         {
             //update gui
 
@@ -215,6 +226,34 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             {
                 dashboard.BeginInvoke(() =>
                 {
+                    if (run_nap_h1 == null || run_nap_h1 == false)
+                    {
+                        labelTimeStart.Text = "Thời gian bắt đầu hệ 1 : Chưa có";
+                    }
+                    else
+                    {
+                        if (cache.Get<bool>("run_nap_h1") == false && run_nap_h1 == true)
+                        {
+                            DateTime now = DateTime.Now;
+                            labelTimeStart.Text = "Thời gian bắt đầu hệ 1 : " + now.ToString("HH:mm:ss dd/MM/yyyy");
+                        }
+                        cache.Set<bool?>("run_nap_h1", run_nap_h1);
+                    }
+
+                    if (run_nap_h2 == null || run_nap_h2 == false)
+                    {
+                        labelTimeStart2.Text = "Thời gian bắt đầu hệ 2 : Chưa có";
+                    }
+                    else
+                    {
+                        if (cache.Get<bool>("run_nap_h2") == false && run_nap_h2 == true)
+                        {
+                            DateTime now = DateTime.Now;
+                            labelTimeStart2.Text = "Thời gian bắt đầu hệ 2 : " + now.ToString("HH:mm:ss dd/MM/yyyy");
+                        }
+                        cache.Set<bool?>("run_nap_h2", run_nap_h2);
+                    }
+
 
                     //quy trình
 
@@ -315,11 +354,6 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
 
 
-
-
-
-
-
                     if (Common.ResultCurrent != null)
                     {
                         //value
@@ -334,7 +368,6 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                         //thong tin
 
                         labelNguoiVanHanh.Text = "Người vận hành : " + Common.ResultCurrent.Username;
-                        labelTimeStart.Text = "Thời gian bắt đầu : " + Common.ResultCurrent.TimeStart.ToString("HH:mm:ss dd/MM/yyyy");
                         labelSoLuongNapGian1.Text = "Số lượng nạp giàn 1 : " + Common.ResultCurrent.SoLuongBinhCanNapHe1.ToString();
                         labelSoLuongNapGian2.Text = "Số lượng nạp giàn 2 : " + Common.ResultCurrent.SoLuongBinhCanNapHe2.ToString();
                         labelLoaiKhi.Text = "Loại khí : " + Common.ResultCurrent.LoaiKhi;
@@ -349,7 +382,6 @@ namespace ManagementSoftware.GUI.Dashboard_Management
                         labelTheTichHeNap2.Text = "0.00";
 
                         labelNguoiVanHanh.Text = "Người vận hành : Chưa có";
-                        labelTimeStart.Text = "Thời gian bắt đầu : Chưa có";
                         labelSoLuongNapGian1.Text = "Số lượng nạp giàn 1 : Chưa có";
                         labelSoLuongNapGian2.Text = "Số lượng nạp giàn 2 : Chưa có";
                         labelLoaiKhi.Text = "Loại khí : Chưa có";

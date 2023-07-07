@@ -62,6 +62,7 @@ namespace ManagementSoftware
 
                 int? pallet1 = await Task.Run(() => plc.ReadAVariableNumber<int>(AddressPLC.DATA_PC_PALLET1));
                 int? pallet2 = await Task.Run(() => plc.ReadAVariableNumber<int>(AddressPLC.DATA_PC_PALLET2));
+                
 
 
                 if (((pallet1 != null && pallet1 == 1) || (pallet2 != null && pallet2 == 1)))

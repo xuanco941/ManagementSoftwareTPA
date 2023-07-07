@@ -35,9 +35,9 @@ namespace ManagementSoftware
 
         //enable (đèn)
         //Trạng thái hệ 1 đang chạy  (Bool)
-        public const string DATA_PC_D_Run_1 = "DATA_PC.D_Run_1";
+        public const string DATA_PC_D_Run_1 = "DATA_PC.D_Run_2";
         //Trạng thái hệ 2 đang chạy  (Bool)
-        public const string DATA_PC_D_Run_2 = "DATA_PC.D_Run_2";
+        public const string DATA_PC_D_Run_2 = "DATA_PC.D_Run_1";
 
 
         //Các giá trị  cài dặt
@@ -89,24 +89,24 @@ namespace ManagementSoftware
         //Động cơ băng tải vào hệ 1 chạy  (Bool)
         public const string DATA_PC_Motor_BT1_Vao = "DATA_PC.Motor_BT1_Vao";
         //Động cơ băng tải nạp 1 hệ 1 chạy  (Bool)
-        public const string DATA_PC_Motor_BT1_Nap1 = "DATA_PC.Motor_BT1_Nap1";
+        public const string DATA_PC_Motor_BT1_Nap1 = "DATA_PC.Motor_BT1_Nap2";
         //Động cơ băng tải nạp 2 hệ 1 chạy  (Bool)
-        public const string DATA_PC_Motor_BT1_Nap2 = "DATA_PC.Motor_BT1_Nap2";
+        public const string DATA_PC_Motor_BT1_Nap2 = "DATA_PC.Motor_BT1_Nap1";
         //Động cơ băng tải ra hệ 1 chạy  (Bool)
         public const string DATA_PC_Motor_BT1_Ra = "DATA_PC.Motor_BT1_Ra";
         //Động cơ băng tải vao hệ 2 chạy  (Bool)
         public const string DATA_PC_Motor_BT2_Vao = "DATA_PC.Motor_BT2_Vao";
         //Động cơ băng tải nạp 1 hệ 2 chạy  (Bool)
-        public const string DATA_PC_Motor_BT2_Nap1 = "DATA_PC.Motor_BT2_Nap1";
+        public const string DATA_PC_Motor_BT2_Nap1 = "DATA_PC.Motor_BT2_Nap2";
         //Động cơ băng tải nạp 2 hệ 2 chạy  (Bool)
-        public const string DATA_PC_Motor_BT2_Nap2 = "DATA_PC.Motor_BT2_Nap2";
+        public const string DATA_PC_Motor_BT2_Nap2 = "DATA_PC.Motor_BT2_Nap1";
         //Động cơ băng tải ra hệ 2 chạy  (Bool)
         public const string DATA_PC_Motor_BT2_Ra = "DATA_PC.Motor_BT2_Ra";
 
         //Trạng thái hệ 1 dừng  (Bool)
-        public const string DATA_PC_D_Stop_1 = "DATA_PC.D_Stop_1";
+        public const string DATA_PC_D_Stop_1 = "DATA_PC.D_Stop_2";
         //Trạng thái hệ 2 dừng  (Bool)
-        public const string DATA_PC_D_Stop_2 = "DATA_PC.D_Stop_2";
+        public const string DATA_PC_D_Stop_2 = "DATA_PC.D_Stop_1";
         //Trạng thái hệ 1 lỗi  (Bool)
         public const string DATA_PC_D_ERROR_1 = "DATA_PC_D_ERROR_1";
         //Trạng thái hệ 2 lỗi  (Bool)
@@ -186,6 +186,13 @@ namespace ManagementSoftware
         public const string DATA_PC_Loi_TT_NAP_KHI_H1 = "DATA_PC.Loi_TT_NAP_KHI_H1";
         //Lỗi quá trình nạp khí hệ 2  (Bool)
         public const string DATA_PC_Loi_TT_NAP_KHI_H2 = "DATA_PC.Loi_TT_NAP_KHI_H2";
+
+
+        //auto-man
+        public const string DATA_PC_AUTO_1 = "DATA_PC.ST_AUTO1";
+        public const string DATA_PC_MAN_1 = "DATA_PC.ST_MAN1";
+        public const string DATA_PC_AUTO_2 = "DATA_PC.ST_AUTO2";
+        public const string DATA_PC_MAN_2 = "DATA_PC.ST_MAN2";
 
 
 

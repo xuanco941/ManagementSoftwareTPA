@@ -79,6 +79,7 @@
             gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
             gridLayout2 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
             gridLayout3 = new Syncfusion.Windows.Forms.Tools.GridLayout(components);
+            labelTimeStart2 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -639,6 +640,7 @@
             // 
             panelDuLieu.Controls.Add(labelNguoiVanHanh);
             panelDuLieu.Controls.Add(labelTimeStart);
+            panelDuLieu.Controls.Add(labelTimeStart2);
             panelDuLieu.Controls.Add(labelSoLuongNapHe1);
             panelDuLieu.Controls.Add(SoLuongNapHe2);
             panelDuLieu.Controls.Add(label1LoaiKhi);
@@ -652,13 +654,13 @@
             // 
             labelNguoiVanHanh.BackColor = Color.FromArgb(32, 32, 32);
             labelNguoiVanHanh.BorderStyle = BorderStyle.FixedSingle;
-            labelNguoiVanHanh.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelNguoiVanHanh.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelNguoiVanHanh.ForeColor = Color.White;
-            labelNguoiVanHanh.Location = new Point(0, 2);
+            labelNguoiVanHanh.Location = new Point(0, 1);
             labelNguoiVanHanh.Margin = new Padding(0);
             labelNguoiVanHanh.Name = "labelNguoiVanHanh";
             gridLayout2.SetParticipateInLayout(labelNguoiVanHanh, true);
-            labelNguoiVanHanh.Size = new Size(552, 39);
+            labelNguoiVanHanh.Size = new Size(552, 33);
             labelNguoiVanHanh.TabIndex = 43;
             labelNguoiVanHanh.Text = "Người vận hành : Chưa có";
             labelNguoiVanHanh.TextAlign = ContentAlignment.MiddleCenter;
@@ -667,28 +669,28 @@
             // 
             labelTimeStart.BackColor = Color.FromArgb(32, 32, 32);
             labelTimeStart.BorderStyle = BorderStyle.FixedSingle;
-            labelTimeStart.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTimeStart.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelTimeStart.ForeColor = Color.White;
-            labelTimeStart.Location = new Point(0, 41);
+            labelTimeStart.Location = new Point(0, 34);
             labelTimeStart.Margin = new Padding(0);
             labelTimeStart.Name = "labelTimeStart";
             gridLayout2.SetParticipateInLayout(labelTimeStart, true);
-            labelTimeStart.Size = new Size(552, 39);
+            labelTimeStart.Size = new Size(552, 33);
             labelTimeStart.TabIndex = 39;
-            labelTimeStart.Text = "Thời gian bắt đầu : Chưa có";
+            labelTimeStart.Text = "Thời gian bắt đầu hệ 1: Chưa có";
             labelTimeStart.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelSoLuongNapHe1
             // 
             labelSoLuongNapHe1.BackColor = Color.FromArgb(32, 32, 32);
             labelSoLuongNapHe1.BorderStyle = BorderStyle.FixedSingle;
-            labelSoLuongNapHe1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSoLuongNapHe1.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelSoLuongNapHe1.ForeColor = Color.White;
-            labelSoLuongNapHe1.Location = new Point(0, 80);
+            labelSoLuongNapHe1.Location = new Point(0, 100);
             labelSoLuongNapHe1.Margin = new Padding(0);
             labelSoLuongNapHe1.Name = "labelSoLuongNapHe1";
             gridLayout2.SetParticipateInLayout(labelSoLuongNapHe1, true);
-            labelSoLuongNapHe1.Size = new Size(552, 39);
+            labelSoLuongNapHe1.Size = new Size(552, 33);
             labelSoLuongNapHe1.TabIndex = 44;
             labelSoLuongNapHe1.Text = "Số lượng nạp giàn 1 : Chưa có";
             labelSoLuongNapHe1.TextAlign = ContentAlignment.MiddleCenter;
@@ -697,13 +699,13 @@
             // 
             SoLuongNapHe2.BackColor = Color.FromArgb(32, 32, 32);
             SoLuongNapHe2.BorderStyle = BorderStyle.FixedSingle;
-            SoLuongNapHe2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            SoLuongNapHe2.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             SoLuongNapHe2.ForeColor = Color.White;
-            SoLuongNapHe2.Location = new Point(0, 119);
+            SoLuongNapHe2.Location = new Point(0, 133);
             SoLuongNapHe2.Margin = new Padding(0);
             SoLuongNapHe2.Name = "SoLuongNapHe2";
             gridLayout2.SetParticipateInLayout(SoLuongNapHe2, true);
-            SoLuongNapHe2.Size = new Size(552, 39);
+            SoLuongNapHe2.Size = new Size(552, 33);
             SoLuongNapHe2.TabIndex = 41;
             SoLuongNapHe2.Text = "Số lượng nạp giàn 2 : Chưa có";
             SoLuongNapHe2.TextAlign = ContentAlignment.MiddleCenter;
@@ -712,13 +714,13 @@
             // 
             label1LoaiKhi.BackColor = Color.FromArgb(32, 32, 32);
             label1LoaiKhi.BorderStyle = BorderStyle.FixedSingle;
-            label1LoaiKhi.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1LoaiKhi.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1LoaiKhi.ForeColor = Color.White;
-            label1LoaiKhi.Location = new Point(0, 158);
+            label1LoaiKhi.Location = new Point(0, 166);
             label1LoaiKhi.Margin = new Padding(0);
             label1LoaiKhi.Name = "label1LoaiKhi";
             gridLayout2.SetParticipateInLayout(label1LoaiKhi, true);
-            label1LoaiKhi.Size = new Size(552, 39);
+            label1LoaiKhi.Size = new Size(552, 33);
             label1LoaiKhi.TabIndex = 42;
             label1LoaiKhi.Text = "Loại khí : Chưa có";
             label1LoaiKhi.TextAlign = ContentAlignment.MiddleCenter;
@@ -832,13 +834,28 @@
             // 
             gridLayout2.Columns = 1;
             gridLayout2.ContainerControl = panelDuLieu;
-            gridLayout2.Rows = 5;
+            gridLayout2.Rows = 6;
             // 
             // gridLayout3
             // 
             gridLayout3.Columns = 2;
             gridLayout3.ContainerControl = panel4;
             gridLayout3.Rows = 1;
+            // 
+            // labelTimeStart2
+            // 
+            labelTimeStart2.BackColor = Color.FromArgb(32, 32, 32);
+            labelTimeStart2.BorderStyle = BorderStyle.FixedSingle;
+            labelTimeStart2.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTimeStart2.ForeColor = Color.White;
+            labelTimeStart2.Location = new Point(0, 67);
+            labelTimeStart2.Margin = new Padding(0);
+            labelTimeStart2.Name = "labelTimeStart2";
+            gridLayout2.SetParticipateInLayout(labelTimeStart2, true);
+            labelTimeStart2.Size = new Size(552, 33);
+            labelTimeStart2.TabIndex = 45;
+            labelTimeStart2.Text = "Thời gian bắt đầu hệ 2: Chưa có";
+            labelTimeStart2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Dashboard
             // 
@@ -922,5 +939,6 @@
         private Panel panel4;
         private Panel panelChartApSuat;
         private Panel panelChartTheTich;
+        private Label labelTimeStart2;
     }
 }
