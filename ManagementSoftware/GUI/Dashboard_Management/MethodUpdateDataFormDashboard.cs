@@ -110,8 +110,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             float? apSuatTong = 0;
 
             //trạng thái quy trinh
-            bool? sanSangNapHe1 = false;
-            bool? sanSangNapHe2 = false;
+            //bool? sanSangNapHe1 = false;
+            //bool? sanSangNapHe2 = false;
             //bool? ketThucNapHe1 = false;
             //bool? ketThucNapHe2 = false;
 
@@ -149,8 +149,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             theTichHe2 = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_V_ST_H2));
             apSuatTong = await Task.Run(() => plc.ReadAVariableNumber<float>(AddressPLC.DATA_PC_GT_AS_Tong));
 
-            sanSangNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H1));
-            sanSangNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H2));
+            //sanSangNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H1));
+            //sanSangNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_Enable_H2));
 
             //ketThucNapHe1 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H1));
             //ketThucNapHe2 = await Task.Run(() => plc.ReadAVariableNumber<bool>(AddressPLC.DATA_PC_KetThuc_QT_NAP_H2));
@@ -188,8 +188,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             data.apSuatTong = apSuatTong;
             data.theTichHe1 = theTichHe1;
             data.theTichHe2 = theTichHe2;
-            data.sanSangNapHe1 = sanSangNapHe1;
-            data.sanSangNapHe2 = sanSangNapHe2;
+            //data.sanSangNapHe1 = sanSangNapHe1;
+            //data.sanSangNapHe2 = sanSangNapHe2;
 
 
             //error
@@ -258,8 +258,8 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
                     //quy trình
 
-                    labelSanSangNapHe1.BackColor = data.pallet1 != null && data.pallet1 == 0 && data.sanSangNapHe1 != null && data.sanSangNapHe1 == true ? Color.LimeGreen : Color.DimGray;
-                    labelSanSangNapHe2.BackColor = data.pallet2 != null && data.pallet2 == 0 && data.sanSangNapHe2 != null && data.sanSangNapHe2 == true ? Color.LimeGreen : Color.DimGray;
+                    labelSanSangNapHe1.BackColor = data.pallet1 != null && data.pallet1 == 0 ? Color.LimeGreen : Color.DimGray;
+                    labelSanSangNapHe2.BackColor = data.pallet2 != null && data.pallet2 == 0 ? Color.LimeGreen : Color.DimGray;
                     labelDangNapHe1.BackColor = data.pallet1 != null && data.pallet1 == 1 ? Color.LimeGreen : Color.DimGray;
                     labelDangNapHe2.BackColor = data.pallet2 != null && data.pallet2 == 1 ? Color.LimeGreen : Color.DimGray;
                     //kết thúc
