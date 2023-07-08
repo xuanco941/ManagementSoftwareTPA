@@ -40,7 +40,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
 
         ListBox listBoxError;
 
-        public MethodUpdateDataFormDashboard(Dashboard dashboard, ButtonCustom label1ApSuatHeNap1, ButtonCustom labelApSuatHeNap2, ButtonCustom labelTheTichHeNap1, ButtonCustom labelTheTichHeNap2, ButtonCustom labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError, Label labelNguoiVanHanh, Label labelTimeStart, Label labelSoLuongNapGian1, Label labelSoLuongNapGian2, Label labelLoaiKhi)
+        public MethodUpdateDataFormDashboard(Dashboard dashboard, ButtonCustom label1ApSuatHeNap1, ButtonCustom labelApSuatHeNap2, ButtonCustom labelTheTichHeNap1, ButtonCustom labelTheTichHeNap2, ButtonCustom labelApSuatTong, Label labelSanSangNapHe1, Label labelSanSangNapHe2, Label labelDangNapHe1, Label labelDangNapHe2, Label labelDungNapHe1, Label labelDungNapHe2, ListBox listBoxError, Label labelNguoiVanHanh, Label labelTimeStart, Label labelSoLuongNapGian1, Label labelSoLuongNapGian2, Label labelLoaiKhi, Label labelTimeStart2)
         {
             plc = new PLCBeckhOff();
             cache = new MemoryCache(new MemoryCacheOptions());
@@ -66,6 +66,7 @@ namespace ManagementSoftware.GUI.Dashboard_Management
             this.labelSoLuongNapGian1 = labelSoLuongNapGian1;
             this.labelSoLuongNapGian2 = labelSoLuongNapGian2;
             this.labelLoaiKhi = labelLoaiKhi;
+            this.labelTimeStart2 = labelTimeStart2;
 
 
 

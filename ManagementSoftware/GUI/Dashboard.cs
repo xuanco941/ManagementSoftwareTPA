@@ -27,7 +27,7 @@ namespace ManagementSoftware.GUI
             chartApSuat = new Chart("BIỂU ĐỒ ÁP SUẤT");
             chartTheTich = new Chart("BIỂU ĐỒ THỂ TÍCH");
 
-            methodUpdateDataFormDashboard = new MethodUpdateDataFormDashboard(this, label1ApSuatHeNap1, labelApSuatHeNap2, labelTheTichHeNap1, labelTheTichHeNap2, labelApSuatTong, labelSanSangNapHe1, labelSanSangNapHe2, labelDangNapHe1, labelDangNapHe2, labelDungNapHe1, labelDungNapHe2, listBoxError, labelNguoiVanHanh, labelTimeStart, labelSoLuongNapHe1, SoLuongNapHe2, label1LoaiKhi);
+            methodUpdateDataFormDashboard = new MethodUpdateDataFormDashboard(this, label1ApSuatHeNap1, labelApSuatHeNap2, labelTheTichHeNap1, labelTheTichHeNap2, labelApSuatTong, labelSanSangNapHe1, labelSanSangNapHe2, labelDangNapHe1, labelDangNapHe2, labelDungNapHe1, labelDungNapHe2, listBoxError, labelNguoiVanHanh, labelTimeStart, labelSoLuongNapHe1, SoLuongNapHe2, label1LoaiKhi, labelTimeStart2);
             methodUpdateChartFormDashboard = new MethodUpdateChartFormDashboard(this, chartApSuat, chartTheTich);
 
             settingDashboard = new SettingDashboard(plc);
